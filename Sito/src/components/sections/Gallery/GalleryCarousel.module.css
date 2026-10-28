@@ -4,34 +4,6 @@
 .arrows {
   display: none;
 }
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 18px;
-}
-.pagination button {
-  display: grid;
-  place-items: center;
-  width: 26px;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-.pagination span {
-  width: 5px;
-  height: 5px;
-  border-radius: 8px;
-  background: var(--color-line);
-  transition:
-    width var(--transition),
-    background var(--transition);
-}
-.pagination [aria-current='true'] span {
-  width: 18px;
-  background: var(--color-brand-blue);
-}
 @media (min-width: 700px) {
   .arrows {
     position: absolute;

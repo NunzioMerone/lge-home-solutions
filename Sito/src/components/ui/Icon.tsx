@@ -84,6 +84,37 @@ export function Icon({ name, className }: IconProps) {
           <path d="M13 3h8v8m0-8L10 14M9 3H3v18h18v-6" />
         </>
       )}
+      {name === 'award' && (
+        <>
+          <circle cx="12" cy="9" r="6" />
+          <path d="m8 14-2 8 6-3 6 3-2-8" />
+          <path d="m9.5 9 1.5 1.5 3.5-3.5" />
+        </>
+      )}
+      {name === 'pergola' && (
+        <>
+          <path d="M3 21V7h18v14M2 7l5-4h15l-1 4M3 11h18M7 3l-1 4m6-4-1 4m6-4-1 4" />
+          <path d="M8 20h8" />
+        </>
+      )}
+      {name === 'store' && (
+        <>
+          <path d="M4 10v11h16V10M3 10V8l2-5h14l2 5v2M3 10c0 3 4.5 3 4.5 0 0 3 4.5 3 4.5 0 0 3 4.5 3 4.5 0 0 3 4.5 3 4.5 0" />
+          <path d="M9 21v-6h6v6M8 3l-.5 5M16 3l.5 5" />
+        </>
+      )}
+      {name === 'roof-window' && (
+        <>
+          <path d="m2 19 8-15h12l-8 15ZM9 15l4-7h5l-4 7Z" />
+          <path d="M2 22h12l8-15" />
+        </>
+      )}
+      {name === 'screen' && (
+        <>
+          <rect x="4" y="3" width="16" height="18" rx="1" />
+          <path d="M8 3v18M12 3v18M16 3v18M4 7h16M4 12h16M4 17h16" />
+        </>
+      )}
       {name === 'star' && <path d="m12 2 3 6.5 7 1-5 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5-5 7-1Z" />}
     </svg>
   )

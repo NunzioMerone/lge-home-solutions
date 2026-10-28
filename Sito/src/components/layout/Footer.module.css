@@ -17,7 +17,7 @@
 }
 .brand {
   display: block;
-  width: min(310px, 100%);
+  width: min(190px, 100%);
 }
 .brand img {
   width: 100%;
@@ -154,7 +154,7 @@ a.socialIcon:hover {
     gap: 32px;
   }
   .brand {
-    width: min(350px, 100%);
+    width: min(210px, 100%);
   }
   .contact {
     margin-top: 0;
@@ -171,7 +171,7 @@ a.socialIcon:hover {
     padding-bottom: 44px;
   }
   .brand {
-    width: min(420px, 100%);
+    width: min(220px, 100%);
   }
   .contact {
     margin-top: 20px;

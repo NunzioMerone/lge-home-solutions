@@ -25,6 +25,11 @@ export type IconName =
   | 'star'
   | 'down'
   | 'clock'
+  | 'award'
+  | 'pergola'
+  | 'store'
+  | 'roof-window'
+  | 'screen'
 
 export interface PhotoAsset {
   id: PhotoId
@@ -46,13 +51,6 @@ export interface Partner {
   height: number
   logoTone?: 'light'
   status: 'user-provided'
-}
-export interface Competency {
-  id: string
-  title: string
-  icon: IconName
-  description: string
-  status: 'unverified'
 }
 export interface GalleryItem {
   id: string

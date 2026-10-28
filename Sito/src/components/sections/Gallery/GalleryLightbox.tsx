@@ -1,14 +1,12 @@
 import { useLayoutEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { gallery } from '../../../data/gallery'
 import type { GalleryLightboxProps } from '../../../types/gallery'
 import { Icon } from '../../ui/Icon'
-import { ResponsiveImage } from '../../ui/ResponsiveImage'
+import { GalleryImage } from './GalleryImage'
 import styles from './GalleryLightbox.module.css'
 
 export function GalleryLightbox({ photo, trigger, onClose }: GalleryLightboxProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
-  const category = gallery.find((item) => item.photo === photo)?.category ?? 'LGE'
 
   useLayoutEffect(() => {
     const dialog = dialogRef.current
@@ -30,7 +28,7 @@ export function GalleryLightbox({ photo, trigger, onClose }: GalleryLightboxProp
     <dialog
       ref={dialogRef}
       className={styles.dialog}
-      aria-label={`Fotografia ingrandita: ${category}`}
+      aria-label={`Fotografia ingrandita: ${photo.category}`}
       onCancel={(event) => {
         event.preventDefault()
         onClose()
@@ -40,7 +38,7 @@ export function GalleryLightbox({ photo, trigger, onClose }: GalleryLightboxProp
       }}
     >
       <div className={styles.media}>
-        <ResponsiveImage photo={photo} sizes="(min-width: 1200px) 800px, 95vw" critical />
+        <GalleryImage photo={photo} full />
       </div>
       <button
         className={styles.close}

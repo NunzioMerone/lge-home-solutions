@@ -2,7 +2,6 @@
   --competencies-accent: color-mix(in srgb, var(--color-blue) 45%, var(--color-sky));
   --competencies-text: color-mix(in srgb, var(--color-paper) 78%, var(--color-ink));
   --competencies-line: color-mix(in srgb, var(--color-paper) 18%, var(--color-ink));
-
   background: var(--color-ink);
 }
 .headingPanel {
@@ -38,81 +37,204 @@
 }
 .grid {
   display: grid;
-  gap: 32px 0;
+  gap: 28px;
 }
 .card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
   min-width: 0;
-  padding: 32px 20px 0;
+}
+.card + .card {
+  padding-top: 28px;
   border-top: 1px solid var(--competencies-line);
-  text-align: center;
 }
 .icon {
   display: grid;
   place-items: center;
-  width: 82px;
-  height: 82px;
-  margin: 0 auto 22px;
+  width: 54px;
+  height: 54px;
   border: 1px solid color-mix(in srgb, var(--competencies-accent) 45%, var(--color-ink));
   border-radius: 50%;
   color: var(--competencies-accent);
   background: color-mix(in srgb, var(--color-paper) 4%, var(--color-ink));
 }
 .icon svg {
-  width: 36px;
-  height: 36px;
+  width: 26px;
+  height: 26px;
+}
+.label {
+  margin: 0 0 8px;
+  color: var(--competencies-accent);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-transform: uppercase;
 }
 .card h3 {
-  margin: 0;
+  margin: 0 0 12px;
   color: var(--color-paper);
   text-wrap: balance;
 }
-.rule {
-  display: block;
-  width: 30px;
-  height: 1px;
-  margin: 20px auto;
-  background: var(--competencies-accent);
-}
-.card p {
-  max-width: 30ch;
-  margin: 0 auto;
+.cardDescription {
+  max-width: 45ch;
+  margin: 0;
   color: var(--competencies-text);
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   line-height: 1.8;
   text-wrap: pretty;
 }
-@media (min-width: 600px) {
+.recognitions {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--competencies-line);
+}
+.recognitionsTitle {
+  margin: 0 0 28px;
+  color: var(--color-paper);
+  font-size: clamp(1.5rem, 2vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+.recognitionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.recognition {
+  min-width: 0;
+  padding: 24px 16px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 5px;
+  background: rgb(255 255 255 / 2%);
+}
+.recognition:first-child {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 20px;
+}
+.recognitionIcon {
+  display: block;
+  flex-shrink: 0;
+  margin-bottom: 18px;
+  color: var(--competencies-accent);
+}
+.recognitionIcon svg {
+  width: 28px;
+  height: 28px;
+}
+.recognition:first-child .recognitionIcon {
+  margin-bottom: 0;
+}
+.recognition .label {
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+}
+.recognition h4 {
+  margin: 0 0 8px;
+  color: var(--color-paper);
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.recognitionDescription {
+  margin: 0;
+  color: var(--competencies-text);
+  font-size: 0.75rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+@media (min-width: 700px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 48px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
   }
   .card {
-    padding-top: 0;
-    border-top: 0;
-  }
-  .card:nth-child(even) {
-    border-left: 1px solid var(--competencies-line);
-  }
-  .card h3 {
-    display: grid;
-    align-content: center;
-    min-height: 2.3em;
-  }
-}
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: block;
+    padding: 0 24px;
+    text-align: center;
   }
   .card + .card {
+    padding-top: 0;
+    border-top: 0;
     border-left: 1px solid var(--competencies-line);
   }
-}
-@media (min-width: 1280px) {
-  .card {
-    padding: 18px clamp(18px, 1.7vw, 28px) 12px;
-  }
   .icon {
-    width: 88px;
-    height: 88px;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px;
+  }
+  .icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  .cardContent > .label {
+    min-height: 3.4em;
+    align-content: center;
+  }
+  .card h3 {
+    min-height: 2.3em;
+    align-content: center;
+  }
+  .cardDescription {
+    margin-inline: auto;
+  }
+  .recognitions {
+    margin-top: 48px;
+    padding-top: 36px;
+  }
+  .recognitionGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .recognition,
+  .recognition:first-child {
+    display: block;
+    grid-column: span 2;
+    padding: 26px 22px;
+  }
+  .recognition:nth-last-child(-n + 2) {
+    grid-column: span 3;
+  }
+  .recognition:first-child .recognitionIcon {
+    margin-bottom: 18px;
+  }
+  .recognition h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .grid {
+    max-width: 1260px;
+    margin-inline: auto;
+  }
+  .card {
+    padding-inline: 40px;
+  }
+  .cardContent > .label,
+  .card h3 {
+    min-height: 0;
+  }
+  .cardDescription {
+    font-size: 0.85rem;
+  }
+  .recognitionGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .recognition,
+  .recognition:first-child,
+  .recognition:nth-last-child(-n + 2) {
+    grid-column: auto;
+  }
+  .recognitionDescription {
+    font-size: 0.8rem;
   }
 }

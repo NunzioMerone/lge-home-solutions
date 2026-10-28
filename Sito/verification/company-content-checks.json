@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-28",
+  "scope": "Partner, foto reali dei lavori, logo footer e competenze",
+  "viewportsChecked": [
+    320,
+    390,
+    768,
+    1280
+  ],
+  "partners": {
+    "count": 12,
+    "loaded": 12,
+    "columns": {
+      "390": 2,
+      "768": 3,
+      "1280": 4
+    }
+  },
+  "gallery": {
+    "photos": 101,
+    "mountedPreviews": 7,
+    "visibleDots": 5,
+    "swipe390": "passed",
+    "lightbox390": "passed",
+    "keyboardEnd768": "101 di 101",
+    "nextAfterLast": "1 di 101",
+    "arrowsHidden390": true,
+    "arrowsVisible768": true
+  },
+  "footer": {
+    "originalSize": [
+      1000,
+      1000
+    ],
+    "transparent": true,
+    "mobileOverflow": false
+  },
+  "credentials": {
+    "technical": 3,
+    "recognitions": 5,
+    "photosPublished": false,
+    "pendingCompanyClarification": [],
+    "companyConfirmation": {
+      "date": "2026-10-28",
+      "qualifications": ["EQF 4 Caposquadra", "Termografia II livello"]
+    }
+  },
+  "checks": {
+    "lint": "passed",
+    "tests": "17 passed",
+    "productionBuild": "passed",
+    "format": "passed",
+    "newConsoleErrorsAfterFinalReload": 0
+  },
+  "limits": [
+    "Responsive verificato nel browser interno, non su un telefono fisico.",
+    "Verifica svolta in anteprima locale prima della successiva richiesta di pubblicazione."
+  ],
+  "notes": [
+    "Durante la sostituzione del dataset galleria un vecchio componente ha prodotto un errore HMR transitorio; assente dopo aggiornamento completo e reload finale."
+  ]
+}

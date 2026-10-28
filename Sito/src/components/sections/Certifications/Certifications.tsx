@@ -1,4 +1,4 @@
-import { competencies } from '../../../data/competencies'
+import { competencies, recognitions } from '../../../data/competencies'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import { Icon } from '../../ui/Icon'
 import styles from './Certifications.module.css'
@@ -30,11 +30,32 @@ export function Certifications() {
               <div className={styles.icon}>
                 <Icon name={item.icon} />
               </div>
-              <h3>{item.title}</h3>
-              <span className={styles.rule} aria-hidden="true" />
-              <p>{item.description}</p>
+              <div className={styles.cardContent}>
+                <p className={styles.label}>{item.label}</p>
+                <h3>{item.title}</h3>
+                <p className={styles.cardDescription}>{item.description}</p>
+              </div>
             </article>
           ))}
+        </div>
+        <div className={styles.recognitions} aria-labelledby="recognitions-title">
+          <h3 id="recognitions-title" className={styles.recognitionsTitle} data-reveal>
+            Riconoscimenti e collaborazioni
+          </h3>
+          <ul className={styles.recognitionGrid}>
+            {recognitions.map((item) => (
+              <li key={item.id} className={styles.recognition} data-reveal>
+                <span className={styles.recognitionIcon}>
+                  <Icon name={item.icon} />
+                </span>
+                <div>
+                  <p className={styles.label}>{item.label}</p>
+                  <h4>{item.title}</h4>
+                  <p className={styles.recognitionDescription}>{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

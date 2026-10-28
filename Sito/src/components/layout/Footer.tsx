@@ -25,8 +25,8 @@ export function Footer() {
               <img
                 src={site.whiteLogo}
                 alt="LGE — Il design per il tuo benessere"
-                width="2171"
-                height="724"
+                width="1000"
+                height="1000"
                 loading="lazy"
               />
             </Link>

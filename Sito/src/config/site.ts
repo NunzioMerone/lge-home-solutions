@@ -5,7 +5,7 @@ export const site = {
   title: 'LGE Home Solutions — Il design per il tuo benessere',
   logo: assetUrl('img/brand/lge-navbar-horizontal-flat.webp'),
   colorLogo: assetUrl('img/brand/lge-horizontal-color.webp'),
-  whiteLogo: assetUrl('img/brand/lge-footer-white.png'),
+  whiteLogo: assetUrl('img/brand/lge-footer-white-official.png'),
   sections: [
     { id: 'prodotti', label: 'Soluzioni' },
     { id: 'competenze', label: 'Competenze' },

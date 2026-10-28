@@ -31,6 +31,11 @@ export function Partners() {
                     loading="lazy"
                     decoding="async"
                   />
+                  {partner.id === 'gibus' && (
+                    <span className={styles.atelier} aria-hidden="true">
+                      Atelier Gibus
+                    </span>
+                  )}
                 </div>
               </li>
             ))}
