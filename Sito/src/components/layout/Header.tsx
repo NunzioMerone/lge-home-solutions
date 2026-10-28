@@ -8,7 +8,8 @@ import { MobileMenu } from './MobileMenu'
 import styles from './Header.module.css'
 
 export function Header() {
-  const { hash, pathname } = useLocation()
+  const { hash, pathname: routePath } = useLocation()
+  const pathname = routePath.replace(/\/+$/, '') || '/'
   const activePath = pathname === '/' ? `/${hash || '#inizio'}` : pathname
   const solutionsActive = products.some((product) => product.path === pathname)
   const scrolled = useScrollThreshold(24)

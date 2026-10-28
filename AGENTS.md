@@ -17,7 +17,7 @@ Queste istruzioni si applicano all'intero workspace. Leggere [PROJECT_BRIEF.md](
 - Il prototipo della sola hero è stato autorizzato come progetto indipendente in `Hero_test/`. Tutti i suoi file, dipendenze e asset devono rimanere al suo interno; non modificare `Sito_web/` per sviluppare il prototipo.
 - È inoltre autorizzata la seconda proposta video in `Hero_Test2/`, con codice, dipendenze e asset indipendenti. Conservare intatti il primo prototipo e i test Blender. Applicare anche a questa cartella le convenzioni di struttura e qualità definite sotto.
 - La nuova homepage è autorizzata in `Sito/`, con istruzioni specifiche in `Sito/AGENTS.md`. Non rinominare le directory né mescolare file e dipendenze dei tre progetti.
-- I due prototipi restano esperimenti indipendenti. Il sito ufficiale comprende al momento la homepage e cinque rotte prodotto bianche; non sviluppare pagine interne, backend o integrazioni future senza richiesta.
+- I due prototipi restano esperimenti indipendenti. Il sito ufficiale comprende la homepage e cinque rotte prodotto provvisorie con navbar, footer, titolo e messaggio di preparazione; non sviluppare ulteriori contenuti interni, backend o integrazioni future senza richiesta.
 - Avviare lo sviluppo quando richiesto dall'utente, completando autonomamente le attività necessarie alla fase autorizzata.
 - Non anticipare sezioni, pagine, integrazioni o funzionalità estranee alla richiesta corrente.
 - Verificare la fase sviluppata prima di passare alla successiva.

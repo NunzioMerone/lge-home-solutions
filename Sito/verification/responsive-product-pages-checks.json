@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "viewport": 390,
+      "arrowsHidden": true,
+      "galleryDrag": "Outdoor → Infissi → Outdoor",
+      "noUnexpectedDialog": true,
+      "photoTransform": "none"
+    },
+    {
+      "arrows": [
+        {
+          "name": "Soluzioni precedenti",
+          "visible": true
+        },
+        {
+          "name": "Soluzioni successive",
+          "visible": true
+        },
+        {
+          "name": "Fotografia precedente",
+          "visible": true
+        },
+        {
+          "name": "Fotografia successiva",
+          "visible": true
+        },
+        {
+          "name": "Recensione precedente",
+          "visible": true
+        },
+        {
+          "name": "Recensione successiva",
+          "visible": true
+        }
+      ],
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "footer": true,
+      "header": true,
+      "notice": "Questa sezione è in preparazione. Presto troverai tutti i dettagli sulle nostre soluzioni.",
+      "overflow": false,
+      "title": "Infissi",
+      "url": "/prodotti/infissi"
+    },
+    {
+      "footer": true,
+      "header": true,
+      "notice": "Questa sezione è in preparazione. Presto troverai tutti i dettagli sulle nostre soluzioni.",
+      "overflow": false,
+      "title": "Oscuranti",
+      "url": "/prodotti/oscuranti"
+    },
+    {
+      "footer": true,
+      "header": true,
+      "notice": "Questa sezione è in preparazione. Presto troverai tutti i dettagli sulle nostre soluzioni.",
+      "overflow": false,
+      "title": "Porte e sicurezza",
+      "url": "/prodotti/porte-e-sicurezza"
+    },
+    {
+      "footer": true,
+      "header": true,
+      "notice": "Questa sezione è in preparazione. Presto troverai tutti i dettagli sulle nostre soluzioni.",
+      "overflow": false,
+      "title": "Porte interne",
+      "url": "/prodotti/porte-interne"
+    },
+    {
+      "footer": true,
+      "header": true,
+      "notice": "Questa sezione è in preparazione. Presto troverai tutti i dettagli sulle nostre soluzioni.",
+      "overflow": false,
+      "title": "Atelier Gibus",
+      "url": "/atelier-gibus"
+    },
+    {
+      "canvasBackground": "rgb(47, 52, 58)",
+      "footerBackground": "rgb(47, 52, 58)",
+      "gapAfterFooter": 0.2109375,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "footerVisible": true,
+      "headerVisible": true,
+      "overflow": false,
+      "title": "Infissi",
+      "width": 320
+    }
+  ],
+  "checksPassed": {
+    "lint": true,
+    "build": true,
+    "tests": 17
+  },
+  "limits": "Trascinamento verificato tramite input nativo del browser su viewport mobile; Safari su iPhone fisico non disponibile."
+}

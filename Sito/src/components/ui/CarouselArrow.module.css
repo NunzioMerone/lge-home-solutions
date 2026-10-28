@@ -16,6 +16,11 @@
     border-color var(--transition),
     opacity var(--transition);
 }
+@media (max-width: 699px) {
+  .button {
+    display: none;
+  }
+}
 .button svg {
   width: 18px;
   height: 18px;

@@ -5,7 +5,8 @@
 }
 html {
   color: var(--color-ink);
-  background: var(--color-paper);
+  /* Match the footer when a mobile browser exposes the canvas below the page. */
+  background: var(--color-ink);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
@@ -13,6 +14,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  background: var(--color-paper);
   -webkit-font-smoothing: antialiased;
 }
 button,

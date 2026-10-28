@@ -54,7 +54,7 @@ export function GalleryCarousel({ paused, onOpen }: GalleryCarouselProps) {
                   >
                     <ResponsiveImage
                       photo={item.photo}
-                      sizes="(min-width: 1200px) 480px, (min-width: 700px) 42vw, 71vw"
+                      sizes="(min-width: 1200px) 480px, (min-width: 700px) 42vw, 82vw"
                       decorative
                     />
                   </button>

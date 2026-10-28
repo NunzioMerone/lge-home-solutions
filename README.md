@@ -33,4 +33,4 @@ npm run build
 
 Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP ed Embla.
 
-Le cinque rotte prodotto sono predisposte come pagine bianche. Il sito mantiene le indicazioni sulle fonti e sui contenuti dimostrativi nella documentazione di `Sito/`. I prototipi storici rimangono conservati separatamente nel workspace locale.
+Le cinque rotte prodotto hanno navbar, footer, titolo della categoria e un messaggio di sezione in preparazione. Il sito mantiene le indicazioni sulle fonti e sui contenuti dimostrativi nella documentazione di `Sito/`. I prototipi storici rimangono conservati separatamente nel workspace locale.
