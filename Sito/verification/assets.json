@@ -1,0 +1,74 @@
+[
+  {
+    "file": "public/img/brand/lge-horizontal-white.webp",
+    "bytes": 38172,
+    "sha256": "b53aeb1d644e0e9f5b9217c08d27aa3b346f8b1af6e0fc6151cbdc9751df6cf1",
+    "status": "original-logo-optimized"
+  },
+  {
+    "file": "public/img/brand/lge-original.webp",
+    "bytes": 82612,
+    "sha256": "37181113a00a581103b046ce42a43e7719804deeb6c6cb194f900bb653b51806",
+    "status": "original-logo-optimized"
+  },
+  {
+    "file": "public/img/photos/interior-1024.webp",
+    "bytes": 171098,
+    "sha256": "0a619719953c12158b6d3a19fb428b9640a4589f025356e3b941fa1ae98284ca",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/interior-640.webp",
+    "bytes": 56982,
+    "sha256": "7709beb958656bf9341f5fd270c049df706fb4937349b44aaa8c362c5acf6ec1",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/outdoor-1024.webp",
+    "bytes": 369428,
+    "sha256": "8b7760e3948a7ee29d65943f3a8a469ee3cbd1a5e22eb11dbf1d10aab66a6c19",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/outdoor-640.webp",
+    "bytes": 151160,
+    "sha256": "a0ef32c64ed80d056a84c37cb0430f6a6f5d3d4119034fb5301e96d5dfc44a68",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/security-1024.webp",
+    "bytes": 342160,
+    "sha256": "fe5195861ded80769a90b724ba11c7869fd47826d2d3ce41f7b75bd328a1f092",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/security-640.webp",
+    "bytes": 132142,
+    "sha256": "a914697360ba2a82a375f22efb126b0004b55274710c010de391b8076d73e1a0",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/shading-1024.webp",
+    "bytes": 382584,
+    "sha256": "83db4e5024362389e79f11f21d87a778c9d618553c8d8bf5dfdbc7d99b5b968d",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/shading-640.webp",
+    "bytes": 149720,
+    "sha256": "49bc1158d0dd839f05913ffb4f99b63f36bbaae45ed8d910ed46b2a756f92554",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/windows-1024.webp",
+    "bytes": 279628,
+    "sha256": "1613fb11c6889b414ce26d69b8ed5d534175840601450ebd8a2f17779b1800cc",
+    "status": "generated-demo"
+  },
+  {
+    "file": "public/img/photos/windows-640.webp",
+    "bytes": 105814,
+    "sha256": "1d3941039276df00ce342491c940e9d5f3c176fd614857c9d02a8dd4dc9f4868",
+    "status": "generated-demo"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-23",
+  "scope": "Hero only",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed via build",
+    "lint": "passed",
+    "format": "passed",
+    "responsiveWidths": [
+      320,
+      390,
+      700,
+      933,
+      1295
+    ],
+    "horizontalOverflow": false,
+    "zoomScale": 1.045,
+    "zoomVerification": "Keyboard focus; shared CSS selector for hover and focus-visible",
+    "cardOverflow": "hidden",
+    "manualReducedMotionTransform": "none",
+    "coldLoadConsoleWarningsAndErrors": 0,
+    "logoEntranceTransform": "scale 1.65 with vertical travel, settling to scale 1"
+  },
+  "finalLayout": {
+    "cards": [
+      {
+        "height": 261.234375,
+        "textFits": true,
+        "title": "IL DESIGN",
+        "titleTop": 542.8359375
+      },
+      {
+        "height": 261.234375,
+        "textFits": true,
+        "title": "PER IL TUO",
+        "titleTop": 542.8359375
+      },
+      {
+        "height": 261.234375,
+        "textFits": true,
+        "title": "BENESSERE",
+        "titleTop": 542.8359375
+      }
+    ],
+    "overflow": false,
+    "width": 933
+  }
+}

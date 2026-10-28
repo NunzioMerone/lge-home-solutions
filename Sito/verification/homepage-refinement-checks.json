@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-10-28",
+  "layouts": [
+    {
+      "contactBackground": "rgb(237, 233, 227)",
+      "contactColumns": "244.305px 244.305px",
+      "contactOrder": {
+        "details": {
+          "bottom": 2954.328125,
+          "left": 807.1171875,
+          "top": 2524.328125,
+          "width": 568.8046875
+        },
+        "map": {
+          "left": 64.078125,
+          "top": 2524.328125,
+          "width": 682.5625
+        }
+      },
+      "footer": {
+        "animated": 0,
+        "height": 372.1953125,
+        "logo": "/img/brand/lge-footer-white.png",
+        "logoLoaded": true,
+        "text": "+39 329 826 5371Via Roma, 29Monte di Procida (NA)Per la tua casaInfissiOscurantiPorte e sicurezzaPorte interneAtelier GibusScopri LGECompetenzeI nostri lavoriRecensioniContatti© 2026 LGE Home Solutions"
+      },
+      "headings": [
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri partner"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(252, 252, 251)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "La qualità nasce dalla competenza"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri lavori"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Cosa dicono di noi"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Vieni a trovarci"
+        }
+      ],
+      "heroFont": "\"Cormorant Garamond\", Georgia, serif",
+      "heroSubtitle": "Ogni ambiente merita di essere vissuto al meglio.",
+      "heroSuffix": {
+        "color": "rgb(1, 67, 128)",
+        "style": "italic"
+      },
+      "heroTitleWidth": 1080,
+      "horizontalOverflow": [],
+      "pageWidth": 1440,
+      "partnerBackground": "rgb(237, 233, 227)",
+      "sectionPadding": [
+        {
+          "bottom": "79.2px",
+          "id": "inizio",
+          "top": "212.8px"
+        },
+        {
+          "bottom": "79.2px",
+          "id": "partner",
+          "top": "79.2px"
+        },
+        {
+          "bottom": "0px",
+          "id": "competenze",
+          "top": "0px"
+        },
+        {
+          "bottom": "79.2px",
+          "id": "lavori",
+          "top": "79.2px"
+        },
+        {
+          "bottom": "79.2px",
+          "id": "recensioni",
+          "top": "79.2px"
+        },
+        {
+          "bottom": "79.2px",
+          "id": "contatti",
+          "top": "79.2px"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "contactBackground": "rgb(237, 233, 227)",
+      "contactColumns": "166px 166px",
+      "contactOrder": {
+        "details": {
+          "bottom": 688.8046875,
+          "left": 20,
+          "top": 213.8046875,
+          "width": 350
+        },
+        "map": {
+          "left": 20,
+          "top": 728.8046875,
+          "width": 350
+        }
+      },
+      "footer": {
+        "animated": 0,
+        "height": 513.7890625,
+        "logo": "/img/brand/lge-footer-white.png",
+        "logoLoaded": true,
+        "text": "+39 329 826 5371Via Roma, 29Monte di Procida (NA)Per la tua casaInfissiOscurantiPorte e sicurezzaPorte interneAtelier GibusScopri LGECompetenzeI nostri lavoriRecensioniContatti© 2026 LGE Home Solutions"
+      },
+      "headings": [
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri partner"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(252, 252, 251)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "La qualità nasce dalla competenza"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri lavori"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Cosa dicono di noi"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Vieni a trovarci"
+        }
+      ],
+      "heroFont": "\"Cormorant Garamond\", Georgia, serif",
+      "heroSubtitle": "Ogni ambiente merita di essere vissuto al meglio.",
+      "heroSuffix": {
+        "color": "rgb(1, 67, 128)",
+        "style": "italic"
+      },
+      "heroTitleWidth": 350,
+      "horizontalOverflow": [],
+      "pageWidth": 390,
+      "partnerBackground": "rgb(237, 233, 227)",
+      "sectionPadding": [
+        {
+          "bottom": "48px",
+          "id": "inizio",
+          "top": "152px"
+        },
+        {
+          "bottom": "48px",
+          "id": "partner",
+          "top": "48px"
+        },
+        {
+          "bottom": "0px",
+          "id": "competenze",
+          "top": "0px"
+        },
+        {
+          "bottom": "48px",
+          "id": "lavori",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "recensioni",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "contatti",
+          "top": "48px"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "contactBackground": "rgb(237, 233, 227)",
+      "contactColumns": "131px 131px",
+      "contactOrder": {
+        "details": {
+          "bottom": -240.6640625,
+          "left": 20,
+          "top": -742.6640625,
+          "width": 280
+        },
+        "map": {
+          "left": 20,
+          "top": -200.6640625,
+          "width": 280
+        }
+      },
+      "footer": {
+        "animated": 0,
+        "height": 513.7890625,
+        "logo": "/img/brand/lge-footer-white.png",
+        "logoLoaded": true,
+        "text": "+39 329 826 5371Via Roma, 29Monte di Procida (NA)Per la tua casaInfissiOscurantiPorte e sicurezzaPorte interneAtelier GibusScopri LGECompetenzeI nostri lavoriRecensioniContatti© 2026 LGE Home Solutions"
+      },
+      "headings": [
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri partner"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(252, 252, 251)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "La qualità nasce dalla competenza"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri lavori"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Cosa dicono di noi"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Vieni a trovarci"
+        }
+      ],
+      "heroFont": "\"Cormorant Garamond\", Georgia, serif",
+      "heroSubtitle": "Ogni ambiente merita di essere vissuto al meglio.",
+      "heroSuffix": {
+        "color": "rgb(1, 67, 128)",
+        "style": "italic"
+      },
+      "heroTitleWidth": 280,
+      "horizontalOverflow": [],
+      "pageWidth": 320,
+      "partnerBackground": "rgb(237, 233, 227)",
+      "sectionPadding": [
+        {
+          "bottom": "48px",
+          "id": "inizio",
+          "top": "152px"
+        },
+        {
+          "bottom": "48px",
+          "id": "partner",
+          "top": "48px"
+        },
+        {
+          "bottom": "0px",
+          "id": "competenze",
+          "top": "0px"
+        },
+        {
+          "bottom": "48px",
+          "id": "lavori",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "recensioni",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "contatti",
+          "top": "48px"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "contactBackground": "rgb(237, 233, 227)",
+      "contactColumns": "338.305px 338.312px",
+      "contactOrder": {
+        "details": {
+          "bottom": 77.640625,
+          "left": 34.171875,
+          "top": -326.359375,
+          "width": 699.65625
+        },
+        "map": {
+          "left": 34.171875,
+          "top": 117.640625,
+          "width": 699.65625
+        }
+      },
+      "footer": {
+        "animated": 0,
+        "height": 352.1953125,
+        "logo": "/img/brand/lge-footer-white.png",
+        "logoLoaded": true,
+        "text": "+39 329 826 5371Via Roma, 29Monte di Procida (NA)Per la tua casaInfissiOscurantiPorte e sicurezzaPorte interneAtelier GibusScopri LGECompetenzeI nostri lavoriRecensioniContatti© 2026 LGE Home Solutions"
+      },
+      "headings": [
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri partner"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(252, 252, 251)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "La qualità nasce dalla competenza"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "I nostri lavori"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Cosa dicono di noi"
+        },
+        {
+          "align": "center",
+          "emColor": "rgb(1, 67, 128)",
+          "font": "\"Cormorant Garamond\", Georgia, serif",
+          "text": "Vieni a trovarci"
+        }
+      ],
+      "heroFont": "\"Cormorant Garamond\", Georgia, serif",
+      "heroSubtitle": "Ogni ambiente merita di essere vissuto al meglio.",
+      "heroSuffix": {
+        "color": "rgb(1, 67, 128)",
+        "style": "italic"
+      },
+      "heroTitleWidth": 700,
+      "horizontalOverflow": [],
+      "pageWidth": 768,
+      "partnerBackground": "rgb(237, 233, 227)",
+      "sectionPadding": [
+        {
+          "bottom": "48px",
+          "id": "inizio",
+          "top": "160px"
+        },
+        {
+          "bottom": "48px",
+          "id": "partner",
+          "top": "48px"
+        },
+        {
+          "bottom": "0px",
+          "id": "competenze",
+          "top": "0px"
+        },
+        {
+          "bottom": "48px",
+          "id": "lavori",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "recensioni",
+          "top": "48px"
+        },
+        {
+          "bottom": "48px",
+          "id": "contatti",
+          "top": "48px"
+        }
+      ],
+      "width": 768
+    }
+  ],
+  "mobileMenu": {
+    "chevronGap": "14px",
+    "expanded": "true",
+    "noEyebrow": true,
+    "noSignature": true,
+    "text": "HomeSoluzioni InfissiOscurantiPorte e sicurezzaPorte interneAtelier GibusI nostri lavoriCompetenzeRecensioniContatti",
+    "weight": "400"
+  },
+  "gallery": {
+    "opened": true,
+    "closedWithEscape": true
+  },
+  "finalDecisions": {
+    "competencyTitle": "La qualità nasce dalla competenza",
+    "competencySubtitle": "Dalla scelta dei materiali alla posa, uniamo preparazione tecnica, precisione e attenzione per risultati che durano nel tempo.",
+    "competencyBackground": "anthracite",
+    "competencyItalic": "light, user approved",
+    "footerProductLinks": 5,
+    "motionControlRemoved": true,
+    "footerContactUnderLogo": true
+  },
+  "checks": {
+    "build": true,
+    "lint": true,
+    "format": true,
+    "unitTestsPassed": 15
+  },
+  "viewportOverrideReset": true
+}

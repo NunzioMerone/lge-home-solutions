@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-23",
+  "style": "White translucent navbar at top and on scroll, colored logo, dark text",
+  "codeChecks": {
+    "typecheck": "passed via build",
+    "build": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "existingUnitTests": "5 passed"
+  },
+  "browserChecks": [
+    {
+      "check": "desktopKeyboardFirstItem",
+      "focusedText": "Infissi"
+    },
+    {
+      "check": "desktopEscape",
+      "expanded": "false",
+      "focus": "Sezioni "
+    },
+    {
+      "check": "desktopProductRoute",
+      "headerCount": 0,
+      "mainLabel": "Infissi — pagina provvisoria",
+      "path": "/prodotti/infissi"
+    },
+    {
+      "ariaModal": "true",
+      "bodyOverflow": "hidden",
+      "check": "mobileOpen",
+      "dialog": "dialog",
+      "hamburger": [
+        "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)",
+        "matrix(0.707107, -0.707107, 0.707107, 0.707107, 0, 0)"
+      ],
+      "menuBounds": {
+        "bottom": 844,
+        "height": 772,
+        "left": 0,
+        "right": 390,
+        "top": 72,
+        "width": 390,
+        "x": 0,
+        "y": 72
+      },
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "check": "mobileTabWrap",
+      "focus": "LGE, homepage"
+    },
+    {
+      "check": "mobileAccordion",
+      "expanded": "true",
+      "items": [
+        "Infissi",
+        "Oscuranti",
+        "Porte e sicurezza",
+        "Porte interne",
+        "Atelier Gibus"
+      ],
+      "mainInert": true,
+      "overflow": false
+    },
+    {
+      "bodyOverflow": "",
+      "check": "mobileEscape",
+      "expanded": "false",
+      "focus": "Apri menu",
+      "mainInert": false
+    },
+    {
+      "bodyOverflow": "",
+      "check": "mobileProductRoute",
+      "inertMain": false,
+      "path": "/atelier-gibus"
+    },
+    {
+      "bodyOverflow": "",
+      "check": "resizeToDesktop",
+      "dialog": null,
+      "mainInert": false,
+      "width": 1211
+    },
+    {
+      "background": "rgba(255, 255, 255, 0.74)",
+      "blur": "blur(16px)",
+      "check": "desktopWhiteScrolled",
+      "color": "rgb(47, 52, 58)",
+      "overflow": false,
+      "width": 1211
+    },
+    {
+      "check": "desktopOutsideClick",
+      "expanded": "false"
+    },
+    {
+      "check": "mobileSmallReduced",
+      "height": 568,
+      "itemDelay": "0s",
+      "mainInert": true,
+      "menuDuration": "1e-05s",
+      "menuOverflow": "auto",
+      "motion": "reduced",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "check": "mobileReverseTabWrap",
+      "focus": "Contatti"
+    },
+    {
+      "bodyOverflow": "",
+      "check": "mobileCloseButton",
+      "expanded": "false",
+      "mainInert": false
+    },
+    {
+      "background": "rgba(255, 255, 255, 0.45)",
+      "bodyOverflow": "",
+      "check": "finalWhiteNavbar",
+      "mainInert": false,
+      "motion": "full",
+      "navbarLogoLoaded": true,
+      "overflow": false,
+      "scrollY": 0,
+      "textColor": "rgb(47, 52, 58)",
+      "width": 1211
+    }
+  ],
+  "coldLoadWarningsAndErrors": []
+}

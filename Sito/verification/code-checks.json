@@ -1,0 +1,51 @@
+{
+  "typecheck": {
+    "chunk_id": "b69e4a",
+    "wall_time_seconds": 1.090280375,
+    "exit_code": 0,
+    "original_token_count": 12,
+    "output": "\n> lge-home-solutions@0.1.0 typecheck\n> tsc -b\n\n"
+  },
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "f1cc3c",
+        "wall_time_seconds": 1.567901875,
+        "exit_code": 0,
+        "original_token_count": 201,
+        "output": "\n> lge-home-solutions@0.1.0 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 89 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                                   0.75 kB │ gzip:   0.43 kB\ndist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2         18.22 kB\ndist/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2   22.87 kB\ndist/assets/cormorant-garamond-latin-400-normal-B7YtguxJ.woff    30.98 kB\ndist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2             36.93 kB\ndist/assets/index-aZWggtQU.css                                   20.24 kB │ gzip:   5.23 kB\ndist/assets/index-DoSc_517.js                                   426.10 kB │ gzip: 145.00 kB\n\n✓ built in 221ms\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "7022ad",
+        "wall_time_seconds": 1.545194209,
+        "exit_code": 0,
+        "original_token_count": 12,
+        "output": "\n> lge-home-solutions@0.1.0 lint\n> eslint .\n\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "cd4ed5",
+        "wall_time_seconds": 0.430780375,
+        "exit_code": 0,
+        "original_token_count": 71,
+        "output": "\n> lge-home-solutions@0.1.0 test\n> vitest run\n\n\n RUN  v5.0.5 /Users/nunziomerone/Desktop/Project/LgeHomeSolutions/Sito\n\n\n Test Files  1 passed (1)\n      Tests  5 passed (5)\n   Start at  18:30:26\n   Duration  158ms (import 41%, transform 33%, worker 13%, tests 12%, environment 1%)\n\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "2a1296",
+        "wall_time_seconds": 0.662151708,
+        "exit_code": 0,
+        "original_token_count": 33,
+        "output": "\n> lge-home-solutions@0.1.0 format:check\n> prettier --check .\n\nChecking formatting...\nAll matched files use Prettier code style!\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+import type { Partner } from '../types/content'
+import { assetUrl } from '../utils/assetUrl'
+
+export const partners: Partner[] = [
+  {
+    id: 'schueco',
+    label: 'Schüco',
+    logo: assetUrl('img/partners/schueco.svg'),
+    width: 176,
+    height: 30,
+    status: 'user-provided',
+  },
+  {
+    id: 'velux',
+    label: 'VELUX',
+    logo: assetUrl('img/partners/velux.svg'),
+    width: 381,
+    height: 128,
+    status: 'user-provided',
+  },
+  {
+    id: 'ipea',
+    label: 'I-PEA Porte Design',
+    logo: assetUrl('img/partners/ipea.png'),
+    width: 525,
+    height: 174,
+    logoTone: 'light',
+    status: 'user-provided',
+  },
+  {
+    id: 'doorarreda',
+    label: 'DoorArreda',
+    logo: assetUrl('img/partners/doorarreda.png'),
+    width: 800,
+    height: 114,
+    status: 'user-provided',
+  },
+  {
+    id: 'effepi',
+    label: 'Blindato Effepi',
+    logo: assetUrl('img/partners/effepi.png'),
+    width: 234,
+    height: 62,
+    status: 'user-provided',
+  },
+  {
+    id: 'tehni',
+    label: 'TEHNi',
+    logo: assetUrl('img/partners/tehni.svg'),
+    width: 156.8,
+    height: 58.1,
+    status: 'user-provided',
+  },
+  {
+    id: 'sikurhome',
+    label: 'Sikur Home',
+    logo: assetUrl('img/partners/sikurhome.png'),
+    width: 1111,
+    height: 319,
+    logoTone: 'light',
+    status: 'user-provided',
+  },
+  {
+    id: 'hormann',
+    label: 'Hörmann',
+    logo: assetUrl('img/partners/hormann.svg'),
+    width: 266,
+    height: 115,
+    status: 'user-provided',
+  },
+]

@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "blue": "rgb(1, 67, 128)",
+      "logo": "/img/brand/lge-navbar-horizontal-flat.webp",
+      "overflow": false,
+      "paper": "rgb(252, 252, 251)",
+      "prefixOpacity": "0.2529",
+      "prefixTransform": "matrix(1, 0, 0, 1, 0, 7.4705)",
+      "step": "brand-desktop",
+      "width": 842
+    },
+    {
+      "cards": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "opacity": "1",
+      "step": "prefix-settled",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "blue": "rgb(1, 67, 128)",
+      "logo": "/img/brand/lge-navbar-horizontal-flat.webp",
+      "overflow": false,
+      "prefixOpacity": "1",
+      "step": "brand-mobile",
+      "width": 390
+    },
+    {
+      "mode": "reduced",
+      "prefixOpacity": "1",
+      "prefixTransform": "none",
+      "step": "brand-reduced-motion",
+      "suffix": "illumina i tuoi spazi"
+    }
+  ],
+  "sourceSha256": "1a6dee662543f44be55ae860b5f96372970a20e68a604f2dd30cb7dced0b6e2e",
+  "sampledBlue": "#014380",
+  "paper": "#FCFCFB",
+  "validation": [
+    "Build e TypeScript superati",
+    "ESLint superato",
+    "8 test superati",
+    "Prettier superato"
+  ]
+}

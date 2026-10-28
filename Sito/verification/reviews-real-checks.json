@@ -1,0 +1,196 @@
+{
+  "checks": [
+    {
+      "authors": [
+        "Carlo Sesti",
+        "Francesco Barbato",
+        "Giuseppe Manna",
+        "Sasi De Mari",
+        "Pasqualina Parascandola Ladonea"
+      ],
+      "cards": 5,
+      "demo": false,
+      "links": [
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "5,0/55 recensioni"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Vedi su Google"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Vedi su Google"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Vedi su Google"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Vedi su Google"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Vedi su Google"
+        },
+        {
+          "href": "https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2",
+          "target": "_blank",
+          "text": "Tutte le recensioni su Google ↗"
+        }
+      ],
+      "manual": true,
+      "overflow": false,
+      "title": "Cosa dicono di noi",
+      "titleCenter": 551.99609375,
+      "viewport": 1104,
+      "viewportCenter": 552
+    },
+    {
+      "arrows": [
+        {
+          "disabled": true,
+          "display": "grid",
+          "label": "Precedente: Recensioni Google"
+        },
+        {
+          "disabled": true,
+          "display": "grid",
+          "label": "Successivo: Recensioni Google"
+        }
+      ],
+      "articles": [
+        {
+          "author": "Carlo Sesti",
+          "left": 136.5390625,
+          "starsTop": 1376.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Francesco Barbato",
+          "left": 430.3203125,
+          "starsTop": 1376.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Giuseppe Manna",
+          "left": 724.1015625,
+          "starsTop": 1376.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Sasi De Mari",
+          "left": 1017.8828125,
+          "starsTop": 1376.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Pasqualina Parascandola Ladonea",
+          "left": 1311.6640625,
+          "starsTop": 1389.2890625,
+          "width": 271.78125
+        }
+      ],
+      "overflow": false,
+      "viewport": 1720
+    },
+    {
+      "cards": [
+        {
+          "author": "Carlo Sesti",
+          "left": 136.5390625,
+          "starsTop": 424.5,
+          "top": 354.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Francesco Barbato",
+          "left": 430.3203125,
+          "starsTop": 424.5,
+          "top": 354.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Giuseppe Manna",
+          "left": 724.1015625,
+          "starsTop": 424.5,
+          "top": 354.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Sasi De Mari",
+          "left": 1017.8828125,
+          "starsTop": 424.5,
+          "top": 354.5,
+          "width": 271.78125
+        },
+        {
+          "author": "Pasqualina Parascandola Ladonea",
+          "left": 1311.6640625,
+          "starsTop": 437.2890625,
+          "top": 354.5,
+          "width": 271.78125
+        }
+      ],
+      "controls": "none",
+      "viewport": 1720
+    },
+    {
+      "cards": 5,
+      "overflow": false,
+      "selected": "1 di 5",
+      "titleCenter": 195,
+      "titleTop": 1090.9453125,
+      "viewport": 390
+    },
+    {
+      "overflow": false,
+      "selected": "2 di 5",
+      "step": "mobile-next",
+      "viewport": 390
+    },
+    {
+      "nextDisabled": true,
+      "selected": "5 di 5",
+      "step": "mobile-keyboard-end",
+      "viewport": 390
+    },
+    {
+      "headingOpacity": "1",
+      "overflow": false,
+      "selected": "5 di 5",
+      "step": "small-mobile-reduced-motion",
+      "title": "Cosa dicono di noi",
+      "viewport": 320
+    },
+    {
+      "overflow": false,
+      "starsTop": [
+        439.5,
+        439.5,
+        439.5,
+        439.5,
+        439.5
+      ],
+      "step": "final-wide-desktop",
+      "title": "Cosa dicono di noi",
+      "viewport": 1720
+    }
+  ],
+  "verification": [
+    "TypeScript e build completati",
+    "ESLint completato",
+    "Vitest: 5 test esistenti superati",
+    "Prettier completato"
+  ],
+  "source": "Google Maps pubblico, trascrizione manuale del 2026-10-24",
+  "automaticSync": false
+}

@@ -1,0 +1,125 @@
+{
+  "checkedAt": "2026-10-28",
+  "desktop": {
+    "cards": [
+      {
+        "category": "Scopri Infissi",
+        "height": 348.3984375,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/windows-480.webp",
+        "width": 278.71875
+      },
+      {
+        "category": "Scopri Oscuranti",
+        "height": 348.3984375,
+        "loaded": true,
+        "position": "25% 50%",
+        "source": "http://localhost:5175/img/hero/shading-480.webp",
+        "width": 278.71875
+      },
+      {
+        "category": "Scopri Porte e sicurezza",
+        "height": 348.3984375,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/security-480.webp",
+        "width": 278.71875
+      },
+      {
+        "category": "Scopri Porte interne",
+        "height": 348.3984375,
+        "loaded": true,
+        "position": "75% 50%",
+        "source": "http://localhost:5175/img/hero/interior-480.webp",
+        "width": 278.71875
+      },
+      {
+        "category": "Scopri Atelier Gibus",
+        "height": 348.3984375,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/outdoor-480.webp",
+        "width": 278.71875
+      }
+    ],
+    "gallerySources": [
+      "/img/photos/outdoor-640.webp",
+      "/img/photos/windows-640.webp",
+      "/img/photos/security-640.webp",
+      "/img/photos/interior-640.webp",
+      "/img/photos/shading-640.webp",
+      "/img/photos/outdoor-640.webp",
+      "/img/photos/windows-640.webp",
+      "/img/photos/security-640.webp",
+      "/img/photos/interior-640.webp",
+      "/img/photos/shading-640.webp"
+    ],
+    "pageWidth": 1600,
+    "width": 1600
+  },
+  "mobile": {
+    "cards": [
+      {
+        "category": "Scopri Infissi",
+        "height": 332.5,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/windows-480.webp",
+        "width": 266
+      },
+      {
+        "category": "Scopri Oscuranti",
+        "height": 332.5,
+        "loaded": true,
+        "position": "25% 50%",
+        "source": "http://localhost:5175/img/hero/shading-480.webp",
+        "width": 266
+      },
+      {
+        "category": "Scopri Porte e sicurezza",
+        "height": 332.5,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/security-480.webp",
+        "width": 266
+      },
+      {
+        "category": "Scopri Porte interne",
+        "height": 332.5,
+        "loaded": true,
+        "position": "75% 50%",
+        "source": "http://localhost:5175/img/hero/interior-480.webp",
+        "width": 266
+      },
+      {
+        "category": "Scopri Atelier Gibus",
+        "height": 332.5,
+        "loaded": true,
+        "position": "50% 50%",
+        "source": "http://localhost:5175/img/hero/outdoor-480.webp",
+        "width": 266
+      }
+    ],
+    "gallerySources": [
+      "/img/photos/outdoor-640.webp",
+      "/img/photos/windows-640.webp",
+      "/img/photos/security-640.webp",
+      "/img/photos/interior-640.webp",
+      "/img/photos/shading-640.webp",
+      "/img/photos/outdoor-640.webp",
+      "/img/photos/windows-640.webp",
+      "/img/photos/security-640.webp",
+      "/img/photos/interior-640.webp",
+      "/img/photos/shading-640.webp"
+    ],
+    "pageWidth": 390,
+    "width": 390
+  },
+  "checks": {
+    "build": true,
+    "lint": true,
+    "format": true
+  },
+  "viewportOverrideReset": true
+}

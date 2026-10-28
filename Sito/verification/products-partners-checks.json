@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-24",
+  "url": "http://localhost:5175/#prodotti",
+  "sourceChecks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "cardHeights": [
+        401.671875,
+        401.671875,
+        401.671875,
+        401.671875,
+        401.671875
+      ],
+      "cards": [
+        {
+          "alignment": "start",
+          "border": "0px",
+          "contentAlignment": "center",
+          "imageRatio": "3 / 4",
+          "opacity": "1",
+          "radius": "8px",
+          "text": "Più luce, comfort e armonia tra la tua casa e il mondo fuori."
+        },
+        {
+          "alignment": "start",
+          "border": "0px",
+          "contentAlignment": "center",
+          "imageRatio": "3 / 4",
+          "opacity": "1",
+          "radius": "8px",
+          "text": "La luce che desideri, la privacy di cui hai bisogno."
+        },
+        {
+          "alignment": "start",
+          "border": "0px",
+          "contentAlignment": "center",
+          "imageRatio": "3 / 4",
+          "opacity": "1",
+          "radius": "8px",
+          "text": "Protezione e design si incontrano, fin dal primo ingresso."
+        },
+        {
+          "alignment": "start",
+          "border": "0px",
+          "contentAlignment": "center",
+          "imageRatio": "3 / 4",
+          "opacity": "1",
+          "radius": "8px",
+          "text": "Materiali e dettagli che danno continuità al tuo stile."
+        },
+        {
+          "alignment": "start",
+          "border": "0px",
+          "contentAlignment": "center",
+          "imageRatio": "3 / 4",
+          "opacity": "1",
+          "radius": "8px",
+          "text": "Pergole e soluzioni outdoor per vivere il piacere di stare all’aperto."
+        }
+      ],
+      "check": "desktopProducts",
+      "colors": {
+        "hero": "#faf9f6",
+        "products": "rgb(239, 241, 242)"
+      },
+      "ctaCount": 0,
+      "headings": [
+        {
+          "size": "32.697px",
+          "text": "I nostri prodotti"
+        },
+        {
+          "size": "32.697px",
+          "text": "I nostri partner"
+        },
+        {
+          "size": "32.697px",
+          "text": "Qualità certificata, risultati concreti"
+        },
+        {
+          "size": "32.697px",
+          "text": "I nostri lavori"
+        },
+        {
+          "size": "32.697px",
+          "text": "Dicono di noi"
+        },
+        {
+          "size": "32.697px",
+          "text": "Parliamo del tuo progetto"
+        }
+      ],
+      "overflow": false,
+      "width": 1211
+    },
+    {
+      "allProductCardsVisible": true,
+      "check": "reducedMotion",
+      "headingLines": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "mode": "reduced"
+    },
+    {
+      "allDescriptionsMeaningful": true,
+      "check": "mobileProducts",
+      "firstCardVisible": "1",
+      "headingSize": "29.6px",
+      "overflow": false,
+      "productsTop": 99.75,
+      "scrollY": 1179,
+      "width": 390
+    },
+    {
+      "check": "mobileNextCard",
+      "counter": "02 / 05",
+      "overflow": false,
+      "secondCardLeft": 20.4765625,
+      "secondCardOpacity": "1"
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "check": "mobilePartners",
+      "logos": [
+        {
+          "brand": "AluK",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "brand": "Pirnar",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "brand": "Secco Sistemi",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "brand": "Mottura",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "brand": "Dirello",
+          "loaded": true,
+          "visible": true
+        }
+      ],
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "check": "freshPartnerAnimationStart",
+      "headingLine": "matrix(0, 0, 0, 1, 0, 0)",
+      "logos": [
+        {
+          "brand": "AluK",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 64, 0)"
+        },
+        {
+          "brand": "Pirnar",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 64, 0)"
+        },
+        {
+          "brand": "Secco Sistemi",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 64, 0)"
+        },
+        {
+          "brand": "Mottura",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 64, 0)"
+        },
+        {
+          "brand": "Dirello",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 64, 0)"
+        }
+      ],
+      "scrollY": 0
+    },
+    {
+      "allProductCardsVisible": true,
+      "check": "desktopFinal",
+      "headingLines": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ],
+      "logosLoaded": true,
+      "logosVisible": true,
+      "overflow": false,
+      "scrollY": 602.5,
+      "width": 1211
+    },
+    {
+      "cards": [
+        {
+          "opacity": "0",
+          "title": "Infissi",
+          "transform": "matrix(1, 0, 0, 1, 0, -38)"
+        },
+        {
+          "opacity": "0",
+          "title": "Oscuranti",
+          "transform": "matrix(1, 0, 0, 1, 0, 38)"
+        },
+        {
+          "opacity": "0",
+          "title": "Porte e sicurezza",
+          "transform": "matrix(1, 0, 0, 1, 0, -38)"
+        },
+        {
+          "opacity": "0",
+          "title": "Porte interne",
+          "transform": "matrix(1, 0, 0, 1, 0, 38)"
+        },
+        {
+          "opacity": "0",
+          "title": "Atelier Gibus",
+          "transform": "matrix(1, 0, 0, 1, 0, -38)"
+        }
+      ],
+      "check": "productReplayStart",
+      "scrollY": 1655.5
+    },
+    {
+      "check": "finalUserView",
+      "firstCardVisible": true,
+      "hash": "#prodotti",
+      "overflow": false,
+      "width": 330
+    }
+  ],
+  "browserLogs": []
+}

@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-28",
+  "desktop": {
+    "contactIcons": 2,
+    "footerHeight": 464.5,
+    "footerTop": 535.5234375,
+    "hasAbout": false,
+    "headings": [
+      "Soluzioni",
+      "Esplora"
+    ],
+    "logoLoaded": true,
+    "logoWidth": 420,
+    "motionControl": false,
+    "navigation": [
+      "Competenze",
+      "I nostri lavori",
+      "Recensioni",
+      "Contatti"
+    ],
+    "overflow": [],
+    "pageWidth": 1440,
+    "productLinks": 5,
+    "width": 1440
+  },
+  "mobile": {
+    "contactIcons": 2,
+    "footerHeight": 651.0625,
+    "footerTop": 1414.609375,
+    "hasAbout": false,
+    "headings": [
+      "Soluzioni",
+      "Esplora"
+    ],
+    "logoLoaded": true,
+    "logoWidth": 310,
+    "motionControl": false,
+    "navigation": [
+      "Competenze",
+      "I nostri lavori",
+      "Recensioni",
+      "Contatti"
+    ],
+    "overflow": [],
+    "pageWidth": 390,
+    "productLinks": 5,
+    "width": 390
+  },
+  "small": {
+    "contactIcons": 2,
+    "footerHeight": 641.0625,
+    "footerTop": 99.140625,
+    "hasAbout": false,
+    "headings": [
+      "Soluzioni",
+      "Esplora"
+    ],
+    "logoLoaded": true,
+    "logoWidth": 280,
+    "motionControl": false,
+    "navigation": [
+      "Competenze",
+      "I nostri lavori",
+      "Recensioni",
+      "Contatti"
+    ],
+    "overflow": [],
+    "pageWidth": 320,
+    "productLinks": 5,
+    "width": 320
+  },
+  "tablet": {
+    "contactIcons": 2,
+    "footerHeight": 550.21875,
+    "footerTop": 473.640625,
+    "hasAbout": false,
+    "headings": [
+      "Soluzioni",
+      "Esplora"
+    ],
+    "logoLoaded": true,
+    "logoWidth": 350,
+    "motionControl": false,
+    "navigation": [
+      "Competenze",
+      "I nostri lavori",
+      "Recensioni",
+      "Contatti"
+    ],
+    "overflow": [],
+    "pageWidth": 768,
+    "productLinks": 5,
+    "width": 768
+  },
+  "checks": {
+    "build": true,
+    "lint": true,
+    "format": true
+  },
+  "viewportOverrideReset": true
+}

@@ -1,0 +1,135 @@
+{
+  "responsive": [
+    {
+      "captions": 0,
+      "center": {
+        "height": 599.3828125,
+        "width": 479.5078125,
+        "x": 480.34375
+      },
+      "dialog": false,
+      "headingLine": false,
+      "italic": "italic",
+      "pageWidth": 1440,
+      "selected": "Ingrandisci foto: Outdoor",
+      "title": "I nostri lavori",
+      "visibleSlides": 5,
+      "width": 1440
+    },
+    {
+      "captions": 0,
+      "center": {
+        "height": 341.625,
+        "width": 273.3046875,
+        "x": 58.421875
+      },
+      "dialog": false,
+      "headingLine": false,
+      "italic": "italic",
+      "pageWidth": 390,
+      "selected": "Ingrandisci foto: Outdoor",
+      "title": "I nostri lavori",
+      "visibleSlides": 5,
+      "width": 390
+    },
+    {
+      "captions": 0,
+      "center": {
+        "height": 280.296875,
+        "width": 224.2421875,
+        "x": 47.6484375
+      },
+      "dialog": false,
+      "headingLine": false,
+      "italic": "italic",
+      "pageWidth": 320,
+      "selected": "Ingrandisci foto: Outdoor",
+      "title": "I nostri lavori",
+      "visibleSlides": 5,
+      "width": 320
+    },
+    {
+      "captions": 0,
+      "center": {
+        "height": 401.8359375,
+        "width": 321.46875,
+        "x": 223.25
+      },
+      "dialog": false,
+      "headingLine": false,
+      "italic": "italic",
+      "pageWidth": 768,
+      "selected": "Ingrandisci foto: Outdoor",
+      "title": "I nostri lavori",
+      "visibleSlides": 5,
+      "width": 768
+    }
+  ],
+  "desktopDialog": {
+    "open": {
+      "focus": "Chiudi fotografia",
+      "htmlOverflow": "hidden",
+      "image": {
+        "height": 967.901123046875,
+        "source": "http://localhost:5175/img/photos/security-1024.webp",
+        "width": 645.26220703125
+      },
+      "modal": true,
+      "open": true,
+      "scrollY": 1840.5
+    },
+    "close": {
+      "closed": true,
+      "focus": "Ingrandisci foto: Porte e sicurezza",
+      "overflow": "visible",
+      "scrollY": 1840.5
+    }
+  },
+  "mobile": {
+    "before": "Ingrandisci foto: Oscuranti",
+    "after": "Ingrandisci foto: Outdoor",
+    "accidentalDialog": false,
+    "lightbox": {
+      "image": {
+        "height": 537,
+        "left": 16,
+        "right": 374
+      },
+      "modal": true,
+      "open": true,
+      "scrollLocked": true,
+      "width": 390
+    },
+    "closeButton": true,
+    "backdrop": true
+  },
+  "reducedMotion": {
+    "stopped": true,
+    "observedForMs": 36585
+  },
+  "automaticAdvance": {
+    "changed": true,
+    "before": {
+      "focused": false,
+      "height": 554.8515625,
+      "hovered": false,
+      "index": 4,
+      "motion": "full",
+      "screenHeight": 977,
+      "source": "Ingrandisci foto: Oscuranti",
+      "top": 317.953125,
+      "transform": "matrix(1, 0, 0, 1, -413.5, 0)"
+    },
+    "after": {
+      "focused": false,
+      "height": 554.8515625,
+      "hovered": false,
+      "index": 9,
+      "motion": "full",
+      "screenHeight": 977,
+      "source": "Ingrandisci foto: Oscuranti",
+      "top": 317.953125,
+      "transform": "matrix(1, 0, 0, 1, -1612.5, 0)"
+    }
+  }
+}

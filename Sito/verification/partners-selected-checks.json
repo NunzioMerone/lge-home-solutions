@@ -1,0 +1,352 @@
+{
+  "layout": [
+    {
+      "background": "rgb(237, 233, 227)",
+      "columns": "327.961px 327.961px 327.961px 327.961px",
+      "logos": [
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Schüco",
+          "topBorder": "0px",
+          "width": 328,
+          "x": 64
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "VELUX",
+          "topBorder": "0px",
+          "width": 328,
+          "x": 392
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "I-PEA Porte Design",
+          "topBorder": "0px",
+          "width": 328,
+          "x": 720
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "DoorArreda",
+          "topBorder": "0px",
+          "width": 328,
+          "x": 1048
+        },
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Blindato Effepi",
+          "topBorder": "1px",
+          "width": 328,
+          "x": 64
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "TEHNi",
+          "topBorder": "1px",
+          "width": 328,
+          "x": 392
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Sikur Home",
+          "topBorder": "1px",
+          "width": 328,
+          "x": 720
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Hörmann",
+          "topBorder": "1px",
+          "width": 328,
+          "x": 1048
+        }
+      ],
+      "pageWidth": 1440,
+      "rows": 2,
+      "width": 1440
+    },
+    {
+      "background": "rgb(237, 233, 227)",
+      "columns": "175px 175px",
+      "logos": [
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Schüco",
+          "topBorder": "0px",
+          "width": 175,
+          "x": 76
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "VELUX",
+          "topBorder": "0px",
+          "width": 175,
+          "x": 259
+        },
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "I-PEA Porte Design",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 84
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "DoorArreda",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 259
+        },
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Blindato Effepi",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 84
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "TEHNi",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 259
+        },
+        {
+          "divider": "none",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Sikur Home",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 84
+        },
+        {
+          "divider": "block",
+          "fit": "contain",
+          "loaded": true,
+          "name": "Hörmann",
+          "topBorder": "1px",
+          "width": 175,
+          "x": 259
+        }
+      ],
+      "pageWidth": 390,
+      "rows": 4,
+      "width": 390
+    }
+  ],
+  "containment": [
+    {
+      "logos": [
+        {
+          "contained": true,
+          "label": "Schüco",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "VELUX",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "I-PEA Porte Design",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "DoorArreda",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Blindato Effepi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "TEHNi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Sikur Home",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Hörmann",
+          "loaded": true
+        }
+      ],
+      "pageWidth": 390,
+      "width": 390
+    },
+    {
+      "logos": [
+        {
+          "contained": true,
+          "label": "Schüco",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "VELUX",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "I-PEA Porte Design",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "DoorArreda",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Blindato Effepi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "TEHNi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Sikur Home",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Hörmann",
+          "loaded": true
+        }
+      ],
+      "pageWidth": 320,
+      "width": 320
+    },
+    {
+      "logos": [
+        {
+          "contained": true,
+          "label": "Schüco",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "VELUX",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "I-PEA Porte Design",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "DoorArreda",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Blindato Effepi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "TEHNi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Sikur Home",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Hörmann",
+          "loaded": true
+        }
+      ],
+      "pageWidth": 768,
+      "width": 768
+    },
+    {
+      "logos": [
+        {
+          "contained": true,
+          "label": "Schüco",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "VELUX",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "I-PEA Porte Design",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "DoorArreda",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Blindato Effepi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "TEHNi",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Sikur Home",
+          "loaded": true
+        },
+        {
+          "contained": true,
+          "label": "Hörmann",
+          "loaded": true
+        }
+      ],
+      "pageWidth": 1440,
+      "width": 1440
+    }
+  ]
+}

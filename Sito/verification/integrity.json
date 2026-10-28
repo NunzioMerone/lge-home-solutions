@@ -1,0 +1,38 @@
+{
+  "first_prototype_files_unchanged": {
+    "Hero_test/src/App.tsx": true,
+    "Hero_test/src/main.tsx": true,
+    "Hero_test/src/types/hero.ts": true,
+    "Hero_test/src/types/scene.ts": true,
+    "Hero_test/src/config/hero.ts": true,
+    "Hero_test/src/utils/textures.ts": true,
+    "Hero_test/src/utils/storyboard.test.ts": true,
+    "Hero_test/src/utils/storyboard.ts": true,
+    "Hero_test/src/utils/camera.ts": true,
+    "Hero_test/src/utils/random.ts": true,
+    "Hero_test/src/styles/global.css": true,
+    "Hero_test/src/components/navbar/Navbar.tsx": true,
+    "Hero_test/src/components/hero/Hero.tsx": true,
+    "Hero_test/src/components/hero/FrameSequence.tsx": true,
+    "Hero_test/src/components/scene/Vegetation.tsx": true,
+    "Hero_test/src/components/scene/Atmosphere.tsx": true,
+    "Hero_test/src/components/scene/Villa.tsx": true,
+    "Hero_test/src/components/scene/Landscape.tsx": true,
+    "Hero_test/src/components/scene/ArchitecturalBox.tsx": true,
+    "Hero_test/src/components/scene/SceneContent.tsx": true,
+    "Hero_test/src/components/scene/Pergola.tsx": true,
+    "Hero_test/src/components/scene/Furniture.tsx": true,
+    "Hero_test/src/components/scene/HeroScene.tsx": true,
+    "Hero_test/src/hooks/useMediaQuery.ts": true,
+    "Hero_test/src/hooks/useHeroExperience.ts": true,
+    "Hero_test/package.json": true,
+    "Hero_test/package-lock.json": true
+  },
+  "second_prototype_videos_unchanged": {
+    "public/media/lge-outdoor-desktop.mp4": true,
+    "public/media/lge-outdoor-mobile.mp4": true
+  },
+  "original_color_logo_preserved": true,
+  "original_white_logo_preserved": true,
+  "legacy_site_directory_empty": true
+}

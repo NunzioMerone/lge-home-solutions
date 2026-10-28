@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-24",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "cardCenter": 195.09765625,
+      "cardWidth": 304.1953125,
+      "check": "mobileFirstCard",
+      "overflow": false,
+      "paginationButtons": 5,
+      "revealTransforms": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ],
+      "selectedDot": "Vai al prodotto 1 di 5",
+      "viewportCenter": 195,
+      "width": 390
+    },
+    {
+      "cardCenter": 195.29296875,
+      "check": "nextArrow",
+      "selectedDot": "Vai al prodotto 2 di 5",
+      "title": "Oscuranti"
+    },
+    {
+      "cardCenter": 194.87890625,
+      "check": "lastDot",
+      "nextDisabled": true,
+      "title": "Atelier Gibus",
+      "viewportCenter": 195
+    },
+    {
+      "check": "keyboardHome",
+      "selectedDot": "Vai al prodotto 1 di 5"
+    },
+    {
+      "check": "swipe",
+      "overflow": false,
+      "selectedDot": "Vai al prodotto 2 di 5",
+      "title": "Oscuranti"
+    },
+    {
+      "allCardsReadable": true,
+      "check": "mobileReducedMotion",
+      "mode": "reduced"
+    },
+    {
+      "check": "mobileEntranceStart",
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 18)",
+        "matrix(1, 0, 0, 1, 0, 18)",
+        "matrix(1, 0, 0, 1, 0, 18)",
+        "matrix(1, 0, 0, 1, 0, 18)",
+        "matrix(1, 0, 0, 1, 0, 18)"
+      ]
+    },
+    {
+      "cardCenter": 159.390625,
+      "check": "smallMobile",
+      "overflow": false,
+      "paginationFits": true,
+      "viewportCenter": 160,
+      "width": 320
+    },
+    {
+      "cards": [
+        {
+          "left": 53.8828125,
+          "opacity": "1",
+          "right": 256.9296875
+        },
+        {
+          "left": 278.9296875,
+          "opacity": "1",
+          "right": 481.9765625
+        },
+        {
+          "left": 503.9765625,
+          "opacity": "1",
+          "right": 707.0234375
+        },
+        {
+          "left": 729.0234375,
+          "opacity": "1",
+          "right": 932.0703125
+        },
+        {
+          "left": 954.0703125,
+          "opacity": "1",
+          "right": 1157.1171875
+        }
+      ],
+      "check": "desktopPreserved",
+      "overflow": false,
+      "paginationHidden": true,
+      "width": 1211
+    },
+    {
+      "cardCenter": 195.29296875,
+      "check": "finalMobile",
+      "overflow": false,
+      "title": "Oscuranti",
+      "viewportCenter": 195,
+      "width": 390
+    }
+  ],
+  "browserLogs": []
+}

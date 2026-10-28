@@ -1,0 +1,258 @@
+{
+  "colors": {
+    "accent": "color(srgb 0.556863 0.681765 0.808431)",
+    "background": "rgb(47, 52, 58)",
+    "body": "color(srgb 0.811373 0.815686 0.817804)",
+    "eyebrow": "color(srgb 0.556863 0.681765 0.808431)",
+    "footerBackground": "rgb(47, 52, 58)",
+    "heading": "rgb(252, 252, 251)",
+    "note": "color(srgb 0.666667 0.67451 0.681569)"
+  },
+  "contrast": {
+    "heading": 12.23,
+    "accent": 5.43,
+    "eyebrow": 5.43,
+    "body": 8.12,
+    "note": 5.51
+  },
+  "reducedMotion": {
+    "cards": [
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      }
+    ],
+    "motion": "reduced"
+  },
+  "layoutChecks": [
+    {
+      "background": "rgb(252, 252, 251)",
+      "cards": [
+        {
+          "opacity": "1",
+          "title": "PosaClima",
+          "width": 249.25,
+          "x": 378.9140625,
+          "y": 212.6171875
+        },
+        {
+          "opacity": "1",
+          "title": "Qualifica EQF 4",
+          "width": 249.25,
+          "x": 628.1640625,
+          "y": 212.6171875
+        },
+        {
+          "opacity": "1",
+          "title": "Termografia",
+          "width": 249.25,
+          "x": 877.4140625,
+          "y": 212.6171875
+        },
+        {
+          "opacity": "1",
+          "title": "Efficienza energetica",
+          "width": 249.2578125,
+          "x": 1126.6640625,
+          "y": 212.6171875
+        }
+      ],
+      "documentWidth": 1440,
+      "headingFont": "\"Cormorant Garamond\", Georgia, serif",
+      "images": 0,
+      "width": 1440
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "cards": [
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "PosaClima",
+          "width": 350,
+          "x": 20,
+          "y": 386
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Qualifica EQF 4",
+          "width": 350,
+          "x": 20,
+          "y": 697
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Termografia",
+          "width": 350,
+          "x": 20,
+          "y": 1008
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Efficienza energetica",
+          "width": 350,
+          "x": 20,
+          "y": 1319
+        }
+      ],
+      "documentWidth": 390,
+      "heading": "Esperienza e competenze per risultati che durano",
+      "sectionWidth": 390,
+      "width": 390
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "cards": [
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "PosaClima",
+          "width": 280,
+          "x": 20,
+          "y": 412
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Qualifica EQF 4",
+          "width": 280,
+          "x": 20,
+          "y": 723
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Termografia",
+          "width": 280,
+          "x": 20,
+          "y": 1034
+        },
+        {
+          "height": 279,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Efficienza energetica",
+          "width": 280,
+          "x": 20,
+          "y": 1345
+        }
+      ],
+      "documentWidth": 320,
+      "heading": "Esperienza e competenze per risultati che durano",
+      "sectionWidth": 320,
+      "width": 320
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "cards": [
+        {
+          "height": 274,
+          "opacity": "1",
+          "overflow": false,
+          "title": "PosaClima",
+          "width": 350,
+          "x": 34,
+          "y": 73
+        },
+        {
+          "height": 274,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Qualifica EQF 4",
+          "width": 350,
+          "x": 384,
+          "y": 73
+        },
+        {
+          "height": 274,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Termografia",
+          "width": 350,
+          "x": 34,
+          "y": 394
+        },
+        {
+          "height": 274,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Efficienza energetica",
+          "width": 350,
+          "x": 384,
+          "y": 394
+        }
+      ],
+      "documentWidth": 768,
+      "heading": "Esperienza e competenze per risultati che durano",
+      "sectionWidth": 768,
+      "width": 768
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "cards": [
+        {
+          "height": 298,
+          "opacity": "1",
+          "overflow": false,
+          "title": "PosaClima",
+          "width": 233,
+          "x": 46,
+          "y": 380
+        },
+        {
+          "height": 298,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Qualifica EQF 4",
+          "width": 233,
+          "x": 279,
+          "y": 380
+        },
+        {
+          "height": 298,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Termografia",
+          "width": 233,
+          "x": 512,
+          "y": 380
+        },
+        {
+          "height": 298,
+          "opacity": "1",
+          "overflow": false,
+          "title": "Efficienza energetica",
+          "width": 233,
+          "x": 745,
+          "y": 380
+        }
+      ],
+      "documentWidth": 1024,
+      "heading": "Esperienza e competenze per risultati che durano",
+      "sectionWidth": 1024,
+      "width": 1024
+    }
+  ]
+}

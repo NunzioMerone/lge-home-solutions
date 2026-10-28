@@ -1,0 +1,256 @@
+{
+  "automaticMovement": true,
+  "keyboard": {
+    "home": "1 di 5",
+    "end": "5 di 5"
+  },
+  "reducedMotionStops": true,
+  "mobileDrag": {
+    "before": {
+      "selected": "1 di 5",
+      "track": "matrix(1, 0, 0, 1, -1.8, 0)"
+    },
+    "after": {
+      "selected": "2 di 5",
+      "track": "matrix(1, 0, 0, 1, -351.43, 0)"
+    }
+  },
+  "desktop": {
+    "background": "rgb(252, 252, 251)",
+    "buttons": 0,
+    "figures": [
+      {
+        "height": 549,
+        "title": "Il comfort, all’aperto",
+        "width": 616
+      },
+      {
+        "height": 549,
+        "title": "Spazio alla luce",
+        "width": 425
+      },
+      {
+        "height": 549,
+        "title": "Il primo dettaglio di casa",
+        "width": 616
+      },
+      {
+        "height": 549,
+        "title": "Armonia tra gli ambienti",
+        "width": 425
+      },
+      {
+        "height": 549,
+        "title": "La luce, come la desideri",
+        "width": 616
+      }
+    ],
+    "focused": false,
+    "images": [
+      {
+        "loaded": true,
+        "source": "http://localhost:5175/img/photos/outdoor-640.webp"
+      },
+      {
+        "loaded": true,
+        "source": "http://localhost:5175/img/photos/windows-640.webp"
+      },
+      {
+        "loaded": true,
+        "source": "http://localhost:5175/img/photos/security-640.webp"
+      },
+      {
+        "loaded": true,
+        "source": "http://localhost:5175/img/photos/interior-640.webp"
+      },
+      {
+        "loaded": true,
+        "source": "http://localhost:5175/img/photos/shading-640.webp"
+      }
+    ],
+    "pageWidth": 1440,
+    "track": "matrix(1, 0, 0, 1, -1931.38, 0)",
+    "trackX": -1963.0596923828125,
+    "visibleText": "I nostri lavori\nOUTDOOR\nIl comfort, all’aperto\nINFISSI\nSpazio alla luce\nPORTE E SICUREZZA\nIl primo dettaglio di casa\nPORTE INTERNE\nArmonia tra gli ambienti\nOSCURANTI\nLa luce, come la desideri",
+    "width": 1440
+  },
+  "responsive": [
+    {
+      "background": "rgb(252, 252, 251)",
+      "buttons": 0,
+      "figures": [
+        {
+          "height": 377,
+          "title": "Il comfort, all’aperto",
+          "width": 333
+        },
+        {
+          "height": 377,
+          "title": "Spazio alla luce",
+          "width": 333
+        },
+        {
+          "height": 377,
+          "title": "Il primo dettaglio di casa",
+          "width": 333
+        },
+        {
+          "height": 377,
+          "title": "Armonia tra gli ambienti",
+          "width": 333
+        },
+        {
+          "height": 377,
+          "title": "La luce, come la desideri",
+          "width": 333
+        }
+      ],
+      "focused": true,
+      "images": [
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/outdoor-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/windows-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/security-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/interior-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/shading-640.webp"
+        }
+      ],
+      "pageWidth": 390,
+      "track": "matrix(1, 0, 0, 1, -351.43, 0)",
+      "trackX": -369.4299926757813,
+      "visibleText": "I nostri lavori\nOUTDOOR\nIl comfort, all’aperto\nINFISSI\nSpazio alla luce\nPORTE E SICUREZZA\nIl primo dettaglio di casa\nPORTE INTERNE\nArmonia tra gli ambienti\nOSCURANTI\nLa luce, come la desideri",
+      "width": 390
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "buttons": 0,
+      "figures": [
+        {
+          "height": 373,
+          "title": "Il comfort, all’aperto",
+          "width": 273
+        },
+        {
+          "height": 373,
+          "title": "Spazio alla luce",
+          "width": 273
+        },
+        {
+          "height": 373,
+          "title": "Il primo dettaglio di casa",
+          "width": 273
+        },
+        {
+          "height": 373,
+          "title": "Armonia tra gli ambienti",
+          "width": 273
+        },
+        {
+          "height": 373,
+          "title": "La luce, come la desideri",
+          "width": 273
+        }
+      ],
+      "focused": true,
+      "images": [
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/outdoor-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/windows-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/security-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/interior-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/shading-640.webp"
+        }
+      ],
+      "pageWidth": 320,
+      "track": "matrix(1, 0, 0, 1, -291, 0)",
+      "trackX": -309,
+      "visibleText": "I nostri lavori\nOUTDOOR\nIl comfort, all’aperto\nINFISSI\nSpazio alla luce\nPORTE E SICUREZZA\nIl primo dettaglio di casa\nPORTE INTERNE\nArmonia tra gli ambienti\nOSCURANTI\nLa luce, come la desideri",
+      "width": 320
+    },
+    {
+      "background": "rgb(252, 252, 251)",
+      "buttons": 0,
+      "figures": [
+        {
+          "height": 437,
+          "title": "Il comfort, all’aperto",
+          "width": 469
+        },
+        {
+          "height": 437,
+          "title": "Spazio alla luce",
+          "width": 344
+        },
+        {
+          "height": 437,
+          "title": "Il primo dettaglio di casa",
+          "width": 469
+        },
+        {
+          "height": 437,
+          "title": "Armonia tra gli ambienti",
+          "width": 344
+        },
+        {
+          "height": 437,
+          "title": "La luce, come la desideri",
+          "width": 469
+        }
+      ],
+      "focused": true,
+      "images": [
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/outdoor-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/windows-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/security-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/interior-640.webp"
+        },
+        {
+          "loaded": true,
+          "source": "http://localhost:5175/img/photos/shading-640.webp"
+        }
+      ],
+      "pageWidth": 768,
+      "track": "matrix(1, 0, 0, 1, -487, 0)",
+      "trackX": -505,
+      "visibleText": "I nostri lavori\nOUTDOOR\nIl comfort, all’aperto\nINFISSI\nSpazio alla luce\nPORTE E SICUREZZA\nIl primo dettaglio di casa\nPORTE INTERNE\nArmonia tra gli ambienti\nOSCURANTI\nLa luce, come la desideri",
+      "width": 768
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-10-27",
+  "reviewCount": 9,
+  "rating": 5,
+  "source": "Google public listing, manually verified",
+  "pagination": {
+    "end": {
+      "active": "Mostra la recensione di Pasqualina Parascandola Ladonea",
+      "activeInWindow": true,
+      "focus": "Recensione di Pasqualina Parascandola Ladonea",
+      "labels": [
+        "Mostra la recensione di Nunzio Merone",
+        "Mostra la recensione di Carlo Sesti",
+        "Mostra la recensione di Francesco Barbato",
+        "Mostra la recensione di Giuseppe Manna",
+        "Mostra la recensione di Sasi De Mari",
+        "Mostra la recensione di Pasqualina Parascandola Ladonea"
+      ],
+      "motion": "full",
+      "mounted": 6,
+      "pageWidth": 1680,
+      "visible": 5,
+      "width": 1680
+    },
+    "loop": {
+      "active": "Mostra la recensione di Giorgia Luongo",
+      "activeInWindow": true,
+      "focus": "Recensione di Giorgia Luongo",
+      "labels": [
+        "Mostra la recensione di Giorgia Luongo",
+        "Mostra la recensione di Tony Merone",
+        "Mostra la recensione di Oriana De Vita",
+        "Mostra la recensione di Nunzio Merone",
+        "Mostra la recensione di Carlo Sesti",
+        "Mostra la recensione di Francesco Barbato"
+      ],
+      "motion": "full",
+      "mounted": 6,
+      "pageWidth": 1680,
+      "visible": 5,
+      "width": 1680
+    },
+    "middle": {
+      "active": "Mostra la recensione di Carlo Sesti",
+      "activeInWindow": true,
+      "focus": "Recensione di Carlo Sesti",
+      "labels": [
+        "Mostra la recensione di Tony Merone",
+        "Mostra la recensione di Oriana De Vita",
+        "Mostra la recensione di Nunzio Merone",
+        "Mostra la recensione di Carlo Sesti",
+        "Mostra la recensione di Francesco Barbato",
+        "Mostra la recensione di Giuseppe Manna",
+        "Mostra la recensione di Sasi De Mari"
+      ],
+      "motion": "full",
+      "mounted": 7,
+      "pageWidth": 1680,
+      "visible": 5,
+      "width": 1680
+    },
+    "mobile": {
+      "active": "Mostra la recensione di Carlo Sesti",
+      "activeInWindow": true,
+      "focus": "Apri menu",
+      "labels": [
+        "Mostra la recensione di Tony Merone",
+        "Mostra la recensione di Oriana De Vita",
+        "Mostra la recensione di Nunzio Merone",
+        "Mostra la recensione di Carlo Sesti",
+        "Mostra la recensione di Francesco Barbato",
+        "Mostra la recensione di Giuseppe Manna",
+        "Mostra la recensione di Sasi De Mari"
+      ],
+      "motion": "full",
+      "mounted": 7,
+      "pageWidth": 390,
+      "visible": 5,
+      "width": 390
+    },
+    "small": {
+      "active": "Mostra la recensione di Pasqualina Parascandola Ladonea",
+      "activeInWindow": true,
+      "focus": null,
+      "labels": [
+        "Mostra la recensione di Nunzio Merone",
+        "Mostra la recensione di Carlo Sesti",
+        "Mostra la recensione di Francesco Barbato",
+        "Mostra la recensione di Giuseppe Manna",
+        "Mostra la recensione di Sasi De Mari",
+        "Mostra la recensione di Pasqualina Parascandola Ladonea"
+      ],
+      "motion": "full",
+      "mounted": 6,
+      "pageWidth": 320,
+      "visible": 5,
+      "width": 320
+    },
+    "reduced": {
+      "active": "Mostra la recensione di Carlo Sesti",
+      "markerTransition": "1e-05s",
+      "motion": "reduced",
+      "trackStyle": ""
+    }
+  },
+  "autoplay": {
+    "before": "Mostra la recensione di Carlo Sesti",
+    "after": "Mostra la recensione di Pasqualina Parascandola Ladonea",
+    "advanced": true
+  },
+  "textExpansion": {
+    "open": {
+      "button": "Leggi di meno",
+      "expanded": "true",
+      "focus": "Leggi di meno",
+      "selected": "Recensione di Giorgia Luongo"
+    },
+    "closed": {
+      "button": "Leggi di più",
+      "expanded": "false"
+    },
+    "keyboard": {
+      "focus": "Recensione di Tony Merone",
+      "matches": true,
+      "selected": "Recensione di Tony Merone"
+    }
+  },
+  "gallery": {
+    "dialogOpened": true,
+    "dialogClosed": true
+  },
+  "checks": {
+    "build": true,
+    "lint": true,
+    "format": true,
+    "unitTestsPassed": 15,
+    "paginationTestPositions": 500
+  },
+  "viewportOverrideReset": true
+}

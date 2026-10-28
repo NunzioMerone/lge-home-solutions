@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-24",
+  "sourceChecks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "check": "desktopAfterLeavingProducts",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "scrollY": 1716
+    },
+    {
+      "check": "desktopAppearance",
+      "competenciesBackground": "rgb(237, 233, 227)",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "overflow": false,
+      "paddingTop": "48.44px",
+      "productsBackground": "rgb(237, 233, 227)",
+      "width": 1211
+    },
+    {
+      "check": "mobileFirstEntrance",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "overflow": false,
+      "paddingTop": "36px",
+      "productsTop": 99.9453125,
+      "width": 390
+    },
+    {
+      "check": "mobileAfterReturningToHero",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "scrollY": 0
+    },
+    {
+      "check": "mobileReturnToProducts",
+      "hash": "#prodotti",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "overflow": false
+    },
+    {
+      "check": "afterViewportReset",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "width": 1104
+    }
+  ],
+  "browserLogs": []
+}

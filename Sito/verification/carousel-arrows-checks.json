@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "screen": "desktop-1440",
+      "galleryNext": "3 → 4, pallino e foto sincronizzati"
+    },
+    {
+      "screen": "desktop-1440",
+      "reviewsNext": "Oriana De Vita → Nunzio Merone",
+      "reviewsPrevious": "Nunzio Merone → Oriana De Vita",
+      "galleryPrevious": "4 → 3",
+      "galleryDot": "3 → 5",
+      "lightbox": "Apertura e chiusura Esc confermate"
+    },
+    {
+      "screen": "mobile-390",
+      "hero": "1 → 2 → 1, frecce e pallini sincronizzati",
+      "reviews": "Oriana → Nunzio → Oriana",
+      "galleryArrowsHidden": true,
+      "overflow": false
+    },
+    {
+      "galleryArrowsHidden": true,
+      "heroArrows": [
+        {
+          "right": 98,
+          "x": 54
+        },
+        {
+          "right": 266,
+          "x": 222
+        }
+      ],
+      "overflow": false,
+      "reviewArrows": [
+        {
+          "right": 75,
+          "x": 31
+        },
+        {
+          "right": 289,
+          "x": 245
+        }
+      ],
+      "width": 320
+    },
+    {
+      "galleryArrowsHidden": true,
+      "heroArrowCount": 2,
+      "overflow": false,
+      "reviewArrowCount": 2,
+      "width": 1024
+    },
+    {
+      "screen": "desktop-1440",
+      "hero": "Prima posizione: indietro disabilitato; ultima posizione: avanti disabilitato; ritorno funzionante"
+    }
+  ],
+  "automated": {
+    "typecheck": true,
+    "build": true,
+    "lint": true,
+    "tests": 15,
+    "format": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "blueLines": 0,
+      "lightOpacity": "0",
+      "logos": [
+        "0.0422",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "step": "entrance",
+      "title": "I nostri partner",
+      "width": 842
+    },
+    {
+      "dividerDisplays": [
+        "none",
+        "block",
+        "block",
+        "block",
+        "block"
+      ],
+      "italic": "italic",
+      "lightOpacity": "1",
+      "overflow": false,
+      "step": "settled",
+      "width": 842
+    },
+    {
+      "dividers": [
+        "none",
+        "block",
+        "block",
+        "none",
+        "block"
+      ],
+      "overflow": false,
+      "step": "three-columns",
+      "width": 700
+    },
+    {
+      "dividers": [
+        "none",
+        "block",
+        "none",
+        "block",
+        "none"
+      ],
+      "lastColumn": "1 / -1",
+      "overflow": false,
+      "step": "mobile-two-columns",
+      "width": 390
+    },
+    {
+      "lightOpacity": "1",
+      "logos": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "mode": "reduced",
+      "step": "reduced-motion"
+    }
+  ],
+  "validation": [
+    "Build e TypeScript superati",
+    "ESLint superato",
+    "8 test superati",
+    "Prettier superato"
+  ]
+}

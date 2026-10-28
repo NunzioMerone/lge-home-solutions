@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-23",
+  "url": "http://localhost:5175/#inizio",
+  "sourceChecks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "check": "desktopTypography",
+      "h1Count": 1,
+      "h3Sizes": [
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px",
+        "25.92px"
+      ],
+      "headerLorem": false,
+      "headings": [
+        {
+          "alignment": "center",
+          "center": 719.99609375,
+          "id": "products-title",
+          "size": "50.4px"
+        },
+        {
+          "alignment": "center",
+          "center": 720,
+          "id": "partners-title",
+          "size": "50.4px"
+        },
+        {
+          "alignment": "center",
+          "center": 719.99609375,
+          "id": "competencies-title",
+          "size": "50.4px"
+        },
+        {
+          "alignment": "center",
+          "center": 720,
+          "id": "gallery-title",
+          "size": "50.4px"
+        },
+        {
+          "alignment": "center",
+          "center": 719.99609375,
+          "id": "reviews-title",
+          "size": "50.4px"
+        },
+        {
+          "alignment": "center",
+          "center": 719.99609375,
+          "id": "contacts-title",
+          "size": "50.4px"
+        }
+      ],
+      "logoToTitleGap": 32,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 1440
+    },
+    {
+      "check": "solutionsIndicator",
+      "dropdownItems": 5,
+      "expanded": "true",
+      "lineColor": "rgb(32, 93, 155)",
+      "lineTransform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "check": "selectedWork",
+      "current": "location",
+      "currentCount": 1,
+      "hash": "#lavori",
+      "lineColor": "rgb(32, 93, 155)",
+      "lineTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false,
+      "titleTop": 212.6015625
+    },
+    {
+      "check": "mobileTypography",
+      "h3Sizes": [
+        "24px",
+        "24px",
+        "24px",
+        "24px",
+        "24px",
+        "24px",
+        "24px",
+        "24px",
+        "24px"
+      ],
+      "overflow": false,
+      "scrollY": 1980,
+      "sectionSizes": [
+        "35.2px",
+        "35.2px",
+        "35.2px",
+        "35.2px",
+        "35.2px",
+        "35.2px"
+      ],
+      "titleFits": true,
+      "width": 390
+    },
+    {
+      "check": "mobileHeroAtTop",
+      "logoToTitleGap": 28,
+      "menuClosed": true,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "check": "mobileIntroComplete",
+      "firstCardOpacity": "1",
+      "thirdCardVisibility": "hidden",
+      "width": 390
+    },
+    {
+      "allCardsVisible": true,
+      "check": "smallMobileAndResizeRecovery",
+      "overflow": false,
+      "scrollY": 0,
+      "titleFits": true,
+      "titleHeight": 18.2421875,
+      "titleLineHeight": "18.24px",
+      "width": 320
+    },
+    {
+      "allCardsVisible": true,
+      "check": "finalView",
+      "hash": "#inizio",
+      "overflow": false,
+      "scrollY": 0,
+      "selectedLink": "Home",
+      "surfaceBackground": "rgba(0, 0, 0, 0)",
+      "width": 330
+    }
+  ],
+  "browserLogs": []
+}

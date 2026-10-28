@@ -1,0 +1,118 @@
+.section {
+  --competencies-accent: color-mix(in srgb, var(--color-blue) 45%, var(--color-sky));
+  --competencies-text: color-mix(in srgb, var(--color-paper) 78%, var(--color-ink));
+  --competencies-line: color-mix(in srgb, var(--color-paper) 18%, var(--color-ink));
+
+  background: var(--color-ink);
+}
+.headingPanel {
+  padding-top: var(--section-space);
+  padding-bottom: calc(var(--section-heading-gap) / 2);
+}
+.introduction {
+  text-align: center;
+}
+.title {
+  margin: 0;
+  color: var(--color-paper);
+  font-size: var(--font-size-section-title);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.title em {
+  color: var(--color-paper);
+  font-weight: 400;
+}
+.description {
+  max-width: 650px;
+  margin: 16px auto 0;
+  color: var(--competencies-text);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-wrap: balance;
+}
+.content {
+  padding-top: calc(var(--section-heading-gap) / 2);
+  padding-bottom: var(--section-space);
+}
+.grid {
+  display: grid;
+  gap: 32px 0;
+}
+.card {
+  min-width: 0;
+  padding: 32px 20px 0;
+  border-top: 1px solid var(--competencies-line);
+  text-align: center;
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 22px;
+  border: 1px solid color-mix(in srgb, var(--competencies-accent) 45%, var(--color-ink));
+  border-radius: 50%;
+  color: var(--competencies-accent);
+  background: color-mix(in srgb, var(--color-paper) 4%, var(--color-ink));
+}
+.icon svg {
+  width: 36px;
+  height: 36px;
+}
+.card h3 {
+  margin: 0;
+  color: var(--color-paper);
+  text-wrap: balance;
+}
+.rule {
+  display: block;
+  width: 30px;
+  height: 1px;
+  margin: 20px auto;
+  background: var(--competencies-accent);
+}
+.card p {
+  max-width: 30ch;
+  margin: 0 auto;
+  color: var(--competencies-text);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 48px;
+  }
+  .card {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .card:nth-child(even) {
+    border-left: 1px solid var(--competencies-line);
+  }
+  .card h3 {
+    display: grid;
+    align-content: center;
+    min-height: 2.3em;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .card + .card {
+    border-left: 1px solid var(--competencies-line);
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    padding: 18px clamp(18px, 1.7vw, 28px) 12px;
+  }
+  .icon {
+    width: 88px;
+    height: 88px;
+  }
+}

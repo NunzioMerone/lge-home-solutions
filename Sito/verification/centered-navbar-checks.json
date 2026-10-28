@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-23",
+  "implementation": "One original square logo image in the fixed header, animated from the viewport centre to the navbar centre; no hero copy",
+  "layout": {
+    "left": [
+      "Home",
+      "Soluzioni",
+      "Realizzazioni"
+    ],
+    "centre": "Logo LGE",
+    "right": [
+      "Contatti"
+    ]
+  },
+  "codeChecks": {
+    "build": "passed",
+    "typecheck": "passed via build",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "check": "entrance",
+      "controls": [
+        {
+          "opacity": "0",
+          "visibility": "hidden"
+        },
+        {
+          "opacity": "0",
+          "visibility": "hidden"
+        },
+        {
+          "opacity": "0",
+          "visibility": "hidden"
+        }
+      ],
+      "heroLogos": 0,
+      "logo": {
+        "centerX": 605.5,
+        "centerY": 494.1645812988281,
+        "height": 339.99676513671875,
+        "width": 339.996826171875,
+        "x": 435.5015869140625,
+        "y": 324.16619873046875
+      },
+      "logos": 1,
+      "mainVisibility": "hidden",
+      "viewport": {
+        "height": 977,
+        "width": 1211
+      }
+    },
+    {
+      "check": "docked",
+      "headerBottom": 96,
+      "logo": {
+        "centerX": 605.5,
+        "centerY": 48,
+        "width": 88
+      },
+      "logos": 1,
+      "mainVisible": "visible",
+      "overflow": false,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "viewportCenterX": 605.5
+    },
+    {
+      "check": "renamedDropdown",
+      "expanded": "true",
+      "items": [
+        "Infissi",
+        "Oscuranti",
+        "Porte e sicurezza",
+        "Porte interne",
+        "Atelier Gibus"
+      ],
+      "oldLabelPresent": false
+    },
+    {
+      "check": "dropdownKeyboard",
+      "focus": "Infissi"
+    },
+    {
+      "anchorTop": -1040.9140625,
+      "background": "rgba(255, 255, 255, 0.74)",
+      "check": "fixedDuringScroll",
+      "contactsOnRight": true,
+      "headerPosition": "fixed",
+      "linksOnLeft": true,
+      "logoCenterX": 605.5,
+      "logoCenterY": 48,
+      "logoCount": 1,
+      "logoWidth": 88,
+      "scrollY": 3475
+    },
+    {
+      "centerX": 195,
+      "centerY": 42,
+      "check": "restoredScrollSkipsIntro",
+      "controls": [
+        "visible",
+        "visible",
+        "visible"
+      ],
+      "logoCount": 1,
+      "logoWidth": 72,
+      "scrollY": 1042,
+      "width": 390
+    },
+    {
+      "centerX": 194.99999237060547,
+      "centerY": 428.2969055175781,
+      "check": "mobileEntranceAtTop",
+      "controls": [
+        "hidden",
+        "hidden",
+        "hidden"
+      ],
+      "logoCount": 1,
+      "logoWidth": 244.00079345703125,
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "centerX": 195,
+      "centerY": 42,
+      "check": "mobileDocked",
+      "logoCount": 1,
+      "logoWidth": 72,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "check": "keyboardSkipsEntrance",
+      "controls": [
+        "visible",
+        "visible",
+        "visible"
+      ],
+      "logoWidth": 72,
+      "mainVisibility": "visible"
+    },
+    {
+      "bodyOverflow": "hidden",
+      "check": "mobileMenu",
+      "logoCenterX": 195,
+      "logoCount": 1,
+      "mainInert": true,
+      "names": [
+        "Home",
+        "Soluzioni",
+        "Realizzazioni",
+        "Contatti"
+      ]
+    },
+    {
+      "bodyOverflow": "",
+      "check": "realizzazioniAnchorReduced",
+      "hash": "#lavori",
+      "headerBottom": 84,
+      "logoWidth": 72,
+      "mainInert": false,
+      "targetTop": 107.7890625
+    },
+    {
+      "check": "contattiAnchorReduced",
+      "hash": "#contatti",
+      "headerBottom": 84,
+      "targetTop": 107.765625
+    },
+    {
+      "check": "homeAnchorReduced",
+      "hash": "#inizio",
+      "logoWidth": 72,
+      "mainVisible": "visible",
+      "scrollY": 0
+    },
+    {
+      "check": "narrowDesktop",
+      "contactsFit": true,
+      "linksFit": true,
+      "logoCenterX": 450,
+      "overflow": false,
+      "viewportCenterX": 450,
+      "width": 900
+    },
+    {
+      "check": "finalState",
+      "heroLogoCount": 0,
+      "logoCount": 1,
+      "logoTransform": "none",
+      "mainVisibility": "visible",
+      "motion": "full",
+      "overflow": false,
+      "scrollY": 4105,
+      "width": 1211
+    }
+  ],
+  "consoleWarningsAndErrors": []
+}

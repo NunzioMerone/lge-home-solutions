@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "naturalHeight": 724,
+      "naturalWidth": 2172,
+      "overflow": false,
+      "renderedRatio": 3.000225377507325,
+      "src": "/img/brand/lge-navbar-horizontal.webp",
+      "step": "normal-logo",
+      "width": 842
+    },
+    {
+      "logoRight": 290.9453125,
+      "navLeft": 503.3359375,
+      "navVisible": "flex",
+      "overflow": false,
+      "overlap": false,
+      "step": "desktop-1100",
+      "width": 1100
+    },
+    {
+      "menuOpen": "true",
+      "overflow": false,
+      "ratio": 3,
+      "step": "mobile-320-menu",
+      "width": 320
+    }
+  ],
+  "original": "/Users/nunziomerone/Desktop/Project/LgeHomeSolutions/img/Logo LGE_ il design per il tuo benessere.png",
+  "originalSha256": "bb5d1e34e40064ff43a2453c9937ae3781a23deb03227d275c0d55b0c290ffd6",
+  "validation": [
+    "Build e TypeScript superati",
+    "ESLint superato",
+    "Prettier superato"
+  ]
+}

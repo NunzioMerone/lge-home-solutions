@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "current": null,
+      "expanded": "true",
+      "underline": "matrix(0, 0, 0, 1, 0, 0)",
+      "url": "/#inizio"
+    },
+    {
+      "current": null,
+      "expanded": "true",
+      "underline": "matrix(0, 0, 0, 1, 0, 0)",
+      "url": "/#prodotti"
+    },
+    {
+      "current": null,
+      "expanded": "true",
+      "underline": "matrix(0, 0, 0, 1, 0, 0)",
+      "url": "/#prodotti",
+      "width": 390
+    }
+  ],
+  "typecheck": true,
+  "build": true,
+  "lint": true
+}

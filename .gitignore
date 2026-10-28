@@ -1,0 +1,21 @@
+# Local dependencies and generated output
+**/node_modules/
+**/dist/
+**/*.tsbuildinfo
+**/__pycache__/
+.DS_Store
+**/.DS_Store
+
+# Local configuration and credentials
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.local
+
+# Independent historical prototypes, kept locally
+/Hero_test/
+/Hero_Test2/
+/Sito_web/

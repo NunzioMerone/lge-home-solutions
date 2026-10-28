@@ -1,0 +1,260 @@
+.section {
+  background: var(--color-greige);
+}
+.heading {
+  margin-bottom: var(--section-heading-gap);
+  text-align: center;
+}
+.heading h2 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.heading em {
+  color: var(--color-brand-blue);
+  font-weight: 400;
+}
+.layout {
+  display: grid;
+  grid-template-areas: 'details' 'map';
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+  max-width: 1390px;
+  margin-inline: auto;
+}
+.mapReveal {
+  grid-area: map;
+  width: 100%;
+  min-width: 0;
+}
+.mapBlock {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgb(37 42 48 / 8%);
+  border-radius: 14px;
+  background: var(--color-white);
+  box-shadow: 0 16px 44px rgb(25 35 45 / 4%);
+}
+.mapCanvas {
+  position: relative;
+  flex: 1;
+  min-height: 340px;
+  background: var(--color-sky);
+}
+.mapLoading {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  place-items: center;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+.mapCaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+.mapLocation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.mapLocation > span:last-child {
+  display: grid;
+  gap: 5px;
+}
+.mapLocation strong {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.mapLocation small {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+.mapPin {
+  color: var(--color-brand-blue);
+}
+.mapPin svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.mapCaption > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-brand-blue);
+  border-radius: 6px;
+  color: var(--color-brand-blue);
+  font-size: 0.75rem;
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+.mapCaption > a:hover {
+  color: var(--color-white);
+  background: var(--color-brand-blue);
+}
+.mapCaption > a svg {
+  width: 13px;
+  height: 13px;
+}
+.details {
+  grid-area: details;
+  width: 100%;
+  min-width: 0;
+}
+.introduction p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+.introduction strong {
+  color: var(--color-brand-blue);
+  font-weight: 500;
+}
+.contactList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(18px, 3vw, 36px);
+  margin: 22px 0;
+}
+.detailRow {
+  position: relative;
+  padding: 18px 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-heading) 15%, transparent);
+}
+.detailRow:nth-child(-n + 2) {
+  border-top: 0;
+}
+.detailIcon {
+  display: flex;
+  color: var(--color-brand-blue);
+}
+.detailIcon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.25;
+}
+.detailRow dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-muted);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.detailRow dd {
+  display: grid;
+  gap: 4px;
+  margin: 10px 0 0;
+  color: var(--color-heading);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.detailRow dd > span:not(.exampleEmail) {
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+}
+.detailRow dd a {
+  width: fit-content;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 5px;
+  transition:
+    color var(--transition),
+    text-decoration-color var(--transition);
+}
+.detailRow dd a:hover {
+  color: var(--color-brand-blue);
+  text-decoration-color: currentColor;
+}
+.exampleEmail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.exampleEmail small {
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--color-greige);
+  color: var(--color-muted);
+  font-size: 0.5625rem;
+}
+.hours > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 12px;
+  max-width: 300px;
+}
+.hours > div + div {
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+}
+.channelList {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-top: 6px;
+}
+.channel {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+}
+.channel img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+a.channel:hover img {
+  transform: translateY(-2px);
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  .mapCanvas {
+    min-height: 420px;
+  }
+}
+@media (min-width: 1000px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-areas: 'map details';
+    gap: clamp(36px, 4.2vw, 68px);
+    align-items: stretch;
+  }
+  .details {
+    padding-left: clamp(30px, 3vw, 48px);
+    border-left: 1px solid var(--color-line);
+  }
+  .mapCaption {
+    padding: 22px 24px;
+  }
+}
+@media (max-width: 359px) {
+  .mapCaption > a {
+    width: 100%;
+  }
+}

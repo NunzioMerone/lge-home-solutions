@@ -1,0 +1,32 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "10f2b9",
+      "wall_time_seconds": 1.462463125,
+      "exit_code": 0,
+      "original_token_count": 201,
+      "output": "\n> lge-home-solutions@0.1.0 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 89 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                                   0.75 kB │ gzip:   0.43 kB\ndist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2         18.22 kB\ndist/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2   22.87 kB\ndist/assets/cormorant-garamond-latin-400-normal-B7YtguxJ.woff    30.98 kB\ndist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2             36.93 kB\ndist/assets/index-aZWggtQU.css                                   20.24 kB │ gzip:   5.23 kB\ndist/assets/index-DHzvLOI8.js                                   426.09 kB │ gzip: 145.01 kB\n\n✓ built in 197ms\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "d24911",
+      "wall_time_seconds": 1.421913667,
+      "exit_code": 0,
+      "original_token_count": 12,
+      "output": "\n> lge-home-solutions@0.1.0 lint\n> eslint .\n\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "942532",
+      "wall_time_seconds": 0.550698666,
+      "exit_code": 0,
+      "original_token_count": 33,
+      "output": "\n> lge-home-solutions@0.1.0 format:check\n> prettier --check .\n\nChecking formatting...\nAll matched files use Prettier code style!\n"
+    }
+  }
+]

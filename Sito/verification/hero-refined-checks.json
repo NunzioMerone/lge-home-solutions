@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "cards": [
+        {
+          "height": 314.859375,
+          "links": 0,
+          "opacity": "1",
+          "radius": "15.743px",
+          "titleFits": true,
+          "titleSize": "31.486px"
+        },
+        {
+          "height": 314.859375,
+          "links": 0,
+          "opacity": "1",
+          "radius": "15.743px",
+          "titleFits": true,
+          "titleSize": "31.486px"
+        },
+        {
+          "height": 314.859375,
+          "links": 0,
+          "opacity": "1",
+          "radius": "15.743px",
+          "titleFits": true,
+          "titleSize": "31.486px"
+        }
+      ],
+      "check": "desktopHero",
+      "overflow": false,
+      "scrollY": 0,
+      "width": 1211
+    },
+    {
+      "check": "mobileHero",
+      "overflow": false,
+      "radius": "14px",
+      "titlesFit": true,
+      "width": 390
+    },
+    {
+      "check": "smallMobileHero",
+      "overflow": false,
+      "titlesFit": true,
+      "width": 320
+    }
+  ]
+}

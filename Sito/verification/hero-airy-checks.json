@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "cardHeight": 287.34375,
+      "cardWidth": 229.875,
+      "cardsGap": 92.875,
+      "categories": [
+        "Infissi",
+        "Oscuranti",
+        "Porte e sicurezza",
+        "Porte interne",
+        "Atelier Gibus"
+      ],
+      "navbarGap": 81.265625,
+      "oldHeading": false,
+      "overflow": false,
+      "productsSection": false,
+      "step": "desktop-spacing",
+      "width": 1161
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "height": 287.34375,
+      "hovered": true,
+      "panel": "matrix(1, 0, 0, 1, 0, 0)",
+      "photo": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+      "step": "hover-enter",
+      "width": 229.875
+    },
+    {
+      "focused": false,
+      "height": 287.34375,
+      "hovered": false,
+      "panel": "matrix(1, 0, 0, 1, 0, 79.4601)",
+      "step": "hover-leave",
+      "width": 229.875
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "hovered": false,
+      "panel": "matrix(1, 0, 0, 1, 0, 85)",
+      "photo": "matrix(1, 0, 0, 1, 0, 0)",
+      "step": "hover-rest-settled"
+    },
+    {
+      "hovered": false,
+      "panel": "matrix(1, 0, 0, 1, 0, 85)",
+      "step": "hover-second-rest"
+    },
+    {
+      "brandRight": 136.046875,
+      "gap": 212.4609375,
+      "navLeft": 348.5078125,
+      "overflow": false,
+      "step": "narrow-desktop-navigation",
+      "width": 900
+    },
+    {
+      "cards": 5,
+      "overflow": false,
+      "panelTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "productsSection": false,
+      "restingTitleDisplay": "none",
+      "step": "mobile-polished",
+      "width": 390
+    },
+    {
+      "carouselTop": -4586.515625,
+      "hash": "#inizio",
+      "sectionRole": "carosello",
+      "step": "solutions-anchor"
+    },
+    {
+      "cards": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "mode": "reduced",
+      "overflow": false,
+      "step": "polished-reduced-motion"
+    }
+  ],
+  "validation": [
+    "Build e TypeScript superati",
+    "ESLint superato",
+    "8 test superati",
+    "Prettier superato"
+  ]
+}

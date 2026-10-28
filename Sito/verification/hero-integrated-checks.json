@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-23",
+  "url": "http://localhost:5175/#inizio",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed as part of build",
+    "lint": "passed",
+    "format": "passed",
+    "browserConsoleWarningsAndErrors": []
+  },
+  "observations": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "blur": "none",
+      "check": "expandedDesktop",
+      "font": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "fontWeight": "400",
+      "headerHeight": 192,
+      "logoWidth": 176,
+      "overflow": false,
+      "paper": "rgb(250, 249, 246)",
+      "scrollY": 5,
+      "titleColor": "rgb(37, 42, 48)",
+      "width": 1211
+    },
+    {
+      "background": "rgba(255, 255, 255, 0.74)",
+      "check": "compactDesktop",
+      "competenciesTop": 112.0703125,
+      "footerHeadingsReadable": true,
+      "headerHeight": 88,
+      "headingsAnthracite": true,
+      "logoCenterX": 605.5,
+      "logoWidth": 80,
+      "overflow": false,
+      "overlayHeadingsWhite": true,
+      "scrollY": 1495.5,
+      "viewportCenterX": 605.5
+    },
+    {
+      "check": "expandedMobile",
+      "headerHeight": 144,
+      "logoWidth": 128,
+      "overflow": false,
+      "scrollY": 0,
+      "titleLines": 1,
+      "width": 390
+    },
+    {
+      "check": "mobileMenu",
+      "headerHeight": 76,
+      "labels": [
+        "Home",
+        "Soluzioni",
+        "I nostri lavori",
+        "Competenze",
+        "Recensioni",
+        "Contatti"
+      ],
+      "logoWidth": 68,
+      "mainInert": true,
+      "overflow": false
+    },
+    {
+      "check": "mobileFocusWrap",
+      "focus": "LGE, homepage"
+    },
+    {
+      "bodyOverflow": "",
+      "check": "reviewsLink",
+      "hash": "#recensioni",
+      "mainInert": false,
+      "menuExpanded": "false"
+    },
+    {
+      "check": "smallMobile",
+      "h1Fits": true,
+      "logoCenterX": 160,
+      "overflow": false,
+      "titleLines": 1,
+      "width": 320
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "check": "expandedNarrowDesktop",
+      "headerHeight": 192,
+      "leftFits": true,
+      "logoWidth": 176,
+      "overflow": false,
+      "rightFits": true,
+      "scrollY": 0,
+      "width": 900
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "check": "singleLogoEntrance",
+      "controlsHidden": true,
+      "logoCenterX": 605.5,
+      "logoCenterY": 494.9964904785156,
+      "logoCount": 1,
+      "logoWidth": 339.996826171875,
+      "width": 1211
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "check": "finalDesktop",
+      "headerHeight": 192,
+      "logoCount": 1,
+      "logoWidth": 176,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 1211
+    }
+  ]
+}

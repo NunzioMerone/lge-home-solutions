@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "buttonCount": 1,
+      "clamp": "",
+      "emptyPlaceholder": false,
+      "expanded": "false",
+      "fullHeight": 743,
+      "height": 99,
+      "step": "long-collapsed",
+      "width": 1280
+    },
+    {
+      "controlsMatch": true,
+      "expanded": "true",
+      "fullHeight": 743,
+      "height": 743,
+      "label": "Leggi di meno",
+      "step": "long-expanded"
+    },
+    {
+      "expanded": "false",
+      "fullHeight": 743,
+      "height": 99,
+      "label": "Leggi di più",
+      "step": "long-recollapsed"
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "cardTransform": "none",
+      "heroBackground": "rgba(0, 0, 0, 0)",
+      "logoGap": 7,
+      "nameFont": "15px",
+      "overflow": false,
+      "removedText": true,
+      "step": "desktop-real-section",
+      "summaryOpacity": "1",
+      "summaryTransform": "none",
+      "width": 1104
+    },
+    {
+      "hovered": false,
+      "step": "desktop-hover",
+      "transform": "none"
+    },
+    {
+      "hovered": true,
+      "mode": "reduced",
+      "step": "reduced-motion-hover",
+      "transform": "none"
+    },
+    {
+      "hovered": true,
+      "mode": "full",
+      "step": "normal-motion-hover",
+      "transform": "matrix(1, 0, 0, 1, 0, -5)"
+    },
+    {
+      "background": "rgb(250, 249, 246)",
+      "buttonCount": 0,
+      "overflow": false,
+      "paper": "rgb(250, 249, 246)",
+      "step": "mobile-real-section",
+      "summaryOpacity": "1",
+      "width": 390
+    }
+  ],
+  "verification": [
+    "Build e TypeScript superati",
+    "ESLint superato",
+    "5 test esistenti superati",
+    "Prettier superato",
+    "Apertura e chiusura del commento lungo verificate in Strict Mode su una pagina di prova temporanea, poi rimossa"
+  ]
+}

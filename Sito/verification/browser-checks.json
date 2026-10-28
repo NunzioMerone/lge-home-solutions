@@ -1,0 +1,113 @@
+{
+  "testedViewports": [
+    {
+      "clippedHeadings": [],
+      "height": 740,
+      "heroColumns": "280px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "clippedHeadings": [],
+      "height": 800,
+      "heroColumns": "320px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 360,
+      "width": 360
+    },
+    {
+      "clippedHeadings": [],
+      "height": 844,
+      "heroColumns": "350px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "clippedHeadings": [],
+      "height": 1000,
+      "heroColumns": "202.562px 202.57px 202.562px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 700,
+      "width": 700
+    },
+    {
+      "clippedHeadings": [],
+      "height": 1024,
+      "heroColumns": "223.219px 223.219px 223.219px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "clippedHeadings": [],
+      "height": 768,
+      "heroColumns": "300.953px 300.961px 300.961px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "clippedHeadings": [],
+      "height": 900,
+      "heroColumns": "427.281px 427.281px 427.281px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "clippedHeadings": [],
+      "height": 1080,
+      "heroColumns": "490px 490px 490px",
+      "motion": "reduced",
+      "overflow": false,
+      "scrollBehavior": "auto",
+      "scrollWidth": 1920,
+      "width": 1920
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    }
+  ],
+  "verified": [
+    "Single original logo at the center then at the top",
+    "Desktop three columns and mobile stacked panels",
+    "No horizontal overflow or clipped headings at measured widths",
+    "Five white product routes and browser Back",
+    "Product next/previous buttons and keyboard arrows",
+    "Products pointer drag",
+    "Reviews next slide",
+    "Gallery automatic movement, stable pause and resume",
+    "Reduced motion and resume after preference change",
+    "Manual pause persists after resize",
+    "Hash navigation including repeated return to top",
+    "All 16 image elements loaded after visiting gallery",
+    "Real regional map and disabled unknown contact links"
+  ],
+  "motionPreference": {
+    "siteControlTested": true,
+    "systemPreferenceSubscribed": true,
+    "operatingSystemPreferenceEmulated": false
+  },
+  "lighthouse": "Not installed; no score reported",
+  "consoleErrorsAndWarnings": [],
+  "finalColdLoadVerified": true,
+  "developmentNote": "A transient Fast Refresh dependency-array warning occurred during development. The final version was checked again after a complete reload."
+}

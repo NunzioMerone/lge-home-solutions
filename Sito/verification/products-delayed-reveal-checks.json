@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-24",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "observations": [
+    {
+      "cardHeight": 401.671875,
+      "cardTop": 893.78125,
+      "check": "waitingAtHero",
+      "height": 1000,
+      "opacities": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "scrollY": 0,
+      "width": 1211
+    },
+    {
+      "check": "visibleAfterEnteringProducts",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "overflow": false,
+      "scrollY": 602.5
+    }
+  ]
+}

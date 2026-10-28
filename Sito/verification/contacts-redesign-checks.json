@@ -1,0 +1,319 @@
+{
+  "checkedAt": "2026-10-27",
+  "layouts": [
+    {
+      "contactList": {
+        "left": 970.0859375,
+        "top": 449.8046875,
+        "width": 551.90625
+      },
+      "disabledExamples": 2,
+      "emailLinks": 0,
+      "heading": "Vieni a trovarci",
+      "links": [
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Come raggiungerci"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Via Roma, 29"
+        },
+        {
+          "href": "tel:+393298265371",
+          "text": "+39 329 826 5371"
+        }
+      ],
+      "map": {
+        "height": 507.0390625,
+        "left": 133,
+        "top": 333.765625,
+        "width": 719.0859375
+      },
+      "motion": "full",
+      "pageWidth": 1654,
+      "rows": [
+        {
+          "height": 100,
+          "scrollWidth": 552,
+          "width": 551.90625
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 552,
+          "width": 551.90625
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 552,
+          "width": 551.90625
+        },
+        {
+          "height": 101,
+          "scrollWidth": 552,
+          "width": 551.90625
+        }
+      ],
+      "width": 1654
+    },
+    {
+      "contactList": {
+        "left": 20,
+        "top": -642.1171875,
+        "width": 350
+      },
+      "disabledExamples": 2,
+      "emailLinks": 0,
+      "heading": "Vieni a trovarci",
+      "links": [
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Come raggiungerci"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Via Roma, 29"
+        },
+        {
+          "href": "tel:+393298265371",
+          "text": "+39 329 826 5371"
+        }
+      ],
+      "map": {
+        "height": 340,
+        "left": 21,
+        "top": -1274.015625,
+        "width": 348
+      },
+      "motion": "full",
+      "pageWidth": 390,
+      "rows": [
+        {
+          "height": 100,
+          "scrollWidth": 350,
+          "width": 350
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 350,
+          "width": 350
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 350,
+          "width": 350
+        },
+        {
+          "height": 101,
+          "scrollWidth": 350,
+          "width": 350
+        }
+      ],
+      "width": 390
+    },
+    {
+      "contactList": {
+        "left": 20,
+        "top": 300.4921875,
+        "width": 280
+      },
+      "disabledExamples": 2,
+      "emailLinks": 0,
+      "heading": "Vieni a trovarci",
+      "links": [
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Come raggiungerci"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Via Roma, 29"
+        },
+        {
+          "href": "tel:+393298265371",
+          "text": "+39 329 826 5371"
+        }
+      ],
+      "map": {
+        "height": 340,
+        "left": 21,
+        "top": -355.90625,
+        "width": 278
+      },
+      "motion": "full",
+      "pageWidth": 320,
+      "rows": [
+        {
+          "height": 100,
+          "scrollWidth": 280,
+          "width": 280
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 280,
+          "width": 280
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 280,
+          "width": 280
+        },
+        {
+          "height": 101,
+          "scrollWidth": 280,
+          "width": 280
+        }
+      ],
+      "width": 320
+    },
+    {
+      "contactList": {
+        "left": 74,
+        "top": -299.046875,
+        "width": 620
+      },
+      "disabledExamples": 2,
+      "emailLinks": 0,
+      "heading": "Vieni a trovarci",
+      "links": [
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Come raggiungerci"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Via Roma, 29"
+        },
+        {
+          "href": "tel:+393298265371",
+          "text": "+39 329 826 5371"
+        }
+      ],
+      "map": {
+        "height": 420,
+        "left": 35.171875,
+        "top": -954.640625,
+        "width": 697.65625
+      },
+      "motion": "full",
+      "pageWidth": 768,
+      "rows": [
+        {
+          "height": 100,
+          "scrollWidth": 620,
+          "width": 620
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 620,
+          "width": 620
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 620,
+          "width": 620
+        },
+        {
+          "height": 101,
+          "scrollWidth": 620,
+          "width": 620
+        }
+      ],
+      "width": 768
+    },
+    {
+      "contactList": {
+        "left": 591.5,
+        "top": -429.0703125,
+        "width": 364
+      },
+      "disabledExamples": 2,
+      "emailLinks": 0,
+      "heading": "Vieni a trovarci",
+      "links": [
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Come raggiungerci"
+        },
+        {
+          "href": "https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046",
+          "text": "Via Roma, 29"
+        },
+        {
+          "href": "tel:+393298265371",
+          "text": "+39 329 826 5371"
+        }
+      ],
+      "map": {
+        "height": 500.59375,
+        "left": 45.5,
+        "top": -538.6640625,
+        "width": 472
+      },
+      "motion": "full",
+      "pageWidth": 1000,
+      "rows": [
+        {
+          "height": 100,
+          "scrollWidth": 364,
+          "width": 364
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 364,
+          "width": 364
+        },
+        {
+          "height": 77.5,
+          "scrollWidth": 364,
+          "width": 364
+        },
+        {
+          "height": 101,
+          "scrollWidth": 364,
+          "width": 364
+        }
+      ],
+      "width": 1000
+    }
+  ],
+  "reducedMotion": {
+    "motion": "reduced",
+    "reveals": [
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      }
+    ]
+  },
+  "directionsDestination": "Destinazione LGE HOME SOLUTIONS, Via Roma, 29, 80070 Monte di Procida NA",
+  "examples": {
+    "email": "info@lge.example",
+    "whatsapp": "+39 000 000 0000",
+    "instagram": "@lge.homesolutions",
+    "outboundExampleLinks": false
+  },
+  "checks": {
+    "build": true,
+    "lint": true,
+    "format": true,
+    "unitTestsPassed": 15
+  },
+  "viewportOverrideReset": true
+}
