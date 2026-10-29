@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-import { site } from '../../config/site'
 import { Hero } from '../../components/sections/Hero/Hero'
 import { Partners } from '../../components/sections/Partners/Partners'
 import { Certifications } from '../../components/sections/Certifications/Certifications'
@@ -13,9 +11,6 @@ import styles from './Home.module.css'
 
 export function Home() {
   useAnchorNavigation()
-  useEffect(() => {
-    document.title = site.title
-  }, [])
   return (
     <div className={styles.home}>
       <a className="skip-link" href="#prodotti">

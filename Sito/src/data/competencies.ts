@@ -1,4 +1,28 @@
-import type { Credential } from '../types/competencies'
+import type { CompetencyHighlight, Credential } from '../types/competencies'
+
+export const competencyHighlights: CompetencyHighlight[] = [
+  {
+    id: 'qualified-installation',
+    title: 'Posa qualificata',
+    label: 'UNI 11673-2 · EQF 4',
+    icon: 'shield',
+    description: 'Preparazione tecnica e precisione, dalla scelta dei materiali alla posa.',
+  },
+  {
+    id: 'posaclima',
+    title: 'PosaClima',
+    label: 'Formazione professionale',
+    icon: 'craft',
+    description: 'Cura del serramento e riqualificazione del foro finestra.',
+  },
+  {
+    id: 'thermography',
+    title: 'Termografia',
+    label: 'I e II livello',
+    icon: 'thermal',
+    description: 'Analisi delle temperature per individuare dispersioni e punti critici.',
+  },
+]
 
 export const competencies: Credential[] = [
   {

@@ -2,7 +2,13 @@ import { useState } from 'react'
 import type { GalleryImageProps } from '../../../types/gallery'
 import { assetUrl } from '../../../utils/assetUrl'
 
-export function GalleryImage({ photo, full = false }: GalleryImageProps) {
+export function GalleryImage({
+  photo,
+  full = false,
+  sizes,
+  loading,
+  fetchPriority,
+}: GalleryImageProps) {
   const [failed, setFailed] = useState(false)
   const source = (width: number) => assetUrl(`img/gallery-real/${photo.id}-${width}.webp`)
   if (failed) {
@@ -20,11 +26,14 @@ export function GalleryImage({ photo, full = false }: GalleryImageProps) {
           ? undefined
           : photo.previewWidths.map((width) => `${source(width)} ${width}w`).join(', ')
       }
-      sizes={full ? undefined : '(min-width: 1200px) 480px, (min-width: 700px) 42vw, 82vw'}
+      sizes={
+        full ? undefined : (sizes ?? '(min-width: 1200px) 480px, (min-width: 700px) 42vw, 74vw')
+      }
       width={photo.width}
       height={photo.height}
       alt={full ? photo.alt : ''}
-      loading={full ? 'eager' : 'lazy'}
+      loading={loading ?? (full ? 'eager' : 'lazy')}
+      fetchPriority={fetchPriority}
       decoding="async"
       draggable={false}
       onError={() => setFailed(true)}

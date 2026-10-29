@@ -9,7 +9,6 @@ export function ProductPlaceholder() {
   const { pathname } = useLocation()
   const product = products.find((item) => item.path === pathname.replace(/\/+$/, ''))
   useEffect(() => {
-    document.title = `${product?.title ?? 'Pagina'} — LGE Home Solutions`
     window.scrollTo(0, 0)
   }, [product])
   return (

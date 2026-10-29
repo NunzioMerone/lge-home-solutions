@@ -15,6 +15,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_PUBLIC_PREVIEW: 'true'
     defaults:
       run:
         working-directory: Sito
@@ -35,6 +37,9 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm run test
+      - name: Report privacy review status for this non-indexed preview
+        continue-on-error: true
+        run: node scripts/check-privacy.mjs
       - name: Build website
         run: npm run build -- --base=/lge-home-solutions/
       - name: Prepare static routes

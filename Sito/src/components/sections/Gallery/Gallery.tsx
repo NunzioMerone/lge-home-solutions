@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { worksPage } from '../../../config/works'
+import { Icon } from '../../ui/Icon'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import type { GalleryLightboxState } from '../../../types/gallery'
 import { GalleryCarousel } from './GalleryCarousel'
@@ -28,6 +31,11 @@ export function Gallery() {
           paused={lightbox !== null}
           onOpen={(photo, trigger) => setLightbox({ photo, trigger })}
         />
+      </div>
+      <div className={styles.details}>
+        <Link to={worksPage.path} className={styles.detailsLink}>
+          Esplora tutti i lavori <Icon name="arrow" />
+        </Link>
       </div>
       {lightbox && <GalleryLightbox {...lightbox} onClose={() => setLightbox(null)} />}
     </section>

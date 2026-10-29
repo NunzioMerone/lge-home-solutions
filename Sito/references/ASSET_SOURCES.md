@@ -15,8 +15,9 @@ Riferimenti tecnici consultati: [Embla Auto Scroll v8](https://www.embla-carouse
 ## Loghi social e mappa personalizzata
 
 - `public/icons/whatsapp.svg`: [Wikimedia Commons, WhatsApp.svg](https://commons.wikimedia.org/wiki/File:WhatsApp.svg), autore WhatsApp, fonte originale del marchio indicata nella scheda.
+- `public/icons/whatsapp-white.svg`: variante monocromatica bianca del 29 ottobre 2026 derivata dal precedente SVG locale. Conserva i contorni del simbolo, senza ombre o gradienti, per il pulsante blu «Prenota su WhatsApp».
 - `public/icons/instagram.svg`: [Instagram Glyph Gradient RGB logo.svg](https://commons.wikimedia.org/wiki/File:Instagram_Glyph_Gradient_RGB_logo.svg), fonte Meta Brand Resources indicata nella scheda.
-- File SVG locali con colori e proporzioni conservati; uso come identificatori dei canali social, senza indicare partnership. Schede Commons riportano il pubblico dominio per geometrie semplici e la tutela del marchio.
+- Originali SVG locali con colori e proporzioni conservati; la variante bianca WhatsApp mantiene la geometria ed è identificata separatamente. Uso come identificatori dei canali social, senza indicare partnership. Schede Commons riportano il pubblico dominio per geometrie semplici e la tutela del marchio.
 - Mappa: sostituito l'embed con Leaflet 1.9.4 e tile `https://tile.openstreetmap.org/{z}/{x}/{y}.png`; attribuzione essenziale visibile, nessuna copertura o rimozione del credito. Coordinate e fonte dei contatti restano quelle verificate in `contact-sources.md`.
 
 ## Logo bianco del footer — 28 ottobre 2026
@@ -26,3 +27,11 @@ Fornito direttamente dall’utente nell’allegato `codex-clipboard-b9d7f672-f24
 ## Fotografie della hero fornite dall’utente — 28 ottobre 2026
 
 Associazioni e percorsi originali in `hero-photo-sources.json`. Originali conservati senza alterazioni in `hero-supplied/`; script riproducibile `scripts/prepare_hero_photos.py`. Varianti WebP da 480 e 960 px, senza ritaglio del file e senza ingrandimento. Il punto di inquadratura è applicato solo tramite CSS nelle card verticali. Queste immagini sostituiscono soltanto quelle della hero; la galleria conserva le immagini precedenti. La fornitura non le identifica automaticamente come realizzazioni LGE.
+
+## Documenti Competenze — 29 ottobre 2026
+
+Sette documenti forniti e autorizzati dall’utente per la pagina `/competenze`: due PDF ITC conservati senza alterazioni e cinque immagini. I derivati pubblici sono in `public/documents/competencies/`, con miniature separate. La mappatura dei contenuti è in `competency-evidence.json`.
+
+**Immagini attualmente utilizzate.** Il 29 ottobre l’utente ha fornito cinque nuovi PNG per sostituire le precedenti fotografie degli attestati PosaClima, DEKRA e della targa Cosmet. Questi file sono conservati byte per byte in `credentials-supplied/`. Lo script `scripts/prepare-supplied-credentials.py` produce soltanto conversioni WebP a qualità 95, alle dimensioni originali, e miniature con lato massimo 640 px. Nessun ritaglio, modifica estetica, ricostruzione o ingrandimento è stato applicato ai PNG ricevuti. Fonti, dimensioni e hash sono registrati in `credential-supplied-derivatives.json`. I PDF ITC e le relative anteprime restano invariati.
+
+**Preparazione precedente, superata.** Gli HEIC originali restano conservati in `Attestati/`. Lo script `scripts/prepare-credential-photos.py` e il manifest `credential-photo-derivatives.json` documentano le precedenti correzioni prospettiche e tonali non generative; i relativi WebP sono stati sostituiti dai nuovi file forniti. Non rieseguire il vecchio script per preparare gli asset correnti. Durante quella fase nessun testo, firma o porzione nascosta dai riflessi era stato ricostruito; il tentativo generativo era stato scartato e non era incluso nel sito.

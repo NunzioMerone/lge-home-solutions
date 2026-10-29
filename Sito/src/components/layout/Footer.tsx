@@ -1,16 +1,28 @@
 import { Link } from 'react-router-dom'
 import { contacts } from '../../config/contacts'
 import { site } from '../../config/site'
+import { privacyPage } from '../../config/privacy'
+import { competenciesPage } from '../../config/competencies'
+import { worksPage } from '../../config/works'
 import { products } from '../../data/products'
 import { getContactLinks } from '../../utils/contactLinks'
+import { assetUrl } from '../../utils/assetUrl'
 import { Icon } from '../ui/Icon'
 import styles from './Footer.module.css'
 
 export function Footer() {
   const links = getContactLinks(contacts)
   const socialLinks = [
-    { icon: 'whatsapp', label: 'WhatsApp', href: links.whatsapp },
-    { icon: 'instagram', label: 'Instagram, profilo in definizione', href: links.instagram },
+    {
+      icon: 'whatsapp',
+      label: `WhatsApp al numero ${contacts.whatsapp}`,
+      href: links.whatsapp,
+    },
+    {
+      icon: 'instagram',
+      label: 'Instagram di LGE Home Solutions',
+      href: links.instagram,
+    },
   ] as const
   return (
     <footer className={styles.footer} id="footer">
@@ -77,14 +89,26 @@ export function Footer() {
             {site.sections
               .filter(({ id }) => id !== 'prodotti')
               .map(({ id, label }) => (
-                <Link to={`/#${id}`} key={id}>
+                <Link
+                  to={
+                    id === 'competenze'
+                      ? competenciesPage.path
+                      : id === 'lavori'
+                        ? worksPage.path
+                        : `/#${id}`
+                  }
+                  key={id}
+                >
                   {label}
                 </Link>
               ))}
           </nav>
         </div>
         <div className={styles.bottom}>
-          <span>© {new Date().getFullYear()} LGE Home Solutions</span>
+          <span className={styles.copyright}>© {new Date().getFullYear()} LGE Home Solutions</span>
+          <Link className={styles.legal} to={privacyPage.path}>
+            Privacy Policy
+          </Link>
           <div className={styles.socials} aria-label="Social LGE">
             {socialLinks.map(({ icon, label, href }) =>
               href ? (
@@ -96,19 +120,19 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon name={icon} />
+                  {icon === 'whatsapp' ? (
+                    <img
+                      src={assetUrl('icons/whatsapp-white.svg')}
+                      alt=""
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <Icon name={icon} />
+                  )}
                 </a>
-              ) : (
-                <span
-                  className={styles.socialIcon}
-                  key={icon}
-                  role="img"
-                  aria-label={label}
-                  title={label}
-                >
-                  <Icon name={icon} />
-                </span>
-              ),
+              ) : null,
             )}
           </div>
         </div>

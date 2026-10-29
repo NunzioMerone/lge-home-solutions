@@ -26,6 +26,9 @@ export interface GalleryLightboxProps extends GalleryLightboxState {
 export interface GalleryImageProps {
   photo: GalleryPhoto
   full?: boolean
+  sizes?: string
+  loading?: 'eager' | 'lazy'
+  fetchPriority?: 'high' | 'low' | 'auto'
 }
 
 export interface GalleryPaginationProps {

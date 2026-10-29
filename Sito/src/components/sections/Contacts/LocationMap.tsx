@@ -32,19 +32,15 @@ export function LocationMap() {
         )}
       </div>
       <figcaption className={styles.mapCaption}>
-        <div className={styles.mapLocation}>
-          <span className={styles.mapPin}>
-            <Icon name="pin" />
-          </span>
-          <span>
-            <strong>LGE Home Solutions</strong>
-            <small>
-              {contacts.address} · {contacts.locality}
-            </small>
-          </span>
-        </div>
-        <a href={contacts.mapUrl} target="_blank" rel="noopener noreferrer">
-          Come raggiungerci <Icon name="external" />
+        <span className={styles.mapLocation}>LGE Home Solutions</span>
+        <a
+          className={styles.textLink}
+          href={contacts.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Apri le indicazioni per LGE su Google Maps (nuova scheda)"
+        >
+          Apri le indicazioni <Icon name="arrow" />
         </a>
       </figcaption>
     </figure>

@@ -34,3 +34,14 @@ npm run build
 Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP ed Embla.
 
 Le cinque rotte prodotto hanno navbar, footer, titolo della categoria e un messaggio di sezione in preparazione. Il sito mantiene le indicazioni sulle fonti e sui contenuti dimostrativi nella documentazione di `Sito/`. I prototipi storici rimangono conservati separatamente nel workspace locale.
+
+
+## Secondo sito — Hero PT2
+
+La copia indipendente del sito attuale è in [`Sito_Hero_PT2/`](./Sito_Hero_PT2/README.md). Parte dalla stessa hero e sarà usata soltanto per la variante successiva.
+
+- Repository personale: https://github.com/NunzioMerone/lge-home-solutions-hero-pt2
+- Seconda demo: https://nunziomerone.github.io/lge-home-solutions-hero-pt2/
+- Porta locale: http://localhost:5177/
+
+Il repository e il sito originali restano separati.

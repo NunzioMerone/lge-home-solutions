@@ -4,7 +4,9 @@ import { getContactLinks } from './contactLinks'
 
 describe('getContactLinks', () => {
   it('keeps missing contacts unavailable rather than creating fake links', () => {
-    expect(getContactLinks({ ...contacts, phone: null, whatsapp: null })).toEqual({
+    expect(
+      getContactLinks({ ...contacts, phone: null, whatsapp: null, email: null, instagram: null }),
+    ).toEqual({
       phone: null,
       email: null,
       whatsapp: null,

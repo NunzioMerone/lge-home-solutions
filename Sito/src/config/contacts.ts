@@ -1,6 +1,6 @@
 import type { ContactConfig } from '../types/content'
 
-const phoneNumber = '+39 329 826 5371'
+const phoneNumber = '+39 334 600 8313'
 
 export const contacts: ContactConfig = {
   locality: 'Monte di Procida',
@@ -9,9 +9,9 @@ export const contacts: ContactConfig = {
   province: 'NA',
   address: 'Via Roma, 29',
   phone: phoneNumber,
-  email: null,
+  email: 'info@lgesolutions.it',
   whatsapp: phoneNumber,
-  instagram: null,
+  instagram: 'https://www.instagram.com/atelier_gibus_campiflegrei/',
   legalName: null,
   vatNumber: null,
   openingHours: [
