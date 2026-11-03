@@ -1,9 +1,17 @@
-# Homepage LGE
+# LGE Home Solutions — sito ufficiale
 
-Questo è il sito ufficiale autorizzato dal prompt del 23 ottobre 2026, conservato in `references/homepage-request.txt`. Il nuovo percorso richiesto è `Sito/`; `Sito_web/` è rimasta vuota. Non modificare i due prototipi della hero.
+Dal 3 novembre 2026 questa è l’unica applicazione da sviluppare: `Sito/`. La versione approvata usa la grande hero fotografica, proveniente dal confronto concluso fra le due varianti. Non ricreare una seconda cartella, un secondo pacchetto o un secondo sito per le modifiche ordinarie.
 
-Per questo progetto usare React, TypeScript strict, React Router, CSS Modules e custom properties. Le richieste del prompt sostituiscono l'indicazione precedente di usare Tailwind. Nessuno stile inline React; GSAP può applicare solo stili temporanei per le animazioni.
+Repository personale `NunzioMerone/lge-home-solutions`; sviluppo locale porta 5175, anteprima build 4175, GitHub Pages `/lge-home-solutions/`. Il workflow attivo è nella radice del workspace, `.github/workflows/deploy.yml`.
 
-I type e le interface dedicati vanno in `src/types/`. Dataset e contatti sono centralizzati. Il logo originale non va alterato. Distinguere sempre contenuti dimostrativi e documentati. La pagina `/lavori`, autorizzata il 29 ottobre 2026, comprende tutte le 101 foto aziendali; la home ne seleziona tre per categoria (15 in totale), senza modificare gli originali. Classificazione, ordine e selezione sono centralizzati in `src/data/works.ts`; i dodici partner sono stati confermati il 28 ottobre 2026. Per le competenze rispettare le fonti e le scadenze in references/competency-evidence.json. Dal 29 ottobre 2026 l’utente autorizza la pagina `/competenze` e la visualizzazione dei sette documenti indicati: mantenere i due PDF originali e usare copie delle foto corrette senza alterare il contenuto. Gli originali in Attestati/ restano conservati separatamente. Non attribuire EQF 4 o termografia II a documenti che attestano livelli diversi. Nessun recapito inventato o collegamento apparentemente attivo senza destinazione reale.
+Usare React, TypeScript strict, React Router, CSS Modules e custom properties. Nessuno stile inline React; GSAP può applicare solo stili temporanei per le animazioni. Type e interface dedicati vanno in `src/types/`; contenuti e contatti sono centralizzati. Seguire anche `../AGENTS.md` e `../PROJECT_BRIEF.md`.
 
-Le pagine prodotto mostrano navbar, footer, titolo della categoria e messaggio di sezione in preparazione, come richiesto il 28 ottobre 2026. Non aggiungere contenuti di dettaglio, backend, moduli o integrazioni senza una richiesta pertinente. La pubblicazione su GitHub Pages è autorizzata quando richiesta dall’utente.
+Conservare la hero fotografica desktop e l’inquadratura mobile con il testo sulla parete sinistra. La sequenza approvata scrive le frasi lettera per lettera e poi le fa sfumare, senza cancellazione a ritroso. WhatsApp resta un link sottolineato con freccia su tutti i formati. Qualsiasi ulteriore cambiamento visivo richiede una richiesta pertinente.
+
+Il logo originale non va alterato. Non inventare recensioni, partnership, qualifiche o recapiti. I dodici partner e i contatti sono confermati nei rispettivi dati e riferimenti. Le fotografie decorative della hero restano distinte dai lavori reali.
+
+La pagina `/lavori` comprende tutte le 101 foto aziendali; la home ne seleziona tre per categoria. Classificazione e selezione sono in `src/data/works.ts`. Per le competenze rispettare le fonti e le scadenze in `references/competency-evidence.json`. La pagina `/competenze` usa i sette documenti autorizzati: mantenere i due PDF originali e le immagini fornite senza alterare testi o firme. Non attribuire EQF 4 o termografia II a documenti che attestano livelli diversi.
+
+Le cinque pagine prodotto conservano navbar, footer, titolo e messaggio di preparazione. Non aggiungere pagine, backend, moduli o integrazioni senza una richiesta pertinente.
+
+Il sito ufficiale in sviluppo resta un’anteprima non indicizzata: conservare `VITE_PUBLIC_PREVIEW=true` e lo stato reale della Privacy Policy. Non trasformare la scelta del sito unico in un’approvazione legale fittizia o nell’attivazione di un hosting definitivo. Pubblicare quando autorizzato dall’utente.

@@ -1,16 +1,16 @@
 # LGE Home Solutions
 
-Sito LGE Home Solutions: homepage responsive con soluzioni per la casa, partner, competenze, galleria fotografica, recensioni e contatti.
+Unico progetto del sito LGE Home Solutions, con la hero fotografica a tutta schermata approvata il 3 novembre 2026.
 
-Il sito attuale si trova in [`Sito/`](./Sito/README.md). Identità e scelte progettuali sono documentate in [`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md).
+Il codice, gli asset e le dipendenze sono in [`Sito/`](./Sito/README.md). Identità e decisioni di progetto sono documentate in [`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md).
 
 ## Sito online
 
 [Apri LGE Home Solutions](https://nunziomerone.github.io/lge-home-solutions/)
 
-Il workflow GitHub Actions verifica e pubblica il sito a ogni push sul branch `main`. Le dipendenze e i file generati non vengono versionati.
+Repository personale: https://github.com/NunzioMerone/lge-home-solutions
 
-## Avvio locale
+## Sviluppo locale
 
 Richiede Node.js 22.12 o successivo.
 
@@ -20,9 +20,9 @@ npm ci
 npm run dev
 ```
 
-L’anteprima locale è disponibile su `http://localhost:5175/`.
+Aprire `http://localhost:5175/`. L’anteprima della build usa la porta 4175.
 
-## Verifiche
+## Verifiche e pubblicazione
 
 ```sh
 cd Sito
@@ -31,17 +31,8 @@ npm run test
 npm run build
 ```
 
-Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP ed Embla.
+Il workflow in `.github/workflows/deploy.yml` pubblica da `Sito/` sul solo percorso `/lge-home-solutions/`. Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP ed Embla.
 
-Le cinque rotte prodotto hanno navbar, footer, titolo della categoria e un messaggio di sezione in preparazione. Il sito mantiene le indicazioni sulle fonti e sui contenuti dimostrativi nella documentazione di `Sito/`. I prototipi storici rimangono conservati separatamente nel workspace locale.
+La versione fotografica è ora quella ufficiale e unica da sviluppare. La vecchia hero e il confronto tra due siti appartengono alla cronologia Git; la cartella duplicata è rimossa. Il repository di confronto viene archiviato e il relativo sito Pages disattivato. Gli esperimenti storici precedenti alla vetrina completa restano materiali locali separati, esclusi dalla pubblicazione.
 
-
-## Secondo sito — Hero PT2
-
-La copia indipendente del sito attuale è in [`Sito_Hero_PT2/`](./Sito_Hero_PT2/README.md). Parte dalla stessa hero e sarà usata soltanto per la variante successiva.
-
-- Repository personale: https://github.com/NunzioMerone/lge-home-solutions-hero-pt2
-- Seconda demo: https://nunziomerone.github.io/lge-home-solutions-hero-pt2/
-- Porta locale: http://localhost:5177/
-
-Il repository e il sito originali restano separati.
+L’anteprima pubblica resta non indicizzata: il consolidamento non modifica lo stato di revisione della Privacy Policy o le decisioni ancora aperte sull’hosting.

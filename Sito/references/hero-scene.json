@@ -1,0 +1,54 @@
+{
+  "desktop": "User-supplied clean first reference; only resized and converted to WebP.",
+  "mobile": "Third user reference cleaned with built-in imagegen: remove overlaid logo, hamburger, headline, subtitle, WhatsApp text and arrow; retain the portrait architectural scene.",
+  "status": "Decorative hero reference, not presented as an actual LGE installation.",
+  "tool": "image_gen.imagegen (built-in)",
+  "mobilePrompt": "Remove all graphic overlays from the supplied portrait photograph, reconstruct only hidden wall/glazing/sky, preserve composition, architectural geometry, furniture, garden pergola, curtains and warm lighting. No text, logos, icons, watermarks or UI. Keep original portrait ratio.",
+  "variants": [
+    {
+      "file": "public/img/hero-scene/desktop-960.webp",
+      "width": 960,
+      "height": 540,
+      "bytes": 143934
+    },
+    {
+      "file": "public/img/hero-scene/desktop-1280.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 240080
+    },
+    {
+      "file": "public/img/hero-scene/desktop-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 367788
+    },
+    {
+      "file": "public/img/hero-scene/mobile-480.webp",
+      "width": 480,
+      "height": 1045,
+      "bytes": 113964
+    },
+    {
+      "file": "public/img/hero-scene/mobile-850.webp",
+      "width": 850,
+      "height": 1850,
+      "bytes": 265784
+    },
+    {
+      "file": "public/img/hero-scene/mobile-spacious-480.webp",
+      "width": 480,
+      "height": 1045,
+      "bytes": 85122
+    },
+    {
+      "file": "public/img/hero-scene/mobile-spacious-850.webp",
+      "width": 850,
+      "height": 1850,
+      "bytes": 211286
+    }
+  ],
+  "mobileSpacingRevision": "Previous experiment, no longer used: extra wall generated for lower text placement. Both generated variants remain archived; only the original clean portrait is loaded.",
+  "mobileSpacingPrompt": "Reframe the same portrait architecture upward, add more calm cream wall in upper-left, move diagonal glazing lower, retain original garden, pergola, curtains and realistic perspective. Foreground table may be cropped; no text, branding or UI.",
+  "currentMobileLayout": "2026-10-30: full-viewport portrait hero, complete glazed opening on the right and compact HTML copy on the left vertical wall. A wider architectural view and clearer pergola replace the earlier narrow composition. Current files and exact prompts: references/hero-mobile-room.json. Desktop and tablet unchanged."
+}

@@ -6,7 +6,11 @@ Le regole operative per lo sviluppo sono definite in [AGENTS.md](./AGENTS.md). L
 
 ## 1. Stato e organizzazione del progetto
 
-- Fase attuale: homepage completa sviluppata localmente, da valutare e completare con i dati aziendali definitivi prima della pubblicazione.
+**Decisione corrente — 3 novembre 2026.** La versione con la grande fotografia è l’unica versione ufficiale. La precedente hero minimalista e il confronto fra due siti sono conclusi. Tutto lo sviluppo continua in `Sito/`, pacchetto `lge-home-solutions`, porta 5175, repository personale `NunzioMerone/lge-home-solutions` e sito `https://nunziomerone.github.io/lge-home-solutions/`. La cartella duplicata viene rimossa; il repository di confronto è conservato come archivio con Pages disattivato. Le cronologie di entrambi i repository sono riunite nel repository principale. Questa decisione sostituisce le indicazioni storiche sulle due applicazioni indipendenti.
+
+La homepage corrente usa la hero fotografica a schermo intero, testi HTML a sinistra e finale del titolo in corsivo blu: scrittura lettera per lettera, pausa di lettura e dissolvenza sfocata. Su smartphone il testo si trova sulla parete sinistra e la vista di vetrata e pergola è più aperta; WhatsApp è un link sottolineato con freccia. Le cinque categorie sono nella sezione «Le nostre soluzioni», seguita da partner, competenze, lavori, recensioni e contatti. Foto, contenuti, font, colori e comportamento approvati sono importati senza modificarli.
+
+- Fase attuale, aggiornata al 3 novembre 2026: unico sito in `Sito/`, con la hero fotografica approvata. Pubblicazione sul repository e sul link principale `lge-home-solutions`; anteprima non indicizzata in attesa di hosting definitivo e completamento della revisione privacy.
 - Workspace attuale: `LgeHomeSolutions/`.
 - Directory dell'applicazione: `Sito/`, richiesta esplicitamente dal prompt aggiornato del 23 ottobre 2026. La precedente cartella vuota `Sito_web/` è conservata.
 - Documentazione generale: nella radice del workspace.
@@ -285,7 +289,7 @@ Pagina Competenze, rifinitura del 29 ottobre: rimossa la navigazione «Home / Co
 Revisione visiva della pagina Lavori: su richiesta dell’utente viene sostituita l’estetica della prima implementazione. Nuova hero fotografica calda su fondo greige, con composizione outdoor/interno e titolo «Il nostro lavoro, la vostra casa.». Indice di categorie fotografiche senza numeri, gallerie con proporzioni originali e colonne stabili al caricamento progressivo. Sei anteprime per ciascuna categoria nella panoramica; raccolta completa filtrabile con URL e ancora dedicati. Tutte le foto restano autentiche e ingrandibili. Nessuna modifica alla selezione della homepage.
 
 
-## Seconda versione — Hero PT2
+## Cronologia — confronto fra le hero, concluso il 3 novembre 2026
 
 Il 29 ottobre 2026 l’utente autorizza la copia del sito locale attuale in `Sito_Hero_PT2/`, progetto indipendente nel repository personale `NunzioMerone/lge-home-solutions-hero-pt2`, con secondo sito GitHub Pages. La hero iniziale resta identica; i prossimi interventi riguarderanno soltanto la nuova hero e i collegamenti necessari. Il sito originale non viene sostituito. Identità e contenuti restano LGE Home Solutions: Hero PT2 distingue il progetto tecnico. Porta locale 5177. La copia viene pubblicata come demo non indicizzata, mantenendo la Privacy Policy in revisione; il workflow della sola demo segnala il controllo senza registrare un’approvazione legale fittizia.
 
