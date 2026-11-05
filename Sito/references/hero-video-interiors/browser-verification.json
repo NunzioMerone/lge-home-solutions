@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-05",
+  "revision": "Rev06",
+  "url": "http://127.0.0.1:5175/#inizio",
+  "responsive": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "video": [
+        1920,
+        1080
+      ],
+      "format": "desktop",
+      "overflow": false
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "video": [
+        1280,
+        960
+      ],
+      "format": "tablet",
+      "overflow": false
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "video": [
+        720,
+        1280
+      ],
+      "format": "mobile",
+      "overflow": false
+    }
+  ],
+  "muted": true,
+  "playing": true,
+  "playback_rate": 0.85,
+  "accent": "rgb(237, 213, 179)",
+  "visual_checks": [
+    "Desktop white interior-door scene checked in hero at13.4698s; title, logo and existing gradient retained and readable.",
+    "Portrait and tablet crops inspected in exported contact sheets, with real door handles kept visible.",
+    "Mobile page layout inspected; no horizontal overflow."
+  ],
+  "checks": {
+    "lint": "passed",
+    "build_typecheck": "passed",
+    "tests": {
+      "passed": 23,
+      "files": 6
+    }
+  },
+  "limits": [
+    "Existing518.51kB index bundle warning remains.",
+    "Reduced-motion hook unchanged; OS preference not re-tested in this pass.",
+    "Some existing Gibus720p and optical source softness remain."
+  ]
+}

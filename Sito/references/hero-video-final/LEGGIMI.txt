@@ -1,0 +1,73 @@
+LGE HOME SOLUTIONS — MONTAGGIO COMPLETO, REVISIONE 03
+5 novembre 2026. Consegna locale, senza integrazione o pubblicazione del sito.
+
+CONTENUTO
+Infissi, oscuranti, porte interne, ingressi e outdoor nello stesso racconto.
+La selezione alterna ambienti, prodotti e gesti legati al loro utilizzo:
+vetrata scorrevole, apertura della finestra, porta interna ambientata,
+apertura a mano, porta pivot in vetro, serratura di ingresso, oscuranti
+nella vita domestica, pergola e tenda all'aperto, ritorno al serramento.
+Gibus occupa circa un quinto del montaggio, non piu la maggioranza.
+Non compaiono il primo piano del vino o la scena del ballo.
+
+FILE
+Durata: 32,5833 secondi. 24 fps. Nessun audio.
+MP4 H.264, yuv420p, faststart per il caricamento progressivo.
+
+01_Master
+- Desktop: 1920x1080, 16:9.
+- Tablet: 1440x1080, 4:3, orientamento orizzontale.
+- Mobile: 720x1280, 9:16, anche per tablet verticali.
+
+02_Web
+- Desktop: 1280x720.
+- Tablet: 960x720.
+- Mobile: 720x1280.
+
+03_Poster
+Primo fotogramma di ogni formato, utile durante il caricamento e come
+alternativa statica per chi richiede il movimento ridotto.
+
+Aprire index.html per confrontare i tre formati e scaricare i singoli file.
+Anteprima nel browser con navigazione tra le scene: python3 preview.py
+Aprire poi http://127.0.0.1:8771/ sullo stesso computer.
+Il montaggio ha dissolvenze da 0,833 secondi e un raccordo interno al loop.
+I punti focali sono adattati al formato; le riprese verticali mostrano
+un dettaglio del prodotto nel formato largo e piu contesto sul telefono.
+
+QUALITA
+La maggior parte delle nuove fonti e Full HD. La porta pivot DoorArreda
+ha un originale verticale 720x1280, i filmati Gibus sono a 720p.
+Il master Full HD non implica che ogni scena abbia dettaglio nativo Full HD.
+I ritagli e i rallentamenti possono rendere alcune scene piu morbide.
+L'interpolazione ottica e usata solo dove necessaria; i filmati a 24 fps
+e quelli a 30 fps rallentati all'80% mantengono la cadenza senza sintesi
+di fotogrammi intermedi. Non sono state inventate persone o installazioni.
+Il film Cosmet e la scena ambientata I-PEA sono render architettonici;
+gli altri estratti selezionati mostrano prodotti fisici e riprese ambientate.
+
+PROVENIENZA
+Fonti: Cosmet Group, New Solar, I-PEA Porte Design, DoorArreda, TEHNi e Gibus.
+Tutti sono partner presenti nel progetto; i modelli specifici restano da
+verificare con LGE. Le scene pubblicitarie e le realizzazioni dei produttori
+non sono presentate come clienti o lavori eseguiti da LGE.
+La finestra presente nel filmato New Solar fa parte dell'ambientazione:
+non se ne attribuiscono produttore o prestazioni a New Solar.
+
+edit.json contiene URL, sorgenti originali, tagli, velocita e inquadrature.
+research.json documenta anche le alternative analizzate ed escluse.
+I filmati sono stati scaricati gratuitamente da fonti pubbliche come
+autorizzato. Il download gratuito non costituisce una licenza commerciale:
+prima dell'impiego online vanno verificati riutilizzo, rimontaggio,
+diritti delle persone ritratte e disponibilita dei modelli rappresentati.
+I marchi gia presenti nelle riprese restano dove inclusi nell'inquadratura.
+
+RIPRODURRE IL MONTAGGIO
+Python 3.9+, FFmpeg con libx264 e minterpolate.
+I file originali elencati in edit.json vanno nella sottocartella sources/.
+python3 render.py --prepare-only
+python3 render.py
+Un solo formato: python3 render.py --format Mobile
+Un solo intermedio: python3 render.py --prepare-only --scene 2
+Sorgenti e intermedi restano locali, esclusi da Git e dallo ZIP di consegna.
+verification.json riporta i controlli effettivamente eseguiti sui file finali.

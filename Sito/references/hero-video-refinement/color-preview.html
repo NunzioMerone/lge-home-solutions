@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LGE — Confronto colori hero</title>
+    <style>
+      #palette-root { --preview-copy: #fcfcfb; --preview-accent: #bdd8ed; }
+      #palette-root[data-palette="sand"] { --preview-accent: #edd5b3; }
+      #palette-root[data-palette="anthracite"] { --preview-copy: #252a30; --preview-accent: #252a30; }
+      #palette-root #inizio h1, #palette-root #inizio p { color: var(--preview-copy); }
+      #palette-root #inizio [data-hero-live] { color: var(--preview-accent); }
+      #palette-root[data-palette="anthracite"] #inizio::after { background: linear-gradient(90deg, rgb(252 252 251 / 76%), rgb(252 252 251 / 65%) 28%, rgb(252 252 251 / 34%) 46%, transparent 66%); }
+      #palette-root[data-palette="anthracite"] [data-introduction] { text-shadow: none; }
+      .sample-brand { position: absolute; z-index: 5; top: 24px; left: var(--gutter); width: var(--navigation-logo-width); }
+      .sample-brand img { display: block; width: 100%; height: auto; filter: brightness(0) invert(1); }
+      [data-palette="anthracite"] .sample-brand img { filter: none; }
+      .palette-controls { position: fixed; z-index: 10; inset: auto 16px 16px; margin-inline: auto; width: fit-content; max-width: calc(100% - 32px); padding: 12px; background: rgb(252 252 251 / 96%); color: #252a30; border-radius: 4px; box-shadow: 0 8px 40px rgb(0 0 0 / 15%); font: 14px/1.5 sans-serif; }
+      .palette-controls p { margin: 0 0 8px; }
+      .palette-options { display: flex; flex-wrap: wrap; gap: 6px; }
+      .palette-options button { display: flex; align-items: center; gap: 6px; padding: 9px 12px; min-height: 44px; background: transparent; color: #252a30; border: 1px solid #d6d6d2; border-radius: 3px; cursor: pointer; }
+      .palette-options button[aria-pressed="true"] { border-color: #014380; background: #e8f0f8; }
+      .palette-options span { width: 12px; height: 12px; border-radius: 50%; }
+      .blue-swatch { background: #bdd8ed; }
+      .sand-swatch { background: #edd5b3; }
+      .dark-swatch { background: #252a30; }
+      .palette-controls small { display: block; margin-top: 8px; max-width: 420px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import { createElement, useState, StrictMode } from 'react'
+      import { createRoot } from 'react-dom/client'
+      import { MotionProvider } from '/src/components/ui/MotionProvider.tsx'
+      import { Hero } from '/src/components/sections/Hero/Hero.tsx'
+      import { site } from '/src/config/site.ts'
+      import '@fontsource-variable/dm-sans/wght.css'
+      import '@fontsource/cormorant-garamond/latin-400.css'
+      import '/src/styles/global.css'
+      const choices = [
+        { id: 'light-blue', label: 'Blu luce', swatch: 'blue-swatch' },
+        { id: 'sand', label: 'Sabbia', swatch: 'sand-swatch' },
+        { id: 'anthracite', label: 'Antracite', swatch: 'dark-swatch' },
+      ]
+      function PalettePreview() {
+        const [palette, setPalette] = useState('sand')
+        return createElement('div', { id: 'palette-root', 'data-palette': palette },
+          createElement('div', { className: 'sample-brand', 'aria-hidden': true }, createElement('img', { src: site.logo, alt: '', width: 2172, height: 724 })),
+          createElement(Hero),
+          createElement('aside', { className: 'palette-controls', 'aria-label': 'Confronto colore frase' },
+            createElement('p', null, 'Confronta il colore della frase'),
+            createElement('div', { className: 'palette-options' }, choices.map(choice =>
+              createElement('button', { key: choice.id, type: 'button', 'aria-pressed': palette === choice.id, onClick: () => setPalette(choice.id) },
+                createElement('span', { className: choice.swatch, 'aria-hidden': true }), choice.label))),
+            createElement('small', null, palette === 'anthracite' ? 'L’antracite richiede un velo chiaro sul video.' : palette === 'sand' ? 'Accento caldo, distinto dal bianco del titolo fisso.' : 'Un blu più luminoso conserva il richiamo al marchio.')))
+      }
+      createRoot(document.getElementById('root')).render(createElement(StrictMode, null, createElement(MotionProvider, null, createElement(PalettePreview))))
+    </script>
+  </body>
+</html>

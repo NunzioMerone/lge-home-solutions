@@ -1,0 +1,130 @@
+{
+  "files": [
+    {
+      "file": "01_Master/LGE_Hero_Rev03_Desktop.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 35.37,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "file": "01_Master/LGE_Hero_Rev03_Mobile.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 15.91,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "file": "01_Master/LGE_Hero_Rev03_Tablet.mp4",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 27.4,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "file": "02_Web/LGE_Hero_Rev03_WEB_Desktop.mp4",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 9.72,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "file": "02_Web/LGE_Hero_Rev03_WEB_Mobile.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 9.12,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "file": "02_Web/LGE_Hero_Rev03_WEB_Tablet.mp4",
+      "dimensions": [
+        960,
+        720
+      ],
+      "duration_seconds": 32.583333,
+      "frames": 782,
+      "MB": 7.41,
+      "full_decode": "passed",
+      "audio": false,
+      "faststart": true
+    }
+  ],
+  "loop_checks": [
+    {
+      "format": "Desktop",
+      "black_segments": 0,
+      "loop_luma_delta": 3.812,
+      "first_pair_luma_delta": 2.503
+    },
+    {
+      "format": "Mobile",
+      "black_segments": 0,
+      "loop_luma_delta": 5.443,
+      "first_pair_luma_delta": 4.427
+    },
+    {
+      "format": "Tablet",
+      "black_segments": 0,
+      "loop_luma_delta": 4.211,
+      "first_pair_luma_delta": 2.863
+    }
+  ],
+  "visual_review": "Contact sheets reviewed for desktop and mobile. Framing checked for doors, hands, people and the removal of the rejected scenes. Browser playback checked separately.",
+  "browser_checks": {
+    "environment": "Codex in-app desktop browser; three video renditions, not a physical mobile-device test",
+    "desktop": {
+      "dimensions": [
+        1280,
+        720
+      ],
+      "playback": "passed",
+      "scene_seek": "passed"
+    },
+    "tablet": {
+      "dimensions": [
+        960,
+        720
+      ],
+      "playback": "passed",
+      "format_switch_preserves_time": "passed"
+    },
+    "mobile": {
+      "dimensions": [
+        720,
+        1280
+      ],
+      "playback": "passed",
+      "scene_seek": "passed"
+    }
+  }
+}

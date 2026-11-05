@@ -1,0 +1,62 @@
+{
+  "checked": "2026-11-05",
+  "url": "http://127.0.0.1:5175/#inizio",
+  "revision": "Rev05",
+  "responsive": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "format": "desktop",
+      "video": [
+        1920,
+        1080
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "format": "tablet",
+      "video": [
+        1280,
+        960
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "format": "mobile",
+      "video": [
+        720,
+        1280
+      ],
+      "overflow": false
+    }
+  ],
+  "playback_rate": 0.85,
+  "autoplay_muted": true,
+  "headline_accent_computed": "rgb(237, 213, 179)",
+  "logo_filter_over_video": "brightness(0) invert(1)",
+  "logo_filter_at_scroll_844px": "none",
+  "video_paused_at_scroll_844px": true,
+  "checks": {
+    "lint": "passed",
+    "typecheck_build": "passed",
+    "tests": {
+      "passed": 23,
+      "files": 6
+    },
+    "prettier_changed_runtime_files": "passed"
+  },
+  "notes": [
+    "Existing build warning: index chunk exceeds 500 kB. No deployment performed.",
+    "Reduced-motion code unchanged in this revision; not re-tested using OS preference during this pass."
+  ]
+}

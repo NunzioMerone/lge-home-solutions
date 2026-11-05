@@ -1,0 +1,54 @@
+LGE HOME SOLUTIONS — HERO VIDEO, REVISIONE 01
+Anteprima editoriale locale del 5 novembre 2026.
+
+Durata: 23,75 secondi. 24 fotogrammi al secondo. Nessun audio.
+Formato MP4, H.264, pixel yuv420p, metadati iniziali faststart.
+
+01_Master
+- Desktop: 1920 x 1080, 16:9.
+- Tablet: 1440 x 1080, 4:3, per orientamento orizzontale.
+- Mobile: 720 x 1280, 9:16, anche per tablet verticali.
+
+02_Web
+- Desktop: 1600 x 900.
+- Tablet: 1200 x 900.
+- Mobile: 720 x 1280.
+Questi file mantengono piu dettaglio dei precedenti file web, con un peso
+maggiore. Non sono stati misurati tempi di caricamento o prestazioni del sito.
+
+03_Poster
+Primo fotogramma di ciascun master, da usare durante il caricamento e
+come alternativa statica per chi richiede il movimento ridotto.
+
+MONTAGGIO
+La stessa idea del pacchetto iniziale: pergole, infissi, ingressi e porte
+interne. La pergola apre e chiude il racconto. Le sorgenti delle due
+estremita proseguono in ordine temporale al riavvio del loop.
+Tagli prevalentemente netti e due dissolvenze brevi di 0,25 secondi.
+Nessuna scritta sovraimpressa aggiunta, musica o interfaccia social.
+Inquadrature adattate ai tre formati con punti focali per ciascuna scena.
+La porta TEHNi e mantenuta intera, con fondale scuro nei formati larghi.
+
+QUALITA E PROVENIENZA
+Il montaggio e stato rifatto da sorgenti piu pulite, senza ricomprimere
+il vecchio video web. I reel registrati sul telefono non sono utilizzati.
+Cosmet, Gibus e I-PEA sono a 1920 x 1080; TEHNi a 1000 x 874.
+Le risoluzioni di esportazione non implicano un dettaglio nativo superiore
+a quello delle fonti. Non e stato applicato un upscaling generativo AI.
+I filmati sono prevalentemente render prodotto, non lavori eseguiti da LGE.
+
+Fonti esatte, tempi di ingresso e durata delle scene: edit.json.
+Le fonti sono state reperite pubblicamente presso produttori e un
+rivenditore Gibus; la disponibilita pubblica non costituisce una licenza.
+Prima dell'impiego online vanno confermati i diritti di rimontaggio e uso
+commerciale, oltre alla disponibilita LGE degli specifici modelli mostrati.
+Nessun video e stato installato nel sito o pubblicato.
+
+RIPRODUCIBILITA
+render.py richiede Python 3.9+ e FFmpeg con libx264.
+Mettere i quattro originali elencati in edit.json nella cartella sources/.
+Comando dalla cartella di questa revisione: python3 render.py
+Per un solo formato: python3 render.py --format Mobile
+Le sorgenti e i file video generati restano materiali locali esclusi da Git.
+
+Aprire index.html per confrontare i tre formati.

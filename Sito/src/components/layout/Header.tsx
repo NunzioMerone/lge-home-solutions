@@ -27,10 +27,11 @@ export function Header() {
     closeSections,
     closeNavigation,
   } = useHeaderNavigation()
+  const overVideo = pathname === '/' && !scrolled && !mobileOpen
   return (
     <header
       ref={rootRef}
-      className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''}`}
+      className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''} ${overVideo ? styles.overVideo : ''}`}
       role={mobileOpen ? 'dialog' : undefined}
       aria-modal={mobileOpen || undefined}
       aria-label={mobileOpen ? 'Menu di navigazione' : undefined}

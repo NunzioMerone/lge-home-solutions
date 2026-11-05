@@ -1,0 +1,22 @@
+{
+  "scope": "Standalone edited excerpt of the two new interior-door scenes at website speed0.85, not the complete45s montage.",
+  "file": "02_Web/LGE_Rev06_Estratto_Porte_Interne.mp4",
+  "decode": "passed",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1"
+      }
+    ],
+    "format": {
+      "duration": "12.166667"
+    }
+  },
+  "bytes": 9185204,
+  "sha256": "87ceae79abe23b01fec7f9f31696ee22637ae39e680172dcacf96414e689af75"
+}

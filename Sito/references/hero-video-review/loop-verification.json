@@ -1,0 +1,23 @@
+[
+  {
+    "format": "Desktop",
+    "black_segments": 0,
+    "first_pair_delta": 0.088,
+    "loop_delta": 0.608,
+    "last_pair_delta": 0.301
+  },
+  {
+    "format": "Tablet",
+    "black_segments": 0,
+    "first_pair_delta": 0.105,
+    "loop_delta": 0.658,
+    "last_pair_delta": 0.29
+  },
+  {
+    "format": "Mobile",
+    "black_segments": 0,
+    "first_pair_delta": 0.115,
+    "loop_delta": 0.644,
+    "last_pair_delta": 0.308
+  }
+]

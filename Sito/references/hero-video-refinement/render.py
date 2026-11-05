@@ -1,0 +1,115 @@
+"""Render the Rev05 edit at its responsive sizes without enlarging before interpolation."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+PIPELINE_VERSION = 1
+
+
+def run(arguments: list[str]) -> None:
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *arguments], check=True)
+
+
+def prepare(name: str, index: int, shot: dict, source: dict, edit: dict) -> Path:
+    width, height = edit["exports"][name]
+    fps = edit["fps"]
+    identity = json.dumps([PIPELINE_VERSION, shot, source, width, height, fps], sort_keys=True)
+    key = hashlib.sha256(identity.encode()).hexdigest()[:16]
+    target = ROOT / ".prepared" / name / f"{key}.mp4"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists():
+        return target
+
+    source_height = int(shot["source_crop"].split(":")[1]) if shot.get("source_crop") else source["dimensions"][1]
+    work_height = min(height, source_height) // 2 * 2
+    work_width = round(work_height * width / height / 2) * 2
+    duration = shot["frames"] / fps
+    source_duration = duration * shot["speed"]
+    focal = shot.get("mobile_focal", shot["focal"]) if name == "Mobile" else shot["focal"]
+    end = shot.get("mobile_focal_end", focal) if name == "Mobile" else focal
+    position = f"({focal}+({end-focal})*min(t/{source_duration}\\,1))"
+    filters = [f"trim=duration={source_duration}", "setpts=PTS-STARTPTS"]
+    if shot.get("source_crop"):
+        filters.append(f"crop={shot['source_crop']}")
+    filters.extend([
+        f"scale=-2:{work_height}:flags=lanczos",
+        f"crop={work_width}:{work_height}:(iw-ow)*{position}:(ih-oh)*0.5",
+        "setsar=1", f"setpts=PTS/{shot['speed']}",
+        "tpad=stop_mode=clone:stop_duration=0.3",
+        f"minterpolate=fps={fps}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:me=hexbs:vsbmc=1",
+        f"trim=end_frame={shot['frames']}", "setpts=PTS-STARTPTS",
+    ])
+    warmth = shot.get("warmth", 0.5)
+    filters.extend([
+        f"colorbalance=rs={.006*warmth}:bs={-.004*warmth}:rm={.018*warmth}:gm={.003*warmth}:bm={-.016*warmth}",
+        "eq=saturation=1.015:contrast=1.005",
+        f"scale={width}:{height}:flags=lanczos", "setsar=1", "format=yuv420p",
+    ])
+    temporary = target.with_suffix(".tmp.mp4")
+    print(f"{name} {index+1}/{len(edit['shots'])}: {shot['description']}", flush=True)
+    run([
+        "-threads", "2", "-ss", str(shot["start"]), "-t", str(source_duration + .3),
+        "-i", str(ROOT / source["path"]), "-filter_threads", "2",
+        "-vf", ",".join(filters), "-an", "-frames:v", str(shot["frames"]),
+        "-c:v", "libx264", "-crf", "15", "-preset", "fast", "-threads", "2", str(temporary),
+    ])
+    temporary.replace(target)
+    return target
+
+
+def render(name: str, edit: dict) -> None:
+    fps, fade, shots = edit["fps"], edit["transition_frames"], edit["shots"]
+    sources = {source["file"]: source for source in edit["sources"]}
+    prepared = [prepare(name, i, shot, sources[shot["file"]], edit) for i, shot in enumerate(shots)]
+    inputs: list[str] = []
+    graph: list[str] = []
+    for index, path in enumerate(prepared):
+        inputs.extend(["-threads", "1", "-i", str(path)])
+        graph.append(f"[{index}:v]settb=AVTB,setpts=PTS-STARTPTS[c{index}]")
+    frames, previous = shots[0]["frames"], "c0"
+    for index, shot in enumerate(shots[1:], 1):
+        label = f"mix{index}"
+        graph.append(f"[{previous}][c{index}]xfade=transition=fade:duration={fade/fps}:offset={(frames-fade)/fps}[{label}]")
+        frames += shot["frames"] - fade
+        previous = label
+    # Rotate the first dissolve to the end so the file seam continues its motion.
+    graph.extend([
+        f"[{previous}]split=3[bodyin][headin][tailin]",
+        f"[bodyin]trim=start_frame={fade}:end_frame={frames-fade},setpts=PTS-STARTPTS[body]",
+        f"[headin]trim=end_frame={fade},setpts=PTS-STARTPTS[head]",
+        f"[tailin]trim=start_frame={frames-fade},setpts=PTS-STARTPTS[tail]",
+        f"[tail][head]xfade=transition=fade:duration={fade/fps}:offset=0[seam]",
+        "[body][seam]concat=n=2:v=1:a=0[out]",
+    ])
+    output = ROOT / "02_Web" / f"LGE_Hero_Rev05_WEB_{name}.mp4"
+    poster = ROOT / "03_Poster" / f"LGE_Hero_Rev05_Poster_{name}.jpg"
+    output.parent.mkdir(exist_ok=True)
+    poster.parent.mkdir(exist_ok=True)
+    temporary = output.with_suffix(".tmp.mp4")
+    print(f"Assembling {name}: {(frames-fade)/fps:.3f}s", flush=True)
+    run([
+        *inputs, "-filter_complex_threads", "1", "-filter_complex", ";".join(graph),
+        "-map", "[out]", "-an", "-frames:v", str(frames-fade), "-r", str(fps),
+        "-c:v", "libx264", "-crf", "19", "-preset", "slow", "-threads", "3",
+        "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709",
+        "-colorspace", "bt709", "-movflags", "+faststart", str(temporary),
+    ])
+    temporary.replace(output)
+    run(["-i", str(output), "-frames:v", "1", "-update", "1", "-q:v", "2", str(poster)])
+
+
+def main() -> None:
+    edit = json.loads((ROOT / "edit.json").read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--format", choices=edit["exports"], required=True)
+    render(parser.parse_args().format, edit)
+
+
+if __name__ == "__main__":
+    main()

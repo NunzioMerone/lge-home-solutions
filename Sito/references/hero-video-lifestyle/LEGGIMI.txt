@@ -1,0 +1,52 @@
+LGE — REVISIONE 02: LA CASA VISSUTA
+Anteprima locale, 5 novembre 2026.
+
+DIREZIONE
+La richiesta e di dare vita e calore alla hero: persone, gesti quotidiani,
+prodotti dentro gli ambienti, tempi piu distesi e transizioni piu morbide.
+Il montaggio parte dalla lettura in casa, passa dalla finestra al relax
+sotto la pergola, poi alla tavola e alla sera all'aperto.
+
+Scelta editoriale: in questa prova compaiono infissi, schermature,
+tende e pergole. Non tutte le categorie LGE sono rappresentate.
+Le porte tecniche isolate della prima versione non sono state reinserite:
+per completare il racconto anche con porte interne e ingressi servono
+riprese ambientate coerenti con questa direzione.
+
+FILE
+Durata 21,75 secondi, 24 fps, silenzioso, MP4 H.264 yuv420p faststart.
+01_Master: Desktop 1280x720, Tablet 960x720, Mobile 720x1280.
+02_Web: stessi formati, compressione piu leggera da scaricare.
+03_Poster: primo fotogramma per caricamento o movimento ridotto.
+
+MONTAGGIO
+Dissolvenze di 0,833 secondi tra tutte le scene e al raccordo del loop.
+Riprese rallentate, con interpolazione del movimento; nessun fermo immagine
+usato per allungare artificialmente una scena. Le velocita esatte sono in
+edit.json: 85-90% per quasi tutte le scene, 50% per la breve vista della
+coppia sotto la pergola.
+Il soggetto viene seguito nei ritagli verticali dove necessario.
+L'interpolazione ottica puo produrre piccoli difetti su mani e oggetti:
+questa rimane una prova editoriale, da rivedere a movimento pieno.
+
+QUALITA E FONTI
+Gibus: filmati effettivamente presenti nella homepage, a 720p.
+VEKA / Finestra Italiana: campagna 2022 dall'agenzia Gruppo ICAT,
+file a 1920x1080 con immagine cinematografica e bande nere rimosse.
+Le dimensioni d'uscita non implicano un dettaglio nativo superiore alle
+fonti; i ritagli verticali comportano un ingrandimento del materiale Gibus.
+Non e un master 4K e non sono state inventate persone o installazioni.
+
+Titolari, pagine di provenienza e tempi di montaggio sono in edit.json.
+Si tratta di scene pubblicitarie dei produttori, non di clienti o lavori LGE.
+Prima di usare il montaggio online vanno confermati diritti di riutilizzo,
+rimontaggio, utilizzo delle persone ritratte e modelli realmente offerti.
+Il sito ufficiale e la prima proposta restano invariati.
+
+RIPRODURRE IL MONTAGGIO
+Python 3.9+, FFmpeg con libx264 e minterpolate.
+Collocare i quattro filmati originali in sources/ secondo edit.json.
+python3 render.py --prepare-only
+python3 render.py
+I passaggi intermedi restano in .prepared/ e non sono distribuiti nello ZIP.
+Fonti e derivati sono esclusi da Git per evitare di versionare i video.

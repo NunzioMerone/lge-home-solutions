@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-05",
+  "revision": "Rev06",
+  "scope": "Checkpoint Rev06 con layout mobile in basso; push e pubblicazione GitHub Pages richiesti dall’utente il 5 novembre 2026.",
+  "playback_rate": 0.85,
+  "headline_accent": "#EDD5B3",
+  "duration_file": 45,
+  "duration_website": 52.94117647058824,
+  "provenance": "references/hero-video-interiors/LEGGIMI.txt",
+  "stock_provenance": "Two new licensed Pexels interior-door atmosphere scenes; not verified LGE/partner products, installations or customers.",
+  "assets": [
+    {
+      "format": "desktop",
+      "kind": "video",
+      "source": "references/hero-video-interiors/02_Web/LGE_Hero_Rev06_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev06.mp4",
+      "bytes": 26317935,
+      "sha256": "d5dc204257917e2105895b0add43d154ae1bd515ec1f19e32e767992e4e8f151"
+    },
+    {
+      "format": "desktop",
+      "kind": "poster",
+      "source": "references/hero-video-interiors/03_Poster/LGE_Hero_Rev06_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev06-poster.jpg",
+      "bytes": 122547,
+      "sha256": "cde0258183872890f917323b9842f1aeca000c3698b6e9e98ee61625d684045e"
+    },
+    {
+      "format": "tablet",
+      "kind": "video",
+      "source": "references/hero-video-interiors/02_Web/LGE_Hero_Rev06_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev06.mp4",
+      "bytes": 15400725,
+      "sha256": "c4488a171318216985dd2bd0df9f18cace61714717093d6696dfa7d445b58e2c"
+    },
+    {
+      "format": "tablet",
+      "kind": "poster",
+      "source": "references/hero-video-interiors/03_Poster/LGE_Hero_Rev06_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev06-poster.jpg",
+      "bytes": 89778,
+      "sha256": "04bb5c1014d79608feccd71eb9da2a28eaf0ea949995471c6937ce558ee3fcc1"
+    },
+    {
+      "format": "mobile",
+      "kind": "video",
+      "source": "references/hero-video-interiors/02_Web/LGE_Hero_Rev06_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev06.mp4",
+      "bytes": 11713311,
+      "sha256": "e50f0008d0258caa893d38252659c4707ae79158b68caf1f36a4366be7ef8ea7"
+    },
+    {
+      "format": "mobile",
+      "kind": "poster",
+      "source": "references/hero-video-interiors/03_Poster/LGE_Hero_Rev06_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev06-poster.jpg",
+      "bytes": 73167,
+      "sha256": "de5346673fd597e148ee78f55d98235c515330726ee10b6e411b66a2504dda61"
+    }
+  ],
+  "publication": {
+    "authorized_by_user": "2026-11-05",
+    "repository": "NunzioMerone/lge-home-solutions",
+    "branch": "main",
+    "site": "https://nunziomerone.github.io/lge-home-solutions/",
+    "public_preview": true
+  }
+}

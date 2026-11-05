@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-05",
+  "scope": "Ricerca mirata porte interne partner, nessuna modifica app o asset attivi",
+  "new_source": {
+    "brand": "DoorArreda",
+    "page": "https://laltrodesign.com/marchi/",
+    "url": "https://laltrodesign.com/wp-content/uploads/2025/11/WhatsApp-Video-2025-11-12-at-15.22.56.mp4",
+    "file": "doorarreda-laltrodesign.mp4",
+    "sha256": "254fc15eb6d5496230f568ad3d9f6fd3fbccdac087a6a315db3acfcafc84158c",
+    "dimensions": [
+      720,
+      1280
+    ],
+    "fps": 30,
+    "video_bitrate": 2946296,
+    "duration": 21.826757,
+    "type": "Real showroom demonstration, four interior doors opened by a man; physical wood/laminate doors and warm dark showroom",
+    "limits": "Portrait 720p; handheld movement; large numerals 1,2,3,4 added near the bottom during the respective first seconds of each demonstration. Not a polished residential campaign. Native video is clean of social UI; manufacturer logos remain.",
+    "candidate_trim": {
+      "start": 19.0,
+      "end": 21.8,
+      "preview_speed": 0.6,
+      "preview": "doorarreda-showroom-clean-19-21_8-preview.mp4",
+      "description": "Last portion of the fourth door demonstration, no large number visible, hand/body partially behind open door, full door and surrounding showroom. For mobile potentially usable; landscape crops lose context and resolution."
+    }
+  },
+  "other_checks": [
+    {
+      "page": "https://www.behance.net/francescodorigo",
+      "description": "DoorArreda Ispirazioni profile with many residential projects. Profile readable, three individual project pages returned 403 without account. No bypass or login attempted.",
+      "unverified_projects": [
+        "https://www.behance.net/gallery/255672903/DoorArreda-Flag",
+        "https://www.behance.net/gallery/255326289/DoorArreda-interior-flush-door-solutions",
+        "https://www.behance.net/gallery/253954371/DoorArreda-project-Boiseries-Glass-partitions-doors"
+      ]
+    },
+    {
+      "description": "WestLAB/Westcommunication linkage researched; no public playable file tied to Ipea emerged. The link found is an old2012 portfolio, not proof of the producer of current campaign."
+    }
+  ],
+  "browser_check": {
+    "url": "https://www.youtube.com/watch?v=cI7v_XVKiUQ",
+    "result": "Public page readable without login in browser, portrait door video visible; native media download failed. No bypass attempted. No new usable source recovered from this route."
+  },
+  "preview_verification": {
+    "audio": false,
+    "dimensions": [
+      720,
+      1280
+    ],
+    "fps": 24,
+    "duration": 4.625,
+    "full_decode": "passed",
+    "active_hero_modified": false
+  }
+}

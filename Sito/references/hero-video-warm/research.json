@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-05",
+  "method": "Official manufacturer sites and public production-company portfolios. Public VELUX content-hub videos and public Vimeo embeds; no accounts or credentials used. Existing authorized Gibus and VEKA campaign sources re-reviewed.",
+  "selected_sources": [
+    {
+      "file": "gibus-awnings.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "kind": "Outdoor table, retained from Rev03",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "b30e83ec996e4b980be6768fc9b4674d016c76fc730985788673f98a33a0f94e"
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "kind": "Couple relaxing, retained from Rev03",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "dede3455551f4496d7f6d707a1658bf799e433383969038416878129afb88bdd"
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684237525",
+      "kind": "Warm living space with solar screens; previously researched, newly added to site edit",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "9854f966f5899339fa016eceb026597b45c298c138e1f60bb7c3ff3dcc6fcbf6"
+    },
+    {
+      "file": "veka-living.mp4",
+      "brand": "VEKA / Finestra Italiana",
+      "page": "https://www.gruppoicat.com/case/veka.php",
+      "url": "https://player.vimeo.com/video/768462996",
+      "kind": "Warm window scenes, agency’s official campaign. Does not establish LGE membership of Finestra Italiana.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e3681013a4b4873cbd83b3d74cf3b35c5207f19d5daebba56314a30da1c99750"
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "brand": "VELUX",
+      "page": "https://www.socialcontentfactory.it/it/corporate-videostrategy/storie-di-luce/",
+      "url": "https://player.vimeo.com/video/273862065",
+      "kind": "New Full HD residential film from the production company. Upper architectural framing omits unrelated narration subtitles.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2aebf7ed082e26514c525d55be67ee8c73c5bf24e255e9eecf4465a86f25a77b"
+    },
+    {
+      "file": "velux-kitchen-film.mp4",
+      "brand": "VELUX",
+      "page": "https://www.velux.it/magazine/luce-in-cucina-doppia-altezza",
+      "url": "https://contenthub.velux.com/api/public/content/671506acead34f5ebcfa039eadce5084?v=7dd3cb0a",
+      "kind": "New lived-in house: family and large glazing. Roof windows are VELUX; vertical glazing manufacturer is not attributed to VELUX.",
+      "dimensions": [
+        1100,
+        618
+      ],
+      "sha256": "c6285f48d936e6e1b4a5950520eaafaa5e4941f08ba561dbe281886cf88a42b7"
+    }
+  ],
+  "alternatives_reviewed": [
+    {
+      "source": "VELUX Storie di luce – Montesilvano cinematic loop",
+      "page": "https://www.velux.it/magazine/villa-contemporanea-progettata-con-luce-naturale",
+      "url": "https://contenthub.velux.com/api/public/content/0c1e7ab784c44483a5e942c59dfe2067?v=d3908a60",
+      "decision": "Downloaded and inspected. Grey-green interiors and rapid room-to-room cuts are less suited to the new warm direction."
+    },
+    {
+      "source": "VELUX kitchen cinematic loop",
+      "page": "https://www.velux.it/magazine/luce-in-cucina-doppia-altezza",
+      "url": "https://contenthub.velux.com/api/public/content/f2b63d14cd874a1e8305a3ac9c2e2854?v=ca005391",
+      "decision": "Downloaded and inspected. Full film chosen for precise scene boundaries and a family action without baked-in fast cuts."
+    },
+    {
+      "source": "Gibus – Pergola dolce pergola (2020)",
+      "page": "https://quasarproductions.it/it/portfolios/gibus/",
+      "url": "https://vz-2bb97005-3c8.b-cdn.net/dde3f12f-1c53-49a4-a31c-6ee63a0273e0/playlist.m3u8",
+      "decision": "Downloaded at 2542x1080 and inspected. Rapid campaign cuts, prominent red brand mark and party lighting are less coherent with the calm warm sequence."
+    },
+    {
+      "source": "Gibus Movie technical film",
+      "decision": "Re-reviewed existing source. Empty product-stage render, German technical captions and isolated mechanism views excluded."
+    },
+    {
+      "source": "New Solar home film",
+      "decision": "Removed all Rev03 extracts, including the woman wiping/operating the window, in response to user feedback."
+    },
+    {
+      "source": "I-PEA / DoorArreda / TEHNi Rev03 extracts",
+      "decision": "Removed technical door inserts, pivot detail and lock-use shot. This revision prioritizes windows, light, shading and outdoor atmosphere."
+    }
+  ]
+}

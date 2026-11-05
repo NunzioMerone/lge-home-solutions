@@ -1,0 +1,16 @@
+.prepared/
+02_Web/
+03_Poster/
+*.zip
+research-*/*.html
+research-*/*.mp4
+research-*/*.jpg
+research-*/*.png
+research-*/sources/
+research-*/*channel.json
+research-*/*playlist.jsonl
+research-*/*meta.json
+
+# Raw browser research payloads and private local file inventory stay local
+research-doors/pinterest-data.json
+research-doors/screenrecording-inventory.json

@@ -1,0 +1,72 @@
+LGE HOME SOLUTIONS — REV06, PORTE INTERNE E ATMOSFERA DOMESTICA
+5 novembre 2026. Nuova proposta esclusivamente locale, nessuna pubblicazione.
+
+DIREZIONE
+La ripresa DoorArreda da showroom è stata rifiutata dall’utente e non entra
+nel montaggio. L’utente autorizza altri download gratuiti e il lavoro autonomo.
+Rev06 aggiunge due nuove riprese cinematografiche native 4K di porte interne:
+1. Porta interna bianca vetrata con maniglia in ottone e arredi in legno.
+2. Corridoio contemporaneo con porta scura, parquet e luce radente calda.
+Niente dimostrazione showroom, numeri tecnici, UI social o luci artificiali
+che appaiono sul perimetro di una porta. Movimenti reali di camera lenti.
+Restano le sette scene Rev05: Gibus, due finestre VEKA, mansarda VELUX
+e porta d’ingresso TEHNi. Non sono stati modificati layout, overlay,
+logo, testi, colore Sabbia o tempi della dissolvenza del titolo.
+
+RITMO
+9 scene, 1080 fotogrammi a 24 fps: file da 45 secondi senza audio.
+La hero riproduce a 0,85×: un giro dura circa 52,94 secondi.
+Dissolvenze da 28 fotogrammi (1,167 s file, 1,373 s nella hero).
+Raccordo finale incluso nel file, senza passaggio al nero.
+Le due nuove scene durano 6,5 e 5 secondi prima degli overlap;
+le velocità sono 0,8× e 0,64×, poi si applica il ritmo della hero.
+
+NUOVE FONTI GRATUITE
+Taryn Elliott — A Door Made of Glass Panels, Pexels 9583985.
+https://www.pexels.com/video/a-door-made-of-glass-panels-9583985/
+Sorgente 3840×2160, 25 fps, 10,28 s.
+Kindel Media — Video of a House Hallway, Pexels 7578548.
+https://www.pexels.com/video/video-of-a-house-hallway-7578548/
+Sorgente 3840×2160, 30 fps, 7,615 s.
+Licenza Pexels verificata sulle schede e su:
+https://www.pexels.com/license/
+Download, modifica e uso su siti consentiti gratuitamente; attribuzione
+facoltativa. Non implicare endorsement di persone o marchi, non rivendere
+o redistribuire gli originali come stock. Sono scene d’atmosfera generiche:
+NON prodotti verificati dei partner, NON lavori o clienti LGE.
+Gli originali non sono inclusi nel pacchetto web per l’utente.
+Le fonti dei precedenti film dei produttori mantengono le condizioni Rev05:
+l’eventuale impiego online resta da verificare e non è autorizzato da questa prova.
+
+COLORE E INQUADRATURE
+La porta bianca riceve una lieve correzione del cast ciano verso neutri
+più caldi; il corridoio mantiene la sua luce calda originale.
+La vetrata su mobile è ricentrata a 0,71 per conservare la vera maniglia.
+Il corridoio è seguito da 0,67 a0,8; le barre nere da 8 px vengono rimosse
+alla sorgente. Nessun ritocco a geometria, ante, maniglie o arredi.
+Interpolazione prima degli eventuali ingrandimenti, nessuno sharpening.
+Gibus resta 720p nativo; il paesaggio VEKA ha morbidezza ottica originale.
+
+EXPORT
+Desktop 1920×1080, Tablet 1280×960, Mobile 720×1280.
+H.264 yuv420p, 24 fps, metadati BT.709, faststart, poster dedicati.
+I nomi dei file attivi includono rev06.
+Rev05 resta conservata in ../hero-video-refinement/.
+
+RIGENERAZIONE E VERIFICHE
+Python 3 e FFmpeg con libx264, minterpolate, xfade.
+Fonti, tagli, hash, inquadrature e licenze: edit.json.
+python3 render.py --format Desktop
+python3 render.py --format Tablet
+python3 render.py --format Mobile
+python3 verify.py
+Gli intermedi di Rev05 con scena, dimensioni e hash originali identici
+sono riutilizzati; cache-reuse.json documenta questa operazione.
+Nuove scene e cache mancanti sono calcolate normalmente.
+verification.json riporta i controlli effettivi sugli export.
+Le ricerche e i motivi degli scarti sono nei tre report sources-stock-a/b/c.
+
+ESTRATTO RAPIDO
+02_Web/LGE_Rev06_Estratto_Porte_Interne.mp4 mostra soltanto le due nuove
+scene montate, con il ritmo 0,85× già incorporato per il normale player.
+Dura circa 12,17 secondi; non è il montaggio completo della hero.

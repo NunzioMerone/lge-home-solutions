@@ -1,0 +1,165 @@
+{
+  "method": "Official partner sites, their linked public YouTube channels, manufacturer social film with Pinterest provenance, public WordPress media catalog. Only freely accessible downloads. No paid generators, purchases or private-account access.",
+  "selected_sources": [
+    {
+      "file": "cosmet-home.mp4",
+      "brand": "Cosmet Group (ALWO / Fideal)",
+      "page": "https://cosmetgroup.it/",
+      "url": "https://cosmetgroup.it/wp-content/uploads/2025/03/Video-home-Cosmet.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Architectural product film, render"
+    },
+    {
+      "file": "newsolar-home.mp4",
+      "brand": "New Solar",
+      "page": "https://newsolar.info/",
+      "url": "https://www.youtube.com/watch?v=X1vHMqQw6F0",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Shutters in a lived-in home, people operating and living with the product"
+    },
+    {
+      "file": "ipea-ambient.mp4",
+      "brand": "I-PEA Porte Design",
+      "page": "https://www.ipeaportedesign.com/press",
+      "url": "https://www.youtube.com/watch?v=--ok3o5xgzY",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Interior door in a furnished architectural scene, render"
+    },
+    {
+      "file": "ipea-touch.mp4",
+      "brand": "I-PEA Porte Design",
+      "page": "https://www.youtube.com/@ipeaportedesign",
+      "url": "https://www.youtube.com/watch?v=oMMGojN-Cqc",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Physical interior door opened by hand. Natural upper-frame crop excludes the instructional caption."
+    },
+    {
+      "file": "doorarreda-pivot.mp4",
+      "brand": "DoorArreda",
+      "page": "https://www.doorarreda.it/",
+      "url": "https://www.youtube.com/watch?v=CFoP1P04D5k",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "kind": "Official social film: FLAG glass pivot door, Gold & Flutes. Source Pinterest attribution remains in the original and is visible in the full portrait view; landscape is a product detail crop."
+    },
+    {
+      "file": "tehni-xl.mp4",
+      "brand": "TEHNi",
+      "page": "https://www.youtube.com/@tehni.s.a",
+      "url": "https://www.youtube.com/watch?v=Q5O67uFLEts",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Physical entrance door: lock operation followed by a wider view of the same door, retaining the original action-to-product cut and manufacturer mark."
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "kind": "Homepage campaign: couple resting under the pergola. No dancing scene."
+    },
+    {
+      "file": "gibus-awning.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "kind": "Homepage campaign: wide outdoor table scene under an awning. No isolated wine close-up."
+    }
+  ],
+  "excluded": [
+    {
+      "source": "Cosmet spot surfista 2025",
+      "url": "https://www.youtube.com/watch?v=I_4Ldk34O6o",
+      "reason": "Comic studio campaign, unrelated to the requested calm lived-in home atmosphere."
+    },
+    {
+      "source": "Cosmet corporate",
+      "url": "https://www.youtube.com/watch?v=G4ch4fBKw9w",
+      "reason": "Factory and interview footage, extensive captions; not a home-use story."
+    },
+    {
+      "source": "Cosmet material film",
+      "url": "https://www.youtube.com/watch?v=jd-a0rbh8zk",
+      "reason": "Industrial details rather than inhabited environments."
+    },
+    {
+      "source": "DoorArreda Florida",
+      "url": "https://www.youtube.com/watch?v=rbVNJydXv8w",
+      "reason": "Source 480 x 848, unfinished house with tools; insufficient quality for the wide hero."
+    },
+    {
+      "source": "DoorArreda Villa del Mar",
+      "url": "https://www.youtube.com/watch?v=W10D3-G7dO4",
+      "reason": "Recorded playback and screen controls are present."
+    },
+    {
+      "source": "DoorArreda Labs Tower",
+      "url": "https://www.youtube.com/watch?v=i0FwMB8ZxO4",
+      "reason": "Useful interiors, but 480 x 852 source is too limited for the desktop edit."
+    },
+    {
+      "source": "DoorArreda reference book",
+      "url": "https://www.youtube.com/watch?v=e4s0JfBKCkw",
+      "reason": "Predominantly reference presentation, location labels and collages."
+    },
+    {
+      "source": "I-PEA spot 2023",
+      "url": "https://www.youtube.com/watch?v=WBTDOHAlTlM",
+      "reason": "Isolated dark product stage; less consistent with the approved atmosphere."
+    },
+    {
+      "source": "Effepi corporate",
+      "url": "https://www.youtube.com/watch?v=dNPQblgbt3E",
+      "reason": "Mostly manufacturing and isolated product presentation; human lock-use footage from TEHNi is more relevant."
+    },
+    {
+      "source": "VELUX product introduction",
+      "url": "https://www.youtube.com/watch?v=UiUGsENI6NQ",
+      "reason": "Trade fair interview, not residential use."
+    },
+    {
+      "source": "VELUX Active introduction",
+      "url": "https://www.youtube.com/watch?v=zbCFd__r3J4",
+      "reason": "Trade fair interview, not residential use."
+    },
+    {
+      "source": "BETTIO corporate",
+      "url": "https://www.youtube.com/watch?v=MKgRblpjz1Y",
+      "reason": "Industrial and showroom footage, not suitable for this residential hero."
+    },
+    {
+      "source": "VEKA 2025 campaign",
+      "url": "https://www.gruppoicat.com/case/veka-2025.php",
+      "reason": "Surreal product comparisons; not coherent with the calm home narrative."
+    },
+    {
+      "source": "Gibus wine close-up / dancing scene",
+      "url": "https://www.gibus.com/it/",
+      "reason": "Explicitly excluded by user."
+    }
+  ]
+}

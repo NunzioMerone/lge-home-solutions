@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-05",
+  "scope": "Ricerca indipendente gratuita, nessuna modifica all’app o agli asset hero attivi.",
+  "clips": [
+    {
+      "file": "mixkit-friend-1080.mp4",
+      "title": "Young woman is greeted at her friend’s apartment",
+      "page": "https://mixkit.co/free-stock-video/young-woman-is-greeted-at-her-friends-apartment-12117/",
+      "url": "https://assets.mixkit.co/videos/12117/12117-1080.mp4",
+      "license": "Mixkit Stock Video Free License",
+      "license_url": "https://mixkit.co/license/#videoFree",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": "24000/1001",
+      "duration": 16.016,
+      "bytes": 58246159,
+      "sha256": "157604f72a4b92668306a7767c7d9564661ae92d29a7a8ed682300f286f10432",
+      "decode": "passed",
+      "judgment": "Licenza gratuita commerciale effettiva e download FullHD senza account, UI o watermark. Buona scena vissuta con porta blu in appartamento, ma porta d’ingresso, non interna. Toni freddi; non prima scelta per requisito porte interne."
+    },
+    {
+      "file": "coverr-tour-of-a-house-1080.mp4",
+      "title": "Tour of a house",
+      "page": "https://coverr.co/videos/tour-of-a-house-10dx22zecx",
+      "url": "https://cdn.coverr.co/videos/coverr-tour-of-a-house-5566/1080p.mp4",
+      "license": "Coverr Free Commercial Rights",
+      "license_url": "https://coverr.co/license",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": "24/1",
+      "duration": 19.125,
+      "bytes": 10795738,
+      "sha256": "2627a3b5329478221f4c926b1f39a460793cd77df585d50c094820d17f431613",
+      "decode": "passed",
+      "judgment": "Fonte reale2020 e scaricabile gratis pubblicamente, nonAI. Video di tiny-house/mobile-home grigia con bagno/kitchenette, ambiente poco accogliente e nessuna porta interna piana protagonista: scartato."
+    }
+  ],
+  "rejected_license": [
+    {
+      "page": "https://mixkit.co/free-stock-video/opening-a-door-with-a-hanging-key-21812/",
+      "reason": "File gratuito720limitato a uso personale;1080commerciale richiede Envato. Non scaricato."
+    },
+    {
+      "page": "https://mixkit.co/free-stock-video/opening-a-hotel-room-door-21817/",
+      "reason": "File gratuito720limitato a uso personale;4Kcommerciale richiede Envato. Non scaricato."
+    },
+    {
+      "page": "https://mixkit.co/free-stock-video/entering-an-elegant-living-room-with-a-large-chandelier-39177/",
+      "reason": "RestrictedLicense nella scheda, nessun filmato scaricato."
+    }
+  ],
+  "other_checks": [
+    "Pixabay: ricerca pagine restituiva403 al download; nessun bypass o login tentato.",
+    "Mixkit4198,4196,4046 hanno licenza Free ma anteprime mostrano camere hotel senza porte interne protagoniste, quindi non scaricati.",
+    "Coverr data pagina generica home-interior include molte clipAI/placeholder: non usate. Soloassetpuntuale Tour of a house verificato."
+  ]
+}

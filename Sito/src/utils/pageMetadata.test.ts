@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { site } from '../config/site'
 import { competenciesPage } from '../config/competencies'
 import { worksPage } from '../config/works'
+import { windowsPage } from '../data/windowComfort'
 import { getPageMetadata } from './pageMetadata'
 
 describe('page metadata across routes', () => {
@@ -12,7 +13,7 @@ describe('page metadata across routes', () => {
 
   it('does not carry privacy metadata or draft indexing restrictions to other pages', () => {
     const privacy = getPageMetadata('/privacy-policy')
-    for (const path of ['/', '/prodotti/infissi', '/not-found']) {
+    for (const path of ['/', '/not-found']) {
       const metadata = getPageMetadata(path)
       expect(metadata.description).toBe(site.description)
       expect(metadata.description).not.toBe(privacy.description)
@@ -29,6 +30,12 @@ describe('page metadata across routes', () => {
       })
     }
     expect(getPageMetadata('/competenze/unknown').title).not.toBe(competenciesPage.title)
+  })
+
+  it('uses the Infissi page metadata with normal and static-host URLs', () => {
+    for (const path of ['/prodotti/infissi', '/prodotti/infissi/']) {
+      expect(getPageMetadata(path)).toEqual(windowsPage)
+    }
   })
 
   it('recognizes normal and static-host work routes without privacy restrictions', () => {

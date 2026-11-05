@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-05",
+  "scope": "Read-only source research. No changes to app/active hero. Stopped at parent request after suitable Pexels4K sources were found by other researchers.",
+  "selected_for_montage": [],
+  "assets": [
+    {
+      "name": "door-opens-a",
+      "page": "https://www.videezy.com/abstract/37749-a-door-opens",
+      "local_file": "door-opens-a-preview.mp4",
+      "kind": "public low-resolution preview only; not full-resolution original",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 630,
+            "height": 354,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "20.520000"
+        }
+      },
+      "sha256": "63ca307048838d0b16413ec98feecf19f7101e5200c0aeb624f28f90943db0a8",
+      "page_license_declaration": "Videezy resource page declares data-license-type=standard and shows Free Download. Actual downloadable original not recovered: official download link returned the item HTML page. No license for production use is asserted from preview alone.",
+      "contact_sheet": "door-opens-a-contact.jpg",
+      "evaluation": "Traditional glazed wood door and ornate patterned glass; teal background. Rejected: dated style, close technical view rather than warm modern architectural scene."
+    },
+    {
+      "name": "door-opens-b",
+      "page": "https://www.videezy.com/abstract/41351-a-door-opens",
+      "local_file": "door-opens-b-preview.mp4",
+      "kind": "public low-resolution preview only; not full-resolution original",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 630,
+            "height": 354,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "16.760000"
+        }
+      },
+      "sha256": "ce7193fe5841efb2e77ec338102a4f579322aaad56e971f76d4ae81ed67dbf7f",
+      "page_license_declaration": "Videezy resource page declares data-license-type=standard and shows Free Download. Actual downloadable original not recovered: official download link returned the item HTML page. No license for production use is asserted from preview alone.",
+      "contact_sheet": "door-opens-b-contact.jpg",
+      "evaluation": "Same traditional glass/wood/brass door. Rejected: dated aesthetics and shallow-focus close-up."
+    },
+    {
+      "name": "man-door",
+      "page": "https://www.videezy.com/people/44363-man-opens-the-door",
+      "local_file": "man-door-preview.mp4",
+      "kind": "public low-resolution preview only; not full-resolution original",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 630,
+            "height": 354,
+            "r_frame_rate": "25/1"
+          },
+          {
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "16.619002"
+        }
+      },
+      "sha256": "16b4c4b0c934cf708a367f9e0d7541c90225a79b1f0cc7505268e5f2e38b8a65",
+      "page_license_declaration": "Videezy resource page declares data-license-type=standard and shows Free Download. Actual downloadable original not recovered: official download link returned the item HTML page. No license for production use is asserted from preview alone.",
+      "contact_sheet": "man-door-contact.jpg",
+      "evaluation": "Dark entrance door with two locks, keys and hand. Rejected: entrance/security, not internal door, too technical."
+    },
+    {
+      "name": "male-white",
+      "page": "https://www.videezy.com/abstract/45394-male-hand-opens-the-door-and-goes-through-it",
+      "local_file": "male-white-preview.mp4",
+      "kind": "public low-resolution preview only; not full-resolution original",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [
+          {
+            "streams": [
+              {
+                "width": 630,
+                "height": 354,
+                "r_frame_rate": "25/1"
+              },
+              {
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        ],
+        "streams": [
+          {
+            "width": 630,
+            "height": 354,
+            "r_frame_rate": "25/1"
+          },
+          {
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "13.800000"
+        }
+      },
+      "sha256": "08261dc5e0bb854229b810cbeb8fff4eb3fd736962326f76dc277b9e3fd6455b",
+      "page_license_declaration": "Videezy resource page declares data-license-type=standard and shows Free Download. Actual downloadable original not recovered: official download link returned the item HTML page. No license for production use is asserted from preview alone.",
+      "contact_sheet": "male-white-contact.jpg",
+      "evaluation": "Real clean white internal door with dark horizontal bands and lever, hand opening it; modern but close technical gesture. Better than old wood candidates, lower priority than new Pexels architectural4K sources. Full original not recovered."
+    },
+    {
+      "name": "female-white",
+      "page": "https://www.videezy.com/abstract/45491-female-hand-opening-and-closing-a-white-wooden-door",
+      "local_file": "female-white-preview.mp4",
+      "kind": "public low-resolution preview only; not full-resolution original",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [
+          {
+            "streams": [
+              {
+                "width": 630,
+                "height": 354,
+                "r_frame_rate": "25/1"
+              },
+              {
+                "r_frame_rate": "0/0"
+              }
+            ]
+          }
+        ],
+        "streams": [
+          {
+            "width": 630,
+            "height": 354,
+            "r_frame_rate": "25/1"
+          },
+          {
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "16.920000"
+        }
+      },
+      "sha256": "2c9fe4e0b97ddb41e3cd2260e3fca92be58652d4bc4ce0e080beaaa4c9dbbb32",
+      "page_license_declaration": "Videezy resource page declares data-license-type=standard and shows Free Download. Actual downloadable original not recovered: official download link returned the item HTML page. No license for production use is asserted from preview alone.",
+      "contact_sheet": "female-white-contact.jpg",
+      "evaluation": "Same modern white door, hand operating handle in office/hotel setting. Alternative detail only. Vecteezy equivalent1790314 is Pro, so no free production eligibility asserted from its listing."
+    }
+  ],
+  "other_sources": [
+    {
+      "site": "Mazwai",
+      "result": "Public homepage/category returned403; no bypass."
+    },
+    {
+      "site": "Dareful",
+      "result": "Home/homes collections contained aerial/coastal exteriors, no useful internal door scene."
+    },
+    {
+      "site": "Videezy50074",
+      "result": "Unlock and lock the door now redirects to homepage, no source recovered."
+    }
+  ],
+  "download_notes": "Public preview MP4s were fetched with ordinary Mozilla User-Agent and public Videezy Referer after bare requests returned403. No login, credentials, cookies from accounts, anti-bot solving or protected originals used. Full resolution download links did not yield originals."
+}

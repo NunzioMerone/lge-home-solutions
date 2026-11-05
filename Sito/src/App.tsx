@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from './pages/Home/Home'
 import { ProductPlaceholder } from './pages/ProductPlaceholder/ProductPlaceholder'
+import { ProductDetail } from './pages/ProductDetail/ProductDetail'
 import { products } from './data/products'
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy'
 import { Competencies } from './pages/Competencies/Competencies'
@@ -21,7 +22,13 @@ export default function App() {
       <Route path={competenciesPage.path} element={<Competencies />} />
       <Route path={worksPage.path} element={<Works />} />
       {products.map((product) => (
-        <Route key={product.path} path={product.path} element={<ProductPlaceholder />} />
+        <Route
+          key={product.path}
+          path={product.path}
+          element={
+            product.id === 'windows' ? <ProductDetail product={product} /> : <ProductPlaceholder />
+          }
+        />
       ))}
       <Route path="*" element={<ProductPlaceholder />} />
     </Routes>

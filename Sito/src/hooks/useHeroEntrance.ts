@@ -1,11 +1,8 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { TextPlugin } from 'gsap/TextPlugin'
 import { heroHeadlineMotion } from '../config/hero'
 import { heroCopy } from '../data/hero'
 import { useMotion } from './useMotion'
-
-gsap.registerPlugin(TextPlugin)
 
 export function useHeroEntrance() {
   const rootRef = useRef<HTMLElement>(null)
@@ -42,14 +39,8 @@ export function useHeroEntrance() {
           { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' },
           0.2,
         )
-        .fromTo(
-          root.querySelector('[data-hero-action]'),
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' },
-          0.35,
-        )
 
-      gsap.set(text, { text: '' })
+      gsap.set(live, { autoAlpha: 0, maskPosition: '100% 0%' })
       const headline = gsap.timeline({
         paused: true,
         repeat: -1,
@@ -59,18 +50,21 @@ export function useHeroEntrance() {
       rotation = headline
       heroCopy.phrases.forEach((phrase, index) => {
         headline
-          .set(
-            live,
-            { autoAlpha: 1, filter: 'blur(0px)', y: 0 },
+          .call(
+            () => {
+              text.textContent = phrase
+            },
+            undefined,
             index === 0 ? 0 : `+=${heroHeadlineMotion.betweenDuration}`,
           )
           .fromTo(
-            text,
-            { text: '' },
+            live,
+            { autoAlpha: 1, maskPosition: '100% 0%' },
             {
-              text: { value: phrase, delimiter: '' },
-              duration: phrase.length * heroHeadlineMotion.characterDuration,
-              ease: 'none',
+              autoAlpha: 1,
+              maskPosition: '0% 0%',
+              duration: heroHeadlineMotion.revealDuration,
+              ease: 'power1.inOut',
               immediateRender: false,
             },
           )
@@ -78,10 +72,8 @@ export function useHeroEntrance() {
             live,
             {
               autoAlpha: 0,
-              filter: `blur(${heroHeadlineMotion.blur}px)`,
-              y: -4,
               duration: heroHeadlineMotion.exitDuration,
-              ease: 'power2.in',
+              ease: 'power1.inOut',
             },
             `+=${heroHeadlineMotion.holdDuration}`,
           )

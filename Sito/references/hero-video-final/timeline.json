@@ -1,0 +1,106 @@
+{
+  "duration_seconds": 32.583333333333336,
+  "note": "Scene boundaries overlap during dissolves. The last 0.833 seconds also introduce the first scene for the loop.",
+  "scenes": [
+    {
+      "scene": 1,
+      "description": "Vetrata scorrevole dentro un ambiente abitativo",
+      "category": "windows",
+      "start_seconds": 0,
+      "end_seconds": 3.667,
+      "source_file": "cosmet-home.mp4",
+      "source_start": 0.3,
+      "speed": 1
+    },
+    {
+      "scene": 2,
+      "description": "Aprire la finestra e vivere la schermatura",
+      "category": "windows",
+      "start_seconds": 2.833,
+      "end_seconds": 7.333,
+      "source_file": "newsolar-home.mp4",
+      "source_start": 31.8,
+      "speed": 0.8
+    },
+    {
+      "scene": 3,
+      "description": "Porta interna e luce nell'ambiente",
+      "category": "interior-doors",
+      "start_seconds": 6.5,
+      "end_seconds": 10.5,
+      "source_file": "ipea-ambient.mp4",
+      "source_start": 2.4,
+      "speed": 0.55
+    },
+    {
+      "scene": 4,
+      "description": "Il gesto di aprire una porta interna",
+      "category": "interior-doors",
+      "start_seconds": 9.667,
+      "end_seconds": 13.167,
+      "source_file": "ipea-touch.mp4",
+      "source_start": 28.0,
+      "speed": 0.9
+    },
+    {
+      "scene": 5,
+      "description": "Vetro cannettato, luce e porta pivot",
+      "category": "interior-doors",
+      "start_seconds": 12.333,
+      "end_seconds": 16.333,
+      "source_file": "doorarreda-pivot.mp4",
+      "source_start": 0.4,
+      "speed": 0.8
+    },
+    {
+      "scene": 6,
+      "description": "Dalla serratura alla porta di ingresso",
+      "category": "entrance",
+      "start_seconds": 15.5,
+      "end_seconds": 18.75,
+      "source_file": "tehni-xl.mp4",
+      "source_start": 20.0,
+      "speed": 0.8
+    },
+    {
+      "scene": 7,
+      "description": "Oscuranti nella quotidianita della casa",
+      "category": "shading",
+      "start_seconds": 17.917,
+      "end_seconds": 21.917,
+      "source_file": "newsolar-home.mp4",
+      "source_start": 3.3,
+      "speed": 0.8
+    },
+    {
+      "scene": 8,
+      "description": "Relax sotto la pergola bioclimatica",
+      "category": "outdoor",
+      "start_seconds": 21.083,
+      "end_seconds": 24.25,
+      "source_file": "gibus-pergola.mp4",
+      "source_start": 1.68,
+      "speed": 0.5
+    },
+    {
+      "scene": 9,
+      "description": "La tavola all'aperto sotto la tenda",
+      "category": "outdoor",
+      "start_seconds": 23.417,
+      "end_seconds": 28.917,
+      "source_file": "gibus-awning.mp4",
+      "source_start": 0.1,
+      "speed": 0.9
+    },
+    {
+      "scene": 10,
+      "description": "Tornare alla casa, al serramento e alla luce",
+      "category": "windows",
+      "start_seconds": 28.083,
+      "end_seconds": 32.583,
+      "source_file": "cosmet-home.mp4",
+      "source_start": 10.6,
+      "speed": 0.75
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+LGE HOME SOLUTIONS — REV05, SABBIA E QUALITÀ DELLE RIPRESE
+5 novembre 2026. Prova esclusivamente locale, nessuna pubblicazione.
+
+SCELTA DEL COLORE
+Dopo il confronto sul filmato reale l’utente sceglie Sabbia #EDD5B3
+per la frase animata. Prefisso, sottotitolo e logo restano bianchi sulla
+hero trasparente. Il blu del marchio nel resto del sito non cambia.
+I tempi del titolo (2,6 s ingresso, 5,5 s lettura, 1,6 s uscita) e il
+velo antracite a sinistra restano quelli approvati.
+
+MONTAGGIO
+Sette scene: tavola sotto la tenda Gibus, finestra su Firenze, mansarda
+VELUX con legno e luce naturale, porta d’ingresso TEHNi in legno,
+finestra veneziana con tende, relax sotto la pergola e lettura con schermature.
+La porta d’ingresso è un prodotto fisico ripreso in studio, non una
+realizzazione LGE. Non sono dichiarate sue prestazioni di sicurezza.
+È escluso il gesto della donna al vetro, il perimetro luminoso della
+porta renderizzata, i dettagli della serratura, il vino isolato e il ballo.
+La scena famiglia presso la vetrata (1100×618) è stata sostituita.
+
+QUALITÀ
+Le due scene VEKA usano la copia pubblica 3840×2160 della stessa campagna:
+più dettaglio per i ritagli, non un nuovo soggetto. La sfocatura del
+paesaggio di Firenze è già nella fonte e dipende anche dalla messa a fuoco.
+Desktop: 1920×1080, contro 1280×720 della Rev04.
+Tablet: 1280×960, contro 960×720 della Rev04.
+Mobile: 720×1280, inquadrature dedicate, porta ricentrata sul lato maniglia.
+Le fonti Gibus restano 720p: non si dichiarano dettagli nativi Full HD
+recuperati da quelle fonti. Nessuno sharpening o generazione di dettagli.
+L’interpolazione dei rallentamenti avviene prima di ingrandire le fonti
+piccole, così non si analizzano bordi già ingranditi.
+Correzione calda lieve per scena, senza filtro seppia.
+
+RITMO E LOOP
+860 fotogrammi a 24 fps, 35,8333 secondi, senza audio.
+La hero riproduce a 0,85×: un giro dura circa 42,16 secondi.
+Dissolvenze da 28 fotogrammi (1,167 s nel file, 1,373 s nel sito).
+Raccordo finale montato dentro il file; nessun passaggio al nero.
+In un player esterno il ritmo corretto si ottiene impostando 0,85×.
+H.264, yuv420p, metadati BT.709 e faststart; poster per ciascun formato.
+
+RICERCA E LIMITI
+research-quality: audit della morbidezza e recupero VEKA 4K.
+research-windows: VEKA, Bettio e alternative, incluse le esclusioni.
+research-doors: I-PEA, DoorArreda, EFFEPI, TEHNi, SikurHome e social ufficiali.
+Gli ScreenRecording dell’utente sono stati soltanto letti e ispezionati;
+UI social e dimensioni effettive del film non li rendono migliori.
+Nessuna porta interna nuova è inserita: le riprese disponibili sono
+molto compresse, verticali con interfacce, tecniche o artificiali.
+Il film DoorArreda FLAG Seven è una pista interessante, ma non è stato
+scaricato né verificato oltre l’anteprima. Nessun accesso o blocco aggirato.
+
+PROVENIENZA
+Fonti ufficiali dei produttori e della produzione, con URL, hash e tagli
+in edit.json. Download gratuiti autorizzati dall’utente. Le scene non sono
+lavori o clienti LGE e non attestano la disponibilità di ciascun modello.
+Diritti di montaggio, immagine e impiego online restano da verificare.
+Questa prova non modifica il sito pubblicato. Rev04 resta conservata in
+../hero-video-warm/ e Rev03 in ../hero-video-final/.
+
+RIGENERAZIONE
+Python 3 e FFmpeg con libx264, xfade e minterpolate.
+I percorsi degli originali sono relativi a questa cartella in edit.json.
+python3 render.py --format Desktop
+python3 render.py --format Tablet
+python3 render.py --format Mobile
+Gli intermedi sono indicizzati per impostazioni, metadata/hash sorgente
+e versione della pipeline. Se si sostituisce un originale aggiornare il suo
+sha256; se si modifica la pipeline incrementare PIPELINE_VERSION.
+verification.json registra controlli effettivi e dimensioni finali.

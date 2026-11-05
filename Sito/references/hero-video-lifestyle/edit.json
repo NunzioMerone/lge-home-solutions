@@ -1,0 +1,108 @@
+{
+  "status": "Local editorial preview, revision 02: lived-in home and slower pacing. Not installed or published.",
+  "fps": 24,
+  "audio": false,
+  "transition_frames": 20,
+  "sources": [
+    {
+      "file": "gibus-screens.mp4",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684237525",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "description": "Gibus homepage, vertical screens: reading in the living room."
+    },
+    {
+      "file": "gibus-awnings.mp4",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "description": "Gibus homepage, awnings: couple preparing an outdoor table."
+    },
+    {
+      "file": "gibus-bioclimatic.mp4",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "description": "Gibus homepage, bioclimatic pergolas: couple relaxing and evening outdoor living."
+    },
+    {
+      "file": "veka-living.mp4",
+      "page": "https://www.gruppoicat.com/case/veka.php",
+      "url": "https://player.vimeo.com/video/768462996",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "description": "Finestra Italiana / VEKA 2022 campaign: windows and family life. Original image is letterboxed; visible picture cropped to 1920 x 754."
+    }
+  ],
+  "rights": "Publicly accessible campaign footage. Commercial reuse, editing rights, talent clearances and exact model availability at LGE are not established. These are manufacturer campaign scenes, not LGE installations or customers. No AI-created products or people.",
+  "scope": "Pergolas, awnings, screens and windows. Standalone technical door renders are excluded from this mood preview; it does not claim to show every LGE category.",
+  "shots": [
+    {
+      "file": "gibus-screens.mp4",
+      "start": 7.24,
+      "frames": 138,
+      "speed": 0.9,
+      "description": "Lettura in una stanza luminosa",
+      "focal": 0.58,
+      "mobile_focal": 0.6,
+      "mobile_focal_end": 0.65
+    },
+    {
+      "file": "veka-living.mp4",
+      "start": 33.44,
+      "frames": 80,
+      "speed": 0.85,
+      "source_crop": "1920:754:0:164",
+      "description": "La finestra dentro la casa",
+      "focal": 0.5
+    },
+    {
+      "file": "gibus-bioclimatic.mp4",
+      "start": 1.68,
+      "frames": 76,
+      "speed": 0.5,
+      "description": "Due persone sotto la pergola",
+      "focal": 0.53,
+      "mobile_focal": 0.6
+    },
+    {
+      "file": "gibus-awnings.mp4",
+      "start": 0.1,
+      "frames": 158,
+      "speed": 0.9,
+      "description": "Preparare insieme la tavola all'aperto",
+      "focal": 0.54,
+      "mobile_focal": 0.48,
+      "mobile_focal_end": 0.59
+    },
+    {
+      "file": "gibus-awnings.mp4",
+      "start": 6.28,
+      "frames": 82,
+      "speed": 0.85,
+      "description": "Uno sguardo a tavola",
+      "focal": 0.45,
+      "mobile_focal": 0.32
+    },
+    {
+      "file": "gibus-bioclimatic.mp4",
+      "start": 10.84,
+      "frames": 108,
+      "speed": 0.9,
+      "description": "La pergola vissuta anche la sera",
+      "focal": 0.51,
+      "mobile_focal": 0.54
+    }
+  ]
+}

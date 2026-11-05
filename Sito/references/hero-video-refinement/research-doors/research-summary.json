@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-05",
+  "scope": "Ricerca di riprese reali di porte interne e ingressi dei partner LGE, esclusivamente per prova locale",
+  "result": "Nessuna nuova sorgente ambientata migliore delle fonti locali è stata scaricabile e verificabile senza accesso. Due estratti di ripiego degli originali locali restano utilizzabili con limiti espliciti.",
+  "fallback_clips": [
+    {
+      "brand": "TEHNi",
+      "title": "XL Doors — vista ampia del pannello in legno",
+      "page": "https://tehni.eu/downloads/",
+      "source_url": "https://www.youtube.com/watch?v=Q5O67uFLEts",
+      "source_file": "../../hero-video-final/sources/tehni-xl.mp4",
+      "source_resolution": [1920, 1080],
+      "source_fps": "30000/1001",
+      "source_start_seconds": 25.8,
+      "source_end_seconds": 29.4,
+      "playback_rate": 0.6,
+      "output_seconds": 6,
+      "preview_file": "tehni-xl-wide-preview.mp4",
+      "contact_sheet": "tehni-xl-19-30.jpg",
+      "notes": "Porta reale calda ripresa dal basso con lento movimento verticale. Il tratto selezionato esclude serratura, didascalia altezza e meccanica. Resta il piccolo marchio TEHNi in alto a destra. Lo sfondo è uno studio pulito scuro, non un'abitazione. File sorgente 1080p ma compresso a circa1.7Mbit/s: non dichiarare qualità4K."
+    },
+    {
+      "brand": "I-PEA",
+      "title": "Touch — apertura a spinta della porta decorata",
+      "page": "https://www.ipeaportedesign.com/",
+      "source_url": "https://www.youtube.com/watch?v=oMMGojN-Cqc",
+      "source_file": "../../hero-video-final/sources/ipea-touch.mp4",
+      "source_resolution": [1920, 1080],
+      "source_fps": "25/1",
+      "source_start_seconds": 28.2,
+      "source_end_seconds": 31.5,
+      "playback_rate": 0.55,
+      "output_seconds": 6,
+      "proposed_crop": "crop=1920:850:0:0",
+      "contact_sheet": "ipea-touch-26-39.jpg",
+      "source_video_bitrate_bps": 417595,
+      "notes": "Mano e camicia bianca che aprono una porta interna reale, senza LED o render. Il crop superiore elimina la didascalia tecnica Apertura a spinta in basso. Non è una nuova ambientazione né una ripresa ampia. Bitrate video di appena418kbit/s malgrado la risoluzione nominale1080p: evitare su desktop per non reintrodurre morbidezza. Solo ripiego se necessario per rappresentare porte interne."
+    }
+  ],
+  "downloaded_rejected": [
+    {
+      "brand": "Sikur Home",
+      "title": "EvoLine",
+      "page": "https://www.sikurhome.it/",
+      "url": "https://www.sikurhome.it/wp-content/uploads/2026/09/evoline-16_9_1.mp4",
+      "file": "sources/sikur-evoline.mp4",
+      "resolution": [1920, 1080],
+      "fps": 25,
+      "duration_seconds": 54.68,
+      "notes": "Video nativo completo. Prevalentemente officina, test con martello, dettagli prodotto e sovrimpressioni. Piccoli tratti con donna che usa l'avvolgibile, ma nessun segmento ambientato continuo di4–8secondi senza didascalie. Non consigliato per la hero."
+    }
+  ],
+  "promising_unverified": [
+    {
+      "brand": "DoorArreda",
+      "title": "FLAG Seven Collection",
+      "url": "https://www.youtube.com/watch?v=cI7v_XVKiUQ",
+      "thumbnail": "doorarreda-seven-thumbnail.jpg",
+      "notes": "L'anteprima pubblica è orizzontale e mostra una bella porta in vetro cannettato bronzo in ambiente reale. Download anonimo respinto da YouTube con richiesta login anti-bot. Non è stato possibile visionare o verificare tagli, risoluzione e continuità. Potenzialmente il seguito più utile se si recupera l'originale dal partner."
+    },
+    {
+      "brand": "Effepi",
+      "title": "Sicura CL e Difesa CL",
+      "page": "https://www.effepisecuritydoors.com/video",
+      "url": "https://www.youtube.com/watch?v=YtHelOoDvqw",
+      "notes": "Video ufficiale56secondi. Download pubblico respinto da YouTube con richiesta login anti-bot. Non visionato."
+    },
+    {
+      "brand": "Effepi",
+      "title": "E-Way: innovazione in movimento",
+      "page": "https://www.effepisecuritydoors.com/video",
+      "url": "https://www.youtube.com/watch?v=gnX6r93IKHo",
+      "notes": "Video ufficiale58secondi. Download pubblico respinto da YouTube con richiesta login anti-bot. Non visionato."
+    },
+    {
+      "brand": "DoorArreda",
+      "title": "FLAG & Raso4uattro",
+      "url": "https://www.youtube.com/watch?v=Cwgb8cM3Jko",
+      "notes": "Video ufficiale61secondi. Download pubblico respinto da YouTube con richiesta login anti-bot. Non visionato."
+    }
+  ],
+  "other_research": [
+    "DoorArreda realizzazioni https://www.doorarreda.it/realizzazione/ : numerosi progetti domestici curati, ma HTML contiene gallerie fotografiche senza videoMP4; endpoint media video restituisce lista vuota.",
+    "I-PEA https://www.ipeaportedesign.com/press : spotTV esistenti; ulteriore campagna Italia1 Rcz5iX6_4Dc ha anteprima con LED e scena nera artificiale, esclusa.",
+    "Effepi https://www.effepisecuritydoors.com/video : tutti i video del catalogo incorporanoYouTube; nessun MP4 nativo trovato. Microsito https://www.effepimajor.com/ non contiene video nativi.",
+    "TEHNi https://tehni.eu/downloads/ : altri video ufficiali Aluline26BhbuLauDE, CrystallizeTvT5mFIzmnw, Multiframe dZ-ZGtFhk9U; downloadYouTube anonimo respinto. Profilo ufficiale ArchiExpo risponde403 alla lettura diretta.",
+    "LinkedIn DoorArreda: post su progetti residenziali reperiti, ma i post consultabili contengono immagini, i profili che ripubblicano filmati rispondono999; nessun accesso con credenziali effettuato.",
+    "DoorArreda pivot locale CFoP1P04D5k riesaminato: verticale720×1280, watermark Pinterest, camera a mano e cartello commerciale a metà; escluso per desktop."
+  ]
+}

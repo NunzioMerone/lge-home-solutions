@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import '@fontsource-variable/dm-sans/wght.css'
 import '@fontsource/cormorant-garamond/latin-400.css'
 import { MotionProvider } from './components/ui/MotionProvider'
+import { ProductTransitionProvider } from './components/ui/ProductTransitionProvider'
 import App from './App'
 import './styles/global.css'
 
@@ -13,7 +14,9 @@ createRoot(root).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <MotionProvider>
-        <App />
+        <ProductTransitionProvider>
+          <App />
+        </ProductTransitionProvider>
       </MotionProvider>
     </BrowserRouter>
   </StrictMode>,

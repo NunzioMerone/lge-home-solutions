@@ -1,0 +1,53 @@
+{
+  "checked": "2026-11-05",
+  "files": [
+    {
+      "format": "Desktop",
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "frames": 820,
+      "duration": 34.166667,
+      "website_duration": 40.19607843137255,
+      "bytes": 10035887,
+      "sha256": "d18945f1ccc3b65c5109c7587a12d3b5ca27aedf0837b492d7c04b6ab86e9ab6",
+      "audio": false,
+      "decode": "passed",
+      "faststart": true,
+      "loop_boundary_mae": 2.147777777777778,
+      "first_adjacent_frame_mae": 0.9506712962962963
+    },
+    {
+      "format": "Tablet",
+      "width": 960,
+      "height": 720,
+      "fps": 24,
+      "frames": 820,
+      "duration": 34.166667,
+      "website_duration": 40.19607843137255,
+      "bytes": 7458485,
+      "sha256": "48270f0953761330c8747484cdf55ba7591506a7301c85dd80f1edc519a59845",
+      "audio": false,
+      "decode": "passed",
+      "faststart": true,
+      "loop_boundary_mae": 2.257175925925926,
+      "first_adjacent_frame_mae": 1.1740972222222221
+    },
+    {
+      "format": "Mobile",
+      "width": 720,
+      "height": 1280,
+      "fps": 24,
+      "frames": 820,
+      "duration": 34.166667,
+      "website_duration": 40.19607843137255,
+      "bytes": 8041121,
+      "sha256": "3a9e4ebb71520d4496e1d45925ee10a27092c465f0c0720d281ac5e67a878030",
+      "audio": false,
+      "decode": "passed",
+      "faststart": true,
+      "loop_boundary_mae": 2.4410648148148146,
+      "first_adjacent_frame_mae": 2.4073379629629628
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "status": "Local editorial preview; not installed or published",
+  "fps": 24,
+  "audio": false,
+  "sources": [
+    {
+      "file": "cosmet-home.mp4",
+      "url": "https://cosmetgroup.it/wp-content/uploads/2025/03/Video-home-Cosmet.mp4",
+      "page": "https://cosmetgroup.it/",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "rights": "Publicly accessible manufacturer footage. Reuse authorization not established. Architectural renders; not LGE installations."
+    },
+    {
+      "file": "gibus-movie.mp4",
+      "url": "https://www.schirmherrschaft.de/wp-content/uploads/2024/02/GIBUS-PRODOTTO-MOVIE-1080-DEU.mp4",
+      "page": "https://www.schirmherrschaft.de/marken/gibus/gibus-movie/",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "rights": "Gibus-branded Movie product film hosted on a reseller website. Reuse authorization not established. Product render; not an LGE installation. Text-free excerpts only."
+    },
+    {
+      "file": "tehni-pivot.mp4",
+      "url": "https://tehni.eu/wp-content/uploads/SuperiorPivot_Short_1.mp4",
+      "page": "https://tehni.eu/",
+      "dimensions": [
+        1000,
+        874
+      ],
+      "rights": "Publicly accessible manufacturer footage. Reuse authorization and exact product availability at LGE not established. Product render."
+    },
+    {
+      "file": "ipea-spot.mp4",
+      "url": "https://www.youtube.com/watch?v=--ok3o5xgzY",
+      "page": "https://www.youtube.com/@ipeaportedesign",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "rights": "Manufacturer I-PEA Porte Design official channel, spot LA7. Reuse authorization and exact model availability at LGE not established. Product render. Clean product scene used; source logos and ident untouched elsewhere in the original."
+    }
+  ],
+  "shots": [
+    {
+      "subject": "pergola",
+      "file": "gibus-movie.mp4",
+      "start": 14.0,
+      "frames": 84,
+      "focal": 0.53
+    },
+    {
+      "subject": "pergola-detail",
+      "file": "gibus-movie.mp4",
+      "start": 29.8,
+      "frames": 54,
+      "focal": 0.56
+    },
+    {
+      "subject": "windows",
+      "file": "cosmet-home.mp4",
+      "start": 0.3,
+      "frames": 108,
+      "focal": 0.36,
+      "overlap_frames": 6
+    },
+    {
+      "subject": "facade",
+      "file": "cosmet-home.mp4",
+      "start": 5.333333,
+      "frames": 72,
+      "focal": 0.3,
+      "mobile_focal_end": 0.0
+    },
+    {
+      "subject": "entrance",
+      "file": "tehni-pivot.mp4",
+      "start": 0.2,
+      "frames": 72
+    },
+    {
+      "subject": "interior",
+      "file": "ipea-spot.mp4",
+      "start": 2.4,
+      "frames": 60,
+      "overlap_frames": 6,
+      "focal": 0.9,
+      "mobile_focal": 0.74
+    },
+    {
+      "subject": "coastal-window",
+      "file": "cosmet-home.mp4",
+      "start": 10.6,
+      "frames": 78,
+      "focal": 0.47
+    },
+    {
+      "subject": "pergola",
+      "file": "gibus-movie.mp4",
+      "start": 11.75,
+      "frames": 54,
+      "focal": 0.53
+    }
+  ]
+}

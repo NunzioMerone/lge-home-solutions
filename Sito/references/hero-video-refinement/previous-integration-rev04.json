@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-05",
+  "revision": "Rev04",
+  "scope": "Integrazione esclusivamente locale, nessuna pubblicazione.",
+  "playback_rate": 0.85,
+  "duration_file": 34.166666666666664,
+  "duration_website": 40.19607843137255,
+  "provenance": "references/hero-video-warm/LEGGIMI.txt",
+  "assets": [
+    {
+      "format": "desktop",
+      "kind": "video",
+      "source": "references/hero-video-warm/02_Web/LGE_Hero_Rev04_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev04.mp4",
+      "bytes": 10035887,
+      "sha256": "d18945f1ccc3b65c5109c7587a12d3b5ca27aedf0837b492d7c04b6ab86e9ab6"
+    },
+    {
+      "format": "desktop",
+      "kind": "poster",
+      "source": "references/hero-video-warm/03_Poster/LGE_Hero_Rev04_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev04-poster.jpg",
+      "bytes": 75285,
+      "sha256": "2444c37e97a9a1795cba1f00443a4243338755b851fb23e5793d8cd3f1bea010"
+    },
+    {
+      "format": "tablet",
+      "kind": "video",
+      "source": "references/hero-video-warm/02_Web/LGE_Hero_Rev04_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev04.mp4",
+      "bytes": 7458485,
+      "sha256": "48270f0953761330c8747484cdf55ba7591506a7301c85dd80f1edc519a59845"
+    },
+    {
+      "format": "tablet",
+      "kind": "poster",
+      "source": "references/hero-video-warm/03_Poster/LGE_Hero_Rev04_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev04-poster.jpg",
+      "bytes": 63585,
+      "sha256": "bf094283632db6d33b6f85ca76e9e514df67b40dfa29770e8c858ce72150832f"
+    },
+    {
+      "format": "mobile",
+      "kind": "video",
+      "source": "references/hero-video-warm/02_Web/LGE_Hero_Rev04_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev04.mp4",
+      "bytes": 8041121,
+      "sha256": "3a9e4ebb71520d4496e1d45925ee10a27092c465f0c0720d281ac5e67a878030"
+    },
+    {
+      "format": "mobile",
+      "kind": "poster",
+      "source": "references/hero-video-warm/03_Poster/LGE_Hero_Rev04_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev04-poster.jpg",
+      "bytes": 71986,
+      "sha256": "e60413af02a8de3b128717bd448642c5ebe9e64526f999f748d3d4e1babd934b"
+    }
+  ]
+}

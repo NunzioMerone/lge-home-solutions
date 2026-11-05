@@ -1,0 +1,27 @@
+Ricerca mirata infissi — 5 novembre 2026
+
+Unico passaggio nuovo coerente reperito in questo giro:
+- Film originale VEKA 4K, player pubblico https://player.vimeo.com/video/768462996
+- Originale: ../research-quality/veka-living-4k.mp4, 3840×2160, 25 fps, 63,920 s.
+- Scena: finestra bianca su facciata veneziana al tramonto. Tagli originali a 2,84 e 4,72 s (verificati con scene detection e contatto fotogrammi).
+- Estratto pronto: veka-facade-window-4k-2_88-4_68.mp4, da 2,88 a 4,68 s, 3840×1508, 25 fps, senza audio. Crop letterbox 3840:1508:0:328, senza interpolazione o sharpening.
+- Still: veka-facade-window-frame.jpg. Contatto scena: veka-opening-contact.jpg.
+- È una finestra reale e un ambiente caldo. Il fermo a 3,72 s mostra ancora morbidezza/mosso ottico nella fonte, quindi non è un esempio di maggiore nitidezza. Solo 1,80 s netti e movimento camera evidente. A 0,85× dura 2,12 s, quindi non può sostenere da sola una scena lunga con dissolvenze. Rimane una candidata breve, non un sostituto certo delle due scene lunghe di finestra.
+
+Bettio 2026, sorgente scaricata e verificata ma esclusa:
+- Portfolio della produzione: https://www.videozone.it/en/portfolio/183/bettio.html
+- Player pubblico https://player.vimeo.com/video/1191938954
+- File bettio-pensiero-1080.mp4: 1920×1080, 25 fps, 40,000 s, circa 2,27 Mbit/s video.
+- Spot in set scuro con telai sospesi, fondali e movimenti astratti. Non coerente con richiesta di una casa reale, calda e abitata; contiene testo tecnico e logo Bettio. La produzione indica VFX e AI generation. Le ultime inquadrature in soggiorno durano poco e non aggiungono un infisso protagonista pulito.
+- Contatto completo bettio-pensiero-contact.jpg.
+
+VEKA SPECTRAL:
+- La pagina ufficiale https://www.veka.de/oberflaechen/veka-spectral/ rimanda solo a YouTube (6qQkmqpKTeA), nessun file MP4 pubblico nella pagina.
+- La playlist italiana individuava 8c4TVJUhUMg, VEKA SPECTRAL, 154 s. Download YouTube precedentemente bloccato dal servizio, non forzato.
+- Non trovato un file diretto originale pubblico entro questa ricerca mirata.
+
+Altri materiali lasciati dal giro precedente:
+- bettio-intro.mp4: texture/animazione scura, non una finestra in casa.
+- veka-pure82-slider.mp4: prodotto isolato in fondale neutro, escluso per il brief.
+
+Nessuna app, asset attivo o renderer modificato. Non è stato pubblicato nulla.

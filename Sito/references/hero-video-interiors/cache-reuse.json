@@ -1,0 +1,18 @@
+{
+  "previous": "../hero-video-refinement/edit.json",
+  "method": "Hard links for unchanged shots and dimensions, identical pipeline default behavior, SHA256-verified originals. New clips and missing caches render normally.",
+  "formats": [
+    {
+      "format": "Desktop",
+      "unchanged_clips_reused": 6
+    },
+    {
+      "format": "Tablet",
+      "unchanged_clips_reused": 6
+    },
+    {
+      "format": "Mobile",
+      "unchanged_clips_reused": 7
+    }
+  ]
+}

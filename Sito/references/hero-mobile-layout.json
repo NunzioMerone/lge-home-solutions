@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-05",
+  "status": "Local mobile layout trial requested by the user; awaiting visual feedback. No publication.",
+  "videoRevision": "Rev06, unchanged",
+  "scope": "CSS below700px only: bottom-left alignment, wider text block, larger title, bottom gradient and faint top wash, additive safe area.",
+  "viewports": [
+    {
+      "contentAlignment": "flex-end",
+      "copy": {
+        "bottom": 544,
+        "height": 148.5078125,
+        "left": 20,
+        "top": 395.4921875,
+        "width": 280
+      },
+      "headerBottom": 96,
+      "heroHeight": 568,
+      "overflow": false,
+      "titleFont": "32px",
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "contentAlignment": "flex-end",
+      "copy": {
+        "bottom": 876.0859375,
+        "height": 154.703125,
+        "left": 20,
+        "top": 721.3828125,
+        "width": 375
+      },
+      "headerBottom": 96,
+      "heroHeight": 932,
+      "overflow": false,
+      "titleFont": "39.425px",
+      "viewport": [
+        430,
+        932
+      ]
+    },
+    {
+      "contentAlignment": "flex-end",
+      "copy": {
+        "bottom": 296,
+        "height": 154.4765625,
+        "left": 24.6015625,
+        "top": 141.5234375,
+        "width": 416
+      },
+      "headerBottom": 96,
+      "heroHeight": 320,
+      "overflow": false,
+      "titleFont": "42.4px",
+      "viewport": [
+        568,
+        320
+      ]
+    },
+    {
+      "contentAlignment": "flex-start",
+      "copy": {
+        "bottom": 382.921875,
+        "height": 216.921875,
+        "left": 33.5078125,
+        "top": 166,
+        "width": 610
+      },
+      "headerBottom": 96,
+      "heroHeight": 1024,
+      "overflow": false,
+      "titleFont": "64px",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "contentAlignment": "center",
+      "copy": {
+        "bottom": 589.53125,
+        "height": 275.0703125,
+        "left": 63.40625,
+        "top": 314.4609375,
+        "width": 820
+      },
+      "headerBottom": 109.640625,
+      "heroHeight": 900,
+      "overflow": false,
+      "titleFont": "68.4px",
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "copy": {
+        "bottom": 793.3671875,
+        "height": 144.8359375,
+        "left": 20,
+        "top": 648.53125,
+        "width": 335
+      },
+      "font": "35.625px",
+      "overflow": false,
+      "playbackRate": 0.85,
+      "src": "http://127.0.0.1:5175/media/hero/hero-mobile-rev06.mp4",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "checks": {
+    "lint": "passed",
+    "typecheckBuild": "passed",
+    "tests": 23,
+    "format": "passed"
+  },
+  "animation": "Existing motion timings and reduced-motion behavior unchanged; OS preference not re-tested in this pass."
+}

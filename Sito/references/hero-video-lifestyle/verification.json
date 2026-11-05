@@ -1,0 +1,80 @@
+[
+  {
+    "file": "01_Master/LGE_Hero_Lifestyle_Desktop.mp4",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 8.05,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  },
+  {
+    "file": "01_Master/LGE_Hero_Lifestyle_Mobile.mp4",
+    "dimensions": [
+      720,
+      1280
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 7.72,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  },
+  {
+    "file": "01_Master/LGE_Hero_Lifestyle_Tablet.mp4",
+    "dimensions": [
+      960,
+      720
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 6.05,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  },
+  {
+    "file": "02_Web/LGE_Hero_Lifestyle_WEB_Desktop.mp4",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 4.71,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  },
+  {
+    "file": "02_Web/LGE_Hero_Lifestyle_WEB_Mobile.mp4",
+    "dimensions": [
+      720,
+      1280
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 4.54,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  },
+  {
+    "file": "02_Web/LGE_Hero_Lifestyle_WEB_Tablet.mp4",
+    "dimensions": [
+      960,
+      720
+    ],
+    "duration": 21.75,
+    "frames": 522,
+    "MB": 3.59,
+    "decode": "passed",
+    "audio": false,
+    "faststart": true
+  }
+]

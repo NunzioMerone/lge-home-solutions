@@ -1,0 +1,213 @@
+{
+  "status": "Revision 03, local final montage delivered for review. No website integration or publication.",
+  "fps": 24,
+  "transition_frames": 20,
+  "audio": false,
+  "rights": "Downloaded at no charge from public manufacturer channels as authorized by the user. Free download does not establish commercial reuse rights. Manufacturer campaigns and realizations are not represented as LGE customers or installations. Reuse, editing and talent rights, and availability of specific models remain unverified.",
+  "sources": [
+    {
+      "file": "cosmet-home.mp4",
+      "brand": "Cosmet Group (ALWO / Fideal)",
+      "page": "https://cosmetgroup.it/",
+      "url": "https://cosmetgroup.it/wp-content/uploads/2025/03/Video-home-Cosmet.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Architectural product film, render"
+    },
+    {
+      "file": "newsolar-home.mp4",
+      "brand": "New Solar",
+      "page": "https://newsolar.info/",
+      "url": "https://www.youtube.com/watch?v=X1vHMqQw6F0",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Shutters in a lived-in home, people operating and living with the product"
+    },
+    {
+      "file": "ipea-ambient.mp4",
+      "brand": "I-PEA Porte Design",
+      "page": "https://www.ipeaportedesign.com/press",
+      "url": "https://www.youtube.com/watch?v=--ok3o5xgzY",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Interior door in a furnished architectural scene, render"
+    },
+    {
+      "file": "ipea-touch.mp4",
+      "brand": "I-PEA Porte Design",
+      "page": "https://www.youtube.com/@ipeaportedesign",
+      "url": "https://www.youtube.com/watch?v=oMMGojN-Cqc",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Physical interior door opened by hand. Natural upper-frame crop excludes the instructional caption."
+    },
+    {
+      "file": "doorarreda-pivot.mp4",
+      "brand": "DoorArreda",
+      "page": "https://www.doorarreda.it/",
+      "url": "https://www.youtube.com/watch?v=CFoP1P04D5k",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "kind": "Official social film: FLAG glass pivot door, Gold & Flutes. Source Pinterest attribution remains in the original and is visible in the full portrait view; landscape is a product detail crop."
+    },
+    {
+      "file": "tehni-xl.mp4",
+      "brand": "TEHNi",
+      "page": "https://www.youtube.com/@tehni.s.a",
+      "url": "https://www.youtube.com/watch?v=Q5O67uFLEts",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Physical entrance door: lock operation followed by a wider view of the same door, retaining the original action-to-product cut and manufacturer mark."
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "kind": "Homepage campaign: couple resting under the pergola. No dancing scene."
+    },
+    {
+      "file": "gibus-awning.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "kind": "Homepage campaign: wide outdoor table scene under an awning. No isolated wine close-up."
+    }
+  ],
+  "shots": [
+    {
+      "file": "cosmet-home.mp4",
+      "description": "Vetrata scorrevole dentro un ambiente abitativo",
+      "category": "windows",
+      "start": 0.3,
+      "frames": 108,
+      "speed": 1,
+      "source_fps": 24,
+      "focal": 0.36
+    },
+    {
+      "file": "newsolar-home.mp4",
+      "description": "Aprire la finestra e vivere la schermatura",
+      "category": "windows",
+      "start": 31.8,
+      "frames": 108,
+      "speed": 0.8,
+      "source_fps": 25,
+      "focal": 0.62,
+      "mobile_focal": 0.68,
+      "mobile_focal_end": 0.83
+    },
+    {
+      "file": "ipea-ambient.mp4",
+      "description": "Porta interna e luce nell'ambiente",
+      "category": "interior-doors",
+      "start": 2.4,
+      "frames": 96,
+      "speed": 0.55,
+      "source_fps": 25,
+      "focal": 0.85,
+      "mobile_focal": 0.74
+    },
+    {
+      "file": "ipea-touch.mp4",
+      "description": "Il gesto di aprire una porta interna",
+      "category": "interior-doors",
+      "start": 28.0,
+      "frames": 84,
+      "speed": 0.9,
+      "source_fps": 25,
+      "source_crop": "1920:880:0:0",
+      "focal": 0.55,
+      "mobile_focal": 0.53,
+      "mobile_focal_end": 0.43
+    },
+    {
+      "file": "doorarreda-pivot.mp4",
+      "description": "Vetro cannettato, luce e porta pivot",
+      "category": "interior-doors",
+      "start": 0.4,
+      "frames": 96,
+      "speed": 0.8,
+      "source_fps": 30,
+      "focal": 0.5,
+      "vertical_focal": 0.3
+    },
+    {
+      "file": "tehni-xl.mp4",
+      "description": "Dalla serratura alla porta di ingresso",
+      "category": "entrance",
+      "start": 20.0,
+      "frames": 78,
+      "speed": 0.8,
+      "source_fps": 29.97002997,
+      "focal": 0.5,
+      "mobile_focal": 0.26,
+      "mobile_focal_end": 0.24,
+      "allow_original_match_cut": true
+    },
+    {
+      "file": "newsolar-home.mp4",
+      "description": "Oscuranti nella quotidianita della casa",
+      "category": "shading",
+      "start": 3.3,
+      "frames": 96,
+      "speed": 0.8,
+      "source_fps": 25,
+      "focal": 0.55,
+      "mobile_focal": 0.65
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "description": "Relax sotto la pergola bioclimatica",
+      "category": "outdoor",
+      "start": 1.68,
+      "frames": 76,
+      "speed": 0.5,
+      "source_fps": 25,
+      "focal": 0.53,
+      "mobile_focal": 0.6
+    },
+    {
+      "file": "gibus-awning.mp4",
+      "description": "La tavola all'aperto sotto la tenda",
+      "category": "outdoor",
+      "start": 0.1,
+      "frames": 132,
+      "speed": 0.9,
+      "source_fps": 25,
+      "focal": 0.54,
+      "mobile_focal": 0.48,
+      "mobile_focal_end": 0.59
+    },
+    {
+      "file": "cosmet-home.mp4",
+      "description": "Tornare alla casa, al serramento e alla luce",
+      "category": "windows",
+      "start": 10.6,
+      "frames": 108,
+      "speed": 0.75,
+      "source_fps": 24,
+      "focal": 0.47
+    }
+  ]
+}

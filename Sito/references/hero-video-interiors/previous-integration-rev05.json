@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-05",
+  "revision": "Rev05",
+  "scope": "Integrazione esclusivamente locale, nessuna pubblicazione.",
+  "playback_rate": 0.85,
+  "headline_accent": "#EDD5B3",
+  "duration_file": 35.833333333333336,
+  "duration_website": 42.156862745098046,
+  "provenance": "references/hero-video-refinement/LEGGIMI.txt",
+  "assets": [
+    {
+      "format": "desktop",
+      "kind": "video",
+      "source": "references/hero-video-refinement/02_Web/LGE_Hero_Rev05_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev05.mp4",
+      "bytes": 20321356,
+      "sha256": "19a1cbe26dde4f36ddbb88e38d9d1c9f651cb328fbb383c77fee0fafb6216422"
+    },
+    {
+      "format": "desktop",
+      "kind": "poster",
+      "source": "references/hero-video-refinement/03_Poster/LGE_Hero_Rev05_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev05-poster.jpg",
+      "bytes": 122547,
+      "sha256": "cde0258183872890f917323b9842f1aeca000c3698b6e9e98ee61625d684045e"
+    },
+    {
+      "format": "tablet",
+      "kind": "video",
+      "source": "references/hero-video-refinement/02_Web/LGE_Hero_Rev05_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev05.mp4",
+      "bytes": 12251782,
+      "sha256": "7524a7bf69832fd564456f5bdc97b5f6b22c8801ea616b47b8165c720aec7f0b"
+    },
+    {
+      "format": "tablet",
+      "kind": "poster",
+      "source": "references/hero-video-refinement/03_Poster/LGE_Hero_Rev05_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev05-poster.jpg",
+      "bytes": 89778,
+      "sha256": "04bb5c1014d79608feccd71eb9da2a28eaf0ea949995471c6937ce558ee3fcc1"
+    },
+    {
+      "format": "mobile",
+      "kind": "video",
+      "source": "references/hero-video-refinement/02_Web/LGE_Hero_Rev05_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev05.mp4",
+      "bytes": 8768495,
+      "sha256": "d2fa5bb38428788ecedd473a2490762ee179a78f2453facb9af5294b582e167d"
+    },
+    {
+      "format": "mobile",
+      "kind": "poster",
+      "source": "references/hero-video-refinement/03_Poster/LGE_Hero_Rev05_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev05-poster.jpg",
+      "bytes": 73167,
+      "sha256": "de5346673fd597e148ee78f55d98235c515330726ee10b6e411b66a2504dda61"
+    }
+  ]
+}

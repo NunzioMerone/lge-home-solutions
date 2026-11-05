@@ -1,5 +1,6 @@
 :root {
   --color-brand-blue: #014380;
+  --color-hero-accent: #edd5b3;
   --color-blue: var(--color-brand-blue);
   --color-muted: #6b6b6b;
   --color-ink: #2f343a;

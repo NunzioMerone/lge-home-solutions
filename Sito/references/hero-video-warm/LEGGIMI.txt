@@ -1,0 +1,72 @@
+LGE HOME SOLUTIONS — REV04, LUCE CALDA E RITMO PIÙ CALMO
+5 novembre 2026. Revisione integrata esclusivamente nel sito locale.
+
+DIREZIONE
+Sette scene, rispetto alle dieci di Rev03. Apertura sulla tavola all’aperto,
+finestre nella luce dorata, mansarda con legno e luce naturale, famiglia
+vicino alla vetrata, tende morbide, relax sotto la pergola e lettura con
+schermature solari. Rimossi il gesto della donna al vetro e gli inserti
+tecnici di porte, maniglie e serrature. Nessun primo piano isolato del vino
+o scena di ballo. La revisione privilegia finestre, schermature e outdoor;
+non pretende di rappresentare tutte le categorie prodotto.
+
+RITMO E COLORE
+Movimenti rallentati e interpolati a 24 fps. Dissolvenze da 28 fotogrammi
+(1,167 secondi), rispetto ai precedenti 20. Correzione colore tenue,
+diversa per ripresa, per raccordare mezzitoni caldi e colori naturali.
+Il colore nasce soprattutto dalla selezione delle scene: niente filtro seppia.
+File: 820 fotogrammi, 34,1667 secondi, senza audio.
+Nella hero playbackRate e defaultPlaybackRate sono 0,85:
+un giro dura circa 40,2 secondi. In un player esterno a velocità normale
+il file dura 34,17 secondi; impostare 0,85× per riprodurre il ritmo del sito.
+Il raccordo finale è montato dentro il file, senza passaggio al nero.
+
+FILE WEB
+02_Web/LGE_Hero_Rev04_WEB_Desktop.mp4 — 1280×720, circa 10,04 MB.
+02_Web/LGE_Hero_Rev04_WEB_Tablet.mp4 — 960×720, circa 7,46 MB.
+02_Web/LGE_Hero_Rev04_WEB_Mobile.mp4 — 720×1280, circa 8,04 MB.
+03_Poster contiene un poster dedicato a ogni formato.
+H.264, yuv420p, metadati BT.709, faststart. Le inquadrature sono adattate
+separatamente; non viene usato un unico ritaglio centrale per tutte le scene.
+La hero conserva testi, animazione, overlay antracite e movimento ridotto.
+
+FONTI E QUALITÀ
+Gibus: campagne della homepage, pergole, tende e schermature.
+https://www.gibus.com/it/
+VEKA / Finestra Italiana: campagna pubblicata dall’agenzia Gruppo Icat.
+https://www.gruppoicat.com/case/veka.php
+VELUX Bologna: film residenziale della casa di produzione Social Content Factory.
+https://www.socialcontentfactory.it/it/corporate-videostrategy/storie-di-luce/
+https://player.vimeo.com/video/273862065
+VELUX Torino: famiglia e vetrata dal film ufficiale della casa.
+https://www.velux.it/magazine/luce-in-cucina-doppia-altezza
+
+VEKA e VELUX Bologna hanno fonti 1920×1080; Gibus è a 720p;
+il film VELUX Torino disponibile pubblicamente è 1100×618. I ritagli
+verticali possono risultare più morbidi del formato largo. Non è un master
+4K e non viene dichiarato un dettaglio nativo superiore alle fonti.
+La ripresa VELUX Bologna è inquadrata sulla parte architettonica superiore,
+escludendo i sottotitoli della narrazione originale. Le barre nere del film
+VEKA sono escluse dal ritaglio. Marchi compresi nelle riprese non sono ritoccati.
+
+PROVENIENZA E IMPIEGO
+edit.json documenta URL, sorgenti, hash, tagli, velocità, correzione colore
+e punti focali; research.json registra anche i filmati valutati e scartati.
+Le scene dei produttori non sono lavori o clienti LGE. Il marchio degli
+infissi verticali nel film VELUX non è attribuito a VELUX. L’uso della
+campagna VEKA non stabilisce un’adesione LGE alla rete Finestra Italiana.
+Download gratuiti da fonti pubbliche, come autorizzato dall’utente.
+I diritti di riutilizzo, montaggio e immagine e la disponibilità dei modelli
+specifici restano da verificare prima dell’impiego online. Nessuna pubblicazione.
+
+RIPRODUZIONE DEL MONTAGGIO
+Python 3 e FFmpeg con libx264, xfade e minterpolate.
+Collocare gli originali elencati in edit.json in sources/.
+python3 render.py --format Desktop
+python3 render.py --format Tablet
+python3 render.py --format Mobile
+Gli intermedi di .prepared sono riutilizzati: spostare la cartella prima
+di rigenerare se si modificano tagli, colore o inquadrature in edit.json.
+verification.json riporta decodifica completa, formato, fotogrammi,
+assenza di audio, faststart e differenza visiva al raccordo del loop.
+Il precedente montaggio Rev03 resta in ../hero-video-final/.

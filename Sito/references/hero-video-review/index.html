@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LGE — Revisione video hero</title>
+    <style>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #141819; color: #f6f5f1; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: clamp(20px, 4vw, 56px); }
+      main { max-width: 1280px; margin: auto; }
+      header { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+      .brand { color: #aebdc6; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+      h1 { font-weight: 400; font-size: clamp(28px, 4vw, 44px); margin: 12px 0; letter-spacing: -.04em; }
+      p { color: #b5babc; font-size: 14px; line-height: 1.65; max-width: 74ch; }
+      nav { display: flex; flex-wrap: wrap; gap: 8px; }
+      button, a { color: inherit; font: inherit; font-size: 14px; }
+      button { background: transparent; border: 1px solid #4d5559; padding: 12px 20px; cursor: pointer; }
+      button[aria-pressed="true"] { color: #141819; background: #eeede6; border-color: #eeede6; }
+      :focus-visible { outline: 3px solid #78baff; outline-offset: 5px; }
+      .stage { display: grid; place-items: center; background: #090c0d; min-height: 240px; padding: 16px; }
+      video { display: block; width: 100%; max-height: 70vh; aspect-ratio: 16/9; object-fit: contain; }
+      video[data-format="Tablet"] { aspect-ratio: 4/3; width: auto; max-width: 100%; }
+      video[data-format="Mobile"] { aspect-ratio: 9/16; width: auto; max-width: 100%; }
+      .details { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 18px 0; border-bottom: 1px solid #343b3e; }
+      .details p { margin: 0; }
+      .downloads { display: flex; gap: 20px; flex-wrap: wrap; }
+      a { text-underline-offset: 4px; }
+      footer { margin-top: 28px; }
+      footer p { font-size: 13px; }
+      @media (max-width: 600px) { .stage { padding: 0; } header { align-items: start; } nav { width: 100%; } button { flex: 1; padding: 12px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <div class="brand">LGE Home Solutions · Revisione 01</div>
+          <h1>Luce, materia, spazi da vivere.</h1>
+          <p>23,75 secondi · Silenzioso · Riproduzione in loop</p>
+        </div>
+        <nav aria-label="Formato del video">
+          <button type="button" data-format="Desktop" aria-pressed="true">Desktop</button>
+          <button type="button" data-format="Tablet" aria-pressed="false">Tablet</button>
+          <button type="button" data-format="Mobile" aria-pressed="false">Mobile</button>
+        </nav>
+      </header>
+      <div class="stage">
+        <video id="preview" controls muted playsinline loop preload="metadata" data-format="Desktop"
+          poster="03_Poster/LGE_Hero_Reedit_Poster_Desktop.jpg" aria-label="Anteprima del montaggio LGE, formato desktop">
+          <source src="02_Web/LGE_Hero_Reedit_WEB_Desktop.mp4" type="video/mp4" />
+          Il browser non supporta la riproduzione del video. Usa i collegamenti qui sotto.
+        </video>
+      </div>
+      <div class="details">
+        <p id="specification" role="status">Desktop · Web 1600 × 900 · Master 1920 × 1080</p>
+        <div class="downloads">
+          <a id="web-link" href="02_Web/LGE_Hero_Reedit_WEB_Desktop.mp4" download>Scarica web</a>
+          <a id="master-link" href="01_Master/LGE_Hero_Reedit_Desktop.mp4" download>Scarica master</a>
+        </div>
+      </div>
+      <footer>
+        <p>Nuovi sorgenti Cosmet, Gibus, TEHNi e I-PEA. Riprese prodotto e render; nessuna registrazione social nel montaggio finale. I dettagli delle fonti sono nel file <a href="LEGGIMI.txt">LEGGIMI</a>.</p>
+        <p>Anteprima locale. Prima dell’uso online occorre confermare i diritti sui filmati e i modelli effettivamente proposti da LGE.</p>
+      </footer>
+    </main>
+    <script>
+      const formats = {
+        Desktop: 'Desktop · Web 1600 × 900 · Master 1920 × 1080',
+        Tablet: 'Tablet · Web 1200 × 900 · Master 1440 × 1080',
+        Mobile: 'Mobile · Web e master 720 × 1280',
+      };
+      const video = document.getElementById('preview');
+      const buttons = document.querySelectorAll('button[data-format]');
+      for (const button of buttons) {
+        button.addEventListener('click', () => {
+          const format = button.dataset.format;
+          if (!(format in formats) || video.dataset.format === format) return;
+          const time = video.currentTime;
+          const resume = !video.paused;
+          video.pause();
+          video.dataset.format = format;
+          video.poster = `03_Poster/LGE_Hero_Reedit_Poster_${format}.jpg`;
+          video.src = `02_Web/LGE_Hero_Reedit_WEB_${format}.mp4`;
+          video.setAttribute('aria-label', `Anteprima del montaggio LGE, formato ${format.toLowerCase()}`);
+          document.getElementById('specification').textContent = formats[format];
+          document.getElementById('web-link').href = video.src;
+          document.getElementById('master-link').href = `01_Master/LGE_Hero_Reedit_${format}.mp4`;
+          for (const item of buttons) item.setAttribute('aria-pressed', String(item === button));
+          video.addEventListener('loadedmetadata', () => {
+            video.currentTime = Math.min(time, video.duration);
+            if (resume) video.play().catch(() => {});
+          }, { once: true });
+        });
+      }
+    </script>
+  </body>
+</html>

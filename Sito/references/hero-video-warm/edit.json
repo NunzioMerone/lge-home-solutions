@@ -1,0 +1,176 @@
+{
+  "revision": "Rev04",
+  "status": "Local warm editorial revision, no publication.",
+  "fps": 24,
+  "transition_frames": 28,
+  "audio": false,
+  "website_playback_rate": 0.85,
+  "look": "Natural warm midtones, restrained saturation; no sepia filter.",
+  "rights": "Public manufacturer / production company footage downloaded free under the user’s authorization. Reuse, editing, talent and model availability remain unverified. Not represented as LGE installations or customers.",
+  "sources": [
+    {
+      "file": "gibus-awnings.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "kind": "Outdoor table, retained from Rev03",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "b30e83ec996e4b980be6768fc9b4674d016c76fc730985788673f98a33a0f94e"
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "kind": "Couple relaxing, retained from Rev03",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "dede3455551f4496d7f6d707a1658bf799e433383969038416878129afb88bdd"
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684237525",
+      "kind": "Warm living space with solar screens; previously researched, newly added to site edit",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "9854f966f5899339fa016eceb026597b45c298c138e1f60bb7c3ff3dcc6fcbf6"
+    },
+    {
+      "file": "veka-living.mp4",
+      "brand": "VEKA / Finestra Italiana",
+      "page": "https://www.gruppoicat.com/case/veka.php",
+      "url": "https://player.vimeo.com/video/768462996",
+      "kind": "Warm window scenes, agency’s official campaign. Does not establish LGE membership of Finestra Italiana.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e3681013a4b4873cbd83b3d74cf3b35c5207f19d5daebba56314a30da1c99750"
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "brand": "VELUX",
+      "page": "https://www.socialcontentfactory.it/it/corporate-videostrategy/storie-di-luce/",
+      "url": "https://player.vimeo.com/video/273862065",
+      "kind": "New Full HD residential film from the production company. Upper architectural framing omits unrelated narration subtitles.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2aebf7ed082e26514c525d55be67ee8c73c5bf24e255e9eecf4465a86f25a77b"
+    },
+    {
+      "file": "velux-kitchen-film.mp4",
+      "brand": "VELUX",
+      "page": "https://www.velux.it/magazine/luce-in-cucina-doppia-altezza",
+      "url": "https://contenthub.velux.com/api/public/content/671506acead34f5ebcfa039eadce5084?v=7dd3cb0a",
+      "kind": "New lived-in house: family and large glazing. Roof windows are VELUX; vertical glazing manufacturer is not attributed to VELUX.",
+      "dimensions": [
+        1100,
+        618
+      ],
+      "sha256": "c6285f48d936e6e1b4a5950520eaafaa5e4941f08ba561dbe281886cf88a42b7"
+    }
+  ],
+  "shots": [
+    {
+      "file": "gibus-awnings.mp4",
+      "description": "La tavola all’aperto, luce calda e gesti naturali",
+      "category": "outdoor",
+      "start": 0.1,
+      "frames": 192,
+      "speed": 0.72,
+      "source_fps": 25,
+      "focal": 0.54,
+      "mobile_focal": 0.48,
+      "mobile_focal_end": 0.59,
+      "warmth": 0.35
+    },
+    {
+      "file": "veka-living.mp4",
+      "description": "La finestra incornicia Firenze al tramonto",
+      "category": "windows",
+      "start": 33.44,
+      "frames": 144,
+      "speed": 0.46,
+      "source_fps": 25,
+      "source_crop": "1920:754:0:164",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.15
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "description": "Legno e luce naturale nella mansarda abitata",
+      "category": "roof-windows",
+      "start": 64.76,
+      "frames": 168,
+      "speed": 0.75,
+      "source_fps": 25,
+      "source_crop": "1920:880:0:0",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.8
+    },
+    {
+      "file": "velux-kitchen-film.mp4",
+      "description": "Ritrovarsi in casa davanti alla grande vetrata",
+      "category": "living-with-windows",
+      "start": 153.96,
+      "frames": 104,
+      "speed": 0.5,
+      "source_fps": 25,
+      "focal": 0.55,
+      "mobile_focal": 0.62,
+      "mobile_focal_end": 0.65,
+      "warmth": 0.6
+    },
+    {
+      "file": "veka-living.mp4",
+      "description": "Tende morbide e luce dorata sulla finestra",
+      "category": "windows",
+      "start": 13.44,
+      "frames": 120,
+      "speed": 0.5,
+      "source_fps": 25,
+      "source_crop": "1920:754:0:164",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.1
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "description": "Un momento di relax sotto la pergola",
+      "category": "outdoor",
+      "start": 1.68,
+      "frames": 96,
+      "speed": 0.4,
+      "source_fps": 25,
+      "focal": 0.53,
+      "mobile_focal": 0.6,
+      "warmth": 0.8
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+      "category": "shading",
+      "start": 7.3,
+      "frames": 192,
+      "speed": 0.65,
+      "source_fps": 25,
+      "focal": 0.58,
+      "mobile_focal": 0.6,
+      "mobile_focal_end": 0.65,
+      "warmth": 0.25
+    }
+  ]
+}

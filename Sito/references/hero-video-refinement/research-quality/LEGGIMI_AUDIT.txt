@@ -1,0 +1,31 @@
+AUDIT NITIDEZZA REV04 — 5 NOVEMBRE 2026
+
+Copia migliore scaricata:
+veka-living-4k.mp4
+Fonte pubblica: https://player.vimeo.com/video/768462996
+3840x2160, 25 fps, 63.920 secondi, senza audio.
+Stesso spot della copia 1080 esistente: medesimi tagli, timestamp 33.44 e
+13.44 validi. Ritaglio delle barre nere: 3840:1508:0:328 (il doppio delle
+coordinate Rev04).
+
+La scena Firenze resta otticamente morbida anche nella 4K, specie nello
+sfondo. La 4K migliora la definizione dei bordi e riduce gli ingrandimenti,
+ma non recupera dettagli assenti nella messa a fuoco originale. Confronto
+verticale nei JPEG veka-4k-mobile.jpg e veka-1080-mobile.jpg.
+
+Cause concorrenti verificate:
+- Nessun filtro CSS blur sul video della hero.
+- Desktop 1280x720 ingrandito 1.25x su 1440x900 e 1.5x su 1920x1080 CSS;
+  gli schermi Retina aumentano ulteriormente il fabbisogno di pixel fisici.
+- Portrait da Gibus 720p ingrandito 1.778x e da VELUX 618p 2.071x nell’export.
+- Le forti velocità 0.4 / 0.46 / 0.5 lasciano 10 / 11.5 / 12.5 fotogrammi
+  nativi per secondo; minterpolate li sintetizza fino a 24. Può generare
+  morbidezza o deformazioni dei contorni in movimento: rischio del metodo,
+  non prova di un artefatto misurato in ogni fotogramma.
+- playbackRate 0.85 cambia la cadenza, non la risoluzione spaziale.
+
+Non ottenute copie Gibus HQ: i tre ID homepage sono embed-only e danno 403
+con contesto pubblico corretto; anche il film Quasar 729510316 risponde 403.
+Nessun login, credenziale o tentativo di forzare accessi.
+
+Nessun asset attivo o file dell’app modificato. Dettagli in audit.json.

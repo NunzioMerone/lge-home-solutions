@@ -1,0 +1,8 @@
+.prepared/
+02_Web/
+03_Poster/
+*.zip
+sources-*/**/*.mp4
+sources-*/**/*.jpg
+sources-*/**/*.png
+sources-*/**/*.html

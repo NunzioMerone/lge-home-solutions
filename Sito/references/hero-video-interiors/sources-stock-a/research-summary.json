@@ -1,0 +1,149 @@
+{
+  "checked": "2026-11-05",
+  "scope": "New free stock interior-door footage research; no active app or hero modified.",
+  "license_check": {
+    "page": "https://www.pexels.com/license/",
+    "checked": "2026-11-05",
+    "summary": "Pexels permits downloading, modifying and using its photos/videos free, including websites and marketing. Credit is optional. Do not imply endorsement by identifiable people or brands; do not sell unchanged stock or redistribute it as stock. Individual asset pages explicitly show Free.",
+    "provenance_boundary": "These are generic stock interiors, not manufacturer footage, verified LGE products, installations or clients. No such attribution should be made."
+  },
+  "download_method": "The public Free download link on each Pexels asset was opened with web tools; its official CDN redirect supplied the exact video URL. The CDN downloads needed no account, paid service or security bypass. Direct Pexels HTML HTTP403 was not bypassed.",
+  "sources": [
+    {
+      "id": "9583985",
+      "file": "pexels-9583985-glass-door-4k.mp4",
+      "title": "A Door Made of Glass Panels",
+      "author": "Taryn Elliott",
+      "page": "https://www.pexels.com/video/a-door-made-of-glass-panels-9583985/",
+      "download_url": "https://videos.pexels.com/video-files/9583985/9583985-uhd_3840_2160_25fps.mp4",
+      "status": "RECOMMENDED",
+      "description_and_selection": "Slow continuous architectural view of a white internal glazed door with brass handle and a wooden table and vase in the room behind. No people, UI, text or marks. Slight cool white balance can be gently warmed. Clear real internal-door scene, premium domestic atmosphere.",
+      "suggested_clean_native_interval": [
+        0.5,
+        8.5
+      ],
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "frame_rate": "25/1",
+      "duration_format": 10.28,
+      "video_bitrate": 23959030,
+      "sha256": "6b3a6a064aeeb2b83c8248b138d6dea32ce770930d2b5906fc496acf5e36680e",
+      "bytes": 30791608,
+      "decode": "passed",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "contact_sheet": "pexels-9583985-contact.jpg"
+    },
+    {
+      "id": "7578548",
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "title": "Video of a House Hallway",
+      "author": "Kindel Media",
+      "page": "https://www.pexels.com/video/video-of-a-house-hallway-7578548/",
+      "download_url": "https://videos.pexels.com/video-files/7578548/7578548-uhd_3840_2160_30fps.mp4",
+      "status": "OPTIONAL",
+      "description_and_selection": "Slow walkthrough of a contemporary corridor, light wood floor, warm raking light at left, dark internal door and handle at right. Real architecture, no UI/brand. Darker and moodier than the preferred scene; use only if coherent with the edit.",
+      "suggested_clean_native_interval": [
+        0.3,
+        5.8
+      ],
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "frame_rate": "30/1",
+      "duration_format": 7.615,
+      "video_bitrate": 21826392,
+      "sha256": "ef4dd9ea2f6dac6e381cdd56aa947594ade059a23fadecf0898c92b2959572bc",
+      "bytes": 20982081,
+      "decode": "passed",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "contact_sheet": "pexels-7578548-contact.jpg"
+    },
+    {
+      "id": "6798992",
+      "file": "pexels-6798992-open-door.mp4",
+      "title": "An Open Door",
+      "author": "RDNE Stock project",
+      "page": "https://www.pexels.com/video/an-open-door-6798992/",
+      "download_url": "https://videos.pexels.com/video-files/6798992/6798992-hd_1080_1920_24fps.mp4",
+      "status": "NOT_RECOMMENDED",
+      "description_and_selection": "Portrait close view past an old door handle into a sunny room with an antique chair. Warm and real, but rustic/vintage hardware and vertical format do not match the intended contemporary premium direction.",
+      "suggested_clean_native_interval": null,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "frame_rate": "24/1",
+      "duration_format": 10.175,
+      "video_bitrate": 4302876,
+      "sha256": "8f293020cacc1661ef677a96ba913f5d29132572720ec193187c771e5009d5c9",
+      "bytes": 5797103,
+      "decode": "passed",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "contact_sheet": "pexels-6798992-contact.jpg"
+    },
+    {
+      "id": "2108274",
+      "file": "pexels-2108274-door-handle.mp4",
+      "title": "Person Opening And Closing The Door",
+      "author": "Nazar Matveichev",
+      "page": "https://www.pexels.com/video/person-opening-and-closing-the-door-2108274/",
+      "download_url": "https://videos.pexels.com/video-files/2108274/2108274-hd_1920_1080_25fps.mp4",
+      "status": "NOT_RECOMMENDED",
+      "description_and_selection": "Close detail of hand operating dark wood door handle, then suited person passes. Door lock, cold cast and doorway suggest entrance/access scene rather than warm internal architecture. Useful only as a security-detail backup, not internal-door solution.",
+      "suggested_clean_native_interval": null,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "frame_rate": "25/1",
+      "duration_format": 5.801667,
+      "video_bitrate": 4931564,
+      "sha256": "ef99b4eb03c1548b3d1ce5ffd9f1da9effd75e4c99111d0b8cab900812561fcb",
+      "bytes": 3678960,
+      "decode": "passed",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "contact_sheet": "pexels-2108274-contact.jpg"
+    },
+    {
+      "id": "3769965",
+      "file": "pexels-3769965-living-room.mp4",
+      "title": "A Woman Entering a Living Room",
+      "author": "Taryn Elliott",
+      "page": "https://www.pexels.com/video/a-woman-entering-a-living-room-3769965/",
+      "download_url": "https://videos.pexels.com/video-files/3769965/3769965-hd_1920_1080_25fps.mp4",
+      "status": "NOT_RECOMMENDED",
+      "description_and_selection": "Natural woman enters a warm, furnished living room. Door visible mainly first2seconds, apparently entrance, then camera follows into living room. Home mood good, but little internal-door focus. Do not add just to fill a category.",
+      "suggested_clean_native_interval": null,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "frame_rate": "25/1",
+      "duration_format": 8.0,
+      "video_bitrate": 4990938,
+      "sha256": "a369beea4abe896ba63a7b4053b87e43b3d2dd4a25a37029cab9244d556ce24f",
+      "bytes": 4994095,
+      "decode": "passed",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "contact_sheet": "pexels-3769965-contact.jpg"
+    }
+  ],
+  "excluded_without_download": [
+    {
+      "page": "https://mixkit.co/free-stock-video/opening-a-door-with-a-hanging-key-21812/",
+      "reason": "Only720p free for personal use. Commercial1080p version requires subscription."
+    },
+    {
+      "page": "https://mixkit.co/free-stock-video/opening-a-hotel-room-door-21817/",
+      "reason": "Only720p free for personal use. Commercial4K version requires subscription."
+    }
+  ]
+}

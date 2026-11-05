@@ -1,0 +1,25 @@
+VEKA 4K — controllo inserti aggiuntivi, 5 novembre 2026
+
+Esito: confermare le due inquadrature già selezionate. Non c’è un terzo inserto con prodotto protagonista, senza testo e lungo almeno 2,5 secondi nativi negli intervalli richiesti.
+
+Fonte: veka-living-4k.mp4, 3840×2160, 25 fps, player pubblico https://player.vimeo.com/video/768462996 . Visione con bande nere rimosse mediante crop 3840:1508:0:328. Nessun download ulteriore.
+
+Contatti:
+- veka-inspect-16-33.jpg: 17 fotogrammi esatti, uno al secondo da t=16,00 a t=32,00. Lettura da sinistra a destra, poi alla riga successiva; ultimi tre riquadri neri di riempimento.
+- veka-inspect-40-58.jpg: 18 fotogrammi esatti, uno al secondo da t=40,00 a t=57,00. Lettura da sinistra a destra, poi alla riga successiva; ultimi due riquadri neri di riempimento.
+- veka-window-outro-53_08-57_08.jpg: 20 fotogrammi esatti da t=53,08 a t=56,88, passo 0,20 s. Il testo è già visibile a t=54,28; t=54,08 è ancora pulito. Prima comparsa fra questi due istanti, circa 54,24 s.
+
+Intervalli valutati:
+- 16,04–circa 21 s: gondola, canali, palazzi visti dall’esterno e paesaggio. Nessuna finestra VEKA protagonista.
+- Circa 21–30,64 s: laboratorio/scultore, dettagli del lavoro e monumenti. I serramenti sono soltanto sullo sfondo in alcune riprese; tagli brevi e focus su persone/attrezzi.
+- 30,64–33,36 s: statua, non pertinente al prodotto.
+- 40,04–43,52 s: famiglia e trasloco con tagli a 40,92, 42,68 e 43,52 s. Le finestre restano sullo sfondo e nessuno di questi tagli supera 2,5 s.
+- 43,52–circa 46 s: famiglia/tavolo e panorama. Nessun dettaglio prodotto lungo.
+- Circa 46–53,08 s: candele, tavola, persone e pizza, con finestre soltanto sullo sfondo.
+- 53,08 s in poi: bella finestra romana e persona in controluce. Finestra protagonista, ma porzione pulita circa 53,08–54,20 s: solo 1,12 s prima della comparsa del claim. Ritagliare il claim richiederebbe escludere larga parte della finestra, penalizzando composizione e risoluzione. Non consigliato come nuovo inserto desktop.
+
+Due inserti puliti che rispettano la durata:
+- Venezia: 13,36–16,04 s, 2,68 s nativi. Il trim attivo da 13,44 s resta valido; massimo margine fino a 16,00 s per evitare il taglio.
+- Firenze: 33,36–36,48 s, 3,12 s nativi. Il trim attivo da 33,44 s resta valido; massimo margine fino a 36,44 s per evitare il taglio.
+
+La morbidezza dello sfondo urbano è parte della fotografia originale: usare il 4K riduce la perdita da ingrandimento, ma non trasforma lo sfondo fuori fuoco in dettaglio nitido. Nessuna modifica a app, renderer o asset attivi.
