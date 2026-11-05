@@ -9,9 +9,11 @@ import type {
   ProductTransitionProviderProps,
 } from '../../types/productTransition'
 import { createProductImageTransition } from '../../utils/productImageTransition'
+import { waitForImage } from '../../utils/imageReady'
 
 export function ProductTransitionProvider({ children }: ProductTransitionProviderProps) {
   const active = useRef<ProductImageTransition | null>(null)
+  const pending = useRef<AbortController | null>(null)
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const { reducedMotion } = useMotion()
@@ -30,18 +32,35 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
         return
       const card = event.currentTarget
       const image = card.querySelector('img')
-      if (!image?.complete || !image.naturalWidth) return
+      if (!image) return
       event.preventDefault()
-      if (active.current) return
-      active.current = createProductImageTransition(card, image, path, () => {
-        active.current = null
-      })
-      try {
-        flushSync(() => navigate(path))
-      } catch (error) {
-        active.current?.cancel()
-        throw error
+      if (active.current || pending.current) return
+      const open = () => {
+        active.current = createProductImageTransition(card, image, path, () => {
+          active.current = null
+        })
+        try {
+          flushSync(() => navigate(path))
+        } catch (error) {
+          active.current?.cancel()
+          throw error
+        }
       }
+      if (image.complete && image.naturalWidth > 0) {
+        open()
+        return
+      }
+      const controller = new AbortController()
+      pending.current = controller
+      card.setAttribute('aria-busy', 'true')
+      image.loading = 'eager'
+      void waitForImage(image, { signal: controller.signal }).then((ready) => {
+        card.removeAttribute('aria-busy')
+        if (pending.current === controller) pending.current = null
+        if (controller.signal.aborted || !card.isConnected) return
+        if (ready) open()
+        else navigate(path)
+      })
     },
     [navigate, reducedMotion],
   )
@@ -51,11 +70,19 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
   }, [])
 
   useEffect(() => {
+    pending.current?.abort()
+    pending.current = null
     if (active.current && (active.current.path !== pathname || reducedMotion)) {
       active.current.cancel()
     }
   }, [pathname, reducedMotion])
-  useEffect(() => () => active.current?.cancel(), [])
+  useEffect(
+    () => () => {
+      pending.current?.abort()
+      active.current?.cancel()
+    },
+    [],
+  )
 
   return (
     <ProductTransitionContext.Provider value={{ openFromCard, arrive }}>

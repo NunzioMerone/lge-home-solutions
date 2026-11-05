@@ -11,8 +11,10 @@ import { Works } from './pages/Works/Works'
 import { privacyPage } from './config/privacy'
 import { usePageMetadata } from './hooks/usePageMetadata'
 import { getPageMetadata } from './utils/pageMetadata'
+import { useInputModality } from './hooks/useInputModality'
 
 export default function App() {
+  useInputModality()
   const { pathname } = useLocation()
   usePageMetadata(getPageMetadata(pathname))
   return (

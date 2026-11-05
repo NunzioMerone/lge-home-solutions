@@ -96,10 +96,6 @@ a.textLink:hover,
   min-width: 0;
   padding-block: 24px;
 }
-.detailRow + .detailRow {
-  padding-bottom: 0;
-  border-top: 1px solid var(--color-line);
-}
 .detailRow dt {
   display: flex;
   align-items: center;
@@ -141,16 +137,6 @@ a.textLink:hover,
 .detailRow dd a:hover {
   color: var(--color-brand-blue);
   text-decoration-color: currentColor;
-}
-.hours > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2px 12px;
-}
-.hours > div + div {
-  color: var(--color-muted);
-  font-size: 0.875rem;
 }
 .social {
   grid-area: social;
@@ -235,18 +221,11 @@ a.textLink:hover,
     padding-inline: 24px;
   }
   .contactList {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
     padding-block: 26px;
     border-bottom: 1px solid var(--color-line);
   }
   .detailRow {
-    padding: 0 24px 0 0;
-  }
-  .detailRow + .detailRow {
-    padding-left: 24px;
-    padding-right: 0;
-    border-top: 0;
-    border-left: 1px solid var(--color-line);
+    padding: 0;
   }
   .mapCaption {
     padding: 14px 22px;

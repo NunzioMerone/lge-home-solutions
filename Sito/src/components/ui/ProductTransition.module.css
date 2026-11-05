@@ -11,6 +11,7 @@
   overflow: hidden;
   pointer-events: none;
   will-change: width, height, top, left;
+  background: var(--color-paper);
 }
 .image {
   display: block;

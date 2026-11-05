@@ -44,7 +44,7 @@ export function HeroVideo() {
           muted
           playsInline
           loop
-          preload="metadata"
+          preload="auto"
           tabIndex={-1}
           onError={onError}
         />

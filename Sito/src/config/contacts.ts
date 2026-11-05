@@ -14,9 +14,6 @@ export const contacts: ContactConfig = {
   instagram: 'https://www.instagram.com/atelier_gibus_campiflegrei/',
   legalName: null,
   vatNumber: null,
-  openingHours: [
-    { days: 'Lun – Ven', hours: '09:00 – 18:00' },
-    { days: 'Sab – Dom', hours: 'Chiuso' },
-  ],
+  openingHours: [],
   mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046',
 }

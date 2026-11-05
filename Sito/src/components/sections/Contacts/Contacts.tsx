@@ -66,20 +66,6 @@ export function Contacts() {
                 </span>
               </dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>
-                <Icon name="clock" />
-                Orari
-              </dt>
-              <dd className={styles.hours}>
-                {contacts.openingHours.map(({ days, hours }) => (
-                  <div key={days}>
-                    <span>{days}</span>
-                    <span>{hours}</span>
-                  </div>
-                ))}
-              </dd>
-            </div>
           </dl>
           <div className={styles.mapReveal} data-reveal>
             <LocationMap />

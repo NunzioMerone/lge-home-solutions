@@ -1,0 +1,35 @@
+LGE HERO — REV07 / riproduzione, 5 novembre 2026
+
+Richiesta: ridurre gli scatti mantenendo selezione e ritmo approvati.
+Nessuna nuova scena o fonte: le nove riprese Rev06 e i relativi tagli,
+ritagli e colori sono conservati. Provenienza e licenze documentate in
+../hero-video-interiors/LEGGIMI.txt e nei riferimenti delle revisioni precedenti.
+Le scene stock di porte non sono attribuite a prodotti, clienti o lavori LGE.
+
+La Rev06 aveva 24 fps riprodotti nel browser a 0,85×: circa 20,4 fotogrammi
+al secondo, con una cadenza poco regolare sui display a 60 Hz.
+La Rev07 incorpora il rallentamento nel montaggio, interpolando dagli
+originali e non dal precedente MP4 compresso. Export costante a 30 fps,
+1588 fotogrammi, 52,933 secondi, playback del browser 1×. Il ritmo apparente
+resta equivalente (prima 52,941 secondi). Dissolvenze da 41 fotogrammi.
+
+H.264 High, yuv420p, level 4.1, faststart, nessun audio, keyframe ogni 2 s.
+CRF 21 con limite di bitrate per formato: desktop 3,2 Mbit/s, tablet 2,2,
+mobile 1,5. File web: desktop 20.201.968 byte (-23,2%); tablet 12.930.975
+(-16,0%); mobile 9.272.446 (-20,8%). Dimensioni invariate: 1920×1080,
+1280×960 e 720×1280. preload auto del solo formato necessario; sospensione
+fuori vista, scheda nascosta e poster con movimento ridotto restano attivi.
+
+Verifica completa: tutti i fotogrammi decodificati senza errori, frame rate,
+dimensioni, faststart e assenza audio controllati. Hash e risultati in
+verification.json e ../hero-video-integration.json. Questi controlli non
+misurano ogni telefono o rete reale; la morbidezza delle fonti originali
+non viene trasformata in dettaglio nativo superiore.
+
+Riproducibilità:
+  python3 render.py --help
+  python3 verify.py
+Cache ed export di ricerca sono ignorati da Git; solo le tre copie web e
+poster attivi sono versionati in public/media/hero. Rev06 originale resta
+conservata localmente e nella cronologia Git; relativo manifest archiviato
+in previous-integration-rev06.json. Push e pubblicazione richiesti dall’utente.

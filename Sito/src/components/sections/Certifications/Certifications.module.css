@@ -41,9 +41,11 @@
 }
 .card {
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: 20px;
+  justify-items: center;
+  text-align: center;
+  gap: 16px;
   min-width: 0;
 }
 .card + .card {
@@ -80,7 +82,7 @@
 }
 .cardDescription {
   max-width: 34ch;
-  margin: 0;
+  margin: 0 auto;
   color: var(--competencies-text);
   font-size: 0.8125rem;
   line-height: 1.8;

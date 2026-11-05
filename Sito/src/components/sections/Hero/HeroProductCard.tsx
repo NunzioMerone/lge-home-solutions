@@ -12,18 +12,20 @@ export function HeroProductCard({ product, description, critical }: HeroProductC
       className={styles.card}
       data-photo={product.id}
       to={product.path}
-      onClick={product.id === 'windows' ? (event) => openFromCard(event, product.path) : undefined}
+      onClick={(event) => openFromCard(event, product.path)}
       aria-label={`Scopri ${product.title}`}
       aria-describedby={`hero-description-${product.id}`}
     >
-      <ResponsiveImage
-        photo={product.id}
-        collection="hero"
-        className={styles.photo}
-        sizes="(min-width: 1500px) 18vw, (min-width: 700px) 270px, 76vw"
-        critical={critical}
-        decorative
-      />
+      <div className={styles.photoFrame} data-product-photo>
+        <ResponsiveImage
+          photo={product.id}
+          collection="hero"
+          className={styles.photo}
+          sizes="(min-width: 1500px) 18vw, (min-width: 700px) 270px, 76vw"
+          critical={critical}
+          decorative
+        />
+      </div>
       <span className={styles.restingTitle} aria-hidden="true">
         {product.title}
       </span>

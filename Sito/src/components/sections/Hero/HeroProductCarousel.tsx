@@ -50,7 +50,7 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
               <HeroProductCard
                 product={product}
                 description={heroDescriptions[product.id]}
-                critical={false}
+                critical={index === 0}
               />
             </div>
           ))}

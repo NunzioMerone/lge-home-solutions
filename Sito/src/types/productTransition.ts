@@ -19,3 +19,10 @@ export interface ProductImageTransition {
 export interface ProductDetailProps {
   product: Product
 }
+
+export interface ProductHeroProps {
+  product: Product
+  title?: ReactNode
+  description: string
+  children?: ReactNode
+}

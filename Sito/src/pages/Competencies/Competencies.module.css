@@ -198,15 +198,18 @@
   width: 13px;
   height: 13px;
 }
-.document:hover .documentImage,
-.document:focus-visible .documentImage {
+:root:not([data-input-modality='pointer']) .document:focus-visible .documentImage {
   border-color: rgb(1 67 128 / 40%);
   box-shadow: 0 5px 18px rgb(47 52 58 / 5%);
 }
-.document:focus-visible .documentImage img {
+:root:not([data-input-modality='pointer']) .document:focus-visible .documentImage img {
   transform: scale(1.035);
 }
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 700px) and (hover: hover) and (pointer: fine) {
+  .document:hover .documentImage {
+    border-color: rgb(1 67 128 / 40%);
+    box-shadow: 0 5px 18px rgb(47 52 58 / 5%);
+  }
   .document:hover .documentImage img {
     transform: scale(1.035);
   }

@@ -12,6 +12,13 @@
   width: 100%;
   max-width: 640px;
 }
+.preparation {
+  padding: 0 var(--gutter) 64px;
+  text-align: center;
+}
+.preparation .content {
+  margin-inline: auto;
+}
 .content h1 {
   margin: 0 0 20px;
   font-size: clamp(2.5rem, 5vw, 4rem);

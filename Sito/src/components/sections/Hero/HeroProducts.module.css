@@ -41,6 +41,10 @@
 .card * {
   pointer-events: none;
 }
+.photoFrame {
+  position: absolute;
+  inset: 0;
+}
 .photo {
   position: absolute;
   inset: 0;
@@ -171,11 +175,36 @@
   }
 }
 @media (hover: none), (max-width: 699px) {
+  .card {
+    aspect-ratio: auto;
+  }
+  .card::after {
+    display: none;
+  }
+  .photoFrame {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 3;
+    background: var(--color-paper);
+  }
+  .card[data-photo] .photo {
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
   .infoPanel {
+    position: relative;
+    inset: auto;
     transform: translate3d(0, 0, 0);
   }
   .restingTitle {
     display: none;
+  }
+}
+@media (max-width: 699px) {
+  .slide {
+    flex-basis: 86%;
+    max-width: 360px;
   }
 }
 

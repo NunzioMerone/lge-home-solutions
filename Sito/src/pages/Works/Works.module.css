@@ -284,14 +284,14 @@
   width: 15px;
   height: 15px;
 }
-.photo:focus-visible img {
+:root:not([data-input-modality='pointer']) .photo:focus-visible img {
   transform: scale(1.025);
 }
-.photo:focus-visible .photoHint {
+:root:not([data-input-modality='pointer']) .photo:focus-visible .photoHint {
   opacity: 1;
   transform: translateY(0);
 }
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 700px) and (hover: hover) and (pointer: fine) {
   .photo:hover img,
   .heroImages button:hover img {
     transform: scale(1.025);

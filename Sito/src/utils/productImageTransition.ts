@@ -2,6 +2,7 @@ import { gsap } from 'gsap'
 import type { ProductPath } from '../types/content'
 import type { ProductImageTransition } from '../types/productTransition'
 import styles from '../components/ui/ProductTransition.module.css'
+import { waitForImage } from './imageReady'
 
 /** Keep a live image above the route change, so its crop evolves without stretching. */
 export function createProductImageTransition(
@@ -10,7 +11,7 @@ export function createProductImageTransition(
   path: ProductPath,
   onComplete: () => void,
 ): ProductImageTransition {
-  const origin = card.getBoundingClientRect()
+  const origin = (card.querySelector('[data-product-photo]') ?? image).getBoundingClientRect()
   const photoStyle = getComputedStyle(image)
   const veil = document.createElement('div')
   const frame = document.createElement('div')
@@ -19,9 +20,11 @@ export function createProductImageTransition(
   frame.className = styles.frame ?? ''
   photo.className = styles.image ?? ''
   photo.src = image.currentSrc || image.src
+  photo.decoding = 'sync'
   photo.alt = ''
   veil.setAttribute('aria-hidden', 'true')
   frame.setAttribute('aria-hidden', 'true')
+  frame.setAttribute('data-product-transition', path)
   frame.append(photo)
   document.body.append(veil, frame)
   gsap.set(veil, { opacity: 0 })
@@ -32,26 +35,39 @@ export function createProductImageTransition(
     height: origin.height,
     borderRadius: getComputedStyle(card).borderRadius,
   })
-  gsap.set(photo, { objectPosition: photoStyle.objectPosition, transform: photoStyle.transform })
-  const timeline = gsap.timeline()
+  gsap.set(photo, {
+    objectPosition: photoStyle.objectPosition,
+    objectFit: photoStyle.objectFit,
+    transform: photoStyle.transform,
+  })
+  const timeline = gsap.timeline({ paused: true })
+  const controller = new AbortController()
+  const initialWidth = window.innerWidth
+  let arrivalFrame = 0
   let destination: HTMLElement | null = null
   let completed = false
   const cancel = () => {
     if (completed) return
     completed = true
+    controller.abort()
+    cancelAnimationFrame(arrivalFrame)
     timeline.kill()
     frame.remove()
     veil.remove()
     destination?.removeAttribute('data-arriving')
     window.clearTimeout(timeout)
-    window.removeEventListener('resize', cancel)
+    window.removeEventListener('resize', resize)
     window.removeEventListener('wheel', cancel)
     window.removeEventListener('touchmove', cancel)
     onComplete()
   }
   // An interrupted route or unavailable destination must never leave an overlay behind.
-  const timeout = window.setTimeout(cancel, 3000)
-  window.addEventListener('resize', cancel, { once: true })
+  const timeout = window.setTimeout(cancel, 4500)
+  // Mobile browser chrome changes height during navigation; the image geometry depends on width.
+  const resize = () => {
+    if (Math.abs(window.innerWidth - initialWidth) > 1) cancel()
+  }
+  window.addEventListener('resize', resize)
   window.addEventListener('wheel', cancel, { passive: true, once: true })
   window.addEventListener('touchmove', cancel, { passive: true, once: true })
 
@@ -62,28 +78,46 @@ export function createProductImageTransition(
       if (destination || completed) return
       destination = target
       target.setAttribute('data-arriving', 'true')
-      const bounds = target.getBoundingClientRect()
-      gsap.set(veil, { opacity: 1 })
-      timeline
-        .to(
-          frame,
-          {
-            top: bounds.top,
-            left: bounds.left,
-            width: bounds.width,
-            height: bounds.height,
-            borderRadius: getComputedStyle(target).borderRadius,
-            duration: 1.15,
-            ease: 'power3.inOut',
-          },
-          0,
-        )
-        .to(photo, { scale: 1, duration: 1.15, ease: 'power3.inOut' }, 0)
-        .to(veil, { opacity: 0, duration: 0.65, ease: 'power2.out' }, 0.4)
-        .call(() => {
-          cancel()
-          heading.focus({ preventScroll: true })
-        })
+      arrivalFrame = requestAnimationFrame(() => {
+        if (completed) return
+        const bounds = target.getBoundingClientRect()
+        const targetPhoto = target.querySelector('img')
+        const destinationPosition = targetPhoto
+          ? getComputedStyle(targetPhoto).objectPosition
+          : photoStyle.objectPosition
+        gsap.set(veil, { opacity: 1 })
+        timeline
+          .to(
+            frame,
+            {
+              top: bounds.top,
+              left: bounds.left,
+              width: bounds.width,
+              height: bounds.height,
+              borderRadius: getComputedStyle(target).borderRadius,
+              duration: 1.15,
+              ease: 'power3.inOut',
+            },
+            0,
+          )
+          .to(
+            photo,
+            { scale: 1, objectPosition: destinationPosition, duration: 1.15, ease: 'power3.inOut' },
+            0,
+          )
+          .to(veil, { opacity: 0, duration: 0.65, ease: 'power2.out' }, 0.4)
+          .call(() => {
+            const finish = () => {
+              if (completed) return
+              cancel()
+              heading.focus({ preventScroll: true })
+            }
+            if (targetPhoto) {
+              void waitForImage(targetPhoto, { signal: controller.signal }).then(finish)
+            } else finish()
+          })
+          .play(0)
+      })
     },
   }
 }
