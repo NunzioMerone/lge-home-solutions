@@ -5,7 +5,7 @@ import { ResponsiveImage } from '../../ui/ResponsiveImage'
 import { useProductTransition } from '../../../hooks/useProductTransition'
 import styles from './HeroProducts.module.css'
 
-export function HeroProductCard({ product, description, critical }: HeroProductCardProps) {
+export function HeroProductCard({ product, description }: HeroProductCardProps) {
   const { openFromCard } = useProductTransition()
   return (
     <Link
@@ -22,13 +22,9 @@ export function HeroProductCard({ product, description, critical }: HeroProductC
           collection="hero"
           className={styles.photo}
           sizes="(min-width: 1500px) 18vw, (min-width: 700px) 270px, 76vw"
-          critical={critical}
           decorative
         />
       </div>
-      <span className={styles.restingTitle} aria-hidden="true">
-        {product.title}
-      </span>
       <div className={styles.infoPanel}>
         <div className={styles.panelHeading}>
           <h3>{product.title}</h3>

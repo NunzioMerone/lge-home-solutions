@@ -7,23 +7,22 @@ import { Reviews } from '../../components/sections/Reviews/Reviews'
 import { Contacts } from '../../components/sections/Contacts/Contacts'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
+import type { PageActivityProps } from '../../types/navigation'
 import styles from './Home.module.css'
 
-export function Home() {
-  useAnchorNavigation()
+export function Home({ active }: PageActivityProps) {
   return (
     <div className={styles.home}>
       <a className="skip-link" href="#prodotti">
         Vai alle soluzioni
       </a>
-      <Header />
+      {active && <Header />}
       <main>
-        <Hero />
+        <Hero active={active} />
         <Solutions />
         <Partners />
         <Certifications />
-        <Gallery />
+        <Gallery active={active} />
         <Reviews />
         <Contacts />
       </main>

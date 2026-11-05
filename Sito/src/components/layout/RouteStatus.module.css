@@ -1,0 +1,31 @@
+.status {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 20px;
+  min-height: 100svh;
+  padding: 40px var(--gutter);
+  background: var(--color-paper);
+  color: var(--color-muted);
+  text-align: center;
+}
+.status h1,
+.status p {
+  margin: 0;
+}
+.status h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.status button {
+  min-height: 44px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.status a {
+  min-height: 44px;
+  color: var(--color-blue);
+  text-decoration: underline;
+}

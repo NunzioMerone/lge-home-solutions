@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LGE — verifica locale della riproduzione</title>
+    <style>
+      body {
+        margin: 24px;
+        background: #f7f7f4;
+        color: #252a30;
+        font: 16px/1.6 system-ui;
+      }
+      main {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+      }
+      iframe {
+        width: 390px;
+        height: 760px;
+        border: 1px solid #bbb;
+        flex-shrink: 0;
+      }
+      output {
+        display: block;
+        white-space: pre-wrap;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        max-width: 55ch;
+      }
+      @media (max-width: 750px) {
+        main {
+          display: block;
+        }
+        iframe {
+          height: 65vh;
+          width: 100%;
+          max-width: 390px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verifica locale del video</h1>
+    <main>
+      <iframe title="Homepage in formato mobile" src="/#inizio" allow="autoplay"></iframe>
+      <section>
+        <p>
+          Dati raccolti dal video realmente presentato dal browser. Il contatore delle attese
+          esclude l’avvio iniziale. Ricaricare questa pagina per azzerare la prova.
+        </p>
+        <output aria-live="off">Attendo il filmato…</output>
+      </section>
+    </main>
+    <script type="module">
+      const frame = document.querySelector('iframe'),
+        output = document.querySelector('output')
+      let current,
+        frames = 0,
+        waiting = 0,
+        last = 0,
+        maxGap = 0,
+        longGaps = 0,
+        started = 0
+      function observeVideo(video) {
+        current = video
+        frames = 0
+        waiting = 0
+        last = 0
+        maxGap = 0
+        longGaps = 0
+        started = performance.now()
+        video.addEventListener('waiting', () => {
+          if (frames > 10 && !video.paused) waiting++
+        })
+        if (video.requestVideoFrameCallback) {
+          const presented = (now) => {
+            if (video !== current) return
+            if (!video.paused) {
+              if (last) {
+                const gap = now - last
+                maxGap = Math.max(maxGap, gap)
+                if (gap > 100) longGaps++
+              }
+              last = now
+              frames++
+            } else last = 0
+            video.requestVideoFrameCallback(presented)
+          }
+          video.requestVideoFrameCallback(presented)
+        }
+      }
+      setInterval(() => {
+        const video = frame.contentDocument?.querySelector('video')
+        if (!video) {
+          output.textContent = 'Poster statico / video non disponibile'
+          return
+        }
+        if (video !== current) observeVideo(video)
+        const quality = video.getVideoPlaybackQuality?.()
+        const elapsed = (performance.now() - started) / 1000
+        const end = video.buffered.length ? video.buffered.end(video.buffered.length - 1) : 0
+        output.textContent = [
+          'Sorgente: ' + video.currentSrc.split('/').pop(),
+          'Tempo osservato: ' + elapsed.toFixed(1) + ' s',
+          'Posizione: ' + video.currentTime.toFixed(2) + ' / ' + video.duration.toFixed(2) + ' s',
+          'In pausa: ' + video.paused + ' — readyState: ' + video.readyState,
+          'Buffer disponibile: ' + Math.max(0, end - video.currentTime).toFixed(1) + ' s',
+          'Frame presentati: ' + frames,
+          'Frame persi: ' + (quality?.droppedVideoFrames ?? 'non esposto dal browser'),
+          'Attese dopo avvio: ' + waiting,
+          'Intervallo massimo tra frame: ' + maxGap.toFixed(1) + ' ms',
+          'Intervalli sopra 100 ms: ' + longGaps,
+        ].join('\n')
+      }, 1000)
+    </script>
+  </body>
+</html>

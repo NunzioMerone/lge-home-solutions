@@ -39,6 +39,7 @@ export function createProductImageTransition(
     objectPosition: photoStyle.objectPosition,
     objectFit: photoStyle.objectFit,
     transform: photoStyle.transform,
+    transformOrigin: photoStyle.transformOrigin,
   })
   const timeline = gsap.timeline({ paused: true })
   const controller = new AbortController()
@@ -85,6 +86,9 @@ export function createProductImageTransition(
         const destinationPosition = targetPhoto
           ? getComputedStyle(targetPhoto).objectPosition
           : photoStyle.objectPosition
+        const destinationOrigin = targetPhoto
+          ? getComputedStyle(targetPhoto).transformOrigin
+          : photoStyle.transformOrigin
         gsap.set(veil, { opacity: 1 })
         timeline
           .to(
@@ -102,7 +106,13 @@ export function createProductImageTransition(
           )
           .to(
             photo,
-            { scale: 1, objectPosition: destinationPosition, duration: 1.15, ease: 'power3.inOut' },
+            {
+              scale: 1,
+              objectPosition: destinationPosition,
+              transformOrigin: destinationOrigin,
+              duration: 1.15,
+              ease: 'power3.inOut',
+            },
             0,
           )
           .to(veil, { opacity: 0, duration: 0.65, ease: 'power2.out' }, 0.4)

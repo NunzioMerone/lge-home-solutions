@@ -1,38 +1,57 @@
+import { lazy, Suspense } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Home } from './pages/Home/Home'
+import { RetainedHome } from './components/layout/RetainedHome'
 import { ProductPlaceholder } from './pages/ProductPlaceholder/ProductPlaceholder'
 import { ProductDetail } from './pages/ProductDetail/ProductDetail'
 import { products } from './data/products'
-import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy'
-import { Competencies } from './pages/Competencies/Competencies'
 import { competenciesPage } from './config/competencies'
 import { worksPage } from './config/works'
-import { Works } from './pages/Works/Works'
 import { privacyPage } from './config/privacy'
 import { usePageMetadata } from './hooks/usePageMetadata'
 import { getPageMetadata } from './utils/pageMetadata'
 import { useInputModality } from './hooks/useInputModality'
+import { PageLoadBoundary } from './components/layout/PageLoadBoundary'
+import { RoutePending } from './components/layout/RoutePending'
+
+const PrivacyPolicy = lazy(() =>
+  import('./pages/PrivacyPolicy/PrivacyPolicy').then((page) => ({ default: page.PrivacyPolicy })),
+)
+const Competencies = lazy(() =>
+  import('./pages/Competencies/Competencies').then((page) => ({ default: page.Competencies })),
+)
+const Works = lazy(() => import('./pages/Works/Works').then((page) => ({ default: page.Works })))
 
 export default function App() {
   useInputModality()
   const { pathname } = useLocation()
   usePageMetadata(getPageMetadata(pathname))
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path={privacyPage.path} element={<PrivacyPolicy />} />
-      <Route path={competenciesPage.path} element={<Competencies />} />
-      <Route path={worksPage.path} element={<Works />} />
-      {products.map((product) => (
-        <Route
-          key={product.path}
-          path={product.path}
-          element={
-            product.id === 'windows' ? <ProductDetail product={product} /> : <ProductPlaceholder />
-          }
-        />
-      ))}
-      <Route path="*" element={<ProductPlaceholder />} />
-    </Routes>
+    <>
+      <RetainedHome />
+      <PageLoadBoundary key={pathname}>
+        <Suspense fallback={<RoutePending />}>
+          <Routes>
+            <Route path="/" element={null} />
+            <Route path={privacyPage.path} element={<PrivacyPolicy />} />
+            <Route path={competenciesPage.path} element={<Competencies />} />
+            <Route path={worksPage.path} element={<Works />} />
+            {products.map((product) => (
+              <Route
+                key={product.path}
+                path={product.path}
+                element={
+                  product.id === 'windows' ? (
+                    <ProductDetail product={product} />
+                  ) : (
+                    <ProductPlaceholder />
+                  )
+                }
+              />
+            ))}
+            <Route path="*" element={<ProductPlaceholder />} />
+          </Routes>
+        </Suspense>
+      </PageLoadBoundary>
+    </>
   )
 }

@@ -1,6 +1,6 @@
 # LGE Home Solutions
 
-Unico progetto del sito LGE Home Solutions, con hero video responsive Rev07, derivata dalla composizione fotografica approvata il 3 novembre 2026.
+Unico progetto del sito LGE Home Solutions, con hero video responsive Rev08, derivata dalla composizione fotografica approvata il 3 novembre 2026.
 
 Il codice, gli asset e le dipendenze sono in [`Sito/`](./Sito/README.md). Identità e decisioni di progetto sono documentate in [`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md).
 

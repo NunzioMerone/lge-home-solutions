@@ -1,0 +1,13 @@
+{
+  "reference": "Rev07 H.264 portrait at the same resolution and frame count",
+  "metric": "VMAF v0.6.1; every fifth frame; same frame-number timebase",
+  "samples": 318,
+  "vmaf": {
+    "min": 85.878826,
+    "max": 97.667847,
+    "mean": 94.450771,
+    "harmonic_mean": 94.432784
+  },
+  "reduction_percent": 34.529163070887655,
+  "h264_fallback": "Rev07 unchanged; 9272446 bytes"
+}

@@ -14,6 +14,8 @@ export function useLoopCarousel({ paused = false, delay = 4200 }: LoopCarouselOp
     align: 'center',
     duration: 45,
     watchFocus: false,
+    watchResize: (_api: unknown, entries: ResizeObserverEntry[]) =>
+      entries.some((entry) => entry.contentRect.width > 0),
   })
 
   useEffect(() => {

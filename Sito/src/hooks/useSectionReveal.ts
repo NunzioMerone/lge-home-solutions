@@ -1,11 +1,8 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from '../config/motion'
 import { useMotion } from './useMotion'
 import type { SectionRevealOptions } from '../types/ui'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export function useSectionReveal({
   duration = motion.duration,
@@ -19,14 +16,7 @@ export function useSectionReveal({
     let reveal: gsap.core.Timeline | undefined
     const context = gsap.context(() => {
       const items = root.querySelectorAll('[data-reveal]')
-      reveal = gsap.timeline({
-        scrollTrigger: {
-          trigger: root.querySelector('header[data-reveal]') ?? root,
-          start: motion.sectionStart,
-          once: true,
-          fastScrollEnd: true,
-        },
-      })
+      reveal = gsap.timeline({ paused: true })
       reveal.fromTo(
         items,
         {
@@ -54,11 +44,25 @@ export function useSectionReveal({
           motion.headingLineDelay,
         )
     }, root)
+    let entered = false
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting || entered) return
+        entered = true
+        reveal?.play()
+        observer.disconnect()
+      },
+      { rootMargin: '0px 0px -22% 0px' },
+    )
+    observer.observe(root.querySelector('header[data-reveal]') ?? root)
     const finishForKeyboard = () => {
+      entered = true
+      observer.disconnect()
       reveal?.progress(1)
     }
     root.addEventListener('focusin', finishForKeyboard)
     return () => {
+      observer.disconnect()
       root.removeEventListener('focusin', finishForKeyboard)
       context.revert()
     }

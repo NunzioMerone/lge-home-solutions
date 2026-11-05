@@ -1,0 +1,20 @@
+{
+  "format": "mobile",
+  "codec": "hevc",
+  "tag": "hvc1",
+  "profile": "Main",
+  "level": 93,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "frames": 1588,
+  "duration": 52.933333,
+  "bytes": 6070748,
+  "sha256": "4536eca466a0a8815b8b7511979df6ddfd43cd82402b3de1378e8ad7d391e5e3",
+  "audio": false,
+  "faststart": true,
+  "decode": "passed",
+  "frame_timestamps": "all 1588 timestamps equally spaced by 3000 ticks at 90 kHz",
+  "max_keyframe_interval": 60,
+  "loop_boundary_mae_gray_160x90": 1.689513888888889
+}

@@ -22,6 +22,7 @@ export const heroVideoSources = {
   },
   mobile: {
     video: 'media/hero/hero-mobile-rev07.mp4',
+    efficientVideo: 'media/hero/hero-mobile-rev08-hevc.mp4',
     poster: 'media/hero/hero-mobile-rev07-poster.jpg',
     width: 720,
     height: 1280,

@@ -36,6 +36,8 @@ export function useCarousel({
       loop: autoScroll,
       align: 'start' as const,
       containScroll: 'trimSnaps' as const,
+      watchResize: (_api: unknown, entries: ResizeObserverEntry[]) =>
+        entries.some((entry) => entry.contentRect.width > 0),
       breakpoints:
         variant === 'products'
           ? {

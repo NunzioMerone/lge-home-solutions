@@ -1,12 +1,12 @@
 {
   "date": "2026-11-05",
-  "revision": "Rev07",
-  "scope": "Correzioni mobile e riproduzione più fluida; push e pubblicazione richiesti dall’utente il 5 novembre 2026.",
+  "revision": "Rev08",
+  "scope": "Correzioni richieste: card compatte con prodotti visibili, home conservata al ritorno, caricamento iniziale ottimizzato e alternativa HEVC per Safari. Push e pubblicazione richiesti dall’utente.",
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
   "duration_file": 52.93333333333333,
   "duration_website": 52.93333333333333,
-  "provenance": "references/hero-video-playback/LEGGIMI.txt",
+  "provenance": "references/hero-video-safari/LEGGIMI.txt",
   "stock_provenance": "Two new licensed Pexels interior-door atmosphere scenes; not verified LGE/partner products, installations or customers.",
   "assets": [
     {
@@ -56,6 +56,15 @@
       "target": "public/media/hero/hero-mobile-rev07-poster.jpg",
       "bytes": 69636,
       "sha256": "0187f4c785a3ae6d5d304ff0a35b1aeaa1dd25c82811dd3c53fe89e04ae1a276"
+    },
+    {
+      "format": "mobile",
+      "kind": "video-efficient",
+      "codec": "hevc",
+      "source": "references/hero-video-safari/02_Web/LGE_Hero_Rev08_WEB_Mobile_HEVC.mp4",
+      "target": "public/media/hero/hero-mobile-rev08-hevc.mp4",
+      "bytes": 6070748,
+      "sha256": "4536eca466a0a8815b8b7511979df6ddfd43cd82402b3de1378e8ad7d391e5e3"
     }
   ],
   "publication": {

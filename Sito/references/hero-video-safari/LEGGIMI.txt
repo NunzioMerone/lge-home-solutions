@@ -1,0 +1,50 @@
+LGE HERO REV08 — Safari, 5 novembre 2026
+
+L’utente continua a segnalare scatti e precisa di usare iPhone con Safari.
+La verifica del filmato Rev07 non ha trovato sequenze ferme di almeno tre
+fotogrammi consecutivi alla soglia indicata in temporal-audit-rev07.json.
+Questo controllo non esclude scatti dovuti a rete, browser o dispositivo.
+
+La versione attiva aggiunge una sorgente portrait HEVC Main 8 bit, hvc1,
+720×1280 a 30 fps, senza audio, 1588 fotogrammi / 52,933 secondi. Stesse
+scene, tagli e colore Rev07, generate dalla cache dei segmenti originali,
+senza interpolare una seconda volta il montaggio finale. File da 6.070.748
+byte, contro 9.272.446 della copia H.264: riduzione del 34,53%. CRF 22,
+bitrate massimo e buffer 1400 kbit, GOP da 60, ref 2, B-frame 2, faststart,
+timebase a 90 kHz. Non viene aggiunto HDR né modificata la risoluzione.
+
+Il browser sceglie HEVC se supportato; segue la sorgente H.264 precedente.
+Desktop, tablet, fallback H.264 mobile e tutti i poster Rev07 restano
+identici. L’errore di una singola source non deve rimuovere il video prima
+che il browser abbia provato il fallback. Autoplay muted playsinline
+esplicito; sospensione quando la home è nascosta o fuori vista. L’elemento
+video e il suo punto di riproduzione restano conservati durante le visite
+alle pagine prodotto. Non vengono ricaricati ad ogni ritorno alla home.
+
+Qualità: VMAF rispetto al precedente file H.264, campionando ogni quinto
+fotogramma, media 94,45/100. Risultati in quality-comparison.json. Le prime
+prove H.264 a bitrate inferiore perdevano più dettaglio e sono state escluse
+dagli asset pubblici; rimangono soltanto export di ricerca ignorati da Git.
+La versione HEVC è decodificata integralmente, con verifica di tutti i
+fotogrammi e dei timestamp equidistanti: verification.json.
+
+Prova di riproduzione su Safari nativo macOS, in iframe portrait 390 px:
+138,5 secondi, oltre due giri, 4148 frame presentati, 1 perso, nessuna attesa
+dopo l’avvio, nessun intervallo tra frame oltre 100 ms. Questa è una prova
+su Mac, non una misura su iPhone fisico o su rete mobile. Il browser in-app
+ha verificato anche il fallback H.264. La risposta HTTP pubblica a Range
+bytes=0-1023 è 206 con Content-Range corretto. Pagina locale di diagnostica:
+/references/performance-check.html (non inclusa nella build del sito).
+
+Riproduzione della preparazione:
+  python3 render.py --format Mobile --efficient
+  python3 verify.py
+Il renderer conserva anche le opzioni per gli export H.264 sperimentali.
+Originali e cache rimangono locali. Gli asset approvati effettivamente attivi
+sono registrati nel manifest ../hero-video-integration.json. Le fonti delle
+scene e le licenze non cambiano rispetto a Rev06/07; scene stock generiche,
+non prodotti, realizzazioni o clienti LGE verificati. Push richiesto.
+
+Riferimenti tecnici primari consultati:
+https://developer.apple.com/documentation/webkit/delivering-video-content-for-safari
+https://webkit.org/blog/14445/webkit-features-in-safari-17-0/

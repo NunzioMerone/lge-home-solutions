@@ -1,0 +1,21 @@
+{
+  "checked": "2026-11-05",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "before": {
+    "selected": "Vai alla posizione 4 di 5",
+    "videoTime": 50.2118,
+    "y": 487
+  },
+  "after": {
+    "leftover": false,
+    "selected": "Vai alla posizione 4 di 5",
+    "videoTime": 50.2955,
+    "y": 487
+  },
+  "exact_scroll_restoration": true,
+  "carousel_preserved": true,
+  "video_element_retained": true
+}

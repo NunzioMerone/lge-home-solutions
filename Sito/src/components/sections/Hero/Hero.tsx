@@ -1,13 +1,14 @@
 import { heroCopy } from '../../../data/hero'
 import { useHeroEntrance } from '../../../hooks/useHeroEntrance'
 import { HeroVideo } from './HeroVideo'
+import type { PageActivityProps } from '../../../types/navigation'
 import styles from './Hero.module.css'
 
-export function Hero() {
+export function Hero({ active }: PageActivityProps) {
   const rootRef = useHeroEntrance()
   return (
     <section ref={rootRef} className={styles.hero} id="inizio" aria-labelledby="hero-title">
-      <HeroVideo />
+      <HeroVideo active={active} />
       <div className={`container ${styles.content}`}>
         <div className={styles.introduction} data-introduction>
           <p className={styles.eyebrow} data-hero-eyebrow>

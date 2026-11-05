@@ -4,14 +4,16 @@ import { worksPage } from '../../../config/works'
 import { Icon } from '../../ui/Icon'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import type { GalleryLightboxState } from '../../../types/gallery'
+import type { PageActivityProps } from '../../../types/navigation'
 import { GalleryCarousel } from './GalleryCarousel'
 import { GalleryLightbox } from './GalleryLightbox'
 import '@fontsource/cormorant-garamond/latin-400-italic.css'
 import styles from './Gallery.module.css'
 
-export function Gallery() {
+export function Gallery({ active }: PageActivityProps) {
   const ref = useSectionReveal({ duration: 1.8, stagger: 0.2 })
   const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
+  if (!active && lightbox) setLightbox(null)
   return (
     <section
       className={`${styles.section} section`}

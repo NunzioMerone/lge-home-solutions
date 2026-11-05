@@ -1,0 +1,7 @@
+{
+  "source": "Rev07 desktop",
+  "fps": 30,
+  "frames": 1588,
+  "method": "Mean luma difference between consecutive decoded frames at 96x54; report runs of at least three differences below 0.09/255.",
+  "runs": []
+}

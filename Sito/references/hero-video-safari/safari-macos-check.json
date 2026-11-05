@@ -1,0 +1,12 @@
+{
+  "checked": "2026-11-05",
+  "environment": "Native Safari on macOS, 390px portrait iframe; not a physical iPhone",
+  "source": "hero-mobile-rev08-hevc.mp4",
+  "observed_seconds": 138.5,
+  "presented_frames": 4148,
+  "dropped_frames": 1,
+  "waiting_events_after_startup": 0,
+  "max_presentation_gap_ms": 74,
+  "gaps_above_100_ms": 0,
+  "full_loops_observed": 2
+}
