@@ -1,0 +1,88 @@
+{
+  "fps": 60,
+  "frames": 3536,
+  "duration_seconds": 58.93333333333333,
+  "dissolve_seconds": 1.3666666666666667,
+  "shots": [
+    {
+      "scene": 1,
+      "description": "La tavola all’aperto, luce calda e gesti naturali",
+      "start_seconds": -1.366667,
+      "end_seconds": 8.033333,
+      "frames": 564,
+      "mobile_static_focal": 0.54
+    },
+    {
+      "scene": 2,
+      "description": "La finestra incornicia Firenze al tramonto",
+      "start_seconds": 6.666667,
+      "end_seconds": 13.733333,
+      "frames": 424,
+      "mobile_static_focal": 0.5
+    },
+    {
+      "scene": 3,
+      "description": "Vetrate complete e ingresso in legno nella casa luminosa",
+      "start_seconds": 12.366667,
+      "end_seconds": 20.366667,
+      "frames": 480,
+      "mobile_static_focal": 0.5
+    },
+    {
+      "scene": 4,
+      "description": "Legno e luce naturale nella mansarda abitata",
+      "start_seconds": 19.0,
+      "end_seconds": 27.233333,
+      "frames": 494,
+      "mobile_static_focal": 0.5
+    },
+    {
+      "scene": 5,
+      "description": "Legno e geometria della porta d’ingresso reale",
+      "start_seconds": 25.866667,
+      "end_seconds": 32.933333,
+      "frames": 424,
+      "mobile_static_focal": 0.16
+    },
+    {
+      "scene": 6,
+      "description": "Porta interna scura, parquet e luce radente nel corridoio",
+      "start_seconds": 31.566667,
+      "end_seconds": 37.433333,
+      "frames": 352,
+      "mobile_static_focal": 0.73
+    },
+    {
+      "scene": 7,
+      "description": "Vetrate e schermature della casa nella luce del tramonto",
+      "start_seconds": 36.066667,
+      "end_seconds": 43.066667,
+      "frames": 420,
+      "mobile_static_focal": 0.5
+    },
+    {
+      "scene": 8,
+      "description": "Tende morbide e luce dorata sulla finestra",
+      "start_seconds": 41.7,
+      "end_seconds": 47.566667,
+      "frames": 352,
+      "mobile_static_focal": 0.5
+    },
+    {
+      "scene": 9,
+      "description": "Un momento di relax sotto la pergola",
+      "start_seconds": 46.2,
+      "end_seconds": 50.9,
+      "frames": 282,
+      "mobile_static_focal": 0.6
+    },
+    {
+      "scene": 10,
+      "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+      "start_seconds": 49.533333,
+      "end_seconds": 58.933333,
+      "frames": 564,
+      "mobile_static_focal": 0.14
+    }
+  ]
+}

@@ -9,21 +9,21 @@ export const heroVideoPlaybackRate = 1
 
 export const heroVideoSources = {
   desktop: {
-    video: 'media/hero/hero-desktop-rev11.mp4',
-    poster: 'media/hero/hero-desktop-rev07-poster.jpg',
+    video: 'media/hero/hero-desktop-rev12.mp4',
+    poster: 'media/hero/hero-desktop-rev12-poster.jpg',
     width: 1920,
     height: 1080,
   },
   tablet: {
-    video: 'media/hero/hero-tablet-rev11.mp4',
-    poster: 'media/hero/hero-tablet-rev07-poster.jpg',
+    video: 'media/hero/hero-tablet-rev12.mp4',
+    poster: 'media/hero/hero-tablet-rev12-poster.jpg',
     width: 1280,
     height: 960,
   },
   mobile: {
-    video: 'media/hero/hero-mobile-rev11.mp4',
-    efficientVideo: 'media/hero/hero-mobile-rev11-hevc.mp4',
-    poster: 'media/hero/hero-mobile-rev07-poster.jpg',
+    video: 'media/hero/hero-mobile-rev12.mp4',
+    efficientVideo: 'media/hero/hero-mobile-rev12-hevc.mp4',
+    poster: 'media/hero/hero-mobile-rev12-poster.jpg',
     width: 720,
     height: 1280,
   },

@@ -1,6 +1,6 @@
 # LGE Home Solutions
 
-Unico progetto del sito LGE Home Solutions, con hero video responsive Rev11, showroom aggiornato e gallerie fotografiche. Il checkpoint del 6 novembre 2026 è autorizzato alla pubblicazione su GitHub Pages.
+Unico progetto del sito LGE Home Solutions, con hero video responsive Rev12 a 60 fps, showroom aggiornato e gallerie fotografiche. Il checkpoint del 6 novembre 2026 è autorizzato alla pubblicazione su GitHub Pages.
 
 Il codice, gli asset e le dipendenze sono in [`Sito/`](./Sito/README.md). Identità e decisioni di progetto sono documentate in [`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md).
 

@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-06",
+  "revision": "Rev12",
+  "same_scenes_and_source_intervals": true,
+  "portrait_crop_drifts_removed": [1, 6, 10],
+  "files": [
+    {
+      "format": "Desktop",
+      "codec": "h264",
+      "tag": "avc1",
+      "dimensions": [1920, 1080],
+      "profile": "High",
+      "level": 42,
+      "fps": 60,
+      "frames": 3536,
+      "duration": 58.933333,
+      "bytes": 39496890,
+      "sha256": "9e69e1345b46f5fb7a60670eea73da93625d9b730361d101c882e328a0e124ef",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 120,
+      "loop_boundary_mae_gray_160x90": 0.8411
+    },
+    {
+      "format": "Tablet",
+      "codec": "h264",
+      "tag": "avc1",
+      "dimensions": [1280, 960],
+      "profile": "High",
+      "level": 42,
+      "fps": 60,
+      "frames": 3536,
+      "duration": 58.933,
+      "bytes": 22218411,
+      "sha256": "d7faf13fcb60377461768349e375f8944037d65a490adaca1a6ce8914dccf845",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 120,
+      "loop_boundary_mae_gray_160x90": 1.0707
+    },
+    {
+      "format": "Mobile",
+      "codec": "h264",
+      "tag": "avc1",
+      "dimensions": [720, 1280],
+      "profile": "High",
+      "level": 41,
+      "fps": 60,
+      "frames": 3536,
+      "duration": 58.933333,
+      "bytes": 13236480,
+      "sha256": "1c4c89cf3e3b05f5e4c6adadcb2260c5ca86a9792a0dace23ec9c6a5f77e14f3",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 120,
+      "loop_boundary_mae_gray_160x90": 1.1539
+    },
+    {
+      "format": "Mobile",
+      "codec": "hevc",
+      "tag": "hvc1",
+      "dimensions": [720, 1280],
+      "profile": "Main",
+      "level": 120,
+      "fps": 60,
+      "frames": 3536,
+      "duration": 58.933333,
+      "bytes": 8937880,
+      "sha256": "ed6b5d59bfbd6b4c8c32ce2ee8c0cb953c85281ae2a90e3e63dd063a799a2009",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 120,
+      "loop_boundary_mae_gray_160x90": 0.9806
+    }
+  ],
+  "temporal_samples": [
+    {
+      "format": "Desktop",
+      "scene": 3,
+      "interval_seconds": [15, 17],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.6698,
+        "difference_coefficient_of_variation": 1.0445,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.7551,
+        "difference_coefficient_of_variation": 0.3569,
+        "near_identical_frame_pairs_percent": 0.0
+      }
+    },
+    {
+      "format": "Desktop",
+      "scene": 4,
+      "interval_seconds": [22, 24],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.3389,
+        "difference_coefficient_of_variation": 1.0853,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.3729,
+        "difference_coefficient_of_variation": 0.3752,
+        "near_identical_frame_pairs_percent": 0.0
+      }
+    },
+    {
+      "format": "Desktop",
+      "scene": 7,
+      "interval_seconds": [38, 40],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.2943,
+        "difference_coefficient_of_variation": 1.1016,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.3409,
+        "difference_coefficient_of_variation": 0.4076,
+        "near_identical_frame_pairs_percent": 0.0
+      }
+    },
+    {
+      "format": "Mobile",
+      "scene": 1,
+      "interval_seconds": [3, 5],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.3968,
+        "difference_coefficient_of_variation": 1.442,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.324,
+        "difference_coefficient_of_variation": 0.3304,
+        "near_identical_frame_pairs_percent": 0.0
+      }
+    },
+    {
+      "format": "Mobile",
+      "scene": 4,
+      "interval_seconds": [22, 24],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.2976,
+        "difference_coefficient_of_variation": 1.193,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.3264,
+        "difference_coefficient_of_variation": 0.5066,
+        "near_identical_frame_pairs_percent": 0.0
+      }
+    },
+    {
+      "format": "Mobile",
+      "scene": 10,
+      "interval_seconds": [53, 55],
+      "before_30fps_on_60hz": {
+        "mean_frame_difference_gray_160x90": 0.1641,
+        "difference_coefficient_of_variation": 1.7738,
+        "near_identical_frame_pairs_percent": 50.42
+      },
+      "after_60fps": {
+        "mean_frame_difference_gray_160x90": 0.1376,
+        "difference_coefficient_of_variation": 0.7187,
+        "near_identical_frame_pairs_percent": 10.92
+      }
+    }
+  ],
+  "limits": "Optical-flow estimates; source camera shake and source softness cannot be fully recovered. Browser checks are separate; no physical iPhone test."
+}

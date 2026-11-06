@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-06",
+  "environment": "Codex in-app browser on this Mac; responsive iframe with the actual homepage",
+  "checks": [
+    {
+      "format": "desktop",
+      "viewport": [1440, 900],
+      "droppedFramesAtSampleStart": 1,
+      "source": "http://127.0.0.1:5175/media/hero/hero-desktop-rev12.mp4",
+      "frames": 5602,
+      "waiting": 1,
+      "stalled": 0,
+      "loops": 1,
+      "maxFrameGapMs": 65,
+      "frameGapsOver100Ms": 0,
+      "frameCallback": true,
+      "elapsedSeconds": "99.1",
+      "currentTime": 53.683333,
+      "droppedFrames": 1,
+      "droppedFramesDuringSample": 0
+    },
+    {
+      "format": "tablet",
+      "viewport": [1024, 768],
+      "droppedFramesAtSampleStart": 4,
+      "source": "http://127.0.0.1:5175/media/hero/hero-tablet-rev12.mp4",
+      "frames": 5343,
+      "waiting": 2,
+      "stalled": 0,
+      "loops": 2,
+      "maxFrameGapMs": 52,
+      "frameGapsOver100Ms": 0,
+      "frameCallback": true,
+      "elapsedSeconds": "95.0",
+      "currentTime": 14.2,
+      "droppedFrames": 4,
+      "droppedFramesDuringSample": 0
+    },
+    {
+      "format": "mobile",
+      "viewport": [390, 844],
+      "droppedFramesAtSampleStart": 3,
+      "source": "http://127.0.0.1:5175/media/hero/hero-mobile-rev12.mp4",
+      "frames": 6492,
+      "waiting": 1,
+      "stalled": 0,
+      "loops": 1,
+      "maxFrameGapMs": 50,
+      "frameGapsOver100Ms": 0,
+      "frameCallback": true,
+      "elapsedSeconds": "115.3",
+      "currentTime": 56.883333,
+      "droppedFrames": 3,
+      "droppedFramesDuringSample": 0
+    }
+  ],
+  "limits": "H.264 selected by this browser. HEVC fully decoded separately; no physical iPhone/Safari test."
+}

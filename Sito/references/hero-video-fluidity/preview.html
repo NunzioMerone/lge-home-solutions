@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>LGE — fluidità a 60 fps Rev12</title>
+    <style>
+      body {
+        margin: 24px;
+        background: #ede9e3;
+        color: #252a30;
+        font: 15px/1.5 system-ui;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      button,
+      input,
+      select {
+        box-sizing: border-box;
+        min-height: 44px;
+        padding: 8px 12px;
+        border: 1px solid #014380;
+        border-radius: 8px;
+        color: #014380;
+        background: #fcfcfb;
+        font: inherit;
+      }
+      input {
+        width: 80px;
+      }
+      output {
+        display: block;
+        margin-bottom: 16px;
+      }
+      .stage {
+        max-width: 100%;
+        overflow: auto;
+      }
+      iframe {
+        display: block;
+        width: 390px;
+        height: 844px;
+        border: 0;
+        background: #fcfcfb;
+      }
+      iframe[data-format='desktop'] {
+        width: 1440px;
+        height: 900px;
+      }
+      iframe[data-format='tablet'] {
+        width: 1024px;
+        height: 768px;
+      }
+      iframe[data-format='tablet-portrait'] {
+        width: 768px;
+        height: 1024px;
+      }
+      iframe[data-format='mobile-small'] {
+        width: 360px;
+        height: 780px;
+      }
+      iframe[data-format='mobile-large'] {
+        width: 430px;
+        height: 932px;
+      }
+      a {
+        color: #014380;
+      }
+      @media (max-width: 480px) {
+        body {
+          margin: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rev12 · Movimenti fluidi · 60 fps</h1>
+    <div class="controls">
+      <label
+        >Formato
+        <select id="format">
+          <option value="mobile">Mobile 390 × 844</option>
+          <option value="mobile-small">Mobile 360 × 780</option>
+          <option value="mobile-large">Mobile 430 × 932</option>
+          <option value="tablet">Tablet 1024 × 768</option>
+          <option value="tablet-portrait">Tablet 768 × 1024</option>
+          <option value="desktop">Desktop 1440 × 900</option>
+        </select></label
+      >
+      <label
+        >Scena
+        <select id="scene">
+          <option value="3">Tenda e tavola</option>
+          <option value="10">Finestra su Firenze</option>
+          <option value="16.5" selected>Vetrate / scorrevole</option>
+          <option value="23">Mansarda</option>
+          <option value="29">Porta d’ingresso</option>
+          <option value="35">Porta interna</option>
+          <option value="39.5">Facciata / finestra a tavola</option>
+          <option value="44.5">Finestra e tende</option>
+          <option value="48.7">Pergola</option>
+          <option value="54">Oscurante</option>
+        </select></label
+      >
+      <label
+        >Secondo <input id="time" type="number" value="16.5" min="0" max="58.9" step="0.1"
+      /></label>
+      <button id="seek" type="button">Mostra la scena</button>
+      <button id="play" type="button">Riproduci</button>
+      <a href="/#inizio">Torna al sito</a>
+    </div>
+    <output aria-live="polite">Mostra una scena oppure riproduci il montaggio completo.</output>
+    <details>
+      <summary>Verifica della riproduzione</summary>
+      <pre id="playback-stats">Premi Riproduci per avviare la misura locale.</pre>
+    </details>
+    <div class="stage">
+      <iframe
+        src="/#inizio"
+        data-format="mobile"
+        title="Hero reale nel formato selezionato"
+        allow="autoplay"
+      ></iframe>
+    </div>
+    <script type="module">
+      const frame = document.querySelector('iframe')
+      const time = document.querySelector('#time')
+      const output = document.querySelector('output')
+      const getVideo = () => frame.contentDocument?.querySelector('#hero-video')
+      let stopTracking = () => {}
+      const trackPlayback = (video) => {
+        stopTracking()
+        const started = performance.now()
+        const stats = {
+          source: video.currentSrc,
+          frames: 0,
+          waiting: 0,
+          stalled: 0,
+          loops: 0,
+          maxFrameGapMs: 0,
+          frameGapsOver100Ms: 0,
+          frameCallback: typeof video.requestVideoFrameCallback === 'function',
+        }
+        const report = document.querySelector('#playback-stats')
+        let callback = 0,
+          lastTime = 0,
+          lastMediaTime = video.currentTime,
+          lastReport = 0
+        const waiting = () => {
+          stats.waiting++
+        }
+        const stalled = () => {
+          stats.stalled++
+        }
+        const update = (now, metadata) => {
+          if (lastTime) {
+            const gap = now - lastTime
+            stats.maxFrameGapMs = Math.max(stats.maxFrameGapMs, gap)
+            if (gap > 100) stats.frameGapsOver100Ms++
+          }
+          if (metadata.mediaTime < lastMediaTime - 0.1) stats.loops++
+          lastTime = now
+          lastMediaTime = metadata.mediaTime
+          stats.frames++
+          if (now - lastReport >= 250) {
+            const quality = video.getVideoPlaybackQuality?.()
+            report.textContent = JSON.stringify(
+              {
+                ...stats,
+                elapsedSeconds: ((now - started) / 1000).toFixed(1),
+                currentTime: metadata.mediaTime,
+                maxFrameGapMs: Math.round(stats.maxFrameGapMs),
+                droppedFrames: quality?.droppedVideoFrames ?? null,
+              },
+              null,
+              2,
+            )
+            lastReport = now
+          }
+          callback = video.requestVideoFrameCallback(update)
+        }
+        video.addEventListener('waiting', waiting)
+        video.addEventListener('stalled', stalled)
+        if (stats.frameCallback) callback = video.requestVideoFrameCallback(update)
+        else report.textContent = JSON.stringify(stats, null, 2)
+        stopTracking = () => {
+          video.removeEventListener('waiting', waiting)
+          video.removeEventListener('stalled', stalled)
+          if (callback) video.cancelVideoFrameCallback(callback)
+        }
+      }
+      document.querySelector('#format').addEventListener('change', (event) => {
+        stopTracking()
+        frame.dataset.format = event.target.value
+      })
+      document.querySelector('#scene').addEventListener('change', (event) => {
+        time.value = event.target.value
+      })
+      document.querySelector('#seek').addEventListener('click', () => {
+        const video = getVideo(),
+          position = Number(time.value)
+        if (!video || video.readyState < 1) {
+          output.textContent =
+            'Il nuovo formato non è ancora pronto. Premi nuovamente Mostra la scena.'
+          return
+        }
+        if (!Number.isFinite(position)) return
+        video.pause()
+        video.addEventListener('seeked', () => video.pause(), { once: true })
+        video.currentTime = Math.max(0, Math.min(position, video.duration - 0.1))
+        output.textContent = `Scena a ${position} s · ${video.currentSrc.split('/').pop()} · ${video.duration.toFixed(2)} s`
+      })
+      document.querySelector('#play').addEventListener('click', () => {
+        const video = getVideo()
+        if (video) {
+          trackPlayback(video)
+          void video.play().catch(() => {
+            output.textContent = 'Premi nuovamente Riproduci.'
+          })
+        }
+      })
+      window.addEventListener('pagehide', () => stopTracking(), { once: true })
+    </script>
+  </body>
+</html>

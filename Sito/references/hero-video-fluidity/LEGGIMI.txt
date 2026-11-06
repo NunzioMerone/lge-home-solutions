@@ -1,0 +1,67 @@
+LGE HERO — Rev12 — Fluidità dei movimenti — 6 novembre 2026
+
+Richiesta e ambito
+L’utente chiede di rendere fluidi i piccoli scatti nelle panoramiche laterali
+e di pubblicare il risultato. Restano le dieci scene, i segmenti sorgente,
+il ritmo lento, la gradazione calda e i 58,933 secondi di Rev11.
+Layout, testi, colore Sabbia e animazioni della hero non cambiano.
+
+Intervento
+- Nuovo montaggio dalle fonti originali: 60 fps, con interpolazione del
+  movimento tramite optical flow (FFmpeg minterpolate, MCI/AOBMC).
+  I fotogrammi intermedi sono stimati; le riprese sorgente non sono native
+  a 60 fps. Nessuna duplicazione sistematica dei fotogrammi a 30 fps.
+- Rimossi gli spostamenti artificiali del crop portrait nelle scene 1, 6 e
+  10. Inquadrature fisse rispettivamente a 0,54, 0,73 e 0,14 dell’eccedenza
+  orizzontale: tavola, porta e priorità all’oscurante.
+- 3536 fotogrammi; dissolvenze da 82 frame (1,367 s), raccordo del loop e 1×.
+- H.264 High: desktop 1920×1080 e tablet 1280×960 livello 4.2;
+  portrait 720×1280 livello 4.1. HEVC Main hvc1 portrait livello 4.0.
+- Faststart, GOP massimo 120 (2 s), bitrate limitato e nessun audio.
+  Poster estratti dai file nuovi, con la stessa inquadratura del primo frame.
+
+Riproduzione del lavoro (da Sito/; richiede FFmpeg con libx264/libx265)
+  python3 references/hero-video-fluidity/render.py --format Desktop
+  python3 references/hero-video-fluidity/render.py --format Tablet
+  python3 references/hero-video-fluidity/render.py --format Mobile
+  python3 references/hero-video-fluidity/render.py --format Mobile --efficient
+  python3 references/hero-video-fluidity/verify.py
+
+edit.json conserva la ricetta e i percorsi relativi delle fonti, con hash.
+Cache di lavoro, originali e export intermedi sono locali e ignorati da Git.
+Gli unici file multimediali pubblicati sono gli asset in public/media/hero/;
+references/hero-video-integration.json ne registra provenienza, dimensioni e hash.
+Le revisioni precedenti restano conservate nelle rispettive cartelle locali
+e nella cronologia Git. Nessuna fonte aggiunta o attribuita a LGE come lavoro.
+
+Verifiche
+verify.py controlla separatamente selezione e tempi rispetto a Rev11, hash
+delle fonti, codec, dimensioni, assenza di audio, 60 fps costanti, tutti i
+timestamp, GOP, faststart e decodifica integrale dei quattro file. Confronta
+anche campioni di movimento della versione precedente mostrata su 60 Hz
+con la nuova: la differenza tra fotogrammi misura la cadenza, non costituisce
+un punteggio di qualità estetica o una misura del tremolio della fotocamera.
+Risultati in verification.json. preview.html mostra la hero effettiva in più
+formati e misura callback video, attese e fotogrammi persi nel browser.
+
+Limiti
+L’interpolazione stima il movimento e non recupera dettaglio assente nelle
+fonti. Le loro eventuali sfocature e oscillazioni non scompaiono del tutto.
+Le prove responsive e di riproduzione nel browser non equivalgono a una
+verifica su un iPhone fisico con Safari.
+
+Verifica finale del 6 novembre 2026
+I quattro file superano la decodifica integrale: 3536 timestamp equidistanti,
+60 fps, codec/livelli, durata e faststart corretti. Dimensioni: desktop
+39.496.890 byte, tablet 22.218.411, mobile H.264 13.236.480, HEVC 8.937.880.
+Lint, 38 test in nove file, typecheck/build e preparazione delle rotte Pages
+superati. I sette asset pubblici e quelli della build corrispondono al manifest.
+Prove nella hero reale nel browser: un loop completo per desktop 1440×900,
+tablet 1024×768 e mobile 390×844, senza nuovi fotogrammi persi durante le
+misure, nessuno stallo e nessun intervallo callback oltre 100 ms. Un evento
+waiting per prova, senza pausa oltre 100 ms; i conteggi iniziali di frame
+persi durante caricamento/seek sono conservati separatamente nel report.
+Controllate anche le inquadrature a 360×780 e 768×1024, i dieci soggetti
+nei due montaggi e i campioni con profili delle finestre, porta e oscurante.
+I dati del browser sono in browser-verification.json; HEVC è verificato
+con decodifica completa, non con Safari su un iPhone fisico.
