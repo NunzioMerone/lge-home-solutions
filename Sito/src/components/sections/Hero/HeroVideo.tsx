@@ -34,7 +34,7 @@ export function HeroVideo({ active }: PageActivityProps) {
       </picture>
       {videoEnabled && (
         <video
-          key={format}
+          key={`${format}:${source.video}`}
           ref={videoRef}
           id="hero-video"
           className={styles.video}

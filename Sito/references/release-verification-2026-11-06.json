@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-06",
+  "scope": "checkpoint authorized for GitHub Pages preview",
+  "requestedChanges": {
+    "showroom": "Exact attached placeholder, responsive WebP, full aspect ratio, eyebrow removed",
+    "homeGallery": "Exactly 11 selected PNGs, converted without crop or generative changes; separate from complete portfolio",
+    "homeGalleryLink": "Brand blue action with arrow, site button sizing",
+    "workGrid": "First image in all columns aligned; original image aspect ratios retained",
+    "finalContact": "Full image contained on desktop/tablet; no photo DOM below 700px; WhatsApp icon before Parliamo su WhatsApp",
+    "lightbox": "Embla sliding viewport; next/previous images follow drag; stable viewport; three full images mounted",
+    "categoryTitle": "Fixed center position, category slot retained, 0.9 second feathered reveal"
+  },
+  "validation": {
+    "lint": "passed",
+    "typecheckBuild": "passed",
+    "testFiles": 9,
+    "tests": 38,
+    "formatting": "passed",
+    "pagesBuild": "base /lge-home-solutions/, static entries and noindex verified",
+    "pagesPreview": "Works direct entry and lightbox navigation checked using production output; all checked image paths include basename",
+    "responsiveWidths": [
+      360,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "horizontalOverflow": false,
+    "homePhotos": 11,
+    "portfolioPhotos": 101,
+    "homeImageVariants": 33,
+    "homeSourceBytes": 24577298,
+    "homeVariantsTotalBytes": 2812394,
+    "heroVideoElementsInHome": 1,
+    "heroPausedOffscreen": true,
+    "heroAssetsMatchManifest": true,
+    "missingGalleryAssets": 0
+  },
+  "interactionEvidence": {
+    "desktopFixedTitle": {
+      "before": {
+        "x": 623.7890625,
+        "y": 660.9140625
+      },
+      "after": {
+        "x": 623.7890625,
+        "y": 660.9140625
+      },
+      "opacity": 1
+    },
+    "mobileFixedTitle": {
+      "before": {
+        "x": 121.75,
+        "documentY": 621
+      },
+      "after": {
+        "x": 121.75,
+        "documentY": 621
+      },
+      "opacity": 1
+    },
+    "columnTopsDesktop": [
+      733.625,
+      733.625,
+      733.625
+    ],
+    "mobilePhotoBackdropAbsent": true,
+    "nativePointerDragNext": "1 to 2",
+    "nativePointerDragPrevious": "2 to 1",
+    "loopPrevious": "1 to 32",
+    "loopNext": "32 to 1",
+    "verticalDragPreservesPhoto": true,
+    "homeSwipe": "4 to 5 of 11",
+    "maxMountedLightboxImages": 3,
+    "escapeCloses": true,
+    "closeRestoresTriggerFocus": true,
+    "pointerCloseOutline": "none",
+    "keyboardArrowNavigation": true,
+    "scrollLockRestored": true
+  },
+  "limitations": [
+    "Responsive and pointer gesture tests in the in-app browser, not a physical iPhone.",
+    "No synthetic Lighthouse score claimed; asset sizes, requests, correct source selection and production output were checked."
+  ],
+  "screenshots": [
+    "lge-refinement-showroom-desktop.png",
+    "lge-refinement-showroom-mobile.png",
+    "lge-refinement-gallery-aligned-desktop.png",
+    "lge-refinement-lightbox-mobile.png",
+    "lge-refinement-works-contact-desktop.png",
+    "lge-refinement-works-contact-mobile.png"
+  ]
+}

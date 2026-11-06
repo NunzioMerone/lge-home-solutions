@@ -1,55 +1,97 @@
-.dialog {
-  width: fit-content;
-  max-width: calc(100vw - 32px);
-  max-height: calc(100dvh - 32px);
-  margin: auto;
+.gallery[open] {
+  width: min(1280px, calc(100vw - 32px));
+  height: calc(100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 0;
-  overflow: visible;
-  border: 0;
-  background: transparent;
 }
-.dialog::backdrop {
-  background: rgb(19 25 32 / 90%);
-  backdrop-filter: blur(8px);
+.gallery[data-navigable='true'] {
+  --media-max-width: min(
+    1100px,
+    calc(100vw - 160px - env(safe-area-inset-left) - env(safe-area-inset-right))
+  );
 }
-.media {
+.viewport {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 20px 80px rgb(0 0 0 / 24%);
-  animation: appear 260ms var(--ease-out) both;
+  touch-action: pan-y pinch-zoom;
+  overscroll-behavior: contain;
 }
-.media img {
-  width: auto;
-  height: auto;
-  max-width: min(1100px, calc(100vw - 32px));
-  max-height: calc(100dvh - 32px);
-  object-fit: contain;
+.track {
+  display: flex;
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
 }
-.close {
-  position: fixed;
-  top: max(16px, env(safe-area-inset-top));
-  right: max(16px, env(safe-area-inset-right));
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+}
+.slideContent {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  padding-top: 48px;
+}
+.photo {
+  animation: none;
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.navigation {
+  position: absolute;
+  top: calc(50% + 24px);
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   padding: 0;
+  transform: translateY(-50%);
   border: 0;
   border-radius: 50%;
-  background: var(--color-paper);
   color: var(--color-heading);
+  background: var(--color-paper);
+  transition: background var(--transition);
 }
-.close svg {
-  width: 22px;
-  height: 22px;
+.navigation:hover {
+  background: var(--color-hero-accent);
 }
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
+.navigation svg {
+  width: 20px;
+  height: 20px;
+}
+.previous {
+  left: -56px;
+}
+.next {
+  right: -56px;
+}
+@media (max-width: 699px) {
+  .gallery[data-navigable='true'] {
+    --media-max-width: calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right));
+    --media-max-height: calc(
+      100dvh - 176px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
   }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  .slideContent[data-navigable='true'] {
+    padding-bottom: 56px;
+  }
+  .navigation {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+  .previous {
+    left: calc(50% - 50px);
+  }
+  .next {
+    right: calc(50% - 50px);
   }
 }

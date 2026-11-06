@@ -1,10 +1,11 @@
 import { gallery } from './gallery'
-import { orderWorkPhotos } from '../utils/works'
+import { interleaveWorkPhotos, orderWorkPhotos } from '../utils/works'
 import type { WorkCategory, WorkCollection } from '../types/works'
 
 export const workCategories: readonly WorkCategory[] = [
   {
     id: 'infissi',
+    cover: 'windows',
     title: 'Infissi',
     description: 'Finestre, portefinestre e vetrate: ambienti e dettagli di posa.',
     galleryCategory: 'Infissi',
@@ -13,6 +14,7 @@ export const workCategories: readonly WorkCategory[] = [
   },
   {
     id: 'oscuranti',
+    cover: 'shading',
     title: 'Oscuranti',
     description: 'Frangisole, persiane e tende tecniche nelle nostre realizzazioni.',
     galleryCategory: 'Oscuranti',
@@ -21,6 +23,7 @@ export const workCategories: readonly WorkCategory[] = [
   },
   {
     id: 'porte-e-sicurezza',
+    cover: 'security',
     title: 'Porte e sicurezza',
     description: 'Porte d’ingresso: pannelli, maniglioni e dettagli d’installazione.',
     galleryCategory: 'Porte e sicurezza',
@@ -29,6 +32,7 @@ export const workCategories: readonly WorkCategory[] = [
   },
   {
     id: 'porte-interne',
+    cover: 'interior',
     title: 'Porte interne',
     description: 'Porte a battente, scorrevoli e a filo parete.',
     galleryCategory: 'Porte interne',
@@ -37,6 +41,7 @@ export const workCategories: readonly WorkCategory[] = [
   },
   {
     id: 'atelier-gibus',
+    cover: 'outdoor',
     title: 'Atelier Gibus',
     description: 'Pergole, tende da sole e chiusure vetrate.',
     galleryCategory: 'Outdoor',
@@ -50,15 +55,4 @@ export const workCollections: readonly WorkCollection[] = workCategories.map((ca
   photos: orderWorkPhotos(gallery, category),
 }))
 
-export const worksHeroPhotos = {
-  outdoor: gallery.find((photo) => photo.id === 'lge-89a82d37'),
-  interior: gallery.find((photo) => photo.id === 'lge-98cf7091'),
-}
-
-// Alternate categories so the homepage stays varied throughout the carousel.
-export const homeGallery = Array.from({ length: 3 }, (_, index) =>
-  workCollections.flatMap((collection) => {
-    const photo = collection.photos[index]
-    return photo ? [photo] : []
-  }),
-).flat()
+export const allWorkPhotos = interleaveWorkPhotos(workCollections)

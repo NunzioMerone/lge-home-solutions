@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-06",
+  "revision": "Rev10",
+  "scope": "Solo locale: tre inserti dai due Pin forniti dall’utente; rimozione completa della porta bianca con maniglia dorata. Tutti i video responsive aggiornati, poster invariati.",
+  "playback_rate": 1,
+  "headline_accent": "#EDD5B3",
+  "duration_file": 58.96666666666667,
+  "duration_website": 58.96666666666667,
+  "provenance": "references/hero-video-pinterest/LEGGIMI.txt",
+  "stock_provenance": "Two new licensed Pexels interior-door atmosphere scenes; not verified LGE/partner products, installations or customers.",
+  "assets": [
+    {
+      "format": "desktop",
+      "kind": "video",
+      "source": "references/hero-video-pinterest/02_Web/LGE_Hero_Rev10_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev10.mp4",
+      "bytes": 22324920,
+      "sha256": "46843ef3e7fc8a7352f642a06e194aa77fefbe0fada3b6e071c661ee2209a063"
+    },
+    {
+      "format": "desktop",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev07-poster.jpg",
+      "bytes": 116385,
+      "sha256": "138ef567388f259e6eddf3a4a274a53888055ef54dd01f49888a7241d0d885e0"
+    },
+    {
+      "format": "tablet",
+      "kind": "video",
+      "source": "references/hero-video-pinterest/02_Web/LGE_Hero_Rev10_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev10.mp4",
+      "bytes": 14374177,
+      "sha256": "3663695683925a3c76b2355155b90c73763af2c3fba54a4729c5752d59fe2b05"
+    },
+    {
+      "format": "tablet",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev07-poster.jpg",
+      "bytes": 85080,
+      "sha256": "239a8cb82d457e2b40b6433d62b5fc48dfaf124b12a435ee7db180c6dbde5713"
+    },
+    {
+      "format": "mobile",
+      "kind": "video",
+      "source": "references/hero-video-pinterest/02_Web/LGE_Hero_Rev10_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev10.mp4",
+      "bytes": 10314103,
+      "sha256": "94ee10ef45d30a357de400c21c8d00629bbadbbe6f2baa2250967e8752bfc7c5"
+    },
+    {
+      "format": "mobile",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev07-poster.jpg",
+      "bytes": 69636,
+      "sha256": "0187f4c785a3ae6d5d304ff0a35b1aeaa1dd25c82811dd3c53fe89e04ae1a276"
+    },
+    {
+      "format": "mobile",
+      "kind": "video-efficient",
+      "codec": "hevc",
+      "source": "references/hero-video-pinterest/02_Web/LGE_Hero_Rev10_WEB_Mobile_HEVC.mp4",
+      "target": "public/media/hero/hero-mobile-rev10-hevc.mp4",
+      "bytes": 7135911,
+      "sha256": "384a102f7c99de35348995090121bc7f323605772117ca81b1714ace04907b6e"
+    }
+  ],
+  "publication": {
+    "status": "local-only",
+    "authorized": false,
+    "previous_published_revision": "Rev08",
+    "repository": "NunzioMerone/lge-home-solutions",
+    "branch": "main",
+    "site": "https://nunziomerone.github.io/lge-home-solutions/",
+    "public_preview": true
+  },
+  "frame_rate": 30,
+  "baked_playback_rate": 0.85
+}

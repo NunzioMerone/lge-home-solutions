@@ -1,0 +1,104 @@
+{
+  "duration": 58.96666666666667,
+  "shots": [
+    {
+      "scene": 1,
+      "description": "La tavola all’aperto, luce calda e gesti naturali",
+      "file": "gibus-awnings.mp4",
+      "start": 0,
+      "full_after": 0,
+      "source_start": 0.1,
+      "source_end": 5.8528
+    },
+    {
+      "scene": 2,
+      "description": "La finestra incornicia Firenze al tramonto",
+      "file": "veka-living-4k.mp4",
+      "start": 6.667,
+      "full_after": 8.033,
+      "source_start": 33.44,
+      "source_end": 36.2031
+    },
+    {
+      "scene": 3,
+      "description": "Profilo effetto legno e giunzioni del serramento, dettaglio ravvicinato",
+      "file": "pin-1.mp4",
+      "start": 12.367,
+      "full_after": 13.733,
+      "source_start": 10.25,
+      "source_end": 11.57
+    },
+    {
+      "scene": 4,
+      "description": "Vetrata contemporanea sul paesaggio, luce calda nella cucina",
+      "file": "pin-2.mp4",
+      "start": 15.8,
+      "full_after": 17.167,
+      "source_start": 5.8,
+      "source_end": 9.52
+    },
+    {
+      "scene": 5,
+      "description": "Legno e luce naturale nella mansarda abitata",
+      "file": "velux-bologna.mp4",
+      "start": 20.633,
+      "full_after": 22.0,
+      "source_start": 64.76,
+      "source_end": 70.0088
+    },
+    {
+      "scene": 6,
+      "description": "Legno e geometria della porta d’ingresso reale",
+      "file": "tehni-xl.mp4",
+      "start": 27.5,
+      "full_after": 28.867,
+      "source_start": 25.8,
+      "source_end": 29.404
+    },
+    {
+      "scene": 7,
+      "description": "Porta interna scura, parquet e luce radente nel corridoio",
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "start": 33.2,
+      "full_after": 34.567,
+      "source_start": 0.3,
+      "source_end": 3.4915
+    },
+    {
+      "scene": 8,
+      "description": "Finestra e tende chiare nel soggiorno arredato",
+      "file": "pin-1.mp4",
+      "start": 37.7,
+      "full_after": 39.067,
+      "source_start": 17.5,
+      "source_end": 19.12
+    },
+    {
+      "scene": 9,
+      "description": "Tende morbide e luce dorata sulla finestra",
+      "file": "veka-living-4k.mp4",
+      "start": 41.733,
+      "full_after": 43.1,
+      "source_start": 13.44,
+      "source_end": 15.9333
+    },
+    {
+      "scene": 10,
+      "description": "Un momento di relax sotto la pergola",
+      "file": "gibus-pergola.mp4",
+      "start": 46.233,
+      "full_after": 47.6,
+      "source_start": 1.68,
+      "source_end": 3.278
+    },
+    {
+      "scene": 11,
+      "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+      "file": "gibus-screens.mp4",
+      "start": 49.567,
+      "full_after": 50.933,
+      "source_start": 7.3,
+      "source_end": 12.4935
+    }
+  ]
+}

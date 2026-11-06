@@ -1,0 +1,18 @@
+LGE HERO — Rev11 — PROVA SOLO LOCALE — 6 novembre 2026
+
+Sostituisce la selezione Rev10 rifiutata dall’utente. Eliminati il macro del legno e il soggiorno scuro. La porta bianca con vecchia maniglia dorata resta interamente esclusa.
+
+Desktop 1920×1080 e tablet landscape 1280×960: due nuove riprese reali native 3840×2160, con vetrate/ingresso riconoscibili e facciata nella luce calda. Mai ritagli 720p verticali ingranditi in widescreen.
+Portrait 720×1280, smartphone e tablet verticale: dai due Pin forniti si mantengono la finestra panoramica completa e la finestra della sala da pranzo. Sono usate a risoluzione nativa, senza il macro e senza tagli interni. La hero applica il normale object-fit in funzione del rapporto dello schermo.
+
+Dieci scene, 1768 fotogrammi, 58,933 secondi a 30 fps e riproduzione 1×. Dissolvenze da 41 fotogrammi, raccordo del loop. Otto scene approvate mantenute con gli stessi segmenti preparati. Il crop mobile dell’oscurante privilegia ancora la schermatura, non l’uomo. Colore Sabbia, testi, logo e overlay della hero invariati.
+
+Export H.264 High per tre formati e HEVC Main hvc1 per portrait Safari. Più dettaglio conservato: CRF 19 desktop / 20 tablet-mobile / 21 HEVC, limiti VBV per formato, faststart, GOP 60, timebase 90 kHz, nessuna traccia audio. Non si applicano sharpening o ricostruzioni artificiali.
+
+Le nuove fonti Pexels sono scaricate gratuitamente e modificabili secondo la Pexels License. Sono ambienti stock, non lavori o prodotti LGE verificati. I due video Pinterest sono forniti dall’utente per il montaggio locale; non si affermano licenze commerciali o partnership ulteriori. Le fonti Gibus conservano il limite nativo 720p; nessuna esportazione recupera dettagli mancanti.
+
+edit.json: ricetta e varianti per formato. render.py: rendering riproducibile, cache condivisa con le revisioni precedenti. verify.py / verification.json: controllo fonti e ritagli, assenza degli estratti rifiutati, timestamp di tutti i frame, decodifica integrale e metadati. research.json: fonti accettate/scartate. preview.html: hero reale con scelta formato e scena, disponibile solo sul server di sviluppo.
+
+Nessun commit, push o deploy. Rev10 e tutte le fonti restano conservate nelle rispettive cartelle locali.
+
+Verifica browser: sei dimensioni, da 360×780 a 1440×900, con sorgenti corrette e assenza di overflow. H.264 osservato per 115,1 s mobile, 88,3 s desktop e 75,6 s tablet: 0 frame persi, 0 intervalli oltre 100 ms; eventi waiting al loop 2/1/1, intervallo massimo 67–69 ms. Nessuna misura su iPhone fisico/rete mobile, HEVC verificato con FFmpeg.

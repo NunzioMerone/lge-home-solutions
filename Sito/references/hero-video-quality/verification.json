@@ -1,0 +1,385 @@
+{
+  "date": "2026-11-06",
+  "unchanged_shots": 8,
+  "removed": [
+    "old brass-handle door",
+    "macro wood profile",
+    "dark living-room excerpt"
+  ],
+  "framing": [
+    {
+      "format": "Desktop",
+      "scene": 1,
+      "source": "gibus-awnings.mp4",
+      "usable_source_pixels": [
+        1280,
+        720
+      ],
+      "enlargement": 1.5
+    },
+    {
+      "format": "Desktop",
+      "scene": 2,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        2681,
+        1508
+      ],
+      "enlargement": 0.716
+    },
+    {
+      "format": "Desktop",
+      "scene": 3,
+      "source": "pexels-window-4k.mp4",
+      "usable_source_pixels": [
+        3840,
+        2160
+      ],
+      "enlargement": 0.5
+    },
+    {
+      "format": "Desktop",
+      "scene": 4,
+      "source": "velux-bologna.mp4",
+      "usable_source_pixels": [
+        1564,
+        880
+      ],
+      "enlargement": 1.227
+    },
+    {
+      "format": "Desktop",
+      "scene": 5,
+      "source": "tehni-xl.mp4",
+      "usable_source_pixels": [
+        1920,
+        1080
+      ],
+      "enlargement": 1.0
+    },
+    {
+      "format": "Desktop",
+      "scene": 6,
+      "source": "pexels-7578548-house-hallway-4k.mp4",
+      "usable_source_pixels": [
+        3812,
+        2144
+      ],
+      "enlargement": 0.504
+    },
+    {
+      "format": "Desktop",
+      "scene": 7,
+      "source": "pexels-exterior-4k.mp4",
+      "usable_source_pixels": [
+        3840,
+        2160
+      ],
+      "enlargement": 0.5
+    },
+    {
+      "format": "Desktop",
+      "scene": 8,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        2681,
+        1508
+      ],
+      "enlargement": 0.716
+    },
+    {
+      "format": "Desktop",
+      "scene": 9,
+      "source": "gibus-pergola.mp4",
+      "usable_source_pixels": [
+        1280,
+        720
+      ],
+      "enlargement": 1.5
+    },
+    {
+      "format": "Desktop",
+      "scene": 10,
+      "source": "gibus-screens.mp4",
+      "usable_source_pixels": [
+        1280,
+        720
+      ],
+      "enlargement": 1.5
+    },
+    {
+      "format": "Tablet",
+      "scene": 1,
+      "source": "gibus-awnings.mp4",
+      "usable_source_pixels": [
+        960,
+        720
+      ],
+      "enlargement": 1.333
+    },
+    {
+      "format": "Tablet",
+      "scene": 2,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        2011,
+        1508
+      ],
+      "enlargement": 0.637
+    },
+    {
+      "format": "Tablet",
+      "scene": 3,
+      "source": "pexels-window-4k.mp4",
+      "usable_source_pixels": [
+        2880,
+        2160
+      ],
+      "enlargement": 0.444
+    },
+    {
+      "format": "Tablet",
+      "scene": 4,
+      "source": "velux-bologna.mp4",
+      "usable_source_pixels": [
+        1173,
+        880
+      ],
+      "enlargement": 1.091
+    },
+    {
+      "format": "Tablet",
+      "scene": 5,
+      "source": "tehni-xl.mp4",
+      "usable_source_pixels": [
+        1440,
+        1080
+      ],
+      "enlargement": 0.889
+    },
+    {
+      "format": "Tablet",
+      "scene": 6,
+      "source": "pexels-7578548-house-hallway-4k.mp4",
+      "usable_source_pixels": [
+        2859,
+        2144
+      ],
+      "enlargement": 0.448
+    },
+    {
+      "format": "Tablet",
+      "scene": 7,
+      "source": "pexels-exterior-4k.mp4",
+      "usable_source_pixels": [
+        2880,
+        2160
+      ],
+      "enlargement": 0.444
+    },
+    {
+      "format": "Tablet",
+      "scene": 8,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        2011,
+        1508
+      ],
+      "enlargement": 0.637
+    },
+    {
+      "format": "Tablet",
+      "scene": 9,
+      "source": "gibus-pergola.mp4",
+      "usable_source_pixels": [
+        960,
+        720
+      ],
+      "enlargement": 1.333
+    },
+    {
+      "format": "Tablet",
+      "scene": 10,
+      "source": "gibus-screens.mp4",
+      "usable_source_pixels": [
+        960,
+        720
+      ],
+      "enlargement": 1.333
+    },
+    {
+      "format": "Mobile",
+      "scene": 1,
+      "source": "gibus-awnings.mp4",
+      "usable_source_pixels": [
+        405,
+        720
+      ],
+      "enlargement": 1.778
+    },
+    {
+      "format": "Mobile",
+      "scene": 2,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        848,
+        1508
+      ],
+      "enlargement": 0.849
+    },
+    {
+      "format": "Mobile",
+      "scene": 3,
+      "source": "pin-2.mp4",
+      "usable_source_pixels": [
+        720,
+        1280
+      ],
+      "enlargement": 1.0
+    },
+    {
+      "format": "Mobile",
+      "scene": 4,
+      "source": "velux-bologna.mp4",
+      "usable_source_pixels": [
+        495,
+        880
+      ],
+      "enlargement": 1.455
+    },
+    {
+      "format": "Mobile",
+      "scene": 5,
+      "source": "tehni-xl.mp4",
+      "usable_source_pixels": [
+        608,
+        1080
+      ],
+      "enlargement": 1.185
+    },
+    {
+      "format": "Mobile",
+      "scene": 6,
+      "source": "pexels-7578548-house-hallway-4k.mp4",
+      "usable_source_pixels": [
+        1206,
+        2144
+      ],
+      "enlargement": 0.597
+    },
+    {
+      "format": "Mobile",
+      "scene": 7,
+      "source": "pin-1.mp4",
+      "usable_source_pixels": [
+        720,
+        1280
+      ],
+      "enlargement": 1.0
+    },
+    {
+      "format": "Mobile",
+      "scene": 8,
+      "source": "veka-living-4k.mp4",
+      "usable_source_pixels": [
+        848,
+        1508
+      ],
+      "enlargement": 0.849
+    },
+    {
+      "format": "Mobile",
+      "scene": 9,
+      "source": "gibus-pergola.mp4",
+      "usable_source_pixels": [
+        405,
+        720
+      ],
+      "enlargement": 1.778
+    },
+    {
+      "format": "Mobile",
+      "scene": 10,
+      "source": "gibus-screens.mp4",
+      "usable_source_pixels": [
+        405,
+        720
+      ],
+      "enlargement": 1.778
+    }
+  ],
+  "files": [
+    {
+      "format": "Desktop",
+      "codec": "h264",
+      "tag": "avc1",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 1768,
+      "duration": 58.933,
+      "bytes": 33985042,
+      "sha256": "06295c0e9603b4e9b15c576231b2f74438c35b4d488691630cd52f5183755646",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.4165277777777778
+    },
+    {
+      "format": "Tablet",
+      "codec": "h264",
+      "tag": "avc1",
+      "width": 1280,
+      "height": 960,
+      "fps": 30,
+      "frames": 1768,
+      "duration": 58.933,
+      "bytes": 18886084,
+      "sha256": "9243a7f8fa23c8612de5417a1734d492e1469b8627202c9bdbd15867d5398c27",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.52625
+    },
+    {
+      "format": "Mobile",
+      "codec": "h264",
+      "tag": "avc1",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 1768,
+      "duration": 58.933,
+      "bytes": 11745488,
+      "sha256": "5ace01747a236e87b49c465df15b43935f97c6aa8b65adec908e0725eb034d04",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.7619444444444445
+    },
+    {
+      "format": "Mobile",
+      "codec": "hevc",
+      "tag": "hvc1",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 1768,
+      "duration": 58.933333,
+      "bytes": 7893094,
+      "sha256": "c4d537389a841179a27d2c4783ff231e134c17580d7c15b0cb2dcce2b5b657fc",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.7220833333333334
+    }
+  ]
+}

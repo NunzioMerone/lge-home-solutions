@@ -1,0 +1,74 @@
+.dialog {
+  --media-max-width: min(
+    1100px,
+    calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right))
+  );
+  --media-max-height: calc(100dvh - 112px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  position: fixed;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  max-width: calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 48px 0 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+.dialog::backdrop {
+  background: rgb(19 25 32 / 90%);
+  backdrop-filter: blur(8px);
+}
+.media {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-x pan-y pinch-zoom;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 80px rgb(0 0 0 / 24%);
+  animation: appear 260ms var(--ease-out) both;
+}
+.media img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: var(--media-max-width);
+  max-height: var(--media-max-height);
+  object-fit: contain;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-white);
+  transition: color var(--transition);
+}
+.close svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.7;
+}
+.close:hover {
+  color: var(--color-hero-accent);
+}
+:root:not([data-input-modality='pointer']) .close:focus-visible {
+  outline-color: var(--color-white);
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

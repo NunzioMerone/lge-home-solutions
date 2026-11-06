@@ -7,6 +7,7 @@ import type { SectionRevealOptions } from '../types/ui'
 export function useSectionReveal({
   duration = motion.duration,
   stagger = motion.stagger,
+  rootMargin = '0px 0px -22% 0px',
 }: SectionRevealOptions = {}) {
   const ref = useRef<HTMLElement>(null)
   const { reducedMotion } = useMotion()
@@ -52,7 +53,7 @@ export function useSectionReveal({
         reveal?.play()
         observer.disconnect()
       },
-      { rootMargin: '0px 0px -22% 0px' },
+      { rootMargin },
     )
     observer.observe(root.querySelector('header[data-reveal]') ?? root)
     const finishForKeyboard = () => {
@@ -66,6 +67,6 @@ export function useSectionReveal({
       root.removeEventListener('focusin', finishForKeyboard)
       context.revert()
     }
-  }, [reducedMotion, duration, stagger])
+  }, [reducedMotion, duration, stagger, rootMargin])
   return ref
 }

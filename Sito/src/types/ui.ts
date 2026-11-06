@@ -12,6 +12,7 @@ export interface ResponsiveImageProps {
   className?: string | undefined
   critical?: boolean
   decorative?: boolean
+  onSettled?: () => void
 }
 export interface SectionHeadingProps {
   id: string
@@ -21,6 +22,7 @@ export interface SectionHeadingProps {
 export interface SectionRevealOptions {
   duration?: number
   stagger?: number
+  rootMargin?: string
 }
 export interface CarouselProps {
   label: string

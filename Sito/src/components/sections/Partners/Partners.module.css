@@ -84,7 +84,7 @@
 }
 .mark[data-tone='light'] {
   padding: 8px;
-  border-radius: 3px;
+  border-radius: var(--radius);
   background: var(--color-ink);
 }
 .mark[data-tone='light'] img {

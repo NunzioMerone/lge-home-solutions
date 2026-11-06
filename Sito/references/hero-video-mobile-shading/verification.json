@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-06",
+  "only_changed_shot": 9,
+  "unchanged_shots": 8,
+  "files": [
+    {
+      "codec": "h264",
+      "tag": "avc1",
+      "profile": "High",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 1588,
+      "duration": 52.933,
+      "bytes": 9287871,
+      "sha256": "d2495dc2dc5c253508264555ccd534f5215f692c279eaca9a8da26dd037a0f85",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.7999305555555556
+    },
+    {
+      "codec": "hevc",
+      "tag": "hvc1",
+      "profile": "Main",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 1588,
+      "duration": 52.933333,
+      "bytes": 5916954,
+      "sha256": "62f7d8fa57c79ce6c86a42c568899e4dda61b78753feb14c4a5232d333dc302a",
+      "audio": false,
+      "faststart": true,
+      "decode": "passed",
+      "equal_frame_timestamps": true,
+      "max_keyframe_interval": 60,
+      "loop_boundary_mae_gray_160x90": 1.7134722222222223
+    }
+  ]
+}

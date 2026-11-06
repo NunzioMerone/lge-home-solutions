@@ -8,7 +8,7 @@
 }
 .viewport {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--radius);
   padding-block: 2px;
 }
 .track {
@@ -35,7 +35,7 @@
   min-height: 320px;
   overflow: hidden;
   border: 1px solid var(--color-line);
-  border-radius: 8px;
+  border-radius: var(--radius);
   background: var(--color-paper);
   box-shadow: 0 4px 14px rgb(25 35 45 / 5%);
 }

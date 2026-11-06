@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-06",
+  "source": "Nuovo riferimento CTA e footer fornito dall’utente in chat",
+  "status": "Immagine architettonica decorativa provvisoria, non una realizzazione LGE verificata",
+  "preparation": "Originale convertito in WebP qualità 87 senza ritocchi e incorporato in SVG con viewBox limitato alla fotografia superiore destra. Testi e footer del mockup esclusi dalla viewport; testi e pulsante sono HTML.",
+  "original": "references/mockups/works/contact-reference.png",
+  "originalSha256": "da25cfbc9e67bd90ac70615439a47cc1ad7ca28f5a1d5999af9e3bbb3443c2aa",
+  "asset": "public/img/works/contact-reference.svg",
+  "bytes": 114529,
+  "photoViewport": [
+    810,
+    0,
+    862,
+    456
+  ],
+  "scope": "github-pages-preview",
+  "publication": true,
+  "publicationAuthorization": "Richiesta esplicita dell’utente del 6 novembre 2026 per l’intero checkpoint",
+  "layout": "Immagine intera senza zoom su desktop/tablet, assente sotto 700 px; sfumatura applicata alla foto effettiva."
+}

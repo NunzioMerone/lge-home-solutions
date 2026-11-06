@@ -23,18 +23,27 @@
   font-weight: 400;
 }
 .details {
-  margin-top: 18px;
+  margin-top: 28px;
   padding-inline: var(--gutter);
   text-align: center;
 }
 .detailsLink {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  min-height: 44px;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-blue) 35%, transparent);
-  color: var(--color-blue);
+  justify-content: center;
+  gap: 22px;
+  min-height: 50px;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  background: var(--color-brand-blue);
+  color: var(--color-white);
   font-size: 0.8125rem;
+  font-weight: 550;
+  line-height: 1.5;
+  transition: background var(--transition);
+}
+.detailsLink:hover {
+  background: color-mix(in srgb, var(--color-brand-blue) 85%, var(--color-ink));
 }
 .detailsLink svg {
   width: 18px;

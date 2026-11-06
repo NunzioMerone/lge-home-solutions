@@ -3,6 +3,7 @@ import type { ProductPath } from '../types/content'
 import type { ProductImageTransition } from '../types/productTransition'
 import styles from '../components/ui/ProductTransition.module.css'
 import { waitForImage } from './imageReady'
+import { getImagePaintBounds, relativeImageBounds } from './imageGeometry'
 
 /** Keep a live image above the route change, so its crop evolves without stretching. */
 export function createProductImageTransition(
@@ -13,6 +14,17 @@ export function createProductImageTransition(
 ): ProductImageTransition {
   const origin = (card.querySelector('[data-product-photo]') ?? image).getBoundingClientRect()
   const photoStyle = getComputedStyle(image)
+  // Responsive candidates expose rounded density-corrected natural sizes in the DOM.
+  // The declared asset dimensions retain the original aspect ratio.
+  const naturalWidth = Number(image.getAttribute('width')) || image.naturalWidth
+  const naturalHeight = Number(image.getAttribute('height')) || image.naturalHeight
+  const sourcePaint = getImagePaintBounds({
+    bounds: image.getBoundingClientRect(),
+    naturalWidth,
+    naturalHeight,
+    objectFit: photoStyle.objectFit,
+    objectPosition: photoStyle.objectPosition,
+  })
   const veil = document.createElement('div')
   const frame = document.createElement('div')
   const photo = document.createElement('img')
@@ -29,6 +41,7 @@ export function createProductImageTransition(
   document.body.append(veil, frame)
   gsap.set(veil, { opacity: 0 })
   gsap.set(frame, {
+    autoRound: false,
     top: origin.top,
     left: origin.left,
     width: origin.width,
@@ -36,10 +49,8 @@ export function createProductImageTransition(
     borderRadius: getComputedStyle(card).borderRadius,
   })
   gsap.set(photo, {
-    objectPosition: photoStyle.objectPosition,
-    objectFit: photoStyle.objectFit,
-    transform: photoStyle.transform,
-    transformOrigin: photoStyle.transformOrigin,
+    autoRound: false,
+    ...relativeImageBounds(sourcePaint, origin),
   })
   const timeline = gsap.timeline({ paused: true })
   const controller = new AbortController()
@@ -83,17 +94,20 @@ export function createProductImageTransition(
         if (completed) return
         const bounds = target.getBoundingClientRect()
         const targetPhoto = target.querySelector('img')
-        const destinationPosition = targetPhoto
-          ? getComputedStyle(targetPhoto).objectPosition
-          : photoStyle.objectPosition
-        const destinationOrigin = targetPhoto
-          ? getComputedStyle(targetPhoto).transformOrigin
-          : photoStyle.transformOrigin
+        const destinationStyle = targetPhoto ? getComputedStyle(targetPhoto) : null
+        const destinationPaint = getImagePaintBounds({
+          bounds: targetPhoto?.getBoundingClientRect() ?? bounds,
+          naturalWidth,
+          naturalHeight,
+          objectFit: destinationStyle?.objectFit ?? 'contain',
+          objectPosition: destinationStyle?.objectPosition ?? '50% 50%',
+        })
         gsap.set(veil, { opacity: 1 })
         timeline
           .to(
             frame,
             {
+              autoRound: false,
               top: bounds.top,
               left: bounds.left,
               width: bounds.width,
@@ -107,9 +121,8 @@ export function createProductImageTransition(
           .to(
             photo,
             {
-              scale: 1,
-              objectPosition: destinationPosition,
-              transformOrigin: destinationOrigin,
+              autoRound: false,
+              ...relativeImageBounds(destinationPaint, bounds),
               duration: 1.15,
               ease: 'power3.inOut',
             },

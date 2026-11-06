@@ -1,0 +1,33 @@
+LGE HERO REV10 — DUE PIN E RIMOZIONE PORTA DATATA
+6 novembre 2026. Solo locale, nessun push o deploy.
+
+I due Pin sono stati forniti dall’utente e scaricati per il montaggio
+richiesto. I file originali e le pagine grezze restano in sources/,
+esclusa da Git. Titoli, URL e intervalli selezionati: sources.json.
+Il primo Pin è Domino Infissi / Ultraresina, non un partner LGE
+verificato. Il secondo non ha un produttore verificato. Non viene
+asserita una licenza commerciale o un’autorizzazione alla pubblicazione.
+
+Tre inserti: profilo effetto legno (10,25–11,57 s del primo Pin),
+vetrata sul paesaggio (5,8–9,52 s del secondo), soggiorno con tende
+(17,5–19,12 s del primo). Non contengono tagli interni né la sigla
+finale. Rimossa l’intera scena Pexels 9583985 (porta bianca e ottone).
+Le otto altre scene mantengono i parametri precedenti. Il ritaglio
+mobile dell’oscurante resta quello Rev09 approvato.
+
+I file Pinterest e le playlist H.264/HEVC arrivano al massimo a
+720×1280: non sono originali 4K o 1080p, nonostante i metadati
+nominali della pagina. Si ritaglia prima di interpolare e ingrandire.
+Desktop 1920×1080, tablet 1280×960, mobile 720×1280; H.264
+nei tre formati e HEVC hvc1 portrait. 1769 frame / 58,967 s,
+30 fps, senza audio, faststart, dissolvenze da 41 frame e loop.
+
+Riproduzione:
+  python3 render.py --format Desktop
+  python3 render.py --format Tablet
+  python3 render.py --format Mobile
+  python3 render.py --format Mobile --efficient
+  python3 verify.py
+
+preview.html mostra la hero reale e consente di scegliere formato,
+scena e secondo. Pagina di verifica esclusa dalla build.

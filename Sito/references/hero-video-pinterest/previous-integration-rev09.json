@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-06",
+  "revision": "Rev09",
+  "scope": "Solo locale: spostamento a sinistra del ritaglio mobile della scena Gibus screens. Oscurante in primo piano, uomo marginale. Altre otto scene, desktop, tablet e poster invariati.",
+  "playback_rate": 1,
+  "headline_accent": "#EDD5B3",
+  "duration_file": 52.93333333333333,
+  "duration_website": 52.93333333333333,
+  "provenance": "references/hero-video-mobile-shading/edit.json",
+  "stock_provenance": "Two new licensed Pexels interior-door atmosphere scenes; not verified LGE/partner products, installations or customers.",
+  "assets": [
+    {
+      "format": "desktop",
+      "kind": "video",
+      "source": "references/hero-video-playback/02_Web/LGE_Hero_Rev07_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev07.mp4",
+      "bytes": 20201968,
+      "sha256": "3c93274fc24bd79dc4d8c1e2bda19dee191064b13db4cd4b0d15ebc78084c4ca"
+    },
+    {
+      "format": "desktop",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev07-poster.jpg",
+      "bytes": 116385,
+      "sha256": "138ef567388f259e6eddf3a4a274a53888055ef54dd01f49888a7241d0d885e0"
+    },
+    {
+      "format": "tablet",
+      "kind": "video",
+      "source": "references/hero-video-playback/02_Web/LGE_Hero_Rev07_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev07.mp4",
+      "bytes": 12930975,
+      "sha256": "701a3e3016bbd1200e6756958cb2090826fb64b6173763c393f8b720d73634f7"
+    },
+    {
+      "format": "tablet",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev07-poster.jpg",
+      "bytes": 85080,
+      "sha256": "239a8cb82d457e2b40b6433d62b5fc48dfaf124b12a435ee7db180c6dbde5713"
+    },
+    {
+      "format": "mobile",
+      "kind": "video",
+      "source": "references/hero-video-mobile-shading/02_Web/LGE_Hero_Rev09_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev09.mp4",
+      "bytes": 9287871,
+      "sha256": "d2495dc2dc5c253508264555ccd534f5215f692c279eaca9a8da26dd037a0f85"
+    },
+    {
+      "format": "mobile",
+      "kind": "poster",
+      "source": "references/hero-video-playback/03_Poster/LGE_Hero_Rev07_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev07-poster.jpg",
+      "bytes": 69636,
+      "sha256": "0187f4c785a3ae6d5d304ff0a35b1aeaa1dd25c82811dd3c53fe89e04ae1a276"
+    },
+    {
+      "format": "mobile",
+      "kind": "video-efficient",
+      "codec": "hevc",
+      "source": "references/hero-video-mobile-shading/02_Web/LGE_Hero_Rev09_WEB_Mobile_HEVC.mp4",
+      "target": "public/media/hero/hero-mobile-rev09-hevc.mp4",
+      "bytes": 5916954,
+      "sha256": "62f7d8fa57c79ce6c86a42c568899e4dda61b78753feb14c4a5232d333dc302a"
+    }
+  ],
+  "publication": {
+    "status": "local-only",
+    "authorized": false,
+    "previous_published_revision": "Rev08",
+    "repository": "NunzioMerone/lge-home-solutions",
+    "branch": "main",
+    "site": "https://nunziomerone.github.io/lge-home-solutions/",
+    "public_preview": true
+  },
+  "frame_rate": 30,
+  "baked_playback_rate": 0.85
+}

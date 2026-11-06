@@ -6,6 +6,7 @@ export interface GalleryPhoto {
   height: number
   previewWidths: readonly [number, number]
   fullWidth: number
+  collection?: 'gallery-real' | 'gallery-home'
   status: 'user-provided'
 }
 
@@ -21,6 +22,18 @@ export interface GalleryCarouselProps {
 
 export interface GalleryLightboxProps extends GalleryLightboxState {
   onClose: () => void
+  photos?: readonly GalleryPhoto[]
+}
+
+export type GalleryLightboxControl = 'close' | 'previous' | 'next'
+
+export interface GalleryLightboxSlideProps {
+  photo: GalleryPhoto
+  active: boolean
+  navigable: boolean
+  onClose: () => void
+  onPrevious: () => void
+  onNext: () => void
 }
 
 export interface GalleryImageProps {
@@ -29,6 +42,7 @@ export interface GalleryImageProps {
   sizes?: string
   loading?: 'eager' | 'lazy'
   fetchPriority?: 'high' | 'low' | 'auto'
+  onSettled?: () => void
 }
 
 export interface GalleryPaginationProps {

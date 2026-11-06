@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-06",
+  "source": "Mockup desktop e mobile forniti dall’utente in chat",
+  "status": "Foto provvisoria di riferimento, non fotografia verificata dello showroom reale",
+  "preparation": "WebP qualità 88 dell’originale, incorporato in SVG con viewBox limitato alla fotografia. Nessun ritocco generativo o alterazione del marchio.",
+  "files": [
+    {
+      "variant": "desktop",
+      "original": "references/mockups/contacts/desktop-reference.png",
+      "originalSha256": "ec9fafcec7c646cae67d935ad3bd9d73e2b30d70d437bd4640728e3d4c950aac",
+      "asset": "public/img/showroom/desktop-reference.svg",
+      "bytes": 174487,
+      "photoViewport": [
+        864,
+        124,
+        752,
+        710
+      ]
+    },
+    {
+      "variant": "mobile",
+      "original": "references/mockups/contacts/mobile-reference.png",
+      "originalSha256": "bca161bb8c03afedafeb0645fcedd16b393ea064895bfc834942b695931cad09",
+      "asset": "public/img/showroom/mobile-reference.svg",
+      "bytes": 181926,
+      "photoViewport": [
+        95,
+        379,
+        753,
+        397
+      ]
+    }
+  ]
+}

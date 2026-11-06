@@ -1,0 +1,25 @@
+LGE HERO REV09 — RITAGLIO MOBILE DELL’OSCURANTE
+6 novembre 2026 — solo locale, nessun push o deploy.
+
+L’ultima scena Gibus screens usa ora focal mobile 0,14 → 0,18 anziché
+0,60 → 0,65. La schermatura resta in primo piano; dell’uomo compaiono
+soltanto piccoli dettagli sul margine destro. Il punto focale desktop
+e tablet non cambia. La sorgente è il filmato originale già disponibile
+in ../hero-video-warm/sources/gibus-screens.mp4. Nessun nuovo download.
+
+Le altre otto scene riusano la cache precedente. Stessi tempi, colore,
+transizioni e 1588 fotogrammi a 30 fps (52,933 s), senza audio. H.264
+High 4.1 / avc1 e HEVC Main / hvc1 per Safari, entrambi faststart.
+Verifica integrale di entrambi: verification.json. Nessuna nuova prova
+su iPhone fisico. Desktop, tablet e poster conservano gli hash precedenti.
+I vecchi due filmati mobile rimangono nelle cartelle di riferimento
+Rev07 e Rev08; il sito carica soltanto gli asset Rev09 aggiornati.
+
+Riproduzione:
+  python3 render.py --format Mobile
+  python3 render.py --format Mobile --efficient
+  python3 verify.py
+
+preview.html mostra la hero reale in un iframe 390 × 844. Il pulsante
+Mostra la scena consente di fermarsi a un tempo preciso (48 s iniziali).
+La pagina di controllo non viene inclusa nella build del sito.

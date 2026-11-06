@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-06",
+  "accepted": [
+    {
+      "source": "pexels-window-4k.mp4",
+      "use": "Desktop and landscape tablet, whole glazed openings and entrance, wide architectural context."
+    },
+    {
+      "source": "pexels-exterior-4k.mp4",
+      "use": "Desktop and landscape tablet, warm exterior with glazing and shading."
+    },
+    {
+      "source": "../hero-video-pinterest/sources/pin-2.mp4",
+      "use": "Portrait only, 5.8–9.64 s, complete sliding window, no resolution enlargement in the encoded file."
+    },
+    {
+      "source": "../hero-video-pinterest/sources/pin-1.mp4",
+      "use": "Portrait only, 23.96–25.92 s, complete dining-room window with curtains, no macro or source cut."
+    }
+  ],
+  "rejected": [
+    {
+      "source": "Rev10 pin-1 10.25–11.57",
+      "reason": "Rejected by user: abstract wood macro and 720×404 widescreen crop enlarged to 1920×1080."
+    },
+    {
+      "source": "Rev10 pin-1 17.5–19.12",
+      "reason": "Dark living room, handheld movement and car beyond window; compressed when enlarged to widescreen."
+    },
+    {
+      "source": "sources/domino-original.webm",
+      "page": "https://www.youtube.com/watch?v=r9HZ-7SC7Cs",
+      "reason": "Official 4K source inspected throughout: showroom presenter and technical inserts, no matching clean residential wide shot."
+    },
+    {
+      "source": "sources/pexels-pool-4k.mp4",
+      "page": "https://www.pexels.com/video/a-living-room-with-a-large-glass-door-and-a-pool-18531414/",
+      "reason": "Oblique overhead framing and prominent furniture, poor product emphasis."
+    },
+    {
+      "source": "sources/pexels-cozy-4k.mp4",
+      "page": "https://www.pexels.com/video/contemporary-living-room-interior-design-34955049/",
+      "reason": "Traditional room, wall pictures and sofa dominate; does not match contemporary product direction."
+    },
+    {
+      "source": "sources/pexels-warm-4k.mp4",
+      "page": "https://www.pexels.com/video/modern-house-interior-5744424/",
+      "reason": "Diagonal overhead movement; furniture dominates despite warm light."
+    },
+    {
+      "source": "sources/pexels-sunlight-4k.mp4",
+      "page": "https://www.pexels.com/video/sunlight-through-the-glass-window-6008075/",
+      "reason": "Strong glare and dark attic obscure the window."
+    }
+  ],
+  "other_originals": {
+    "Domino": "Official product page returned a browser challenge; not bypassed. Public official YouTube original inspected instead.",
+    "Alsysco": "Official Ecoglide page inspected, no equivalent higher-resolution source located. Public Pinterest variants remain 720×1280."
+  },
+  "limitations": "Native Gibus footage retained from approved edit is 720p. Portrait Pinterest footage remains 720×1280. Encoding cannot recover absent details; no claim of native 4K for the complete montage."
+}

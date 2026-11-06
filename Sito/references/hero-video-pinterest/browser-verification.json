@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-06",
+  "site": "http://127.0.0.1:5175/",
+  "preview": "/references/hero-video-pinterest/preview.html",
+  "browser": "ChatGPT in-app browser, H.264 fallback",
+  "checked": [
+    {
+      "format": "Desktop",
+      "viewport": [
+        1440,
+        900
+      ],
+      "video_dimensions": [
+        1920,
+        1080
+      ],
+      "source": "hero-desktop-rev10.mp4",
+      "scene_time": 18.7
+    },
+    {
+      "format": "Tablet",
+      "viewport": [
+        1024,
+        768
+      ],
+      "video_dimensions": [
+        1280,
+        960
+      ],
+      "source": "hero-tablet-rev10.mp4",
+      "scene_time": 18.7
+    },
+    {
+      "format": "Mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "video_dimensions": [
+        720,
+        1280
+      ],
+      "source": "hero-mobile-rev10.mp4",
+      "scene_times": [
+        14.5,
+        18.7,
+        40,
+        54
+      ]
+    }
+  ],
+  "playback_observed": {
+    "from": 14.6035,
+    "to": 30.7275,
+    "playing": true
+  },
+  "hevc": "Full-file FFmpeg decode, no new physical iPhone test.",
+  "scene_removal": "Independent verifier confirms no Pexels 9583985 source or shot in the edit; eight prior scenes and three Pinterest excerpts only."
+}

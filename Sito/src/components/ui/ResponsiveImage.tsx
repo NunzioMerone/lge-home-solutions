@@ -12,6 +12,7 @@ export function ResponsiveImage({
   className,
   critical = false,
   decorative = false,
+  onSettled,
 }: ResponsiveImageProps) {
   const [failed, setFailed] = useState(false)
   const asset = collection === 'hero' ? heroPhotos[photo] : photos[photo]
@@ -39,7 +40,11 @@ export function ResponsiveImage({
       fetchPriority={critical ? 'high' : 'auto'}
       decoding="async"
       data-critical={critical || undefined}
-      onError={() => setFailed(true)}
+      onLoad={onSettled}
+      onError={() => {
+        setFailed(true)
+        onSettled?.()
+      }}
     />
   )
 }

@@ -1,9 +1,18 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
-import { contacts } from '../../../config/contacts'
-import { Icon } from '../../ui/Icon'
+import { Skeleton } from '../../ui/Skeleton'
 import styles from './Contacts.module.css'
 
 const InteractiveMap = lazy(() => import('./InteractiveMap'))
+
+function MapSkeleton() {
+  return (
+    <div className={styles.mapLoading} role="status" aria-label="Preparazione della mappa">
+      <Skeleton className={styles.mapRoad} />
+      <Skeleton className={styles.mapRoadAcross} />
+      <Skeleton className={styles.mapPin} />
+    </div>
+  )
+}
 
 export function LocationMap() {
   const ref = useRef<HTMLDivElement>(null)
@@ -23,26 +32,16 @@ export function LocationMap() {
     return () => observer.disconnect()
   }, [])
   return (
-    <figure className={styles.mapBlock}>
+    <div className={styles.mapBlock}>
       <div className={styles.mapCanvas} ref={ref}>
-        {visible && (
-          <Suspense fallback={<span className={styles.mapLoading}>Caricamento mappa…</span>}>
+        {visible ? (
+          <Suspense fallback={<MapSkeleton />}>
             <InteractiveMap />
           </Suspense>
+        ) : (
+          <MapSkeleton />
         )}
       </div>
-      <figcaption className={styles.mapCaption}>
-        <span className={styles.mapLocation}>LGE Home Solutions</span>
-        <a
-          className={styles.textLink}
-          href={contacts.mapUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Apri le indicazioni per LGE su Google Maps (nuova scheda)"
-        >
-          Apri le indicazioni <Icon name="arrow" />
-        </a>
-      </figcaption>
-    </figure>
+    </div>
   )
 }

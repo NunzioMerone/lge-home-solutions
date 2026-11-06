@@ -8,9 +8,11 @@ export function GalleryImage({
   sizes,
   loading,
   fetchPriority,
+  onSettled,
 }: GalleryImageProps) {
   const [failed, setFailed] = useState(false)
-  const source = (width: number) => assetUrl(`img/gallery-real/${photo.id}-${width}.webp`)
+  const source = (width: number) =>
+    assetUrl(`img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`)
   if (failed) {
     return (
       <span role="img" aria-label={photo.alt}>
@@ -36,7 +38,11 @@ export function GalleryImage({
       fetchPriority={fetchPriority}
       decoding="async"
       draggable={false}
-      onError={() => setFailed(true)}
+      onLoad={onSettled}
+      onError={() => {
+        setFailed(true)
+        onSettled?.()
+      }}
     />
   )
 }

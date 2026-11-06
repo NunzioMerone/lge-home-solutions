@@ -55,7 +55,7 @@
   flex-shrink: 0;
   width: 38px;
   height: 38px;
-  border-radius: 50%;
+  border-radius: var(--radius);
   background: rgb(255 255 255 / 6%);
   color: #dce5ee;
 }

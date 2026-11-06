@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { worksPage } from '../../../config/works'
+import { homeGallery } from '../../../data/homeGallery'
 import { Icon } from '../../ui/Icon'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import type { GalleryLightboxState } from '../../../types/gallery'
@@ -36,10 +37,12 @@ export function Gallery({ active }: PageActivityProps) {
       </div>
       <div className={styles.details}>
         <Link to={worksPage.path} className={styles.detailsLink}>
-          Esplora tutti i lavori <Icon name="arrow" />
+          Esplora tutti i nostri lavori <Icon name="arrow" />
         </Link>
       </div>
-      {lightbox && <GalleryLightbox {...lightbox} onClose={() => setLightbox(null)} />}
+      {lightbox && (
+        <GalleryLightbox {...lightbox} photos={homeGallery} onClose={() => setLightbox(null)} />
+      )}
     </section>
   )
 }

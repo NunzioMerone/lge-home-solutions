@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-06",
+  "scope": "local-only",
+  "publication": false,
+  "checks": {
+    "typecheck_build": "passed",
+    "lint": "passed",
+    "tests": 38,
+    "test_files": 9,
+    "responsive_widths": [
+      360,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "columns": {
+      "360": 1,
+      "390": 1,
+      "768": 2,
+      "1024": 3,
+      "1440": 3
+    },
+    "horizontal_page_overflow": false,
+    "initial_hero_height_desktop": 512,
+    "initial_navbar_background": "rgba(0, 0, 0, 0)",
+    "category_changes": "All five categories and Tutti checked; fixed title and hero remain visible; category fade and new gallery animate.",
+    "filter_dimensions_desktop": [
+      180,
+      225
+    ],
+    "filter_dimensions_mobile": [
+      124,
+      155
+    ],
+    "selected_mobile_filter_fully_visible": true,
+    "load_more": {
+      "before": 18,
+      "after": 32,
+      "previous_column_items_preserved": true,
+      "button_removed_at_end": true
+    },
+    "lightbox": [
+      "next button changes full image",
+      "ArrowLeft returns to previous photograph",
+      "close restores original trigger focus and scroll lock",
+      "mobile image visible at 366×488"
+    ],
+    "route_skeleton": {
+      "kind": "works",
+      "busy": true,
+      "filters": 6,
+      "photo_placeholders": 6,
+      "overflow": false
+    },
+    "visual_counts": false
+  },
+  "limitations": [
+    "Responsive checks use the in-app browser; no test on a physical phone.",
+    "Reduced motion is handled by the existing motion hook and global styles."
+  ],
+  "screenshots": [
+    "lge-works-desktop-top.png",
+    "lge-works-desktop-gallery.png",
+    "lge-works-mobile.png"
+  ],
+  "refinement": {
+    "scope": "local-only",
+    "category_reveal": {
+      "configured_duration_seconds": 2.6,
+      "direction": "left-to-right with the same feathered mask as the home headline",
+      "starts_when_visible": true,
+      "observed_start": {
+        "category": "Oscuranti",
+        "opacity": 0.0099,
+        "mask_position": "99.0092% 0%",
+        "fixed_heading_opacity": 1
+      },
+      "observed_finish": {
+        "category": "Oscuranti",
+        "opacity": 1,
+        "mask_position": "0% 0%",
+        "fixed_heading_opacity": 1
+      },
+      "scroll_preserved_pixels": 300
+    },
+    "filter_label_size_px": {
+      "mobile": 14,
+      "desktop": 15
+    },
+    "contact_banner": {
+      "whatsapp_url": "https://wa.me/393346008313",
+      "target": "_blank",
+      "desktop_title_px": 38.88,
+      "mobile_title_px": 29.6,
+      "body_px": 14.4,
+      "button_height_px": 50,
+      "desktop_height_px": 380,
+      "tablet_height_px": 380,
+      "mobile_height_px": 565.82,
+      "widths_checked": [
+        360,
+        390,
+        768,
+        1440
+      ],
+      "horizontal_overflow": false,
+      "image": "decorative SVG viewport of the user reference; 112 KiB; lazy loaded with skeleton"
+    },
+    "media_dialogs": {
+      "shared_styles": "src/components/ui/MediaDialog.module.css",
+      "close_background": "rgba(0, 0, 0, 0)",
+      "close_border": "0px",
+      "close_target_px": [
+        44,
+        44
+      ],
+      "close_position": "aligned above the actual media right edge, 4 px gap",
+      "desktop_navigation_gap_px": 12,
+      "mobile_navigation_gap_px": 12,
+      "mobile_media_px": [
+        357.99,
+        477.33
+      ],
+      "tablet_landscape_media_px": [
+        864,
+        648
+      ],
+      "landscape_aspect_error": 0,
+      "next_changes_image": true,
+      "arrow_left_restores_previous_image": true,
+      "close_restores_trigger_focus": true,
+      "pointer_focus_outline": "none",
+      "escape_closes_document": true,
+      "body_scroll_restored": true,
+      "document_portrait_checked_on_mobile": true,
+      "document_landscape_checked_on_desktop": true
+    },
+    "validation": {
+      "typecheck_build": "passed",
+      "lint": "passed",
+      "tests": 38,
+      "test_files": 9,
+      "formatting": "passed"
+    },
+    "limitations": [
+      "Responsive checks in the in-app browser, not a physical iPhone.",
+      "Reduced motion handled by useMotion; the system preference was not changed during verification."
+    ],
+    "screenshots": [
+      "lge-works-contact-desktop.png",
+      "lge-works-contact-tablet.png",
+      "lge-works-contact-mobile.png",
+      "lge-works-contact-small-mobile.png",
+      "lge-works-category-dissolve-start.png",
+      "lge-works-category-dissolve-finish.png",
+      "lge-works-lightbox-desktop.png",
+      "lge-works-lightbox-mobile.png",
+      "lge-works-lightbox-landscape.png",
+      "lge-document-viewer-mobile.png",
+      "lge-document-viewer-desktop.png"
+    ]
+  }
+}

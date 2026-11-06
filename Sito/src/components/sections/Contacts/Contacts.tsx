@@ -3,8 +3,8 @@ import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import { getContactLinks } from '../../../utils/contactLinks'
 import { assetUrl } from '../../../utils/assetUrl'
 import { Icon } from '../../ui/Icon'
-import { ContactChannels } from './ContactChannels'
 import { LocationMap } from './LocationMap'
+import { ShowroomPhoto } from './ShowroomPhoto'
 import styles from './Contacts.module.css'
 
 export function Contacts() {
@@ -23,63 +23,57 @@ export function Contacts() {
             <h2 id="contacts-title" className={styles.heading}>
               Vieni a <em>trovarci</em>
             </h2>
-            <p>
-              Prendi un appuntamento: ti aspettiamo a Monte di Procida per scegliere insieme le
-              soluzioni più adatte alla tua casa.
+            <p className={styles.description}>
+              Visita il nostro showroom a Monte di Procida per scoprire materiali, finiture e
+              soluzioni su misura per la tua casa.
             </p>
-            <div className={styles.actions}>
-              {links.whatsapp && (
-                <a
-                  className={styles.whatsapp}
-                  href={links.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Prenota su WhatsApp al numero ${contacts.whatsapp}`}
-                >
-                  <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="26" height="26" />
-                  Prenota su WhatsApp
-                </a>
-              )}
-              {links.phone && (
-                <a
-                  className={styles.textLink}
-                  href={links.phone}
-                  aria-label={`Chiamaci al numero ${contacts.phone}`}
-                >
-                  Chiamaci <Icon name="arrow" />
-                </a>
-              )}
-            </div>
           </header>
-          <dl className={styles.contactList} data-reveal>
-            <div className={styles.detailRow}>
-              <dt>
+          <ShowroomPhoto />
+          <div className={styles.appointment} data-reveal>
+            {links.whatsapp && (
+              <a
+                className={styles.whatsapp}
+                href={links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Prenota su WhatsApp al numero ${contacts.whatsapp}`}
+              >
+                <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
+                Prenota su WhatsApp
+              </a>
+            )}
+            <div className={styles.appointmentNote}>
+              <Icon name="calendar" />
+              <div>
+                <h3>Su appuntamento</h3>
+                <p>Contattaci su WhatsApp per fissare la tua visita.</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.directions} data-reveal>
+            <div className={styles.address}>
+              <h3>
                 <Icon name="pin" />
-                Dove siamo
-              </dt>
-              <dd>
-                <a href={contacts.mapUrl} target="_blank" rel="noopener noreferrer">
-                  {contacts.address ?? contacts.locality}
-                </a>
+                Come raggiungerci
+              </h3>
+              <address>
+                <span>{contacts.address ?? contacts.locality}</span>
                 <span>
                   {contacts.locality} ({contacts.province})
                 </span>
-              </dd>
+              </address>
+              <a
+                className={styles.directionsLink}
+                href={contacts.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Apri le indicazioni per LGE su Google Maps (nuova scheda)"
+              >
+                Apri le indicazioni <Icon name="arrow" />
+              </a>
             </div>
-          </dl>
-          <div className={styles.mapReveal} data-reveal>
             <LocationMap />
           </div>
-          {(links.instagram || links.email) && (
-            <div className={styles.social} data-reveal>
-              <ContactChannels />
-              {links.email && (
-                <a className={styles.email} href={links.email}>
-                  {contacts.email}
-                </a>
-              )}
-            </div>
-          )}
         </div>
       </div>
     </section>

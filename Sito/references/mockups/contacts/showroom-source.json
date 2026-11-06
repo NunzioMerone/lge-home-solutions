@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-06",
+  "source": "Immagine segnaposto fornita dall’utente in chat",
+  "original": "references/mockups/contacts/showroom-placeholder.png",
+  "originalSha256": "593bf0b31f8ec2e6390155621fd0ddb2f9500a9f81eea1ea9dbb64baef1f9ac4",
+  "width": 1672,
+  "height": 941,
+  "status": "Segnaposto esplicito in attesa della fotografia reale dello showroom",
+  "processing": "WebP qualità 88 a 640/960/1672 px, senza ritagli, alterazioni o metadati. Testo incorporato conservato. Vecchie viewport archiviate solo in locale.",
+  "variants": [
+    {
+      "width": 640,
+      "file": "public/img/showroom/showroom-placeholder-640.webp",
+      "bytes": 18046
+    },
+    {
+      "width": 960,
+      "file": "public/img/showroom/showroom-placeholder-960.webp",
+      "bytes": 28660
+    },
+    {
+      "width": 1672,
+      "file": "public/img/showroom/showroom-placeholder-1672.webp",
+      "bytes": 55966
+    }
+  ]
+}

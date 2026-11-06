@@ -1,63 +1,39 @@
-import { Link } from 'react-router-dom'
-import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
-import { Icon } from '../../components/ui/Icon'
-import { worksHeroPhotos } from '../../data/works'
-import type { WorksHeroProps } from '../../types/works'
+import { useState } from 'react'
+import { assetUrl } from '../../utils/assetUrl'
+import { Skeleton } from '../../components/ui/Skeleton'
+import { useSectionReveal } from '../../hooks/useSectionReveal'
 import styles from './Works.module.css'
 
-export function WorksHero({ onOpen }: WorksHeroProps) {
-  const { outdoor, interior } = worksHeroPhotos
-
+export function WorksHero() {
+  const [settled, setSettled] = useState(false)
+  const ref = useSectionReveal({ duration: 1.3, stagger: 0.12 })
   return (
-    <header className={styles.hero}>
+    <header className={styles.hero} ref={ref}>
+      <div className={styles.heroBackdrop} aria-hidden="true" data-reveal>
+        {!settled && <Skeleton className={styles.heroSkeleton} />}
+        <img
+          src={assetUrl('img/hero-scene/desktop-1280.webp')}
+          srcSet={`${assetUrl('img/hero-scene/desktop-960.webp')} 960w, ${assetUrl('img/hero-scene/desktop-1280.webp')} 1280w, ${assetUrl('img/hero-scene/desktop-1672.webp')} 1672w`}
+          sizes="100vw"
+          width="1672"
+          height="941"
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          onLoad={() => setSettled(true)}
+          onError={() => setSettled(true)}
+        />
+      </div>
       <div className={`container ${styles.heroInner}`}>
         <div className={styles.heroCopy}>
-          <p className={styles.heroLabel}>I nostri lavori</p>
-          <h1>
-            Il nostro lavoro,
-            <br />
-            <em>la vostra casa.</em>
+          <h1 data-reveal>
+            I nostri <em>lavori</em>
           </h1>
-          <p className={styles.heroDescription}>
-            Ogni casa è diversa. Qui trovi le nostre realizzazioni, dai dettagli degli interni agli
-            spazi da vivere all’aperto.
+          <p className={styles.heroDescription} data-reveal>
+            Una selezione di progetti realizzati per portare design, comfort e qualità nelle case
+            dei nostri clienti.
           </p>
-          <Link to="#esplora-lavori" className={styles.heroLink}>
-            Entra nelle nostre realizzazioni <Icon name="down" />
-          </Link>
-        </div>
-        <div className={styles.heroImages}>
-          {outdoor && (
-            <button
-              className={styles.heroMainPhoto}
-              type="button"
-              aria-label={`Ingrandisci foto: ${outdoor.alt}`}
-              aria-haspopup="dialog"
-              onClick={(event) => onOpen(outdoor, event.currentTarget)}
-            >
-              <GalleryImage
-                photo={outdoor}
-                loading="eager"
-                fetchPriority="high"
-                sizes="(min-width: 1400px) 730px, (min-width: 900px) 55vw, 100vw"
-              />
-            </button>
-          )}
-          {interior && (
-            <button
-              className={styles.heroDetailPhoto}
-              type="button"
-              aria-label={`Ingrandisci foto: ${interior.alt}`}
-              aria-haspopup="dialog"
-              onClick={(event) => onOpen(interior, event.currentTarget)}
-            >
-              <GalleryImage
-                photo={interior}
-                loading="eager"
-                sizes="(min-width: 900px) 200px, 150px"
-              />
-            </button>
-          )}
         </div>
       </div>
     </header>

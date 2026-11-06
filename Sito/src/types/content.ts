@@ -25,6 +25,7 @@ export type IconName =
   | 'star'
   | 'down'
   | 'clock'
+  | 'calendar'
   | 'award'
   | 'pergola'
   | 'store'

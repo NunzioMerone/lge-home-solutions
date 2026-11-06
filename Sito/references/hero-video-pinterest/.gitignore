@@ -1,0 +1,6 @@
+sources/
+02_Web/
+03_Poster/
+*.jpg
+*.png
+__pycache__/

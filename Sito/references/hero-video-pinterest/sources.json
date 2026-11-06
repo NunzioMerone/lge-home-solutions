@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-06",
+  "authorization": "User supplied both links and requested downloading and editing for this local preview. No publication authorization or new commercial license is asserted.",
+  "source_identity": "First Pin is titled Domino Infissi; it is not asserted as an LGE partner or installation. Second Pin has unverified manufacturer/creator identity.",
+  "removed_entirely": "Pexels 9583985, old white glazed door with brass handle.",
+  "sources": [
+    {
+      "user_url": "https://pin.it/1VjhVbhGf",
+      "resolved_page": "https://it.pinterest.com/pin/778067273156987679/",
+      "title": "Domino Infissi | Trasforma i tuoi ambienti con gli infissi Ultraresina [Video] | Finestre alluminio, Architettura sostenibile, Reticolo",
+      "media_url": "https://v1.pinimg.com/videos/iht/720p/8b/83/6a/8b836acfc1d66efd8d21a7ee81d79b59.mp4",
+      "delivered_dimensions": [
+        720,
+        1280
+      ],
+      "nominal_page_dimensions": [
+        1080,
+        1920
+      ],
+      "available_public_h264_and_hevc_max_dimensions": [
+        720,
+        1280
+      ],
+      "selected_excerpts": [
+        {
+          "scene": 3,
+          "description": "Profilo effetto legno e giunzioni del serramento, dettaglio ravvicinato",
+          "file": "pin-1.mp4",
+          "start": 12.367,
+          "full_after": 13.733,
+          "source_start": 10.25,
+          "source_end": 11.57
+        },
+        {
+          "scene": 8,
+          "description": "Finestra e tende chiare nel soggiorno arredato",
+          "file": "pin-1.mp4",
+          "start": 37.7,
+          "full_after": 39.067,
+          "source_start": 17.5,
+          "source_end": 19.12
+        }
+      ]
+    },
+    {
+      "user_url": "https://pin.it/1DQA2BczG",
+      "resolved_page": "https://it.pinterest.com/pin/943856034410859066/",
+      "title": "Comfortable living 😍⁠ [Video] | Windows with view, View of the sea through window, Apartment view",
+      "media_url": "https://v1.pinimg.com/videos/iht/expMp4/b5/58/29/b5582931dde1d22207de517bf81357d6_720w.mp4",
+      "delivered_dimensions": [
+        720,
+        1280
+      ],
+      "nominal_page_dimensions": [
+        1080,
+        1920
+      ],
+      "available_public_h264_and_hevc_max_dimensions": [
+        720,
+        1280
+      ],
+      "selected_excerpts": [
+        {
+          "scene": 4,
+          "description": "Vetrata contemporanea sul paesaggio, luce calda nella cucina",
+          "file": "pin-2.mp4",
+          "start": 15.8,
+          "full_after": 17.167,
+          "source_start": 5.8,
+          "source_end": 9.52
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "scene": 1,
+    "start": -1.3666666666666667,
+    "end": 8.033333333333333,
+    "description": "La tavola all’aperto, luce calda e gesti naturali",
+    "mobile": "La tavola all’aperto, luce calda e gesti naturali"
+  },
+  {
+    "scene": 2,
+    "start": 6.666666666666667,
+    "end": 13.733333333333333,
+    "description": "La finestra incornicia Firenze al tramonto",
+    "mobile": "La finestra incornicia Firenze al tramonto"
+  },
+  {
+    "scene": 3,
+    "start": 12.366666666666667,
+    "end": 20.366666666666667,
+    "description": "Vetrate complete e ingresso in legno nella casa luminosa",
+    "mobile": "Finestra scorrevole intera sul paesaggio, fonte verticale senza ingrandimento"
+  },
+  {
+    "scene": 4,
+    "start": 19.0,
+    "end": 27.233333333333334,
+    "description": "Legno e luce naturale nella mansarda abitata",
+    "mobile": "Legno e luce naturale nella mansarda abitata"
+  },
+  {
+    "scene": 5,
+    "start": 25.866666666666667,
+    "end": 32.93333333333333,
+    "description": "Legno e geometria della porta d’ingresso reale",
+    "mobile": "Legno e geometria della porta d’ingresso reale"
+  },
+  {
+    "scene": 6,
+    "start": 31.566666666666666,
+    "end": 37.43333333333333,
+    "description": "Porta interna scura, parquet e luce radente nel corridoio",
+    "mobile": "Porta interna scura, parquet e luce radente nel corridoio"
+  },
+  {
+    "scene": 7,
+    "start": 36.06666666666667,
+    "end": 43.06666666666667,
+    "description": "Vetrate e schermature della casa nella luce del tramonto",
+    "mobile": "Finestra completa con tende e tavola apparecchiata, fonte verticale senza ingrandimento"
+  },
+  {
+    "scene": 8,
+    "start": 41.7,
+    "end": 47.56666666666667,
+    "description": "Tende morbide e luce dorata sulla finestra",
+    "mobile": "Tende morbide e luce dorata sulla finestra"
+  },
+  {
+    "scene": 9,
+    "start": 46.2,
+    "end": 50.9,
+    "description": "Un momento di relax sotto la pergola",
+    "mobile": "Un momento di relax sotto la pergola"
+  },
+  {
+    "scene": 10,
+    "start": 49.53333333333333,
+    "end": 58.93333333333333,
+    "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+    "mobile": "Leggere nella luce filtrata, tra toni sabbia e tessuti"
+  }
+]

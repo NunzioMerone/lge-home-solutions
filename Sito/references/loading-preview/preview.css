@@ -1,0 +1,62 @@
+.preview-controls {
+  position: fixed;
+  z-index: 200;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  gap: 8px;
+  max-width: calc(100vw - 32px);
+  padding: 12px 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  background: var(--color-paper);
+  box-shadow: 0 6px 25px rgb(0 0 0 / 8%);
+  color: var(--color-heading);
+  font-size: 12px;
+}
+.preview-controls > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.preview-controls button {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--color-blue);
+}
+.preview-controls button[aria-pressed='true'] {
+  background: var(--color-sky);
+}
+.preview-controls a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+.copy-check {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 160px;
+}
+.copy-check h1 {
+  font-size: 36px;
+  margin: 0 0 16px;
+}
+.copy-check p {
+  max-width: 60ch;
+  margin: 0 0 20px;
+}
+.copy-check select {
+  min-height: 44px;
+  margin-left: 12px;
+  font: inherit;
+}
+.copy-card {
+  width: min(100%, 280px);
+  margin-top: 24px;
+}
+.copy-check [data-photo] img {
+  transform: scale(var(--photo-zoom)) !important;
+  transition: none;
+}

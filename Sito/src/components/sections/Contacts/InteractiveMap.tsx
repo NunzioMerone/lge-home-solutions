@@ -56,7 +56,7 @@ export default function InteractiveMap() {
         iconAnchor: [14, 36],
       }),
     }).addTo(instance)
-    const resize = new ResizeObserver(() => instance.invalidateSize({ pan: false }))
+    const resize = new ResizeObserver(() => instance.invalidateSize({ pan: true, animate: false }))
     resize.observe(container)
     return () => {
       view.current = { center: instance.getCenter(), zoom: instance.getZoom() }

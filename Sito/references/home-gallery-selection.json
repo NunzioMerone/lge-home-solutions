@@ -1,0 +1,285 @@
+{
+  "date": "2026-11-06",
+  "sourceDirectory": "LGE_foto_lavori_home",
+  "count": 11,
+  "processing": "Exact user selection. Responsive WebP 480/960/native width, quality 84/87, metadata omitted, no crop or generative editing.",
+  "originalBytes": 24577298,
+  "optimizedBytes": 2812394,
+  "photos": [
+    {
+      "id": "home-infissi-cucina",
+      "source": "01-infissi-cucina.png",
+      "sourceSha256": "00deaefd402e47ab06dcd316f1f070dddb3a021b45304e02eeab6642e399c9f4",
+      "sourceBytes": 2199732,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 24992,
+          "file": "home-infissi-cucina-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 86136,
+          "file": "home-infissi-cucina-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 184726,
+          "file": "home-infissi-cucina-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-vetrate-angolo",
+      "source": "02-infissi-vetrate-angolo.png",
+      "sourceSha256": "a98ef250401d1bfa9f5989b99f9655d91542a87cb0618ea801b7ff2ef2f0da36",
+      "sourceBytes": 2124884,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 20912,
+          "file": "home-vetrate-angolo-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 72590,
+          "file": "home-vetrate-angolo-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 160856,
+          "file": "home-vetrate-angolo-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-oscuranti-mare",
+      "source": "03-oscuranti-vista-mare.png",
+      "sourceSha256": "ce7ade08d4bebf4a91fe67d29ab9a3d798dd1a712659da2bae5029940598c5c9",
+      "sourceBytes": 2375179,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 32372,
+          "file": "home-oscuranti-mare-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 105428,
+          "file": "home-oscuranti-mare-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 232124,
+          "file": "home-oscuranti-mare-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-oscuranti-soggiorno",
+      "source": "04-oscuranti-soggiorno.png",
+      "sourceSha256": "ce386e59efea65bc66b5f094ea2477a10535fa07e2fe193d9d93c711edbc508a",
+      "sourceBytes": 2357267,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 15120,
+          "file": "home-oscuranti-soggiorno-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 64494,
+          "file": "home-oscuranti-soggiorno-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 169242,
+          "file": "home-oscuranti-soggiorno-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-ingresso-grigio",
+      "source": "05-ingresso-grigio.png",
+      "sourceSha256": "dc4979b7ac642dad199a0d526f87540316b47cc043cb38879cd9c08e7f30c440",
+      "sourceBytes": 2075389,
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 6654,
+          "file": "home-ingresso-grigio-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 23598,
+          "file": "home-ingresso-grigio-960.webp"
+        },
+        {
+          "width": 1086,
+          "bytes": 45186,
+          "file": "home-ingresso-grigio-1086.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-ingresso-bianco",
+      "source": "06-ingresso-bianco.png",
+      "sourceSha256": "2a5f206f17761d412195304594e72748de3a90380dd2c8329fd395c89b5975a7",
+      "sourceBytes": 1960263,
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 11836,
+          "file": "home-ingresso-bianco-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 44466,
+          "file": "home-ingresso-bianco-960.webp"
+        },
+        {
+          "width": 1086,
+          "bytes": 65134,
+          "file": "home-ingresso-bianco-1086.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-porta-legno",
+      "source": "08-porta-legno.png",
+      "sourceSha256": "dbbaf10ea3fb2ffd0efc1548b4e11febb1091e8c8cd1ab4d0e665c6b6f2b8daf",
+      "sourceBytes": 2035615,
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 18404,
+          "file": "home-porta-legno-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 71834,
+          "file": "home-porta-legno-960.webp"
+        },
+        {
+          "width": 1086,
+          "bytes": 109092,
+          "file": "home-porta-legno-1086.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-pergola-antracite",
+      "source": "09-pergola-antracite.png",
+      "sourceSha256": "d63dac2defa8b3d9c763c03c608c329346b77b340fce6802b39a4245762dccc6",
+      "sourceBytes": 2363964,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 33200,
+          "file": "home-pergola-antracite-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 110828,
+          "file": "home-pergola-antracite-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 231440,
+          "file": "home-pergola-antracite-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-pergola-bianca",
+      "source": "10-pergola-bianca.png",
+      "sourceSha256": "77a06f4562af43dd0ee381e27d99d951e0bb5257dc69569e49f037ab04f517d3",
+      "sourceBytes": 2388351,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 30666,
+          "file": "home-pergola-bianca-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 104454,
+          "file": "home-pergola-bianca-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 223294,
+          "file": "home-pergola-bianca-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-tenda-golfo",
+      "source": "12-tenda-golfo.png",
+      "sourceSha256": "e1b314f5cb849255dde4b3737b1fc4011bd248076938c2a4ae08fb3d182b0460",
+      "sourceBytes": 2715399,
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 30856,
+          "file": "home-tenda-golfo-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 113054,
+          "file": "home-tenda-golfo-960.webp"
+        },
+        {
+          "width": 1448,
+          "bytes": 262084,
+          "file": "home-tenda-golfo-1448.webp"
+        }
+      ]
+    },
+    {
+      "id": "home-porta-filo",
+      "source": "Incollato 06-11-2026 alle 17:06:09.png",
+      "sourceSha256": "e6436086a08767a3d95eac66e5ce6bb372d4392ceb7fbc2cfd983f956f2390e0",
+      "sourceBytes": 1981255,
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "bytes": 9950,
+          "file": "home-porta-filo-480.webp"
+        },
+        {
+          "width": 960,
+          "bytes": 38692,
+          "file": "home-porta-filo-960.webp"
+        },
+        {
+          "width": 1086,
+          "bytes": 58680,
+          "file": "home-porta-filo-1086.webp"
+        }
+      ]
+    }
+  ]
+}

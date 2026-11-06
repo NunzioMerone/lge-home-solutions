@@ -3,8 +3,23 @@ import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import { assetUrl } from '../../../utils/assetUrl'
 import { ReviewsCarousel } from './ReviewsCarousel'
 import { RatingStars } from './RatingStars'
+import { Skeleton, SkeletonText } from '../../ui/Skeleton'
 import '@fontsource/cormorant-garamond/latin-400-italic.css'
 import styles from './Reviews.module.css'
+
+function ReviewsSkeleton() {
+  return (
+    <div className={styles.loadingCards} role="status" aria-label="Preparazione delle recensioni">
+      {[0, 1, 2].map((item) => (
+        <div className={styles.loadingCard} key={item} aria-hidden="true">
+          <Skeleton className={styles.loadingRating} />
+          <SkeletonText lines={5} />
+          <Skeleton className={styles.loadingAuthor} />
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function Reviews() {
   const ref = useSectionReveal()
@@ -57,11 +72,11 @@ export function Reviews() {
         <div data-reveal>
           {state.status === 'ready' ? (
             <ReviewsCarousel reviews={state.data.items} />
+          ) : state.status === 'loading' ? (
+            <ReviewsSkeleton />
           ) : (
             <p role="status" className={styles.status}>
-              {state.status === 'loading'
-                ? 'Caricamento recensioni…'
-                : 'Recensioni temporaneamente non disponibili.'}
+              Recensioni temporaneamente non disponibili.
             </p>
           )}
         </div>

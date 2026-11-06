@@ -27,6 +27,12 @@ export function Icon({ name, className }: IconProps) {
           <path d="M12 7v5l3 2" />
         </>
       )}
+      {name === 'calendar' && (
+        <>
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <path d="M7 3v4M17 3v4M3 10h18" />
+        </>
+      )}
       {name === 'pin' && (
         <>
           <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />

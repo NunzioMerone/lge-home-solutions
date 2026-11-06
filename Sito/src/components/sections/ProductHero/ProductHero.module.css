@@ -42,13 +42,21 @@
   line-height: 1.9;
 }
 .image {
+  position: relative;
   grid-area: image;
   width: 100%;
   aspect-ratio: 1.08;
   max-height: 76svh;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: var(--radius);
   background: var(--color-greige);
+}
+.imageSkeleton {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  height: 100%;
+  border-radius: inherit;
 }
 .image img {
   display: block;

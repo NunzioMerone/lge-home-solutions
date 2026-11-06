@@ -1,4 +1,4 @@
-import { homeGallery as gallery } from '../../../data/works'
+import { homeGallery as gallery } from '../../../data/homeGallery'
 import { useLoopCarousel } from '../../../hooks/useLoopCarousel'
 import type { GalleryCarouselProps } from '../../../types/gallery'
 import { getLoopOffset } from '../../../utils/loopCarousel'

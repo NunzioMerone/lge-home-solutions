@@ -1,21 +1,21 @@
 {
-  "date": "2026-11-05",
-  "revision": "Rev08",
-  "scope": "Correzioni richieste: card compatte con prodotti visibili, home conservata al ritorno, caricamento iniziale ottimizzato e alternativa HEVC per Safari. Push e pubblicazione richiesti dall’utente.",
+  "date": "2026-11-06",
+  "revision": "Rev11",
+  "scope": "Checkpoint completo autorizzato dall’utente al push e alla pubblicazione GitHub Pages il 6 novembre 2026. Rev11 conserva montaggio e file già verificati.",
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
-  "duration_file": 52.93333333333333,
-  "duration_website": 52.93333333333333,
-  "provenance": "references/hero-video-safari/LEGGIMI.txt",
-  "stock_provenance": "Two new licensed Pexels interior-door atmosphere scenes; not verified LGE/partner products, installations or customers.",
+  "duration_file": 58.93333333333333,
+  "duration_website": 58.93333333333333,
+  "provenance": "references/hero-video-quality/LEGGIMI.txt",
+  "stock_provenance": "Native 4K licensed Pexels architectural footage and retained interior-door atmosphere; not verified LGE products or installations.",
   "assets": [
     {
       "format": "desktop",
       "kind": "video",
-      "source": "references/hero-video-playback/02_Web/LGE_Hero_Rev07_WEB_Desktop.mp4",
-      "target": "public/media/hero/hero-desktop-rev07.mp4",
-      "bytes": 20201968,
-      "sha256": "3c93274fc24bd79dc4d8c1e2bda19dee191064b13db4cd4b0d15ebc78084c4ca"
+      "source": "references/hero-video-quality/02_Web/LGE_Hero_Rev11_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev11.mp4",
+      "bytes": 33985042,
+      "sha256": "06295c0e9603b4e9b15c576231b2f74438c35b4d488691630cd52f5183755646"
     },
     {
       "format": "desktop",
@@ -28,10 +28,10 @@
     {
       "format": "tablet",
       "kind": "video",
-      "source": "references/hero-video-playback/02_Web/LGE_Hero_Rev07_WEB_Tablet.mp4",
-      "target": "public/media/hero/hero-tablet-rev07.mp4",
-      "bytes": 12930975,
-      "sha256": "701a3e3016bbd1200e6756958cb2090826fb64b6173763c393f8b720d73634f7"
+      "source": "references/hero-video-quality/02_Web/LGE_Hero_Rev11_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev11.mp4",
+      "bytes": 18886084,
+      "sha256": "9243a7f8fa23c8612de5417a1734d492e1469b8627202c9bdbd15867d5398c27"
     },
     {
       "format": "tablet",
@@ -44,10 +44,10 @@
     {
       "format": "mobile",
       "kind": "video",
-      "source": "references/hero-video-playback/02_Web/LGE_Hero_Rev07_WEB_Mobile.mp4",
-      "target": "public/media/hero/hero-mobile-rev07.mp4",
-      "bytes": 9272446,
-      "sha256": "82819e30434a01742612872c85c254b6900aba0cf3fe22e0f93e7034e67b3fe5"
+      "source": "references/hero-video-quality/02_Web/LGE_Hero_Rev11_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev11.mp4",
+      "bytes": 11745488,
+      "sha256": "5ace01747a236e87b49c465df15b43935f97c6aa8b65adec908e0725eb034d04"
     },
     {
       "format": "mobile",
@@ -61,14 +61,16 @@
       "format": "mobile",
       "kind": "video-efficient",
       "codec": "hevc",
-      "source": "references/hero-video-safari/02_Web/LGE_Hero_Rev08_WEB_Mobile_HEVC.mp4",
-      "target": "public/media/hero/hero-mobile-rev08-hevc.mp4",
-      "bytes": 6070748,
-      "sha256": "4536eca466a0a8815b8b7511979df6ddfd43cd82402b3de1378e8ad7d391e5e3"
+      "source": "references/hero-video-quality/02_Web/LGE_Hero_Rev11_WEB_Mobile_HEVC.mp4",
+      "target": "public/media/hero/hero-mobile-rev11-hevc.mp4",
+      "bytes": 7893094,
+      "sha256": "c4d537389a841179a27d2c4783ff231e134c17580d7c15b0cb2dcce2b5b657fc"
     }
   ],
   "publication": {
-    "authorized_by_user": "2026-11-05",
+    "status": "local-only",
+    "authorized": false,
+    "previous_published_revision": "Rev08",
     "repository": "NunzioMerone/lge-home-solutions",
     "branch": "main",
     "site": "https://nunziomerone.github.io/lge-home-solutions/",

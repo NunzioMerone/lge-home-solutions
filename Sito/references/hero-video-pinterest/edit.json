@@ -1,0 +1,356 @@
+{
+  "revision": "Rev10",
+  "status": "Local-only edit from two user-selected Pinterest videos; removed the old brass-handle glazed door.",
+  "fps": 30,
+  "transition_frames": 41,
+  "audio": false,
+  "website_playback_rate": 1,
+  "look": "Natural warm midtones; no sharpening or synthetic detail generation.",
+  "rights": "The two Pinterest links were supplied and downloading for this local edit was explicitly requested by the user. No new commercial license or LGE partnership is asserted; no push or publication.",
+  "sources": [
+    {
+      "file": "gibus-awnings.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "kind": "Outdoor table, retained from Rev03",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "b30e83ec996e4b980be6768fc9b4674d016c76fc730985788673f98a33a0f94e",
+      "path": "../hero-video-warm/sources/gibus-awnings.mp4"
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "kind": "Couple relaxing, retained from Rev03",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "dede3455551f4496d7f6d707a1658bf799e433383969038416878129afb88bdd",
+      "path": "../hero-video-warm/sources/gibus-pergola.mp4"
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684237525",
+      "kind": "Warm living space with solar screens; previously researched, newly added to site edit",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "9854f966f5899339fa016eceb026597b45c298c138e1f60bb7c3ff3dcc6fcbf6",
+      "path": "../hero-video-warm/sources/gibus-screens.mp4"
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "brand": "VEKA / Finestra Italiana",
+      "page": "https://www.gruppoicat.com/case/veka.php",
+      "url": "https://player.vimeo.com/video/768462996",
+      "kind": "Highest public copy of the same campaign. Optical background softness is present in the original, not restored by 4K.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "b9e41362f3bfb6eb3c5a9b23d83fbc325006db8ec9238f8b2dc4b28f60bda991",
+      "path": "../hero-video-refinement/research-quality/veka-living-4k.mp4"
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "brand": "VELUX",
+      "page": "https://www.socialcontentfactory.it/it/corporate-videostrategy/storie-di-luce/",
+      "url": "https://player.vimeo.com/video/273862065",
+      "kind": "New Full HD residential film from the production company. Upper architectural framing omits unrelated narration subtitles.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2aebf7ed082e26514c525d55be67ee8c73c5bf24e255e9eecf4465a86f25a77b",
+      "path": "../hero-video-warm/sources/velux-bologna.mp4"
+    },
+    {
+      "file": "tehni-xl.mp4",
+      "path": "../hero-video-final/sources/tehni-xl.mp4",
+      "brand": "TEHNi",
+      "page": "https://www.youtube.com/@tehni.s.a",
+      "url": "https://www.youtube.com/watch?v=Q5O67uFLEts",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "kind": "Physical wood entrance door in a studio, clean upward camera movement. Original manufacturer mark retained.",
+      "sha256": "1e2ea1980d083c5d110993a77d046fd8ad57491cf4942c71826d74964b968df1"
+    },
+    {
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "path": "../hero-video-interiors/sources-stock-a/pexels-7578548-house-hallway-4k.mp4",
+      "brand": null,
+      "author": "Kindel Media",
+      "page": "https://www.pexels.com/video/video-of-a-house-hallway-7578548/",
+      "url": "https://videos.pexels.com/video-files/7578548/7578548-uhd_3840_2160_30fps.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "ef4dd9ea2f6dac6e381cdd56aa947594ade059a23fadecf0898c92b2959572bc",
+      "kind": "Generic interior-door atmosphere stock; not a verified LGE or partner product, installation or customer.",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "license_checked": "2026-11-05"
+    },
+    {
+      "file": "pin-1.mp4",
+      "path": "sources/pin-1.mp4",
+      "brand": "Domino Infissi",
+      "page": "https://it.pinterest.com/pin/778067273156987679/",
+      "user_shared_url": "https://pin.it/1VjhVbhGf",
+      "url": "https://v1.pinimg.com/videos/iht/720p/8b/83/6a/8b836acfc1d66efd8d21a7ee81d79b59.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "sha256": "c2821ba6d7f55a559600ce13516b6621102312b057862b99fa47586b26c79419",
+      "kind": "User-selected Pinterest footage, not a verified LGE/partner installation; local-only use.",
+      "public_variants_checked": "H.264 and HEVC playlists expose at most 720×1280; nominal 1080×1920 page metadata is not the delivered resolution."
+    },
+    {
+      "file": "pin-2.mp4",
+      "path": "sources/pin-2.mp4",
+      "brand": null,
+      "page": "https://it.pinterest.com/pin/943856034410859066/",
+      "user_shared_url": "https://pin.it/1DQA2BczG",
+      "url": "https://v1.pinimg.com/videos/iht/expMp4/b5/58/29/b5582931dde1d22207de517bf81357d6_720w.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "sha256": "6219d573495a9c2725373e21d987943eadfc8bf719fa12486c27283c98b138a8",
+      "kind": "User-selected Pinterest footage, not a verified LGE/partner installation; local-only use.",
+      "public_variants_checked": "H.264 and HEVC playlists expose at most 720×1280; nominal 1080×1920 page metadata is not the delivered resolution."
+    }
+  ],
+  "shots": [
+    {
+      "file": "gibus-awnings.mp4",
+      "description": "La tavola all’aperto, luce calda e gesti naturali",
+      "category": "outdoor",
+      "start": 0.1,
+      "frames": 282,
+      "speed": 0.612,
+      "source_fps": 25,
+      "focal": 0.54,
+      "mobile_focal": 0.48,
+      "mobile_focal_end": 0.59,
+      "warmth": 0.35,
+      "previous_frames": 192
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "description": "La finestra incornicia Firenze al tramonto",
+      "category": "windows",
+      "start": 33.44,
+      "frames": 212,
+      "speed": 0.391,
+      "source_fps": 25,
+      "source_crop": "3840:1508:0:328",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.15,
+      "previous_frames": 144
+    },
+    {
+      "file": "pin-1.mp4",
+      "description": "Profilo effetto legno e giunzioni del serramento, dettaglio ravvicinato",
+      "category": "windows-detail",
+      "start": 10.25,
+      "frames": 144,
+      "speed": 0.275,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "focal_y": 0.2,
+      "warmth": 0.1
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Vetrata contemporanea sul paesaggio, luce calda nella cucina",
+      "category": "windows",
+      "start": 5.8,
+      "frames": 186,
+      "speed": 0.6,
+      "source_fps": 30,
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "focal_y": 0.34,
+      "warmth": 0.35
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "description": "Legno e luce naturale nella mansarda abitata",
+      "category": "roof-windows",
+      "start": 64.76,
+      "frames": 247,
+      "speed": 0.6375,
+      "source_fps": 25,
+      "source_crop": "1920:880:0:0",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.8,
+      "previous_frames": 168
+    },
+    {
+      "file": "tehni-xl.mp4",
+      "description": "Legno e geometria della porta d’ingresso reale",
+      "category": "entrance",
+      "start": 25.8,
+      "frames": 212,
+      "speed": 0.51,
+      "source_fps": 29.97002997,
+      "focal": 0.5,
+      "mobile_focal": 0.16,
+      "warmth": 0.1,
+      "previous_frames": 144
+    },
+    {
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "description": "Porta interna scura, parquet e luce radente nel corridoio",
+      "category": "interior-doors",
+      "start": 0.3,
+      "frames": 176,
+      "speed": 0.544,
+      "source_fps": 30,
+      "source_crop": "3840:2144:0:8",
+      "focal": 0.6,
+      "mobile_focal": 0.67,
+      "mobile_focal_end": 0.8,
+      "warmth": 0.05,
+      "previous_frames": 120
+    },
+    {
+      "file": "pin-1.mp4",
+      "description": "Finestra e tende chiare nel soggiorno arredato",
+      "category": "windows",
+      "start": 17.5,
+      "frames": 162,
+      "speed": 0.3,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "focal_y": 0.3,
+      "warmth": 0.9
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "description": "Tende morbide e luce dorata sulla finestra",
+      "category": "windows",
+      "start": 13.44,
+      "frames": 176,
+      "speed": 0.425,
+      "source_fps": 25,
+      "source_crop": "3840:1508:0:328",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.1,
+      "previous_frames": 120
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "description": "Un momento di relax sotto la pergola",
+      "category": "outdoor",
+      "start": 1.68,
+      "frames": 141,
+      "speed": 0.34,
+      "source_fps": 25,
+      "focal": 0.53,
+      "mobile_focal": 0.6,
+      "warmth": 0.8,
+      "previous_frames": 96
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+      "category": "shading",
+      "start": 7.3,
+      "frames": 282,
+      "speed": 0.5525,
+      "source_fps": 25,
+      "focal": 0.58,
+      "mobile_focal": 0.14,
+      "mobile_focal_end": 0.18,
+      "warmth": 0.25,
+      "previous_frames": 192
+    }
+  ],
+  "exports": {
+    "Desktop": [
+      1920,
+      1080
+    ],
+    "Tablet": [
+      1280,
+      960
+    ],
+    "Mobile": [
+      720,
+      1280
+    ]
+  },
+  "quality_changes": [
+    "Removed the entire Pexels 9583985 glazed door with brass handle from all formats.",
+    "Three source excerpts from the two user-selected Pinterest Pins, without source hard cuts or the end title.",
+    "Existing eight scenes keep their timing, colors and prepared source frames, including the screen-priority mobile crop from Rev09.",
+    "Portrait sources are reframed separately for widescreen, tablet and mobile before optical-flow interpolation; no interpolation after upscaling.",
+    "Eleven scenes, 30 fps, 41-frame crossfades and a continuous loop; desktop/tablet/mobile H.264 plus portrait HEVC. Local only."
+  ],
+  "previous_frame_rate": 24,
+  "baked_playback_rate": 0.85,
+  "encoding": {
+    "Desktop": {
+      "crf": 21,
+      "profile": "high",
+      "level": "4.1",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 60,
+      "maxrate": "3200k",
+      "bufsize": "6400k"
+    },
+    "Tablet": {
+      "crf": 21,
+      "profile": "high",
+      "level": "4.1",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 60,
+      "maxrate": "2200k",
+      "bufsize": "4400k"
+    },
+    "Mobile": {
+      "crf": 21,
+      "profile": "high",
+      "level": "4.1",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 60,
+      "maxrate": "1500k",
+      "bufsize": "3000k"
+    }
+  },
+  "cache_directory": "../hero-video-playback/.prepared",
+  "efficient_mobile": {
+    "codec": "libx265",
+    "tag": "hvc1",
+    "profile": "main",
+    "crf": 22,
+    "maxrate": "1400k",
+    "bufsize": "1400k",
+    "refs": 2,
+    "bframes": 2,
+    "gop": 60
+  }
+}

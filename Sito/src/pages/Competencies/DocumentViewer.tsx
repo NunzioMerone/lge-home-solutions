@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { Icon } from '../../components/ui/Icon'
 import type { DocumentViewerProps } from '../../types/competencyDocuments'
-import styles from './DocumentViewer.module.css'
+import styles from '../../components/ui/MediaDialog.module.css'
 
 export function DocumentViewer({ document, trigger, onClose }: DocumentViewerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
