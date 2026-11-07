@@ -37,9 +37,9 @@ export interface GalleryLightboxNavigation {
 export interface GalleryLightboxCarouselProps {
   ref: Ref<GalleryLightboxNavigation>
   photos: readonly GalleryPhoto[]
-  initialIndex: number
   selectedIndex: number
   reducedMotion: boolean
+  compact: boolean
   onSelect: (index: number) => void
   onReady: () => void
   onClose: () => void
@@ -49,10 +49,19 @@ export interface GalleryLightboxSlideProps {
   photo: GalleryPhoto
   active: boolean
   navigable: boolean
+  compact: boolean
   navigationReady?: boolean
   onClose: () => void
   onPrevious: () => void
   onNext: () => void
+}
+
+export type GalleryImageLoadState = 'loading' | 'ready' | 'failed'
+
+export interface GalleryLightboxPhotoProps {
+  photo: GalleryPhoto
+  detailWidth: number
+  active: boolean
 }
 
 export interface GalleryImageProps {

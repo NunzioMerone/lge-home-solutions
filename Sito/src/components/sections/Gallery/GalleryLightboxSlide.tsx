@@ -1,34 +1,32 @@
-import { useState } from 'react'
+import { memo } from 'react'
 import type { GalleryLightboxSlideProps } from '../../../types/gallery'
 import { Icon } from '../../ui/Icon'
-import { Skeleton } from '../../ui/Skeleton'
-import { GalleryImage } from './GalleryImage'
+import { lightboxImageWidth } from '../../../utils/galleryImages'
+import { GalleryLightboxPhoto } from './GalleryLightboxPhoto'
 import dialogStyles from '../../ui/MediaDialog.module.css'
 import styles from './GalleryLightbox.module.css'
 
-export function GalleryLightboxSlide({
+export const GalleryLightboxSlide = memo(function GalleryLightboxSlide({
   photo,
   active,
   navigable,
+  compact,
   navigationReady = true,
   onClose,
   onPrevious,
   onNext,
 }: GalleryLightboxSlideProps) {
-  const [settled, setSettled] = useState(false)
+  const detailWidth = lightboxImageWidth(photo, compact)
   return (
     <div className={styles.slideContent} data-lightbox-content data-navigable={navigable}>
-      <div className={`${dialogStyles.media} ${styles.photo}`}>
-        <GalleryImage
-          photo={photo}
-          full
-          fetchPriority={active ? 'high' : 'low'}
-          onSettled={() => setSettled(true)}
-        />
-        {!settled && <Skeleton className={styles.loading} />}
-      </div>
+      <GalleryLightboxPhoto
+        key={detailWidth}
+        photo={photo}
+        detailWidth={detailWidth}
+        active={active}
+      />
       <button
-        className={dialogStyles.close}
+        className={`${dialogStyles.close} ${styles.close}`}
         type="button"
         data-lightbox-control="close"
         aria-label="Chiudi fotografia"
@@ -62,4 +60,4 @@ export function GalleryLightboxSlide({
       )}
     </div>
   )
-}
+})

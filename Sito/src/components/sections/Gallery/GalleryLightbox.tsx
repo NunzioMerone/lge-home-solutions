@@ -6,6 +6,7 @@ import type {
   GalleryLightboxProps,
 } from '../../../types/gallery'
 import { useMotion } from '../../../hooks/useMotion'
+import { useMediaQuery } from '../../../hooks/useMediaQuery'
 import { GalleryLightboxSlide } from './GalleryLightboxSlide'
 import dialogStyles from '../../ui/MediaDialog.module.css'
 import styles from './GalleryLightbox.module.css'
@@ -32,6 +33,7 @@ export function GalleryLightbox({ photo, trigger, onClose, photos }: GalleryLigh
   const [dialogOpen, setDialogOpen] = useState(false)
   const [carouselRevision, setCarouselRevision] = useState(0)
   const { reducedMotion } = useMotion()
+  const compact = useMediaQuery('(max-width: 699px), (max-width: 1000px) and (max-height: 500px)')
   const current = collection[index] ?? photo
   const count = collection.length
   const selectPhoto = (nextIndex: number) => {
@@ -132,7 +134,8 @@ export function GalleryLightbox({ photo, trigger, onClose, photos }: GalleryLigh
             <GalleryLightboxSlide
               photo={photo}
               active
-              navigable={count > 1}
+              navigable={count > 1 && !compact}
+              compact={compact}
               navigationReady={false}
               onClose={onClose}
               onPrevious={() => navigationRef.current?.previous()}
@@ -145,9 +148,9 @@ export function GalleryLightbox({ photo, trigger, onClose, photos }: GalleryLigh
           <GalleryLightboxCarousel
             ref={navigationRef}
             photos={collection}
-            initialIndex={initialIndex}
             selectedIndex={index}
             reducedMotion={reducedMotion}
+            compact={compact}
             onSelect={selectPhoto}
             onReady={() => {
               focusRequested.current = focusedControl() ?? 'close'

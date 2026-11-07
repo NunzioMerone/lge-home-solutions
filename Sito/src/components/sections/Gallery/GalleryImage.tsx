@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { GalleryImageProps } from '../../../types/gallery'
-import { assetUrl } from '../../../utils/assetUrl'
+import { galleryImageUrl } from '../../../utils/galleryImages'
 
 export function GalleryImage({
   photo,
@@ -11,8 +11,7 @@ export function GalleryImage({
   onSettled,
 }: GalleryImageProps) {
   const [failed, setFailed] = useState(false)
-  const source = (width: number) =>
-    assetUrl(`img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`)
+  const source = (width: number) => galleryImageUrl(photo, width)
   if (failed) {
     return (
       <span role="img" aria-label={photo.alt}>

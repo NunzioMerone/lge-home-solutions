@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-07",
+  "environment": "In-app browser on macOS; actual production build with deliberately delayed image responses",
+  "network": {
+    "detailHeaderDelayMs": 1800,
+    "previewHeaderDelayMs": 450,
+    "chunkBytes": 8192,
+    "chunkDelayMs": 70
+  },
+  "before": {
+    "frames": [
+      {
+        "height": 437,
+        "id": "lge-d691b49f",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 488,
+        "id": "lge-e82f4d32",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-0db25f41",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-76cd6474",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 437,
+        "id": "lge-e7b0f444",
+        "ready": "false",
+        "width": 328
+      }
+    ],
+    "probe": "{\"geometryChanges\":6,\"loads\":2}",
+    "status": "1 / 101"
+  },
+  "during": {
+    "arrows": 0,
+    "frames": [
+      {
+        "height": 488,
+        "id": "lge-e82f4d32",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-0db25f41",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-76cd6474",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 437,
+        "id": "lge-e7b0f444",
+        "ready": "false",
+        "width": 328
+      },
+      {
+        "height": 437,
+        "id": "lge-3b069cab",
+        "ready": "false",
+        "width": 328
+      }
+    ],
+    "probe": "{\"geometryChanges\":6,\"loads\":4}",
+    "status": "2 / 101"
+  },
+  "after": {
+    "frames": [
+      {
+        "height": 488,
+        "id": "lge-e82f4d32",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-0db25f41",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 246,
+        "id": "lge-76cd6474",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 437,
+        "id": "lge-e7b0f444",
+        "ready": "true",
+        "width": 328
+      },
+      {
+        "height": 437,
+        "id": "lge-3b069cab",
+        "ready": "true",
+        "width": 328
+      }
+    ],
+    "probe": "{\"geometryChanges\":6,\"loads\":11}",
+    "slides": 7,
+    "status": "2 / 101"
+  },
+  "lateImageGeometryChanges": 0,
+  "frameSizesStable": true,
+  "checks": [
+    "No mobile arrows in portrait or landscape",
+    "Seven slide nodes for the complete 101-photo collection",
+    "Five prepared photographs in preview and detail versions",
+    "Swiped 1 → 2 while the next detail was still pending",
+    "Frame geometry unchanged when delayed details appeared",
+    "Loop 1 ↔ 101 works; resize to desktop keeps selection; desktop arrows work",
+    "Home data: open last of 11 and wrap to first, including reduced motion",
+    "One- and two-photo collections pass; mobile Tab stays on close",
+    "Mobile detail 960px; desktop uses each original fullWidth; all 331 referenced source variants exist",
+    "Actual home carousel: opened 6/11 by keyboard, swiped to 7/11; source gallery-home/*-960.webp and no mobile arrows"
+  ],
+  "limits": "Responsive browser checks; no physical iPhone/Safari test and no claim of a guaranteed frame rate.",
+  "validation": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "tests": 42,
+    "testFiles": 10,
+    "build": "passed",
+    "staticRoutes": "prepared",
+    "formatting": "passed"
+  },
+  "build": {
+    "initialJsGzipKB": 143.44,
+    "deferredCarouselJsGzipKB": 27.82,
+    "deferredCarouselCssGzipKB": 1.18
+  },
+  "exampleImageBytes": {
+    "preview480": 18346,
+    "mobile960": 56914,
+    "desktop1600": 134656
+  }
+}
