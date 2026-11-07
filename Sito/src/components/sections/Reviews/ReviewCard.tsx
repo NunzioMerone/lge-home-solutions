@@ -4,7 +4,12 @@ import { RatingStars } from './RatingStars'
 import { ReviewText } from './ReviewText'
 import styles from './Reviews.module.css'
 
-export function ReviewCard({ review, active = false }: ReviewCardProps) {
+export function ReviewCard({
+  review,
+  active = false,
+  expanded,
+  onToggleExpanded,
+}: ReviewCardProps) {
   return (
     <article
       className={styles.card}
@@ -35,7 +40,7 @@ export function ReviewCard({ review, active = false }: ReviewCardProps) {
           <span className={styles.quoteMark} aria-hidden="true">
             “
           </span>
-          <ReviewText text={review.text} />
+          <ReviewText text={review.text} expanded={expanded} onToggleExpanded={onToggleExpanded} />
         </div>
       )}
       <footer className={styles.author}>

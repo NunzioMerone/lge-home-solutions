@@ -55,6 +55,13 @@ export function Icon({ name, className }: IconProps) {
           <circle cx="17.5" cy="6.5" r=".6" />
         </>
       )}
+      {name === 'facebook' && (
+        <path
+          fill="currentColor"
+          stroke="none"
+          d="M14 22v-9h3l.5-3.5H14V7.3c0-1 .3-1.8 1.8-1.8H18V2.3a25 25 0 0 0-2.8-.2c-2.8 0-4.7 1.7-4.7 4.8v2.6H7.4V13h3.1v9Z"
+        />
+      )}
       {name === 'whatsapp' && (
         <>
           <path d="M20.5 11.5A8.5 8.5 0 0 1 8 19l-5 2 1.5-5A8.5 8.5 0 1 1 20.5 11.5Z" />

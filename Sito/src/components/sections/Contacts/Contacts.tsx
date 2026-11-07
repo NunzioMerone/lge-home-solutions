@@ -36,18 +36,38 @@ export function Contacts() {
                 href={links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Prenota su WhatsApp al numero ${contacts.whatsapp}`}
+                aria-label="Scrivici su WhatsApp (nuova scheda)"
               >
                 <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
-                Prenota su WhatsApp
+                Scrivici
               </a>
             )}
             <div className={styles.appointmentNote}>
               <Icon name="calendar" />
               <div>
-                <h3>Su appuntamento</h3>
-                <p>Contattaci su WhatsApp per fissare la tua visita.</p>
+                <h3>Prenota una visita</h3>
+                <p>
+                  Scrivici su WhatsApp per fissare un appuntamento in showroom o per chiederci
+                  informazioni.
+                </p>
               </div>
+            </div>
+            <div className={styles.socials}>
+              <p>Seguici su</p>
+              {links.instagram && (
+                <a
+                  className={styles.socialIcon}
+                  href={links.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram di LGE Home Solutions (nuova scheda)"
+                >
+                  <Icon name="instagram" />
+                </a>
+              )}
+              <span className={styles.socialIcon} role="img" aria-label="Facebook">
+                <Icon name="facebook" />
+              </span>
             </div>
           </div>
           <div className={styles.directions} data-reveal>

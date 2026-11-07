@@ -1,6 +1,8 @@
 export interface LoopCarouselOptions {
   paused?: boolean
   delay?: number
+  continuousSpeed?: number
+  onSelect?: () => void
 }
 export interface CarouselArrowProps {
   direction: 'previous' | 'next'

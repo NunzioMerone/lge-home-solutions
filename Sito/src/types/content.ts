@@ -16,6 +16,7 @@ export type IconName =
   | 'phone'
   | 'mail'
   | 'instagram'
+  | 'facebook'
   | 'whatsapp'
   | 'craft'
   | 'thermal'

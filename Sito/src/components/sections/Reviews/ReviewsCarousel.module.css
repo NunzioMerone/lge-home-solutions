@@ -11,27 +11,13 @@
 }
 .track {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   touch-action: pan-y pinch-zoom;
 }
 .slide {
   flex: 0 0 88%;
   min-width: 0;
   padding-inline: 8px;
-  visibility: hidden;
-}
-.frame {
-  height: 100%;
-  transform: scale(0.95);
-  transition: transform 850ms var(--ease-out);
-}
-.slide[data-depth='0'],
-.slide[data-depth='1'],
-.slide[data-depth='2'] {
-  visibility: visible;
-}
-.slide[data-depth='0'] .frame {
-  transform: scale(1);
 }
 @media (min-width: 700px) {
   .slide {

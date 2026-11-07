@@ -31,6 +31,8 @@ export interface RatingStarsProps {
 export interface ReviewCardProps {
   review: GoogleReview
   active?: boolean
+  expanded: boolean
+  onToggleExpanded: () => void
 }
 
 export interface ReviewsCarouselProps {
@@ -44,4 +46,6 @@ export interface ReviewPaginationProps extends ReviewsCarouselProps {
 
 export interface ReviewTextProps {
   text: string
+  expanded: boolean
+  onToggleExpanded: () => void
 }

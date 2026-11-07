@@ -1,22 +1,22 @@
 import { useId } from 'react'
-import { useReviewExpansion } from '../../../hooks/useReviewExpansion'
+import { useReviewOverflow } from '../../../hooks/useReviewOverflow'
 import type { ReviewTextProps } from '../../../types/reviews'
 import styles from './Reviews.module.css'
 
-export function ReviewText({ text }: ReviewTextProps) {
+export function ReviewText({ text, expanded, onToggleExpanded }: ReviewTextProps) {
   const id = useId()
-  const { textRef, canExpand, expanded, toggleExpanded } = useReviewExpansion(text)
+  const { textRef, canExpand } = useReviewOverflow(text)
 
   return (
     <div className={styles.comment}>
       <blockquote id={id} ref={textRef} data-expanded={expanded}>
         {text}
       </blockquote>
-      {canExpand && (
+      {(canExpand || expanded) && (
         <button
           className={styles.expandButton}
           type="button"
-          onClick={toggleExpanded}
+          onClick={onToggleExpanded}
           aria-expanded={expanded}
           aria-controls={id}
         >

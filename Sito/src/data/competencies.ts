@@ -6,21 +6,24 @@ export const competencyHighlights: CompetencyHighlight[] = [
     title: 'Posa qualificata',
     label: 'UNI 11673-2 · EQF 4',
     icon: 'shield',
-    description: 'Preparazione tecnica e precisione, dalla scelta dei materiali alla posa.',
+    description:
+      "Competenze tecniche e precisione in ogni fase dell'installazione, per valorizzare le prestazioni di ogni serramento.",
   },
   {
     id: 'posaclima',
     title: 'PosaClima',
-    label: 'Formazione professionale',
+    label: 'Formazione specialistica',
     icon: 'craft',
-    description: 'Cura del serramento e riqualificazione del foro finestra.',
+    description:
+      "Una cura particolare del punto d'incontro tra infisso e parete, per limitare spifferi e dispersioni.",
   },
   {
     id: 'thermography',
     title: 'Termografia',
     label: 'I e II livello',
     icon: 'thermal',
-    description: 'Analisi delle temperature per individuare dispersioni e punti critici.',
+    description:
+      'Analisi mirate per individuare dispersioni termiche e criticità spesso invisibili a occhio nudo.',
   },
 ]
 

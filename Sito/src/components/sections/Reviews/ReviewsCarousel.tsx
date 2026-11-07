@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react'
 import { useLoopCarousel } from '../../../hooks/useLoopCarousel'
 import type { ReviewsCarouselProps } from '../../../types/reviews'
 import { getLoopOffset } from '../../../utils/loopCarousel'
@@ -7,8 +8,14 @@ import { CarouselArrow } from '../../ui/CarouselArrow'
 import styles from './ReviewsCarousel.module.css'
 
 export function ReviewsCarousel({ reviews }: ReviewsCarouselProps) {
+  const [expandedId, setExpandedId] = useState<string | null>(null)
+  const closeExpandedReview = useCallback(() => setExpandedId(null), [])
   const { regionRef, viewportRef, selected, onKeyDown, scrollTo, scrollPrev, scrollNext } =
-    useLoopCarousel({ delay: 6500 })
+    useLoopCarousel({
+      continuousSpeed: 0.27,
+      paused: expandedId !== null || reviews.length < 2,
+      onSelect: closeExpandedReview,
+    })
 
   return (
     <div
@@ -25,22 +32,25 @@ export function ReviewsCarousel({ reviews }: ReviewsCarouselProps) {
       <div className={styles.viewport} ref={viewportRef} id="reviews-carousel-viewport">
         <div className={styles.track}>
           {reviews.map((review, index) => {
-            const depth = Math.abs(getLoopOffset(index, selected, reviews.length))
-            const visible = depth <= 2
+            const visible = Math.abs(getLoopOffset(index, selected, reviews.length)) <= 2
             return (
               <div
                 key={review.id}
                 className={styles.slide}
-                data-depth={Math.min(depth, 3)}
                 aria-hidden={!visible}
                 inert={!visible}
                 role="group"
                 aria-roledescription="diapositiva"
                 aria-label={`${index + 1} di ${reviews.length}`}
               >
-                <div className={styles.frame}>
-                  <ReviewCard review={review} active={index === selected} />
-                </div>
+                <ReviewCard
+                  review={review}
+                  active={index === selected}
+                  expanded={expandedId === review.id}
+                  onToggleExpanded={() =>
+                    setExpandedId((id) => (id === review.id ? null : review.id))
+                  }
+                />
               </div>
             )
           })}

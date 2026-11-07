@@ -20,7 +20,8 @@ export function Certifications() {
             La qualità nasce dalla <em>competenza</em>
           </h2>
           <p className={styles.description}>
-            Preparazione tecnica e cura nella posa, per un comfort che dura.
+            Un buon serramento fa la differenza. Una posa eseguita con cura permette di valorizzarne
+            davvero le prestazioni.
           </p>
         </header>
       </div>
@@ -41,7 +42,7 @@ export function Certifications() {
         </div>
         <div className={styles.details} data-reveal>
           <Link className={styles.detailsLink} to={competenciesPage.path}>
-            Scopri le nostre competenze
+            Le nostre certificazioni
             <Icon name="arrow" />
           </Link>
         </div>

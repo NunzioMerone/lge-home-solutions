@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useReviewExpansion(text: string) {
+export function useReviewOverflow(text: string) {
   const textRef = useRef<HTMLQuoteElement>(null)
   const [canExpand, setCanExpand] = useState(false)
-  const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
     const element = textRef.current
@@ -26,5 +25,5 @@ export function useReviewExpansion(text: string) {
     }
   }, [text])
 
-  return { textRef, canExpand, expanded, toggleExpanded: () => setExpanded((value) => !value) }
+  return { textRef, canExpand }
 }

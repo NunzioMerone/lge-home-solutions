@@ -13,9 +13,9 @@ export const heroCopy = {
 }
 
 export const heroDescriptions: HeroDescriptions = {
-  windows: 'Luce naturale, comfort su misura.',
-  shading: 'La luce giusta, la tua privacy.',
-  security: 'Protezione che incontra il design.',
-  interior: 'Armonia in ogni ambiente.',
-  outdoor: 'Nuovi spazi, da vivere all’aperto.',
+  windows: 'Più luce, più silenzio, più benessere.',
+  shading: 'La luce che vuoi, la privacy che cerchi.',
+  security: 'Protezione e design, in perfetto equilibrio.',
+  interior: 'Dettagli che danno carattere ai tuoi spazi.',
+  outdoor: "Il comfort di casa, anche all'aperto.",
 }
