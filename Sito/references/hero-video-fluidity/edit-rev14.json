@@ -1,0 +1,617 @@
+{
+  "revision": "Rev14",
+  "status": "Anteprima locale con 13 estratti dai 7 Pin indicati dall’utente.",
+  "fps": 60,
+  "transition_frames": 82,
+  "audio": false,
+  "website_playback_rate": 1,
+  "look": "Natural warm midtones; no sharpening or synthetic detail generation.",
+  "rights": "I sette Pin sono riferimenti per il montaggio locale. I diritti per una futura pubblicazione restano da verificare.",
+  "sources": [
+    {
+      "file": "gibus-awnings.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684236545",
+      "kind": "Outdoor table, retained from Rev03",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "b30e83ec996e4b980be6768fc9b4674d016c76fc730985788673f98a33a0f94e",
+      "path": "../hero-video-warm/sources/gibus-awnings.mp4"
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "1065819900",
+      "kind": "Couple relaxing, retained from Rev03",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "dede3455551f4496d7f6d707a1658bf799e433383969038416878129afb88bdd",
+      "path": "../hero-video-warm/sources/gibus-pergola.mp4"
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "brand": "Gibus",
+      "page": "https://www.gibus.com/it/",
+      "playback_id": "684237525",
+      "kind": "Warm living space with solar screens; previously researched, newly added to site edit",
+      "dimensions": [
+        1320,
+        720
+      ],
+      "sha256": "9854f966f5899339fa016eceb026597b45c298c138e1f60bb7c3ff3dcc6fcbf6",
+      "path": "../hero-video-warm/sources/gibus-screens.mp4"
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "brand": "VEKA / Finestra Italiana",
+      "page": "https://www.gruppoicat.com/case/veka.php",
+      "url": "https://player.vimeo.com/video/768462996",
+      "kind": "Highest public copy of the same campaign. Optical background softness is present in the original, not restored by 4K.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "b9e41362f3bfb6eb3c5a9b23d83fbc325006db8ec9238f8b2dc4b28f60bda991",
+      "path": "../hero-video-refinement/research-quality/veka-living-4k.mp4"
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "brand": "VELUX",
+      "page": "https://www.socialcontentfactory.it/it/corporate-videostrategy/storie-di-luce/",
+      "url": "https://player.vimeo.com/video/273862065",
+      "kind": "New Full HD residential film from the production company. Upper architectural framing omits unrelated narration subtitles.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2aebf7ed082e26514c525d55be67ee8c73c5bf24e255e9eecf4465a86f25a77b",
+      "path": "../hero-video-warm/sources/velux-bologna.mp4"
+    },
+    {
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "path": "../hero-video-interiors/sources-stock-a/pexels-7578548-house-hallway-4k.mp4",
+      "brand": null,
+      "author": "Kindel Media",
+      "page": "https://www.pexels.com/video/video-of-a-house-hallway-7578548/",
+      "url": "https://videos.pexels.com/video-files/7578548/7578548-uhd_3840_2160_30fps.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "ef4dd9ea2f6dac6e381cdd56aa947594ade059a23fadecf0898c92b2959572bc",
+      "kind": "Generic interior-door atmosphere stock; not a verified LGE or partner product, installation or customer.",
+      "license": "Pexels License, free on the individual source page",
+      "license_url": "https://www.pexels.com/license/",
+      "license_checked": "2026-11-05"
+    },
+    {
+      "file": "pin-1.mp4",
+      "path": "sources-rev14/pin-1.mp4",
+      "brand": null,
+      "title": "Minimal Frame Slim",
+      "page": "https://it.pinterest.com/pin/912260468250151525/",
+      "user_shared_url": "https://pin.it/7wG4xiGDt",
+      "url": "https://v1.pinimg.com/videos/mc/720p/46/f8/65/46f8656b1a34d9a14f6a221124cc7385.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "source_fps": 29.97002997002997,
+      "bitrate": 1224840,
+      "duration": 14.948267,
+      "sha256": "bca52e57e4a9035d0a23713a0b1d38d5f8c29944066f357a3604f30913181942",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-2.mp4",
+      "path": "sources-rev14/pin-2.mp4",
+      "brand": null,
+      "title": "Domino Infissi | Trasforma i tuoi ambienti con gli infissi Ultraresina",
+      "page": "https://it.pinterest.com/pin/778067273156987679/",
+      "user_shared_url": "https://pin.it/rAgQHxA1v",
+      "url": "https://v1.pinimg.com/videos/iht/720p/8b/83/6a/8b836acfc1d66efd8d21a7ee81d79b59.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "source_fps": 23.976023976023978,
+      "bitrate": 1969597,
+      "duration": 32.449083,
+      "sha256": "c2821ba6d7f55a559600ce13516b6621102312b057862b99fa47586b26c79419",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-3.mp4",
+      "path": "sources-rev14/pin-3.mp4",
+      "brand": null,
+      "title": "Flush Wall Door",
+      "page": "https://it.pinterest.com/pin/704109723011902423/",
+      "user_shared_url": "https://pin.it/30MUTmb9Y",
+      "url": "https://v1.pinimg.com/videos/iht/720p/3e/e0/ef/3ee0ef941e2decf191ff1468e5cb6bb8.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "source_fps": 30.0,
+      "bitrate": 860167,
+      "duration": 41.9,
+      "sha256": "09bc68a183dc4d7adea4a1140c60fc7eecb06f650c068dd6d38563e16ae8f5ba",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-4.mp4",
+      "path": "sources-rev14/pin-4.mp4",
+      "brand": null,
+      "title": "Pinterest video #787426316135739777",
+      "page": "https://it.pinterest.com/pin/787426316135739777/",
+      "user_shared_url": "https://pin.it/2u5Q2M74N",
+      "url": "https://v1.pinimg.com/videos/iht/expMp4/6a/31/a2/6a31a2e22013ed532710cad13d41480e_720w.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "source_fps": 30.0,
+      "bitrate": 653299,
+      "duration": 23.366667,
+      "sha256": "ec4b67e9bd0d3147ef1c06c62ae65e09f7933aaf6f1b268d5d7ad439b434f98e",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-5.mp4",
+      "path": "sources-rev14/pin-5.mp4",
+      "brand": null,
+      "title": "External Venetian Blinds For Modern Architectural Facades",
+      "page": "https://it.pinterest.com/pin/1106126358463656200/",
+      "user_shared_url": "https://pin.it/4YnZtG77O",
+      "url": "https://v1.pinimg.com/videos/mc/720p/9c/80/aa/9c80aacacaa1cf14e7d66e170cc55b13.mp4",
+      "dimensions": [
+        714,
+        1260
+      ],
+      "source_fps": 30.0,
+      "bitrate": 2293626,
+      "duration": 25.866667,
+      "sha256": "8b28654fa852620ee1e6a9a97a25a1fdd3934f783d9a12b7c198af5415ed1aaf",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-6.mp4",
+      "path": "sources-rev14/pin-6.mp4",
+      "brand": null,
+      "title": "Pinterest video #719379740523501194",
+      "page": "https://it.pinterest.com/pin/719379740523501194/",
+      "user_shared_url": "https://pin.it/3qPdtYirk",
+      "url": "https://v1.pinimg.com/videos/iht/expMp4/09/5a/a0/095aa0e097423bcdc08e994ce823c5c2_720w.mp4",
+      "dimensions": [
+        690,
+        1230
+      ],
+      "source_fps": 12.0,
+      "bitrate": 980081,
+      "duration": 6.25,
+      "sha256": "53ea0629249b676a6fc7b0e4bc941d0ea27824405b4f0cab8ff38851cf05ec08",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    },
+    {
+      "file": "pin-7.mp4",
+      "path": "sources-rev14/pin-7.mp4",
+      "brand": null,
+      "title": "The Lumiere Door : A Vision of Modern Elegance.",
+      "page": "https://it.pinterest.com/pin/503418064618657426/",
+      "user_shared_url": "https://pin.it/7s97kBaF7",
+      "url": "https://v1.pinimg.com/videos/iht/expMp4/2b/37/93/2b379365315419ec3d2b7e5ad8f380bb_720w.mp4",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "source_fps": 30.0,
+      "bitrate": 1312831,
+      "duration": 15.566667,
+      "sha256": "7e195fa697bc5ead47d89cd16ccf9a496c8e6e19a5b46269ed4c1293c423419b",
+      "kind": "Ripresa Pinterest selezionata dall’utente per l’anteprima locale."
+    }
+  ],
+  "shots": [
+    {
+      "file": "gibus-awnings.mp4",
+      "description": "La tavola all’aperto, luce calda e gesti naturali",
+      "category": "outdoor",
+      "start": 0.1,
+      "frames": 564,
+      "speed": 0.612,
+      "source_fps": 25,
+      "focal": 0.54,
+      "mobile_focal": 0.54,
+      "warmth": 0.35
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "description": "La finestra incornicia Firenze al tramonto",
+      "category": "windows",
+      "start": 33.44,
+      "frames": 424,
+      "speed": 0.391,
+      "source_fps": 25,
+      "source_crop": "3840:1508:0:328",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.15
+    },
+    {
+      "file": "pin-1.mp4",
+      "description": "Vetrata minimal sulla facciata",
+      "category": "pinterest",
+      "start": 2.47,
+      "frames": 102,
+      "speed": 0.50588235,
+      "source_fps": 29.97002997002997,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.64,
+        0.44
+      ],
+      "transition_frames": 39,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-1.mp4",
+      "description": "Infisso a due ante verso il terrazzo",
+      "category": "pinterest",
+      "start": 4.52,
+      "frames": 105,
+      "speed": 0.50285714,
+      "source_fps": 29.97002997002997,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.98,
+        0.52
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Infisso in legno sulla facciata in pietra",
+      "category": "pinterest",
+      "start": 1.26,
+      "frames": 108,
+      "speed": 0.51666667,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.7,
+        0.51
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Infisso in legno e maniglia",
+      "category": "pinterest",
+      "start": 5.81,
+      "frames": 93,
+      "speed": 0.47096774,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.68,
+        0.47
+      ],
+      "transition_frames": 24
+    },
+    {
+      "file": "velux-bologna.mp4",
+      "description": "Legno e luce naturale nella mansarda abitata",
+      "category": "roof-windows",
+      "start": 64.76,
+      "frames": 494,
+      "speed": 0.6375,
+      "source_fps": 25,
+      "source_crop": "1920:880:0:0",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.8,
+      "transition_frames": 39
+    },
+    {
+      "file": "pin-3.mp4",
+      "description": "Porta filomuro in legno intera",
+      "category": "pinterest",
+      "start": 1,
+      "frames": 159,
+      "speed": 0.75471698,
+      "source_fps": 30.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.97,
+        0.45
+      ],
+      "transition_frames": 39
+    },
+    {
+      "file": "pin-3.mp4",
+      "description": "Chiusura della porta filomuro",
+      "category": "pinterest",
+      "start": 37,
+      "frames": 243,
+      "speed": 0.97037037,
+      "source_fps": 30.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.87,
+        0.51
+      ],
+      "transition_frames": 24
+    },
+    {
+      "file": "pexels-7578548-house-hallway-4k.mp4",
+      "description": "Porta interna scura, parquet e luce radente nel corridoio",
+      "category": "interior-doors",
+      "start": 0.3,
+      "frames": 352,
+      "speed": 0.544,
+      "source_fps": 30,
+      "source_crop": "3840:2144:0:8",
+      "focal": 0.6,
+      "mobile_focal": 0.73,
+      "warmth": 0.05,
+      "transition_frames": 39
+    },
+    {
+      "file": "pin-7.mp4",
+      "description": "Porta d’ingresso scura e vetrate laterali",
+      "category": "pinterest",
+      "start": 5.26,
+      "frames": 201,
+      "speed": 0.80597015,
+      "source_fps": 30.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.77,
+        0.57
+      ],
+      "transition_frames": 39,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Infissi lungo il soggiorno",
+      "category": "pinterest",
+      "start": 17.48,
+      "frames": 126,
+      "speed": 0.77142857,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.77,
+        0.53
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Infisso in legno nel bagno",
+      "category": "pinterest",
+      "start": 20.64,
+      "frames": 135,
+      "speed": 0.79111111,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.64,
+        0.44
+      ],
+      "transition_frames": 24
+    },
+    {
+      "file": "pin-2.mp4",
+      "description": "Infisso dietro la tavola apparecchiata",
+      "category": "pinterest",
+      "start": 24.03,
+      "frames": 141,
+      "speed": 0.78297872,
+      "source_fps": 23.976023976023978,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.8,
+        0.45
+      ],
+      "transition_frames": 24
+    },
+    {
+      "file": "pin-4.mp4",
+      "description": "La tenda si apre sulla vetrata panoramica",
+      "category": "pinterest",
+      "start": 5,
+      "frames": 420,
+      "speed": 1.0,
+      "source_fps": 30.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.67,
+        0.45
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "pin-5.mp4",
+      "description": "Facciata con frangisole e porta",
+      "category": "pinterest",
+      "start": 15.77,
+      "frames": 123,
+      "speed": 0.56097561,
+      "source_fps": 30.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.98,
+        0.53
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.04
+    },
+    {
+      "file": "pin-6.mp4",
+      "description": "Discesa dell’avvolgibile",
+      "category": "pinterest",
+      "start": 1.15,
+      "frames": 180,
+      "speed": 1.0,
+      "source_fps": 12.0,
+      "focal": 0.5,
+      "warmth": 0.55,
+      "portrait_panel": [
+        0.9,
+        0.45
+      ],
+      "transition_frames": 24,
+      "mobile_panel": 0.22
+    },
+    {
+      "file": "veka-living-4k.mp4",
+      "description": "Tende morbide e luce dorata sulla finestra",
+      "category": "windows",
+      "start": 13.44,
+      "frames": 352,
+      "speed": 0.425,
+      "source_fps": 25,
+      "source_crop": "3840:1508:0:328",
+      "focal": 0.5,
+      "mobile_focal": 0.5,
+      "warmth": 0.1,
+      "transition_frames": 39
+    },
+    {
+      "file": "gibus-pergola.mp4",
+      "description": "Un momento di relax sotto la pergola",
+      "category": "outdoor",
+      "start": 1.68,
+      "frames": 282,
+      "speed": 0.34,
+      "source_fps": 25,
+      "focal": 0.53,
+      "mobile_focal": 0.6,
+      "warmth": 0.8
+    },
+    {
+      "file": "gibus-screens.mp4",
+      "description": "Leggere nella luce filtrata, tra toni sabbia e tessuti",
+      "category": "shading",
+      "start": 7.3,
+      "frames": 564,
+      "speed": 0.5525,
+      "source_fps": 25,
+      "focal": 0.58,
+      "mobile_focal": 0.14,
+      "warmth": 0.25
+    }
+  ],
+  "exports": {
+    "Desktop": [
+      1920,
+      1080
+    ],
+    "Tablet": [
+      1280,
+      960
+    ],
+    "Mobile": [
+      720,
+      1280
+    ]
+  },
+  "quality_changes": [
+    "Selezione sui tagli effettivi dei Pin.",
+    "Interpolazione a 60 fps e composizione orizzontale con il prodotto in primo piano.",
+    "Dissolvenze più brevi per gli estratti brevi."
+  ],
+  "previous_frame_rate": 30,
+  "baked_playback_rate": 1,
+  "encoding": {
+    "Desktop": {
+      "crf": 19,
+      "profile": "high",
+      "level": "4.2",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 120,
+      "maxrate": "6500k",
+      "bufsize": "13000k"
+    },
+    "Tablet": {
+      "crf": 20,
+      "profile": "high",
+      "level": "4.2",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 120,
+      "maxrate": "4200k",
+      "bufsize": "8400k"
+    },
+    "Mobile": {
+      "crf": 20,
+      "profile": "high",
+      "level": "4.1",
+      "refs": 3,
+      "bframes": 3,
+      "gop": 120,
+      "maxrate": "2200k",
+      "bufsize": "4400k"
+    }
+  },
+  "cache_directory": ".prepared",
+  "efficient_mobile": {
+    "codec": "libx265",
+    "tag": "hvc1",
+    "profile": "main",
+    "crf": 21,
+    "maxrate": "2000k",
+    "bufsize": "4000k",
+    "refs": 2,
+    "bframes": 2,
+    "gop": 120,
+    "level": "4.0"
+  },
+  "shot_ids": [
+    "01",
+    "02",
+    "P1A",
+    "P1B",
+    "P2A",
+    "P2B",
+    "04",
+    "P3A",
+    "P3B",
+    "06",
+    "P7",
+    "P2C",
+    "P2D",
+    "P2E",
+    "P4",
+    "P5",
+    "P6",
+    "08",
+    "09",
+    "10"
+  ]
+}

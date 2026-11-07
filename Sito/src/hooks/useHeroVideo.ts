@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import { heroVideoMedia, heroVideoPlaybackRate, heroVideoSources } from '../config/hero'
-import type { HeroVideoFormat, HeroVideoSource } from '../types/hero'
+import type { HeroVideoSource } from '../types/hero'
 import { useMediaQuery } from './useMediaQuery'
 import { useMotion } from './useMotion'
 
 export function useHeroVideo(pageActive: boolean) {
   const portrait = useMediaQuery(heroVideoMedia.portrait)
   const compact = useMediaQuery(heroVideoMedia.compact)
+  const largeTablet = useMediaQuery(heroVideoMedia.largeTablet)
   const { reducedMotion } = useMotion()
-  const format: HeroVideoFormat = portrait ? 'mobile' : compact ? 'tablet' : 'desktop'
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [failedFormat, setFailedFormat] = useState<HeroVideoFormat | null>(null)
-  const videoEnabled = !reducedMotion && failedFormat !== format
-  const source: HeroVideoSource = heroVideoSources[format]
+  const [failedVideos, setFailedVideos] = useState<ReadonlySet<string>>(() => new Set())
+  const standardFormat = portrait ? 'mobile' : compact ? 'tablet' : 'desktop'
+  const source: HeroVideoSource = heroVideoSources[largeTablet ? 'largeTablet' : standardFormat]
+  const videoEnabled = !reducedMotion && !failedVideos.has(source.video)
 
   useEffect(() => {
     const video = videoRef.current
@@ -54,13 +55,15 @@ export function useHeroVideo(pageActive: boolean) {
       document.removeEventListener('visibilitychange', syncPlayback)
       video.pause()
     }
-  }, [format, videoEnabled, pageActive])
+  }, [source.video, videoEnabled, pageActive])
 
   return {
     videoRef,
-    format,
     source,
     videoEnabled,
-    onError: () => setFailedFormat(format),
+    onError: () =>
+      setFailedVideos((previous) =>
+        previous.has(source.video) ? previous : new Set([...previous, source.video]),
+      ),
   }
 }

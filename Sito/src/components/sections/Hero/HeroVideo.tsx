@@ -5,11 +5,17 @@ import type { PageActivityProps } from '../../../types/navigation'
 import styles from './Hero.module.css'
 
 export function HeroVideo({ active }: PageActivityProps) {
-  const { videoRef, format, source, videoEnabled, onError } = useHeroVideo(active)
+  const { videoRef, source, videoEnabled, onError } = useHeroVideo(active)
 
   return (
     <div className={styles.backdrop} aria-hidden="true">
       <picture>
+        <source
+          media={heroVideoMedia.largeTablet}
+          srcSet={assetUrl(heroVideoSources.largeTablet.poster)}
+          width={heroVideoSources.largeTablet.width}
+          height={heroVideoSources.largeTablet.height}
+        />
         <source
           media={heroVideoMedia.portrait}
           srcSet={assetUrl(heroVideoSources.mobile.poster)}
@@ -34,7 +40,7 @@ export function HeroVideo({ active }: PageActivityProps) {
       </picture>
       {videoEnabled && (
         <video
-          key={`${format}:${source.video}`}
+          key={source.video}
           ref={videoRef}
           id="hero-video"
           className={styles.video}
@@ -54,7 +60,7 @@ export function HeroVideo({ active }: PageActivityProps) {
           {source.efficientVideo && (
             <source src={assetUrl(source.efficientVideo)} type='video/mp4; codecs="hvc1"' />
           )}
-          <source src={assetUrl(source.video)} type="video/mp4" />
+          <source src={assetUrl(source.video)} type="video/mp4" onError={onError} />
         </video>
       )}
     </div>

@@ -1,80 +1,141 @@
 {
-  "date": "2026-11-06",
-  "revision": "Rev12",
-  "scope": "Miglioramento della fluidità dei movimenti laterali richiesto dall’utente, con pubblicazione esplicitamente autorizzata il 6 novembre 2026. Stesse scene e tempi di Rev11, 60 fps con interpolazione dalle fonti e crop portrait stabili.",
+  "date": "2026-11-07",
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
-  "duration_file": 58.93333333333333,
-  "duration_website": 58.93333333333333,
-  "provenance": "references/hero-video-fluidity/LEGGIMI.txt",
-  "stock_provenance": "Native 4K licensed Pexels architectural footage and retained interior-door atmosphere; not verified LGE products or installations.",
+  "stock_provenance": "La scena del corridoio è tratta da Pexels. Le altre fonti sono documentate nelle ricette di montaggio.",
+  "revision": "Rev20",
+  "scope": "Anteprima locale con Rev20 su desktop e Rev19 su tablet e telefono.",
+  "duration_file": 76.38333333333334,
+  "duration_website": 76.38333333333334,
+  "provenance": "references/hero-video-fluidity/edit-rev20.json",
   "assets": [
     {
       "format": "desktop",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev12_WEB_Desktop.mp4",
-      "target": "public/media/hero/hero-desktop-rev12.mp4",
-      "bytes": 39496890,
-      "sha256": "9e69e1345b46f5fb7a60670eea73da93625d9b730361d101c882e328a0e124ef"
+      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev20_WEB_Desktop.mp4",
+      "target": "public/media/hero/hero-desktop-rev20.mp4",
+      "bytes": 69946427,
+      "sha256": "b8619a2e33068faf5661da1b678035b1c974e137d463f5470b6ce6baab6c94ab",
+      "codec": "h264"
     },
     {
       "format": "desktop",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev12_Poster_Desktop.jpg",
-      "target": "public/media/hero/hero-desktop-rev12-poster.jpg",
-      "bytes": 117174,
-      "sha256": "268f54378bcf2f5618450df87109d6af27a7b96548293f2052b5ced1a7759b48"
+      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev20_Poster_Desktop.jpg",
+      "target": "public/media/hero/hero-desktop-rev20-poster.jpg",
+      "bytes": 120635,
+      "sha256": "8e86472ca67f088321cc631ec11e006b5940dc41abe95129e8c9bacc1ed60c3f"
+    },
+    {
+      "format": "largeTablet",
+      "kind": "video",
+      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Tablet.mp4",
+      "target": "public/media/hero/hero-tablet-rev19.mp4",
+      "bytes": 28685827,
+      "sha256": "f76d540a43190cdb79dcfb8ba05adcd65e1b401dbad819147222b3a18b47fcfe",
+      "codec": "h264"
+    },
+    {
+      "format": "largeTablet",
+      "kind": "poster",
+      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_Tablet.jpg",
+      "target": "public/media/hero/hero-tablet-rev19-poster.jpg",
+      "bytes": 84692,
+      "sha256": "d4b9e4dd840db7701500e14afab78aff76fae12903d837e9a615669e15eca287"
     },
     {
       "format": "tablet",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev12_WEB_Tablet.mp4",
-      "target": "public/media/hero/hero-tablet-rev12.mp4",
-      "bytes": 22218411,
-      "sha256": "d7faf13fcb60377461768349e375f8944037d65a490adaca1a6ce8914dccf845"
+      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_TabletCompact.mp4",
+      "target": "public/media/hero/hero-tablet-compact-rev19.mp4",
+      "bytes": 27708464,
+      "sha256": "bc723e8a98c123f1c65f6a595bd5a009b353cb2f8c56ef5c5aa20601ef6edf23",
+      "codec": "h264"
     },
     {
       "format": "tablet",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev12_Poster_Tablet.jpg",
-      "target": "public/media/hero/hero-tablet-rev12-poster.jpg",
+      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_TabletCompact.jpg",
+      "target": "public/media/hero/hero-tablet-compact-rev19-poster.jpg",
       "bytes": 84692,
       "sha256": "d4b9e4dd840db7701500e14afab78aff76fae12903d837e9a615669e15eca287"
     },
     {
       "format": "mobile",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev12_WEB_Mobile.mp4",
-      "target": "public/media/hero/hero-mobile-rev12.mp4",
-      "bytes": 13236480,
-      "sha256": "1c4c89cf3e3b05f5e4c6adadcb2260c5ca86a9792a0dace23ec9c6a5f77e14f3"
+      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Mobile.mp4",
+      "target": "public/media/hero/hero-mobile-rev19.mp4",
+      "bytes": 20048309,
+      "sha256": "b13c613e9e1b996021f87531db9a3e8900faab7c5baf9a436e47f3153625f8ef",
+      "codec": "h264"
     },
     {
       "format": "mobile",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev12_Poster_Mobile.jpg",
-      "target": "public/media/hero/hero-mobile-rev12-poster.jpg",
-      "bytes": 70286,
-      "sha256": "45e6a4d0e077d92861c3c4a7c32c1361b4eede433fcf2eacb4568b3e8a77e998"
+      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_Mobile.jpg",
+      "target": "public/media/hero/hero-mobile-rev19-poster.jpg",
+      "bytes": 70810,
+      "sha256": "613d6d69465e940e62dc611a20d12d2ba68fe510f33a885bbe322e9391cadf0a"
     },
     {
       "format": "mobile",
       "kind": "video-efficient",
-      "codec": "hevc",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev12_WEB_Mobile_HEVC.mp4",
-      "target": "public/media/hero/hero-mobile-rev12-hevc.mp4",
-      "bytes": 8937880,
-      "sha256": "ed6b5d59bfbd6b4c8c32ce2ee8c0cb953c85281ae2a90e3e63dd063a799a2009"
+      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Mobile_HEVC.mp4",
+      "target": "public/media/hero/hero-mobile-rev19-hevc.mp4",
+      "bytes": 15401238,
+      "sha256": "c7ab83d0703d2079e969d446548aee8125341599561da3478340bdac4ba5a0b0",
+      "codec": "hevc"
     }
   ],
   "publication": {
-    "status": "authorized-for-pages",
-    "authorized": true,
-    "previous_published_revision": "Rev11",
-    "repository": "NunzioMerone/lge-home-solutions",
-    "branch": "main",
-    "site": "https://nunziomerone.github.io/lge-home-solutions/",
-    "public_preview": true
+    "status": "local-preview",
+    "authorized": false
   },
-  "frame_rate": 60
+  "shot_ids": [
+    "01",
+    "02",
+    "P1A",
+    "P1B",
+    "P2A",
+    "04",
+    "P3B",
+    "06",
+    "P7",
+    "P2C",
+    "P2D",
+    "P2E",
+    "P4",
+    "P5",
+    "P6",
+    "08",
+    "09"
+  ],
+  "frames": 4583,
+  "frame_rate": 60,
+  "removed_shots": [
+    "P2B",
+    "P3A",
+    "10"
+  ],
+  "edited_shots": [
+    "P4",
+    "P5"
+  ],
+  "desktop_source_upgrades": [
+    "P1A",
+    "P1B",
+    "P4",
+    "P6",
+    "09"
+  ],
+  "desktop_cleanup_shots": [
+    "P2A",
+    "P3B",
+    "P2C",
+    "P2D",
+    "P2E",
+    "P4",
+    "P5",
+    "P6"
+  ]
 }
