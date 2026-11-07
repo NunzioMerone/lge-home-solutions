@@ -10,6 +10,7 @@ export function GalleryLightboxSlide({
   photo,
   active,
   navigable,
+  navigationReady = true,
   onClose,
   onPrevious,
   onNext,
@@ -42,6 +43,7 @@ export function GalleryLightboxSlide({
             className={`${styles.navigation} ${styles.previous}`}
             data-lightbox-control="previous"
             aria-label="Fotografia precedente"
+            disabled={!navigationReady}
             onClick={onPrevious}
           >
             <Icon name="chevron-left" />
@@ -51,6 +53,7 @@ export function GalleryLightboxSlide({
             className={`${styles.navigation} ${styles.next}`}
             data-lightbox-control="next"
             aria-label="Fotografia successiva"
+            disabled={!navigationReady}
             onClick={onNext}
           >
             <Icon name="chevron-right" />

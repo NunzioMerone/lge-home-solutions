@@ -1,0 +1,23 @@
+.coverflow-preview {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+}
+.coverflow-preview h1 {
+  font-size: 28px;
+}
+.coverflow-preview label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.coverflow-preview button,
+.coverflow-preview select {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-blue);
+  border-radius: var(--radius);
+}

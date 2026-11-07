@@ -1,3 +1,5 @@
+import type { Ref } from 'react'
+
 export interface GalleryPhoto {
   id: string
   category: string
@@ -27,10 +29,27 @@ export interface GalleryLightboxProps extends GalleryLightboxState {
 
 export type GalleryLightboxControl = 'close' | 'previous' | 'next'
 
+export interface GalleryLightboxNavigation {
+  previous: () => void
+  next: () => void
+}
+
+export interface GalleryLightboxCarouselProps {
+  ref: Ref<GalleryLightboxNavigation>
+  photos: readonly GalleryPhoto[]
+  initialIndex: number
+  selectedIndex: number
+  reducedMotion: boolean
+  onSelect: (index: number) => void
+  onReady: () => void
+  onClose: () => void
+}
+
 export interface GalleryLightboxSlideProps {
   photo: GalleryPhoto
   active: boolean
   navigable: boolean
+  navigationReady?: boolean
   onClose: () => void
   onPrevious: () => void
   onNext: () => void

@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-07",
+  "reference": "https://swiperjs.com/demos#effect-coverflow",
+  "swiper": "14.4.0",
+  "environment": "Codex in-app browser on macOS; responsive viewports and native pointer drags",
+  "viewports": [
+    [360, 780],
+    [390, 844],
+    [768, 1024],
+    [1440, 900]
+  ],
+  "checks": {
+    "home": "11 selected photographs; opened item 3, arrow to 4, keyboard to 5; Esc restores original trigger",
+    "all_works": "101 photographs; first → previous → 101 → next → first, with focus preserved on arrows",
+    "filtered_works": "Porte interne shows 16 photographs; production build opens item 1 and native drag advances to item 2",
+    "resize": "Resized from 390×844 to 1440×900 with item 4/101 retained",
+    "framing": "Active landscape and portrait photographs are contained; X above photo and circular arrows alongside on desktop, below on mobile",
+    "keyboard": "Tab cycles close/previous/next; Shift+Tab wraps; arrow keys navigate; Esc closes and restores focus without scrolling",
+    "backdrop": "Clicking outside the photograph closes; dragging a photograph leaves the dialog open",
+    "reduced_motion": "Actual MotionProvider preference enabled through local preview control; no swiper-3d/coverflow class, zero-duration transition, item 11 → 1; preference restored afterwards",
+    "small_collections": "Two photos rewind 2 → 1; one photo shows only X; no console warnings/errors",
+    "strict_mode": "Repeated opening, closing and keyboard navigation in React Strict Mode with no console warnings/errors",
+    "lazy_loading": "Production build has no Coverflow stylesheet before opening; opening loads the module and its CSS; first enabled arrow advances 1 → 2 without reloading",
+    "bounded_images": "Three image elements at rest; four observed during a one-step transition; current and outgoing neighbourhoods are bounded to six",
+    "production": "Build served at /lge-home-solutions/ on port 4175; first open, arrows, category filtering and swipe pass without console errors"
+  },
+  "validation": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "vitest": {
+      "files": 9,
+      "tests": 38,
+      "status": "passed"
+    },
+    "build": "passed",
+    "pages_routes": "prepared"
+  },
+  "build": {
+    "coverflow_js_gzip_kb": 26.18,
+    "coverflow_css_gzip_kb": 1.13,
+    "initial_js_gzip_kb": 143.01,
+    "coverflow_in_initial_entry": false
+  },
+  "limits": "Responsive browser checks, not a physical iPhone/Safari test."
+}

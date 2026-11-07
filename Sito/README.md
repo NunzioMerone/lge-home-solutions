@@ -22,7 +22,11 @@ npm run test
 npm run build
 ```
 
-Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP ed Embla. Dipendenze e file generati restano esclusi da Git.
+Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP, Embla e Swiper per il Coverflow. Dipendenze e file generati restano esclusi da Git.
+
+## Visualizzatore fotografico
+
+Dal 7 novembre 2026 home e pagina Lavori condividono il Coverflow di Swiper 14.4.0: foto attiva intera, vicine inclinate, trascinamento continuo e frecce tonde vicine alla foto, sotto su mobile. Tastiera, Esc e ripristino del focus restano disponibili. Il modulo e i suoi CSS vengono caricati soltanto quando si apre una fotografia; nell’attesa rimangono foto/skeleton e X funzionante. Sono montate tre immagini a riposo e, durante un movimento, anche le vicine della posizione precedente (massimo sei). Con movimento ridotto si disattiva la prospettiva e il cambio è istantaneo. La prova locale `references/coverflow-preview/` usa il componente reale in Strict Mode, anche con una o due fotografie e con movimento ridotto. Pubblicazione richiesta dall’utente. I caroselli nelle pagine conservano Embla.
 
 ## Hero video
 
