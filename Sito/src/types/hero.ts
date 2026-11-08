@@ -7,7 +7,7 @@ export interface HeroProductCardProps {
 
 export type HeroDescriptions = Record<PhotoId, string>
 
-export type HeroVideoFormat = 'desktop' | 'tablet' | 'mobile'
+export type HeroVideoFormat = 'desktop' | 'largeTablet' | 'tablet' | 'mobile'
 
 export interface HeroVideoSource {
   video: string
