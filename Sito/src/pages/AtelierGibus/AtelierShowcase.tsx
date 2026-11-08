@@ -5,11 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
 import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { Icon } from '../../components/ui/Icon'
-import { outdoorShowcaseId, outdoorSolutions } from '../../data/atelierGibus'
-import { gallery } from '../../data/gallery'
+import { outdoorShowcaseId, outdoorSolutions as chapters } from '../../data/atelierGibus'
 import { useMotion } from '../../hooks/useMotion'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
-import type { GalleryLightboxState, GalleryPhoto } from '../../types/gallery'
+import type { GalleryLightboxState } from '../../types/gallery'
 import pageStyles from './AtelierGibus.module.css'
 import styles from './AtelierShowcase.module.css'
 
@@ -20,31 +19,7 @@ const settle = 0.2
 const desktopShowcase =
   '(min-width: 1100px) and (min-height: 580px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
 
-// Detect the local preview without importing the photographs into the build.
-const hasOfficialPhotos =
-  import.meta.env.DEV &&
-  Object.keys(import.meta.glob('/references/atelier-gibus/preview/ready.json')).length > 0
-
-const chapters = outdoorSolutions.map((solution) => ({
-  ...solution,
-  photo: hasOfficialPhotos
-    ? ({
-        id: solution.id,
-        category: solution.title,
-        alt: solution.previewAlt,
-        width: solution.previewWidth,
-        height: solution.previewHeight,
-        previewWidths:
-          solution.previewWidth > 960
-            ? [480, 960, solution.previewWidth]
-            : [480, solution.previewWidth],
-        fullWidth: solution.previewWidth,
-        collection: 'atelier-gibus',
-        status: 'local-preview',
-      } satisfies GalleryPhoto)
-    : gallery.find((photo) => photo.id === solution.fallbackPhotoId),
-}))
-const photos = chapters.flatMap(({ photo }) => (photo ? [photo] : []))
+const photos = chapters.map(({ photo }) => photo)
 const photoSizes =
   '(min-width: 1660px) 950px, (min-width: 1100px) and (hover: hover) and (pointer: fine) 58vw, (min-width: 900px) and (orientation: landscape) 52vw, 91vw'
 
@@ -203,18 +178,16 @@ export function AtelierShowcase() {
                 }}
               >
                 <div className={styles.chapterPhoto}>
-                  {photo && (
-                    <button
-                      className={pageStyles.photoButton}
-                      type="button"
-                      aria-label={`Ingrandisci foto: ${photo.alt}`}
-                      aria-haspopup="dialog"
-                      onClick={(event) => setLightbox({ photo, trigger: event.currentTarget })}
-                    >
-                      <GalleryImage photo={photo} sizes={photoSizes} />
-                    </button>
-                  )}
-                  {hasOfficialPhotos && <span className={styles.photoCredit}>Foto Gibus</span>}
+                  <button
+                    className={pageStyles.photoButton}
+                    type="button"
+                    aria-label={`Ingrandisci foto: ${photo.alt}`}
+                    aria-haspopup="dialog"
+                    onClick={(event) => setLightbox({ photo, trigger: event.currentTarget })}
+                  >
+                    <GalleryImage photo={photo} sizes={photoSizes} />
+                  </button>
+                  <span className={styles.photoCredit}>Foto Gibus</span>
                 </div>
                 <div className={styles.chapterCopy}>
                   <p className={`eyebrow ${styles.category}`}>{chapter.title}</p>

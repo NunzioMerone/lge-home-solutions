@@ -1,7 +1,9 @@
+import type { GalleryPhoto } from '../types/gallery'
+
 export const gibusCatalogUrl = 'https://www.gibus.com/it/cataloghi/'
 export const outdoorShowcaseId = 'gibus-soluzioni'
 
-export const outdoorSolutions = [
+const solutions = [
   {
     id: 'pergole-bioclimatiche',
     title: 'Pergole bioclimatiche',
@@ -12,10 +14,9 @@ export const outdoorSolutions = [
     productUrl: 'https://www.gibus.com/it/prodotti/pergole-bioclimatiche/',
     catalogUrl:
       'https://backoffice.gibus.it/c56a022b15250525f8b9bdfc41a13152/MmUwMWEyM2ViOGI2NzNhNDBkMGUwNTFmNTI5ZDhhMzAzZThiZTZjZDc1YzM3ZGUxNTVkYzUwZDZkZDkwYjc4MA--/pergole_bioclimatiche_IT_EN_web.pdf',
-    previewAlt: 'Lame aperte di una pergola bioclimatica sopra un tavolo in terrazza',
-    previewWidth: 1440,
-    previewHeight: 810,
-    fallbackPhotoId: 'lge-fb1ac1a2',
+    photoAlt: 'Lame aperte di una pergola bioclimatica sopra un tavolo in terrazza',
+    photoWidth: 1440,
+    photoHeight: 810,
   },
   {
     id: 'pergole-90',
@@ -27,10 +28,9 @@ export const outdoorSolutions = [
     productUrl: 'https://www.gibus.com/it/prodotti/pergole/pergole-90-gradi/',
     catalogUrl:
       'https://backoffice.gibus.it/acff1af62d0f91f4be73f4857552d70c/MGYwOWUyMDM0NTU1YzIyNTdhZTlmNjc5ZWIwMDViYTUyNDAzOGVkNmQwM2U1YjdlYmU0NDM4M2RhOTNkYzA2OQ--/pergola_90_IT-EN_web.pdf',
-    previewAlt: 'Telo disteso della pergola Zenit sopra un salotto in terrazza',
-    previewWidth: 940,
-    previewHeight: 540,
-    fallbackPhotoId: 'lge-823a1266',
+    photoAlt: 'Telo disteso della pergola Zenit sopra un salotto in terrazza',
+    photoWidth: 940,
+    photoHeight: 540,
   },
   {
     id: 'tende-a-bracci',
@@ -42,10 +42,9 @@ export const outdoorSolutions = [
     productUrl: 'https://www.gibus.com/it/prodotti/tende-e-oscuranti/tende-a-bracci/',
     catalogUrl:
       'https://backoffice.gibus.it/13e36f06c66134ad65f532e90d898545/NjVkM2MzMzUxZDM5ZjY3ZjY1OWZjMjQ4MGQ3NjU2YmEyNWJlODliM2MzNTUyYWFlZWYwNDRiNTViNGFmMjE4MQ--/tende_bracci_IT_EN_web.pdf',
-    previewAlt: 'Tenda a bracci aperta sopra la terrazza di una casa contemporanea',
-    previewWidth: 1440,
-    previewHeight: 810,
-    fallbackPhotoId: 'lge-35144cb1',
+    photoAlt: 'Tenda a bracci aperta sopra la terrazza di una casa contemporanea',
+    photoWidth: 1440,
+    photoHeight: 810,
   },
   {
     id: 'vetrate-scorrevoli',
@@ -57,9 +56,25 @@ export const outdoorSolutions = [
     productUrl: 'https://www.gibus.com/it/prodotti/vetrate/',
     catalogUrl:
       'https://backoffice.gibus.it/394868456436dbe743e4380554c0493a/MjJjYzlkYTdjZTkxMjNmMWVhNzYwMTViMzMxZTZhYmZmZTlhYTdmZWEyNzlhY2RhZDg4ODM5ODhkNDY5NzBjOQ--/vetrate_IT_EN_web.pdf',
-    previewAlt: 'Vetrate panoramiche a tutta altezza di un padiglione affacciato sul giardino',
-    previewWidth: 1440,
-    previewHeight: 810,
-    fallbackPhotoId: 'lge-10fc63bc',
+    photoAlt: 'Vetrate panoramiche a tutta altezza di un padiglione affacciato sul giardino',
+    photoWidth: 1440,
+    photoHeight: 810,
   },
 ] as const
+
+export const outdoorSolutions = solutions.map(
+  ({ photoAlt, photoWidth, photoHeight, ...solution }) => ({
+    ...solution,
+    photo: {
+      id: solution.id,
+      category: solution.title,
+      alt: photoAlt,
+      width: photoWidth,
+      height: photoHeight,
+      previewWidths: photoWidth > 960 ? [480, 960, photoWidth] : [480, photoWidth],
+      fullWidth: photoWidth,
+      collection: 'atelier-gibus',
+      status: 'partner-authorized',
+    } satisfies GalleryPhoto,
+  }),
+)

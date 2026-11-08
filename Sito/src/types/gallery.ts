@@ -13,8 +13,7 @@ interface GalleryPhotoMetadata {
 export type GalleryPhoto = GalleryPhotoMetadata &
   (
     | { collection?: 'gallery-real' | 'gallery-home'; status: 'user-provided' }
-    | { collection: 'atelier-gibus'; status: 'local-preview' }
-    | { collection: 'interior-doors'; status: 'partner-authorized' }
+    | { collection: 'atelier-gibus' | 'interior-doors'; status: 'partner-authorized' }
   )
 
 export interface GalleryLightboxState {
