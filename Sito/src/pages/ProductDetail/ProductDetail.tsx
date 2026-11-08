@@ -52,7 +52,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <em>abitare meglio.</em>
             </>
           }
-          description="Finestre e scorrevoli COSMET, da scegliere insieme in base alla luce, agli spazi e al modo in cui vivi la tua casa."
+          description="Infissi in legno alluminio, alluminio e PVC. Confronta battente e scorrevole e scegli con noi l’apertura giusta per i tuoi spazi."
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${windowCollection.configuratorId}`}>

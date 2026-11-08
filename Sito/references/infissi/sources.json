@@ -1,5 +1,5 @@
 {
-  "scope": "Fotografie COSMET della pagina Infissi. L’utente ha confermato i permessi e autorizzato la pubblicazione l’8 novembre 2026.",
+  "scope": "Immagini ufficiali COSMET Group della pagina Infissi. L’utente ha confermato i permessi e autorizzato la pubblicazione delle immagini del primo allestimento l’8 novembre 2026. La successiva richiesta di pubblicare tutte le modifiche include l’allestimento con le immagini di Vision, Luce Intensa, Prime e Luce Metal Slim.",
   "configurator": {
     "home": "https://configura.cosmetgroup.it/",
     "guided": "https://configura.cosmetgroup.it/lasciati-guidare/",
@@ -9,7 +9,10 @@
   },
   "brochures": {
     "vista-and-vista-metal": "https://cosmetgroup.it/wp-content/uploads/2026/08/Cosmet-Flyer-A4-4-ante_VistaMetal_02.pdf",
-    "luce-poly-slim": "https://cosmetgroup.it/wp-content/uploads/2026/07/Cosmet-Flyer-A4-4-ante_Luce-Polyslim.pdf"
+    "luce-poly-slim": "https://cosmetgroup.it/wp-content/uploads/2026/07/Cosmet-Flyer-A4-4-ante_Luce-Polyslim.pdf",
+    "fideal-vision": "https://cosmetgroup.it/wp-content/uploads/2026/10/Fideal-Flyer-A4-4-ante_Vision.pdf",
+    "luce-intensa": "https://cosmetgroup.it/wp-content/uploads/2026/08/Fideal-Flyer-A4-4-ante_Luce-intensa-slim.pdf",
+    "luce-metal-slim": "https://cosmetgroup.it/wp-content/uploads/2026/07/Alwo-Flyer-A4-4-ante_Luce-metalslim.pdf"
   },
   "processing": "Ridimensionamento proporzionale e conversione WebP. Inquadratura delle immagini sul sito gestita dal layout.",
   "photos": {
@@ -28,6 +31,22 @@
     "vista-metal-esterno": {
       "page": "https://cosmetgroup.it/vista-metal/",
       "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/hero-prodotti-cosmet_metal.jpg"
+    },
+    "fideal-vision": {
+      "page": "https://cosmetgroup.it/vision/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/vision1.jpg"
+    },
+    "luce-intensa": {
+      "page": "https://cosmetgroup.it/luce-intensa/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/luce-intensa1.jpg"
+    },
+    "prime": {
+      "page": "https://cosmetgroup.it/prime/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2025/05/0003_07-Sistema-battente-retro-interno-2-scaled.jpg"
+    },
+    "luce-metal-slim": {
+      "page": "https://cosmetgroup.it/luce-metal-slim/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/luce-metal1.jpg"
     }
   }
 }

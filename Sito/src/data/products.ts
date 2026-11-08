@@ -4,7 +4,7 @@ export const windowsPage = {
   path: '/prodotti/infissi',
   title: 'Infissi COSMET a Monte di Procida — LGE Home Solutions',
   description:
-    'Scopri gli infissi COSMET, consulta i cataloghi e prova il configuratore ufficiale. Scegli con LGE profili, vetri e aperture per la tua casa.',
+    'Confronta gli infissi COSMET in legno alluminio, alluminio e PVC, a battente e scorrevoli. Consulta i cataloghi e prova il configuratore ufficiale.',
 } as const
 
 export const shuttersPage = {
