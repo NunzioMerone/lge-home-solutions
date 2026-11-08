@@ -1,0 +1,25 @@
+{
+  "scope": "Materiali TEHNi della pagina Porte e sicurezza. L’utente ha confermato i permessi e autorizzato la pubblicazione l’8 novembre 2026.",
+  "catalogIndex": "https://tehni.eu/it/downloads/",
+  "systems": {
+    "tls-90": {
+      "page": "https://tehni.eu/it/product-showcase/tls-90/",
+      "photo": "https://tehni.eu/wp-content/uploads/product-tls90.webp",
+      "configurator": "https://mydoormaker.com/it/configurator/",
+      "catalog": "https://tehni.eu/wp-content/uploads/TLS-2025-04.pdf"
+    },
+    "multiframe": {
+      "page": "https://tehni.eu/it/product-showcase/multiframe/",
+      "photo": "https://tehni.eu/wp-content/uploads/product-multiframe-img.webp",
+      "configurator": "https://multi.mydoormaker.com/it/configurator/",
+      "catalog": "https://tehni.eu/wp-content/uploads/TEHNi-MULTI-2025.pdf",
+      "securityDocumentation": "https://tehni.eu/wp-content/uploads/TEHNi-Multiframe-Security-Certs-23-it.pdf"
+    },
+    "pivot": {
+      "page": "https://tehni.eu/it/product-showcase/superior-pivot/",
+      "photo": "https://tehni.eu/wp-content/uploads/product-superior-pivot.webp",
+      "configurator": "https://mypivotmaker.com/",
+      "catalog": "https://tehni.eu/wp-content/uploads/SuperiorPivotCatalog-2025.pdf"
+    }
+  }
+}

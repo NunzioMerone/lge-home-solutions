@@ -1,7 +1,7 @@
 import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath, URL } from 'node:url'
 import process from 'node:process'
-import { atelierGibusPage, interiorDoorsPage, products } from '../src/data/products.ts'
+import { detailedProductPages, products } from '../src/data/products.ts'
 import { privacyPage } from '../src/config/privacy.ts'
 import { competenciesPage } from '../src/config/competencies.ts'
 import { worksPage } from '../src/config/works.ts'
@@ -11,7 +11,7 @@ const homepage = new URL('index.html', output)
 
 // Static entry points let GitHub Pages serve direct visits to the existing routes.
 for (const product of products) {
-  if (product.path === atelierGibusPage.path || product.path === interiorDoorsPage.path) continue
+  if (detailedProductPages.some((page) => page.path === product.path)) continue
   const directory = new URL(`${product.path.slice(1)}/`, output)
   await mkdir(directory, { recursive: true })
   await copyFile(homepage, new URL('index.html', directory))
@@ -29,8 +29,7 @@ const informationPages = [
   { ...privacyPage, robots: privacyPage.approved ? undefined : 'noindex, nofollow' },
   { ...competenciesPage, robots: undefined },
   { ...worksPage, robots: undefined },
-  { ...atelierGibusPage, robots: undefined },
-  { ...interiorDoorsPage, robots: undefined },
+  ...detailedProductPages.map((page) => ({ ...page, robots: undefined })),
 ]
 
 for (const page of informationPages) {

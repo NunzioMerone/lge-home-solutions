@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { site } from '../config/site'
 import { competenciesPage } from '../config/competencies'
 import { worksPage } from '../config/works'
-import { windowsPage } from '../data/windowComfort'
+import { detailedProductPages } from '../data/products'
 import { getPageMetadata } from './pageMetadata'
 
 describe('page metadata across routes', () => {
@@ -32,9 +32,10 @@ describe('page metadata across routes', () => {
     expect(getPageMetadata('/competenze/unknown').title).not.toBe(competenciesPage.title)
   })
 
-  it('uses the Infissi page metadata with normal and static-host URLs', () => {
-    for (const path of ['/prodotti/infissi', '/prodotti/infissi/']) {
-      expect(getPageMetadata(path)).toEqual(windowsPage)
+  it('uses each product page metadata with normal and static-host URLs', () => {
+    for (const { path, title, description } of detailedProductPages) {
+      expect(getPageMetadata(path)).toEqual({ title, description })
+      expect(getPageMetadata(`${path}/`)).toEqual({ title, description })
     }
   })
 

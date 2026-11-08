@@ -136,6 +136,14 @@
     font-size: clamp(1rem, 1.2vw, 1.125rem);
     line-height: 1.75;
   }
+  .image[data-photo='windows'] {
+    /* Keep the full frame visible when the viewport limits the hero height. */
+    max-width: 88svh;
+    justify-self: center;
+  }
+  .image[data-photo='windows'] img {
+    object-position: center top;
+  }
   .image[data-photo='interior'] img {
     object-position: 75% center;
   }

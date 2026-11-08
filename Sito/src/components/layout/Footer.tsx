@@ -42,67 +42,66 @@ export function Footer() {
                 loading="lazy"
               />
             </Link>
-            <address className={styles.contact}>
-              {links.phone && (
-                <a className={styles.contactRow} href={links.phone}>
-                  <span className={styles.contactIcon}>
+            <div className={styles.details}>
+              <h2 className={styles.heading}>Contatti</h2>
+              <address className={styles.contact}>
+                {links.phone && (
+                  <a className={styles.contactRow} href={links.phone}>
                     <Icon name="phone" />
-                  </span>
-                  <span>{contacts.phone}</span>
-                </a>
-              )}
-              <a
-                className={styles.contactRow}
-                href={contacts.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className={styles.contactIcon}>
-                  <Icon name="pin" />
-                </span>
-                <span>
-                  {contacts.address}
-                  <br />
-                  {contacts.locality} ({contacts.province})
-                </span>
-              </a>
-              {links.email && (
-                <a className={styles.contactRow} href={links.email}>
-                  <span className={styles.contactIcon}>
-                    <Icon name="mail" />
-                  </span>
-                  <span>{contacts.email}</span>
-                </a>
-              )}
-            </address>
-          </div>
-          <nav className={styles.products} aria-label="Soluzioni nel footer">
-            <h2>Soluzioni</h2>
-            {products.map(({ id, title, path }) => (
-              <Link to={path} key={id}>
-                {title}
-              </Link>
-            ))}
-          </nav>
-          <nav className={styles.navigation} aria-label="Navigazione nel footer">
-            <h2>Esplora</h2>
-            {site.sections
-              .filter(({ id }) => id !== 'prodotti')
-              .map(({ id, label }) => (
-                <Link
-                  to={
-                    id === 'competenze'
-                      ? competenciesPage.path
-                      : id === 'lavori'
-                        ? worksPage.path
-                        : `/#${id}`
-                  }
-                  key={id}
+                    <span>{contacts.phone}</span>
+                  </a>
+                )}
+                <a
+                  className={styles.contactRow}
+                  href={contacts.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {label}
+                  <Icon name="pin" />
+                  <span>
+                    {contacts.address}
+                    <br />
+                    {contacts.locality} ({contacts.province})
+                  </span>
+                </a>
+                {links.email && (
+                  <a className={styles.contactRow} href={links.email}>
+                    <Icon name="mail" />
+                    <span>{contacts.email}</span>
+                  </a>
+                )}
+              </address>
+            </div>
+          </div>
+          <div className={styles.menus}>
+            <nav className={styles.navigation} aria-label="Soluzioni nel footer">
+              <h2 className={styles.heading}>Soluzioni</h2>
+              {products.map(({ id, title, path }) => (
+                <Link to={path} key={id}>
+                  {title}
                 </Link>
               ))}
-          </nav>
+            </nav>
+            <nav className={styles.navigation} aria-label="Navigazione nel footer">
+              <h2 className={styles.heading}>Esplora</h2>
+              {site.sections
+                .filter(({ id }) => id !== 'prodotti')
+                .map(({ id, label }) => (
+                  <Link
+                    to={
+                      id === 'competenze'
+                        ? competenciesPage.path
+                        : id === 'lavori'
+                          ? worksPage.path
+                          : `/#${id}`
+                    }
+                    key={id}
+                  >
+                    {label}
+                  </Link>
+                ))}
+            </nav>
+          </div>
         </div>
         <div className={styles.bottom}>
           <span className={styles.copyright}>© {new Date().getFullYear()} LGE Home Solutions</span>

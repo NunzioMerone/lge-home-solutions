@@ -1,0 +1,37 @@
+{
+  "scope": "Materiali SikurHome della pagina Oscuranti. L’utente ha confermato i permessi e autorizzato la pubblicazione l’8 novembre 2026.",
+  "resources": "https://www.sikurhome.it/risorse-downloads/",
+  "catalogs": [
+    {
+      "title": "Frangisole avvolgibili",
+      "link": "https://www.sikurhome.it/catalogo-casa-protetta",
+      "verifiedPdf": "https://www.sikurhome.it/wp-content/uploads/2026/10/Frangisole-Avvolgibili.pdf"
+    },
+    {
+      "title": "Il massimo della sicurezza",
+      "link": "https://www.sikurhome.it/catalogo-casa-sicura",
+      "verifiedPdf": "https://www.sikurhome.it/wp-content/uploads/2026/07/Il-MASSIMO-della-SICUREZZA.pdf"
+    }
+  ],
+  "photos": [
+    {
+      "id": "smartapp",
+      "page": "https://www.sikurhome.it/prodotti/tapparella-avvolgibile-frangisole/",
+      "source": "https://www.sikurhome.it/wp-content/uploads/2025/04/SMARTAPP-3-scaled.webp"
+    },
+    {
+      "id": "giant",
+      "page": "https://www.sikurhome.it/prodotti/il-frangisole-grandioso-giant/",
+      "source": "https://www.sikurhome.it/wp-content/uploads/2025/04/GIANT-2-scaled.webp"
+    },
+    {
+      "id": "evoline",
+      "page": "https://www.sikurhome.it/prodotti/tapparella-frangisole-avvolgibile-di-sicurezza/",
+      "source": "https://www.sikurhome.it/wp-content/uploads/2025/04/IBRIDA-EvoLine-1-scaled.webp"
+    }
+  ],
+  "webp": {
+    "directory": "public/img/sikur-home/",
+    "widths": [480, 960, 1440]
+  }
+}

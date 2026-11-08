@@ -1,6 +1,12 @@
 import { lazy } from 'react'
 import type { ComponentType } from 'react'
-import { atelierGibusPage, interiorDoorsPage } from '../data/products'
+import {
+  atelierGibusPage,
+  interiorDoorsPage,
+  securityDoorsPage,
+  shuttersPage,
+  windowsPage,
+} from '../data/products'
 import type { ProductDetailProps } from '../types/productTransition'
 
 function createProductPage(load: () => Promise<ComponentType<ProductDetailProps>>) {
@@ -29,6 +35,22 @@ function createProductPage(load: () => Promise<ComponentType<ProductDetailProps>
 }
 
 export const deferredProductPages = new Map<string, ReturnType<typeof createProductPage>>([
+  [
+    windowsPage.path,
+    createProductPage(() =>
+      import('../pages/ProductDetail/ProductDetail').then((page) => page.ProductDetail),
+    ),
+  ],
+  [
+    shuttersPage.path,
+    createProductPage(() => import('../pages/Shutters/Shutters').then((page) => page.Shutters)),
+  ],
+  [
+    securityDoorsPage.path,
+    createProductPage(() =>
+      import('../pages/SecurityDoors/SecurityDoors').then((page) => page.SecurityDoors),
+    ),
+  ],
   [
     atelierGibusPage.path,
     createProductPage(() =>

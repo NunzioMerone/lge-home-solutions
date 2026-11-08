@@ -2,14 +2,12 @@ import { privacyPage } from '../config/privacy'
 import { competenciesPage } from '../config/competencies'
 import { worksPage } from '../config/works'
 import { site } from '../config/site'
-import { atelierGibusPage, interiorDoorsPage, products } from '../data/products'
-import { windowsPage } from '../data/windowComfort'
+import { detailedProductPages, products } from '../data/products'
 import type { PageMetadata } from '../types/privacy'
 
 export function getPageMetadata(pathname: string): PageMetadata {
   const path = pathname.replace(/\/+$/, '') || '/'
-  if (path === '/prodotti/infissi') return windowsPage
-  const detailedProduct = [atelierGibusPage, interiorDoorsPage].find((page) => page.path === path)
+  const detailedProduct = detailedProductPages.find((page) => page.path === path)
   if (detailedProduct) {
     return { title: detailedProduct.title, description: detailedProduct.description }
   }

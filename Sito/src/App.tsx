@@ -2,7 +2,6 @@ import { lazy, Suspense, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { RetainedHome } from './components/layout/RetainedHome'
 import { ProductPlaceholder } from './pages/ProductPlaceholder/ProductPlaceholder'
-import { ProductDetail } from './pages/ProductDetail/ProductDetail'
 import { products } from './data/products'
 import { competenciesPage } from './config/competencies'
 import { worksPage } from './config/works'
@@ -47,13 +46,7 @@ export default function App() {
               <Route
                 key={product.path}
                 path={product.path}
-                element={
-                  product.id === 'windows' ? (
-                    <ProductDetail product={product} />
-                  ) : (
-                    <DeferredProductRoute product={product} />
-                  )
-                }
+                element={<DeferredProductRoute product={product} />}
               />
             ))}
             <Route path="*" element={<ProductPlaceholder />} />

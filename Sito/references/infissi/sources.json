@@ -1,0 +1,33 @@
+{
+  "scope": "Fotografie COSMET della pagina Infissi. L’utente ha confermato i permessi e autorizzato la pubblicazione l’8 novembre 2026.",
+  "configurator": {
+    "home": "https://configura.cosmetgroup.it/",
+    "guided": "https://configura.cosmetgroup.it/lasciati-guidare/",
+    "catalog": "https://configura.cosmetgroup.it/catalogo/",
+    "vista": "https://configura.cosmetgroup.it/configuratore/?sku=GAMCSMPPWW0HSLI01&productName=VISTA",
+    "vista-metal": "https://configura.cosmetgroup.it/configuratore/?sku=CSMPAWW0HVSM01&productName=VISTA%20METAL"
+  },
+  "brochures": {
+    "vista-and-vista-metal": "https://cosmetgroup.it/wp-content/uploads/2026/08/Cosmet-Flyer-A4-4-ante_VistaMetal_02.pdf",
+    "luce-poly-slim": "https://cosmetgroup.it/wp-content/uploads/2026/07/Cosmet-Flyer-A4-4-ante_Luce-Polyslim.pdf"
+  },
+  "processing": "Ridimensionamento proporzionale e conversione WebP. Inquadratura delle immagini sul sito gestita dal layout.",
+  "photos": {
+    "vista": {
+      "page": "https://cosmetgroup.it/vista/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/vista-gallery_0005_vista-interno.jpg"
+    },
+    "vista-metal": {
+      "page": "https://cosmetgroup.it/vista-metal/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/cosmet-anteprima_metal.jpg"
+    },
+    "luce-poly-slim": {
+      "page": "https://cosmetgroup.it/luce-poly-slim/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/lucepolislim-gallery_0005_lucepolyslim_interno-copia-2.jpg"
+    },
+    "vista-metal-esterno": {
+      "page": "https://cosmetgroup.it/vista-metal/",
+      "original": "https://cosmetgroup.it/wp-content/uploads/2024/12/hero-prodotti-cosmet_metal.jpg"
+    }
+  }
+}
