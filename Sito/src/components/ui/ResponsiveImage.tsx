@@ -40,10 +40,22 @@ export function ResponsiveImage({
       fetchPriority={critical ? 'high' : 'auto'}
       decoding="async"
       data-critical={critical || undefined}
-      onLoad={onSettled}
+      onLoad={
+        onSettled &&
+        ((event) => {
+          if (!critical) {
+            onSettled(true)
+            return
+          }
+          void event.currentTarget.decode().then(
+            () => onSettled(true),
+            () => onSettled(false),
+          )
+        })
+      }
       onError={() => {
         setFailed(true)
-        onSettled?.()
+        onSettled?.(false)
       }}
     />
   )

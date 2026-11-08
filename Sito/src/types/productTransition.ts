@@ -22,6 +22,7 @@ export interface ProductDetailProps {
 
 export interface ProductHeroProps {
   product: Product
+  eyebrow?: string
   title?: ReactNode
   description: string
   children?: ReactNode

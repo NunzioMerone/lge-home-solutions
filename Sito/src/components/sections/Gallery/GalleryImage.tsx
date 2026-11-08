@@ -4,6 +4,7 @@ import { galleryImageUrl } from '../../../utils/galleryImages'
 
 export function GalleryImage({
   photo,
+  alt,
   full = false,
   sizes,
   loading,
@@ -32,7 +33,7 @@ export function GalleryImage({
       }
       width={photo.width}
       height={photo.height}
-      alt={full ? photo.alt : ''}
+      alt={alt ?? (full ? photo.alt : '')}
       loading={loading ?? (full ? 'eager' : 'lazy')}
       fetchPriority={fetchPriority}
       decoding="async"

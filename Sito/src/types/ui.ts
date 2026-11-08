@@ -12,7 +12,7 @@ export interface ResponsiveImageProps {
   className?: string | undefined
   critical?: boolean
   decorative?: boolean
-  onSettled?: () => void
+  onSettled?: (ready: boolean) => void
 }
 export interface SectionHeadingProps {
   id: string

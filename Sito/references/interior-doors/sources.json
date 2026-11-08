@@ -1,0 +1,23 @@
+{
+  "scope": "Tre fotografie di catalogo I-PEA nella pagina Porte interne. L’utente ha confermato il permesso per la pubblicazione l’8 novembre 2026. Le varianti WebP sono in public/img/interior-doors/.",
+  "catalogs": "https://www.ipeaportedesign.com/scaricailcatalogo",
+  "photos": {
+    "turtle": {
+      "catalog": "https://heyzine.com/flip-book/21206e5c48.html#page/9",
+      "pdf": "https://cdnm.heyzine.com/flip-book/pdf/21206e5c4892cd760e29c38dfe5037d809c646d5-4.pdf",
+      "page": 9,
+      "orientation": "Orizzontale specchiata nel PDF, ripristinata come appare a pagina."
+    },
+    "float": {
+      "catalog": "https://heyzine.com/flip-book/21206e5c48.html#page/19",
+      "pdf": "https://cdnm.heyzine.com/flip-book/pdf/21206e5c4892cd760e29c38dfe5037d809c646d5-4.pdf",
+      "page": 19,
+      "orientation": "Orizzontale specchiata nel PDF, ripristinata come appare a pagina."
+    },
+    "rm-inc3l": {
+      "catalog": "https://heyzine.com/flip-book/36ea2c97b4.html#page/281",
+      "pdf": "https://cdnm.heyzine.com/flip-book/pdf/36ea2c97b419a2e6a759e78e8af371f2c617142b-2.pdf",
+      "page": 281
+    }
+  }
+}

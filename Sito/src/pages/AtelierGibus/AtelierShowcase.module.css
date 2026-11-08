@@ -1,0 +1,297 @@
+.showcase {
+  background: var(--color-greige);
+}
+
+.header {
+  margin-bottom: var(--section-heading-gap);
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.65vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.header em {
+  color: var(--color-blue);
+  font-weight: inherit;
+}
+
+.header > p {
+  max-width: 680px;
+  margin: clamp(14px, 1.25vw, 18px) auto 0;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.description,
+.use {
+  max-width: 46ch;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.detailLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.steps {
+  display: none;
+}
+
+.chapters {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapter {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-paper);
+  scroll-margin-top: calc(var(--navigation-compact-height) + env(safe-area-inset-top) + 22px);
+}
+
+.chapterPhoto {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-line);
+  aspect-ratio: 16 / 10;
+}
+
+.chapterPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chapterPhoto button {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.photoCredit {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 5px 9px;
+  border-radius: var(--radius);
+  background: rgb(37 42 48 / 86%);
+  color: var(--color-white);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.chapterCopy {
+  align-self: center;
+  min-width: 0;
+  padding: clamp(22px, 4vw, 56px);
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+.category::before {
+  flex: 0 0 18px;
+  height: 1px;
+  background: currentColor;
+  content: '';
+}
+
+.chapter h3 {
+  margin: 0 0 12px;
+  font-size: var(--font-size-section-title);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.description {
+  margin-bottom: 6px;
+  color: var(--color-heading);
+}
+
+.detailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  margin-top: 10px;
+  color: var(--color-blue);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.detailLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 700px) {
+  .chapterPhoto {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+  .chapter {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  }
+
+  .chapterPhoto {
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 1100px) and (min-height: 580px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .journey[data-reduced-motion='false'] {
+    --stage-clearance: calc(var(--navigation-compact-height) + env(safe-area-inset-top) + 18px);
+    --stage-height: min(64svh, 630px, calc(100svh - 2 * var(--stage-clearance)));
+    --chapter-step: clamp(180px, 35svh, 320px);
+    display: grid;
+    align-items: start;
+  }
+
+  .journey[data-reduced-motion='false'] .chapters,
+  .journey[data-reduced-motion='false'] .steps {
+    grid-area: 1 / 1;
+  }
+
+  .journey[data-reduced-motion='false'] .steps {
+    display: block;
+    padding-block: calc(var(--stage-height) / 2);
+    pointer-events: none;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter {
+    scroll-margin-top: 0;
+  }
+
+  .journey[data-reduced-motion='false'] .steps > div {
+    height: var(--chapter-step);
+  }
+
+  .journey[data-reduced-motion='false'] .chapters {
+    position: sticky;
+    z-index: 1;
+    top: calc((100svh - var(--stage-height)) / 2);
+    height: var(--stage-height);
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    background: var(--color-paper);
+    box-shadow: 0 12px 36px rgb(37 42 48 / 7%);
+  }
+
+  .journey[data-reduced-motion='false'] .chapter {
+    position: absolute;
+    inset: 0;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter[data-previous='true'] .chapterPhoto {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter[data-active='true'] .chapterPhoto {
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 490ms var(--ease-out);
+  }
+
+  .journey[data-reduced-motion='false'] .chapterPhoto {
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    opacity: 0;
+  }
+
+  .journey[data-reduced-motion='false'] .chapterPhoto img {
+    transform: scale(1.035);
+  }
+
+  .journey[data-reduced-motion='false'] .chapter[data-active='true'] img {
+    transform: scale(1);
+    transition: transform 730ms var(--ease-out);
+  }
+
+  .journey[data-reduced-motion='false'] .chapter[data-previous='true'] img {
+    transform: scale(1);
+  }
+
+  .journey[data-reduced-motion='false'] .chapterCopy {
+    position: relative;
+    z-index: 3;
+    opacity: var(--copy-opacity, 0);
+    filter: blur(var(--copy-blur, 0px));
+    transform: translateY(calc(var(--copy-offset, 0px) * var(--copy-travel, 1)));
+  }
+
+  .journey[data-reduced-motion='false'] .chapter[data-active='true'] .chapterCopy {
+    opacity: var(--copy-opacity, 1);
+  }
+
+  .journey[data-reduced-motion='false'] .chapterCopy > :not(h3) {
+    opacity: var(--copy-details, 1);
+  }
+
+  .journey[data-reduced-motion='false']
+    .chapter[data-active='true']
+    :is(.detailLink, .chapterPhoto button) {
+    pointer-events: auto;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterPhoto {
+    transition: none;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterCopy {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterCopy > * {
+    opacity: 1;
+  }
+
+  @media (max-height: 700px) {
+    .journey[data-reduced-motion='false'] .chapterCopy {
+      padding-block: 12px;
+      padding-inline: clamp(24px, 3vw, 48px);
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .journey {
+    --copy-travel: 0.55;
+  }
+}

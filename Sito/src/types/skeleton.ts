@@ -6,4 +6,4 @@ export interface SkeletonTextProps extends SkeletonProps {
   lines?: number
 }
 
-export type RouteSkeletonKind = 'competencies' | 'works' | 'article'
+export type RouteSkeletonKind = 'competencies' | 'works' | 'product' | 'article'

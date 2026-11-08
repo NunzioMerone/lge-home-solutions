@@ -9,6 +9,7 @@ import type {
   ProductTransitionProviderProps,
 } from '../../types/productTransition'
 import { createProductImageTransition } from '../../utils/productImageTransition'
+import { deferredProductPages } from '../../utils/productPages'
 import { waitForImage } from '../../utils/imageReady'
 
 export function ProductTransitionProvider({ children }: ProductTransitionProviderProps) {
@@ -40,27 +41,48 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
           active.current = null
         })
         try {
-          flushSync(() => navigate(path))
+          flushSync(() =>
+            navigate(path, { state: { productPhotoPreview: image.currentSrc || image.src } }),
+          )
         } catch (error) {
           active.current?.cancel()
           throw error
         }
       }
-      if (image.complete && image.naturalWidth > 0) {
+      const pagePreparation = deferredProductPages.get(path)?.prepare()
+      const photoReady = image.complete && image.naturalWidth > 0
+      if (!pagePreparation && photoReady) {
         open()
         return
       }
       const controller = new AbortController()
       pending.current = controller
       card.setAttribute('aria-busy', 'true')
-      image.loading = 'eager'
-      void waitForImage(image, { signal: controller.signal }).then((ready) => {
-        card.removeAttribute('aria-busy')
+      if (!photoReady) image.loading = 'eager'
+      const settle = (ready: boolean) => {
         if (pending.current === controller) pending.current = null
-        if (controller.signal.aborted || !card.isConnected) return
+        if (controller.signal.aborted) return
+        controller.abort()
+        if (!card.isConnected) return
         if (ready) open()
         else navigate(path)
-      })
+      }
+      const timeout = window.setTimeout(() => settle(false), 2200)
+      controller.signal.addEventListener(
+        'abort',
+        () => {
+          window.clearTimeout(timeout)
+          card.removeAttribute('aria-busy')
+        },
+        { once: true },
+      )
+      void Promise.all([
+        pagePreparation,
+        photoReady || waitForImage(image, { signal: controller.signal }),
+      ]).then(
+        ([, ready]) => settle(ready),
+        () => settle(false),
+      )
     },
     [navigate, reducedMotion],
   )

@@ -64,6 +64,11 @@
   height: 100%;
   object-fit: cover;
 }
+.upgrade {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
 .image[data-arriving] {
   visibility: hidden;
 }
@@ -119,6 +124,18 @@
   }
 }
 @media (min-width: 900px) {
+  .hero:has(> .image[data-photo='outdoor']) {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(36px, 5vw, 80px);
+  }
+  .hero:has(> .image[data-photo='outdoor']) .copy h1 {
+    text-wrap: balance;
+  }
+  .hero:has(> .image[data-photo='outdoor']) .description {
+    max-width: 46ch;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.75;
+  }
   .image[data-photo='interior'] img {
     object-position: 75% center;
   }
@@ -127,5 +144,20 @@
   }
   .image[data-photo='outdoor'] img {
     object-position: 35% center;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) and (orientation: portrait) {
+  .hero:has(> .image[data-photo='outdoor']) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'image' 'copy';
+    gap: var(--space-4);
+    min-height: auto;
+    padding-bottom: var(--section-space);
+  }
+
+  .image[data-photo='outdoor'] {
+    aspect-ratio: 16 / 9;
+    max-height: 520px;
   }
 }

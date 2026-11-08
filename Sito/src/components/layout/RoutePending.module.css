@@ -94,8 +94,28 @@
   height: 12px;
   margin-top: 16px;
 }
-.page[data-route-skeleton='works'] .main {
+.page:is([data-route-skeleton='works'], [data-route-skeleton='product']) .main {
   padding-top: 0;
+}
+.productCopy {
+  animation: none;
+}
+.productTitle > span {
+  height: clamp(36px, 5vw, 66px);
+}
+.productDescription {
+  max-width: 365px;
+  margin: 26px 0 20px;
+}
+.productAction {
+  width: 150px;
+  height: 50px;
+  border-radius: var(--radius);
+}
+@media (max-width: 899px) {
+  .productPhoto.productPhoto {
+    aspect-ratio: 1564 / 1006;
+  }
 }
 .worksHero {
   background: linear-gradient(100deg, var(--color-paper) 24%, var(--color-greige));

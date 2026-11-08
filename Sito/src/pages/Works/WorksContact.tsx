@@ -46,10 +46,10 @@ export function WorksContact() {
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Scrivici su WhatsApp (nuova scheda)"
             >
               <img src={assetUrl('icons/whatsapp-white.svg')} width="22" height="22" alt="" />
-              Parliamo su WhatsApp
-              <span className="sr-only"> in una nuova scheda</span>
+              Scrivici
             </a>
           )}
         </div>

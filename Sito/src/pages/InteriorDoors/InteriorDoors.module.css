@@ -1,0 +1,290 @@
+.page {
+  background: var(--color-paper);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+}
+
+.button,
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  width: fit-content;
+  max-width: 100%;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.button {
+  min-height: 50px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: var(--color-blue);
+  color: var(--color-white);
+  transition: background var(--transition);
+}
+
+.button:hover {
+  background: color-mix(in srgb, var(--color-blue) 78%, var(--color-heading));
+}
+
+.inlineLink {
+  color: var(--color-blue);
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.button svg,
+.inlineLink svg {
+  width: 17px;
+  height: 17px;
+}
+
+.catalogHeader h2,
+.openingsHeader h2 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  line-height: 1.13;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.page h2 em {
+  color: var(--color-blue);
+  font-weight: inherit;
+}
+
+.page :global(.eyebrow) {
+  margin: 0 0 var(--space-2);
+}
+
+.body,
+.catalog p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.body {
+  max-width: 52ch;
+  margin: var(--space-2) 0 0;
+}
+
+.catalogs {
+  background: var(--color-heading);
+}
+
+.catalogs h2,
+.catalog h3 {
+  color: var(--color-white);
+}
+
+.catalogs h2 em,
+.catalogs .inlineLink,
+.catalogs :global(.eyebrow) {
+  color: var(--color-hero-accent);
+}
+
+.catalogs .body,
+.catalog p {
+  color: #dfdbd5;
+}
+
+.catalogs a:focus-visible {
+  outline-color: var(--color-hero-accent);
+}
+
+.catalogHeader {
+  margin-bottom: var(--section-heading-gap);
+}
+
+.catalogGrid {
+  display: grid;
+  gap: clamp(12px, 2vw, 28px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(16px, 2vw, 28px);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / 4%);
+}
+
+.material {
+  height: clamp(60px, 9vw, 104px);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #f0e8df, #d7c6b4 70%, #ba9d84);
+}
+
+.material[data-material='laminate'] {
+  background:
+    repeating-linear-gradient(
+      8deg,
+      transparent 0 8px,
+      rgb(77 48 32 / 12%) 9px 10px,
+      transparent 11px 24px
+    ),
+    linear-gradient(115deg, #ab805c, #d3b398 64%, #8f6345);
+}
+
+.material[data-material='glass'] {
+  background: linear-gradient(119deg, #778c8a, #a6bab5 30%, #d9e5dd 52%, #a3b4b0 73%, #768c8d);
+}
+
+.catalog h3 {
+  margin: var(--space-2) 0 var(--space-1);
+  font-size: clamp(1.75rem, 2.4vw, 2.35rem);
+}
+
+.catalog p {
+  margin: 0 0 var(--space-2);
+}
+
+.catalog .inlineLink {
+  margin-top: auto;
+}
+
+.openingsHeader {
+  margin-bottom: var(--section-heading-gap);
+  text-align: center;
+}
+
+.openingsHeader .body {
+  margin-inline: auto;
+}
+
+.openingInteractive {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+.openingControls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  max-width: 520px;
+  margin: 0 auto var(--space-3);
+  padding: 4px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-greige);
+}
+
+.openingControls button {
+  min-height: 44px;
+  padding: 8px 4px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.openingControls button[aria-pressed='true'] {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.openingPanel {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-paper);
+}
+
+.openingPhoto {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  aspect-ratio: 1.15;
+  background: var(--color-greige);
+}
+
+.openingPhoto button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.openingPhoto button:focus-visible {
+  outline-offset: -4px;
+}
+
+.openingPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.openingPhoto figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 9px;
+  border-radius: var(--radius);
+  background: rgb(37 42 48 / 86%);
+  color: var(--color-white);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.openingDetail {
+  align-self: center;
+  padding: clamp(20px, 4vw, 52px);
+}
+
+.openingDetail h3 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  text-wrap: balance;
+}
+
+.openingModel {
+  margin: var(--space-3) 0 0;
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.body + .actions {
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 740px) {
+  .catalogGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .openingPanel {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    min-height: 330px;
+  }
+}

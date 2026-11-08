@@ -134,6 +134,9 @@ export function Footer() {
                 </a>
               ) : null,
             )}
+            <span className={styles.socialIcon} role="img" aria-label="Facebook">
+              <Icon name="facebook" />
+            </span>
           </div>
         </div>
         {(contacts.legalName || contacts.vatNumber) && (

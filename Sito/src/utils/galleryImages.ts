@@ -3,7 +3,11 @@ import type { GalleryPhoto } from '../types/gallery'
 import { assetUrl } from './assetUrl'
 
 export function galleryImageUrl(photo: GalleryPhoto, width: number): string {
-  return assetUrl(`img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`)
+  const directory =
+    photo.status === 'local-preview'
+      ? `references/${photo.collection}/preview`
+      : `img/${photo.collection ?? 'gallery-real'}`
+  return assetUrl(`${directory}/${photo.id}-${width}.webp`)
 }
 
 export function lightboxImageWidth(photo: GalleryPhoto, compact: boolean): number {

@@ -1,5 +1,20 @@
 import type { Product } from '../types/content'
 
+export const atelierGibusPage = {
+  path: '/atelier-gibus',
+  title: 'Atelier Gibus a Monte di Procida — LGE Home Solutions',
+  description:
+    'Pergole bioclimatiche, tende da sole e chiusure vetrate con Atelier Gibus Campi Flegrei. Scopri le soluzioni outdoor e le realizzazioni di LGE Home Solutions.',
+  officialUrl: 'https://www.gibus.com/it/',
+} as const
+
+export const interiorDoorsPage = {
+  path: '/prodotti/porte-interne',
+  title: 'Porte interne I-PEA a Monte di Procida — LGE Home Solutions',
+  description:
+    'Sfoglia i cataloghi I-PEA di porte interne laccate, in laminato e in vetro. Con LGE scegli finitura, apertura e dettagli per la tua casa.',
+} as const
+
 export const products: Product[] = [
   {
     id: 'windows',
@@ -22,13 +37,13 @@ export const products: Product[] = [
   {
     id: 'interior',
     title: 'Porte interne',
-    path: '/prodotti/porte-interne',
+    path: interiorDoorsPage.path,
     description: 'Materiali e dettagli che danno continuità al tuo stile.',
   },
   {
     id: 'outdoor',
     title: 'Atelier Gibus',
-    path: '/atelier-gibus',
+    path: atelierGibusPage.path,
     description: 'Pergole e soluzioni outdoor per vivere il piacere di stare all’aperto.',
   },
 ]

@@ -2,7 +2,9 @@ import { useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { competenciesPage } from '../../config/competencies'
 import { worksPage } from '../../config/works'
+import { deferredProductPages } from '../../utils/productPages'
 import type { RouteSkeletonKind } from '../../types/skeleton'
+import productStyles from '../sections/ProductHero/ProductHero.module.css'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { Skeleton, SkeletonText } from '../ui/Skeleton'
@@ -92,11 +94,33 @@ function ArticleSkeleton() {
   )
 }
 
+function ProductSkeleton() {
+  return (
+    <div className={productStyles.hero}>
+      <div className={`${productStyles.image} ${styles.productPhoto}`}>
+        <Skeleton className={productStyles.imageSkeleton} />
+      </div>
+      <div className={`${productStyles.copy} ${styles.productCopy}`}>
+        <Skeleton className={styles.label} />
+        <SkeletonText className={styles.productTitle} lines={2} />
+        <SkeletonText className={styles.productDescription} lines={3} />
+        <Skeleton className={styles.productAction} />
+      </div>
+    </div>
+  )
+}
+
 export function RoutePending() {
   const { pathname } = useLocation()
   const path = pathname.replace(/\/+$/, '') || '/'
   const kind: RouteSkeletonKind =
-    path === competenciesPage.path ? 'competencies' : path === worksPage.path ? 'works' : 'article'
+    path === competenciesPage.path
+      ? 'competencies'
+      : path === worksPage.path
+        ? 'works'
+        : deferredProductPages.has(path)
+          ? 'product'
+          : 'article'
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [path])
@@ -112,6 +136,8 @@ export function RoutePending() {
             <CompetenciesSkeleton />
           ) : kind === 'works' ? (
             <WorksSkeleton />
+          ) : kind === 'product' ? (
+            <ProductSkeleton />
           ) : (
             <ArticleSkeleton />
           )}

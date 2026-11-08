@@ -1,0 +1,179 @@
+.page {
+  background: var(--color-paper);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+}
+
+.button,
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.button {
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: var(--color-blue);
+  color: var(--color-white);
+  transition: background var(--transition);
+}
+
+.button:hover {
+  background: color-mix(in srgb, var(--color-blue) 78%, var(--color-heading));
+}
+
+.inlineLink {
+  color: var(--color-blue);
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.button svg,
+.inlineLink svg,
+.address svg,
+.catalogList svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.93fr) minmax(0, 1.07fr);
+  gap: clamp(28px, 7vw, 112px);
+  align-items: center;
+}
+
+.split h2 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.split em {
+  color: var(--color-blue);
+  font-weight: inherit;
+}
+
+.split :global(.eyebrow) {
+  margin: 0 0 16px;
+}
+
+.body {
+  max-width: 42ch;
+  margin: 16px 0 14px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.catalogs {
+  background: var(--color-heading);
+}
+
+.catalogs h2,
+.catalogList a {
+  color: var(--color-white);
+}
+
+.catalogs em,
+.catalogs :global(.eyebrow),
+.catalogs .inlineLink,
+.catalogList svg {
+  color: var(--color-hero-accent);
+}
+
+.catalogs .body {
+  color: #dad7d1;
+}
+
+.catalogList {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgb(255 255 255 / 22%);
+  list-style: none;
+}
+
+.catalogList a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 60px;
+  padding-block: 10px;
+  border-bottom: 1px solid rgb(255 255 255 / 22%);
+  transition: background var(--transition);
+}
+
+.catalogList a:hover {
+  background: rgb(255 255 255 / 6%);
+}
+
+.catalogList a:focus-visible,
+.catalogs .inlineLink:focus-visible {
+  outline-color: var(--color-hero-accent);
+}
+
+.catalogList a > span:first-child {
+  flex: 1;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-card-title);
+}
+
+.catalogList small {
+  color: #dad7d1;
+  font-size: 0.63rem;
+  letter-spacing: 0.12em;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  color: var(--color-heading);
+  font-size: 0.8125rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.address svg {
+  color: var(--color-blue);
+}
+
+.photoButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.photoButton:focus-visible {
+  outline-offset: -4px;
+}
+
+@media (max-width: 899px), (max-width: 1199px) and (orientation: portrait) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(24px, 4.2vw, 40px);
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Fotografie ufficiali Gibus utilizzate nella sola anteprima di sviluppo. Verificare i diritti di riuso prima della pubblicazione.",
+  "partnerMaterials": "https://www.gibus.com/it/diventa-partner/",
+  "catalogs": "https://www.gibus.com/it/cataloghi/",
+  "photos": {
+    "pergole-bioclimatiche": {
+      "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",
+      "original": "https://static.gibus.com/media-production/2022/03/1920x1080DesktopPergole-Bioclimatiche_2.jpg"
+    },
+    "pergole-90": {
+      "page": "https://www.gibus.com/it/realizzazioni-casa/terrazza-residenziale/",
+      "original": "https://static.gibus.com/media-production/2022/03/slide_1-3.jpg"
+    },
+    "tende-a-bracci": {
+      "page": "https://www.gibus.com/it/prodotti/tende-e-oscuranti/tende-a-bracci/",
+      "original": "https://static.gibus.com/media-production/2022/03/Tende-bracci_Desktop_3.jpg"
+    },
+    "vetrate-scorrevoli": {
+      "page": "https://www.gibus.com/it/prodotti/vetrate/",
+      "original": "https://static.gibus.com/media-production/2022/03/Desktopdawqw.jpg"
+    }
+  }
+}

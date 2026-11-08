@@ -1,20 +1,33 @@
-import type { Ref } from 'react'
+import type { ReactNode, Ref } from 'react'
 
-export interface GalleryPhoto {
+interface GalleryPhotoMetadata {
   id: string
   category: string
   alt: string
   width: number
   height: number
-  previewWidths: readonly [number, number]
+  previewWidths: readonly [number, number, ...number[]]
   fullWidth: number
-  collection?: 'gallery-real' | 'gallery-home'
-  status: 'user-provided'
 }
+
+export type GalleryPhoto = GalleryPhotoMetadata &
+  (
+    | { collection?: 'gallery-real' | 'gallery-home'; status: 'user-provided' }
+    | { collection: 'atelier-gibus'; status: 'local-preview' }
+    | { collection: 'interior-doors'; status: 'partner-authorized' }
+  )
 
 export interface GalleryLightboxState {
   photo: GalleryPhoto
   trigger: HTMLButtonElement
+}
+
+export interface ShowroomClosingProps {
+  titleId: string
+  photo: GalleryPhoto | undefined
+  worksPath: string
+  worksLabel: string
+  children: ReactNode
 }
 
 export interface GalleryCarouselProps {
@@ -66,6 +79,7 @@ export interface GalleryLightboxPhotoProps {
 
 export interface GalleryImageProps {
   photo: GalleryPhoto
+  alt?: string
   full?: boolean
   sizes?: string
   loading?: 'eager' | 'lazy'

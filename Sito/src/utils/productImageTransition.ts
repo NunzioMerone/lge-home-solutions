@@ -90,6 +90,7 @@ export function createProductImageTransition(
       if (destination || completed) return
       destination = target
       target.setAttribute('data-arriving', 'true')
+      gsap.set(veil, { opacity: 1 })
       arrivalFrame = requestAnimationFrame(() => {
         if (completed) return
         const bounds = target.getBoundingClientRect()
@@ -102,7 +103,6 @@ export function createProductImageTransition(
           objectFit: destinationStyle?.objectFit ?? 'contain',
           objectPosition: destinationStyle?.objectPosition ?? '50% 50%',
         })
-        gsap.set(veil, { opacity: 1 })
         timeline
           .to(
             frame,

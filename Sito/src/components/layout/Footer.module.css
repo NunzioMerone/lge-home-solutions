@@ -165,21 +165,42 @@ a.socialIcon:hover {
   color: var(--footer-text);
   font-size: 0.6875rem;
 }
-@media (min-width: 600px) and (max-width: 999px) {
+@media (min-width: 600px) and (max-width: 1199px) {
+  .footer {
+    padding-top: 42px;
+  }
+  .main {
+    --footer-column-gap: clamp(24px, 5vw, 52px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px var(--footer-column-gap);
+    padding-bottom: 24px;
+  }
   .identity {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    gap: 32px;
+    gap: var(--footer-column-gap);
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(255 255 255 / 18%);
   }
   .brand {
-    width: min(152px, 100%);
+    width: clamp(124px, 17vw, 152px);
   }
   .contact {
     margin-top: 0;
   }
+  .products h2,
+  .navigation h2 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  .bottom {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: 'copyright legal socials';
+    column-gap: 24px;
+  }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .footer {
     padding-top: 48px;
   }
