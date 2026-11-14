@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-14",
+  "request": "Shorten the scroll after Vetrate scorrevoli and publish the complete current checkpoint on GitHub Pages.",
+  "implementation": {
+    "lastStepShare": 0.45,
+    "unchangedFullSteps": 8,
+    "sync": "Use actual ScrollTrigger distance divided by first step height, recalculated on refresh, preserving intermediate transition timing.",
+    "staticPresentation": "Mobile and reduced motion unchanged."
+  },
+  "desktop1440x900": {
+    "stepPixels": 315,
+    "lastStepBefore": 315,
+    "lastStepAfter": 141.75,
+    "totalScrollRemoved": 173.25,
+    "naturalEntryPosition": 8.214732142857143,
+    "lastCopyAndDetailsOpacity": 1,
+    "naturalEntryRemainingPinnedScroll": 74.109375,
+    "after90PixelsStageTop": 146.109375,
+    "stickyStageTop": 162,
+    "result": "Final stage starts leaving normally after a short reading interval; PDFs follow without a complete extra scene interval."
+  },
+  "laptop1366x768": {
+    "stepPixels": 268.796875,
+    "lastStepPixels": 120.953125,
+    "overflow": 0
+  },
+  "intermediateChapter": {
+    "id": "pergole-inclinate",
+    "position": 2.5004464285714287,
+    "active": "pergole-inclinate",
+    "stageTop": 162
+  },
+  "productionPreview": {
+    "base": "/lge-home-solutions/",
+    "directArticleReload": "passed",
+    "correctTitleDescriptionAndRobots": "passed",
+    "gibusFinalSceneAndPhotos": "passed",
+    "consoleErrorsOrWarnings": 0
+  },
+  "mobile390x844": {
+    "stagePosition": "static",
+    "stepsDisplay": "none",
+    "catalogueFamilyButtons": 3,
+    "overflow": 0
+  },
+  "reducedMotionDesktop": {
+    "stagePosition": "static",
+    "stepsDisplay": "none",
+    "overflow": 0,
+    "preferenceRestored": true
+  },
+  "checks": {
+    "lint": "passed",
+    "format": "passed",
+    "typescriptAndProductionBuild": "passed",
+    "tests": 55,
+    "testFiles": 14,
+    "staticPagesPreparation": "passed"
+  },
+  "releaseFix": "prepare-pages.mjs now creates the Blog index and all6 article entries from editorial data, with2 integration tests for preview on/off.",
+  "browser": "IAB/CUA; screenshot from compiled production preview, inspected with view_image. Not physical phone testing.",
+  "screenshot": "render-scroll-exit.jpg"
+}

@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-14",
+  "url": "http://127.0.0.1:5175/blog",
+  "mode": "local-only",
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "vitest": "47 tests in 11 files passed",
+    "prettier": "passed for changed source and design JSON"
+  },
+  "browser": "ChatGPT in-app browser through cua_repl; local Vite server, React Strict Mode",
+  "screenshots": {
+    "collection": {
+      "concept": "concept-collection.png",
+      "render": "result-desktop.jpg",
+      "nativeViewport": [
+        1487,
+        1058
+      ]
+    },
+    "contact": {
+      "concept": "concept-contact.png",
+      "render": "result-contact.jpg",
+      "nativeViewport": [
+        1511,
+        1041
+      ]
+    },
+    "mobile": {
+      "render": "result-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  "visualInspection": "view_image used on both collection and contact concepts and corresponding implementation screenshots in the final QA pass; mobile, 320px and 768px screenshots inspected separately.",
+  "fidelityLedger": [
+    {
+      "point": "Hierarchy",
+      "concept": "One title and brief description, filters before six equally weighted stories.",
+      "render": "All six articles visible in one collection; no separate feature or duplicate section heading.",
+      "resolution": "Removed featured layout and introductory labels."
+    },
+    {
+      "point": "Copy",
+      "concept": "Exact title, brief subtitle, six topic labels, Leggi la guida.",
+      "render": {
+        "bodySize": "14px",
+        "cardTitleSize": "31.9705px",
+        "extraEyebrows": 0,
+        "filters": [
+          "Tutti",
+          "Infissi",
+          "Comfort in casa",
+          "Vivere all’aperto",
+          "Porte e interni",
+          "Cura della casa"
+        ],
+        "h1": "Idee per abitare meglio.",
+        "h1Size": "60px",
+        "headerLinks": [
+          "Home",
+          "I nostri lavori",
+          "Blog",
+          "Competenze",
+          "Recensioni",
+          "Contatti"
+        ],
+        "motion": "full",
+        "photoRadius": "8px",
+        "subtitle": "Consigli e ispirazioni per la tua casa, dentro e fuori."
+      },
+      "resolution": "Copy audit matches the allowed title, subtitle and filters; no extra eyebrow. Original excerpts retained instead of generated stand-in copy."
+    },
+    {
+      "point": "Typography",
+      "concept": "Cormorant Garamond headings, DM Sans UI; blue italic emphasis.",
+      "render": "60px intro, approximately 32px card headings, 14px body, 13–14px filters.",
+      "resolution": "Matched heading/body hierarchy while using the established site UI and contact scale."
+    },
+    {
+      "point": "Palette and surfaces",
+      "concept": "#fcfcfb paper, #014380 accents, #ede9e3 full-width contact.",
+      "render": "Same site custom properties, open collection without panel backgrounds or borders.",
+      "resolution": "Removed filter button fills and featured panel; full-bleed contact matches revised lower concept."
+    },
+    {
+      "point": "Photographs",
+      "concept": "Uniform landscape frames, 8px radius, no overlay or shadow.",
+      "render": "16:10 frames with identical per-row dimensions; all six responsive images loaded.",
+      "resolution": "Reused original product and LGE photographs. Generated mockup photography is not shipped."
+    },
+    {
+      "point": "Spacing and alignment",
+      "concept": "Three columns, consistent gutters and image spacing; aligned reading actions.",
+      "render": "Three/two/one responsive columns, 32px horizontal gaps, 40px row gaps and flex-aligned reading links.",
+      "resolution": "No irregular featured geometry; title and description wrapping remain natural."
+    },
+    {
+      "point": "Responsive and interaction",
+      "concept": "All topic links visible, single-column phone collection, clear reading path.",
+      "render": "No horizontal overflow at 320, 360, 390, 768, 1024 and 1487px; touch target heights >=45.5px.",
+      "resolution": "Filters wrap and preserve focused link and scroll; reduced motion verified via existing local preview control."
+    }
+  ],
+  "intentionalDeviations": [
+    "Original shared header/footer, logo geometry, exact navigation and real contacts retained instead of generated stand-ins.",
+    "Existing photographs and editorial excerpts retained; the generated concept does not approve new photo assets or claims.",
+    "Shared UI text, button sizes, contact typography and gutters follow existing LGE site tokens."
+  ],
+  "coreWorkflow": [
+    "All six topic states tested with expected counts 6/1/2/1/1/1.",
+    "Native tap from scrollY=40 to Comfort preserves scrollY=40 and focused topic link.",
+    "Opened pergola guide, used its internal index and returned through the category breadcrumb.",
+    "Keyboard focus visible on topic links.",
+    "Reduced motion: intro opacity 1 and card animation 0.00001s; original preference restored.",
+    "WhatsApp destination checked as https://wa.me/393346008313 without sending a message.",
+    "Fresh browser tab has no captured console errors or warnings."
+  ],
+  "results": {
+    "confirmed": [
+      {
+        "columns": "280px",
+        "filterMinTarget": 45.5,
+        "overflow": false,
+        "viewport": [
+          320,
+          740
+        ]
+      },
+      {
+        "columns": "320px",
+        "filterMinTarget": 45.5,
+        "overflow": false,
+        "viewport": [
+          360,
+          780
+        ]
+      },
+      {
+        "columns": "333.828px 333.828px",
+        "filterMinTarget": 47,
+        "overflow": false,
+        "viewport": [
+          768,
+          1024
+        ]
+      },
+      {
+        "columns": "450.438px 450.438px",
+        "filterMinTarget": 47,
+        "overflow": false,
+        "viewport": [
+          1024,
+          768
+        ]
+      },
+      {
+        "confirmedFilter": {
+          "count": 6,
+          "current": "Tutti",
+          "query": "",
+          "expected": 6
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 1,
+          "current": "Infissi",
+          "query": "?argomento=infissi",
+          "expected": 1
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 2,
+          "current": "Comfort in casa",
+          "query": "?argomento=comfort",
+          "expected": 2
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 1,
+          "current": "Vivere all’aperto",
+          "query": "?argomento=outdoor",
+          "expected": 1
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 1,
+          "current": "Porte e interni",
+          "query": "?argomento=porte",
+          "expected": 1
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 1,
+          "current": "Cura della casa",
+          "query": "?argomento=manutenzione",
+          "expected": 1
+        }
+      },
+      {
+        "confirmedFilter": {
+          "count": 6,
+          "current": "Tutti",
+          "query": "",
+          "expected": 6
+        }
+      },
+      {
+        "cardAnimation": "1e-05s",
+        "introOpacity": "1",
+        "reducedMotion": "reduced"
+      }
+    ],
+    "nativeTapScroll": {
+      "before": 40,
+      "after": 40,
+      "focused": "Comfort in casa"
+    },
+    "audit": {
+      "bodySize": "14px",
+      "cardTitleSize": "31.9705px",
+      "extraEyebrows": 0,
+      "filters": [
+        "Tutti",
+        "Infissi",
+        "Comfort in casa",
+        "Vivere all’aperto",
+        "Porte e interni",
+        "Cura della casa"
+      ],
+      "h1": "Idee per abitare meglio.",
+      "h1Size": "60px",
+      "headerLinks": [
+        "Home",
+        "I nostri lavori",
+        "Blog",
+        "Competenze",
+        "Recensioni",
+        "Contatti"
+      ],
+      "motion": "full",
+      "photoRadius": "8px",
+      "subtitle": "Consigli e ispirazioni per la tua casa, dentro e fuori."
+    }
+  },
+  "remainingMaterialMismatches": [],
+  "limitations": [
+    "Browser checks are desktop emulation, not a physical phone or Safari device test.",
+    "No deployment or search indexing verification: revision remains local."
+  ]
+}

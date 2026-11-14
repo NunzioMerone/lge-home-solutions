@@ -58,7 +58,7 @@ export function SecurityDoors({ product }: ProductDetailProps) {
               <em>ha carattere.</em>
             </>
           }
-          description="La porta d’ingresso cambia il volto della casa e il modo in cui la vivi. Esplora le soluzioni TEHNi e immagina la tua porta, dalla prima scelta fino ai dettagli della posa."
+          description="La porta d’ingresso è il primo dettaglio che racconta lo stile della tua casa. Scopri soluzioni che uniscono design, sicurezza e personalità, con materiali e finiture pensati per valorizzare ogni ingresso e offrire tranquillità ogni giorno."
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${studioId}`}>
@@ -77,7 +77,6 @@ export function SecurityDoors({ product }: ProductDetailProps) {
           <div className="container">
             <header className={styles.sectionHeader} data-reveal>
               <div>
-                <p className="eyebrow">CONFIGURATORI TEHNi</p>
                 <h2 id="tehni-studio-title">
                   Disegna <em>il tuo ingresso.</em>
                 </h2>
@@ -122,6 +121,15 @@ export function SecurityDoors({ product }: ProductDetailProps) {
                         rel="noopener noreferrer"
                         aria-label={`Apri il catalogo ${system.name} (PDF, nuova scheda)`}
                       >
+                        <img
+                          className={styles.catalogPhoto}
+                          src={assetUrl(`img/tehni/${system.id}-480.webp`)}
+                          alt=""
+                          width="80"
+                          height="80"
+                          loading="lazy"
+                          decoding="async"
+                        />
                         <div>
                           <p className={styles.catalogName}>{system.name}</p>
                           <p className={styles.body}>{system.catalogDescription}</p>

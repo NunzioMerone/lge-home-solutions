@@ -41,7 +41,7 @@ export const securityDoorSystems = [
     configurator: 'https://mypivotmaker.com/',
     catalog: 'https://tehni.eu/wp-content/uploads/SuperiorPivotCatalog-2025.pdf',
   },
-] as const
+] as const satisfies readonly [SecurityDoorSystem, ...SecurityDoorSystem[]]
 
 export const securityDoorChecks = [
   {
@@ -60,3 +60,4 @@ export const securityDoorChecks = [
     detail: 'Verifichiamo il passaggio utile, il verso di apertura e il raccordo con il pavimento.',
   },
 ] as const
+import type { SecurityDoorSystem } from '../types/securityDoors'

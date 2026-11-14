@@ -1,0 +1,386 @@
+{
+  "date": "2026-11-14",
+  "authorization": "Local development only, port5175; no commit, push or deploy.",
+  "approach": "Built-in browser (IAB/CUA), DOM/AX inspection, real clicks and keyboard; native browser screenshot bytes saved as JPEG. Concept and latest render inspected directly with view_image.",
+  "viewports": [
+    [
+      1523,
+      1032
+    ],
+    [
+      1511,
+      1041
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      740
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "nativeConceptSizes": {
+    "securityStudio": [
+      1523,
+      1032
+    ],
+    "securityCatalogs": [
+      1511,
+      1041
+    ],
+    "gibusDesktop": [
+      1523,
+      1032
+    ],
+    "gibusMobile": [
+      1024,
+      1536
+    ]
+  },
+  "mobileConceptNote": "Mobile concept is a high-resolution reference, not a1024px CSS layout. Verified the mobile composition at390x844 and320x740 CSS px;1024CSS px would use the desktop breakpoint.",
+  "checks": {
+    "lint": "passed",
+    "typescript": "passed through tsc -b in build",
+    "build": "passed",
+    "tests": 53,
+    "testFiles": 13,
+    "consoleErrorsOrWarnings": 0,
+    "format": "passed",
+    "gitDiffWhitespace": "passed"
+  },
+  "routeAudit": [
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Il design che illumina i tuoi spaziIl design cheillumina i tuoi spaziprotegge la tua casavalorizza ogni ambienterispetta la tua privacycrea nuovi spazi da vivereillumina i tuoi spazi"
+      ],
+      "overflow": 0,
+      "path": "/",
+      "title": "LGE Home Solutions — Il design per il tuo benessere",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Infissi perabitare meglio."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/infissi",
+      "title": "Infissi COSMET a Monte di Procida — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "La luce,come vuoi tu."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/oscuranti",
+      "title": "Oscuranti SikurHome a Monte di Procida — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "L’ingressoha carattere."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/porte-e-sicurezza",
+      "title": "Porte d’ingresso TEHNi a Monte di Procida — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Porte interne,stanza per stanza."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/porte-interne",
+      "title": "Porte interne I-PEA a Monte di Procida — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Come immagini il tuo spazio all’aperto?"
+      ],
+      "overflow": 0,
+      "path": "/atelier-gibus",
+      "title": "Atelier Gibus a Monte di Procida — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "I nostri lavori"
+      ],
+      "overflow": 0,
+      "path": "/lavori",
+      "title": "I nostri lavori — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "La qualità nasce dalla competenza"
+      ],
+      "overflow": 0,
+      "path": "/competenze",
+      "title": "Competenze — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Privacy Policy"
+      ],
+      "overflow": 0,
+      "path": "/privacy-policy",
+      "title": "Privacy Policy — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Idee per abitare meglio."
+      ],
+      "overflow": 0,
+      "path": "/blog",
+      "title": "Blog — Idee per abitare meglio | LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Questa pagina non è qui."
+      ],
+      "overflow": 0,
+      "path": "/pagina-inesistente",
+      "title": "Pagina non trovata — LGE Home Solutions",
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Il design che illumina i tuoi spaziIl design cheillumina i tuoi spaziprotegge la tua casavalorizza ogni ambienterispetta la tua privacycrea nuovi spazi da vivereillumina i tuoi spazi"
+      ],
+      "overflow": 0,
+      "path": "/",
+      "title": "LGE Home Solutions — Il design per il tuo benessere",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Infissi perabitare meglio."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/infissi",
+      "title": "Infissi COSMET a Monte di Procida — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "La luce,come vuoi tu."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/oscuranti",
+      "title": "Oscuranti SikurHome a Monte di Procida — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "L’ingressoha carattere."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/porte-e-sicurezza",
+      "title": "Porte d’ingresso TEHNi a Monte di Procida — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Porte interne,stanza per stanza."
+      ],
+      "overflow": 0,
+      "path": "/prodotti/porte-interne",
+      "title": "Porte interne I-PEA a Monte di Procida — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Come immagini il tuo spazio all’aperto?"
+      ],
+      "overflow": 0,
+      "path": "/atelier-gibus",
+      "title": "Atelier Gibus a Monte di Procida — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "I nostri lavori"
+      ],
+      "overflow": 0,
+      "path": "/lavori",
+      "title": "I nostri lavori — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "La qualità nasce dalla competenza"
+      ],
+      "overflow": 0,
+      "path": "/competenze",
+      "title": "Competenze — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Privacy Policy"
+      ],
+      "overflow": 0,
+      "path": "/privacy-policy",
+      "title": "Privacy Policy — LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Idee per abitare meglio."
+      ],
+      "overflow": 0,
+      "path": "/blog",
+      "title": "Blog — Idee per abitare meglio | LGE Home Solutions",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "emptyLinks": 0,
+      "h1": [
+        "Questa pagina non è qui."
+      ],
+      "overflow": 0,
+      "path": "/pagina-inesistente",
+      "title": "Pagina non trovata — LGE Home Solutions",
+      "width": 390
+    }
+  ],
+  "interactionsVerified": [
+    "Gibus mobile families open/close with click and Enter; multiple families remain open; all9 unique PDF links accessible,54px row height;68px family buttons.",
+    "Gibus desktop9 catalogue PDFs visible; hero Cataloghi anchor scrolls/focuses catalogue heading.",
+    "All5 added Gibus scenes and final Vetrate scene activate in desktop scroll presentation; images load locally.",
+    "Gibus Energy photo opens in mobile viewer as2/9; Escape closes and returns focus to source button.",
+    "TEHNi TLS90,Multiframe,SuperiorPivot selectors update photo,title,configurator andPDF; image decode completes;320px controls remain above44px.",
+    "Phone menu opens, Escape closes and returns focus to opener; desktop solutions menu navigates.",
+    "Works AtelierGibus filter changes query/gallery; photo opens and Escape closes.",
+    "Competency document opens and Escape closes.",
+    "Blog article anchor selects chapter3; PageDown changes current section to chapter4 while preserving hash.",
+    "Home contacts map renders loaded OpenStreetMap tiles; navigating to Infissi and Back restores contacts position.",
+    "Reduced-motion preference disables sticky Gibus presentation, preserves readable static products and9 PDFs; preference restored after QA.",
+    "No horizontal overflow at tested widths; no broken loaded images or empty/# links in inspected routeDOM."
+  ],
+  "copyAudit": {
+    "requestedReplacements": "All4 paragraphs and showroom title matched exactly in source.",
+    "aboveFold": "Existing hero/nav kept. Only user-requested hero paragraphs replaced; Gibus adds intentional Cataloghi action. No invented claims, badges or metrics.",
+    "removedUtilityEyebrows": [
+      "CONFIGURATORI TEHNi",
+      "Da sfogliare"
+    ]
+  },
+  "fidelityLedger": [
+    {
+      "point": "Container/layout",
+      "concept": "Light text selectors and open thumbnail list; Gibus2 families side-by-side and Vetrate fullwidth.",
+      "render": "Structure retained; no nested cards added.",
+      "fix": "Replaced original heavy segment bar and long flat9-PDF list."
+    },
+    {
+      "point": "Typography",
+      "concept": "Cormorant titles/DM Sans controls. ImageGen raster sizes larger than requested site scale.",
+      "render": "Retains exact site font/token scale,14px rows,26/28px family headings.",
+      "decision": "Intentional documented use of existing LGE scale; not image-generator oversized controls."
+    },
+    {
+      "point": "Palette",
+      "concept": "Charcoal Gibus band, sand accents, white text; warm TEHNi section/charcoal panel.",
+      "render": "Uses existing LGE CSS tokens and flat background.",
+      "decision": "Generated texture excluded; original site flat surfaces preserved."
+    },
+    {
+      "point": "Assets/radius",
+      "concept": "Original TEHNi photo treatment, small square catalogue thumbnails,8px corners.",
+      "render": "Exact original TEHNi photographs,80px desktop/64px mobile thumbnails,8px corners; originalGibus hero unchanged.",
+      "decision": "Generated image stand-ins never shipped as product assets."
+    },
+    {
+      "point": "Copy/icon treatment",
+      "concept": "Exact Italian existingcopy,PDF suffix,thin externalSVG,expanded family chevron.",
+      "render": "Existing Icon SVG stroke1.4 and exact names/URLs; copy audit passed.",
+      "fix": "Added selected-system PDF link with accessible family-specific name."
+    },
+    {
+      "point": "Responsive interaction",
+      "concept": "Mobile catalogue disclosures,initial Pergole open.",
+      "render": "Below900px independent disclosures,54px PDFrows,68px headingbuttons;zerooverflow.",
+      "decision": "Independent opening prevents collapsing content above the touched heading and jumping scroll."
+    },
+    {
+      "point": "Loading/motion",
+      "concept": "Restrained site-compatible motion.",
+      "render": "Existing reveal hook,decoded photo swap,skeleton,static reduced-motion presentation.",
+      "fix": "Avoids showing incompletely decoded TEHNi image."
+    }
+  ],
+  "visualVerdict": "Faithful to the scoped concept structure with the documented original-photo/site-scale constraints. No remaining material issue found in inspected states.",
+  "limitations": [
+    "Browser viewport testing, no claim of physical iPhone/Android testing.",
+    "Audit covers listed routes and workflows; not a guarantee of absence of every possible defect.",
+    "SPA missing-page content/metadata corrected; hosting HTTP status unchanged.",
+    "New officialGibus images remain local reference assets, with provenance status recorded."
+  ],
+  "localServer": {
+    "address": "http://127.0.0.1:5175",
+    "pid": 18872,
+    "confirmed": "Browser route loaded successfully; lsof confirms127.0.0.1:5175 listening."
+  }
+}

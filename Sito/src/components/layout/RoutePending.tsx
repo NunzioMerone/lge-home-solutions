@@ -2,6 +2,7 @@ import { useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { competenciesPage } from '../../config/competencies'
 import { worksPage } from '../../config/works'
+import { blogPage } from '../../config/blog'
 import { deferredProductPages } from '../../utils/productPages'
 import type { RouteSkeletonKind } from '../../types/skeleton'
 import productStyles from '../sections/ProductHero/ProductHero.module.css'
@@ -94,6 +95,34 @@ function ArticleSkeleton() {
   )
 }
 
+function BlogSkeleton() {
+  return (
+    <div className="container">
+      <div className={styles.blogIntro}>
+        <Skeleton className={styles.articleTitle} />
+        <SkeletonText lines={1} />
+      </div>
+      <div className={styles.blogFilters}>
+        {[0, 1, 2, 3, 4, 5].map((item) => (
+          <Skeleton key={item} />
+        ))}
+      </div>
+      <div className={styles.blogGrid}>
+        {[0, 1, 2, 3, 4, 5].map((item) => (
+          <div key={item}>
+            <Skeleton className={styles.blogPhoto} />
+            <div className={styles.blogCopy}>
+              <Skeleton className={styles.label} />
+              <SkeletonText lines={2} className={styles.subtitle} />
+              <SkeletonText lines={3} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function ProductSkeleton() {
   return (
     <div className={productStyles.hero}>
@@ -114,13 +143,15 @@ export function RoutePending() {
   const { pathname } = useLocation()
   const path = pathname.replace(/\/+$/, '') || '/'
   const kind: RouteSkeletonKind =
-    path === competenciesPage.path
-      ? 'competencies'
-      : path === worksPage.path
-        ? 'works'
-        : deferredProductPages.has(path)
-          ? 'product'
-          : 'article'
+    path === blogPage.path
+      ? 'blog'
+      : path === competenciesPage.path
+        ? 'competencies'
+        : path === worksPage.path
+          ? 'works'
+          : deferredProductPages.has(path)
+            ? 'product'
+            : 'article'
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [path])
@@ -132,7 +163,9 @@ export function RoutePending() {
           Preparazione dei contenuti della pagina.
         </span>
         <div aria-hidden="true">
-          {kind === 'competencies' ? (
+          {kind === 'blog' ? (
+            <BlogSkeleton />
+          ) : kind === 'competencies' ? (
             <CompetenciesSkeleton />
           ) : kind === 'works' ? (
             <WorksSkeleton />

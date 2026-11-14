@@ -4,6 +4,7 @@ import { site } from '../../config/site'
 import { privacyPage } from '../../config/privacy'
 import { competenciesPage } from '../../config/competencies'
 import { worksPage } from '../../config/works'
+import { blogPage } from '../../config/blog'
 import { products } from '../../data/products'
 import { getContactLinks } from '../../utils/contactLinks'
 import { assetUrl } from '../../utils/assetUrl'
@@ -100,6 +101,7 @@ export function Footer() {
                     {label}
                   </Link>
                 ))}
+              <Link to={blogPage.path}>Blog</Link>
             </nav>
           </div>
         </div>

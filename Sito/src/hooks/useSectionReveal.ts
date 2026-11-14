@@ -4,12 +4,12 @@ import { motion } from '../config/motion'
 import { useMotion } from './useMotion'
 import type { SectionRevealOptions } from '../types/ui'
 
-export function useSectionReveal({
+export function useSectionReveal<TElement extends HTMLElement = HTMLElement>({
   duration = motion.duration,
   stagger = motion.stagger,
   rootMargin = '0px 0px -22% 0px',
 }: SectionRevealOptions = {}) {
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<TElement>(null)
   const { reducedMotion } = useMotion()
   useLayoutEffect(() => {
     const root = ref.current

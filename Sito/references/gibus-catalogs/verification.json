@@ -1,0 +1,21 @@
+{
+  "sharedReport": "../security-refinement/verification.json",
+  "concepts": [
+    "concept-desktop.png",
+    "concept-mobile.png"
+  ],
+  "renders": [
+    "render-desktop.jpg",
+    "render-mobile.jpg"
+  ],
+  "catalogueSource": "https://www.gibus.com/it/cataloghi/",
+  "products": 9,
+  "groups": [
+    "Pergole",
+    "Tende e schermature",
+    "Vetrate"
+  ],
+  "initialMobileOpen": "Pergole",
+  "interaction": "Independent disclosures,click/Enter,aria-expanded andhidden panels",
+  "result": "Passed functional and direct concept/render visual inspection at listed dimensions."
+}

@@ -80,8 +80,10 @@ export function AtelierShowcase() {
     const media = gsap.matchMedia()
     media.add(desktopShowcase, () => {
       let selected = -1
-      const sync = ({ progress }: ScrollTrigger) => {
-        const position = progress * chapters.length
+      let chapterStep = firstStep.getBoundingClientRect().height
+      const sync = ({ progress, start, end }: ScrollTrigger) => {
+        // Keep intermediate transitions at the same pace when the final step is shorter.
+        const position = chapterStep > 0 ? (progress * (end - start)) / chapterStep : 0
         const index = Math.min(Math.floor(position), chapters.length - 1)
         if (selected !== index) {
           selected = index
@@ -110,7 +112,10 @@ export function AtelierShowcase() {
         start: () => `top ${stageCenter(pinnedStage)}px`,
         end: () => `bottom ${stageCenter(pinnedStage)}px`,
         onUpdate: sync,
-        onRefresh: sync,
+        onRefresh: (trigger) => {
+          chapterStep = firstStep.getBoundingClientRect().height
+          sync(trigger)
+        },
       })
 
       return () => {

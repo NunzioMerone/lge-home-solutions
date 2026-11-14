@@ -321,6 +321,9 @@
 .menuOpen .mobileLinks > li:nth-child(6) {
   transition-delay: 480ms;
 }
+.menuOpen .mobileLinks > li:nth-child(7) {
+  transition-delay: 550ms;
+}
 .mobileLinks > li > a,
 .mobileSectionsToggle {
   position: relative;

@@ -5,6 +5,8 @@ import { detailedProductPages, products } from '../src/data/products.ts'
 import { privacyPage } from '../src/config/privacy.ts'
 import { competenciesPage } from '../src/config/competencies.ts'
 import { worksPage } from '../src/config/works.ts'
+import { blogPage } from '../src/config/blog.ts'
+import { blogPosts } from '../src/data/blog.ts'
 
 const output = new URL('../dist/', import.meta.url)
 const homepage = new URL('index.html', output)
@@ -30,6 +32,13 @@ const informationPages = [
   { ...competenciesPage, robots: undefined },
   { ...worksPage, robots: undefined },
   ...detailedProductPages.map((page) => ({ ...page, robots: undefined })),
+  { ...blogPage, robots: undefined },
+  ...blogPosts.map((post) => ({
+    path: `${blogPage.path}/${encodeURIComponent(post.slug)}`,
+    title: `${post.title} — Blog LGE Home Solutions`,
+    description: post.excerpt,
+    robots: undefined,
+  })),
 ]
 
 for (const page of informationPages) {

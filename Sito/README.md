@@ -1,5 +1,7 @@
 # LGE Home Solutions
 
+Pubblicazione del 14 novembre 2026: l’utente autorizza commit, push del checkpoint corrente su `main` e deploy tramite il workflow Pages esistente, superando i vincoli locali delle note seguenti. Accorciato al 45% l’ultimo intervallo desktop Gibus, mantenendo il ritmo delle altre scene; mobile e movimento ridotto conservati. Lo script `prepare-pages.mjs` genera anche `/blog` e i sei articoli con metadati, verificati da due test d’integrazione. Anteprima non indicizzata conservata.
+
 Unica applicazione del sito LGE Home Solutions, nella cartella `Sito/`. L’8 novembre 2026 l’utente autorizza la pubblicazione delle pagine Infissi, Oscuranti e Porte e sicurezza, del footer condiviso e del nuovo video della home. Le precedenti varianti sono conservate nella cronologia Git; non esiste una seconda applicazione da mantenere.
 
 - Repository: https://github.com/NunzioMerone/lge-home-solutions
@@ -23,6 +25,22 @@ npm run build
 ```
 
 Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP, Embla e Swiper per il Coverflow. Dipendenze e file generati restano esclusi da Git.
+
+La scansione iniziale delle dipendenze Vite parte esclusivamente da `index.html`, seguendo gli import dell’applicazione. I file HTML archiviati in `references/` non sono ingressi del sito: alcuni, come la copia di Coverr, richiamano script del sito originale che non sono presenti nel progetto.
+
+## Blog — revisione locale del 14 novembre 2026
+
+La voce Blog nella navbar desktop, nel menu mobile e nel footer apre `/blog`. Dopo la prima proposta del 13 novembre, l’utente richiede un indice più semplice: un’unica raccolta delle sei guide su infissi, outdoor, porte interne, condensa, zanzariere e manutenzione del PVC, senza articolo in evidenza. I filtri testuali precedono gli articoli e usano `?argomento=…`, conservando scroll e focus al cambio argomento. Fotografie uniformi 16:10, tre colonne desktop, due tablet e una smartphone. Ogni pagina `/blog/:slug` include indice interno, didascalia dell’immagine, fonti, soluzione collegata e letture correlate. I link sconosciuti mostrano una pagina di recupero dedicata con `noindex`. Concept di riferimento, prompt e note in `references/blog-redesign/`; logo, foto, navbar, footer e sintesi editoriali restano quelli del sito.
+
+Tipi in `src/types/blog.ts`, schede e categorie in `src/data/blog.ts`, testi proposti in `src/data/blogArticles.ts`; le pagine e il contenuto degli articoli sono caricati su richiesta. Le immagini sono asset già presenti, senza nuove copie. I testi restano una prima proposta editoriale da rivedere prima di un’eventuale pubblicazione. Non sono richiesti backend, CMS o altre integrazioni.
+
+Rifinitura successiva del 14 novembre: l’indice della guida segue il capitolo in lettura durante lo scroll con testo blu e fondo azzurro, senza modificare URL o focus. `useActiveArticleSection` usa un listener passivo e raggruppa le letture geometriche per frame; lo stato React cambia soltanto al cambio di capitolo. `ResizeObserver` riallinea la selezione al variare del contenuto. Le comparse usano `useSectionReveal`, come il resto del sito, su schede, filtri e contenuti delle guide. I capitoli hanno contenitori stabili e figli animati. Il movimento ridotto e la navigazione da tastiera mantengono i contenuti disponibili.
+
+Verifiche della prima semplificazione del 14 novembre: typecheck, lint, build, formattazione dei file modificati e 47 test superati. Nel browser in-app verificati tutti i filtri, apertura della guida outdoor, indice interno e ritorno alla categoria. Un tap su Comfort conserva scroll e focus; collegamento WhatsApp verificato senza invio di messaggi. Controlli responsive senza overflow a 320, 360, 390, 768, 1024 e 1487 px; screenshot confrontati con i concept anche alle dimensioni native 1487×1058 e 1511×1041. Movimento ridotto provato tramite il controllo locale già esistente, quindi ripristinato. Nessun errore o avviso nella scheda di verifica con caricamento pulito. Note, differenze intenzionali e limiti in `references/blog-redesign/verification.json`. Le prove non sostituiscono un test su telefono fisico/Safari. Server locale porta 5175; per avviarlo, eseguire `npm run dev` da questa cartella.
+
+Verifiche della rifinitura: lint, typecheck, build e 51 test superati. Nel browser in-app controllati cambio automatico del capitolo in entrambe le direzioni, focus e ancore dirette, comparse delle schede mentre entrano nella viewport e movimento ridotto, con preferenza finale ripristinata. Corretto e verificato anche l’arrotondamento delle coordinate frazionarie delle ancore a 768 px. Nessun errore/avviso catturato; note ed evidenze in `references/blog-redesign/motion-verification.json`.
+
+Questa revisione è solo locale: nessun commit, push o deploy. La preparazione degli ingressi statici del blog per l’hosting resta da affrontare quando sarà richiesta la pubblicazione.
 
 ## Visualizzatore fotografico
 
@@ -76,3 +94,9 @@ La hero minimalista precedente è rimossa dall’applicazione corrente. La versi
 Transizioni card/hero basate sui rettangoli dipinti della foto, per conservare l’inquadratura iniziale anche sulle immagini molto ingrandite. Skeleton specifici per le pagine caricate su richiesta, con navigazione disponibile, segnaposto per le immagini prodotto, mappa e recensioni. Anteprima locale dei caricamenti e della copia iniziale: `http://127.0.0.1:5175/references/loading-preview/`. Nessun rallentamento artificiale delle pagine reali; questa revisione resta esclusivamente locale, senza push o pubblicazione.
 
 La sezione `/#contatti` segue i mockup desktop/mobile forniti dall’utente, con foto provvisoria, prenotazione e indicazioni affiancate alla mappa reale. Le curve delle superfici e dei controlli sono uniformate al token `--radius: 8px` delle card delle soluzioni; le frecce dei caroselli restano tonde su richiesta dell’utente. Provenienza della foto e viewport in `references/mockups/contacts/source.json`; gli originali rimangono separati dagli asset web.
+
+## Rifinitura locale · 14 novembre 2026
+
+Porte e sicurezza: selettori alleggeriti, PDF della famiglia attiva, miniature e caricamento fotografico con skeleton/decodifica. Atelier Gibus: nove soluzioni ufficiali e cataloghi per tre famiglie, espandibili indipendentemente su mobile; link rapido dalla hero. Applicati i cinque aggiornamenti testuali richiesti (quattro paragrafi e titolo showroom). Corretta la presentazione delle rotte sconosciute con ritorno alla home e metadati dedicati.
+
+Concept, fonti e confronto visivo in `references/security-refinement/`, `references/gibus-catalogs/` e `references/atelier-gibus/expansion-2026-11-14.json`. Nuove fotografie ufficiali conservate come riferimenti per la revisione locale. Verifiche: lint, TypeScript/build e 53 test in 13 file; browser integrato su desktop, tablet e telefono, con movimento ridotto. Sviluppo sulla porta 5175; nessuna pubblicazione.

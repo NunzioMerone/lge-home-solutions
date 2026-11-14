@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-14",
+  "scope": "Five additional product categories requested by user. Local preview only; original four previously authorized images retained.",
+  "catalogIndex": "https://www.gibus.com/it/cataloghi/",
+  "encoding": "cwebp -m 6 -q 82 -resize WIDTH 0; source aspect preserved; widths 480/960/1440, no upscaling.",
+  "photos": {
+    "energy-pergola": {
+      "page": "https://www.gibus.com/it/energy-pergola/",
+      "original": "https://static.gibus.com/media-production/2022/09/GIBUS_FOTOVOLTAICO_oriz_1760X730.jpg",
+      "retrieval": "Original official image obtained through Browser pageAssets/downloadMedia; direct HTTP access was refused. No screenshot substituted for photography.",
+      "originalFile": "Sito/references/atelier-gibus/originals-2026-11-14/energy-pergola.webp",
+      "originalSha256": "c713ae30cfaf0ac4bdc7304fa9f5e362b2d0cc20500d69812074938eb80ad072",
+      "variants": [
+        {
+          "width": 480,
+          "height": 200,
+          "file": "Sito/public/img/atelier-gibus/energy-pergola-480.webp",
+          "bytes": 25576,
+          "sha256": "09e5b010451a10046d5a351dba137fe980d436ba8c2813f0cfb00c494df6e5f4"
+        },
+        {
+          "width": 960,
+          "height": 399,
+          "file": "Sito/public/img/atelier-gibus/energy-pergola-960.webp",
+          "bytes": 91490,
+          "sha256": "8995491304e24af83fd3856cb545acd2c9828d8f2170fea336a6bdcec6dbc8f6"
+        },
+        {
+          "width": 1440,
+          "height": 598,
+          "file": "Sito/public/img/atelier-gibus/energy-pergola-1440.webp",
+          "bytes": 188174,
+          "sha256": "38ad27afb1674353045e9b3836797cde8146d9ef6849d552ce4e6f90a2c85cdc"
+        }
+      ]
+    },
+    "pergole-inclinate": {
+      "page": "https://www.gibus.com/it/prodotti/pergole/pergole-inclinate-addossate/",
+      "original": "https://static.gibus.com/media-production/2022/03/pergole-inclinateDesktop-1.jpg",
+      "retrieval": "Original official image obtained through Browser pageAssets/downloadMedia; direct HTTP access was refused. No screenshot substituted for photography.",
+      "originalFile": "Sito/references/atelier-gibus/originals-2026-11-14/pergole-inclinate.webp",
+      "originalSha256": "2505704f33a605df5105f04dd84f9484ca606ad24fd983d9ba65204853293698",
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "file": "Sito/public/img/atelier-gibus/pergole-inclinate-480.webp",
+          "bytes": 15572,
+          "sha256": "e1715b2762ae21cd1b868dc01d992511cdba3b700e64b641078376e1dafb9f00"
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "file": "Sito/public/img/atelier-gibus/pergole-inclinate-960.webp",
+          "bytes": 55570,
+          "sha256": "2ca4fcd3be9fb28cddbebbf5429e5de56697991e14e5345e0d0fe6ec52452475"
+        },
+        {
+          "width": 1440,
+          "height": 810,
+          "file": "Sito/public/img/atelier-gibus/pergole-inclinate-1440.webp",
+          "bytes": 98892,
+          "sha256": "3959581e095a6fe151f06c76ade85c3397fb5cc5269bf9468b1a785554dc2333"
+        }
+      ]
+    },
+    "tende-a-caduta": {
+      "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-caduta/",
+      "original": "https://static.gibus.com/media-production/2022/03/Tende-caduta_Desktop_1.jpg",
+      "retrieval": "Original official image obtained through Browser pageAssets/downloadMedia; direct HTTP access was refused. No screenshot substituted for photography.",
+      "originalFile": "Sito/references/atelier-gibus/originals-2026-11-14/tende-a-caduta.webp",
+      "originalSha256": "b8f9092c6dc373c1ccabaff06d99751be3a8878c877bef25830bccfc0f1f3029",
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "file": "Sito/public/img/atelier-gibus/tende-a-caduta-480.webp",
+          "bytes": 31896,
+          "sha256": "fd6a398ff3f9ecb43aeb47fed6a8035cb660a613e6d818e599380a9ba4233c8c"
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "file": "Sito/public/img/atelier-gibus/tende-a-caduta-960.webp",
+          "bytes": 110886,
+          "sha256": "191903108cc4f97389d6f568196ade96145503198570b69985f4394857bb9414"
+        },
+        {
+          "width": 1440,
+          "height": 810,
+          "file": "Sito/public/img/atelier-gibus/tende-a-caduta-1440.webp",
+          "bytes": 204276,
+          "sha256": "1fa381120c15683185976c1265f2e618ada4313c12105fd61c77ca79aaddd5fc"
+        }
+      ]
+    },
+    "schermature-zip": {
+      "page": "https://www.gibus.com/it/prodotti/tende-da-sole/schermature-zip-screen/",
+      "original": "https://static.gibus.com/media-production/2022/03/Schermature-zip_Desktop_1.jpg",
+      "retrieval": "Original official image obtained through Browser pageAssets/downloadMedia; direct HTTP access was refused. No screenshot substituted for photography.",
+      "originalFile": "Sito/references/atelier-gibus/originals-2026-11-14/schermature-zip.webp",
+      "originalSha256": "076689e880d85703f86882e97b83152e8adbd47b4fe594323e7c2cc833e744f5",
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "file": "Sito/public/img/atelier-gibus/schermature-zip-480.webp",
+          "bytes": 28720,
+          "sha256": "d4dadbc577d2fa2a40365ec7799275b5bf19a5c1621196da2f1778acb18c42d0"
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "file": "Sito/public/img/atelier-gibus/schermature-zip-960.webp",
+          "bytes": 112310,
+          "sha256": "47bcd8244eae5ddd92efb90adc201c94b3280ca1c5abe9bf46b5e27c1e7a4b19"
+        },
+        {
+          "width": 1440,
+          "height": 810,
+          "file": "Sito/public/img/atelier-gibus/schermature-zip-1440.webp",
+          "bytes": 213110,
+          "sha256": "24bc92a2bbe13c25757a18b95d8ff3b38c3bfa9954715bac3d2c901148e6a535"
+        }
+      ]
+    },
+    "tende-in-trazione": {
+      "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-in-trazione-nivo/",
+      "original": "https://static.gibus.com/media-production/2022/03/tense-desktop.jpg",
+      "retrieval": "Original official image obtained through Browser pageAssets/downloadMedia; direct HTTP access was refused. No screenshot substituted for photography.",
+      "originalFile": "Sito/references/atelier-gibus/originals-2026-11-14/tende-in-trazione.webp",
+      "originalSha256": "5ef01736bd4063ce603c8a10c832cd96f8e8696b93d4a2dc5bddf5ee0ea89f3a",
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "file": "Sito/public/img/atelier-gibus/tende-in-trazione-480.webp",
+          "bytes": 36792,
+          "sha256": "66d3245878aae02e81236388c3bc4398f1dcd27ad7c67a8dd0a97ab6ceeff111"
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "file": "Sito/public/img/atelier-gibus/tende-in-trazione-960.webp",
+          "bytes": 143070,
+          "sha256": "9a259f1959e978c30b233877163dbf9f9c3c4453d9e9f07e3da9a929fda2b5ea"
+        },
+        {
+          "width": 1440,
+          "height": 810,
+          "file": "Sito/public/img/atelier-gibus/tende-in-trazione-1440.webp",
+          "bytes": 272382,
+          "sha256": "135a422d94ae749a8904e5e95a351e47ecf8de0f1d32d5b9839c85824d6c4bb5"
+        }
+      ]
+    }
+  }
+}

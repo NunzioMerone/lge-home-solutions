@@ -6,14 +6,14 @@ import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
-import { gibusCatalogUrl, outdoorShowcaseId, outdoorSolutions } from '../../data/atelierGibus'
+import { gibusCatalogsId, outdoorShowcaseId } from '../../data/atelierGibus'
 import { homeGallery } from '../../data/homeGallery'
 import { atelierGibusPage } from '../../data/products'
-import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
 import { getContactLinks } from '../../utils/contactLinks'
 import { AtelierShowcase } from './AtelierShowcase'
+import { GibusCatalogs } from './GibusCatalogs'
 import styles from './AtelierGibus.module.css'
 
 const { whatsapp } = getContactLinks(contacts)
@@ -40,8 +40,6 @@ function WriteLink() {
 }
 
 export function AtelierGibus({ product }: ProductDetailProps) {
-  const catalogs = useSectionReveal()
-
   return (
     <div className={styles.page}>
       <Link className="skip-link" to={`#${outdoorShowcaseId}`}>
@@ -61,6 +59,9 @@ export function AtelierGibus({ product }: ProductDetailProps) {
         >
           <div className={styles.actions}>
             <WriteLink />
+            <Link className={styles.inlineLink} to={`#${gibusCatalogsId}`}>
+              Cataloghi <Icon name="down" />
+            </Link>
             <a
               className={styles.inlineLink}
               href={atelierGibusPage.officialUrl}
@@ -75,45 +76,7 @@ export function AtelierGibus({ product }: ProductDetailProps) {
 
         <AtelierShowcase />
 
-        <section
-          className={`section ${styles.catalogs}`}
-          aria-labelledby="gibus-catalogs-title"
-          ref={catalogs}
-        >
-          <div className={`container ${styles.split}`}>
-            <header data-reveal>
-              <p className="eyebrow">Da sfogliare</p>
-              <h2 id="gibus-catalogs-title">
-                Cataloghi <em>Gibus.</em>
-              </h2>
-              <p className={styles.body}>
-                Modelli, finiture e configurazioni. Apri il catalogo della soluzione che ti
-                interessa.
-              </p>
-              <a
-                className={styles.inlineLink}
-                href={gibusCatalogUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tutti i cataloghi Gibus <Icon name="external" />
-                <span className="sr-only"> (nuova scheda)</span>
-              </a>
-            </header>
-            <ul className={styles.catalogList} role="list" data-reveal>
-              {outdoorSolutions.map((solution) => (
-                <li key={solution.id}>
-                  <a href={solution.catalogUrl} target="_blank" rel="noopener noreferrer">
-                    <span>{solution.title}</span>
-                    <small>PDF</small>
-                    <Icon name="external" />
-                    <span className="sr-only"> (nuova scheda)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <GibusCatalogs />
 
         <ShowroomClosing
           titleId="gibus-showroom-title"

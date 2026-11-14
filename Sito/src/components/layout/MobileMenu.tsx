@@ -65,17 +65,24 @@ export function MobileMenu({
                 {navigation.work.label}
               </Link>
             </li>
-            {[navigation.competencies, navigation.reviews, navigation.contact].map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  aria-current={activePath === item.path ? 'location' : undefined}
-                  onClick={onNavigate}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {[navigation.blog, navigation.competencies, navigation.reviews, navigation.contact].map(
+              (item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    aria-current={
+                      activePath === item.path ||
+                      (item.path === navigation.blog.path && activePath.startsWith(`${item.path}/`))
+                        ? 'location'
+                        : undefined
+                    }
+                    onClick={onNavigate}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ),
+            )}
           </ul>
         </nav>
       </div>

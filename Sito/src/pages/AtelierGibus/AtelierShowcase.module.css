@@ -9,7 +9,7 @@
 
 .header h2 {
   margin: 0;
-  font-size: clamp(2rem, 3.65vw, 3.5rem);
+  font-size: var(--font-size-section-title);
   line-height: 1.1;
   letter-spacing: -0.025em;
   text-wrap: balance;
@@ -24,7 +24,7 @@
   max-width: 680px;
   margin: clamp(14px, 1.25vw, 18px) auto 0;
   color: var(--color-muted);
-  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-size: 0.9rem;
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -189,6 +189,11 @@
 
   .journey[data-reduced-motion='false'] .steps > div {
     height: var(--chapter-step);
+  }
+
+  .journey[data-reduced-motion='false'] .steps > div:last-child {
+    /* Leave reading room after the reveal without holding an extra transition. */
+    height: calc(var(--chapter-step) * 0.45);
   }
 
   .journey[data-reduced-motion='false'] .chapters {

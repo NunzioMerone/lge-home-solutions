@@ -88,6 +88,18 @@ export function Header() {
           >
             {navigation.work.label}
           </Link>
+          <Link
+            to={navigation.blog.path}
+            className={styles.navigationLink}
+            aria-current={
+              pathname === navigation.blog.path || pathname.startsWith(`${navigation.blog.path}/`)
+                ? 'location'
+                : undefined
+            }
+            onClick={closeNavigation}
+          >
+            {navigation.blog.label}
+          </Link>
         </nav>
         <Link
           to={navigation.home.path}

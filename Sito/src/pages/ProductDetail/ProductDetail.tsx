@@ -132,11 +132,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
         >
           <p className="eyebrow">Showroom di Monte di Procida</p>
           <h2 id="window-showroom-title">
-            Guardiamoli <em>dal vivo.</em>
+            La scelta giusta si vede <em>da vicino.</em>
           </h2>
           <p className={styles.body}>
-            Portaci una foto del vano o la configurazione che ti piace. In showroom possiamo
-            confrontare i profili, vedere le finiture alla luce naturale e parlare della posa.
+            Ogni casa ha il suo stile e le sue esigenze. Ti aspettiamo in showroom per scoprire
+            insieme materiali, profili e finiture, confrontare le diverse soluzioni e trovare quella
+            che meglio si adatta ai tuoi spazi.
           </p>
           <div className={styles.actions}>
             {whatsapp && (

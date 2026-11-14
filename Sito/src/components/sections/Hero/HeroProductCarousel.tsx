@@ -47,10 +47,7 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
               aria-label={`${index + 1} di ${products.length}`}
               data-reveal
             >
-              <HeroProductCard
-                product={product}
-                description={heroDescriptions[product.id]}
-              />
+              <HeroProductCard product={product} description={heroDescriptions[product.id]} />
             </div>
           ))}
         </div>

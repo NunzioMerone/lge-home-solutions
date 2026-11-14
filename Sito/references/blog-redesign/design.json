@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-14",
+  "scope": "Local redesign of /blog; existing article content and routes retained. No commit, push or deployment.",
+  "concepts": [
+    "concept-collection.png",
+    "concept-contact.png"
+  ],
+  "direction": "One open photographic collection, with equally weighted stories and text-only topic navigation.",
+  "tokens": {
+    "background": "#fcfcfb",
+    "text": "#252a30",
+    "muted": "#6b6b6b",
+    "accent": "#014380",
+    "contact": "#ede9e3",
+    "radius": "8px",
+    "headingFont": "Cormorant Garamond",
+    "bodyFont": "DM Sans Variable",
+    "intro": "40–60px",
+    "cardTitle": "27–32px",
+    "body": "14px",
+    "filter": "13–14px",
+    "columns": "3 >=1100px, 2 >=600px, 1 below600px",
+    "photoRatio": "16/10",
+    "gridGap": "40px vertical / 32px horizontal"
+  },
+  "structure": [
+    "Existing shared LGE header",
+    "Centered introduction",
+    "Text topic links with active underline",
+    "Six articles with image, category, title, original excerpt and reading link",
+    "Existing full-width contact band with eyebrow removed",
+    "Existing shared footer"
+  ],
+  "copy": {
+    "heading": "Idee per abitare meglio.",
+    "description": "Consigli e ispirazioni per la tua casa, dentro e fuori.",
+    "filters": [
+      "Tutti",
+      "Infissi",
+      "Comfort in casa",
+      "Vivere all’aperto",
+      "Porte e interni",
+      "Cura della casa"
+    ],
+    "readAction": "Leggi la guida",
+    "articles": "Exact existing titles and excerpts in src/data/blog.ts",
+    "contact": "Exact existing copy from BlogContact.tsx, without eyebrow"
+  },
+  "icons": "Existing Icon arrow: 20px, 1.4px outline currentColor. Existing white WhatsApp asset, 20px.",
+  "mediaTreatment": "Existing responsive photographs, no tint/overlay/shadow, 8px radius; do not use concept photography as production assets.",
+  "intentionalConstraints": [
+    "Shared header and footer remain the site's existing implementation, including original logo, exact navigation and verified contacts. Generated mockups do not define replacements for shared layout.",
+    "Existing product photographs and exact editorial excerpts take precedence over generated stand-ins and invented excerpt text.",
+    "Use the site's established typography scale for UI and contact band. Do not enlarge the surrounding shared sections.",
+    "No review-only pause: the user asked for implementation in local development."
+  ],
+  "interactions": [
+    "Filter changes only the collection and active underline; preserve scroll and focused link.",
+    "Category queries remain shareable; invalid category falls back to all six articles.",
+    "Reading links open existing /blog/:slug routes; article breadcrumb returns to category.",
+    "Visible keyboard focus, status announcement, reduced motion, no hidden topic scroller."
+  ],
+  "prompts": {
+    "base": "Use case: ui-mockup. Redesign the LOCAL existing LGE Home Solutions blog index to be simpler, beautiful and intuitive, preserving brand. Attached screenshot is reference for identity and existing photos, NOT layout to copy. Produce a precise realistic browser UI design specification, no browser frame, no explanatory annotations. Existing real horizontal LGE logo must be preserved by developer, don't invent new branding. Colors exact background #fcfcfb, text #252a30, muted #6b6b6b, accent #014380, CTA band #ede9e3. Fonts Cormorant Garamond regular headings with italic blue word, DM Sans UI/body. Radii 8px only photos and button. No shadows, tinted photos, cards with backgrounds/borders, eyebrow, pill, badge, fake metrics, dates or extra sections. Text/controls code native when implemented. Desktop 1440 width content max 1280 with 64px side gutters. Header 112px high original horizontal LGE logo left, existing navigation right 'Soluzioni', 'Competenze', 'I nostri lavori', 'Blog', 'Contatti'. Intro centered modest h1 60px 'Idee per abitare meglio.' with only 'meglio.' italic blue. Under it one 14px sentence 'Consigli e ispirazioni per la tua casa, dentro e fuori.' Generous but compact spacing intro 40px top 40px bottom. Then text-only category navigation all on one row, active Tutti blue with thin blue underline and no filled button; other categories muted, each 44px target: 'Tutti', 'Infissi', 'Comfort in casa', 'Vivere all’aperto', 'Porte e interni', 'Cura della casa'. Full thin gray baseline. Next a single open editorial collection, 3 columns with 32px gaps, no outer card chrome. Every entry image 16:10 8px radius, 16px gap, category blue 12px normal case, title serif 30px about 2-3 lines, excerpt gray 14px readable 1.75 line-height, 'Leggi la guida' and fine SVG arrow blue 13px. No separate featured story, no 'Da leggere con calma', no search or sidebar. Six existing stories, in order: 1 Infissi / 'Nuovi infissi? Comincia dalla tua casa.' / photograph thin white windows terrace sea, 2 Vivere all’aperto / 'Pergola o tenda da sole? Immagina il tuo spazio.' / Gibus pergola, 3 Porte e interni / 'Porte interne: il dettaglio che unisce gli ambienti.' / white flush wall door, 4 Comfort in casa / 'Condensa sui vetri: da dove cominciare?' / wood window garden, 5 Comfort in casa / 'La zanzariera giusta segue i tuoi gesti.' / bright white kitchen french window, 6 Cura della casa / 'Piccoli gesti, ogni giorno. La cura degli infissi in PVC.' / dark french windows lounge. Use exact titles. Use real coherent architecture photo stand-ins ONLY in mockup, developer will reuse exact existing photos, no new generated photos go live. Long titles wrap naturally. Second row same system. After collection one simple existing contact band warm gray with title 'Ogni casa ha una storia.' next line blue italic 'Parliamo della tua.', description 'Un dubbio, un’idea o un progetto da cui partire. Siamo qui per ascoltarti e trovare insieme la direzione giusta.' right blue 8px-radius WhatsApp button 'Parliamone insieme'. No eyebrow here. Final existing charcoal footer original LGE logo, contacts and Soluzioni/Esplora links. On mobile intro 40px centered, filters wrap all visible into 3 rows, collection one column, contact stacked.",
+    "contactRevision": "Use case: ui-mockup. Redesign the LOCAL existing LGE Home Solutions blog index to be simpler, beautiful and intuitive, preserving brand. Attached screenshot is reference for identity and existing photos, NOT layout to copy. Produce a precise realistic browser UI design specification, no browser frame, no explanatory annotations. Existing real horizontal LGE logo must be preserved by developer, don't invent new branding. Colors exact background #fcfcfb, text #252a30, muted #6b6b6b, accent #014380, CTA band #ede9e3. Fonts Cormorant Garamond regular headings with italic blue word, DM Sans UI/body. Radii 8px only photos and button. No shadows, tinted photos, cards with backgrounds/borders, eyebrow, pill, badge, fake metrics, dates or extra sections. Text/controls code native when implemented. Desktop 1440 width content max 1280 with 64px side gutters. Header 112px high original horizontal LGE logo left, existing navigation right 'Soluzioni', 'Competenze', 'I nostri lavori', 'Blog', 'Contatti'. Intro centered modest h1 60px 'Idee per abitare meglio.' with only 'meglio.' italic blue. Under it one 14px sentence 'Consigli e ispirazioni per la tua casa, dentro e fuori.' Generous but compact spacing intro 40px top 40px bottom. Then text-only category navigation all on one row, active Tutti blue with thin blue underline and no filled button; other categories muted, each 44px target: 'Tutti', 'Infissi', 'Comfort in casa', 'Vivere all’aperto', 'Porte e interni', 'Cura della casa'. Full thin gray baseline. Next a single open editorial collection, 3 columns with 32px gaps, no outer card chrome. Every entry image 16:10 8px radius, 16px gap, category blue 12px normal case, title serif 30px about 2-3 lines, excerpt gray 14px readable 1.75 line-height, 'Leggi la guida' and fine SVG arrow blue 13px. No separate featured story, no 'Da leggere con calma', no search or sidebar. Six existing stories, in order: 1 Infissi / 'Nuovi infissi? Comincia dalla tua casa.' / photograph thin white windows terrace sea, 2 Vivere all’aperto / 'Pergola o tenda da sole? Immagina il tuo spazio.' / Gibus pergola, 3 Porte e interni / 'Porte interne: il dettaglio che unisce gli ambienti.' / white flush wall door, 4 Comfort in casa / 'Condensa sui vetri: da dove cominciare?' / wood window garden, 5 Comfort in casa / 'La zanzariera giusta segue i tuoi gesti.' / bright white kitchen french window, 6 Cura della casa / 'Piccoli gesti, ogni giorno. La cura degli infissi in PVC.' / dark french windows lounge. Use exact titles. Use real coherent architecture photo stand-ins ONLY in mockup, developer will reuse exact existing photos, no new generated photos go live. Long titles wrap naturally. Second row same system. After collection one simple existing contact band warm gray with title 'Ogni casa ha una storia.' next line blue italic 'Parliamo della tua.', description 'Un dubbio, un’idea o un progetto da cui partire. Siamo qui per ascoltarti e trovare insieme la direzione giusta.' right blue 8px-radius WhatsApp button 'Parliamone insieme'. No eyebrow here. Final existing charcoal footer original LGE logo, contacts and Soluzioni/Esplora links. On mobile intro 40px centered, filters wrap all visible into 3 rows, collection one column, contact stacked.\nGenerate revised CONCEPT B LOWER CONTINUATION, standalone screenshot 1487x1058. Use reference 1 (collection concept) for exact layout, density, type size, radius and gutter (about 86px), reference 2 (previous lower concept) for second row images ONLY. Correction required: contact section is a FULL BLEED horizontal warm-gray #ede9e3 band from left edge to right edge of the screenshot, square edges no white margin or rounded wrapper. Only two columns inside: title and paragraph together on left, WhatsApp action on right. Title about 44px serif NOT oversized: 'Ogni casa ha una storia.' newline italic blue 'Parliamo della tua.' paragraph underneath exact 'Un dubbio, un’idea o un progetto da cui partire. Siamo qui per ascoltarti e trovare insieme la direzione giusta.' 14px, max510px. Right button 50px high 8px corners 'Parliamone insieme' WhatsApp white thin icon. No eyebrow above title. Section starts about y610 ends about y890 with charcoal full bleed footer immediately below. Footer ONLY use verified real contacts '+39 334 600 8313', 'info@lgesolutions.it', 'Via Roma, 29 · Monte di Procida (NA)' and original LGE logo, nav. Never fictitious contacts. Second row top exact original excerpts: condensa 'Osservare dove e quando compare è il primo passo. Una guida per capire il rapporto tra umidità, superfici fredde e ricambio d’aria.'; zanzariera 'Una finestra e una portafinestra si usano in modo diverso. Passaggi, ingombri e apertura contano nella scelta.'; PVC 'Pulizia delicata, guarnizioni e scarichi: cosa osservare per prenderti cura delle finestre nel tempo.' Avoid invented claims. Preserve header absent lower viewport."
+  }
+}

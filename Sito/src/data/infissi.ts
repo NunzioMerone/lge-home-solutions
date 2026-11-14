@@ -25,7 +25,7 @@ export const windowMaterials: readonly [WindowMaterial, ...WindowMaterial[]] = [
         id: 'fideal-vision',
         name: 'Fideal Vision',
         description:
-          'Il legno a vista scalda gli interni, mentre l’alluminio riveste il telaio all’esterno. Le ante a battente si aprono nella stanza e lasciano libero il passaggio quando lo spazio lo consente.',
+          'Il calore naturale del legno incontra la resistenza dell’alluminio, creando un equilibrio perfetto tra eleganza e funzionalità. Una soluzione che valorizza gli ambienti interni, protegge dagli agenti esterni e offre tutta la praticità dell’apertura a battente.',
         image: {
           width: 1280,
           height: 720,

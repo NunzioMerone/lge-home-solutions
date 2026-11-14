@@ -63,7 +63,7 @@ export function Shutters({ product }: ProductDetailProps) {
               <em>come vuoi tu.</em>
             </>
           }
-          description="Il sole del mattino, l’ombra nelle ore più calde, la privacy la sera. Con gli avvolgibili e i frangisole Sikur Home scegli come cambia la luce negli ambienti."
+          description="La luce giusta cambia il modo di vivere ogni ambiente. Con avvolgibili e frangisole puoi regolare luminosità, ombra e privacy in ogni momento della giornata, creando il comfort ideale per la tua casa."
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${solutionsId}`}>

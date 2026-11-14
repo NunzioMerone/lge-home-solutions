@@ -6,6 +6,7 @@ import { products } from './data/products'
 import { competenciesPage } from './config/competencies'
 import { worksPage } from './config/works'
 import { privacyPage } from './config/privacy'
+import { blogPage } from './config/blog'
 import { usePageMetadata } from './hooks/usePageMetadata'
 import { getPageMetadata } from './utils/pageMetadata'
 import { deferredProductPages } from './utils/productPages'
@@ -21,6 +22,10 @@ const Competencies = lazy(() =>
   import('./pages/Competencies/Competencies').then((page) => ({ default: page.Competencies })),
 )
 const Works = lazy(() => import('./pages/Works/Works').then((page) => ({ default: page.Works })))
+const Blog = lazy(() => import('./pages/Blog/Blog').then((page) => ({ default: page.Blog })))
+const BlogArticle = lazy(() =>
+  import('./pages/Blog/BlogArticle').then((page) => ({ default: page.BlogArticle })),
+)
 
 function DeferredProductRoute({ product }: ProductDetailProps) {
   // A direct visit may resolve the lazy module after this route has mounted.
@@ -42,6 +47,9 @@ export default function App() {
             <Route path={privacyPage.path} element={<PrivacyPolicy />} />
             <Route path={competenciesPage.path} element={<Competencies />} />
             <Route path={worksPage.path} element={<Works />} />
+            <Route path={blogPage.path} element={<Blog />} />
+            <Route path={`${blogPage.path}/:slug`} element={<BlogArticle />} />
+            <Route path={`${blogPage.path}/*`} element={<BlogArticle />} />
             {products.map((product) => (
               <Route
                 key={product.path}

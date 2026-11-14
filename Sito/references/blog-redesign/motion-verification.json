@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-14",
+  "scope": "Local blog chapter highlighting and shared scroll-entry animations",
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "vitest": "51 tests in 12 files passed",
+    "build": "passed"
+  },
+  "implementation": {
+    "activeChapter": "Stable chapter containers measured on passive scroll, resize and ResizeObserver callbacks, grouped with requestAnimationFrame. React state changes only when the active chapter changes. No hash/focus changes from scrolling.",
+    "selection": "aria-current=location, LGE blue text and sky background, 250ms shared CSS transition.",
+    "entryMotion": "Existing useSectionReveal: 24px upward entry with opacity, 1.4s power2.out by default. Existing index introduction retained; filters use 1.15s and 0.08s stagger. Removed independent CSS cardEnter animation.",
+    "coverage": [
+      "index filters and cards",
+      "article heading and photograph",
+      "table of contents",
+      "lead paragraph",
+      "chapter headings and content",
+      "takeaway, sources and return link",
+      "related heading and story cards",
+      "existing contact section"
+    ],
+    "accessibility": "Keyboard focus finishes the relevant reveal. Anchor focus stays on the target section. Reduced motion leaves all content visible without transforms. Cleanup covers RAF, observers, event listeners and GSAP contexts in Strict Mode."
+  },
+  "browser": {
+    "tool": "ChatGPT in-app browser through cua_repl",
+    "viewports": [
+      [
+        1511,
+        1041
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "errorsAndWarnings": []
+  },
+  "verified": [
+    "Scroll down: first → second → third chapter, unchanged hash.",
+    "Scroll upward: third → second chapter.",
+    "Last-chapter link focuses domande-utili and exposes its text; scrolling then updates the selection independently of that hash.",
+    "Index card opacity observed 0 → 0.2267 → 1 as the second row enters the viewport; final translation 0px.",
+    "Reduced motion: all article headings and six story links have opacity 1 and transform none. Preference restored to full motion.",
+    "Mobile direct third-chapter link: correct selected item, focused section, opacity 1 and no horizontal overflow.",
+    "Tablet direct second-chapter link: correct item after subpixel coordinate fix."
+  ],
+  "issueFoundAndFixed": "At 768px, anchor scrolling placed the second chapter at y=100.1171875 for a 100px scroll margin, leaving the first chapter selected. Normalizing fractional CSS pixels in chapter selection fixes this; covered by the boundary test and rechecked with the same anchor geometry.",
+  "screenshot": "result-active-chapter.jpg",
+  "observations": [
+    {
+      "current": "Prima di tutto, osserva le tue stanze.",
+      "hash": "",
+      "sections": [
+        {
+          "id": "partire-dagli-ambienti",
+          "opacity": "1",
+          "top": 298.875
+        },
+        {
+          "id": "scegliere-apertura",
+          "opacity": "1",
+          "top": 553.71875
+        },
+        {
+          "id": "materiali-e-contesto",
+          "opacity": "1",
+          "top": 778.921875
+        },
+        {
+          "id": "domande-utili",
+          "opacity": "0",
+          "top": 1033.765625
+        }
+      ],
+      "stage": "first reading viewport",
+      "y": 1021
+    },
+    {
+      "current": "L’apertura fa parte dell’arredo.",
+      "hash": "",
+      "positions": [
+        {
+          "id": "partire-dagli-ambienti",
+          "top": -169.625
+        },
+        {
+          "id": "scegliere-apertura",
+          "top": 85.21875
+        },
+        {
+          "id": "materiali-e-contesto",
+          "top": 310.421875
+        },
+        {
+          "id": "domande-utili",
+          "top": 565.265625
+        }
+      ],
+      "stage": "scroll down",
+      "y": 1489.5
+    },
+    {
+      "current": "Materiale e finitura, nel loro contesto.",
+      "hash": "",
+      "stage": "third chapter via scroll",
+      "style": {
+        "background": "rgb(232, 240, 248)",
+        "color": "rgb(1, 67, 128)"
+      },
+      "y": 1749.5
+    },
+    {
+      "current": "L’apertura fa parte dell’arredo.",
+      "hash": "",
+      "stage": "scroll back up",
+      "y": 1489.5
+    },
+    {
+      "current": "Tre cose da portare al primo incontro.",
+      "focus": "domande-utili",
+      "hash": "#domande-utili",
+      "stage": "last chapter link",
+      "targetOpacity": "1",
+      "targetTop": 111.765625,
+      "y": 1943
+    },
+    {
+      "current": "L’apertura fa parte dell’arredo.",
+      "hash": "#domande-utili",
+      "stage": "scroll changes selection despite last clicked hash",
+      "y": 1682.5
+    },
+    {
+      "cards": [
+        {
+          "opacity": "0.295",
+          "top": 392.9140625,
+          "transform": "matrix(1, 0, 0, 1, 0, 16.9193)"
+        },
+        {
+          "opacity": "0.295",
+          "top": 392.9140625,
+          "transform": "matrix(1, 0, 0, 1, 0, 16.9193)"
+        },
+        {
+          "opacity": "0.295",
+          "top": 392.9140625,
+          "transform": "matrix(1, 0, 0, 1, 0, 16.9193)"
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125,
+          "transform": "matrix(1, 0, 0, 1, 0, 24)"
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125,
+          "transform": "matrix(1, 0, 0, 1, 0, 24)"
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125,
+          "transform": "matrix(1, 0, 0, 1, 0, 24)"
+        }
+      ],
+      "stage": "index entry"
+    },
+    {
+      "cards": [
+        {
+          "opacity": "1",
+          "top": 392.9140625
+        },
+        {
+          "opacity": "1",
+          "top": 392.9140625
+        },
+        {
+          "opacity": "1",
+          "top": 392.9140625
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125
+        },
+        {
+          "opacity": "0",
+          "top": 951.4453125
+        }
+      ],
+      "stage": "index settled before scroll"
+    },
+    {
+      "cards": [
+        {
+          "opacity": "0.2267",
+          "top": -69.5546875,
+          "transform": "matrix(1, 0, 0, 1, 0, 18.5582)"
+        },
+        {
+          "opacity": "0.2267",
+          "top": -69.5546875,
+          "transform": "matrix(1, 0, 0, 1, 0, 18.5582)"
+        },
+        {
+          "opacity": "0.2267",
+          "top": -69.5546875,
+          "transform": "matrix(1, 0, 0, 1, 0, 18.5582)"
+        }
+      ],
+      "stage": "index entering second row"
+    },
+    {
+      "cards": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "stage": "index second row after scroll",
+      "y": 1021
+    },
+    {
+      "current": "L’apertura fa parte dell’arredo.",
+      "focus": "materiali-e-contesto",
+      "overflow": false,
+      "stage": "mobile direct chapter",
+      "targetOpacity": "1",
+      "targetTop": 100.1328125,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": "Tre cose da portare al primo incontro.",
+      "overflow": false,
+      "stage": "tablet after resize",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": "Prima di tutto, osserva le tue stanze.",
+      "offset": "100px",
+      "overflow": false,
+      "stage": "tablet direct chapter settled",
+      "top": 100.1171875
+    },
+    {
+      "current": "L’apertura fa parte dell’arredo.",
+      "headingOpacity": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "motion": "reduced",
+      "stage": "tablet anchor rounding fixed with reduced motion",
+      "top": 100.1171875,
+      "transforms": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "motion": "reduced",
+      "opacities": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "stage": "reduced motion index",
+      "transforms": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "current": "Materiale e finitura, nel loro contesto.",
+      "focus": "materiali-e-contesto",
+      "motion": "full",
+      "opacity": "1",
+      "overflow": false,
+      "stage": "mobile anchor fixed with full motion restored",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "limits": [
+    "Browser checks emulate phone/tablet widths; no physical iPhone/Safari verification.",
+    "No commit, push or deployment."
+  ]
+}
