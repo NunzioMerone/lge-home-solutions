@@ -9,6 +9,7 @@ import { worksPage } from '../../config/works'
 import { gibusCatalogsId, outdoorShowcaseId } from '../../data/atelierGibus'
 import { homeGallery } from '../../data/homeGallery'
 import { atelierGibusPage } from '../../data/products'
+import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
 import { getContactLinks } from '../../utils/contactLinks'
@@ -40,27 +41,34 @@ function WriteLink() {
 }
 
 export function AtelierGibus({ product }: ProductDetailProps) {
+  useAnchorNavigation(outdoorShowcaseId, gibusCatalogsId)
+
   return (
     <div className={styles.page}>
       <Link className="skip-link" to={`#${outdoorShowcaseId}`}>
         Vai alle soluzioni Gibus
       </Link>
       <Header />
-      <main aria-labelledby="product-title">
+      <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
-          eyebrow="ATELIER GIBUS · CAMPI FLEGREI"
+          eyebrow="OUTDOOR"
           title={
             <>
               Come immagini il tuo spazio <em>all’aperto?</em>
             </>
           }
-          description="Raccontaci le tue idee e ciò che desideri per il tuo terrazzo o giardino. Saremo felici di ascoltarti e trovare insieme la soluzione più adatta a te. Scrivici oppure vieni a parlarne con noi in showroom, su appuntamento."
+          description="Raccontaci le tue idee e ciò che desideri per il tuo terrazzo o giardino. Saremo felici di ascoltarti e trovare insieme la soluzione più adatta a te. Vieni a parlarne con noi in showroom, su appuntamento."
+          imageOverlay={
+            <p className={styles.heroBadge}>
+              <strong>Atelier Gibus</strong>
+              <em lang="en">Outdoor living</em>
+            </p>
+          }
         >
           <div className={styles.actions}>
-            <WriteLink />
-            <Link className={styles.inlineLink} to={`#${gibusCatalogsId}`}>
-              Cataloghi <Icon name="down" />
+            <Link className={styles.button} to={`#${outdoorShowcaseId}`}>
+              Scopri di più <Icon name="down" />
             </Link>
             <a
               className={styles.inlineLink}
@@ -84,7 +92,6 @@ export function AtelierGibus({ product }: ProductDetailProps) {
           worksPath={`${worksPage.path}?categoria=atelier-gibus#works-content`}
           worksLabel="Vedi i lavori outdoor"
         >
-          <p className="eyebrow">Showroom di Monte di Procida</p>
           <h2 id="gibus-showroom-title">
             Facci vedere <em>il tuo spazio.</em>
           </h2>

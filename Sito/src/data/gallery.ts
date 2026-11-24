@@ -33,7 +33,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-e7b0f444',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso antracite con dettaglio circolare',
     width: 1200,
     height: 1600,
@@ -243,7 +243,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-140f9f69',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso bianca con inserto vetrato e maniglione',
     width: 1600,
     height: 1200,
@@ -363,7 +363,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-3754af6c',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso bianca con vetro laterale',
     width: 1200,
     height: 1600,
@@ -493,7 +493,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-679dce50',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Dettaglio di maniglione nero su una porta d’ingresso',
     width: 1200,
     height: 1600,
@@ -573,7 +573,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-71945291',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Ingresso protetto con porta e schermature esterne',
     width: 1600,
     height: 1200,
@@ -633,7 +633,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-8114c1fa',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Ingresso bianco con pensilina trasparente',
     width: 1200,
     height: 1600,
@@ -653,7 +653,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-844bc0c2',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso ad arco con persiane laterali',
     width: 1600,
     height: 1195,
@@ -673,7 +673,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-8c4683c6',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso chiara con inserto in vetro',
     width: 1200,
     height: 1600,
@@ -793,7 +793,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-b523a228',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso grigia con maniglia nera',
     width: 1200,
     height: 1600,
@@ -923,7 +923,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-e2d1ec8e',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso chiara con vetro satinato',
     width: 1200,
     height: 1600,
@@ -993,7 +993,7 @@ export const gallery: GalleryPhoto[] = [
   },
   {
     id: 'lge-f76b753f',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso ad arco con pannelli chiari',
     width: 1200,
     height: 1600,

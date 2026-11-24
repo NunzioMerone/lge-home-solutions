@@ -15,7 +15,8 @@ export interface ScrollPosition {
 }
 
 export type HomeScrollTarget =
-  { kind: 'position'; position: ScrollPosition } | { kind: 'anchor'; id: string }
+  | { kind: 'position'; position: ScrollPosition }
+  | { kind: 'anchor'; id: string; behavior: 'auto' | 'instant' }
 
 export interface PageActivityProps {
   active: boolean

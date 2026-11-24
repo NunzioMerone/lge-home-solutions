@@ -17,7 +17,7 @@
     opacity var(--transition);
 }
 @media (max-width: 699px) {
-  .button {
+  .button:not([data-show-on-mobile]) {
     display: none;
   }
 }

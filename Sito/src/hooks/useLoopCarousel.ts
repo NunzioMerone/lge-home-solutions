@@ -13,6 +13,7 @@ export function useLoopCarousel({
 }: LoopCarouselOptions = {}) {
   const { reducedMotion } = useMotion()
   const [selected, setSelected] = useState(0)
+  const [snapCount, setSnapCount] = useState(0)
   const focusRequested = useRef(false)
   const regionRef = useRef<HTMLDivElement>(null)
   const continuous = continuousSpeed !== undefined
@@ -52,10 +53,14 @@ export function useLoopCarousel({
       sync()
       onSelect?.()
     }
-    api.on('select', select).on('reInit', sync)
-    sync()
+    const reinitialize = () => {
+      sync()
+      setSnapCount(api.scrollSnapList().length)
+    }
+    api.on('select', select).on('reInit', reinitialize)
+    reinitialize()
     return () => {
-      api.off('select', select).off('reInit', sync)
+      api.off('select', select).off('reInit', reinitialize)
     }
   }, [api, onSelect])
 
@@ -202,6 +207,7 @@ export function useLoopCarousel({
     regionRef,
     viewportRef,
     selected,
+    snapCount,
     onKeyDown,
     scrollTo,
     scrollPrev,

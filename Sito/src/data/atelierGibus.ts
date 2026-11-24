@@ -1,5 +1,6 @@
 import type { GalleryPhoto } from '../types/gallery'
 import type { GibusCatalogGroupDefinition } from '../types/atelierGibus'
+import { gibusGalleryPhotos } from './gibusGalleryPhotos'
 
 export const gibusCatalogUrl = 'https://www.gibus.com/it/cataloghi/'
 export const outdoorShowcaseId = 'gibus-soluzioni'
@@ -12,7 +13,7 @@ const solutions = [
     title: 'Pergole bioclimatiche',
     feature: 'Luce e ombra, in armonia.',
     description:
-      'Le lame orientabili permettono di regolare luce e ventilazione, creando il giusto equilibrio tra sole e ombra.',
+      'Le lame orientabili permettono di regolare luce e ventilazione, creando il giusto equilibrio tra luce e ombra.',
     use: 'Uno spazio da vivere al tuo ritmo, dalla colazione all’aperto ai momenti di relax.',
     productUrl: 'https://www.gibus.com/it/prodotti/pergole-bioclimatiche/',
     catalogUrl:
@@ -132,7 +133,7 @@ const solutions = [
     title: 'Vetrate scorrevoli',
     feature: 'Al riparo, con la vista aperta.',
     description:
-      'Vetrate scorrevoli che riparano dal vento, senza rinunciare alla luce e al panorama.',
+      'Vetrate scorrevoli che riparano da acqua e vento, senza rinunciare alla luce e al panorama.',
     use: 'Per aprire pergole e portici verso l’esterno o renderli più riparati, secondo le tue esigenze.',
     productUrl: 'https://www.gibus.com/it/prodotti/vetrate/',
     catalogUrl:
@@ -144,9 +145,8 @@ const solutions = [
 ] as const
 
 export const outdoorSolutions = solutions.map(
-  ({ photoAlt, photoWidth, photoHeight, photoStatus, ...solution }) => ({
-    ...solution,
-    photo: {
+  ({ photoAlt, photoWidth, photoHeight, photoStatus, ...solution }) => {
+    const cover: GalleryPhoto = {
       id: solution.id,
       category: solution.title,
       alt: photoAlt,
@@ -156,8 +156,17 @@ export const outdoorSolutions = solutions.map(
       fullWidth: photoWidth,
       collection: 'atelier-gibus',
       status: photoStatus,
-    } satisfies GalleryPhoto,
-  }),
+    }
+    const gallery = gibusGalleryPhotos[solution.id].map((photo): GalleryPhoto => ({
+      ...photo,
+      category: solution.title,
+      previewWidths: photo.width > 960 ? [480, 960, photo.width] : [480, photo.width],
+      fullWidth: photo.width,
+      collection: 'atelier-gibus',
+      status: 'official-reference',
+    }))
+    return { ...solution, photos: [cover, ...gallery] as const }
+  },
 )
 
 const catalogGroupDefinitions: readonly GibusCatalogGroupDefinition[] = [

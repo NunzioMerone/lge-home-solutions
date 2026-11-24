@@ -154,9 +154,6 @@
   .introduction h1 {
     font-size: clamp(3.75rem, 4.8vw, 5.3rem);
   }
-  .suffixSlot {
-    white-space: nowrap;
-  }
   .subtitle {
     max-width: 430px;
     margin-top: 28px;

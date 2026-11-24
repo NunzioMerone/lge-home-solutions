@@ -20,8 +20,8 @@ export function Certifications() {
             La qualità nasce dalla <em>competenza</em>
           </h2>
           <p className={styles.description}>
-            Un buon serramento fa la differenza. Una posa eseguita con cura permette di valorizzarne
-            davvero le prestazioni.
+            Un buon serramento può fare la differenza. Una posa eseguita con cura permette di
+            valorizzarne davvero le prestazioni.
           </p>
         </header>
       </div>

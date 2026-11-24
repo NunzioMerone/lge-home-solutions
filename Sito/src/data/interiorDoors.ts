@@ -39,7 +39,7 @@ const catalogPhotoDefaults = {
 export const interiorDoorOpenings = [
   {
     id: 'swing',
-    title: 'A battente',
+    title: 'Battente',
     headline: 'Lo spazio per aprire.',
     detail:
       'Quando c’è spazio per la rotazione dell’anta, puoi scegliere il verso di apertura in base ai passaggi e alla disposizione dei mobili.',
@@ -71,7 +71,7 @@ export const interiorDoorOpenings = [
   },
   {
     id: 'flush',
-    title: 'A filo parete',
+    title: 'Raso parete',
     headline: 'In continuità con la parete.',
     detail:
       'L’anta si allinea alla parete. Puoi scegliere un colore simile per darle continuità, oppure una finitura a contrasto per metterla in risalto.',
@@ -81,7 +81,7 @@ export const interiorDoorOpenings = [
       ...catalogPhotoDefaults,
       id: 'rm-inc3l',
       category: 'I-PEA · RM-INC3L',
-      alt: 'Porta a filo parete integrata nella boiserie laccata bianca',
+      alt: 'Porta raso parete integrata nella boiserie laccata bianca',
       height: 1011,
     } satisfies GalleryPhoto,
   },

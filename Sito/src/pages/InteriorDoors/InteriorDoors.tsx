@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
@@ -9,6 +8,7 @@ import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { ipeaCatalogs } from '../../data/interiorDoors'
+import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
@@ -22,17 +22,7 @@ const { whatsapp } = getContactLinks(contacts)
 
 export function InteriorDoors({ product }: ProductDetailProps) {
   const catalogs = useSectionReveal()
-  const { hash, key } = useLocation()
-
-  useEffect(() => {
-    if (hash !== `#${catalogsId}`) return
-    const frame = requestAnimationFrame(() => {
-      const section = catalogs.current
-      section?.focus({ preventScroll: true })
-      section?.scrollIntoView({ block: 'start' })
-    })
-    return () => cancelAnimationFrame(frame)
-  }, [catalogs, hash, key])
+  useAnchorNavigation(catalogsId)
 
   return (
     <div className={styles.page}>
@@ -40,7 +30,7 @@ export function InteriorDoors({ product }: ProductDetailProps) {
         Vai ai cataloghi I-PEA
       </Link>
       <Header />
-      <main aria-labelledby="product-title">
+      <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
           eyebrow="LGE HOME SOLUTIONS"
@@ -54,7 +44,7 @@ export function InteriorDoors({ product }: ProductDetailProps) {
           description="Dal soggiorno alla zona notte, ogni stanza ha esigenze diverse. Ti aiutiamo a scegliere finitura e apertura in base alla luce, alla privacy e allo spazio che hai a disposizione."
         >
           <Link className={styles.button} to={`#${catalogsId}`}>
-            Sfoglia i cataloghi <Icon name="down" />
+            Scopri di più <Icon name="down" />
           </Link>
         </ProductHero>
 
@@ -72,7 +62,7 @@ export function InteriorDoors({ product }: ProductDetailProps) {
                 La finitura fa <em>la differenza.</em>
               </h2>
               <p className={styles.body}>
-                Sfoglia le ambientazioni e guarda come cambiano le porte con la luce, i colori e i
+                Sfoglia i cataloghi e guarda come cambiano le porte con la luce, i colori e i
                 materiali che le circondano.
               </p>
             </header>
@@ -105,7 +95,6 @@ export function InteriorDoors({ product }: ProductDetailProps) {
           worksPath={`${worksPage.path}?categoria=porte-interne#works-content`}
           worksLabel="Vedi altri lavori"
         >
-          <p className="eyebrow">SHOWROOM DI MONTE DI PROCIDA</p>
           <h2 id="interior-showroom-title">
             Scegliamola <em>insieme.</em>
           </h2>

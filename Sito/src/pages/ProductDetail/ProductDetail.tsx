@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
@@ -9,6 +8,7 @@ import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { windowCollection } from '../../data/infissi'
+import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
@@ -21,19 +21,7 @@ const { whatsapp } = getContactLinks(contacts)
 
 export function ProductDetail({ product }: ProductDetailProps) {
   const configurator = useSectionReveal()
-  const { hash, key } = useLocation()
-
-  useEffect(() => {
-    const sectionId = hash.slice(1)
-    if (sectionId !== windowCollection.id && sectionId !== windowCollection.configuratorId) return
-
-    const frame = requestAnimationFrame(() => {
-      const target = document.getElementById(sectionId)
-      target?.focus({ preventScroll: true })
-      target?.scrollIntoView({ block: 'start' })
-    })
-    return () => cancelAnimationFrame(frame)
-  }, [hash, key])
+  useAnchorNavigation(windowCollection.id, windowCollection.configuratorId)
 
   return (
     <div className={styles.page}>
@@ -41,7 +29,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         Vai ai modelli e ai cataloghi COSMET
       </Link>
       <Header />
-      <main aria-labelledby="product-title">
+      <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
           eyebrow="LGE HOME SOLUTIONS · COSMET"
@@ -52,7 +40,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <em>abitare meglio.</em>
             </>
           }
-          description="Infissi in legno alluminio, alluminio e PVC. Confronta battente e scorrevole e scegli con noi l’apertura giusta per i tuoi spazi."
+          description="Infissi in legno alluminio, alluminio e PVC. Battente o scorrevole? Scegli con noi l’apertura giusta per i tuoi spazi."
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${windowCollection.configuratorId}`}>
@@ -94,27 +82,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </header>
                 <div>
                   <p className={styles.body}>
-                    Esplora i modelli e prova colori, finiture e opzioni disponibili nel
-                    configuratore. Se vuoi partire dalle esigenze di casa, scegli il percorso
-                    guidato.
+                    Parti dalle esigenze di casa e segui i passaggi per esplorare i modelli, i
+                    colori e le finiture disponibili.
                   </p>
                   <div className={styles.actions}>
                     <a
                       className={styles.button}
-                      href={windowCollection.configuratorUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Apri il configuratore <Icon name="external" />
-                      <span className="sr-only"> COSMET (nuova scheda)</span>
-                    </a>
-                    <a
-                      className={styles.inlineLink}
                       href={windowCollection.guidedUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Percorso guidato <Icon name="external" />
+                      Apri il configuratore <Icon name="external" />
                       <span className="sr-only"> COSMET (nuova scheda)</span>
                     </a>
                   </div>
@@ -130,7 +108,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
           worksPath={`${worksPage.path}?categoria=infissi#works-content`}
           worksLabel="Vedi altri lavori"
         >
-          <p className="eyebrow">Showroom di Monte di Procida</p>
           <h2 id="window-showroom-title">
             La scelta giusta si vede <em>da vicino.</em>
           </h2>

@@ -46,6 +46,20 @@
   display: grid;
   gap: 6px;
 }
+.readReviews {
+  color: #5e5e5e;
+  font-size: 0.75rem;
+}
+.readReviews [translate='no'],
+.ratingLabel {
+  white-space: nowrap;
+}
+.googleSummary:hover .readReviews,
+.authorDetails a:hover,
+.attributions a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .summaryText {
   display: flex;
   align-items: center;
@@ -115,8 +129,8 @@
   font-weight: 600;
 }
 .ratingLabel {
-  color: var(--color-muted);
-  font-size: 0.72rem;
+  color: #5e5e5e;
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 .googleMark {
@@ -173,6 +187,7 @@
   margin-top: auto;
 }
 .avatar {
+  position: relative;
   flex: 0 0 36px;
   height: 36px;
   display: grid;
@@ -181,6 +196,12 @@
   background: #176f65;
   color: var(--color-white);
   font-size: 1rem;
+}
+.avatar img {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  object-fit: cover;
 }
 .avatar[data-tone='blue'] {
   background: #356c91;
@@ -235,6 +256,17 @@
 .status {
   min-height: 364px;
   color: var(--color-muted);
+}
+.attributions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-muted);
+  font-size: 0.75rem;
 }
 .loadingCards {
   display: grid;

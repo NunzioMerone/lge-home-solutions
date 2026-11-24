@@ -82,5 +82,7 @@ export const privacySources = {
   osmPrivacy: 'https://osmfoundation.org/wiki/Privacy_Policy',
   whatsappPrivacy: 'https://www.whatsapp.com/legal/privacy-policy-eea',
   googlePrivacy: 'https://policies.google.com/privacy?hl=it',
+  googleMapsTerms: 'https://www.google.com/intl/it/help/terms_maps/',
+  elfsightPrivacy: 'https://elfsight.com/privacy-policy/',
   instagramPrivacy: 'https://privacycenter.instagram.com/policy/',
 } as const

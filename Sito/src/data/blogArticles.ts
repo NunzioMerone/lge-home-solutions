@@ -79,7 +79,7 @@ export const blogArticles: Readonly<Record<string, BlogArticleContent>> = {
       },
     ],
     takeaway: 'Non esiste un outdoor uguale per tutti. Esiste il tuo modo di viverlo.',
-    solution: { label: 'Entra nel mondo Atelier Gibus', path: '/atelier-gibus' },
+    solution: { label: 'Scopri le soluzioni outdoor', path: '/atelier-gibus' },
     sources: [
       {
         label: 'Gibus · Pergole e tende da sole',

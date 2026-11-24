@@ -2,5 +2,5 @@ export const competenciesPage = {
   path: '/competenze',
   title: 'Competenze — LGE Home Solutions',
   description:
-    'Le qualifiche di posa e termografia, gli attestati e i riconoscimenti di LGE Home Solutions.',
+    'Le competenze LGE nella progettazione e posa dei serramenti e nella termografia, con attestati e riconoscimenti.',
 } as const

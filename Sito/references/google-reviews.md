@@ -1,5 +1,11 @@
 # Recensioni Google LGE
 
+## Rilevazione del 24 novembre 2026
+
+La [scheda pubblica su Google Maps](https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2) indica **10 recensioni**, tutte da cinque stelle. La nuova recensione di Giovanni Donato è stata verificata in Maps. La card mostra un estratto fedele e apre l’originale tramite il collegamento sotto il nome. Le date di ottobre e novembre sono espresse per mese per evitare che invecchino tra un aggiornamento manuale e il successivo. Le schede storiche provengono dalla rilevazione precedente.
+
+Il carosello LGE è nuovamente attivo nella home locale. La prova Elfsight e Google Places possono essere riattivate con le rispettive configurazioni descritte sotto.
+
 ## Fonte verificata il 27 ottobre 2026
 
 Scheda: **LGE HOME SOLUTIONS**, Via Roma 29, Monte di Procida. Valutazione pubblica attuale: **5,0/5, 9 recensioni**, tutte da cinque stelle.
@@ -24,7 +30,7 @@ Le date relative riproducono quelle mostrate il 27 ottobre; `checkedAt` e la fon
 
 Fonti locali: `google-reviews-2026-10-27.png`, `google-reviews-2026-10-27-visible.json`, `google-review-nunzio-original-2026-10-27.png` e il corrispondente JSON. La rilevazione del 24 ottobre resta documentata in `google-reviews-verification-2026-10-24.md` e nello screenshot originale.
 
-## Collegamento e presentazione attuali
+## Collegamento e presentazione della rilevazione di ottobre
 
 Il riepilogo con il voto, nove recensioni e le stelle apre la scheda reale. Card bianche con testo serif, voto, stelle, avatar di fallback e data. Titolo senza linea, «noi» in corsivo blu. Quattro card nei desktop ordinari, cinque da 1600 px; una card centrata con anticipazioni laterali sul telefono. Le card laterali sono appena ridotte, come nella galleria. Al massimo cinque indicatori selezionabili visibili, con scorrimento animato della finestra, estremi più piccoli e indicatore attivo allungato. Al massimo sette pulsanti montati, compresi quelli di transizione; finestra verificata in tutte le 500 posizioni di un elenco di prova. Swipe e tastiera; avanzamento automatico lento, interrotto durante lettura e interazioni e con movimento ridotto. I commenti oltre quattro righe mantengono «Leggi di più / Leggi di meno».
 
@@ -32,11 +38,15 @@ Il logo Google originale è ospitato localmente da [Google Static](https://www.g
 
 L’aggiornamento rimane **manuale**: nessuna nuova API, chiave, integrazione esterna, accesso ad account o servizio a pagamento è stato attivato. L’utente non dispone ancora di una chiave Maps/Places.
 
-## Passaggio successivo per l'aggiornamento automatico
+## Aggiornamento automatico in anteprima locale
 
-Per un'integrazione personalizzata coerente con questo layout, usare Google Maps JavaScript API con Places (New) e `Place.fetchFields`, richiedendo soltanto campi necessari a recensioni e riepilogo. Configurare prima il progetto Google Cloud del titolare, le API pertinenti e una chiave browser limitata ai domini autorizzati e alle API necessarie. Per la produzione Google richiede l'attivazione della fatturazione; definire budget e quote con il titolare prima dell'attivazione. Nessun account o costo è stato attivato durante questo intervento.
+Il carosello può caricare le recensioni con Google Maps JavaScript API, Places API (New) e `Place.fetchFields` all’ingresso in prossimità della sezione. Per provarlo, creare nel progetto Google Cloud di LGE una chiave con restrizione **Siti web** per `http://localhost:5175` (oppure `http://127.0.0.1:5175` se si usa quell’indirizzo) e restrizioni API a **Maps JavaScript API** e **Places API (New)**. Il progetto Google Cloud deve essere collegato alla fatturazione.
 
-La risposta standard contiene fino a cinque recensioni ordinate per rilevanza: questo limite va comunicato nell'interfaccia. Mostrare le attribuzioni disponibili, i collegamenti agli autori e alle singole recensioni e il logo richiesto. Non conservare nel bundle una copia di risposte API per simulare un aggiornamento in tempo reale.
+Impostare `VITE_GOOGLE_MAPS_API_KEY` in `Sito/.env.development.local`, escluso da Git, e riavviare Vite. È una chiave browser visibile nelle richieste, protetta dalle restrizioni di Google Cloud. Il sito senza chiave usa la rilevazione manuale. Con la chiave, la media e il totale sono quelli di Google. Il carosello mostra fino a cinque recensioni ordinate da Google per rilevanza, con attribuzioni e collegamenti disponibili. Il link a Google Maps resta disponibile durante il caricamento e in caso di errore. Le risposte API non vengono salvate o incluse nella build.
+
+Il Place ID in `src/config/googlePlaces.ts` è ricavato dagli identificativi della scheda di Via Roma 29. Alla prima prova con la chiave verificare corrispondenza di sede, media e conteggio con Google Maps. L’informativa locale descrive il caricamento soltanto quando la chiave è configurata. La pubblicazione richiede una chiave dedicata al dominio pubblico e la revisione dell’informativa e delle condizioni d’uso.
+
+Prima di attivare la chiave, verificare nella console che **Place Details (New)** consenta una quota giornaliera e impostarla a **30 richieste**. Il limite corrisponde a un massimo di 930 richieste in un mese di 31 giorni, a fronte di una soglia standard di 1.000 per la richiesta con recensioni. Verificare il listino e l’eventuale uso dello stesso SKU negli altri progetti collegati allo stesso account di fatturazione. Una visita alla sezione può consumare una richiesta anche in assenza di nuove recensioni. Al superamento della quota resta disponibile il link alla scheda Google Maps. [Controllo dei costi](https://developers.google.com/maps/billing-and-pricing/manage-costs#quotas) · [Consumo aggregato per account di fatturazione](https://developers.google.com/maps/billing-and-pricing/overview#pay-as-you-go)
 
 Documentazione ufficiale consultata:
 
@@ -44,3 +54,9 @@ Documentazione ufficiale consultata:
 - [Configurazione della chiave e fatturazione](https://developers.google.com/maps/documentation/javascript/get-api-key).
 - [Attribuzioni e recensioni nella Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/policies).
 - [Politiche Places e collegamenti alle fonti](https://developers.google.com/maps/documentation/places/web-service/policies).
+
+## Prova locale Elfsight
+
+L’anteprima con `npm run dev` può usare il widget Google Reviews di Elfsight. Impostare `VITE_ELFSIGHT_REVIEWS_WIDGET_ID` in `Sito/.env.development.local` con l’identificativo del widget LGE e riavviare Vite. La home conserva il titolo e il collegamento a Google Maps. Il widget si carica in prossimità della sezione. Durante l’attesa e se il widget viene nascosto, per esempio al limite mensile, compaiono le schede LGE con le recensioni della rilevazione manuale. La build esclude il widget anche se l’identificativo è presente nell’ambiente.
+
+Il piano Free dichiara una visualizzazione ogni volta che il widget viene caricato, fino a 200 al mese. La sincronizzazione con Google avviene ogni 72 ore. [Piano Elfsight](https://elfsight.com/google-reviews-widget/pricing/) · [Aggiornamento](https://help.elfsight.com/article/168-why-my-reviews-are-not-being-updated) · [Quote](https://help.elfsight.com/article/1089-views-limit-everything-you-need-to-know-new-dashboard)

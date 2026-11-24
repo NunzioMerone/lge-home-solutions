@@ -74,6 +74,9 @@ a svg {
 section[id] {
   scroll-margin-top: calc(var(--navigation-compact-height) + 24px + env(safe-area-inset-top));
 }
+[data-product-page] section[id] {
+  scroll-margin-top: calc(var(--navigation-compact-height) + env(safe-area-inset-top));
+}
 .sr-only {
   position: absolute;
   width: 1px;

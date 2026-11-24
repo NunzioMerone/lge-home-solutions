@@ -1,7 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: var(--gallery-pagination-gap, 18px);
 }
 .viewport {
   width: 150px;

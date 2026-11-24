@@ -48,7 +48,7 @@ export const homeGallery: readonly GalleryPhoto[] = [
   },
   {
     id: 'home-ingresso-grigio',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso grigia',
     width: 1086,
     height: 1448,
@@ -59,7 +59,7 @@ export const homeGallery: readonly GalleryPhoto[] = [
   },
   {
     id: 'home-ingresso-bianco',
-    category: 'Porte e sicurezza',
+    category: 'Porte d’ingresso',
     alt: 'Porta d’ingresso bianca',
     width: 1086,
     height: 1448,

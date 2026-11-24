@@ -24,8 +24,9 @@ export function Contacts() {
               Vieni a <em>trovarci</em>
             </h2>
             <p className={styles.description}>
-              Visita il nostro showroom a Monte di Procida per scoprire materiali, finiture e
-              soluzioni su misura per la tua casa.
+              Visita il nostro showroom a Monte di Procida, dove troverai una persona pronta ad
+              ascoltarti, consigliarti e accompagnarti nella scelta delle migliori soluzioni su
+              misura per la tua casa.
             </p>
           </header>
           <ShowroomPhoto />

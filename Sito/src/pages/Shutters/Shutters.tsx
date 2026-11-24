@@ -1,50 +1,30 @@
-import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
-import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
-import { shutterCatalogs, shutterSolutions } from '../../data/shutters'
+import { shutterCatalogs } from '../../data/shutters'
+import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
-import type { GalleryLightboxState } from '../../types/gallery'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
 import { getContactLinks } from '../../utils/contactLinks'
+import { ShutterShowcase } from './ShutterShowcase'
 import styles from './Shutters.module.css'
 
 const solutionsId = 'soluzioni-oscuranti'
 const catalogsId = 'cataloghi-oscuranti'
-const photos = shutterSolutions.map(({ photo }) => photo)
 const featuredWork = homeGallery.find((photo) => photo.id === 'home-oscuranti-mare')
 const { whatsapp } = getContactLinks(contacts)
 
 export function Shutters({ product }: ProductDetailProps) {
   const solutions = useSectionReveal()
   const catalogs = useSectionReveal()
-  const { hash, key } = useLocation()
-  const [selected, setSelected] = useState<(typeof shutterSolutions)[number]>(shutterSolutions[0])
-  const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
-
-  useEffect(() => {
-    const section =
-      hash === `#${solutionsId}`
-        ? solutions.current
-        : hash === `#${catalogsId}`
-          ? catalogs.current
-          : null
-    if (!section) return
-    const frame = requestAnimationFrame(() => {
-      section.focus({ preventScroll: true })
-      section.scrollIntoView({ block: 'start' })
-    })
-    return () => cancelAnimationFrame(frame)
-  }, [catalogs, hash, key, solutions])
+  useAnchorNavigation(solutionsId, catalogsId)
 
   return (
     <div className={styles.page}>
@@ -52,10 +32,10 @@ export function Shutters({ product }: ProductDetailProps) {
         Vai alle soluzioni oscuranti
       </Link>
       <Header />
-      <main aria-labelledby="product-title">
+      <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
-          eyebrow="OSCURANTI · SIKUR HOME"
+          eyebrow="OSCURANTI"
           title={
             <>
               La luce,
@@ -63,11 +43,11 @@ export function Shutters({ product }: ProductDetailProps) {
               <em>come vuoi tu.</em>
             </>
           }
-          description="La luce giusta cambia il modo di vivere ogni ambiente. Con avvolgibili e frangisole puoi regolare luminosità, ombra e privacy in ogni momento della giornata, creando il comfort ideale per la tua casa."
+          description="La luce giusta cambia il modo di vivere ogni ambiente. Con gli oscuranti puoi regolare la luminosità, e ottenere contemporaneamente privacy e sicurezza, creando il comfort ideale per la tua casa."
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${solutionsId}`}>
-              Scopri le soluzioni <Icon name="down" />
+              Scopri di più <Icon name="down" />
             </Link>
           </div>
         </ProductHero>
@@ -81,87 +61,16 @@ export function Shutters({ product }: ProductDetailProps) {
         >
           <div className="container">
             <header className={styles.sectionHeader} data-reveal>
-              <p className="eyebrow">SCHERMATURE SIKUR HOME</p>
               <h2 id="shutters-solutions-title">
                 Ogni apertura ha <em>la sua luce.</em>
               </h2>
               <p className={styles.sectionIntro}>
-                Vuoi conservare il cassonetto, schermare una grande vetrata o avere più protezione?
-                Parti da quello che ti serve per vedere la soluzione adatta.
+                Scegli tra avvolgibili e persiane a battente. Esplora cassonetti e motori per gli
+                avvolgibili, oppure confronta alluminio e acciaio per le persiane.
               </p>
             </header>
-
-            <div className={styles.studio} data-reveal>
-              <div className={styles.controls} role="group" aria-label="Scegli la tua esigenza">
-                {shutterSolutions.map((solution, index) => (
-                  <button
-                    key={solution.id}
-                    type="button"
-                    aria-pressed={selected.id === solution.id}
-                    aria-controls="shutters-product"
-                    onClick={() => setSelected(solution)}
-                  >
-                    <span className={styles.index} aria-hidden="true">
-                      0{index + 1}
-                    </span>
-                    <span>{solution.need}</span>
-                    <Icon name="arrow" />
-                  </button>
-                ))}
-              </div>
-
-              <div className={styles.product} id="shutters-product">
-                <figure className={styles.media}>
-                  <button
-                    type="button"
-                    className={styles.photoButton}
-                    aria-label={`Ingrandisci foto: ${selected.photo.alt}`}
-                    aria-haspopup="dialog"
-                    onClick={(event) =>
-                      setLightbox({ photo: selected.photo, trigger: event.currentTarget })
-                    }
-                  >
-                    <GalleryImage
-                      key={selected.photo.id}
-                      photo={selected.photo}
-                      sizes="auto, (min-width: 1440px) 730px, (min-width: 1040px) 52vw, (min-width: 740px) 51vw, (min-width: 550px) 480px, 91vw"
-                    />
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      aria-hidden="true"
-                    >
-                      <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
-                    </svg>
-                  </button>
-                  <figcaption>Foto Sikur Home</figcaption>
-                </figure>
-
-                <div className={styles.productCopy}>
-                  <div aria-live="polite">
-                    <p className="eyebrow">{selected.category}</p>
-                    <h3>{selected.name}</h3>
-                    <p className={styles.feature}>{selected.headline}</p>
-                    <p className={styles.body}>{selected.detail}</p>
-                  </div>
-                  <a
-                    className={styles.inlineLink}
-                    href={selected.productUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Vedi la scheda ufficiale <Icon name="external" />
-                    <span className="sr-only"> {selected.name} (nuova scheda)</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ShutterShowcase />
           </div>
-          {lightbox && (
-            <GalleryLightbox {...lightbox} photos={photos} onClose={() => setLightbox(null)} />
-          )}
         </section>
 
         <section
@@ -173,12 +82,13 @@ export function Shutters({ product }: ProductDetailProps) {
         >
           <div className={`container ${styles.catalogLayout}`}>
             <header data-reveal>
-              <p className="eyebrow">CATALOGHI SIKUR HOME</p>
+              <p className="eyebrow">CATALOGHI OSCURANTI</p>
               <h2 id="shutters-catalogs-title">
                 Sfoglia. Confronta. <em>Scegli.</em>
               </h2>
               <p className={styles.body}>
-                Consulta i cataloghi del produttore per vedere le varianti e i dettagli dei sistemi.
+                Consulta i cataloghi dei produttori per confrontare avvolgibili, persiane e
+                finiture.
               </p>
             </header>
 
@@ -210,7 +120,6 @@ export function Shutters({ product }: ProductDetailProps) {
           worksPath={`${worksPage.path}?categoria=oscuranti#works-content`}
           worksLabel="Vedi i nostri lavori"
         >
-          <p className="eyebrow">SHOWROOM DI MONTE DI PROCIDA</p>
           <h2 id="shutters-showroom-title">
             Partiamo dalla <em>tua finestra.</em>
           </h2>

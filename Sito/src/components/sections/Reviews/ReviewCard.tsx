@@ -16,7 +16,7 @@ export function ReviewCard({
       data-has-comment={Boolean(review.text)}
       tabIndex={active ? 0 : -1}
       aria-label={`Recensione di ${review.author}`}
-      aria-describedby="reviews-instructions"
+      aria-describedby={active ? 'reviews-instructions' : undefined}
     >
       <div className={styles.rating}>
         <img
@@ -32,7 +32,9 @@ export function ReviewCard({
             <strong>{review.rating.toLocaleString('it-IT', { minimumFractionDigits: 1 })}</strong>
             <RatingStars rating={review.rating} />
           </div>
-          <span className={styles.ratingLabel}>Recensione su Google</span>
+          <span className={styles.ratingLabel} translate="no">
+            Google Maps
+          </span>
         </div>
       </div>
       {review.text && (
@@ -46,12 +48,49 @@ export function ReviewCard({
       <footer className={styles.author}>
         <span className={styles.avatar} data-tone={review.avatarTone} aria-hidden="true">
           {review.initials}
+          {review.authorPhotoUrl && (
+            <img
+              src={review.authorPhotoUrl}
+              alt=""
+              width="36"
+              height="36"
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.hidden = true
+              }}
+            />
+          )}
         </span>
         <div className={styles.authorDetails}>
           <div className={styles.authorName}>
-            <strong>{review.author}</strong>
+            <strong>
+              {review.authorUrl ? (
+                <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">
+                  {review.author}
+                </a>
+              ) : (
+                review.author
+              )}
+            </strong>
           </div>
-          <small>{review.publishedLabel}</small>
+          {review.reviewUrl ? (
+            <small>
+              <a
+                href={review.reviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={
+                  review.publishedLabel
+                    ? `${review.publishedLabel} – Apri la recensione di ${review.author} su Google Maps (nuova scheda)`
+                    : `Apri la recensione di ${review.author} su Google Maps (nuova scheda)`
+                }
+              >
+                {review.publishedLabel ?? 'Apri su Google Maps'}
+              </a>
+            </small>
+          ) : (
+            review.publishedLabel && <small>{review.publishedLabel}</small>
+          )}
         </div>
       </footer>
     </article>

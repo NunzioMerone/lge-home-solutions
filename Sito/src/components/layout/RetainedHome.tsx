@@ -12,6 +12,7 @@ export function RetainedHome() {
   const active = location.pathname === '/'
   const [homeLocation, setHomeLocation] = useState<Location | null>(active ? location : null)
   const positions = useRef(new Map<string, ScrollPosition>())
+  const wasActive = useRef(false)
 
   // Guarded render adjustment keeps the previous route's context frozen while hidden.
   if (active && homeLocation?.key !== location.key) setHomeLocation(location)
@@ -25,6 +26,8 @@ export function RetainedHome() {
   }, [])
 
   useLayoutEffect(() => {
+    const wasOnHome = wasActive.current
+    wasActive.current = active
     if (!active) return
     const savedPositions = positions.current
     let position = { x: window.scrollX, y: window.scrollY }
@@ -35,11 +38,15 @@ export function RetainedHome() {
       navigationType,
       location.hash,
       savedPositions.get(location.key),
+      wasOnHome,
     )
     if (target.kind === 'position') {
       window.scrollTo({ left: target.position.x, top: target.position.y, behavior: 'instant' })
     } else {
-      document.getElementById(target.id)?.scrollIntoView({ block: 'start', behavior: 'instant' })
+      document.getElementById(target.id)?.scrollIntoView({
+        block: 'start',
+        behavior: target.behavior,
+      })
     }
     remember()
     window.addEventListener('scroll', remember, { passive: true })

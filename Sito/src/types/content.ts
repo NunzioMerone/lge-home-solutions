@@ -21,6 +21,7 @@ export type IconName =
   | 'craft'
   | 'thermal'
   | 'shield'
+  | 'door-open'
   | 'energy'
   | 'external'
   | 'star'

@@ -1,6 +1,9 @@
 import { useReviews } from '../../../hooks/useReviews'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
+import { elfsightReviewsWidgetId } from '../../../config/elfsightReviews'
+import { lgeGooglePlace } from '../../../config/googlePlaces'
 import { assetUrl } from '../../../utils/assetUrl'
+import { ElfsightReviews } from './ElfsightReviews'
 import { ReviewsCarousel } from './ReviewsCarousel'
 import { RatingStars } from './RatingStars'
 import { Skeleton, SkeletonText } from '../../ui/Skeleton'
@@ -23,7 +26,12 @@ function ReviewsSkeleton() {
 
 export function Reviews() {
   const ref = useSectionReveal()
-  const state = useReviews()
+  const state = useReviews(ref, !elfsightReviewsWidgetId)
+  const data = state.status === 'ready' ? state.data : null
+  const average = elfsightReviewsWidgetId ? null : (data?.average ?? null)
+  const totalCount = elfsightReviewsWidgetId ? null : (data?.totalCount ?? null)
+  const carousel = data?.items.length ? <ReviewsCarousel reviews={data.items} /> : null
+
   return (
     <section
       className={`${styles.section} section`}
@@ -40,45 +48,75 @@ export function Reviews() {
             <p>Le parole di chi ha scelto LGE per la propria casa.</p>
           </header>
           <div className={styles.summaryReveal} data-reveal data-reveal-direction="right">
-            {state.status === 'ready' && (
-              <a
-                className={styles.googleSummary}
-                href={state.data.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${state.data.average} su 5, ${state.data.totalCount} recensioni su Google (nuova scheda)`}
-              >
-                <img
-                  src={assetUrl('img/reviews/google-g.png')}
-                  alt="Google"
-                  width="44"
-                  height="44"
-                  loading="lazy"
-                />
-                <div>
-                  <span className={styles.summaryText}>
-                    <strong>
-                      {state.data.average.toLocaleString('it-IT', { minimumFractionDigits: 1 })}
-                      <span>/5</span>
-                    </strong>
-                    <span>{state.data.totalCount} recensioni</span>
-                  </span>
-                  <RatingStars rating={state.data.average} />
-                </div>
-              </a>
-            )}
+            <a
+              className={styles.googleSummary}
+              href={data?.url ?? lgeGooglePlace.reviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={assetUrl('img/reviews/google-g.png')}
+                alt=""
+                width="44"
+                height="44"
+                loading="lazy"
+              />
+              <div>
+                {average !== null && totalCount !== null && (
+                  <>
+                    <span className={styles.summaryText}>
+                      <strong>
+                        {average.toLocaleString('it-IT', {
+                          minimumFractionDigits: 1,
+                          maximumFractionDigits: 1,
+                        })}
+                        <span>/5</span>
+                      </strong>
+                      <span>
+                        {totalCount.toLocaleString('it-IT')}{' '}
+                        {totalCount === 1 ? 'recensione' : 'recensioni'}
+                      </span>
+                    </span>
+                    <RatingStars rating={average} />
+                  </>
+                )}
+                <span className={styles.readReviews}>
+                  Leggi tutte su <span translate="no">Google Maps</span>
+                  <span className="sr-only"> (nuova scheda)</span>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
         <div data-reveal>
-          {state.status === 'ready' ? (
-            <ReviewsCarousel reviews={state.data.items} />
+          {elfsightReviewsWidgetId ? (
+            <ElfsightReviews widgetId={elfsightReviewsWidgetId}>{carousel}</ElfsightReviews>
+          ) : carousel ? (
+            carousel
           ) : state.status === 'loading' ? (
             <ReviewsSkeleton />
+          ) : state.status === 'ready' ? (
+            <p className={styles.status}>Consulta le recensioni su Google Maps.</p>
           ) : (
             <p role="status" className={styles.status}>
               Recensioni temporaneamente non disponibili.
             </p>
           )}
+          {data?.attributions?.length ? (
+            <ul className={styles.attributions} aria-label="Fonti dei dati">
+              {data.attributions.map(({ provider, url }) => (
+                <li key={`${provider}-${url ?? ''}`}>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {provider}
+                    </a>
+                  ) : (
+                    provider
+                  )}
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </div>
     </section>

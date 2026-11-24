@@ -6,7 +6,7 @@ import styles from './Contacts.module.css'
 export function ShowroomPhoto() {
   const [settled, setSettled] = useState(false)
   return (
-    <figure className={styles.photo} data-reveal>
+    <figure className={styles.photo} data-reveal data-reveal-direction="fade">
       {!settled && <Skeleton className={styles.photoSkeleton} />}
       <img
         src={assetUrl('img/showroom/showroom-placeholder-960.webp')}

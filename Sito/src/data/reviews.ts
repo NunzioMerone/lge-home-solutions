@@ -1,14 +1,26 @@
+import { lgeGooglePlace } from '../config/googlePlaces'
 import type { ReviewDataset } from '../types/reviews'
 
-// Transcribed from the public Google Maps listing, not fetched from an API.
+// Manually checked against the public Google Maps listing.
 // Preserve missing comments; show recent additions first. See references/google-reviews.md.
 export const googleReviewSnapshot: ReviewDataset = {
   source: 'google-manual',
   average: 5,
-  totalCount: 9,
-  checkedAt: '2026-10-27',
-  url: 'https://www.google.com/maps/place/LGE+HOME+SOLUTIONS/@40.7940311,14.0532046,17z/data=!4m8!3m7!1s0x133b13b35654a357:0x440e66bcfc5c136a!8m2!3d40.7940311!4d14.0532046!9m1!1b1!16s%2Fg%2F12hlkhmp2',
+  totalCount: 10,
+  checkedAt: '2026-11-24',
+  url: lgeGooglePlace.reviewsUrl,
   items: [
+    {
+      id: 'Ci9DQUlRQUNvZENodHljRjlvT2xkVVZXRjNRVFJaTFZoZlVXMHlTbEpoYVZkQmFHYxAB',
+      author: 'Giovanni Donato',
+      initials: 'G',
+      avatarTone: 'ochre',
+      rating: 5,
+      text: 'Ho cambiato tutte le finestre di casa mia in occasione di una ristrutturazione generale e mi sono affidato a LGE Home Solutions. […]',
+      publishedLabel: 'novembre 2026',
+      reviewUrl:
+        'https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkVVZXRjNRVFJaTFZoZlVXMHlTbEpoYVZkQmFHYxAB!2m1!1s0x0:0x440e66bcfc5c136a!3m1!1s2@1:CAIQACodChtycF9oOldUVWF3QTRZLVhfUW0ySlJhaVdBaGc%7C%7C',
+    },
     {
       id: 'Ci9DQUlRQUNvZENodHljRjlvT2w5eExUZFhVazlIZDFCeVRXRTRjRmhTYW5SMFoyYxAB',
       author: 'Giorgia Luongo',
@@ -16,7 +28,7 @@ export const googleReviewSnapshot: ReviewDataset = {
       avatarTone: 'teal',
       rating: 5,
       text: 'Fin dal primo incontro abbiamo trovato persone disponibili, gentili e preparate. Ci hanno seguito con attenzione, consigliandoci sempre la soluzione più adatta alle nostre esigenze, senza cercare di venderci qualcosa a tutti i costi. Si vede quando qualcuno lavora con passione e tiene davvero alla soddisfazione del cliente.',
-      publishedLabel: '2 giorni fa',
+      publishedLabel: 'ottobre 2026',
     },
     {
       id: 'Ci9DQUlRQUNvZENodHljRjlvT2tRMFNHeGFWVUV3ZDNCV09YVkpZVUo1ZDBGUU5rRRAB',
@@ -25,7 +37,7 @@ export const googleReviewSnapshot: ReviewDataset = {
       avatarTone: 'blue',
       rating: 5,
       text: "Una bella realtà fatta di persone serie e competenti. Mi ha colpito soprattutto l'attenzione che mettono anche nelle piccole cose, dalla puntualità alla cura durante il lavoro. Sempre disponibili per qualsiasi chiarimento e molto precisi. Un'azienda che consiglierei volentieri.",
-      publishedLabel: '3 giorni fa',
+      publishedLabel: 'ottobre 2026',
     },
     {
       id: 'Ci9DQUlRQUNvZENodHljRjlvT25aUVJrSk1SMVJmWkd4TWVETXpaazUyWVcwdFpVRRAB',
@@ -34,7 +46,7 @@ export const googleReviewSnapshot: ReviewDataset = {
       avatarTone: 'plum',
       rating: 5,
       text: 'Persone davvero squisite, disponibili e soprattutto professionali. Hanno lavorato con grande attenzione ai dettagli, lasciando tutto perfettamente pulito e in ordine. Non è scontato trovare persone che lavorano con questa cura. Complimenti a tutto il team!',
-      publishedLabel: '3 giorni fa',
+      publishedLabel: 'ottobre 2026',
     },
     {
       id: 'Ci9DQUlRQUNvZENodHljRjlvT2xGdFEwSk5WSFJ0Y21WdFF6ZHNNbU5aVW14aVpVRRAB',
@@ -43,7 +55,7 @@ export const googleReviewSnapshot: ReviewDataset = {
       avatarTone: 'olive',
       rating: 5,
       text: 'Durante la ristrutturazione di casa abbiamo deciso di sostituire tutti gli infissi e ci siamo trovati benissimo. Ci hanno consigliato nella scelta dei materiali e il montaggio è stato eseguito con grande precisione. Il risultato è davvero bello e abbiamo notato subito la differenza nel comfort di casa.',
-      publishedLabel: '3 giorni fa',
+      publishedLabel: 'ottobre 2026',
     },
     {
       id: 'ChZDSUhNMG9nS0VJQ0FnSURTa2VUMFJnEAE',

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-24",
+  "page": "/prodotti/oscuranti",
+  "assets": [
+    {
+      "category": "Battenti · Alluminio",
+      "status": "official-reference",
+      "page": "https://cosmetgroup.it/aurora/",
+      "source": "https://cosmetgroup.it/wp-content/uploads/2024/12/aurora3.jpg",
+      "brochure": "https://cosmetgroup.it/wp-content/uploads/2026/07/Alwo-Flyer-A4-5-ante_Persiane-Aurora-Astra-Luna-980X301.pdf",
+      "output": "public/img/shutters/cosmet-aurora-{480,960,1000}.webp"
+    },
+    {
+      "category": "Battenti · Acciaio",
+      "status": "user-provided",
+      "source": "foto_lavori_lge/a6dd65bc-05a1-45f1-95fc-e08474e244fa.JPG",
+      "galleryId": "lge-a6dd65bc",
+      "sourceSha256": "2fb12e04de69a0dd437ca349741fe13815c06d54378cfd5b403b798365d527f3",
+      "material": "Non specificato nell’archivio fotografico",
+      "retouchTool": "ImageGen integrato, modifica dell’originale",
+      "prompt": "Use case: lighting-weather. EDIT the supplied original LGE documentary installation photograph. It must still look recognizably like the exact same photo, from the same camera in the same moment, with its original horizontal roughly 4:3 framing. Only apply extremely light photographic development, as a photo editor would do: softly lift deep shadows on the brown shutters, temper brightest glare on the plaster, and make the overall daylight white balance slightly more neutral. Keep the paint finish very close to the existing warm brown. Preserve exactly the shutter frames, shape, horizontal slat count/spacing, all hinges and their position, the silver handle, locking hardware and keys, fitting and original finish, door/window glass and reflections, facade, air conditioning unit, green railing, and the physical background. Keep the camera perspective and all objects. Do not reconstruct, recolor, replace, reframe, add or remove any objects, hardware or architectural elements. No new light sources, no blur, no dramatic grading, no logos, no added text. This should read as the same real installation with a barely visible correction of light, not a newly generated image. One photo.",
+      "cleanupPrompt": "Use case: precise-object-edit. Edit the exact supplied photograph of brown LGE shutters on a real balcony. Make a local retouch of the wall in the upper part of the photo. (1) Completely remove the protruding rough strip and squeezed beads of WHITE EXPANDING INSTALLATION FOAM running diagonally just above the first brown shutter and doorframe, from the foam near the upper edge on the left to the upper-right corner of that doorframe. It should meet a tidy neutral cream stucco edge directly against the existing brown metal frame. (2) Completely erase the bulky outdoor air-conditioner above that frame at upper center-right, including housing, grille, panel bottom, rusty metal support brackets, its cast shadow, mounting holes and the directly associated conduits and loose wires along the wall above the frame. Fill these specific removed areas with the same aged pale beige plaster texture and original daylight, respecting the perspective and intersection of the wall and concrete overhang. The upper wall should appear simply clear and even where the removed objects were. Keep all other pixels and details as close as possible to the input, especially the shutter geometry, frames, brown finish, slats, hinges, handle, keys, glass, reflections, remaining shutters, green railing, flooring and visible street. Keep the same 4:3 framing, perspective, lighting, exposure, and colors. Do not crop/zoom/straighten, repaint the overall façade, alter the product or add any elements. Output one realistic photo.",
+      "output": "public/img/shutters/lge-persiane-balcone-{480,960,1440}.webp"
+    }
+  ]
+}

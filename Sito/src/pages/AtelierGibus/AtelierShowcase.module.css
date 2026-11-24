@@ -66,23 +66,63 @@
 }
 
 .chapterPhoto {
-  position: relative;
+  --gallery-pagination-gap: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
   min-width: 0;
   overflow: hidden;
+  background: var(--color-paper);
+}
+
+.photoStage {
+  position: relative;
+  min-height: 0;
   background: var(--color-line);
   aspect-ratio: 16 / 10;
 }
 
-.chapterPhoto img {
+.photoViewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.photoTrack {
+  display: flex;
+  height: 100%;
+}
+
+.photoSlide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.openPhoto img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.chapterPhoto button {
+.photoSlide .openPhoto {
   position: absolute;
   inset: 0;
   height: 100%;
+}
+
+.photoArrows {
+  position: absolute;
+  inset: 0 clamp(10px, 1.3vw, 18px);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.photoArrows button {
+  pointer-events: auto;
 }
 
 .photoCredit {
@@ -148,7 +188,7 @@
 }
 
 @media (min-width: 700px) {
-  .chapterPhoto {
+  .photoStage {
     aspect-ratio: 16 / 9;
   }
 }
@@ -158,7 +198,7 @@
     grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   }
 
-  .chapterPhoto {
+  .photoStage {
     aspect-ratio: auto;
   }
 }
@@ -234,8 +274,11 @@
   .journey[data-reduced-motion='false'] .chapterPhoto {
     min-height: 0;
     height: 100%;
-    aspect-ratio: auto;
     opacity: 0;
+  }
+
+  .journey[data-reduced-motion='false'] .chapter:not([data-active='true']) .photoArrows button {
+    pointer-events: none;
   }
 
   .journey[data-reduced-motion='false'] .chapterPhoto img {

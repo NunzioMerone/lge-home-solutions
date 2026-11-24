@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
@@ -8,15 +7,13 @@ import { Icon } from '../../components/ui/Icon'
 import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
-import {
-  securityDoorChecks,
-  securityDoorSystems,
-  tehniCatalogIndex,
-} from '../../data/securityDoors'
+import { securityDoorChecks } from '../../data/securityDoors'
+import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
 import { getContactLinks } from '../../utils/contactLinks'
+import { DoorCatalogs } from './DoorCatalogs'
 import { DoorDesignStudio } from './DoorDesignStudio'
 import styles from './SecurityDoors.module.css'
 
@@ -28,29 +25,18 @@ const { whatsapp } = getContactLinks(contacts)
 export function SecurityDoors({ product }: ProductDetailProps) {
   const studio = useSectionReveal()
   const catalogs = useSectionReveal()
-  const { hash, key } = useLocation()
-
-  useEffect(() => {
-    const section =
-      hash === `#${studioId}` ? studio.current : hash === `#${catalogsId}` ? catalogs.current : null
-    if (!section) return
-    const frame = requestAnimationFrame(() => {
-      section.focus({ preventScroll: true })
-      section.scrollIntoView({ block: 'start' })
-    })
-    return () => cancelAnimationFrame(frame)
-  }, [catalogs, studio, hash, key])
+  useAnchorNavigation(studioId, catalogsId)
 
   return (
     <div className={styles.page}>
       <Link className="skip-link" to={`#${studioId}`}>
-        Vai al configuratore TEHNi
+        Vai alla scelta delle porte d’ingresso
       </Link>
       <Header />
-      <main aria-labelledby="product-title">
+      <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
-          eyebrow="PORTE E SICUREZZA · TEHNi"
+          eyebrow="PORTE D’INGRESSO"
           title={
             <>
               L’ingresso
@@ -58,11 +44,14 @@ export function SecurityDoors({ product }: ProductDetailProps) {
               <em>ha carattere.</em>
             </>
           }
-          description="La porta d’ingresso è il primo dettaglio che racconta lo stile della tua casa. Scopri soluzioni che uniscono design, sicurezza e personalità, con materiali e finiture pensati per valorizzare ogni ingresso e offrire tranquillità ogni giorno."
+          description={[
+            'La porta d’ingresso è il biglietto da visita della tua casa: il primo elemento che ne racconta lo stile, esprime la tua personalità e accoglie chi arriva.',
+            'Scopri soluzioni che uniscono design, sicurezza e carattere, con materiali e finiture.',
+          ]}
         >
           <div className={styles.actions}>
             <Link className={styles.button} to={`#${studioId}`}>
-              Progetta l’ingresso <Icon name="down" />
+              Scopri di più <Icon name="down" />
             </Link>
           </div>
         </ProductHero>
@@ -82,9 +71,9 @@ export function SecurityDoors({ product }: ProductDetailProps) {
                 </h2>
               </div>
               <p className={styles.body}>
-                Scegli la famiglia di porte, poi usa lo strumento ufficiale per provare modelli,
-                colori e accessori. Porta il progetto in showroom per confrontarlo con campioni e
-                misure.
+                Scegli l’alluminio a taglio termico se cerchi il massimo isolamento termico, oppure
+                il blindato in acciaio se la tua priorità è la sicurezza. Sfoglia i cataloghi per
+                confrontare modelli, finiture e accessori.
               </p>
             </header>
             <DoorDesignStudio />
@@ -105,53 +94,10 @@ export function SecurityDoors({ product }: ProductDetailProps) {
               </h2>
               <p>
                 Sfoglia i modelli e scopri quali dettagli valutare per il tuo ingresso, dalla
-                serratura alla posa.
+                serratura al sistema di apertura.
               </p>
             </header>
             <div className={styles.guide}>
-              <div className={styles.catalogs} data-reveal>
-                <h3>Modelli da sfogliare</h3>
-                <ul className={styles.catalogList} role="list">
-                  {securityDoorSystems.map((system) => (
-                    <li key={system.id}>
-                      <a
-                        className={styles.catalog}
-                        href={system.catalog}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Apri il catalogo ${system.name} (PDF, nuova scheda)`}
-                      >
-                        <img
-                          className={styles.catalogPhoto}
-                          src={assetUrl(`img/tehni/${system.id}-480.webp`)}
-                          alt=""
-                          width="80"
-                          height="80"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div>
-                          <p className={styles.catalogName}>{system.name}</p>
-                          <p className={styles.body}>{system.catalogDescription}</p>
-                        </div>
-                        <span className={styles.catalogFormat}>
-                          PDF <Icon name="external" />
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  className={styles.inlineLink}
-                  href={tehniCatalogIndex}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tutti i cataloghi TEHNi <Icon name="external" />
-                  <span className="sr-only"> (nuova scheda)</span>
-                </a>
-              </div>
-
               <div className={styles.checks} data-reveal>
                 <h3>Prima di scegliere</h3>
                 <ul className={styles.checkList} role="list">
@@ -166,6 +112,7 @@ export function SecurityDoors({ product }: ProductDetailProps) {
                   ))}
                 </ul>
               </div>
+              <DoorCatalogs />
             </div>
           </div>
         </section>
@@ -176,7 +123,6 @@ export function SecurityDoors({ product }: ProductDetailProps) {
           worksPath={`${worksPage.path}?categoria=porte-e-sicurezza#works-content`}
           worksLabel="Vedi le realizzazioni LGE"
         >
-          <p className="eyebrow">SHOWROOM DI MONTE DI PROCIDA</p>
           <h2 id="security-showroom-title">
             Una porta <em>pensata per casa tua.</em>
           </h2>

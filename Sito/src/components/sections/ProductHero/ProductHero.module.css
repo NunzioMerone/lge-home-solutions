@@ -41,6 +41,12 @@
   font-size: clamp(0.9rem, 1.05vw, 1rem);
   line-height: 1.9;
 }
+.description p {
+  margin: 0;
+}
+.description p + p {
+  margin-top: 0.75em;
+}
 .image {
   position: relative;
   grid-area: image;

@@ -1,17 +1,12 @@
 import { useState } from 'react'
 import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
-import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { Icon } from '../../components/ui/Icon'
 import { interiorDoorOpenings } from '../../data/interiorDoors'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
-import type { GalleryLightboxState } from '../../types/gallery'
 import styles from './InteriorDoors.module.css'
-
-const catalogPhotos = interiorDoorOpenings.map(({ photo }) => photo)
 
 export function InteriorDoorOpenings() {
   const section = useSectionReveal()
-  const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
   const [opening, setOpening] = useState<(typeof interiorDoorOpenings)[number]>(
     interiorDoorOpenings[0],
   )
@@ -47,18 +42,12 @@ export function InteriorDoorOpenings() {
 
           <div className={styles.openingPanel} id="interior-opening-detail">
             <figure className={styles.openingPhoto}>
-              <button
-                type="button"
-                aria-label={`Ingrandisci foto: ${photo.alt}`}
-                aria-haspopup="dialog"
-                onClick={(event) => setLightbox({ photo, trigger: event.currentTarget })}
-              >
-                <GalleryImage
-                  key={photo.id}
-                  photo={photo}
-                  sizes="(min-width: 1186px) 594px, (min-width: 740px) 50vw, 91vw"
-                />
-              </button>
+              <GalleryImage
+                key={photo.id}
+                photo={photo}
+                alt={photo.alt}
+                sizes="(min-width: 1186px) 594px, (min-width: 740px) 50vw, 91vw"
+              />
               <figcaption>Foto di catalogo I-PEA</figcaption>
             </figure>
             <div className={styles.openingDetail}>
@@ -80,9 +69,6 @@ export function InteriorDoorOpenings() {
           </div>
         </div>
       </div>
-      {lightbox && (
-        <GalleryLightbox {...lightbox} photos={catalogPhotos} onClose={() => setLightbox(null)} />
-      )}
     </section>
   )
 }

@@ -5,7 +5,6 @@ const cosmetConfigurator = 'https://configura.cosmetgroup.it/'
 export const windowCollection = {
   id: 'modelli-cosmet',
   configuratorId: 'configuratore-cosmet',
-  configuratorUrl: cosmetConfigurator,
   guidedUrl: `${cosmetConfigurator}lasciati-guidare/`,
   catalogUrl: `${cosmetConfigurator}catalogo/`,
 } as const
@@ -23,14 +22,14 @@ export const windowMaterials: readonly [WindowMaterial, ...WindowMaterial[]] = [
     models: {
       battente: {
         id: 'fideal-vision',
-        name: 'Fideal Vision',
+        name: 'Vision',
         description:
           'Il calore naturale del legno incontra la resistenza dell’alluminio, creando un equilibrio perfetto tra eleganza e funzionalità. Una soluzione che valorizza gli ambienti interni, protegge dagli agenti esterni e offre tutta la praticità dell’apertura a battente.',
         image: {
           width: 1280,
           height: 720,
           small: 640,
-          alt: 'Due portefinestre Fideal Vision in un soggiorno dalle pareti blu',
+          alt: 'Due portefinestre Vision in un soggiorno dalle pareti blu',
         },
         productUrl: 'https://cosmetgroup.it/vision/',
         brochureUrl:
@@ -38,14 +37,14 @@ export const windowMaterials: readonly [WindowMaterial, ...WindowMaterial[]] = [
       },
       scorrevole: {
         id: 'luce-intensa',
-        name: 'Luce Intensa Slim',
+        name: 'Luce Intensa',
         description:
           'Grandi superfici vetrate, con il legno a vista verso la casa. L’anta scorre di lato e lascia più spazio agli arredi vicino alla finestra.',
         image: {
           width: 1280,
           height: 720,
           small: 640,
-          alt: 'Vetrata scorrevole Luce Intensa Slim accanto a un soggiorno',
+          alt: 'Vetrata scorrevole Luce Intensa accanto a un soggiorno',
         },
         productUrl: 'https://cosmetgroup.it/luce-intensa/',
         brochureUrl:
@@ -73,14 +72,14 @@ export const windowMaterials: readonly [WindowMaterial, ...WindowMaterial[]] = [
       },
       scorrevole: {
         id: 'luce-metal-slim',
-        name: 'Alwo Luce Metal Slim',
+        name: 'Luce Metal',
         description:
           'Una vetrata scorrevole in alluminio per dare continuità tra la stanza e l’esterno. Il telaio sottile lascia spazio alla luce e al panorama.',
         image: {
           width: 1280,
           height: 720,
           small: 640,
-          alt: 'Vetrata scorrevole Alwo Luce Metal Slim affacciata su una terrazza sul mare',
+          alt: 'Vetrata scorrevole Luce Metal affacciata su una terrazza sul mare',
         },
         productUrl: 'https://cosmetgroup.it/luce-metal-slim/',
         brochureUrl:
@@ -111,14 +110,14 @@ export const windowMaterials: readonly [WindowMaterial, ...WindowMaterial[]] = [
       },
       scorrevole: {
         id: 'luce-poly-slim',
-        name: 'Luce Poly Slim',
+        name: 'Luce Poly',
         description:
           'Uno scorrevole in PVC dai profili sottili, pensato per le aperture verso terrazzi e giardini. L’anta si sposta di lato e lascia libero lo spazio davanti al vetro.',
         image: {
           width: 1280,
           height: 923,
           small: 640,
-          alt: 'Scorrevole Luce Poly Slim tra soggiorno e terrazza',
+          alt: 'Scorrevole Luce Poly tra soggiorno e terrazza',
         },
         productUrl: 'https://cosmetgroup.it/luce-poly-slim/',
         brochureUrl:

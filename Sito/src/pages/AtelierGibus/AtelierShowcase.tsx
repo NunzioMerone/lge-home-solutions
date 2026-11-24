@@ -2,14 +2,14 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
 import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { Icon } from '../../components/ui/Icon'
 import { outdoorShowcaseId, outdoorSolutions as chapters } from '../../data/atelierGibus'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { useMotion } from '../../hooks/useMotion'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
-import type { GalleryLightboxState } from '../../types/gallery'
-import pageStyles from './AtelierGibus.module.css'
+import type { GibusLightboxState } from '../../types/atelierGibus'
+import { AtelierGallery } from './AtelierGallery'
 import styles from './AtelierShowcase.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -18,10 +18,6 @@ const approach = 0.34
 const settle = 0.2
 const desktopShowcase =
   '(min-width: 1100px) and (min-height: 580px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
-
-const photos = chapters.map(({ photo }) => photo)
-const photoSizes =
-  '(min-width: 1660px) 950px, (min-width: 1100px) and (hover: hover) and (pointer: fine) 58vw, (min-width: 900px) and (orientation: landscape) 52vw, 91vw'
 
 function stageCenter(stage: HTMLElement) {
   return Number.parseFloat(getComputedStyle(stage).top) + stage.offsetHeight / 2
@@ -66,8 +62,9 @@ export function AtelierShowcase() {
   const steps = useRef<HTMLDivElement>(null)
   const chapterList = useRef<HTMLOListElement>(null)
   const [slides, setSlides] = useState({ active: 0, previous: -1 })
-  const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
+  const [lightbox, setLightbox] = useState<GibusLightboxState | null>(null)
   const { reducedMotion } = useMotion()
+  const pinned = useMediaQuery(desktopShowcase) && !reducedMotion
   const { hash, key } = useLocation()
 
   useLayoutEffect(() => {
@@ -133,7 +130,7 @@ export function AtelierShowcase() {
   useLayoutEffect(() => {
     const id = hash.slice(1)
     const chapterIndex = chapters.findIndex((chapter) => chapter.id === id)
-    if (id !== outdoorShowcaseId && chapterIndex === -1) return
+    if (chapterIndex === -1) return
     const frame = requestAnimationFrame(() => {
       const target = document.getElementById(id)
       const centered = centerStep(chapterList.current, steps.current?.children[chapterIndex])
@@ -156,7 +153,7 @@ export function AtelierShowcase() {
       <div className="container">
         <header className={styles.header} data-reveal>
           <h2 id="gibus-solutions-title">
-            Sole, ombra e <em>riparo.</em>
+            Luce, ombra e <em>riparo.</em>
           </h2>
           <p>
             Pergole, tende e vetrate per rendere balconi, terrazzi e giardini più accoglienti,
@@ -165,7 +162,7 @@ export function AtelierShowcase() {
         </header>
         <div className={styles.journey} data-reduced-motion={reducedMotion}>
           <ol ref={chapterList} className={styles.chapters} role="list">
-            {chapters.map(({ photo, ...chapter }, index) => (
+            {chapters.map((chapter, index) => (
               <li
                 id={chapter.id}
                 key={chapter.id}
@@ -182,18 +179,17 @@ export function AtelierShowcase() {
                   setSlides({ active: index, previous: slides.active })
                 }}
               >
-                <div className={styles.chapterPhoto}>
-                  <button
-                    className={pageStyles.photoButton}
-                    type="button"
-                    aria-label={`Ingrandisci foto: ${photo.alt}`}
-                    aria-haspopup="dialog"
-                    onClick={(event) => setLightbox({ photo, trigger: event.currentTarget })}
-                  >
-                    <GalleryImage photo={photo} sizes={photoSizes} />
-                  </button>
-                  <span className={styles.photoCredit}>Foto Gibus</span>
-                </div>
+                <AtelierGallery
+                  id={chapter.id}
+                  title={chapter.title}
+                  photos={chapter.photos}
+                  showGalleryImages={
+                    !pinned || slides.active === index || slides.previous === index
+                  }
+                  onOpen={(photo, trigger) =>
+                    setLightbox({ photo, trigger, photos: chapter.photos })
+                  }
+                />
                 <div className={styles.chapterCopy}>
                   <p className={`eyebrow ${styles.category}`}>{chapter.title}</p>
                   <h3>{chapter.feature}</h3>
@@ -219,9 +215,7 @@ export function AtelierShowcase() {
           </div>
         </div>
       </div>
-      {lightbox && (
-        <GalleryLightbox {...lightbox} photos={photos} onClose={() => setLightbox(null)} />
-      )}
+      {lightbox && <GalleryLightbox {...lightbox} onClose={() => setLightbox(null)} />}
     </section>
   )
 }

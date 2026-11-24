@@ -30,8 +30,7 @@ export function WindowCollection() {
             La luce prende <em>forma.</em>
           </h2>
           <p>
-            Scegli il materiale, poi confronta battente e scorrevole per capire quale apertura si
-            adatta meglio alla tua casa.
+            Scegli il materiale, poi il sistema di apertura che si adatta meglio alle tue esigenze.
           </p>
         </header>
 

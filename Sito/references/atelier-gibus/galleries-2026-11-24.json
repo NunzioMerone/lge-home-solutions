@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-24",
+  "status": "official-reference",
+  "scope": "Anteprima locale delle gallerie per categoria. Le nove copertine esistenti conservano la provenienza già documentata.",
+  "encoding": "WebP 480 px, fino a 960 px e fino a 1440 px, con proporzioni originali e senza ingrandire le fonti.",
+  "photos": {
+    "pergole-bioclimatiche": [
+      {
+        "id": "pergole-bioclimatiche-villa-sera",
+        "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",
+        "source": "https://static.gibus.com/media-production/2022/03/1920x1080DesktopPergole-Bioclimatiche_1.jpg"
+      },
+      {
+        "id": "pergole-bioclimatiche-piscina",
+        "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",
+        "source": "https://static.gibus.com/media-production/2022/03/1920x1080DesktopPergole-Bioclimatiche_3.jpg"
+      },
+      {
+        "id": "pergole-bioclimatiche-giardino",
+        "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",
+        "source": "https://static.gibus.com/media-production/2022/03/1920x1080DesktopPergole-Bioclimatiche_4.jpg"
+      },
+      {
+        "id": "pergole-bioclimatiche-terrazza-illuminata",
+        "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",
+        "source": "https://static.gibus.com/media-production/2022/03/1920x1080DesktopPergole-Bioclimatiche_5.jpg"
+      }
+    ],
+    "energy-pergola": [
+      {
+        "id": "energy-pergola-ristorante-vespero",
+        "page": "https://www.gibus.com/it/realizzazioni-business/ristorante-vespero/",
+        "source": "https://static.gibus.com/media-production/2022/12/header.jpg"
+      },
+      {
+        "id": "energy-pergola-e-twist",
+        "page": "https://backoffice.gibus.it/679d8bbd776e0bbf3b044306c5be94ae/M2IzZTZkMTI4YTQyYjY2MDgyMDhhNGIxMWM2OGQwOGY4ZjZkMWY0ZjEyZWNkODVkNTRlYWNkOWFlMGVhOTU1Nw--/energy_pergola_IT-EN_web.pdf#page=9",
+        "source": "https://backoffice.gibus.it/679d8bbd776e0bbf3b044306c5be94ae/M2IzZTZkMTI4YTQyYjY2MDgyMDhhNGIxMWM2OGQwOGY4ZjZkMWY0ZjEyZWNkODVkNTRlYWNkOWFlMGVhOTU1Nw--/energy_pergola_IT-EN_web.pdf#page=9"
+      },
+      {
+        "id": "energy-pergola-lame-fotovoltaiche",
+        "page": "https://backoffice.gibus.it/679d8bbd776e0bbf3b044306c5be94ae/M2IzZTZkMTI4YTQyYjY2MDgyMDhhNGIxMWM2OGQwOGY4ZjZkMWY0ZjEyZWNkODVkNTRlYWNkOWFlMGVhOTU1Nw--/energy_pergola_IT-EN_web.pdf#page=1",
+        "source": "https://backoffice.gibus.it/679d8bbd776e0bbf3b044306c5be94ae/M2IzZTZkMTI4YTQyYjY2MDgyMDhhNGIxMWM2OGQwOGY4ZjZkMWY0ZjEyZWNkODVkNTRlYWNkOWFlMGVhOTU1Nw--/energy_pergola_IT-EN_web.pdf#page=1"
+      }
+    ],
+    "pergole-inclinate": [
+      {
+        "id": "pergole-inclinate-patio",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-inclinate-addossate/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-inclinateDesktop-3.jpg"
+      },
+      {
+        "id": "pergole-inclinate-piscina",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-inclinate-addossate/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-inclinateDesktop-4.jpg"
+      },
+      {
+        "id": "pergole-inclinate-cena",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-inclinate-addossate/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-inclinateDesktop-5.jpg"
+      },
+      {
+        "id": "pergole-inclinate-sera",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-inclinate-addossate/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-inclinateDesktop-6.jpg"
+      }
+    ],
+    "pergole-90": [
+      {
+        "id": "pergole-90-isola-illuminata",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-90-gradi/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-90Desktop_1.jpg"
+      },
+      {
+        "id": "pergole-90-patio",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-90-gradi/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-90Desktop_2.jpg"
+      },
+      {
+        "id": "pergole-90-salotto",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-90-gradi/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-90Desktop_4.jpg"
+      },
+      {
+        "id": "pergole-90-giardino",
+        "page": "https://www.gibus.com/it/prodotti/pergole/pergole-90-gradi/",
+        "source": "https://static.gibus.com/media-production/2022/03/pergole-90Desktop_5.jpg"
+      }
+    ],
+    "tende-a-bracci": [
+      {
+        "id": "tende-a-bracci-giardino",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-bracci_Desktop_2.jpg"
+      },
+      {
+        "id": "tende-a-bracci-piscina-sera",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-bracci_Desktop_1.jpg"
+      },
+      {
+        "id": "tende-a-bracci-terrazza-mare",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-bracci_Desktop_4.jpg"
+      },
+      {
+        "id": "tende-a-bracci-vista-dall-alto",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-bracci_Desktop_5.jpg"
+      }
+    ],
+    "tende-a-caduta": [
+      {
+        "id": "tende-a-caduta-dettaglio-vetrate",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-caduta/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-caduta_Desktop_2.jpg"
+      },
+      {
+        "id": "tende-a-caduta-facciata-mattoni",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-caduta/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-caduta_Desktop_3.jpg"
+      },
+      {
+        "id": "tende-a-caduta-porticato",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-caduta/",
+        "source": "https://static.gibus.com/media-production/2022/03/Tende-caduta_Desktop_4.jpg"
+      }
+    ],
+    "schermature-zip": [
+      {
+        "id": "schermature-zip-facciata",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/schermature-zip-screen/",
+        "source": "https://static.gibus.com/media-production/2022/03/Schermature-zip_Desktop_2.jpg"
+      },
+      {
+        "id": "schermature-zip-giardino-sera",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/schermature-zip-screen/",
+        "source": "https://static.gibus.com/media-production/2022/03/Schermature-zip_Desktop_3.jpg"
+      },
+      {
+        "id": "schermature-zip-veranda",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/schermature-zip-screen/",
+        "source": "https://static.gibus.com/media-production/2022/03/Schermature-zip_Desktop_4.jpg"
+      },
+      {
+        "id": "schermature-zip-piscina",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/schermature-zip-screen/",
+        "source": "https://static.gibus.com/media-production/2022/03/Schermature-zip_Desktop_5.jpg"
+      }
+    ],
+    "tende-in-trazione": [
+      {
+        "id": "tende-in-trazione-giardino",
+        "page": "https://www.gibus.com/it/prodotti/tende-da-sole/tende-in-trazione-nivo/",
+        "source": "https://static.gibus.com/media-production/2022/03/immagine-2-desktop-slider.jpg"
+      },
+      {
+        "id": "tende-in-trazione-nivo-plus",
+        "page": "https://www.gibus.com/it/nivoplus/",
+        "source": "https://static.gibus.com/media-production/2026/03/nivo_desktop_header.jpg"
+      },
+      {
+        "id": "tende-in-trazione-zerogradi-zip",
+        "page": "https://www.gibus.com/it/realizzazioni-casa/casa-vacanze/",
+        "source": "https://static.gibus.com/media-production/2022/03/header-27-1.jpg"
+      }
+    ],
+    "vetrate-scorrevoli": [
+      {
+        "id": "vetrate-scorrevoli-portico",
+        "page": "https://www.gibus.com/it/prodotti/vetrate/",
+        "source": "https://static.gibus.com/media-production/2022/03/Vetrate_3-desktop.jpg"
+      },
+      {
+        "id": "vetrate-scorrevoli-terrazza-mare",
+        "page": "https://www.gibus.com/it/prodotti/vetrate/",
+        "source": "https://static.gibus.com/media-production/2022/03/Vetrate_2-desktop.jpg"
+      },
+      {
+        "id": "vetrate-scorrevoli-pergola-sera",
+        "page": "https://www.gibus.com/it/prodotti/vetrate/",
+        "source": "https://static.gibus.com/media-production/2022/03/Desktopsdfg.jpg"
+      },
+      {
+        "id": "vetrate-scorrevoli-salotto-mare",
+        "page": "https://www.gibus.com/it/prodotti/vetrate/",
+        "source": "https://static.gibus.com/media-production/2022/03/Vetrate_1-desktop.jpg"
+      }
+    ]
+  }
+}

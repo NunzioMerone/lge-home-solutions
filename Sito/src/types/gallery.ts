@@ -13,6 +13,7 @@ interface GalleryPhotoMetadata {
 export type GalleryPhoto = GalleryPhotoMetadata &
   (
     | { collection?: 'gallery-real' | 'gallery-home'; status: 'user-provided' }
+    | { collection: 'shutters'; status: 'user-provided' | 'illustrative' | 'official-reference' }
     | {
         collection: 'atelier-gibus' | 'interior-doors' | 'sikur-home'
         status: 'partner-authorized' | 'official-reference'

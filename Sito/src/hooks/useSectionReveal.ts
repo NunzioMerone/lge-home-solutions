@@ -24,8 +24,10 @@ export function useSectionReveal<TElement extends HTMLElement = HTMLElement>({
           opacity: 0,
           x: (_index: number, element: HTMLElement) =>
             element.dataset.revealDirection === 'right' ? motion.partnerDistance : 0,
-          y: (_index: number, element: HTMLElement) =>
-            element.dataset.revealDirection === 'right' ? 0 : motion.distance,
+          y: (_index: number, element: HTMLElement) => {
+            const direction = element.dataset.revealDirection
+            return direction === 'right' || direction === 'fade' ? 0 : motion.distance
+          },
         },
         {
           opacity: 1,

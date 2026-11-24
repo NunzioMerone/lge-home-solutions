@@ -24,6 +24,7 @@ export interface ProductHeroProps {
   product: Product
   eyebrow?: string
   title?: ReactNode
-  description: string
+  description: string | readonly string[]
+  imageOverlay?: ReactNode
   children?: ReactNode
 }

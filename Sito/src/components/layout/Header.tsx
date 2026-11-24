@@ -3,6 +3,7 @@ import { site } from '../../config/site'
 import { navigation } from '../../data/navigation'
 import { products } from '../../data/products'
 import { useHeaderNavigation } from '../../hooks/useHeaderNavigation'
+import { useHomeSectionInView } from '../../hooks/useHomeSectionInView'
 import { useScrollThreshold } from '../../hooks/useScrollThreshold'
 import { MobileMenu } from './MobileMenu'
 import styles from './Header.module.css'
@@ -10,7 +11,13 @@ import styles from './Header.module.css'
 export function Header() {
   const { hash, pathname: routePath } = useLocation()
   const pathname = routePath.replace(/\/+$/, '') || '/'
-  const activePath = pathname === '/' ? `/${hash || '#inizio'}` : pathname
+  const homeSection =
+    pathname === '/'
+      ? [navigation.reviews, navigation.contact].find(({ path }) => path === `/${hash}`)
+      : undefined
+  const homeSectionInView = useHomeSectionInView(homeSection ? hash.slice(1) : undefined)
+  const activeHomePath = (homeSectionInView && homeSection?.path) || navigation.home.path
+  const activePath = pathname === '/' ? activeHomePath : pathname
   const solutionsActive = products.some((product) => product.path === pathname)
   const scrolled = useScrollThreshold(24)
   const {

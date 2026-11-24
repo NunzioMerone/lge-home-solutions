@@ -24,9 +24,9 @@ export const workCategories: readonly WorkCategory[] = [
   {
     id: 'porte-e-sicurezza',
     cover: 'security',
-    title: 'Porte e sicurezza',
+    title: 'Porte d’ingresso',
     description: 'Porte d’ingresso: pannelli, maniglioni e dettagli d’installazione.',
-    galleryCategory: 'Porte e sicurezza',
+    galleryCategory: 'Porte d’ingresso',
     layout: 'portrait',
     featuredIds: ['lge-e7b0f444', 'lge-b523a228', 'lge-e2d1ec8e'],
   },
@@ -42,7 +42,7 @@ export const workCategories: readonly WorkCategory[] = [
   {
     id: 'atelier-gibus',
     cover: 'outdoor',
-    title: 'Atelier Gibus',
+    title: 'Outdoor',
     description: 'Pergole, tende da sole e chiusure vetrate.',
     galleryCategory: 'Outdoor',
     layout: 'landscape',

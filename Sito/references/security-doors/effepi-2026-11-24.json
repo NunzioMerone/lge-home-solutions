@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-24",
+  "scope": "Riferimenti ufficiali Effepi per l’anteprima locale di Porte d’ingresso.",
+  "photoStatus": "official-reference",
+  "catalogIndex": "https://www.effepisecuritydoors.com/download",
+  "systems": {
+    "hinges-concealed": {
+      "category": "https://www.effepisecuritydoors.com/cerniera_a_scomparsa",
+      "model": "https://www.effepisecuritydoors.com/immensa_rasomuro",
+      "photo": "https://www.effepisecuritydoors.com/data/thumb_cache/_data_prod_img_immensa_rasomuro_6_jpg_rw_1266.jpg",
+      "catalog": "https://www.effepisecuritydoors.com/dl_doc?id=64&t=pag",
+      "catalogViewer": "https://www.effepisecuritydoors.com/cataloghi/cerniere_a_scomparsa/",
+      "catalogTitle": "Catalogo Effepi - Cerniere a scomparsa"
+    },
+    "hinges-visible": {
+      "category": "https://www.effepisecuritydoors.com/cerniera_a_vista",
+      "model": "https://www.effepisecuritydoors.com/garante_multi_cl",
+      "photo": "https://www.effepisecuritydoors.com/data/thumb_cache/_data_prod_img_garante_multi_cl_2_jpg_rw_1266.jpg",
+      "catalog": "https://www.effepisecuritydoors.com/dl_doc?id=67&t=pag",
+      "catalogViewer": "https://www.effepisecuritydoors.com/cataloghi/classe_rc4/",
+      "catalogTitle": "Catalogo Effepi Classe 4 - 2024"
+    }
+  },
+  "webp": {
+    "directory": "public/img/effepi/",
+    "widths": [480, 800],
+    "notes": "Ritagli orizzontali con la porta intera nell’inquadratura. La pagina collega gli sfogliatori ufficiali Effepi."
+  }
+}

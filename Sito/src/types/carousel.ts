@@ -10,6 +10,7 @@ export interface CarouselArrowProps {
   controlsId: string
   onClick: () => void
   disabled?: boolean
+  showOnMobile?: boolean
 }
 
 export interface PaginationWindow {

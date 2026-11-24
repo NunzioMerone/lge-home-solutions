@@ -5,7 +5,7 @@ export const heroCopy = {
   phrases: [
     'illumina i tuoi spazi',
     'protegge la tua casa',
-    'valorizza ogni ambiente',
+    'lascia fuori il rumore e dentro il benessere.',
     'rispetta la tua privacy',
     'crea nuovi spazi da vivere',
   ] as const,

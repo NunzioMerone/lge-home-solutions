@@ -86,6 +86,7 @@ export function Icon({ name, className }: IconProps) {
           <path d="m8 11 3 3 5-6" />
         </>
       )}
+      {name === 'door-open' && <path d="M3 21h18M6 21V5h12v16M6 5l8-3v17l-8 2m5-10v2" />}
       {name === 'energy' && (
         <>
           <path d="m3 11 9-8 9 8M6 9v11h12V9" />

@@ -3,11 +3,11 @@ import type { CompetencyHighlight, Credential } from '../types/competencies'
 export const competencyHighlights: CompetencyHighlight[] = [
   {
     id: 'qualified-installation',
-    title: 'Posa qualificata',
-    label: 'UNI 11673-2 · EQF 4',
+    title: 'Progettazione qualificata',
+    label: 'UNI 11673-2 · EQF 3 - 4',
     icon: 'shield',
     description:
-      "Competenze tecniche e precisione in ogni fase dell'installazione, per valorizzare le prestazioni di ogni serramento.",
+      'Competenze tecniche e precisione in ogni fase, dalla progettazione all’installazione, per valorizzare le prestazioni di ogni serramento.',
   },
   {
     id: 'posaclima',
@@ -15,7 +15,7 @@ export const competencyHighlights: CompetencyHighlight[] = [
     label: 'Formazione specialistica',
     icon: 'craft',
     description:
-      "Una cura particolare del punto d'incontro tra infisso e parete, per limitare spifferi e dispersioni.",
+      'Curiamo ogni dettaglio della posa, prestando particolare attenzione al punto d’incontro tra infisso e parete, per garantire un isolamento ottimale, ridurre le dispersioni termiche ed eliminare i fastidiosi spifferi.',
   },
   {
     id: 'thermography',
@@ -31,10 +31,18 @@ export const competencies: Credential[] = [
   {
     id: 'qualified-installation',
     title: 'Posatori qualificati',
-    label: 'UNI 11673-2 · EQF 4',
+    label: 'UNI 11673-2 · EQF 3',
     icon: 'shield',
+    description: 'Posa in opera dei serramenti e verifiche di funzionamento.',
+    source: 'document',
+  },
+  {
+    id: 'qualified-installation-design',
+    title: 'Progettisti qualificati',
+    label: 'UNI 11673-2 · EQF 4',
+    icon: 'roof-window',
     description:
-      'Qualifica EQF 4 Caposquadra: preparazione tecnica, coordinamento e precisione per una posa curata in ogni dettaglio.',
+      'Progettazione del raccordo tra serramento e parete, coordinamento della posa e verifiche finali.',
     source: 'company',
   },
   {

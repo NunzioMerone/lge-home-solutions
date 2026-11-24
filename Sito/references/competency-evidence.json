@@ -8,9 +8,18 @@
       "issuer": "DEKRA Testing and Certification S.r.l.",
       "documentedQualification": "Installatore / posatore di serramenti senior",
       "standard": "UNI 11673-2:2019",
+      "eqfLevel": 3,
+      "profileReference": "https://dekraprod-media.e-spirit.cloud/fb2198ff-7a46-490d-8c58-de62fd7caa44/media/firstspirit-17906002413500035-13-prs-schema-uni-11673.pdf",
       "issuedOn": "2023-12-12",
       "expiresOn": "2029-12-11",
-      "editorialNote": "I documenti DEKRA ricevuti attestano la qualifica senior. Il livello aggiuntivo Caposquadra EQF 4 è stato confermato esplicitamente dal titolare il 28 ottobre 2026; non viene attribuito a DEKRA né presentato come contenuto degli attestati precedenti.",
+      "editorialNote": "I due certificati DEKRA sono associati alla sezione Posatori qualificati."
+    },
+    {
+      "id": "qualified-installation-design",
+      "standard": "UNI 11673-2:2019",
+      "eqfLevel": 4,
+      "profileReference": "https://www.giordano.it/Upload/contenuti/1674463033_reg_prs-11673_rev04-reg-specifico-persone-operanti-installazione_-serramenti.pdf",
+      "editorialNote": "Progettisti qualificati è il titolo sul sito per l’approfondimento sulla progettazione della posa. Il testo identifica il profilo di posatore caposquadra. La fonte aziendale è la conferma del titolare.",
       "companyConfirmation": {
         "confirmedOn": "2026-10-28",
         "source": "Conferma esplicita del titolare in conversazione",

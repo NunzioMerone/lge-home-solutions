@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
 import { contacts } from '../../config/contacts'
+import { elfsightReviewsWidgetId } from '../../config/elfsightReviews'
+import { googleMapsBrowserKey } from '../../config/googlePlaces'
 import {
   privacyContact,
   privacyContent,
@@ -14,6 +16,7 @@ import styles from './PrivacyPolicy.module.css'
 
 export function PrivacyPolicy() {
   const links = getContactLinks({ ...contacts, phone: privacyContact.phone })
+  const usesGooglePlaces = !elfsightReviewsWidgetId && Boolean(googleMapsBrowserKey)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
@@ -105,12 +108,29 @@ export function PrivacyPolicy() {
               <a href={privacySources.osmPrivacy}>informativa OpenStreetMap</a>.
             </p>
             <p>
-              WhatsApp, Instagram e Google Maps si aprono solo quando selezioni i rispettivi
-              collegamenti. L’utilizzo di questi servizi esterni è descritto nelle loro informative:{' '}
-              <a href={privacySources.whatsappPrivacy}>WhatsApp</a>,{' '}
+              Le pagine esterne di WhatsApp, Instagram e Google Maps si aprono quando selezioni i
+              rispettivi collegamenti. L’utilizzo di questi servizi esterni è descritto nelle loro
+              informative: <a href={privacySources.whatsappPrivacy}>WhatsApp</a>,{' '}
               <a href={privacySources.instagramPrivacy}>Instagram</a>,{' '}
               <a href={privacySources.googlePrivacy}>Google</a>.
             </p>
+            {elfsightReviewsWidgetId && (
+              <p>
+                Avvicinandoti alla sezione Recensioni, il browser contatta Elfsight per mostrare le
+                recensioni pubbliche della scheda Google di LGE. Il servizio riceve l’indirizzo IP e
+                i dati tecnici della richiesta. Dettagli nell’
+                <a href={privacySources.elfsightPrivacy}>informativa sulla privacy di Elfsight</a>.
+              </p>
+            )}
+            {usesGooglePlaces && (
+              <p>
+                Quando ti avvicini alla sezione Recensioni, il browser contatta Google Maps Platform
+                per caricare valutazione, commenti e informazioni sugli autori. Google riceve
+                l’indirizzo IP e dati tecnici della richiesta. L’uso della sezione è soggetto ai{' '}
+                <a href={privacySources.googleMapsTerms}>Termini di servizio di Google Maps</a> e
+                all’<a href={privacySources.googlePrivacy}>Informativa sulla privacy di Google</a>.
+              </p>
+            )}
           </section>
 
           <section aria-labelledby="privacy-storage">
@@ -118,7 +138,7 @@ export function PrivacyPolicy() {
             <p>
               L’applicazione non utilizza analytics, pixel pubblicitari o cookie propri. Salva nella
               memoria di sessione della scheda una preferenza tecnica per le animazioni, senza
-              inviarla a un server. Font e fotografie sono ospitati insieme al sito.
+              inviarla a un server. I font e le fotografie di LGE sono ospitati insieme al sito.
             </p>
             <p>Per questa preferenza tecnica non è necessario un banner di consenso.</p>
           </section>
@@ -133,8 +153,12 @@ export function PrivacyPolicy() {
             </p>
             <p>
               Le recensioni provengono dalla scheda Google di LGE e riportano il nome dell’autore,
-              la valutazione, l’eventuale commento e la data. Sono attualmente riportate e
-              aggiornate manualmente: visualizzarle non attiva un collegamento automatico a Google.
+              la valutazione, l’eventuale commento e la data.{' '}
+              {elfsightReviewsWidgetId
+                ? 'Elfsight aggiorna le recensioni mostrate. Se il widget è indisponibile, il sito mostra le recensioni rilevate manualmente.'
+                : usesGooglePlaces
+                  ? 'Google può fornire anche la foto profilo e il collegamento alla recensione originale.'
+                  : 'Le recensioni sono aggiornate manualmente.'}{' '}
               Per segnalare un contenuto o richiedere una rettifica o rimozione puoi scriverci
               all’email indicata in questa pagina.
             </p>

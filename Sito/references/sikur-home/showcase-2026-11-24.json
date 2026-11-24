@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-24",
+  "page": "/prodotti/oscuranti",
+  "assets": [
+    {
+      "category": "Avvolgibili",
+      "status": "partner-authorized",
+      "page": "https://www.sikurhome.it/prodotti/tapparella-frangisole-avvolgibile-di-sicurezza/",
+      "source": "https://www.sikurhome.it/wp-content/uploads/2025/04/IBRIDA-EvoLine-1-scaled.webp",
+      "output": "public/img/sikur-home/evoline-{480,960,1440}.webp"
+    },
+    {
+      "category": "Cassonetti",
+      "status": "official-reference",
+      "page": "https://www.sikurhome.it/prodotti/monoblocco-cassonetto-isolante/",
+      "source": "https://www.sikurhome.it/wp-content/uploads/2025/04/ECOBOX%E2%84%A23-scaled.webp",
+      "output": "public/img/sikur-home/ecobox-{480,960,1440}.webp"
+    },
+    {
+      "category": "Motori",
+      "status": "illustrative",
+      "technicalReferences": [
+        "https://www.somfy.it/prodotti/tapparelle/motori",
+        "https://shop.somfy.it/mr-100-kit-motore-filare-per-tapparelle-10-nm.html"
+      ],
+      "visualReference": "https://service.somfy.com/downloads/cy_v5/pricelist_motors_for_shutters_2022.pdf#page=2",
+      "generator": "ImageGen integrato",
+      "prompt": "Use case: precise-object-edit. Edit image 1, the existing wide editorial photo for the Motori section of an Italian shutters website. Image 2, a manufacturer catalogue page, is a reference ONLY for the appearance of the Somfy LT50 motor pictured in its photo column. Replace the generic foreground motor with a realistic Somfy LT50 tubular roller shutter motor matching that official product reference. Keep the existing positioning, 3:2 landscape framing, greige architectural surface, galvanized octagonal roller tube in the background, soft window shadows and warm natural light. Show the motor's full length with clear margins. Match the long, dark blue cylindrical body and correct motor proportions. On the left, the face of the black mounting head must tilt visibly toward the camera so its conspicuous saturated yellow star-shaped faceplate is easy to see in a small web thumbnail. Give that faceplate the realistic yellow insert geometry, dark center, small yellow and white side limit buttons and one tidy ivory cable that emerges behind that head, as in the manufacturer's reference. Retain the smaller dark adapter at the far right. Render the compact yellow factory label with a clean lowercase white \"somfy\" wordmark on the blue tube near the head. Keep all markings restricted to the motor itself. The yellow head is the visual priority, and the rest of the assembly must look technically credible and in scale. A single photorealistic composition. No overlaid labels, no brochure graphics, no captions, no price list, no people.",
+      "output": "public/img/shutters/somfy-lt50-{480,960,1440}.webp"
+    }
+  ]
+}

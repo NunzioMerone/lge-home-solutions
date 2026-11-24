@@ -9,21 +9,21 @@ export const windowsPage = {
 
 export const shuttersPage = {
   path: '/prodotti/oscuranti',
-  title: 'Oscuranti SikurHome a Monte di Procida — LGE Home Solutions',
+  title: 'Oscuranti a Monte di Procida — LGE Home Solutions',
   description:
-    'Esplora le schermature e gli oscuranti SikurHome, consulta i cataloghi e trova con LGE il giusto equilibrio tra luce, ombra e privacy.',
+    'Confronta avvolgibili, cassonetti e motori con le persiane a battente in alluminio e acciaio. Sfoglia i cataloghi e scegli i tuoi oscuranti con LGE.',
 } as const
 
 export const securityDoorsPage = {
   path: '/prodotti/porte-e-sicurezza',
-  title: 'Porte d’ingresso TEHNi a Monte di Procida — LGE Home Solutions',
+  title: 'Porte d’ingresso TEHNi ed Effepi a Monte di Procida — LGE Home Solutions',
   description:
-    'Scopri le porte d’ingresso TEHNi, sfoglia i cataloghi e personalizza il tuo ingresso con il configuratore ufficiale e la consulenza di LGE.',
+    'Confronta le porte TEHNi in alluminio a taglio termico e le blindate Effepi in acciaio. Sfoglia i cataloghi e scegli il tuo ingresso con LGE.',
 } as const
 
 export const atelierGibusPage = {
   path: '/atelier-gibus',
-  title: 'Atelier Gibus a Monte di Procida — LGE Home Solutions',
+  title: 'Outdoor Gibus a Monte di Procida — LGE Home Solutions',
   description:
     'Pergole bioclimatiche, tende da sole e chiusure vetrate con Atelier Gibus Campi Flegrei. Scopri le soluzioni outdoor e le realizzazioni di LGE Home Solutions.',
   officialUrl: 'https://www.gibus.com/it/',
@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 'security',
-    title: 'Porte e sicurezza',
+    title: 'Porte d’ingresso',
     path: securityDoorsPage.path,
     description: 'Protezione e design si incontrano, fin dal primo ingresso.',
   },
@@ -71,7 +71,7 @@ export const products: Product[] = [
   },
   {
     id: 'outdoor',
-    title: 'Atelier Gibus',
+    title: 'Outdoor',
     path: atelierGibusPage.path,
     description: 'Pergole e soluzioni outdoor per vivere il piacere di stare all’aperto.',
   },

@@ -8,6 +8,7 @@ export function CarouselArrow({
   controlsId,
   onClick,
   disabled = false,
+  showOnMobile = false,
 }: CarouselArrowProps) {
   return (
     <button
@@ -18,6 +19,7 @@ export function CarouselArrow({
       onClick={onClick}
       disabled={disabled}
       data-direction={direction}
+      data-show-on-mobile={showOnMobile || undefined}
     >
       <Icon name={direction === 'previous' ? 'chevron-left' : 'chevron-right'} />
     </button>

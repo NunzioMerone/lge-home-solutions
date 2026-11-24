@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
 import { Icon } from '../../components/ui/Icon'
 import { gibusCatalogGroups, gibusCatalogsId, gibusCatalogUrl } from '../../data/atelierGibus'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
@@ -9,22 +8,10 @@ import styles from './AtelierGibus.module.css'
 
 export function GibusCatalogs() {
   const section = useSectionReveal()
-  const heading = useRef<HTMLHeadingElement>(null)
   const compact = useMediaQuery('(max-width: 899px)')
   const [openGroups, setOpenGroups] = useState<ReadonlySet<GibusCatalogGroupId>>(
     () => new Set(['pergole']),
   )
-  const { hash, key } = useLocation()
-
-  useEffect(() => {
-    if (hash !== `#${gibusCatalogsId}`) return
-    const frame = window.requestAnimationFrame(() => {
-      heading.current?.focus({ preventScroll: true })
-      section.current?.scrollIntoView({ block: 'start', behavior: 'instant' })
-    })
-    return () => window.cancelAnimationFrame(frame)
-  }, [hash, key, section])
-
   const toggleGroup = (id: GibusCatalogGroupId) => {
     setOpenGroups((current) => {
       const next = new Set(current)
@@ -39,11 +26,12 @@ export function GibusCatalogs() {
       id={gibusCatalogsId}
       className={`section ${styles.catalogs}`}
       aria-labelledby="gibus-catalogs-title"
+      tabIndex={-1}
       ref={section}
     >
       <div className={`container ${styles.catalogLayout}`}>
         <header data-reveal>
-          <h2 id="gibus-catalogs-title" ref={heading} tabIndex={-1}>
+          <h2 id="gibus-catalogs-title">
             Cataloghi <em>Gibus.</em>
           </h2>
           <p className={styles.body}>

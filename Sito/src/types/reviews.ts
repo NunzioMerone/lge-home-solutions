@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 export interface GoogleReview {
   id: string
   author: string
@@ -5,15 +7,24 @@ export interface GoogleReview {
   avatarTone: 'teal' | 'blue' | 'plum' | 'olive' | 'ochre'
   rating: 1 | 2 | 3 | 4 | 5
   text: string | null
-  publishedLabel: string
+  publishedLabel: string | null
+  authorUrl?: string | undefined
+  authorPhotoUrl?: string | undefined
+  reviewUrl?: string | undefined
+}
+
+export interface ReviewAttribution {
+  provider: string
+  url: string | undefined
 }
 
 export interface ReviewDataset {
   items: readonly GoogleReview[]
-  source: 'google-manual'
-  average: number
-  totalCount: number
-  checkedAt: string
+  source: 'google-manual' | 'google-places'
+  average: number | null
+  totalCount: number | null
+  checkedAt?: string
+  attributions?: readonly ReviewAttribution[]
   url: string
 }
 
@@ -37,6 +48,11 @@ export interface ReviewCardProps {
 
 export interface ReviewsCarouselProps {
   reviews: readonly GoogleReview[]
+}
+
+export interface ElfsightReviewsProps {
+  widgetId: string
+  children: ReactNode
 }
 
 export interface ReviewPaginationProps extends ReviewsCarouselProps {

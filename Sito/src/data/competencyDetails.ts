@@ -2,8 +2,12 @@ import type { CompetencyDetails } from '../types/competencies'
 
 export const competencyDetails: CompetencyDetails = {
   'qualified-installation': [
-    'I certificati DEKRA attestano la qualifica di installatore e posatore di serramenti senior di Emanuele e Gionatan Schiano Lomoriello, secondo la norma UNI 11673-2:2019. Una preparazione dedicata alla posa in opera negli edifici nuovi e in quelli esistenti.',
-    'La qualifica di Caposquadra EQF 4 completa le competenze del team, affiancando alla precisione tecnica il coordinamento delle attività di posa. I documenti qui consultabili attestano la qualifica senior DEKRA.',
+    'Prima del montaggio verifichiamo lo stato del vano e che il serramento corrisponda alle indicazioni di progetto. Durante la posa curiamo l’allineamento del telaio, i fissaggi e la sigillatura tra infisso e parete. A montaggio concluso controlliamo il funzionamento delle ante.',
+    'I certificati DEKRA di Emanuele e Gionatan Schiano Lomoriello attestano la qualifica di installatore e posatore senior secondo la norma UNI 11673-2:2019.',
+  ],
+  'qualified-installation-design': [
+    'Il progetto di posa parte dal vano reale. Quando sostituiamo un infisso, valutiamo se conservare il controtelaio e come raccordare il nuovo telaio alla soglia e ai lati del vano per dare continuità all’isolamento.',
+    'Il profilo di posatore caposquadra EQF 4 comprende la scelta delle soluzioni di posa, il coordinamento della squadra e la pianificazione delle verifiche finali in cantiere.',
   ],
   posaclima: [
     'Emanuele e Gionatan Schiano Lomoriello hanno completato con esito positivo il corso professionale PosaClima di 12 ore, conforme ai requisiti della norma UNI 11673-3.',

@@ -5,10 +5,10 @@ import { decodeGalleryImage } from '../../utils/galleryImages'
 import type { SecurityDoorPhotoProps, SecurityDoorPhotoStatus } from '../../types/securityDoors'
 import styles from './SecurityDoors.module.css'
 
-export function DoorSystemPhoto({ system }: SecurityDoorPhotoProps) {
+export function DoorSystemPhoto({ system, material }: SecurityDoorPhotoProps) {
   const imageRef = useRef<HTMLImageElement>(null)
   const [status, setStatus] = useState<SecurityDoorPhotoStatus>('loading')
-  const path = `img/tehni/${system.id}`
+  const path = `img/${material.photoDirectory}/${system.id}`
 
   useEffect(() => {
     const image = imageRef.current
@@ -33,6 +33,7 @@ export function DoorSystemPhoto({ system }: SecurityDoorPhotoProps) {
         width="800"
         height="545"
         alt={status === 'failed' ? '' : system.photoAlt}
+        data-system={system.id}
         data-ready={status === 'ready'}
         loading="lazy"
         decoding="async"
@@ -40,7 +41,7 @@ export function DoorSystemPhoto({ system }: SecurityDoorPhotoProps) {
       {status === 'failed' && (
         <span className={styles.systemPhotoFallback}>Foto temporaneamente non disponibile</span>
       )}
-      <figcaption>Foto TEHNi</figcaption>
+      <figcaption>Foto {material.brand}</figcaption>
     </figure>
   )
 }

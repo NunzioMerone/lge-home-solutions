@@ -13,6 +13,7 @@ export function ProductHero({
   eyebrow = 'Il design per il tuo benessere',
   title,
   description,
+  imageOverlay,
   children,
 }: ProductHeroProps) {
   const image = useRef<HTMLDivElement>(null)
@@ -31,6 +32,7 @@ export function ProductHero({
       ? state.productPhotoPreview
       : null
   const asset = heroPhotos[product.id]
+  const descriptionParagraphs = typeof description === 'string' ? [description] : description
 
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
@@ -66,13 +68,18 @@ export function ProductHero({
           decorative={Boolean(preview)}
           onSettled={(ready) => setSettledPhoto({ id: product.id, ready })}
         />
+        {(loaded || preview) && imageOverlay}
       </div>
       <div className={styles.copy}>
         <p className={styles.eyebrow}>{eyebrow}</p>
         <h1 ref={heading} id="product-title" tabIndex={-1}>
           {title ?? product.title}
         </h1>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.description}>
+          {descriptionParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
         {children}
       </div>
     </section>

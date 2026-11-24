@@ -24,6 +24,7 @@ export function ShowroomClosing({
     >
       <div className={`container ${styles.inner}`}>
         <header className={styles.copy} data-reveal>
+          <p className="eyebrow">Vieni a trovarci nel nostro showroom</p>
           {children}
           {photo && (
             <Link className={styles.worksLink} to={worksPath}>

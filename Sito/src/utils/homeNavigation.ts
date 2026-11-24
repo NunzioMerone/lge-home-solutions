@@ -5,11 +5,17 @@ export function getHomeScrollTarget(
   navigationType: NavigationType,
   hash: string,
   saved: ScrollPosition | undefined,
+  wasOnHome: boolean,
 ): HomeScrollTarget {
   if (navigationType === 'POP' && saved) return { kind: 'position', position: saved }
   if (hash) {
     try {
-      return { kind: 'anchor', id: decodeURIComponent(hash.slice(1)) }
+      return {
+        kind: 'anchor',
+        id: decodeURIComponent(hash.slice(1)),
+        // Let CSS decide whether to animate an in-page link, including reduced motion.
+        behavior: wasOnHome && navigationType !== 'POP' ? 'auto' : 'instant',
+      }
     } catch {
       // A malformed anchor still leaves the page usable at its beginning.
     }
