@@ -1,5 +1,16 @@
 import type { GalleryPhoto } from '../types/gallery'
 
+export const gulfAwningPhoto: GalleryPhoto = {
+  id: 'lge-35144cb1',
+  category: 'Outdoor',
+  alt: 'Tenda da sole su un balcone panoramico al tramonto',
+  width: 1600,
+  height: 1200,
+  previewWidths: [480, 960],
+  fullWidth: 1600,
+  status: 'user-provided',
+}
+
 export const gallery: GalleryPhoto[] = [
   {
     id: 'lge-89a82d37',
@@ -351,16 +362,7 @@ export const gallery: GalleryPhoto[] = [
     fullWidth: 1200,
     status: 'user-provided',
   },
-  {
-    id: 'lge-35144cb1',
-    category: 'Outdoor',
-    alt: 'Tenda da sole su un balcone panoramico al tramonto',
-    width: 1600,
-    height: 1200,
-    previewWidths: [480, 960],
-    fullWidth: 1600,
-    status: 'user-provided',
-  },
+  gulfAwningPhoto,
   {
     id: 'lge-3754af6c',
     category: 'Porte d’ingresso',

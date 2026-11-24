@@ -58,9 +58,6 @@ export function BlogArticle() {
           <Link to={getBlogFilterPath(post.category)}>{category?.label}</Link>
         </nav>
         <header className={styles.articleHeader} ref={headerRef}>
-          <span className="eyebrow" data-reveal>
-            {category?.label}
-          </span>
           <h1 data-reveal>{post.title}</h1>
           <p data-reveal>{post.excerpt}</p>
         </header>

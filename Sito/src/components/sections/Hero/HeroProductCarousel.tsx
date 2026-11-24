@@ -46,14 +46,15 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
               aria-roledescription="diapositiva"
               aria-label={`${index + 1} di ${products.length}`}
               data-reveal
+              data-reveal-direction="fade"
             >
               <HeroProductCard product={product} description={heroDescriptions[product.id]} />
             </div>
           ))}
         </div>
       </div>
-      <div className={styles.controls}>
-        {snapCount > 1 && (
+      {snapCount > 1 && (
+        <div className={styles.controls}>
           <CarouselArrow
             direction="previous"
             label="Soluzioni precedenti"
@@ -61,14 +62,12 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
             onClick={scrollPrev}
             disabled={!canPrev}
           />
-        )}
-        <div
-          className={styles.pagination}
-          role="group"
-          aria-label="Posizioni del carosello soluzioni"
-        >
-          {snapCount > 1 &&
-            Array.from({ length: snapCount }, (_, index) => (
+          <div
+            className={styles.pagination}
+            role="group"
+            aria-label="Posizioni del carosello soluzioni"
+          >
+            {Array.from({ length: snapCount }, (_, index) => (
               <button
                 type="button"
                 key={index}
@@ -79,8 +78,7 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
                 <span />
               </button>
             ))}
-        </div>
-        {snapCount > 1 && (
+          </div>
           <CarouselArrow
             direction="next"
             label="Soluzioni successive"
@@ -88,8 +86,8 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
             onClick={scrollNext}
             disabled={!canNext}
           />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 })

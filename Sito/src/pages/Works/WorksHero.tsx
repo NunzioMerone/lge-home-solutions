@@ -1,40 +1,42 @@
 import { useState } from 'react'
-import { assetUrl } from '../../utils/assetUrl'
+import { gulfAwningPhoto } from '../../data/gallery'
+import { galleryImageUrl } from '../../utils/galleryImages'
 import { Skeleton } from '../../components/ui/Skeleton'
-import { useSectionReveal } from '../../hooks/useSectionReveal'
-import styles from './Works.module.css'
+import styles from './WorksHero.module.css'
+
+const photoSources = [...gulfAwningPhoto.previewWidths, gulfAwningPhoto.fullWidth]
+  .map((width) => `${galleryImageUrl(gulfAwningPhoto, width)} ${width}w`)
+  .join(', ')
 
 export function WorksHero() {
   const [settled, setSettled] = useState(false)
-  const ref = useSectionReveal({ duration: 1.3, stagger: 0.12 })
   return (
-    <header className={styles.hero} ref={ref}>
-      <div className={styles.heroBackdrop} aria-hidden="true" data-reveal>
-        {!settled && <Skeleton className={styles.heroSkeleton} />}
-        <img
-          src={assetUrl('img/hero-scene/desktop-1280.webp')}
-          srcSet={`${assetUrl('img/hero-scene/desktop-960.webp')} 960w, ${assetUrl('img/hero-scene/desktop-1280.webp')} 1280w, ${assetUrl('img/hero-scene/desktop-1672.webp')} 1672w`}
-          sizes="100vw"
-          width="1672"
-          height="941"
-          alt=""
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          onLoad={() => setSettled(true)}
-          onError={() => setSettled(true)}
-        />
-      </div>
-      <div className={`container ${styles.heroInner}`}>
-        <div className={styles.heroCopy}>
-          <h1 data-reveal>
+    <header className={styles.hero}>
+      <div className={`container ${styles.inner}`}>
+        <div className={styles.copy}>
+          <h1>
             I nostri <em>lavori</em>
           </h1>
-          <p className={styles.heroDescription} data-reveal>
+          <p>
             Una selezione di progetti realizzati per portare design, comfort e qualità nelle case
             dei nostri clienti.
           </p>
         </div>
+      </div>
+      <div className={styles.media} data-settled={settled}>
+        {!settled && <Skeleton className={styles.placeholder} />}
+        <img
+          src={galleryImageUrl(gulfAwningPhoto, gulfAwningPhoto.previewWidths[1])}
+          srcSet={photoSources}
+          sizes="(min-width: 700px) 68vw, 100vw"
+          width={gulfAwningPhoto.width}
+          height={gulfAwningPhoto.height}
+          alt={gulfAwningPhoto.alt}
+          decoding="async"
+          fetchPriority="high"
+          onLoad={() => setSettled(true)}
+          onError={() => setSettled(true)}
+        />
       </div>
     </header>
   )

@@ -3,9 +3,11 @@ import { useLocation } from 'react-router-dom'
 import { competenciesPage } from '../../config/competencies'
 import { worksPage } from '../../config/works'
 import { blogPage } from '../../config/blog'
-import { deferredProductPages } from '../../utils/productPages'
+import { products } from '../../data/products'
+import type { ProductDetailProps } from '../../types/productTransition'
 import type { RouteSkeletonKind } from '../../types/skeleton'
 import productStyles from '../sections/ProductHero/ProductHero.module.css'
+import worksHeroStyles from '../../pages/Works/WorksHero.module.css'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { Skeleton, SkeletonText } from '../ui/Skeleton'
@@ -54,12 +56,15 @@ function CompetenciesSkeleton() {
 function WorksSkeleton() {
   return (
     <>
-      <div className={styles.worksHero}>
-        <div className={`container ${styles.worksHeroInner}`}>
-          <div className={styles.worksCopy}>
+      <div className={worksHeroStyles.hero}>
+        <div className={`container ${worksHeroStyles.inner}`}>
+          <div className={worksHeroStyles.copy}>
             <Skeleton className={styles.worksTitle} />
             <SkeletonText className={styles.worksDescription} lines={3} />
           </div>
+        </div>
+        <div className={worksHeroStyles.media}>
+          <Skeleton className={worksHeroStyles.placeholder} />
         </div>
       </div>
       <div className={`container ${styles.worksFilters}`}>
@@ -123,13 +128,13 @@ function BlogSkeleton() {
   )
 }
 
-function ProductSkeleton() {
+function ProductSkeleton({ product }: ProductDetailProps) {
   return (
     <div className={productStyles.hero}>
-      <div className={`${productStyles.image} ${styles.productPhoto}`}>
+      <div className={productStyles.image} data-photo={product.id}>
         <Skeleton className={productStyles.imageSkeleton} />
       </div>
-      <div className={`${productStyles.copy} ${styles.productCopy}`}>
+      <div className={productStyles.copy}>
         <Skeleton className={styles.label} />
         <SkeletonText className={styles.productTitle} lines={2} />
         <SkeletonText className={styles.productDescription} lines={3} />
@@ -142,6 +147,7 @@ function ProductSkeleton() {
 export function RoutePending() {
   const { pathname } = useLocation()
   const path = pathname.replace(/\/+$/, '') || '/'
+  const product = products.find((item) => item.path === path)
   const kind: RouteSkeletonKind =
     path === blogPage.path
       ? 'blog'
@@ -149,7 +155,7 @@ export function RoutePending() {
         ? 'competencies'
         : path === worksPage.path
           ? 'works'
-          : deferredProductPages.has(path)
+          : product
             ? 'product'
             : 'article'
   useLayoutEffect(() => {
@@ -169,8 +175,8 @@ export function RoutePending() {
             <CompetenciesSkeleton />
           ) : kind === 'works' ? (
             <WorksSkeleton />
-          ) : kind === 'product' ? (
-            <ProductSkeleton />
+          ) : product ? (
+            <ProductSkeleton product={product} />
           ) : (
             <ArticleSkeleton />
           )}

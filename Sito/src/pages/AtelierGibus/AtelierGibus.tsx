@@ -70,6 +70,9 @@ export function AtelierGibus({ product }: ProductDetailProps) {
             <Link className={styles.button} to={`#${outdoorShowcaseId}`}>
               Scopri di più <Icon name="down" />
             </Link>
+            <Link className={styles.inlineLink} to={`#${gibusCatalogsId}`}>
+              Cataloghi <Icon name="down" />
+            </Link>
             <a
               className={styles.inlineLink}
               href={atelierGibusPage.officialUrl}

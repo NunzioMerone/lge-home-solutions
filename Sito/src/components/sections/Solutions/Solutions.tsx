@@ -5,7 +5,7 @@ import { deferredProductPages } from '../../../utils/productPages'
 import styles from './Solutions.module.css'
 
 export function Solutions() {
-  const ref = useSectionReveal({ duration: 1.8, stagger: 0.16 })
+  const ref = useSectionReveal({ duration: 0.9, stagger: 0.08, rootMargin: '0px 0px -48px 0px' })
 
   useEffect(() => {
     const section = ref.current
@@ -27,7 +27,7 @@ export function Solutions() {
   return (
     <section className={styles.section} id="prodotti" aria-labelledby="solutions-title" ref={ref}>
       <div className="container">
-        <header className={styles.heading} data-reveal>
+        <header className={styles.heading}>
           <h2 id="solutions-title">
             Le nostre <em>soluzioni</em>
           </h2>

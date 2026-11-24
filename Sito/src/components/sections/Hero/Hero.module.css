@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: max(780px, 100svh);
+  min-height: 100svh;
   background: var(--color-paper);
 }
 .backdrop {
@@ -115,9 +115,6 @@
   text-wrap: pretty;
 }
 @media (min-width: 700px) and (max-width: 999px) {
-  .hero {
-    min-height: max(1000px, 100svh);
-  }
   .content {
     padding-top: calc(var(--navigation-height) + 70px);
   }
@@ -136,9 +133,6 @@
   }
 }
 @media (min-width: 1000px) {
-  .hero {
-    min-height: max(720px, 100svh);
-  }
   .content {
     align-items: center;
     padding-top: var(--navigation-height);
@@ -213,5 +207,25 @@
   }
   .subtitle {
     margin-top: 14px;
+  }
+}
+
+@media (min-width: 700px) and (orientation: landscape) and (max-height: 600px) {
+  .content {
+    align-items: center;
+    padding-block: calc(var(--navigation-height) + env(safe-area-inset-top))
+      calc(var(--space-3) + env(safe-area-inset-bottom));
+  }
+  .introduction {
+    max-width: min(80%, 48rem);
+  }
+  .introduction h1 {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+  }
+  .eyebrow {
+    margin-bottom: var(--space-2);
+  }
+  .subtitle {
+    margin-top: var(--space-2);
   }
 }

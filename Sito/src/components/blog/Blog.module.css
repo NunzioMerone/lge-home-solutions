@@ -267,7 +267,7 @@ a.readLink:is(:hover, :focus-visible) svg {
   text-align: center;
 }
 .articleHeader h1 {
-  margin: 14px 0 18px;
+  margin: 0 0 18px;
   font-size: clamp(2.4rem, 4.2vw, 4.1rem);
   line-height: 1.08;
   letter-spacing: -0.025em;
@@ -277,8 +277,8 @@ a.readLink:is(:hover, :focus-visible) svg {
   max-width: 650px;
   margin: 0 auto;
   color: var(--color-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 .articleFigure {
   margin: 0;
@@ -290,12 +290,12 @@ a.readLink:is(:hover, :focus-visible) svg {
 .articleFigure figcaption {
   margin-top: 10px;
   color: var(--color-muted);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   line-height: 1.6;
 }
 .articleLayout {
   display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 700px);
+  grid-template-columns: minmax(180px, 260px) minmax(0, 70ch);
   justify-content: center;
   align-items: start;
   gap: clamp(40px, 7vw, 120px);
@@ -367,8 +367,8 @@ a.readLink:is(:hover, :focus-visible) svg {
 }
 .articleSection p,
 .checklist {
-  font-size: 0.95rem;
-  line-height: 1.95;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 .articleSection p {
   margin: 0 0 16px;
@@ -465,7 +465,7 @@ a.readLink:is(:hover, :focus-visible) svg {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .articleLayout {
-    grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+    grid-template-columns: minmax(160px, 200px) minmax(0, 70ch);
     gap: 36px;
   }
 }
@@ -499,9 +499,6 @@ a.readLink:is(:hover, :focus-visible) svg {
   }
   .articleHeader h1 {
     font-size: clamp(2.2rem, 9vw, 3rem);
-  }
-  .articleHeader > p {
-    font-size: 0.9rem;
   }
   .articlePhoto {
     height: auto;
