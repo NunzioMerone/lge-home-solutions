@@ -1,18 +1,35 @@
-import { useEffect, useRef, useState } from 'react'
-import { heroVideoMedia, heroVideoPlaybackRate, heroVideoSources } from '../config/hero'
-import type { HeroVideoSource } from '../types/hero'
-import { useMediaQuery } from './useMediaQuery'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import {
+  desktopHeroVideoSource,
+  heroVideoPlaybackRate,
+  responsiveHeroVideoSources,
+} from '../config/hero'
 import { useMotion } from './useMotion'
 
+function subscribeToHeroSource(notify: () => void) {
+  const queries = responsiveHeroVideoSources.map(({ media }) => window.matchMedia(media))
+  for (const query of queries) query.addEventListener('change', notify)
+  return () => {
+    for (const query of queries) query.removeEventListener('change', notify)
+  }
+}
+
+function getHeroSource() {
+  return (
+    responsiveHeroVideoSources.find(({ media }) => window.matchMedia(media).matches) ??
+    desktopHeroVideoSource
+  )
+}
+
 export function useHeroVideo(pageActive: boolean) {
-  const portrait = useMediaQuery(heroVideoMedia.portrait)
-  const compact = useMediaQuery(heroVideoMedia.compact)
-  const largeTablet = useMediaQuery(heroVideoMedia.largeTablet)
+  const source = useSyncExternalStore(
+    subscribeToHeroSource,
+    getHeroSource,
+    () => desktopHeroVideoSource,
+  )
   const { reducedMotion } = useMotion()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [failedVideos, setFailedVideos] = useState<ReadonlySet<string>>(() => new Set())
-  const standardFormat = portrait ? 'mobile' : compact ? 'tablet' : 'desktop'
-  const source: HeroVideoSource = heroVideoSources[largeTablet ? 'largeTablet' : standardFormat]
   const videoEnabled = !reducedMotion && !failedVideos.has(source.video)
 
   useEffect(() => {

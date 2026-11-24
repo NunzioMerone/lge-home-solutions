@@ -1,142 +1,129 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-25",
+  "revision": "Rev21",
+  "scope": "Hero della home per l’anteprima non indicizzata su GitHub Pages.",
+  "provenance": "references/hero-video-partners/edit-rev21.json",
+  "partners": [
+    "VEKA",
+    "VELUX",
+    "newSolar",
+    "Gibus"
+  ],
+  "publication": {
+    "status": "public-preview",
+    "authorized": true
+  },
+  "frames": 3012,
+  "frame_rate": 60,
+  "duration_file": 50.2,
+  "duration_website": 50.2,
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
-  "stock_provenance": "La scena del corridoio è tratta da Pexels. Le altre fonti sono documentate nelle ricette di montaggio.",
-  "revision": "Rev20",
-  "scope": "Video della home con Rev20 su desktop e Rev19 su tablet e telefono.",
-  "duration_file": 76.38333333333334,
-  "duration_website": 76.38333333333334,
-  "provenance": "references/hero-video-fluidity/edit-rev20.json",
   "assets": [
     {
       "format": "desktop",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev20_WEB_Desktop.mp4",
-      "target": "public/media/hero/hero-desktop-rev20.mp4",
-      "bytes": 69946427,
-      "sha256": "b8619a2e33068faf5661da1b678035b1c974e137d463f5470b6ce6baab6c94ab",
+      "target": "public/media/hero/hero-desktop-rev21.mp4",
+      "bytes": 38691746,
+      "sha256": "4ab851709e872d09f4b54ff9b7b7878736235697cf2af8a4cd8683c3451a272e",
+      "width": 1920,
+      "height": 1080,
       "codec": "h264"
     },
     {
       "format": "desktop",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev20_Poster_Desktop.jpg",
-      "target": "public/media/hero/hero-desktop-rev20-poster.jpg",
-      "bytes": 120635,
-      "sha256": "8e86472ca67f088321cc631ec11e006b5940dc41abe95129e8c9bacc1ed60c3f"
+      "target": "public/media/hero/hero-desktop-rev21-poster.jpg",
+      "bytes": 217784,
+      "sha256": "5b21be8e54cd4048aa9f074fdea76aaa17853af0a5b76d0a237ee15778f72966",
+      "width": 1920,
+      "height": 1080
     },
     {
-      "format": "largeTablet",
+      "format": "wide-compact",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Tablet.mp4",
-      "target": "public/media/hero/hero-tablet-rev19.mp4",
-      "bytes": 28685827,
-      "sha256": "f76d540a43190cdb79dcfb8ba05adcd65e1b401dbad819147222b3a18b47fcfe",
+      "target": "public/media/hero/hero-wide-compact-rev21.mp4",
+      "bytes": 15562607,
+      "sha256": "057024edb31a9ca91d8b3c0cb0ca537363c00512ee89b20c5e9a8c8150d1be7e",
+      "width": 1280,
+      "height": 720,
       "codec": "h264"
     },
     {
-      "format": "largeTablet",
+      "format": "wide-compact",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_Tablet.jpg",
-      "target": "public/media/hero/hero-tablet-rev19-poster.jpg",
-      "bytes": 84692,
-      "sha256": "d4b9e4dd840db7701500e14afab78aff76fae12903d837e9a615669e15eca287"
+      "target": "public/media/hero/hero-wide-compact-rev21-poster.jpg",
+      "bytes": 115667,
+      "sha256": "cd0c79f744a89fff156479db5c1e54ef27744ff656b959bfadd9197952e28035",
+      "width": 1280,
+      "height": 720
     },
     {
       "format": "tablet",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_TabletCompact.mp4",
-      "target": "public/media/hero/hero-tablet-compact-rev19.mp4",
-      "bytes": 27708464,
-      "sha256": "bc723e8a98c123f1c65f6a595bd5a009b353cb2f8c56ef5c5aa20601ef6edf23",
+      "target": "public/media/hero/hero-tablet-rev21.mp4",
+      "bytes": 20868391,
+      "sha256": "4e8052f1b5dd362d6fe61c5df36f121af60d2b9382f743ffea5f35e156ae7549",
+      "width": 1280,
+      "height": 960,
       "codec": "h264"
     },
     {
       "format": "tablet",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_TabletCompact.jpg",
-      "target": "public/media/hero/hero-tablet-compact-rev19-poster.jpg",
-      "bytes": 84692,
-      "sha256": "d4b9e4dd840db7701500e14afab78aff76fae12903d837e9a615669e15eca287"
+      "target": "public/media/hero/hero-tablet-rev21-poster.jpg",
+      "bytes": 148911,
+      "sha256": "0360e1f4bcfc116426e59a463d0825a762e2610c0ae1b0c83cfa31adb7ed0993",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "format": "tablet-portrait",
+      "kind": "video",
+      "target": "public/media/hero/hero-tablet-portrait-rev21.mp4",
+      "bytes": 19898532,
+      "sha256": "6049d9611267286db6f916ef07cc60124a940b7d0f3c547419922cd9b7731407",
+      "width": 960,
+      "height": 1280,
+      "codec": "h264"
+    },
+    {
+      "format": "tablet-portrait",
+      "kind": "poster",
+      "target": "public/media/hero/hero-tablet-portrait-rev21-poster.jpg",
+      "bytes": 135299,
+      "sha256": "653cb17d06b3acfb72d462af3f0f5df5b38ed7bd9ae4a4ba5f74d9df458228a6",
+      "width": 960,
+      "height": 1280
     },
     {
       "format": "mobile",
       "kind": "video",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Mobile.mp4",
-      "target": "public/media/hero/hero-mobile-rev19.mp4",
-      "bytes": 20048309,
-      "sha256": "b13c613e9e1b996021f87531db9a3e8900faab7c5baf9a436e47f3153625f8ef",
+      "target": "public/media/hero/hero-mobile-rev21.mp4",
+      "bytes": 12959006,
+      "sha256": "55c4c0c47094d3200d6a32223cd1cecb34f991b3e7b5245e448da3d06f4ba22b",
+      "width": 720,
+      "height": 1280,
       "codec": "h264"
     },
     {
       "format": "mobile",
       "kind": "poster",
-      "source": "references/hero-video-fluidity/03_Poster/LGE_Hero_Rev19_Poster_Mobile.jpg",
-      "target": "public/media/hero/hero-mobile-rev19-poster.jpg",
-      "bytes": 70810,
-      "sha256": "613d6d69465e940e62dc611a20d12d2ba68fe510f33a885bbe322e9391cadf0a"
+      "target": "public/media/hero/hero-mobile-rev21-poster.jpg",
+      "bytes": 94893,
+      "sha256": "a66927d396aeb3e773c7c87b821b6c3574dff6c8476b2c4bc97819568b010ff2",
+      "width": 720,
+      "height": 1280
     },
     {
       "format": "mobile",
       "kind": "video-efficient",
-      "source": "references/hero-video-fluidity/02_Web/LGE_Hero_Rev19_WEB_Mobile_HEVC.mp4",
-      "target": "public/media/hero/hero-mobile-rev19-hevc.mp4",
-      "bytes": 15401238,
-      "sha256": "c7ab83d0703d2079e969d446548aee8125341599561da3478340bdac4ba5a0b0",
+      "target": "public/media/hero/hero-mobile-rev21-hevc.mp4",
+      "bytes": 8073153,
+      "sha256": "2815d00b9cd18177e3689a92fd8af019c2a72cf7f319f961865cf67c84f43045",
+      "width": 720,
+      "height": 1280,
       "codec": "hevc"
     }
-  ],
-  "publication": {
-    "status": "publication-authorized",
-    "authorized": true,
-    "authorization_date": "2026-11-08"
-  },
-  "shot_ids": [
-    "01",
-    "02",
-    "P1A",
-    "P1B",
-    "P2A",
-    "04",
-    "P3B",
-    "06",
-    "P7",
-    "P2C",
-    "P2D",
-    "P2E",
-    "P4",
-    "P5",
-    "P6",
-    "08",
-    "09"
-  ],
-  "frames": 4583,
-  "frame_rate": 60,
-  "removed_shots": [
-    "P2B",
-    "P3A",
-    "10"
-  ],
-  "edited_shots": [
-    "P4",
-    "P5"
-  ],
-  "desktop_source_upgrades": [
-    "P1A",
-    "P1B",
-    "P4",
-    "P6",
-    "09"
-  ],
-  "desktop_cleanup_shots": [
-    "P2A",
-    "P3B",
-    "P2C",
-    "P2D",
-    "P2E",
-    "P4",
-    "P5",
-    "P6"
   ]
 }

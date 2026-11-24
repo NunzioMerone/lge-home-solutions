@@ -1,6 +1,6 @@
 # LGE Home Solutions
 
-Unico progetto del sito LGE Home Solutions, con hero video responsive Rev12 a 60 fps, showroom aggiornato e gallerie fotografiche. Il checkpoint del 6 novembre 2026 è autorizzato alla pubblicazione su GitHub Pages.
+Sito LGE Home Solutions con showroom e gallerie fotografiche. La home usa il montaggio dei partner VEKA, VELUX, newSolar e Gibus, con cinque varianti video per desktop, tablet e telefono.
 
 Il codice, gli asset e le dipendenze sono in [`Sito/`](./Sito/README.md). Identità e decisioni di progetto sono documentate in [`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md).
 

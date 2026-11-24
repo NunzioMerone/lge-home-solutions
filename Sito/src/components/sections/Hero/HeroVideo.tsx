@@ -1,4 +1,4 @@
-import { heroVideoMedia, heroVideoSources } from '../../../config/hero'
+import { desktopHeroVideoSource, responsiveHeroVideoSources } from '../../../config/hero'
 import { useHeroVideo } from '../../../hooks/useHeroVideo'
 import { assetUrl } from '../../../utils/assetUrl'
 import type { PageActivityProps } from '../../../types/navigation'
@@ -10,28 +10,19 @@ export function HeroVideo({ active }: PageActivityProps) {
   return (
     <div className={styles.backdrop} aria-hidden="true">
       <picture>
-        <source
-          media={heroVideoMedia.largeTablet}
-          srcSet={assetUrl(heroVideoSources.largeTablet.poster)}
-          width={heroVideoSources.largeTablet.width}
-          height={heroVideoSources.largeTablet.height}
-        />
-        <source
-          media={heroVideoMedia.portrait}
-          srcSet={assetUrl(heroVideoSources.mobile.poster)}
-          width={heroVideoSources.mobile.width}
-          height={heroVideoSources.mobile.height}
-        />
-        <source
-          media={heroVideoMedia.compact}
-          srcSet={assetUrl(heroVideoSources.tablet.poster)}
-          width={heroVideoSources.tablet.width}
-          height={heroVideoSources.tablet.height}
-        />
+        {responsiveHeroVideoSources.map(({ media, poster, width, height }) => (
+          <source
+            key={media}
+            media={media}
+            srcSet={assetUrl(poster)}
+            width={width}
+            height={height}
+          />
+        ))}
         <img
-          src={assetUrl(heroVideoSources.desktop.poster)}
-          width={heroVideoSources.desktop.width}
-          height={heroVideoSources.desktop.height}
+          src={assetUrl(desktopHeroVideoSource.poster)}
+          width={desktopHeroVideoSource.width}
+          height={desktopHeroVideoSource.height}
           alt=""
           fetchPriority="high"
           loading="eager"
