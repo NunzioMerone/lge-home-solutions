@@ -22,8 +22,9 @@ export default function GalleryLightboxCarousel({
 }: GalleryLightboxCarouselProps) {
   const swiperRef = useRef<SwiperInstance | null>(null)
   const speed = reducedMotion ? 0 : 400
-  // Auto-sized slides make Swiper recalculate its position on every late image load.
-  const slidesPerView = compact ? 1 / 0.84 : 1.5
+  // Match the numeric slide widths and loading fallback in GalleryLightbox.module.css.
+  const slidesPerView = compact ? 1 / 0.92 : 1 / 0.8
+  const virtualSlides = photos.length > 9
   const previous = useCallback(() => {
     swiperRef.current?.slidePrev(speed)
   }, [speed])
@@ -39,11 +40,11 @@ export default function GalleryLightboxCarousel({
       className={styles.viewport}
       modules={[EffectCoverflow, Virtual]}
       effect={reducedMotion ? 'slide' : 'coverflow'}
-      coverflowEffect={{ rotate: 45, depth: 100, stretch: '28%', slideShadows: false }}
+      coverflowEffect={{ rotate: 45, depth: 100, stretch: '14%', slideShadows: false }}
       initialSlide={selectedIndex}
       centeredSlides
       slidesPerView={slidesPerView}
-      virtual={photos.length > 9 ? { cache: false, addSlidesBefore: 1, addSlidesAfter: 1 } : false}
+      virtual={virtualSlides ? { cache: false, addSlidesBefore: 1, addSlidesAfter: 1 } : false}
       loop={photos.length >= 5}
       rewind={photos.length < 5}
       loopPreventsSliding={false}
@@ -54,6 +55,12 @@ export default function GalleryLightboxCarousel({
       onSwiper={(swiper) => {
         swiperRef.current = swiper
         onReady()
+      }}
+      onResize={(swiper) => {
+        if (!virtualSlides || reducedMotion) return
+        // Virtual updates the slide positions after Swiper measures their offsets on resize.
+        swiper.updateSlidesOffset()
+        swiper.setTranslate(swiper.rtlTranslate ? -swiper.translate : swiper.translate)
       }}
       onRealIndexChange={(swiper) => onSelect(swiper.realIndex)}
     >

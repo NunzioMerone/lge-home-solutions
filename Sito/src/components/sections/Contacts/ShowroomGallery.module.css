@@ -1,0 +1,150 @@
+.gallery {
+  --gallery-aspect-ratio: 4 / 3;
+  --gallery-inset: 12px;
+  --gallery-overlay: rgb(18 24 29 / 78%);
+  display: grid;
+  grid-area: photo;
+  gap: 12px;
+  isolation: isolate;
+  min-width: 0;
+}
+.open {
+  position: relative;
+  display: block;
+  aspect-ratio: var(--gallery-aspect-ratio);
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--color-paper) 40%, var(--color-greige));
+  color: var(--color-white);
+}
+.open::after {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 1px solid color-mix(in srgb, var(--color-line) 76%, transparent);
+  border-radius: inherit;
+  pointer-events: none;
+  content: '';
+}
+.open:focus-visible {
+  outline-offset: 4px;
+}
+.stage,
+.slide {
+  position: absolute;
+  inset: 0;
+}
+.stage {
+  isolation: isolate;
+}
+.skeleton {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  border-radius: var(--radius);
+}
+.error {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  color: var(--color-heading);
+  font-size: 0.8125rem;
+}
+.slide[data-phase='pending'] {
+  opacity: 0;
+}
+.slide[data-phase='current'] {
+  z-index: 1;
+}
+.slide[data-fading='true'] {
+  animation: showPhoto 420ms ease both;
+}
+.slide[data-phase='outgoing'] {
+  animation: hidePhoto 420ms ease both;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.expand {
+  position: absolute;
+  top: var(--gallery-inset);
+  right: var(--gallery-inset);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border-radius: var(--radius);
+  color: var(--color-white);
+  background: var(--gallery-overlay);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.expand svg {
+  width: 15px;
+  height: 15px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+@media (min-width: 1200px) {
+  .gallery {
+    position: relative;
+    justify-self: center;
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: var(--gallery-aspect-ratio);
+  }
+  .open {
+    z-index: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .controls {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline: 0;
+    z-index: 1;
+    justify-content: space-between;
+    translate: 0 -50%;
+    pointer-events: none;
+  }
+  .controls > button {
+    pointer-events: auto;
+  }
+  .controls > [data-direction='previous'] {
+    translate: -50%;
+  }
+  .controls > [data-direction='next'] {
+    translate: 50%;
+  }
+}
+@keyframes showPhoto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hidePhoto {
+  to {
+    opacity: 0;
+  }
+}
+:root[data-motion='reduced'] .slide:is([data-fading='true'], [data-phase='outgoing']) {
+  animation-duration: 1ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide:is([data-fading='true'], [data-phase='outgoing']) {
+    animation-duration: 1ms;
+  }
+}

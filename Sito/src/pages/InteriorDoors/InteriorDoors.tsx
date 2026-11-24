@@ -33,7 +33,7 @@ export function InteriorDoors({ product }: ProductDetailProps) {
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
-          eyebrow="LGE HOME SOLUTIONS"
+          eyebrow="PORTE INTERNE"
           title={
             <>
               Porte interne,

@@ -1,13 +1,14 @@
 import { contacts } from '../../../config/contacts'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
+import type { PageActivityProps } from '../../../types/navigation'
 import { getContactLinks } from '../../../utils/contactLinks'
 import { assetUrl } from '../../../utils/assetUrl'
 import { Icon } from '../../ui/Icon'
 import { LocationMap } from './LocationMap'
-import { ShowroomPhoto } from './ShowroomPhoto'
+import { ShowroomGallery } from './ShowroomGallery'
 import styles from './Contacts.module.css'
 
-export function Contacts() {
+export function Contacts({ active }: PageActivityProps) {
   const ref = useSectionReveal()
   const links = getContactLinks(contacts)
   return (
@@ -29,7 +30,7 @@ export function Contacts() {
               misura per la tua casa.
             </p>
           </header>
-          <ShowroomPhoto />
+          <ShowroomGallery active={active} />
           <div className={styles.appointment} data-reveal>
             {links.whatsapp && (
               <a

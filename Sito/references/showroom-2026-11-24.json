@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-24",
+  "source": "Scatti originali forniti in chat dall’utente.",
+  "sourceDirectory": "../output/showroom-2026-11-24/foto-originali-ritoccate/sorgenti/",
+  "status": "user-provided",
+  "scope": "Varianti WebP autorizzate per la pubblicazione sul sito",
+  "excluded": {
+    "attachment": 47,
+    "description": "Porta blindata aperta"
+  },
+  "masterDirectory": "../output/showroom-2026-11-24/foto-ritocco-professionale/immagini/",
+  "processing": "Regolazioni individuali di esposizione, bilanciamento del bianco, riflessi e contrasto locale sui pixel originali. Ritagli contenuti ai margini e raddrizzamento rigido di due inquadrature, con esportazione rettangolare sRGB. WebP con proporzioni della fotografia ritoccata.",
+  "photos": [
+    {
+      "id": "gibus-pergola-frontale",
+      "attachment": 12,
+      "source": "07-gibus-pergola-frontale.jpg",
+      "sourceSha256": "d6e38268c67727e42d523239d3062cea5b31b191df47b9fa1d03dadb3368a15c",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "07-gibus-pergola-frontale.png",
+      "masterSha256": "d9854a24196eb24d5a386adee698cad7eb07f09d00fe6c86367e72f4f86533c7",
+      "width": 1024,
+      "height": 739,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/gibus-pergola-frontale-480.webp",
+        "public/img/showroom/retouched/gibus-pergola-frontale-960.webp",
+        "public/img/showroom/retouched/gibus-pergola-frontale-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        29,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "porte-interne-esposizione",
+      "attachment": 44,
+      "source": "01-porte-interne-esposizione.jpg",
+      "sourceSha256": "2ba4928e86f67fb1eb3f3bf46a14967fc821bbfa0b91e107a69f92a3a3a71759",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "01-porte-interne-esposizione.png",
+      "masterSha256": "a27b64b8474d579945ba550097475ab01c2bf038a9910e2ecdf0e9126bc0da20",
+      "width": 1024,
+      "height": 768,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/porte-interne-esposizione-480.webp",
+        "public/img/showroom/retouched/porte-interne-esposizione-960.webp",
+        "public/img/showroom/retouched/porte-interne-esposizione-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "gibus-pergola-lamelle-illuminate",
+      "attachment": 25,
+      "source": "08-gibus-pergola-lamelle-illuminate.jpg",
+      "sourceSha256": "5bd5870a3af22697ae6458ee9e17a244c52e8aa7df91d6ccaa10a2bec6953100",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "08-gibus-pergola-lamelle-illuminate.png",
+      "masterSha256": "368588fc392c580f6c38c65bbe63a919bfe13660d1f2a9916b95b0080131630f",
+      "width": 1024,
+      "height": 768,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/gibus-pergola-lamelle-illuminate-480.webp",
+        "public/img/showroom/retouched/gibus-pergola-lamelle-illuminate-960.webp",
+        "public/img/showroom/retouched/gibus-pergola-lamelle-illuminate-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "porta-blindata-finitura-legno",
+      "attachment": 42,
+      "source": "04-porta-blindata-finitura-legno.jpg",
+      "sourceSha256": "0be8c876922074b3478ec9ba9d441f7b5d6a41cd58b804343a1a885d1712bbeb",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "04-porta-blindata-finitura-legno.png",
+      "masterSha256": "eb7eaf62e11e63e78871ad2921be59d47511b87f3dbb000be62e87ea9d0704f4",
+      "width": 1024,
+      "height": 768,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/porta-blindata-finitura-legno-480.webp",
+        "public/img/showroom/retouched/porta-blindata-finitura-legno-960.webp",
+        "public/img/showroom/retouched/porta-blindata-finitura-legno-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "gibus-tenda-e-sezioni-tecniche",
+      "attachment": 30,
+      "source": "10-gibus-tenda-e-sezioni-tecniche.jpg",
+      "sourceSha256": "81b8059d8d66fb5b73311222d36ee21113adb194956cafbab2e671e6f2f0c7ef",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "10-gibus-tenda-e-sezioni-tecniche.png",
+      "masterSha256": "8ae010c0fc940b94282c303f53e0196e09753e0ecd35240f1803a3b4a89751d2",
+      "width": 1024,
+      "height": 768,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/gibus-tenda-e-sezioni-tecniche-480.webp",
+        "public/img/showroom/retouched/gibus-tenda-e-sezioni-tecniche-960.webp",
+        "public/img/showroom/retouched/gibus-tenda-e-sezioni-tecniche-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "porte-interne-prospettiva",
+      "attachment": 52,
+      "source": "02-porte-interne-prospettiva.jpg",
+      "sourceSha256": "b5e346b63cafe55a0480daf410ae66f9d83bcfc20f3f21b96a80361e20e2a30b",
+      "sourceWidth": 768,
+      "sourceHeight": 1024,
+      "master": "02-porte-interne-prospettiva.png",
+      "masterSha256": "8261c889ea346499eeac95a7d5094377f5048998b7c5d9e63a075d06c0aedd7e",
+      "width": 758,
+      "height": 941,
+      "rotationDegrees": 0.45,
+      "variants": [
+        "public/img/showroom/retouched/porte-interne-prospettiva-480.webp",
+        "public/img/showroom/retouched/porte-interne-prospettiva-758.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        768,
+        953
+      ]
+    },
+    {
+      "id": "gibus-campionari-e-profili",
+      "attachment": 3,
+      "source": "09-gibus-campionari-e-profili.jpg",
+      "sourceSha256": "b0524f1e4cb0a9b69bff250d7bfe1eb94ea3ea4e23de0dc1ed79d8625c73b1c3",
+      "sourceWidth": 1024,
+      "sourceHeight": 768,
+      "master": "09-gibus-campionari-e-profili.png",
+      "masterSha256": "a65156a55e9e767647103f282a838f7793f5dfe4dfea19da8ee1c34c8ab85800",
+      "width": 1024,
+      "height": 768,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/gibus-campionari-e-profili-480.webp",
+        "public/img/showroom/retouched/gibus-campionari-e-profili-960.webp",
+        "public/img/showroom/retouched/gibus-campionari-e-profili-1024.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "porta-grigia-e-maniglie",
+      "attachment": 45,
+      "source": "03-porta-grigia-e-maniglie.jpg",
+      "sourceSha256": "33fe63f6d9e68f036bc202f76c39b6230dde7b68afbbb347c73940bb6af15004",
+      "sourceWidth": 768,
+      "sourceHeight": 1024,
+      "master": "03-porta-grigia-e-maniglie.png",
+      "masterSha256": "b84c019c5e4ca35e2ecf42f1b028e3f72b1bae05b6462e3b7f1f90f0ac5c5020",
+      "width": 756,
+      "height": 1024,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/porta-grigia-e-maniglie-480.webp",
+        "public/img/showroom/retouched/porta-grigia-e-maniglie-756.webp"
+      ],
+      "sourceBounds": [
+        12,
+        0,
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "sezioni-infissi-in-vetrina",
+      "attachment": 55,
+      "source": "11-sezioni-infissi-in-vetrina.jpg",
+      "sourceSha256": "1d48b096536356f4f430712365f2a8b16016fec9812b13784d50b6a21ad78d2a",
+      "sourceWidth": 768,
+      "sourceHeight": 1024,
+      "master": "11-sezioni-infissi-in-vetrina.png",
+      "masterSha256": "b757dac5883e69a1a8f1b99c7490f4f21446c3a00cfdda455d16dd784e626e03",
+      "width": 742,
+      "height": 991,
+      "rotationDegrees": 1.35,
+      "variants": [
+        "public/img/showroom/retouched/sezioni-infissi-in-vetrina-480.webp",
+        "public/img/showroom/retouched/sezioni-infissi-in-vetrina-742.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "porta-blindata-dettaglio",
+      "attachment": 48,
+      "source": "06-porta-blindata-dettaglio.jpg",
+      "sourceSha256": "cc29c883cbcdd3849bcf7440cbef291bfcb24428ffb3f5d8b4f1a3812d57ab9d",
+      "sourceWidth": 768,
+      "sourceHeight": 1024,
+      "master": "06-porta-blindata-dettaglio.png",
+      "masterSha256": "f6c7a59087c06533bc91c8123cebf12d5e07297a1c29aa43419010ef2cd78b10",
+      "width": 768,
+      "height": 1024,
+      "rotationDegrees": 0,
+      "variants": [
+        "public/img/showroom/retouched/porta-blindata-dettaglio-480.webp",
+        "public/img/showroom/retouched/porta-blindata-dettaglio-768.webp"
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        768,
+        1024
+      ]
+    }
+  ]
+}

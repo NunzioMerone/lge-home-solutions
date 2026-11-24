@@ -7,6 +7,7 @@ export type ProductPath =
 export type PhotoId = 'security' | 'windows' | 'outdoor' | 'shading' | 'interior'
 export type IconName =
   | 'close'
+  | 'expand'
   | 'arrow'
   | 'chevron-left'
   | 'chevron-right'

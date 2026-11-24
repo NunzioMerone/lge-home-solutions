@@ -15,6 +15,7 @@ export function Icon({ name, className }: IconProps) {
       aria-hidden="true"
     >
       {name === 'close' && <path d="m6 6 12 12M18 6 6 18" />}
+      {name === 'expand' && <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />}
       {name === 'arrow' && <path d="M4 12h15m-6-6 6 6-6 6" />}
       {name === 'chevron-left' && <path d="m14 5-7 7 7 7" />}
       {name === 'chevron-right' && <path d="m10 5 7 7-7 7" />}

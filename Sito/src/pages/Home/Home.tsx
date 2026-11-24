@@ -24,7 +24,7 @@ export function Home({ active }: PageActivityProps) {
         <Certifications />
         <Gallery active={active} />
         <Reviews />
-        <Contacts />
+        <Contacts active={active} />
       </main>
       <Footer />
     </div>

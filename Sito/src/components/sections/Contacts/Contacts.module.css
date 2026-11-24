@@ -37,29 +37,6 @@
   font-size: 0.9rem;
   line-height: 1.8;
 }
-.photo {
-  position: relative;
-  grid-area: photo;
-  aspect-ratio: 1672 / 941;
-  min-width: 0;
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: var(--color-greige);
-}
-.photoSkeleton {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-}
-.photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.photo img {
-  object-fit: contain;
-}
 .appointment,
 .directions {
   border: 1px solid var(--showroom-border);
@@ -305,13 +282,8 @@ a.socialIcon:hover {
 @media (min-width: 1200px) {
   .layout {
     grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
-    grid-template-areas: 'introduction photo' 'appointment photo' 'directions photo';
-    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 'introduction .' 'appointment photo' 'directions photo';
     gap: 20px 32px;
-  }
-  .photo {
-    align-self: end;
-    min-height: 0;
   }
   .appointment {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);

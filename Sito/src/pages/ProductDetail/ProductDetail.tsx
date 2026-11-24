@@ -32,7 +32,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
           product={product}
-          eyebrow="LGE HOME SOLUTIONS · COSMET"
+          eyebrow="INFISSI"
           title={
             <>
               Infissi per
