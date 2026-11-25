@@ -1,0 +1,14 @@
+{
+  "baseEdit": "edit-rev21.json",
+  "revision": "rev22",
+  "outputFrameRate": 60,
+  "durationFrames": 3012,
+  "loopStartFrame": 2976,
+  "chapters": {
+    "light": { "startFrame": 0, "shots": [1, 6, 4, 13] },
+    "comfort": { "startFrame": 853, "shots": [2, 8, 10] },
+    "protection": { "startFrame": 1422, "shots": [5, 14] },
+    "privacy": { "startFrame": 1740, "shots": [9, 12] },
+    "outdoor": { "startFrame": 2060, "shots": [3, 7, 11, 15, 16] }
+  }
+}

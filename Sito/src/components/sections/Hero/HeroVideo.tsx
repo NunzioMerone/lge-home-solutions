@@ -1,11 +1,11 @@
 import { desktopHeroVideoSource, responsiveHeroVideoSources } from '../../../config/hero'
 import { useHeroVideo } from '../../../hooks/useHeroVideo'
 import { assetUrl } from '../../../utils/assetUrl'
-import type { PageActivityProps } from '../../../types/navigation'
+import type { HeroVideoProps } from '../../../types/hero'
 import styles from './Hero.module.css'
 
-export function HeroVideo({ active }: PageActivityProps) {
-  const { videoRef, source, videoEnabled, onError } = useHeroVideo(active)
+export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
+  const { videoRef, source, videoEnabled, onError } = useHeroVideo(active, onTimeChange)
 
   return (
     <div className={styles.backdrop} aria-hidden="true">

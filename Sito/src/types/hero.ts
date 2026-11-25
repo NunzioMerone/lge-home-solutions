@@ -7,6 +7,17 @@ export interface HeroProductCardProps {
 
 export type HeroDescriptions = Record<PhotoId, string>
 
+export interface HeroVideoProps {
+  active: boolean
+  onTimeChange: (time: number) => void
+}
+
+export interface HeroHeadlineCue {
+  startFrame: number
+  phrase: string
+  revealFrames?: number
+}
+
 export interface HeroVideoSource {
   video: string
   efficientVideo?: string

@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import {
   desktopHeroVideoSource,
   heroVideoPlaybackRate,
   responsiveHeroVideoSources,
 } from '../config/hero'
+import type { HeroVideoProps } from '../types/hero'
 import { useMotion } from './useMotion'
 
 function subscribeToHeroSource(notify: () => void) {
@@ -21,7 +22,30 @@ function getHeroSource() {
   )
 }
 
-export function useHeroVideo(pageActive: boolean) {
+function observeVideoTime(video: HTMLVideoElement, onTimeChange: HeroVideoProps['onTimeChange']) {
+  const syncTime = () => onTimeChange(video.currentTime)
+  let frameRequest: number | undefined
+
+  if (typeof video.requestVideoFrameCallback === 'function') {
+    const syncFrame: VideoFrameRequestCallback = (_, { mediaTime }) => {
+      onTimeChange(mediaTime)
+      frameRequest = video.requestVideoFrameCallback(syncFrame)
+    }
+    frameRequest = video.requestVideoFrameCallback(syncFrame)
+  } else {
+    video.addEventListener('timeupdate', syncTime)
+  }
+  video.addEventListener('seeked', syncTime)
+  syncTime()
+
+  return () => {
+    if (frameRequest !== undefined) video.cancelVideoFrameCallback(frameRequest)
+    video.removeEventListener('timeupdate', syncTime)
+    video.removeEventListener('seeked', syncTime)
+  }
+}
+
+export function useHeroVideo(pageActive: boolean, onTimeChange: HeroVideoProps['onTimeChange']) {
   const source = useSyncExternalStore(
     subscribeToHeroSource,
     getHeroSource,
@@ -32,11 +56,16 @@ export function useHeroVideo(pageActive: boolean) {
   const [failedVideos, setFailedVideos] = useState<ReadonlySet<string>>(() => new Set())
   const videoEnabled = !reducedMotion && !failedVideos.has(source.video)
 
+  useLayoutEffect(() => {
+    onTimeChange(videoRef.current?.currentTime ?? 0)
+  }, [source.video, videoEnabled, onTimeChange])
+
   useEffect(() => {
     const video = videoRef.current
     if (!video || !videoEnabled || !pageActive) return
     video.defaultPlaybackRate = heroVideoPlaybackRate
     video.playbackRate = heroVideoPlaybackRate
+    const stopObservingTime = observeVideoTime(video, onTimeChange)
     let inView = false
     let active = true
     let playPending = false
@@ -70,9 +99,10 @@ export function useHeroVideo(pageActive: boolean) {
       active = false
       observer.disconnect()
       document.removeEventListener('visibilitychange', syncPlayback)
+      stopObservingTime()
       video.pause()
     }
-  }, [source.video, videoEnabled, pageActive])
+  }, [source.video, videoEnabled, pageActive, onTimeChange])
 
   return {
     videoRef,
