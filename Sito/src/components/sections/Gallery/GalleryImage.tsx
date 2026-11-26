@@ -6,6 +6,7 @@ export function GalleryImage({
   photo,
   alt,
   full = false,
+  includeFullWidth = false,
   sizes,
   loading,
   fetchPriority,
@@ -20,14 +21,14 @@ export function GalleryImage({
       </span>
     )
   }
+  const widths =
+    includeFullWidth && !photo.previewWidths.includes(photo.fullWidth)
+      ? [...photo.previewWidths, photo.fullWidth]
+      : photo.previewWidths
   return (
     <img
       src={source(full ? photo.fullWidth : photo.previewWidths[0])}
-      srcSet={
-        full
-          ? undefined
-          : photo.previewWidths.map((width) => `${source(width)} ${width}w`).join(', ')
-      }
+      srcSet={full ? undefined : widths.map((width) => `${source(width)} ${width}w`).join(', ')}
       sizes={
         full ? undefined : (sizes ?? '(min-width: 1200px) 480px, (min-width: 700px) 42vw, 74vw')
       }

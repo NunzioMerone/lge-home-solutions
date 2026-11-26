@@ -1,0 +1,221 @@
+.closing {
+  padding-block: clamp(30px, 4vw, 64px) var(--section-space);
+  background: var(--color-paper);
+}
+
+.layout {
+  --stack-gap: clamp(18px, 4vw, 28px);
+  --caption-height: 44px;
+
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: var(--stack-gap);
+}
+
+.layout::before {
+  position: absolute;
+  z-index: -1;
+  grid-area: 1 / 1 / 2 / -1;
+  inset: 0;
+  border-radius: var(--radius);
+  background: var(--color-sky);
+  content: '';
+}
+
+.layout[data-photo-shape]::before {
+  inset-block-end: calc(-1 * (var(--stack-gap) + clamp(64px, 25vw, 116px)));
+}
+
+.copy {
+  min-width: 0;
+  padding: clamp(22px, 5vw, 48px);
+}
+
+.layout[data-photo-shape] .copy {
+  padding-block-end: 12px;
+}
+
+.showroom {
+  margin: 0 0 var(--space-2);
+  color: var(--color-blue);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.title,
+.galleryTitle {
+  margin: 0;
+  font-size: clamp(2.15rem, 3.55vw, 3.4rem);
+  letter-spacing: -0.027em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.galleryTitle {
+  font-size: clamp(2.05rem, 3.24vw, 3.25rem);
+  text-wrap: wrap;
+}
+
+.galleryTitle em {
+  display: block;
+}
+
+.copy h2 em {
+  color: var(--color-blue);
+  font-weight: inherit;
+}
+
+.description {
+  max-width: 49ch;
+  margin: var(--space-2) 0 0;
+  color: var(--color-ink);
+  font-size: clamp(0.9rem, 1.1vw, 1.0625rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-block-start: var(--space-2);
+  color: var(--color-ink);
+  font-size: 0.8125rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) clamp(14px, 2vw, 28px);
+  margin-block-start: var(--space-3);
+}
+
+.contact,
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact {
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px clamp(14px, 2vw, 22px);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+
+.link,
+.address svg {
+  color: var(--color-blue);
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.link svg,
+.address svg {
+  flex: none;
+  width: 17px;
+  height: 17px;
+}
+
+.figure {
+  justify-self: center;
+  width: min(100% - var(--space-4), 740px);
+  min-width: 0;
+  margin: 0;
+}
+
+.layout[data-photo-shape='portrait'] .figure {
+  width: min(100% - var(--space-6), 340px);
+}
+
+.media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-greige);
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.media > [role='img'] {
+  display: grid;
+  min-height: 180px;
+  place-items: center;
+  padding: var(--space-2);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.media .placeholder {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 var(--space-1);
+  min-height: var(--caption-height);
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 900px) {
+  .layout[data-photo-shape] {
+    --photo-step: clamp(16px, 1.6vw, 26px);
+    --copy-inset: clamp(32px, 3.5vw, 56px);
+
+    grid-template-columns: minmax(0, 0.69fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 0;
+  }
+
+  .layout[data-photo-shape='portrait'] {
+    --photo-step: clamp(25px, 3.65vw, 56px);
+    --copy-inset: clamp(40px, 6.25vw, 100px);
+
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+
+  .layout[data-photo-shape]::before {
+    inset: var(--photo-step) 20% calc(var(--photo-step) + var(--caption-height)) 0;
+  }
+
+  .layout[data-photo-shape] .copy {
+    padding-block: calc(var(--photo-step) + var(--space-3))
+      calc(var(--photo-step) + var(--space-3) + var(--caption-height));
+    padding-inline: var(--copy-inset) clamp(18px, 2vw, 32px);
+  }
+
+  .layout[data-photo-shape='portrait'] .title {
+    font-size: clamp(2.65rem, 4.7vw, 4.5rem);
+  }
+
+  .layout[data-photo-shape] .figure {
+    width: 100%;
+  }
+}

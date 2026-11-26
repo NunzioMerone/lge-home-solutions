@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-25",
-  "revision": "Rev22",
-  "scope": "Montaggio della hero in cinque blocchi tematici per l’anteprima non indicizzata su GitHub Pages.",
-  "provenance": "references/hero-video-partners/edit-rev22.json",
+  "date": "2026-11-26",
+  "revision": "Rev23",
+  "scope": "Montaggio della hero con la chiusura VEKA e la frase del benessere sincronizzata per l’anteprima non indicizzata su GitHub Pages.",
+  "provenance": "references/hero-video-partners/edit-rev23.json",
   "partners": [
     "VEKA",
     "VELUX",
@@ -13,19 +13,19 @@
     "status": "public-preview",
     "authorized": true
   },
-  "frames": 3012,
+  "frames": 3312,
   "frame_rate": 60,
-  "duration_file": 50.2,
-  "duration_website": 50.2,
+  "duration_file": 55.2,
+  "duration_website": 55.2,
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
   "assets": [
     {
       "format": "desktop",
       "kind": "video",
-      "target": "public/media/hero/hero-desktop-rev22.mp4",
-      "bytes": 40410911,
-      "sha256": "df6a5377dd6b9af29ae0205071494bbd74945a45ce68891f510ef7771d5350cc",
+      "target": "public/media/hero/hero-desktop-rev23.mp4",
+      "bytes": 43952727,
+      "sha256": "a437bfa3f546f1de36bbfaabe06bf31d055b5f933f45df1ffceb1ebfbb9d5f4e",
       "width": 1920,
       "height": 1080,
       "codec": "h264"
@@ -33,7 +33,7 @@
     {
       "format": "desktop",
       "kind": "poster",
-      "target": "public/media/hero/hero-desktop-rev22-poster.jpg",
+      "target": "public/media/hero/hero-desktop-rev23-poster.jpg",
       "bytes": 217784,
       "sha256": "5b21be8e54cd4048aa9f074fdea76aaa17853af0a5b76d0a237ee15778f72966",
       "width": 1920,
@@ -42,9 +42,9 @@
     {
       "format": "wide-compact",
       "kind": "video",
-      "target": "public/media/hero/hero-wide-compact-rev22.mp4",
-      "bytes": 16001380,
-      "sha256": "b15eaa0e7cf4cffcc9577af6629e6db99e987933bf2488538f49c84ff9aecaf2",
+      "target": "public/media/hero/hero-wide-compact-rev23.mp4",
+      "bytes": 17250259,
+      "sha256": "72b0a19c551234069b3ccf000e1156377550a3313c4140cea41bbe162d995d3b",
       "width": 1280,
       "height": 720,
       "codec": "h264"
@@ -52,7 +52,7 @@
     {
       "format": "wide-compact",
       "kind": "poster",
-      "target": "public/media/hero/hero-wide-compact-rev22-poster.jpg",
+      "target": "public/media/hero/hero-wide-compact-rev23-poster.jpg",
       "bytes": 115667,
       "sha256": "cd0c79f744a89fff156479db5c1e54ef27744ff656b959bfadd9197952e28035",
       "width": 1280,
@@ -61,9 +61,9 @@
     {
       "format": "tablet",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-rev22.mp4",
-      "bytes": 21155673,
-      "sha256": "627614f7b6afe7f42095f2d7f67b3ef3ad87c511eb3d8e9c19aa14705a9ecddf",
+      "target": "public/media/hero/hero-tablet-rev23.mp4",
+      "bytes": 23002822,
+      "sha256": "61e963eb2c8629ac9fd0dd831ca1246e1625e93873b51df041d03dcbae10f852",
       "width": 1280,
       "height": 960,
       "codec": "h264"
@@ -71,7 +71,7 @@
     {
       "format": "tablet",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-rev22-poster.jpg",
+      "target": "public/media/hero/hero-tablet-rev23-poster.jpg",
       "bytes": 148911,
       "sha256": "0360e1f4bcfc116426e59a463d0825a762e2610c0ae1b0c83cfa31adb7ed0993",
       "width": 1280,
@@ -80,9 +80,9 @@
     {
       "format": "tablet-portrait",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-portrait-rev22.mp4",
-      "bytes": 20948132,
-      "sha256": "969c1760852077688c8414502d0e95e6d9b87210c37124bbb6429ea9fdbc3706",
+      "target": "public/media/hero/hero-tablet-portrait-rev23.mp4",
+      "bytes": 22787914,
+      "sha256": "b4c6116cd62646ab4a978b18cdea07497b69e5be93f5a6b3c257bdde172d2165",
       "width": 960,
       "height": 1280,
       "codec": "h264"
@@ -90,7 +90,7 @@
     {
       "format": "tablet-portrait",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-portrait-rev22-poster.jpg",
+      "target": "public/media/hero/hero-tablet-portrait-rev23-poster.jpg",
       "bytes": 135299,
       "sha256": "653cb17d06b3acfb72d462af3f0f5df5b38ed7bd9ae4a4ba5f74d9df458228a6",
       "width": 960,
@@ -99,9 +99,9 @@
     {
       "format": "mobile",
       "kind": "video",
-      "target": "public/media/hero/hero-mobile-rev22.mp4",
-      "bytes": 13286231,
-      "sha256": "a206f7b3991ecdb27c6d690d500ba4e5d373bff15f1aad732899184ad6b77dc1",
+      "target": "public/media/hero/hero-mobile-rev23.mp4",
+      "bytes": 14586579,
+      "sha256": "c84b76b794a26a58f9621f769c2071e8c6a437330f48ecf057e7ac4a85e70369",
       "width": 720,
       "height": 1280,
       "codec": "h264"
@@ -109,7 +109,7 @@
     {
       "format": "mobile",
       "kind": "poster",
-      "target": "public/media/hero/hero-mobile-rev22-poster.jpg",
+      "target": "public/media/hero/hero-mobile-rev23-poster.jpg",
       "bytes": 94893,
       "sha256": "a66927d396aeb3e773c7c87b821b6c3574dff6c8476b2c4bc97819568b010ff2",
       "width": 720,
@@ -118,9 +118,9 @@
     {
       "format": "mobile",
       "kind": "video-efficient",
-      "target": "public/media/hero/hero-mobile-rev22-hevc.mp4",
-      "bytes": 8251578,
-      "sha256": "b9a7890356a9a04a677eccff5404b939a52c5523d197ae7ca4d17eba223dae6d",
+      "target": "public/media/hero/hero-mobile-rev23-hevc.mp4",
+      "bytes": 8979390,
+      "sha256": "825955fd44871dd16b558ebd2ec2a2c87c4d4fcf36203375854a334bca517d36",
       "width": 720,
       "height": 1280,
       "codec": "hevc"

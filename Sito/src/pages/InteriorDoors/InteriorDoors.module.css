@@ -2,13 +2,6 @@
   background: var(--color-paper);
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-1) var(--space-3);
-}
-
 .button,
 .inlineLink {
   display: inline-flex;
@@ -260,10 +253,6 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.body + .actions {
-  margin-top: var(--space-3);
 }
 
 @media (min-width: 740px) {

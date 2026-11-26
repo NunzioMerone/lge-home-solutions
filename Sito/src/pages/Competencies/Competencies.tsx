@@ -3,14 +3,12 @@ import { Link, useLocation } from 'react-router-dom'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
 import { Icon } from '../../components/ui/Icon'
-import { contacts } from '../../config/contacts'
+import { WhatsAppContactLink } from '../../components/ui/WhatsAppContactLink'
 import { competencies, recognitions } from '../../data/competencies'
 import { competencyDocumentGroups } from '../../data/competencyDocuments'
 import { competencyDetails } from '../../data/competencyDetails'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useCompetenciesReveal } from '../../hooks/useCompetenciesReveal'
-import { getContactLinks } from '../../utils/contactLinks'
-import { assetUrl } from '../../utils/assetUrl'
 import type { DocumentSelection } from '../../types/competencyDocuments'
 import { DocumentPreview } from './DocumentPreview'
 import { DocumentViewer } from './DocumentViewer'
@@ -19,7 +17,6 @@ import styles from './Competencies.module.css'
 export function Competencies() {
   const { hash } = useLocation()
   const [selection, setSelection] = useState<DocumentSelection | null>(null)
-  const contactLinks = getContactLinks(contacts)
   const contentRef = useCompetenciesReveal()
   useAnchorNavigation()
 
@@ -166,18 +163,7 @@ export function Competencies() {
             Parliamo del tuo <em>progetto</em>
           </h2>
           <p>Prendi un appuntamento: troviamo insieme la soluzione per i tuoi spazi.</p>
-          {contactLinks.whatsapp && (
-            <a
-              className={styles.contactButton}
-              href={contactLinks.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Scrivici su WhatsApp (nuova scheda)"
-            >
-              <img src={assetUrl('icons/whatsapp-white.svg')} width="22" height="22" alt="" />
-              Scrivici
-            </a>
-          )}
+          <WhatsAppContactLink className={styles.contactButton} />
         </section>
       </main>
       <Footer />

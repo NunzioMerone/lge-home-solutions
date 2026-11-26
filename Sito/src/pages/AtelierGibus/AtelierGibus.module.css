@@ -2,45 +2,14 @@
   background: var(--color-paper);
 }
 
-.heroBadge {
+.heroLogo {
   position: absolute;
   z-index: 1;
-  inset-inline-start: max(12px, 3.5%);
-  inset-block-end: max(12px, 7.5%);
-  display: grid;
-  grid-template-columns: 2px minmax(0, 1fr);
-  gap: 2px clamp(10px, 1.1vw, 18px);
-  max-inline-size: calc(100% - 24px);
-  margin: 0;
-  padding: clamp(10px, 1.2vw, 20px) clamp(14px, 1.6vw, 26px);
-  border: 1px solid rgb(255 255 255 / 88%);
-  border-radius: calc(var(--radius) * 1.5);
-  background: rgb(252 252 251 / 88%);
-  color: var(--color-heading);
-  box-shadow: 0 6px 22px rgb(37 42 48 / 18%);
-  font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.7vw, 2.5rem);
-  line-height: 1;
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-}
-
-.heroBadge::before {
-  grid-row: span 2;
-  margin-block: 2px;
-  border-radius: 1px;
-  background: var(--color-blue);
-  content: '';
-}
-
-.heroBadge strong {
-  font-weight: 600;
-}
-
-.heroBadge em {
-  grid-column: 2;
-  color: var(--color-blue);
-  font-size: 0.75em;
+  inset-inline-end: max(14px, 4%);
+  inset-block-end: max(14px, 5%);
+  width: clamp(148px, 16vw, 216px);
+  height: auto;
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 36%));
 }
 
 .actions {
@@ -86,7 +55,6 @@
 
 .button svg,
 .inlineLink svg,
-.address svg,
 .catalogList svg {
   width: 17px;
   height: 17px;
@@ -233,21 +201,6 @@
 
 .catalogToggle[aria-expanded='true'] svg {
   transform: rotate(-90deg);
-}
-
-.address {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 16px;
-  color: var(--color-heading);
-  font-size: 0.8125rem;
-  font-style: normal;
-  line-height: 1.6;
-}
-
-.address svg {
-  color: var(--color-blue);
 }
 
 .photoButton {

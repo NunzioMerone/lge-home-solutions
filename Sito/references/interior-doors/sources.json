@@ -1,7 +1,22 @@
 {
-  "scope": "Tre fotografie di catalogo I-PEA nella pagina Porte interne. L’utente ha confermato il permesso per la pubblicazione l’8 novembre 2026. Le varianti WebP sono in public/img/interior-doors/.",
+  "scope": "Immagini I-PEA per il confronto delle aperture. L’utente ha confermato la pubblicazione di Turtle, Float e RM-INC3L l’8 novembre 2026. EV-PR ed EV-UR Essential sono riferimenti ufficiali per l’anteprima del 26 novembre 2026. Le varianti WebP sono in public/img/interior-doors/.",
   "catalogs": "https://www.ipeaportedesign.com/scaricailcatalogo",
   "photos": {
+    "ev-pr": {
+      "catalog": "https://heyzine.com/flip-book/36ea2c97b4.html#page/23",
+      "pdf": "https://cdnm.heyzine.com/flip-book/pdf/36ea2c97b419a2e6a759e78e8af371f2c617142b-2.pdf",
+      "page": 23,
+      "model": "Evoluta EV-PR, laccato Bianco I-PEA",
+      "status": "official-reference"
+    },
+    "ev-ur-essential": {
+      "catalog": "https://heyzine.com/flip-book/36ea2c97b4.html#page/29",
+      "pdf": "https://cdnm.heyzine.com/flip-book/pdf/36ea2c97b419a2e6a759e78e8af371f2c617142b-2.pdf",
+      "page": 29,
+      "model": "Evoluta EV-UR, laccato Tortora, scorrevole Essential",
+      "systemReference": "https://www.scrigno.com/it/prodotti/essential/",
+      "status": "official-reference"
+    },
     "turtle": {
       "catalog": "https://heyzine.com/flip-book/21206e5c48.html#page/9",
       "pdf": "https://cdnm.heyzine.com/flip-book/pdf/21206e5c4892cd760e29c38dfe5037d809c646d5-4.pdf",

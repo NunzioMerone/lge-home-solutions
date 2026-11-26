@@ -1,18 +1,15 @@
 import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
+import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
-import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { securityDoorChecks } from '../../data/securityDoors'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
-import { assetUrl } from '../../utils/assetUrl'
-import { getContactLinks } from '../../utils/contactLinks'
 import { DoorCatalogs } from './DoorCatalogs'
 import { DoorDesignStudio } from './DoorDesignStudio'
 import styles from './SecurityDoors.module.css'
@@ -20,7 +17,6 @@ import styles from './SecurityDoors.module.css'
 const studioId = 'configuratore-tehni'
 const catalogsId = 'cataloghi-tehni'
 const featuredWork = homeGallery.find((photo) => photo.id === 'home-ingresso-grigio')
-const { whatsapp } = getContactLinks(contacts)
 
 export function SecurityDoors({ product }: ProductDetailProps) {
   const studio = useSectionReveal()
@@ -117,43 +113,20 @@ export function SecurityDoors({ product }: ProductDetailProps) {
           </div>
         </section>
 
-        <ShowroomClosing
+        <ProjectClosing
           titleId="security-showroom-title"
           photo={featuredWork}
-          worksPath={`${worksPage.path}?categoria=porte-e-sicurezza#works-content`}
-          worksLabel="Vedi le realizzazioni LGE"
-        >
-          <h2 id="security-showroom-title">
-            Una porta <em>pensata per casa tua.</em>
-          </h2>
-          <p className={styles.body}>
-            Mostraci la tua configurazione o una foto dell’ingresso. Ti aiutiamo a confrontare
-            finiture, aperture e requisiti di sicurezza prima del rilievo.
-          </p>
-          <div className={styles.actions}>
-            {whatsapp && (
-              <a
-                className={styles.button}
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp (nuova scheda)"
-              >
-                <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
-                Scrivici
-              </a>
-            )}
-            <a
-              className={styles.inlineLink}
-              href={contacts.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Indicazioni <Icon name="external" />
-              <span className="sr-only"> (nuova scheda)</span>
-            </a>
-          </div>
-        </ShowroomClosing>
+          showroom={{
+            worksPath: `${worksPage.path}?categoria=porte-e-sicurezza#works-content`,
+            worksLabel: 'Vedi le realizzazioni LGE',
+          }}
+          title={
+            <>
+              Una porta <em>pensata per casa tua.</em>
+            </>
+          }
+          description="Mostraci la tua configurazione o una foto dell’ingresso. Ti aiutiamo a confrontare finiture, aperture e requisiti di sicurezza prima del rilievo."
+        />
       </main>
       <Footer />
     </div>

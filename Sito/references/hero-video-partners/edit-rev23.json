@@ -1,0 +1,38 @@
+{
+  "baseEdit": "edit-rev21.json",
+  "revision": "rev23",
+  "outputFrameRate": 60,
+  "durationFrames": 3312,
+  "loopStartFrame": 3276,
+  "additionalShots": [
+    {
+      "source": "veka",
+      "start": 56.68,
+      "end": 59.76,
+      "incomingFadeFrames": 12,
+      "description": "Chiusura della vetrata scorrevole dalla maniglia",
+      "centerX": { "mobile": 0.59, "tablet-portrait": 0.58, "tablet": 0.55 }
+    },
+    {
+      "source": "veka",
+      "start": 71.48,
+      "end": 74.12,
+      "incomingFadeFrames": 6,
+      "description": "Vetrata chiusa e luce sul parquet, vista dall’interno",
+      "centerX": { "mobile": 0.56, "tablet-portrait": 0.55, "tablet": 0.53 }
+    }
+  ],
+  "chapters": {
+    "light": { "startFrame": 0, "shots": [1, 6, 4, 13, 2, 8] },
+    "comfort": {
+      "startFrame": 1274,
+      "shots": [17, 18, 10],
+      "headlineOffsetFrames": 31,
+      "revealFrames": 36,
+      "continuation": { "delayFrames": 107, "revealFrames": 29 }
+    },
+    "protection": { "startFrame": 1722, "shots": [5, 14] },
+    "privacy": { "startFrame": 2040, "shots": [9, 12] },
+    "outdoor": { "startFrame": 2360, "shots": [3, 7, 11, 15, 16] }
+  }
+}

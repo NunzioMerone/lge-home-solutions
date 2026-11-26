@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
+import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
-import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { windowCollection } from '../../data/infissi'
@@ -12,12 +11,10 @@ import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
-import { getContactLinks } from '../../utils/contactLinks'
 import { WindowCollection } from './WindowCollection'
 import styles from './ProductDetail.module.css'
 
 const featuredWork = homeGallery.find((photo) => photo.id === 'home-vetrate-angolo')
-const { whatsapp } = getContactLinks(contacts)
 
 export function ProductDetail({ product }: ProductDetailProps) {
   const configurator = useSectionReveal()
@@ -102,43 +99,20 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </div>
         </section>
 
-        <ShowroomClosing
+        <ProjectClosing
           titleId="window-showroom-title"
           photo={featuredWork}
-          worksPath={`${worksPage.path}?categoria=infissi#works-content`}
-          worksLabel="Vedi altri lavori"
-        >
-          <h2 id="window-showroom-title">
-            La scelta giusta si vede <em>da vicino.</em>
-          </h2>
-          <p className={styles.body}>
-            Ogni casa ha il suo stile e le sue esigenze. Ti aspettiamo in showroom per scoprire
-            insieme materiali, profili e finiture, confrontare le diverse soluzioni e trovare quella
-            che meglio si adatta ai tuoi spazi.
-          </p>
-          <div className={styles.actions}>
-            {whatsapp && (
-              <a
-                className={styles.button}
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp (nuova scheda)"
-              >
-                <Icon name="whatsapp" /> Scrivici
-              </a>
-            )}
-            <a
-              className={styles.inlineLink}
-              href={contacts.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Indicazioni <Icon name="external" />
-              <span className="sr-only"> (nuova scheda)</span>
-            </a>
-          </div>
-        </ShowroomClosing>
+          showroom={{
+            worksPath: `${worksPage.path}?categoria=infissi#works-content`,
+            worksLabel: 'Vedi altri lavori',
+          }}
+          title={
+            <>
+              La scelta giusta si vede <em>da vicino.</em>
+            </>
+          }
+          description="Ogni casa ha il suo stile e le sue esigenze. Ti aspettiamo in showroom per scoprire insieme materiali, profili e finiture, confrontare le diverse soluzioni e trovare quella che meglio si adatta ai tuoi spazi."
+        />
       </main>
       <Footer />
     </div>

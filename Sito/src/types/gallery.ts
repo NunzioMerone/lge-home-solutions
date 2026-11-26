@@ -28,12 +28,16 @@ export interface GalleryLightboxState {
   trigger: HTMLButtonElement
 }
 
-export interface ShowroomClosingProps {
+export interface ProjectClosingProps {
   titleId: string
+  title: ReactNode
+  description: string
   photo: GalleryPhoto | undefined
-  worksPath: string
-  worksLabel: string
-  children: ReactNode
+  showroom?: {
+    worksPath: string
+    worksLabel: string
+    showAddress?: boolean
+  }
 }
 
 export interface GalleryCarouselProps {
@@ -87,6 +91,7 @@ export interface GalleryImageProps {
   photo: GalleryPhoto
   alt?: string
   full?: boolean
+  includeFullWidth?: boolean
   sizes?: string
   loading?: 'eager' | 'lazy'
   fetchPriority?: 'high' | 'low' | 'auto'

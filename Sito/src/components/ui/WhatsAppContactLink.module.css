@@ -1,0 +1,13 @@
+.button {
+  background-color: var(--color-heading);
+  color: var(--color-white);
+  transition: background-color var(--transition);
+}
+
+.button:hover {
+  background-color: var(--color-ink);
+}
+
+.button img {
+  flex: none;
+}

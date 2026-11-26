@@ -24,6 +24,16 @@ export function getHeroHeadlineAtTime(time: number) {
   const reveal =
     current.startFrame === 0 ? 1 : easeProgress((frame - current.startFrame) / revealFrames)
   const opacity = next ? easeProgress((next.startFrame - frame) / heroHeadlineMotion.exitFrames) : 1
+  const continuation = current.continuation
 
-  return { phrase: current.phrase, opacity, maskPosition: (1 - reveal) * 100 }
+  return {
+    phrase: current.phrase,
+    opacity,
+    maskPosition: continuation ? 0 : (1 - reveal) * 100,
+    leadOpacity: continuation ? reveal : 1,
+    continuation: continuation && {
+      phrase: continuation.phrase,
+      opacity: easeProgress((frame - continuation.startFrame) / continuation.revealFrames),
+    },
+  }
 }

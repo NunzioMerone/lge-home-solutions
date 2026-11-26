@@ -1,24 +1,20 @@
 import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
+import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
-import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { ipeaCatalogs } from '../../data/interiorDoors'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
-import { assetUrl } from '../../utils/assetUrl'
-import { getContactLinks } from '../../utils/contactLinks'
 import { InteriorDoorOpenings } from './InteriorDoorOpenings'
 import styles from './InteriorDoors.module.css'
 
 const catalogsId = 'cataloghi-porte-interne'
 const featuredWork = homeGallery.find((photo) => photo.id === 'home-porta-filo')
-const { whatsapp } = getContactLinks(contacts)
 
 export function InteriorDoors({ product }: ProductDetailProps) {
   const catalogs = useSectionReveal()
@@ -89,43 +85,20 @@ export function InteriorDoors({ product }: ProductDetailProps) {
 
         <InteriorDoorOpenings />
 
-        <ShowroomClosing
+        <ProjectClosing
           titleId="interior-showroom-title"
           photo={featuredWork}
-          worksPath={`${worksPage.path}?categoria=porte-interne#works-content`}
-          worksLabel="Vedi altri lavori"
-        >
-          <h2 id="interior-showroom-title">
-            Scegliamola <em>insieme.</em>
-          </h2>
-          <p className={styles.body}>
-            Portaci una foto della stanza o raccontaci come la vivi. Possiamo confrontare finiture e
-            aperture e fissare un appuntamento in showroom.
-          </p>
-          <div className={styles.actions}>
-            {whatsapp && (
-              <a
-                className={styles.button}
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp (nuova scheda)"
-              >
-                <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
-                Scrivici
-              </a>
-            )}
-            <a
-              className={styles.inlineLink}
-              href={contacts.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Indicazioni <Icon name="external" />
-              <span className="sr-only"> (nuova scheda)</span>
-            </a>
-          </div>
-        </ShowroomClosing>
+          showroom={{
+            worksPath: `${worksPage.path}?categoria=porte-interne#works-content`,
+            worksLabel: 'Vedi altri lavori',
+          }}
+          title={
+            <>
+              Scegliamola <em>insieme.</em>
+            </>
+          }
+          description="Portaci una foto della stanza o raccontaci come la vivi. Possiamo confrontare finiture e aperture e fissare un appuntamento in showroom."
+        />
       </main>
       <Footer />
     </div>

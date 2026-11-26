@@ -4,6 +4,7 @@ import type { PageActivityProps } from '../../../types/navigation'
 import { getContactLinks } from '../../../utils/contactLinks'
 import { assetUrl } from '../../../utils/assetUrl'
 import { Icon } from '../../ui/Icon'
+import { WhatsAppContactLink } from '../../ui/WhatsAppContactLink'
 import { LocationMap } from './LocationMap'
 import { ShowroomGallery } from './ShowroomGallery'
 import styles from './Contacts.module.css'
@@ -32,27 +33,13 @@ export function Contacts({ active }: PageActivityProps) {
           </header>
           <ShowroomGallery active={active} />
           <div className={styles.appointment} data-reveal>
-            {links.whatsapp && (
-              <a
-                className={styles.whatsapp}
-                href={links.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp (nuova scheda)"
-              >
-                <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
-                Scrivici
-              </a>
-            )}
+            <WhatsAppContactLink className={styles.whatsapp} />
             <div className={styles.appointmentNote}>
               <Icon name="calendar" />
-              <div>
-                <h3>Prenota una visita</h3>
-                <p>
-                  Scrivici su WhatsApp per fissare un appuntamento in showroom o per chiederci
-                  informazioni.
-                </p>
-              </div>
+              <p>
+                Scrivici su WhatsApp per fissare un appuntamento in showroom o per chiederci
+                informazioni.
+              </p>
             </div>
             <div className={styles.socials}>
               <p>Seguici su</p>
@@ -64,11 +51,16 @@ export function Contacts({ active }: PageActivityProps) {
                   rel="noopener noreferrer"
                   aria-label="Instagram di LGE Home Solutions (nuova scheda)"
                 >
-                  <Icon name="instagram" />
+                  <img
+                    src={assetUrl('icons/instagram-gradient.webp')}
+                    alt=""
+                    width="21"
+                    height="21"
+                  />
                 </a>
               )}
               <span className={styles.socialIcon} role="img" aria-label="Facebook">
-                <Icon name="facebook" />
+                <img src={assetUrl('icons/facebook-blue.webp')} alt="" width="21" height="21" />
               </span>
             </div>
           </div>

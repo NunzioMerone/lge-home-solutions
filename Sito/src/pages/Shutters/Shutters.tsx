@@ -1,25 +1,21 @@
 import { Link } from 'react-router-dom'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
-import { ShowroomClosing } from '../../components/sections/Gallery/ShowroomClosing'
+import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
-import { contacts } from '../../config/contacts'
 import { worksPage } from '../../config/works'
 import { homeGallery } from '../../data/homeGallery'
 import { shutterCatalogs } from '../../data/shutters'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
-import { assetUrl } from '../../utils/assetUrl'
-import { getContactLinks } from '../../utils/contactLinks'
 import { ShutterShowcase } from './ShutterShowcase'
 import styles from './Shutters.module.css'
 
 const solutionsId = 'soluzioni-oscuranti'
 const catalogsId = 'cataloghi-oscuranti'
 const featuredWork = homeGallery.find((photo) => photo.id === 'home-oscuranti-mare')
-const { whatsapp } = getContactLinks(contacts)
 
 export function Shutters({ product }: ProductDetailProps) {
   const solutions = useSectionReveal()
@@ -114,43 +110,20 @@ export function Shutters({ product }: ProductDetailProps) {
           </div>
         </section>
 
-        <ShowroomClosing
+        <ProjectClosing
           titleId="shutters-showroom-title"
           photo={featuredWork}
-          worksPath={`${worksPage.path}?categoria=oscuranti#works-content`}
-          worksLabel="Vedi i nostri lavori"
-        >
-          <h2 id="shutters-showroom-title">
-            Partiamo dalla <em>tua finestra.</em>
-          </h2>
-          <p className={styles.body}>
-            Mandaci una foto e, se le hai, le misure del vano. Vediamo insieme quale schermatura si
-            adatta alla tua casa e cosa va verificato prima della posa.
-          </p>
-          <div className={styles.actions}>
-            {whatsapp && (
-              <a
-                className={styles.button}
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp (nuova scheda)"
-              >
-                <img src={assetUrl('icons/whatsapp-white.svg')} alt="" width="22" height="22" />
-                Scrivici
-              </a>
-            )}
-            <a
-              className={styles.inlineLink}
-              href={contacts.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Indicazioni <Icon name="external" />
-              <span className="sr-only"> (nuova scheda)</span>
-            </a>
-          </div>
-        </ShowroomClosing>
+          showroom={{
+            worksPath: `${worksPage.path}?categoria=oscuranti#works-content`,
+            worksLabel: 'Vedi i nostri lavori',
+          }}
+          title={
+            <>
+              Partiamo dalla <em>tua finestra.</em>
+            </>
+          }
+          description="Mandaci una foto e, se le hai, le misure del vano. Vediamo insieme quale schermatura si adatta alla tua casa e cosa va verificato prima della posa."
+        />
       </main>
       <Footer />
     </div>

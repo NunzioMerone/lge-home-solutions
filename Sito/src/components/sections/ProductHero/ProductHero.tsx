@@ -44,6 +44,7 @@ export function ProductHero({
       <div ref={image} className={styles.image} data-photo={product.id}>
         {preview && (
           <img
+            className={styles.photo}
             src={preview}
             width={asset.width}
             height={asset.height}
@@ -63,7 +64,7 @@ export function ProductHero({
               ? '(min-width: 1200px) 50vw, (min-width: 900px) and (orientation: landscape) 50vw, 100vw'
               : '(min-width: 900px) 55vw, 100vw'
           }
-          className={preview ? styles.upgrade : undefined}
+          className={preview ? `${styles.photo} ${styles.upgrade}` : styles.photo}
           critical
           decorative={Boolean(preview)}
           onSettled={(ready) => setSettledPhoto({ id: product.id, ready })}

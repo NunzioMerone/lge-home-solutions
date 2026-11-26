@@ -2,6 +2,14 @@
   "scope": "Quattro fotografie ufficiali nella sezione Sole, ombra e riparo. L’utente ha confermato il permesso per la pubblicazione l’8 novembre 2026. Le varianti WebP sono in public/img/atelier-gibus/.",
   "partnerMaterials": "https://www.gibus.com/it/diventa-partner/",
   "catalogs": "https://www.gibus.com/it/cataloghi/",
+  "heroLogo": {
+    "checkedAt": "2026-11-26",
+    "page": "https://www.pergolesardegna.it/contatti.html",
+    "original": "https://www.pergolesardegna.it/images/logo_atelier_gibus_sunteck_small.png",
+    "asset": "public/img/partners/gibus-atelier.webp",
+    "processing": "Marchio rosso e bianco esposto dall’Atelier Gibus Sunteck. Ritaglio dei soli margini trasparenti e conversione WebP lossless.",
+    "status": "official-reference"
+  },
   "photos": {
     "pergole-bioclimatiche": {
       "page": "https://www.gibus.com/it/prodotti/pergole-bioclimatiche/",

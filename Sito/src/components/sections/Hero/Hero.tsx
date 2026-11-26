@@ -1,5 +1,5 @@
 import { useCallback, useRef } from 'react'
-import { heroCopy } from '../../../data/hero'
+import { heroCopy, heroHeadlineChapters } from '../../../data/hero'
 import { useHeroEntrance } from '../../../hooks/useHeroEntrance'
 import { getHeroHeadlineAtTime } from '../../../utils/heroHeadline'
 import { HeroVideo } from './HeroVideo'
@@ -9,15 +9,25 @@ import styles from './Hero.module.css'
 export function Hero({ active }: PageActivityProps) {
   const rootRef = useHeroEntrance()
   const headlineRef = useRef<HTMLSpanElement>(null)
+  const leadRef = useRef<HTMLSpanElement>(null)
+  const continuationRef = useRef<HTMLSpanElement>(null)
   const syncHeadline = useCallback((time: number) => {
     const headline = headlineRef.current
-    if (!headline) return
-    const { phrase, opacity, maskPosition } = getHeroHeadlineAtTime(time)
+    const lead = leadRef.current
+    const secondLine = continuationRef.current
+    if (!headline || !lead || !secondLine) return
+    const { phrase, opacity, maskPosition, leadOpacity, continuation } = getHeroHeadlineAtTime(time)
     const mask = `${maskPosition}% 0%`
     const alpha = String(opacity)
+    const leadAlpha = String(leadOpacity)
+    const secondPhrase = continuation?.phrase ?? ''
+    const secondAlpha = String(continuation?.opacity ?? 0)
 
-    if (headline.textContent !== phrase) headline.textContent = phrase
-    if (headline.style.maskPosition !== mask) headline.style.maskPosition = mask
+    if (lead.textContent !== phrase) lead.textContent = phrase
+    if (lead.style.maskPosition !== mask) lead.style.maskPosition = mask
+    if (lead.style.opacity !== leadAlpha) lead.style.opacity = leadAlpha
+    if (secondLine.textContent !== secondPhrase) secondLine.textContent = secondPhrase
+    if (secondLine.style.opacity !== secondAlpha) secondLine.style.opacity = secondAlpha
     if (headline.style.opacity !== alpha) headline.style.opacity = alpha
   }, [])
 
@@ -38,13 +48,23 @@ export function Hero({ active }: PageActivityProps) {
                 {heroCopy.prefix}
               </span>
               <span className={styles.suffixSlot} data-hero-suffix>
-                {Object.values(heroCopy.phrases).map((phrase) => (
-                  <span className={styles.reserve} key={phrase}>
+                {heroHeadlineChapters.map(({ startFrame, phrase, continuation }) => (
+                  <span className={styles.reserve} key={startFrame}>
                     {phrase}
+                    {continuation && (
+                      <span className={styles.continuation}>{continuation.phrase}</span>
+                    )}
                   </span>
                 ))}
-                <span ref={headlineRef} className={styles.live} data-hero-text>
-                  {heroCopy.phrases.light}
+                <span ref={headlineRef} className={styles.live}>
+                  <span ref={leadRef} className={styles.lead} data-hero-text>
+                    {heroCopy.phrases.light}
+                  </span>
+                  <span
+                    ref={continuationRef}
+                    className={styles.continuation}
+                    data-hero-continuation
+                  />
                 </span>
               </span>
             </span>

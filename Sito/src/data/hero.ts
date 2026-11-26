@@ -1,10 +1,13 @@
 import { heroVideoEdit } from '../config/hero'
 import type { HeroDescriptions, HeroHeadlineCue } from '../types/hero'
 
+const comfortLead = 'lascia fuori il rumore'
+const comfortContinuation = 'e dentro il benessere.'
+
 const phrases = {
   light: 'illumina i tuoi spazi',
   protection: 'protegge la tua casa',
-  comfort: 'lascia fuori il rumore e dentro il benessere.',
+  comfort: `${comfortLead} ${comfortContinuation}`,
   privacy: 'rispetta la tua privacy',
   outdoor: 'crea nuovi spazi da vivere',
 } as const
@@ -16,13 +19,32 @@ export const heroCopy = {
 }
 
 const { chapters, loopStartFrame, durationFrames } = heroVideoEdit
-const chapterCues = (['comfort', 'protection', 'privacy', 'outdoor'] as const)
-  .map((id) => ({ startFrame: chapters[id].startFrame, phrase: phrases[id] }))
-  .sort((left, right) => left.startFrame - right.startFrame)
+const { comfort } = chapters
+
+const chapterCues: HeroHeadlineCue[] = [
+  ...(['protection', 'privacy', 'outdoor'] as const).map((id) => ({
+    startFrame: chapters[id].startFrame,
+    phrase: phrases[id],
+  })),
+  {
+    startFrame: comfort.startFrame,
+    phrase: comfortLead,
+    revealFrames: comfort.revealFrames,
+    continuation: {
+      phrase: comfortContinuation,
+      startFrame: comfort.startFrame + comfort.continuation.delayFrames,
+      revealFrames: comfort.continuation.revealFrames,
+    },
+  },
+]
+
+export const heroHeadlineChapters: readonly [HeroHeadlineCue, ...HeroHeadlineCue[]] = [
+  { startFrame: chapters.light.startFrame, phrase: phrases.light },
+  ...chapterCues.sort((left, right) => left.startFrame - right.startFrame),
+]
 
 export const heroHeadlineCues = [
-  { startFrame: chapters.light.startFrame, phrase: phrases.light },
-  ...chapterCues,
+  ...heroHeadlineChapters,
   {
     startFrame: loopStartFrame,
     phrase: phrases.light,

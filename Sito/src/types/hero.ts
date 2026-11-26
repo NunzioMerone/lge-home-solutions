@@ -16,6 +16,11 @@ export interface HeroHeadlineCue {
   startFrame: number
   phrase: string
   revealFrames?: number
+  continuation?: {
+    phrase: string
+    startFrame: number
+    revealFrames: number
+  }
 }
 
 export interface HeroVideoSource {

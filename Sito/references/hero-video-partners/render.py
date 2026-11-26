@@ -43,11 +43,11 @@ def load_edit(path: Path) -> dict:
 
     base = json.loads(path.with_name(recipe["baseEdit"]).read_text())
     chapters = recipe["chapters"]
-    source_shots = base["shots"]
-    # Shot numbers in chapter recipes are one-based references to the base edit.
+    source_shots = base["shots"] + recipe.get("additionalShots", [])
+    # Shot numbers refer to the combined source list, starting at one.
     order = [number for chapter in chapters.values() for number in chapter["shots"]]
     if sorted(order) != list(range(1, len(source_shots) + 1)):
-        raise ValueError("The chapter order must use each original shot once.")
+        raise ValueError("The chapter order must use each source shot once.")
 
     edit = {**base, "revision": recipe["revision"], "shots": [source_shots[i - 1] for i in order]}
     intervals = timeline(edit)
@@ -55,10 +55,18 @@ def load_edit(path: Path) -> dict:
     for name, chapter in chapters.items():
         if not chapter["shots"]:
             raise ValueError(f"Chapter {name!r} has no shots.")
-        # The headline changes halfway through the incoming dissolve.
-        start = (intervals[index][0] + intervals[index - 1][1] + 1) // 2 if index else 0
+        first_begin, first_end = intervals[index]
+        # The default cue sits at the midpoint of the incoming dissolve.
+        start = (first_begin + intervals[index - 1][1] + 1) // 2 if index else 0
+        if "headlineOffsetFrames" in chapter:
+            start = first_begin + chapter["headlineOffsetFrames"]
+            if not first_begin <= start < first_end:
+                raise ValueError(f"Chapter {name!r} headline must begin during its first shot.")
         if chapter["startFrame"] != start:
             raise ValueError(f"Chapter {name!r} must start at frame {start}.")
+        if continuation := chapter.get("continuation"):
+            if not 0 < continuation["delayFrames"] < first_end - start:
+                raise ValueError(f"Chapter {name!r} headline continuation must begin during its first shot.")
         index += len(chapter["shots"])
 
     duration = intervals[-1][1]
@@ -175,7 +183,7 @@ def compose(name: str, paths: list[Path], destination: Path, edit: dict, interva
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev21.json", help="Editing recipe to render.")
+    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev23.json", help="Editing recipe to render.")
     parser.add_argument("--destination", type=Path, default=SITE / "public/media/hero")
     parser.add_argument("--work-dir", type=Path, help="Keep prepared shots here for inspection.")
     args = parser.parse_args()

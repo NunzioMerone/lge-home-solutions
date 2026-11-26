@@ -46,3 +46,8 @@ export interface ContactActionProps {
   primary?: boolean
   compact?: boolean
 }
+export interface WhatsAppContactLinkProps {
+  className?: string | undefined
+  label?: string
+  reveal?: boolean
+}

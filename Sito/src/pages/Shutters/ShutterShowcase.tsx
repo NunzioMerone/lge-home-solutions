@@ -25,7 +25,6 @@ export function ShutterShowcase() {
               onClick={() => setSelected(group.overview ?? group.options[0])}
             >
               {group.name}
-              <Icon name="arrow" />
             </button>
             <div
               id={`shutters-${group.id}-options`}
@@ -43,7 +42,6 @@ export function ShutterShowcase() {
                   onClick={() => setSelected(option)}
                 >
                   {option.name}
-                  <Icon name="arrow" />
                 </button>
               ))}
             </div>

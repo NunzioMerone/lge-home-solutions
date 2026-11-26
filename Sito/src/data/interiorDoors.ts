@@ -33,7 +33,6 @@ const catalogPhotoDefaults = {
   previewWidths: [480, 960, 1440],
   fullWidth: 1440,
   collection: 'interior-doors',
-  status: 'partner-authorized',
 } as const
 
 export const interiorDoorOpenings = [
@@ -43,14 +42,15 @@ export const interiorDoorOpenings = [
     headline: 'Lo spazio per aprire.',
     detail:
       'Quando c’è spazio per la rotazione dell’anta, puoi scegliere il verso di apertura in base ai passaggi e alla disposizione dei mobili.',
-    model: 'Turtle',
-    referenceUrl: `${glassCatalogUrl}#page/9`,
+    model: 'EV-PR',
+    referenceUrl: `${lacquerCatalogUrl}#page/23`,
     photo: {
       ...catalogPhotoDefaults,
-      id: 'turtle',
-      category: 'I-PEA · Turtle',
-      alt: 'Porta a battente in vetro satinato con motivo geometrico',
-      height: 1345,
+      id: 'ev-pr',
+      category: 'I-PEA · EV-PR',
+      alt: 'Porta a battente bianca laccata con maniglia a leva e cornice a vista',
+      height: 1013,
+      status: 'official-reference',
     } satisfies GalleryPhoto,
   },
   {
@@ -59,14 +59,15 @@ export const interiorDoorOpenings = [
     headline: 'Un passaggio più libero.',
     detail:
       'Utile nei passaggi stretti o dove vuoi tenere libera la zona vicino alla porta. L’anta può scorrere lungo la parete o rientrare al suo interno, se la struttura lo consente.',
-    model: 'Float',
-    referenceUrl: `${glassCatalogUrl}#page/19`,
+    model: 'EV-UR · Essential',
+    referenceUrl: `${lacquerCatalogUrl}#page/29`,
     photo: {
       ...catalogPhotoDefaults,
-      id: 'float',
-      category: 'I-PEA · Float',
-      alt: 'Ante scorrevoli in vetro trasparente tra due ambienti',
-      height: 1345,
+      id: 'ev-ur-essential',
+      category: 'I-PEA · EV-UR Essential',
+      alt: 'Porta scorrevole a scomparsa color tortora, parzialmente aperta',
+      height: 1011,
+      status: 'official-reference',
     } satisfies GalleryPhoto,
   },
   {
@@ -83,6 +84,7 @@ export const interiorDoorOpenings = [
       category: 'I-PEA · RM-INC3L',
       alt: 'Porta raso parete integrata nella boiserie laccata bianca',
       height: 1011,
+      status: 'partner-authorized',
     } satisfies GalleryPhoto,
   },
 ] as const

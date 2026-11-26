@@ -231,13 +231,7 @@ a.readLink:is(:hover, :focus-visible) svg {
   min-height: 50px;
   padding: 14px 22px;
   border-radius: var(--radius);
-  color: var(--color-white);
-  background: var(--color-blue);
   font-size: 0.8125rem;
-  transition: background var(--transition);
-}
-.contactAction:hover {
-  background: var(--color-ink);
 }
 .breadcrumb {
   display: flex;

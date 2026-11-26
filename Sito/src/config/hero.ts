@@ -1,4 +1,4 @@
-import heroVideoEdit from '../../references/hero-video-partners/edit-rev22.json'
+import heroVideoEdit from '../../references/hero-video-partners/edit-rev23.json'
 import type { HeroVideoSource, ResponsiveHeroVideoSource } from '../types/hero'
 
 export { heroVideoEdit }

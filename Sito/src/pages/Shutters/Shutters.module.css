@@ -139,10 +139,7 @@
 }
 
 .controls button {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 20px;
-  align-items: center;
-  gap: 12px;
+  display: block;
   width: 100%;
   min-height: 55px;
   padding: 10px 12px;
@@ -179,24 +176,6 @@
   box-shadow: inset 2px 0 var(--color-hero-accent);
   background: rgb(237 213 179 / 9%);
   color: var(--color-white);
-}
-
-.controls button svg {
-  width: 19px;
-  height: 19px;
-  color: var(--color-hero-accent);
-  opacity: 0.56;
-  transition:
-    transform var(--transition),
-    opacity var(--transition);
-}
-
-.controls button[aria-pressed='true'] svg {
-  opacity: 1;
-}
-
-.controls button:hover svg {
-  transform: translateX(2px);
 }
 
 .media {

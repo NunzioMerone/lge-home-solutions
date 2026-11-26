@@ -59,21 +59,10 @@
   min-height: 50px;
   padding: 12px 18px;
   border-radius: var(--radius);
-  background: var(--color-brand-blue);
-  color: var(--color-white);
   font-size: 0.8125rem;
   font-weight: 550;
   line-height: 1.5;
   text-align: center;
-  transition: background var(--transition);
-}
-.whatsapp:hover {
-  background: color-mix(in srgb, var(--color-brand-blue) 85%, var(--color-ink));
-}
-.whatsapp img {
-  flex: 0 0 22px;
-  width: 22px;
-  height: 22px;
 }
 .appointmentNote {
   display: grid;
@@ -89,20 +78,10 @@
   height: 26px;
   color: var(--color-brand-blue);
 }
-.appointmentNote > div {
-  padding-left: 14px;
-  border-left: 1px solid var(--showroom-border);
-}
-.appointmentNote h3 {
-  margin: 0 0 4px;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: -0.02em;
-}
 .appointmentNote p {
   margin: 0;
+  padding-inline-start: 14px;
+  border-inline-start: 1px solid var(--showroom-border);
   color: var(--color-muted);
   font-size: 0.8125rem;
   line-height: 1.7;
@@ -128,10 +107,8 @@
   place-items: center;
   border: 1px solid var(--showroom-border);
   border-radius: var(--radius);
-  color: var(--color-muted);
 }
 a.socialIcon {
-  color: var(--color-brand-blue);
   transition:
     background var(--transition),
     border-color var(--transition);
@@ -139,10 +116,6 @@ a.socialIcon {
 a.socialIcon:hover {
   border-color: var(--color-brand-blue);
   background: var(--color-sky);
-}
-.socialIcon svg {
-  width: 21px;
-  height: 21px;
 }
 .directions {
   grid-area: directions;
@@ -254,6 +227,18 @@ a.socialIcon:hover {
   transform: translate(-50%, -50%);
   background: color-mix(in srgb, var(--color-blue) 30%, var(--color-sky));
 }
+@media (min-width: 600px) {
+  .appointmentNote {
+    grid-template-columns: 26px minmax(0, 1fr);
+    padding: 0 0 0 16px;
+    border-top: 0;
+    border-inline-start: 1px solid var(--showroom-border);
+  }
+  .appointmentNote p {
+    padding: 0;
+    border: 0;
+  }
+}
 @media (min-width: 600px) and (max-width: 1199px) {
   .layout {
     max-width: 760px;
@@ -263,16 +248,6 @@ a.socialIcon:hover {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
     padding: 20px;
-  }
-  .appointmentNote {
-    grid-template-columns: 26px minmax(0, 1fr);
-    padding: 0 0 0 16px;
-    border-top: 0;
-    border-left: 1px solid var(--showroom-border);
-  }
-  .appointmentNote > div {
-    padding: 0;
-    border: 0;
   }
   .directions {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -292,18 +267,7 @@ a.socialIcon:hover {
     padding: 20px;
   }
   .appointmentNote {
-    grid-template-columns: 26px minmax(0, 1fr);
-    gap: 14px;
-    padding: 0 0 0 18px;
-    border-top: 0;
-    border-left: 1px solid var(--showroom-border);
-  }
-  .appointmentNote > div {
-    padding: 0;
-    border: 0;
-  }
-  .appointmentNote > svg {
-    align-self: start;
+    padding-inline-start: 18px;
   }
   .directions {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
