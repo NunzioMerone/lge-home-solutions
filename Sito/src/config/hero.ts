@@ -1,4 +1,4 @@
-import heroVideoEdit from '../../references/hero-video-partners/edit-rev23.json'
+import heroVideoEdit from '../../references/hero-video-partners/edit-rev24.json'
 import type { HeroVideoSource, ResponsiveHeroVideoSource } from '../types/hero'
 
 export { heroVideoEdit }
@@ -10,7 +10,7 @@ const revision = heroVideoEdit.revision
 
 export const desktopHeroVideoSource: HeroVideoSource = {
   video: `media/hero/hero-desktop-${revision}.mp4`,
-  poster: `media/hero/hero-desktop-${revision}-poster.jpg`,
+  poster: `media/hero/hero-desktop-${revision}-poster.webp`,
   width: 1920,
   height: 1080,
 }
@@ -21,28 +21,28 @@ export const responsiveHeroVideoSources: readonly ResponsiveHeroVideoSource[] = 
     media: '(max-aspect-ratio: 2/3)',
     video: `media/hero/hero-mobile-${revision}.mp4`,
     efficientVideo: `media/hero/hero-mobile-${revision}-hevc.mp4`,
-    poster: `media/hero/hero-mobile-${revision}-poster.jpg`,
+    poster: `media/hero/hero-mobile-${revision}-poster.webp`,
     width: 720,
     height: 1280,
   },
   {
     media: '(max-aspect-ratio: 1/1)',
     video: `media/hero/hero-tablet-portrait-${revision}.mp4`,
-    poster: `media/hero/hero-tablet-portrait-${revision}-poster.jpg`,
+    poster: `media/hero/hero-tablet-portrait-${revision}-poster.webp`,
     width: 960,
     height: 1280,
   },
   {
     media: '(max-aspect-ratio: 3/2)',
     video: `media/hero/hero-tablet-${revision}.mp4`,
-    poster: `media/hero/hero-tablet-${revision}-poster.jpg`,
+    poster: `media/hero/hero-tablet-${revision}-poster.webp`,
     width: 1280,
     height: 960,
   },
   {
     media: '(max-width: 1199px)',
     video: `media/hero/hero-wide-compact-${revision}.mp4`,
-    poster: `media/hero/hero-wide-compact-${revision}-poster.jpg`,
+    poster: `media/hero/hero-wide-compact-${revision}-poster.webp`,
     width: 1280,
     height: 720,
   },

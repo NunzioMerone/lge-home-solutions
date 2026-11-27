@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
 import { Icon } from '../../components/ui/Icon'
@@ -42,8 +43,8 @@ export function Competencies() {
             </p>
           </header>
           <nav className={styles.anchors} aria-label="Contenuti della pagina">
-            <Link to="#qualifiche">Qualifiche professionali</Link>
-            <Link to="#riconoscimenti">Riconoscimenti e collaborazioni</Link>
+            <PageLink to="#qualifiche">Qualifiche professionali</PageLink>
+            <PageLink to="#riconoscimenti">Riconoscimenti e collaborazioni</PageLink>
           </nav>
         </div>
 

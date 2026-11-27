@@ -15,6 +15,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'come-scegliere-infissi',
     category: 'infissi',
     title: 'Nuovi infissi? Comincia dalla tua casa.',
+    seoTitle: 'Come scegliere gli infissi di casa — LGE',
+    seoDescription:
+      'Battente o scorrevole? Dal posto occupato dall’anta alla luce che entra in casa, ecco cosa osservare prima di confrontare materiali e finiture degli infissi.',
     excerpt:
       'Prima del materiale e del colore, ci sono la luce, gli spazi e le tue abitudini. Le domande da cui partire per scegliere con più consapevolezza.',
     image: {
@@ -30,6 +33,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'pergola-o-tenda-da-sole',
     category: 'outdoor',
     title: 'Pergola o tenda da sole? Immagina il tuo spazio.',
+    seoTitle: 'Pergola o tenda da sole per il terrazzo? — LGE',
+    seoDescription:
+      'Confronta l’ombra di una tenda a bracci con quella di una pergola. Esposizione al sole, ingombri e arredi ti aiutano a scegliere la copertura per il terrazzo.',
     excerpt:
       'Un pranzo sul terrazzo, un angolo di lettura, più ombra nel pomeriggio. La scelta parte dal tuo modo di vivere all’aperto.',
     image: {
@@ -45,6 +51,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'porte-interne-spazi-e-finiture',
     category: 'porte',
     title: 'Porte interne: il dettaglio che unisce gli ambienti.',
+    seoTitle: 'Come scegliere apertura e finitura delle porte interne — LGE',
+    seoDescription:
+      'Valuta lo spazio per un’anta a battente o scorrevole e confronta i campioni con il pavimento. Scopri come luce e privacy orientano la scelta delle porte.',
     excerpt:
       'Aperture, finiture e passaggi di luce: come pensare alle porte insieme al resto della casa.',
     image: {
@@ -60,6 +69,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'condensa-sui-vetri',
     category: 'comfort',
     title: 'Condensa sui vetri: da dove cominciare?',
+    seoTitle: 'Perché si forma la condensa sui vetri delle finestre? — LGE',
+    seoDescription:
+      'Osserva su quale lato della finestra compaiono le gocce. Scopri che ruolo hanno umidità e ricambio d’aria e quando far controllare il serramento.',
     excerpt:
       'Osservare dove e quando compare è il primo passo. Una guida per capire il rapporto tra umidità, superfici fredde e ricambio d’aria.',
     image: {
@@ -76,6 +88,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'scegliere-zanzariere',
     category: 'comfort',
     title: 'La zanzariera giusta segue i tuoi gesti.',
+    seoTitle: 'Come scegliere le zanzariere per finestre e portefinestre — LGE',
+    seoDescription:
+      'Zanzariera verticale o laterale? Considera la frequenza di passaggio, lo spazio per guide e cassonetto e la pulizia della rete prima di scegliere.',
     excerpt:
       'Una finestra e una portafinestra si usano in modo diverso. Passaggi, ingombri e apertura contano nella scelta.',
     image: {
@@ -92,6 +107,9 @@ export const blogPosts: readonly BlogPost[] = [
     slug: 'manutenzione-infissi-pvc',
     category: 'manutenzione',
     title: 'Piccoli gesti, ogni giorno. La cura degli infissi in PVC.',
+    seoTitle: 'Come pulire e mantenere gli infissi in PVC — LGE',
+    seoDescription:
+      'Come pulire i profili in PVC, controllare le guarnizioni e tenere liberi gli scarichi. Scopri quando una maniglia dura o un’anta che sfrega richiedono una verifica.',
     excerpt:
       'Pulizia delicata, guarnizioni e scarichi: cosa osservare per prenderti cura delle finestre nel tempo.',
     image: {

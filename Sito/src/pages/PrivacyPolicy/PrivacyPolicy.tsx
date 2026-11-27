@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
+import { analyticsConfig } from '../../config/analytics'
 import { contacts } from '../../config/contacts'
 import { elfsightReviewsWidgetId } from '../../config/elfsightReviews'
 import { googleMapsBrowserKey } from '../../config/googlePlaces'
@@ -137,9 +138,12 @@ export function PrivacyPolicy() {
           <section aria-labelledby="privacy-storage">
             <h2 id="privacy-storage">4. Cookie e preferenze</h2>
             <p>
-              L’applicazione non utilizza analytics, pixel pubblicitari o cookie propri. Salva nella
-              memoria di sessione della scheda una preferenza tecnica per le animazioni, senza
-              inviarla a un server. I font e le fotografie di LGE sono ospitati insieme al sito.
+              {analyticsConfig
+                ? 'Con il tuo consenso alle statistiche, Google Analytics 4 misura le visite alle pagine e i clic su WhatsApp, telefono, cataloghi e indicazioni stradali. Puoi modificare la scelta nelle preferenze di consenso.'
+                : 'L’applicazione non utilizza analytics, pixel pubblicitari o cookie propri.'}{' '}
+              Salva nella memoria di sessione della scheda una preferenza tecnica per le animazioni,
+              senza inviarla a un server. I font e le fotografie di LGE sono ospitati insieme al
+              sito.
             </p>
             <p>Per questa preferenza tecnica non è necessario un banner di consenso.</p>
           </section>

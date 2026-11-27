@@ -5,10 +5,10 @@ import type { HeroVideoProps } from '../../../types/hero'
 import styles from './Hero.module.css'
 
 export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
-  const { videoRef, source, videoEnabled, onError } = useHeroVideo(active, onTimeChange)
+  const { backdropRef, videoRef, source, playing, onError } = useHeroVideo(active, onTimeChange)
 
   return (
-    <div className={styles.backdrop} aria-hidden="true">
+    <div ref={backdropRef} className={styles.backdrop} aria-hidden="true">
       <picture>
         {responsiveHeroVideoSources.map(({ media, poster, width, height }) => (
           <source
@@ -29,7 +29,7 @@ export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
           decoding="async"
         />
       </picture>
-      {videoEnabled && (
+      {source && (
         <video
           key={source.video}
           ref={videoRef}
@@ -39,19 +39,23 @@ export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
           width={source.width}
           height={source.height}
           muted
-          autoPlay={active}
+          autoPlay={playing}
           playsInline
           loop
-          preload="auto"
+          preload={playing ? 'auto' : 'none'}
           tabIndex={-1}
           onError={(event) => {
-            if (event.target === event.currentTarget) onError()
+            if (event.target === event.currentTarget) onError(source.video)
           }}
         >
           {source.efficientVideo && (
             <source src={assetUrl(source.efficientVideo)} type='video/mp4; codecs="hvc1"' />
           )}
-          <source src={assetUrl(source.video)} type="video/mp4" onError={onError} />
+          <source
+            src={assetUrl(source.video)}
+            type="video/mp4"
+            onError={() => onError(source.video)}
+          />
         </video>
       )}
     </div>

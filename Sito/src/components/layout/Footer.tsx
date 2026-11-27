@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../ui/PageLink'
+import { useHydrated } from '../../hooks/useHydrated'
 import { contacts } from '../../config/contacts'
 import { site } from '../../config/site'
 import { privacyPage } from '../../config/privacy'
@@ -12,6 +13,7 @@ import { Icon } from '../ui/Icon'
 import styles from './Footer.module.css'
 
 export function Footer() {
+  const year = useHydrated() ? new Date().getFullYear() : __BUILD_YEAR__
   const links = getContactLinks(contacts)
   const socialLinks = [
     {
@@ -35,7 +37,7 @@ export function Footer() {
       <div className="container">
         <div className={styles.main}>
           <div className={styles.identity}>
-            <Link
+            <PageLink
               className={styles.brand}
               to="/#inizio"
               aria-label="LGE Home Solutions, torna in cima"
@@ -47,7 +49,7 @@ export function Footer() {
                 height="1000"
                 loading="lazy"
               />
-            </Link>
+            </PageLink>
             <div className={styles.details}>
               <h2 className={styles.heading}>Contatti</h2>
               <address className={styles.contact}>
@@ -83,9 +85,9 @@ export function Footer() {
             <nav className={styles.navigation} aria-label="Soluzioni nel footer">
               <h2 className={styles.heading}>Soluzioni</h2>
               {products.map(({ id, title, path }) => (
-                <Link to={path} key={id}>
+                <PageLink to={path} key={id}>
                   {title}
-                </Link>
+                </PageLink>
               ))}
             </nav>
             <nav className={styles.navigation} aria-label="Navigazione nel footer">
@@ -93,7 +95,7 @@ export function Footer() {
               {site.sections
                 .filter(({ id }) => id !== 'prodotti')
                 .map(({ id, label }) => (
-                  <Link
+                  <PageLink
                     to={
                       id === 'competenze'
                         ? competenciesPage.path
@@ -104,17 +106,17 @@ export function Footer() {
                     key={id}
                   >
                     {label}
-                  </Link>
+                  </PageLink>
                 ))}
-              <Link to={blogPage.path}>Blog</Link>
+              <PageLink to={blogPage.path}>Blog</PageLink>
             </nav>
           </div>
         </div>
         <div className={styles.bottom}>
-          <span className={styles.copyright}>© {new Date().getFullYear()} LGE Home Solutions</span>
-          <Link className={styles.legal} to={privacyPage.path}>
+          <span className={styles.copyright}>© {year} LGE Home Solutions</span>
+          <PageLink className={styles.legal} to={privacyPage.path}>
             Privacy Policy
-          </Link>
+          </PageLink>
           <div className={styles.socials} aria-label="Social LGE">
             {socialLinks.map(({ icon, label, href }) =>
               href ? (

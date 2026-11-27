@@ -72,6 +72,7 @@ export function DoorDesignStudio() {
           )}
           <a
             className={styles.panelCatalogLink}
+            data-analytics-catalog
             href={system.catalog}
             target="_blank"
             rel="noopener noreferrer"

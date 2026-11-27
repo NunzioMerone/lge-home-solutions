@@ -1,15 +1,18 @@
 import { partners } from '../../../data/partners'
+import { useSectionImages } from '../../../hooks/useSectionImages'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import '@fontsource/cormorant-garamond/latin-400-italic.css'
 import styles from './Partners.module.css'
 
 export function Partners() {
   const ref = useSectionReveal()
+  const imagesReady = useSectionImages(ref)
   return (
     <section
       className={`${styles.section} section`}
       id="partner"
       aria-labelledby="partners-title"
+      data-defer-images={!imagesReady || undefined}
       ref={ref}
     >
       <div className="container">

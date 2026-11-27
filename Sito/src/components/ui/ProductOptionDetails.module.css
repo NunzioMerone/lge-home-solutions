@@ -1,0 +1,21 @@
+.option:not([open]),
+.option > summary {
+  display: none;
+}
+
+@media (scripting: none) {
+  .option:not([open]) {
+    display: block;
+  }
+
+  .option > summary {
+    display: list-item;
+    padding-block: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  :root .controls {
+    display: none;
+  }
+}

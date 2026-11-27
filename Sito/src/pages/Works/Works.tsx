@@ -1,3 +1,4 @@
+import { useHydrated } from '../../hooks/useHydrated'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { Header } from '../../components/layout/Header'
@@ -19,7 +20,8 @@ export function Works() {
   const { hash } = useLocation()
   const contentRef = useRef<HTMLDivElement>(null)
   const headingRef = useSectionReveal()
-  const selected = parseWorkFilter(params.get('categoria'), workCategories)
+  const hydrated = useHydrated()
+  const selected = parseWorkFilter(hydrated ? params.get('categoria') : null, workCategories)
   const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
   const collection = workCollections.find((item) => item.id === selected)
   const photos = collection?.photos ?? allWorkPhotos

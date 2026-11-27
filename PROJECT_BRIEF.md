@@ -1,5 +1,17 @@
 # LGE Home Solutions — Project brief
 
+**Pubblicazione dell’anteprima autorizzata il 27 novembre 2026.** L’utente richiede l’aggiornamento di GitHub Pages con la hero Rev24, le ottimizzazioni di caricamento e le modifiche SEO preparate in locale. L’anteprima mantiene `noindex, nofollow` e le statistiche disattivate. Il passaggio al dominio aziendale resta in attesa delle informazioni del gestore e della revisione privacy.
+
+**Preparazione locale alla consegna del 27 novembre 2026.** GitHub Pages resta l’anteprima con `noindex`. Il comando `npm run build:release` produce un pacchetto separato dopo aver verificato l’origine HTTPS, l’approvazione della privacy, i collegamenti canonici e i documenti generati. I selettori di prodotto e le fotografie dei lavori sono raggiungibili anche nell’HTML statico. Lo showroom è descritto come situato a Monte di Procida, vicino a Bacoli, nei Campi Flegrei. La verifica Search Console accetta il valore o il file autentico di Google. GA4 è facoltativo e disattivato, con consenso esplicito richiesto per il caricamento. Dati da richiedere, migrazione dal vecchio sito e collaudo sono nella [guida alla consegna](./CONSEGNA_SITO.md).
+
+**Hero e caricamento, revisione locale del 27 novembre 2026.** La Rev24 mantiene la riproduzione automatica e porta il montaggio da 55,20 a 49,57 secondi a 60 fps. In «Illumina i tuoi spazi» è stato tagliato il dettaglio della soglia in apertura. In «Crea nuovi spazi da vivere» è stata tolta la pergola scura con la persona seduta. Il gesto di chiusura introduce «Lascia fuori il rumore» a 18,03 s e «e dentro il benessere» a 19,82 s. Poster WebP e caricamento delle immagini delle sezioni successive danno priorità alla prima schermata.
+
+Nella build di anteprima, su Chrome con cache vuota e CPU rallentata di 4 volte, il primo fotogramma mobile H.264 passa da 2,34 a 1,34 s a 4 Mbit/s (mediana di tre prove, latenza 120 ms). A 1,6 Mbit/s e 150 ms di latenza, la media di due prove passa da 5,29 a 3,15 s. Nei primi dieci secondi di visita da telefono le risorse diverse dal video scendono da 860 a 382 kB.
+
+**Titolo sincronizzato e LCP, verifica locale del 27 novembre 2026.** La seconda riga «e dentro il benessere» veniva disegnata in un blocco separato. In una visita mobile simulata senza interazioni Chrome la rilevava come nuovo elemento principale a 23 s. Le due righe ora condividono un solo blocco di testo presente dalla prima schermata. In due ripetizioni di 55 secondi a cache vuota, con rete a 1,6 Mbit/s, latenza di 150 ms e CPU rallentata di 4 volte, l’ultimo LCP è stato registrato a 0,98 e 1,01 s. Il video è partito in circa 3,2 s e ha completato il giro. Il confronto prima/dopo a 320, 412 e 1440 px ha verificato impaginazione e dissolvenza sullo stesso fotogramma.
+
+**Preparazione SEO locale, 27 novembre 2026.** Home, prodotti, Competenze, Lavori e guide hanno titoli e descrizioni dedicati. La sede di riferimento è lo showroom di Monte di Procida. La build prepara l’HTML delle pagine, i dati strutturati dello showroom e i metadati per le condivisioni. L’anteprima conserva `noindex, nofollow`. Il dominio definitivo, l’apertura all’indicizzazione e l’attivazione di Search Console saranno decisi al lancio.
+
 **Facebook, pubblicazione autorizzata il 27 novembre 2026.** Le icone in «Vieni a trovarci» e nel footer aprono la pagina Atelier Gibus Campi Flegrei con l’indirizzo diretto fornito dall’utente. L’informativa include Facebook tra i collegamenti esterni. Il rilascio usa il workflow GitHub Pages di `main`.
 
 **Pubblicazione autorizzata il 26 novembre 2026.** Il checkpoint comprende la chiusura VEKA sincronizzata nella hero Rev23, i pulsanti WhatsApp antracite, le foto di chiusura ridisegnate e le rifiniture a Home, Oscuranti, Outdoor e Porte interne. Il rilascio avviene su `main` tramite il workflow GitHub Pages per l’anteprima non indicizzata.
@@ -295,7 +307,7 @@ Per il sito ufficiale Three.js resta un'opzione da valutare in base alla sosteni
 
 Requisiti presenti fin dall'inizio: responsive design, HTML semantico, accessibilità da tastiera, focus visibile, contrasto, rispetto di `prefers-reduced-motion`, performance e SEO.
 
-La strategia SEO e l'eventuale necessità di prerendering, insieme alla destinazione di hosting, saranno valutate prima di consolidare l'architettura di pubblicazione. Il solo routing client non esaurisce le decisioni SEO.
+Il prerendering in fase di build rende disponibili titoli, testi e collegamenti delle pagine nell’HTML iniziale. Il dominio e l’hosting definitivi restano da scegliere.
 
 ## 9. Contenuti e asset
 

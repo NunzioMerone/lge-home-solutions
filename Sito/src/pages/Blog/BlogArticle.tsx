@@ -1,4 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { blogPage } from '../../config/blog'
 import { blogCategories, blogPosts } from '../../data/blog'
 import { blogArticles } from '../../data/blogArticles'
@@ -39,9 +40,9 @@ export function BlogArticle() {
           <p data-reveal>
             Il collegamento potrebbe non essere corretto. Nel blog trovi tutte le nostre guide.
           </p>
-          <Link className={styles.readLink} to={blogPage.path} data-reveal>
+          <PageLink className={styles.readLink} to={blogPage.path} data-reveal>
             Torna al blog <Icon name="arrow" />
-          </Link>
+          </PageLink>
         </div>
       </BlogLayout>
     )
@@ -53,9 +54,9 @@ export function BlogArticle() {
     <BlogLayout>
       <article className="container">
         <nav className={styles.breadcrumb} aria-label="Percorso di navigazione">
-          <Link to={blogPage.path}>Blog</Link>
+          <PageLink to={blogPage.path}>Blog</PageLink>
           <Icon name="chevron-right" />
-          <Link to={getBlogFilterPath(post.category)}>{category?.label}</Link>
+          <PageLink to={getBlogFilterPath(post.category)}>{category?.label}</PageLink>
         </nav>
         <header className={styles.articleHeader} ref={headerRef}>
           <h1 data-reveal>{post.title}</h1>
@@ -88,9 +89,9 @@ export function BlogArticle() {
                   </li>
                 ))}
               </ol>
-              <Link className={styles.backLink} to={getBlogFilterPath(post.category)}>
+              <PageLink className={styles.backLink} to={getBlogFilterPath(post.category)}>
                 <Icon name="chevron-left" /> Tutte le guide: {category?.label}
-              </Link>
+              </PageLink>
             </nav>
           </aside>
           <div className={styles.articleBody} ref={bodyRef}>
@@ -106,10 +107,10 @@ export function BlogArticle() {
               <div className={styles.takeaway} data-reveal>
                 <span className="eyebrow">Da tenere a mente</span>
                 <p>{content.takeaway}</p>
-                <Link className={styles.readLink} to={content.solution.path}>
+                <PageLink className={styles.readLink} to={content.solution.path}>
                   {content.solution.label}
                   <Icon name="arrow" />
-                </Link>
+                </PageLink>
               </div>
               <div className={styles.sources} data-reveal>
                 <h2>Per approfondire</h2>
@@ -126,9 +127,9 @@ export function BlogArticle() {
                   ))}
                 </ul>
               </div>
-              <Link className={styles.backLink} to={blogPage.path} data-reveal>
+              <PageLink className={styles.backLink} to={blogPage.path} data-reveal>
                 <Icon name="chevron-left" /> Torna a tutti gli articoli
-              </Link>
+              </PageLink>
             </div>
           </div>
         </div>

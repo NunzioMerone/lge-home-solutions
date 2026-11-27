@@ -4,10 +4,11 @@ import { useMotion } from '../../../hooks/useMotion'
 import { useShowroomCarousel } from '../../../hooks/useShowroomCarousel'
 import type { GalleryLightboxState } from '../../../types/gallery'
 import type { PageActivityProps } from '../../../types/navigation'
-import { decodeGalleryImage, galleryImageUrl } from '../../../utils/galleryImages'
+import { galleryImageUrl } from '../../../utils/galleryImages'
 import { CarouselArrow } from '../../ui/CarouselArrow'
 import { Icon } from '../../ui/Icon'
 import { Skeleton } from '../../ui/Skeleton'
+import { SettledImage } from '../../ui/SettledImage'
 import { GalleryLightbox } from '../Gallery/GalleryLightbox'
 import styles from './ShowroomGallery.module.css'
 
@@ -73,7 +74,7 @@ export function ShowroomGallery({ active }: PageActivityProps) {
                   data-fading={current && frame.previous !== null}
                   onAnimationEnd={() => finishFade(index)}
                 >
-                  <img
+                  <SettledImage
                     className={styles.image}
                     src={galleryImageUrl(layer, layer.previewWidths[0])}
                     srcSet={layer.previewWidths
@@ -85,14 +86,9 @@ export function ShowroomGallery({ active }: PageActivityProps) {
                     loading={index === 0 ? 'lazy' : 'eager'}
                     decoding="async"
                     draggable={false}
-                    alt=""
-                    onLoad={(event) => {
-                      const image = event.currentTarget
-                      void decodeGalleryImage(image).then((ready) => {
-                        if (image.isConnected) settle(index, ready)
-                      })
-                    }}
-                    onError={() => settle(index, false)}
+                    alt={layer.alt}
+                    decodeBeforeSettling
+                    onSettled={(ready) => settle(index, ready)}
                   />
                 </span>
               )

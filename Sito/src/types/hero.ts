@@ -12,6 +12,8 @@ export interface HeroVideoProps {
   onTimeChange: (time: number) => void
 }
 
+export type HeroVisibility = 'unseen' | 'visible' | 'hidden'
+
 export interface HeroHeadlineCue {
   startFrame: number
   phrase: string

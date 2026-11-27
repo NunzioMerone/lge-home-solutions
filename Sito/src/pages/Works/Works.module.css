@@ -9,14 +9,17 @@
   scroll-margin-top: calc(var(--navigation-compact-height) + 20px);
 }
 .filterInner {
+  --filter-inset: 4px;
   display: flex;
   gap: 10px;
   overflow-x: auto;
-  padding: 4px 4px 12px;
-  margin-inline: -4px;
+  padding: 4px var(--filter-inset) 12px;
+  margin-inline: calc(0px - var(--filter-inset));
   scrollbar-width: thin;
   scrollbar-color: var(--color-line) transparent;
   scroll-snap-type: x proximity;
+  /* The first filter already sits at the inset. Avoid an initial four-pixel snap. */
+  scroll-padding-inline: var(--filter-inset);
   scroll-behavior: smooth;
 }
 .filterLink {
@@ -212,13 +215,12 @@
   display: block;
   width: 100%;
   height: auto;
-  opacity: 0;
   transition:
     opacity 220ms var(--ease-out),
     transform 700ms var(--ease-out);
 }
-.photo[data-loaded='true'] img {
-  opacity: 1;
+:global(:root[data-motion]) .photo[data-loaded='false'] img {
+  opacity: 0;
 }
 .imageSkeleton {
   position: absolute;

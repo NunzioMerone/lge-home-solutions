@@ -53,7 +53,7 @@
   color: var(--color-heading);
   font-size: 0.8125rem;
 }
-.slide[data-phase='pending'] {
+:global(:root[data-motion]) .slide[data-phase='pending'] {
   opacity: 0;
 }
 .slide[data-phase='current'] {

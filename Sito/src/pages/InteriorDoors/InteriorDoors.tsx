@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
@@ -22,9 +22,9 @@ export function InteriorDoors({ product }: ProductDetailProps) {
 
   return (
     <div className={styles.page}>
-      <Link className="skip-link" to={`#${catalogsId}`}>
+      <PageLink className="skip-link" to={`#${catalogsId}`}>
         Vai ai cataloghi I-PEA
-      </Link>
+      </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
@@ -39,9 +39,9 @@ export function InteriorDoors({ product }: ProductDetailProps) {
           }
           description="Dal soggiorno alla zona notte, ogni stanza ha esigenze diverse. Ti aiutiamo a scegliere finitura e apertura in base alla luce, alla privacy e allo spazio che hai a disposizione."
         >
-          <Link className={styles.button} to={`#${catalogsId}`}>
+          <PageLink className={styles.button} to={`#${catalogsId}`}>
             Scopri di più <Icon name="down" />
-          </Link>
+          </PageLink>
         </ProductHero>
 
         <section
@@ -70,6 +70,7 @@ export function InteriorDoors({ product }: ProductDetailProps) {
                   <p>{catalog.detail}</p>
                   <a
                     className={styles.inlineLink}
+                    data-analytics-catalog
                     href={catalog.url}
                     target="_blank"
                     rel="noopener noreferrer"

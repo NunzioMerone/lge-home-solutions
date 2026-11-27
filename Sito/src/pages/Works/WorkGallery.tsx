@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Icon } from '../../components/ui/Icon'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { useHydrated } from '../../hooks/useHydrated'
+import { galleryImageUrl } from '../../utils/galleryImages'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import { distributeWorkPhotos } from '../../utils/works'
 import type { WorkGalleryProps } from '../../types/works'
@@ -11,6 +13,7 @@ const batchSize = 18
 
 export function WorkGallery({ photos, title, onOpen }: WorkGalleryProps) {
   const [limit, setLimit] = useState(batchSize)
+  const interactive = useHydrated()
   const ref = useSectionReveal({ duration: 1.2, stagger: 0.1, rootMargin: '0px 0px -6% 0px' })
   const gridRef = useRef<HTMLDivElement>(null)
   const focusId = useRef<string | null>(null)
@@ -23,7 +26,7 @@ export function WorkGallery({ photos, title, onOpen }: WorkGalleryProps) {
   useLayoutEffect(() => {
     if (!focusId.current) return
     gridRef.current
-      ?.querySelector<HTMLButtonElement>(`[data-photo-id="${focusId.current}"]`)
+      ?.querySelector<HTMLAnchorElement>(`[data-photo-id="${focusId.current}"]`)
       ?.focus({ preventScroll: true })
     focusId.current = null
   }, [limit])
@@ -34,7 +37,7 @@ export function WorkGallery({ photos, title, onOpen }: WorkGalleryProps) {
         {columns.map((items, column) => (
           <div className={styles.photoColumn} key={column}>
             {items.map((photo) => (
-              <WorkPhoto key={photo.id} photo={photo} onOpen={onOpen} />
+              <WorkPhoto key={photo.id} photo={photo} interactive={interactive} onOpen={onOpen} />
             ))}
           </div>
         ))}
@@ -44,16 +47,29 @@ export function WorkGallery({ photos, title, onOpen }: WorkGalleryProps) {
       </p>
       {visiblePhotos.length < photos.length && (
         <div className={styles.collectionBottom}>
-          <button
-            className={styles.loadMore}
-            type="button"
-            onClick={() => {
-              focusId.current = photos[visiblePhotos.length]?.id ?? null
-              setLimit((current) => current + batchSize)
-            }}
-          >
-            Altre fotografie <Icon name="down" />
-          </button>
+          {interactive ? (
+            <button
+              className={styles.loadMore}
+              type="button"
+              onClick={() => {
+                focusId.current = photos[visiblePhotos.length]?.id ?? null
+                setLimit((current) => current + batchSize)
+              }}
+            >
+              Altre fotografie <Icon name="down" />
+            </button>
+          ) : (
+            <details>
+              <summary>Altre fotografie</summary>
+              <ul>
+                {photos.slice(limit).map((photo) => (
+                  <li key={photo.id}>
+                    <a href={galleryImageUrl(photo, photo.fullWidth)}>{photo.alt}</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </div>
       )}
     </section>

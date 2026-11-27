@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
@@ -22,9 +22,9 @@ export function AtelierGibus({ product }: ProductDetailProps) {
 
   return (
     <div className={styles.page}>
-      <Link className="skip-link" to={`#${outdoorShowcaseId}`}>
+      <PageLink className="skip-link" to={`#${outdoorShowcaseId}`}>
         Vai alle soluzioni Gibus
-      </Link>
+      </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
@@ -47,12 +47,12 @@ export function AtelierGibus({ product }: ProductDetailProps) {
           }
         >
           <div className={styles.actions}>
-            <Link className={styles.button} to={`#${outdoorShowcaseId}`}>
+            <PageLink className={styles.button} to={`#${outdoorShowcaseId}`}>
               Scopri di più <Icon name="down" />
-            </Link>
-            <Link className={styles.inlineLink} to={`#${gibusCatalogsId}`}>
+            </PageLink>
+            <PageLink className={styles.inlineLink} to={`#${gibusCatalogsId}`}>
               Cataloghi <Icon name="down" />
-            </Link>
+            </PageLink>
             <a
               className={styles.inlineLink}
               href={atelierGibusPage.officialUrl}

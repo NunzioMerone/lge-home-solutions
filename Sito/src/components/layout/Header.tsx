@@ -1,4 +1,5 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { PageLink } from '../ui/PageLink'
 import { site } from '../../config/site'
 import { navigation } from '../../data/navigation'
 import { products } from '../../data/products'
@@ -46,14 +47,14 @@ export function Header() {
       <div className={styles.surface} data-header-chrome aria-hidden="true" />
       <div className={styles.bar}>
         <nav className={styles.desktopNav} aria-label="Navigazione principale" data-header-chrome>
-          <Link
+          <PageLink
             to={navigation.home.path}
             className={styles.navigationLink}
             aria-current={activePath === navigation.home.path ? 'location' : undefined}
             onClick={closeNavigation}
           >
             {navigation.home.label}
-          </Link>
+          </PageLink>
           <div
             className={styles.sections}
             ref={sectionsRef}
@@ -80,22 +81,22 @@ export function Header() {
             >
               {products.map((product) => (
                 <li key={product.id}>
-                  <Link to={product.path} onClick={closeNavigation}>
+                  <PageLink to={product.path} onClick={closeNavigation}>
                     {product.title}
-                  </Link>
+                  </PageLink>
                 </li>
               ))}
             </ul>
           </div>
-          <Link
+          <PageLink
             to={navigation.work.path}
             className={styles.navigationLink}
             aria-current={activePath === navigation.work.path ? 'location' : undefined}
             onClick={closeNavigation}
           >
             {navigation.work.label}
-          </Link>
-          <Link
+          </PageLink>
+          <PageLink
             to={navigation.blog.path}
             className={styles.navigationLink}
             aria-current={
@@ -106,9 +107,9 @@ export function Header() {
             onClick={closeNavigation}
           >
             {navigation.blog.label}
-          </Link>
+          </PageLink>
         </nav>
-        <Link
+        <PageLink
           to={navigation.home.path}
           className={styles.brand}
           aria-label="LGE, homepage"
@@ -123,10 +124,10 @@ export function Header() {
             data-critical
             fetchPriority="high"
           />
-        </Link>
+        </PageLink>
         <div className={styles.right} data-header-chrome>
           {[navigation.competencies, navigation.reviews, navigation.contact].map((item) => (
-            <Link
+            <PageLink
               key={item.path}
               to={item.path}
               className={`${styles.contactLink} ${styles.navigationLink}`}
@@ -134,7 +135,7 @@ export function Header() {
               onClick={closeNavigation}
             >
               {item.label}
-            </Link>
+            </PageLink>
           ))}
           <button
             ref={menuButtonRef}

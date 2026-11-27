@@ -42,8 +42,6 @@ jobs:
         run: node scripts/check-privacy.mjs
       - name: Build website
         run: npm run build -- --base=/lge-home-solutions/
-      - name: Prepare static routes
-        run: node scripts/prepare-pages.mjs
       - name: Upload website
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:

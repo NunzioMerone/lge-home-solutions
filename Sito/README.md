@@ -1,5 +1,7 @@
 # LGE Home Solutions
 
+Per la consegna al gestore, il passaggio dal sito precedente, Search Console e le statistiche facoltative seguire la [guida di pubblicazione e monitoraggio](../CONSEGNA_SITO.md).
+
 Pubblicazione del 14 novembre 2026: l’utente autorizza commit, push del checkpoint corrente su `main` e deploy tramite il workflow Pages esistente, superando i vincoli locali delle note seguenti. Accorciato al 45% l’ultimo intervallo desktop Gibus, mantenendo il ritmo delle altre scene; mobile e movimento ridotto conservati. Lo script `prepare-pages.mjs` genera anche `/blog` e i sei articoli con metadati, verificati da due test d’integrazione. Anteprima non indicizzata conservata.
 
 Unica applicazione del sito LGE Home Solutions, nella cartella `Sito/`. L’8 novembre 2026 l’utente autorizza la pubblicazione delle pagine Infissi, Oscuranti e Porte e sicurezza, del footer condiviso e del nuovo video della home. Le precedenti varianti sono conservate nella cronologia Git; non esiste una seconda applicazione da mantenere.
@@ -26,7 +28,7 @@ npm run build
 
 Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP, Embla e Swiper per il Coverflow. Dipendenze e file generati restano esclusi da Git.
 
-La scansione iniziale delle dipendenze Vite parte esclusivamente da `index.html`, seguendo gli import dell’applicazione. I file HTML archiviati in `references/` non sono ingressi del sito: alcuni, come la copia di Coverr, richiamano script del sito originale che non sono presenti nel progetto.
+La scansione iniziale delle dipendenze Vite parte da `index.html`. La build genera l’HTML completo delle pagine in `dist/` a partire dai componenti React. Per controllare i testi e i link inviati a un motore di ricerca prima dell’esecuzione di JavaScript, usare `npm run preview` dopo la build. I file HTML archiviati in `references/` restano materiali di lavoro.
 
 ## Blog — revisione locale del 14 novembre 2026
 
@@ -50,13 +52,17 @@ La pagina locale `references/coverflow-preview/` usa il componente reale in Stri
 
 ## Hero video
 
-La homepage usa il montaggio Rev22. Le 16 riprese dei partner VEKA, VELUX, newSolar e Gibus sono riunite in cinque blocchi dedicati a luce, benessere, protezione, privacy e outdoor. Il video dura 50,2 secondi e si ripete a velocità 1× sotto il logo e i testi HTML. Un velo antracite sfuma verso destra fino al 65% della larghezza. Sotto 700 px, la hero occupa `100svh` e la sfumatura sale dal bordo inferiore, dove si trovano titolo e sottotitolo.
+La homepage usa il montaggio locale Rev24. Le 16 riprese dei partner VEKA, VELUX, newSolar e Gibus sono riunite in cinque blocchi dedicati a luce, benessere, protezione, privacy e outdoor. Il video dura 49,57 secondi e si ripete a velocità 1× sotto il logo e i testi HTML. Un velo antracite sfuma verso destra fino al 65% della larghezza. Sotto 700 px, la hero occupa `100svh` e la sfumatura sale dal bordo inferiore, dove si trovano titolo e sottotitolo.
 
 Le voci della navbar, il comando menu e il logo orizzontale completo di scritta laterale sono bianchi sopra il video. Oltre 24 px di scroll, quando compare il fondo della navbar, il logo torna alla versione colorata; anche il menu mobile aperto e le altre rotte mantengono il logo colorato. La versione bianca usa il medesimo asset nitido, con filtro CSS che conserva trasparenza, forma e proporzioni.
 
-Video e poster in `public/media/hero/` condividono le regole di selezione in `src/config/hero.ts`. I formati sono 1920×1080 su desktop panoramico, 1280×720 su panoramico compatto, 1280×960 e 960×1280 su tablet, 720×1280 su telefono verticale. Ogni dispositivo carica il filmato adatto alla forma della finestra. Il formato telefono offre HEVC e H.264. Fuori vista il filmato si sospende. Con movimento ridotto appare solo il poster. La ricetta in `references/hero-video-partners/edit-rev22.json` usa i tagli, i ritagli e le fonti della Rev21. Si può rigenerare da `Sito/` con `python3 references/hero-video-partners/render.py --edit references/hero-video-partners/edit-rev22.json`. Il manifest `references/hero-video-integration.json` identifica gli asset attivi e i relativi hash.
+Il poster WebP è presente nell’HTML iniziale e cambia con la forma dello schermo. Quando la hero entra in vista, il filmato parte automaticamente. L’ingresso diretto in Contatti evita così il download del video fino al ritorno in cima. Fuori vista il filmato si sospende. Con movimento ridotto appare il poster. I formati sono 1920×1080 su desktop panoramico, 1280×720 su panoramico compatto, 1280×960 e 960×1280 su tablet, 720×1280 su telefono verticale con HEVC e fallback H.264. Le regole comuni sono in `src/config/hero.ts`. Per rigenerare i media dai sorgenti locali, eseguire `python3 references/hero-video-partners/render.py --edit references/hero-video-partners/edit-rev24.json` da `Sito/`. Il manifest `references/hero-video-integration.json` contiene dimensioni, pesi e hash dei file attivi.
+
+Le fotografie delle schede Soluzioni e i loghi Partner riservano lo spazio nel layout. Il browser può caricarli quando si entra nella sezione, anche da un’ancora o dalla tastiera. Puntare una scheda o darle il focus prepara la sua pagina prodotto.
 
 «Il design che» resta fisso dopo l’ingresso iniziale. Le cinque frasi in corsivo Sabbia `#EDD5B3` cambiano durante le dissolvenze tra i blocchi e restano visibili attraverso i tagli interni. Ogni nuovo testo emerge da sinistra a destra in 1,6 secondi, seguendo il tempo del video. Negli ultimi 0,6 secondi tornano l’inquadratura e la frase di apertura. Con movimento ridotto il testo resta statico.
+
+Le due righe di «Lascia fuori il rumore / e dentro il benessere» condividono lo stesso blocco di testo HTML fin dalla prima schermata. Per verificare l’LCP dopo modifiche alla hero, registrare un caricamento da cache vuota con Chrome DevTools e attendere il ritorno alla prima scena senza toccare o scorrere la pagina. Controllare nella traccia sia l’ultimo candidato LCP sia il momento distinto in cui la seconda riga appare alla chiusura dell’infisso.
 
 Seguono Le nostre soluzioni, partner, competenze, lavori, recensioni e contatti. Le pagine `/competenze`, `/lavori` e `/privacy-policy` sono integrate nella navigazione. Tutte le cinque categorie prodotto ricevono la foto della card nella hero condivisa mediante espansione; si attende la decodifica anche al primo ingresso. Infissi ha il contenuto completo; le altre quattro mantengono il messaggio di preparazione sotto la hero. Le card restano compatte e delimitate, con lo spazio del testo riservato al loro interno. Le inquadrature sono mirate al prodotto, completo e più vicino, anche su desktop; il contesto può essere ritagliato. I testi delle competenze in home sono centrati. I contatti non mostrano orari. Il tap non lascia contorni blu nei visualizzatori, conservando focus e navigazione visibile da tastiera.
 
@@ -72,16 +78,20 @@ La home visitata resta montata fuori rotta, nascosta e `inert`; il video si sosp
 
 Il 6 novembre 2026 è autorizzato il push di tutto il lavoro corrente su `main`, con aggiornamento dell’anteprima GitHub Pages. Il sito conserva `VITE_PUBLIC_PREVIEW=true` e la Privacy Policy nello stato reale.
 
-Il solo workflow attivo è `../.github/workflows/deploy.yml`. Lavora da `Sito/`, esegue lint, test, build con base `/lge-home-solutions/`, prepara le rotte statiche e pubblica su GitHub Pages.
-
-Per preparare gli ingressi statici localmente con Node.js 22 (il workflow usa Node.js 24):
+Il workflow `../.github/workflows/deploy.yml` lavora da `Sito/` con la base `/lge-home-solutions/`. Per riprodurre in locale la sua build di anteprima ed esplorarla alla porta 4175, eseguire questi comandi.
 
 ```sh
 VITE_PUBLIC_PREVIEW=true npm run build -- --base=/lge-home-solutions/
-VITE_PUBLIC_PREVIEW=true node --experimental-strip-types scripts/prepare-pages.mjs
+npm run preview -- --base=/lge-home-solutions/
 ```
 
-Il sito mantiene `VITE_PUBLIC_PREVIEW=true` e `noindex, nofollow` finché la revisione privacy e l’hosting definitivo non sono completati. L’unificazione dei progetti non approva la Privacy Policy: `approved` resta `false` e il controllo nel workflow dell’anteprima resta consultivo.
+### Indicizzazione e dominio
+
+L’anteprima include `noindex, nofollow` nell’HTML di ogni pagina, 404 compresa. I crawler possono leggere questa direttiva. La home descrive lo showroom con dati strutturati ricavati dai contatti e dalla posizione della mappa.
+
+Per la consegna usare `npm run build:release` con `VITE_PUBLIC_PREVIEW=false`, l’origine HTTPS confermata in `VITE_SITE_ORIGIN` e l’informativa revisionata. Il risultato verificato è in `dist-release/`. La base Vite determina l’eventuale sottocartella. La sitemap include le pagine e le foto della raccolta Lavori. I filtri di Blog e Lavori fanno riferimento alle rispettive pagine principali. Il comando di consegna si interrompe se la privacy è ancora in bozza.
+
+Sul dominio definitivo verificare la proprietà in Google Search Console e inviare la sitemap. Il file `robots.txt` consultato dai crawler deve essere disponibile alla radice di quell’origine.
 
 ## Consolidamento del 3 novembre 2026
 

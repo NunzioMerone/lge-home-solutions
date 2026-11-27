@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../ui/PageLink'
 import { navigation } from '../../data/navigation'
 import { products } from '../../data/products'
 import type { MobileMenuProps } from '../../types/navigation'
@@ -18,13 +18,13 @@ export function MobileMenu({
         <nav aria-label="Navigazione mobile">
           <ul className={styles.mobileLinks}>
             <li>
-              <Link
+              <PageLink
                 to={navigation.home.path}
                 aria-current={activePath === navigation.home.path ? 'location' : undefined}
                 onClick={onNavigate}
               >
                 {navigation.home.label}
-              </Link>
+              </PageLink>
             </li>
             <li>
               <button
@@ -47,9 +47,9 @@ export function MobileMenu({
                   <ul className={styles.mobileProducts}>
                     {products.map((product) => (
                       <li key={product.id}>
-                        <Link to={product.path} onClick={onNavigate}>
+                        <PageLink to={product.path} onClick={onNavigate}>
                           {product.title}
-                        </Link>
+                        </PageLink>
                       </li>
                     ))}
                   </ul>
@@ -57,18 +57,18 @@ export function MobileMenu({
               </div>
             </li>
             <li>
-              <Link
+              <PageLink
                 to={navigation.work.path}
                 aria-current={activePath === navigation.work.path ? 'location' : undefined}
                 onClick={onNavigate}
               >
                 {navigation.work.label}
-              </Link>
+              </PageLink>
             </li>
             {[navigation.blog, navigation.competencies, navigation.reviews, navigation.contact].map(
               (item) => (
                 <li key={item.path}>
-                  <Link
+                  <PageLink
                     to={item.path}
                     aria-current={
                       activePath === item.path ||
@@ -79,7 +79,7 @@ export function MobileMenu({
                     onClick={onNavigate}
                   >
                     {item.label}
-                  </Link>
+                  </PageLink>
                 </li>
               ),
             )}

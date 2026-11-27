@@ -1,4 +1,5 @@
 import type { ContactConfig } from '../types/content'
+import { privacyReview } from './privacy'
 
 const phoneNumber = '+39 334 600 8313'
 
@@ -13,7 +14,7 @@ export const contacts: ContactConfig = {
   whatsapp: phoneNumber,
   instagram: 'https://www.instagram.com/atelier_gibus_campiflegrei/',
   facebook: 'https://www.facebook.com/people/Atelier-Gibus-Campi-Flegrei/61557779500015/',
-  legalName: null,
+  legalName: privacyReview.controller.value,
   vatNumber: null,
   openingHours: [],
   mapUrl: 'https://www.google.com/maps/dir/?api=1&destination=40.7940311%2C14.0532046',

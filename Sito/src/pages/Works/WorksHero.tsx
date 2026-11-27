@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { gulfAwningPhoto } from '../../data/gallery'
 import { galleryImageUrl } from '../../utils/galleryImages'
 import { Skeleton } from '../../components/ui/Skeleton'
+import { SettledImage } from '../../components/ui/SettledImage'
 import styles from './WorksHero.module.css'
 
-const photoSources = [...gulfAwningPhoto.previewWidths, gulfAwningPhoto.fullWidth]
+const photoSources = [...gulfAwningPhoto.previewWidths, 1120, gulfAwningPhoto.fullWidth]
   .map((width) => `${galleryImageUrl(gulfAwningPhoto, width)} ${width}w`)
   .join(', ')
 
@@ -15,7 +16,7 @@ export function WorksHero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
           <h1>
-            I nostri <em>lavori</em>
+            Realizzazioni <em>LGE</em>
           </h1>
           <p>
             Una selezione di progetti realizzati per portare design, comfort e qualità nelle case
@@ -25,7 +26,7 @@ export function WorksHero() {
       </div>
       <div className={styles.media} data-settled={settled}>
         {!settled && <Skeleton className={styles.placeholder} />}
-        <img
+        <SettledImage
           src={galleryImageUrl(gulfAwningPhoto, gulfAwningPhoto.previewWidths[1])}
           srcSet={photoSources}
           sizes="(min-width: 700px) 68vw, 100vw"
@@ -34,8 +35,7 @@ export function WorksHero() {
           alt={gulfAwningPhoto.alt}
           decoding="async"
           fetchPriority="high"
-          onLoad={() => setSettled(true)}
-          onError={() => setSettled(true)}
+          onSettled={() => setSettled(true)}
         />
       </div>
     </header>

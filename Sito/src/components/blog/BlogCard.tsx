@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../ui/PageLink'
 import { blogCategories } from '../../data/blog'
 import { getBlogPostPath } from '../../utils/blog'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
@@ -14,7 +14,7 @@ export function BlogCard({ post, headingLevel = 3, critical = false }: BlogCardP
   const ref = useSectionReveal()
   return (
     <article className={styles.card} ref={ref}>
-      <Link
+      <PageLink
         className={styles.cardLink}
         to={getBlogPostPath(post.slug)}
         aria-labelledby={titleId}
@@ -34,7 +34,7 @@ export function BlogCard({ post, headingLevel = 3, critical = false }: BlogCardP
             Leggi la guida <Icon name="arrow" />
           </span>
         </div>
-      </Link>
+      </PageLink>
     </article>
   )
 }

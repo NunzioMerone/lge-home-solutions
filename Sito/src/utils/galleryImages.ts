@@ -2,8 +2,12 @@ import type { DecodableImage } from '../types/media'
 import type { GalleryPhoto } from '../types/gallery'
 import { assetUrl } from './assetUrl'
 
+export function galleryImagePath(photo: GalleryPhoto, width: number): string {
+  return `img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`
+}
+
 export function galleryImageUrl(photo: GalleryPhoto, width: number): string {
-  return assetUrl(`img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`)
+  return assetUrl(galleryImagePath(photo, width))
 }
 
 export function lightboxImageWidth(photo: GalleryPhoto, compact: boolean): number {

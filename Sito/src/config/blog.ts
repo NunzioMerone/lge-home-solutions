@@ -1,6 +1,6 @@
 export const blogPage = {
   path: '/blog',
-  title: 'Blog — Idee per abitare meglio | LGE Home Solutions',
+  title: 'Guide su infissi, porte e outdoor — Blog LGE',
   description:
-    'Idee e guide per la tua casa: infissi, comfort, porte, outdoor e manutenzione. Il blog di LGE Home Solutions.',
+    'Come scegliere una finestra, coordinare le porte o fare ombra in terrazza? Le guide di LGE Home Solutions affrontano anche condensa, zanzariere e cura del PVC.',
 } as const

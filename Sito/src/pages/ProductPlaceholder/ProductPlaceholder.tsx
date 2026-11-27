@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { products } from '../../data/products'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
@@ -35,9 +36,9 @@ export function ProductPlaceholder() {
                 : 'Il collegamento potrebbe non essere corretto. Torna alla homepage per scoprire le nostre soluzioni.'}
             </p>
             {!product && (
-              <Link className={`text-link ${styles.returnLink}`} to="/">
+              <PageLink className={`text-link ${styles.returnLink}`} to="/">
                 Torna alla home <Icon name="arrow" />
-              </Link>
+              </PageLink>
             )}
           </div>
         </div>

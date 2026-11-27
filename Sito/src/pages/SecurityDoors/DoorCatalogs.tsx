@@ -18,6 +18,7 @@ export function DoorCatalogs() {
                 <li key={system.id}>
                   <a
                     className={styles.catalog}
+                    data-analytics-catalog
                     href={system.catalog}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -46,6 +47,7 @@ export function DoorCatalogs() {
             </ul>
             <a
               className={styles.inlineLink}
+              data-analytics-catalog
               href={material.catalogIndex}
               target="_blank"
               rel="noopener noreferrer"

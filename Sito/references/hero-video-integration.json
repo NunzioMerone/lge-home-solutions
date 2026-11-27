@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-26",
-  "revision": "Rev23",
-  "scope": "Montaggio della hero con la chiusura VEKA e la frase del benessere sincronizzata per l’anteprima non indicizzata su GitHub Pages.",
-  "provenance": "references/hero-video-partners/edit-rev23.json",
+  "date": "2026-11-27",
+  "revision": "Rev24",
+  "scope": "Montaggio locale alleggerito con due inquadrature in meno, sincronizzazione della chiusura VEKA e poster WebP.",
+  "provenance": "references/hero-video-partners/edit-rev24.json",
   "partners": [
     "VEKA",
     "VELUX",
@@ -10,22 +10,22 @@
     "Gibus"
   ],
   "publication": {
-    "status": "public-preview",
-    "authorized": true
+    "status": "local-preview",
+    "authorized": false
   },
-  "frames": 3312,
+  "frames": 2974,
   "frame_rate": 60,
-  "duration_file": 55.2,
-  "duration_website": 55.2,
+  "duration_file": 49.566667,
+  "duration_website": 49.566667,
   "playback_rate": 1,
   "headline_accent": "#EDD5B3",
   "assets": [
     {
       "format": "desktop",
       "kind": "video",
-      "target": "public/media/hero/hero-desktop-rev23.mp4",
-      "bytes": 43952727,
-      "sha256": "a437bfa3f546f1de36bbfaabe06bf31d055b5f933f45df1ffceb1ebfbb9d5f4e",
+      "target": "public/media/hero/hero-desktop-rev24.mp4",
+      "bytes": 27814586,
+      "sha256": "1c8da9ae1d3af3c8efe86daa334a0402aea1323d7e6336cdcc470e6a58cd071f",
       "width": 1920,
       "height": 1080,
       "codec": "h264"
@@ -33,18 +33,18 @@
     {
       "format": "desktop",
       "kind": "poster",
-      "target": "public/media/hero/hero-desktop-rev23-poster.jpg",
-      "bytes": 217784,
-      "sha256": "5b21be8e54cd4048aa9f074fdea76aaa17853af0a5b76d0a237ee15778f72966",
+      "target": "public/media/hero/hero-desktop-rev24-poster.webp",
+      "bytes": 108190,
+      "sha256": "57db102aa325e744975c193dd6707f4ecfd717ddb6a09dce0f13402f2b01aa1d",
       "width": 1920,
       "height": 1080
     },
     {
       "format": "wide-compact",
       "kind": "video",
-      "target": "public/media/hero/hero-wide-compact-rev23.mp4",
-      "bytes": 17250259,
-      "sha256": "72b0a19c551234069b3ccf000e1156377550a3313c4140cea41bbe162d995d3b",
+      "target": "public/media/hero/hero-wide-compact-rev24.mp4",
+      "bytes": 12475778,
+      "sha256": "5536cc6aea7354b6a6d805fd458fe7903211183288e3d5bdfd2d4253984f290a",
       "width": 1280,
       "height": 720,
       "codec": "h264"
@@ -52,18 +52,18 @@
     {
       "format": "wide-compact",
       "kind": "poster",
-      "target": "public/media/hero/hero-wide-compact-rev23-poster.jpg",
-      "bytes": 115667,
-      "sha256": "cd0c79f744a89fff156479db5c1e54ef27744ff656b959bfadd9197952e28035",
+      "target": "public/media/hero/hero-wide-compact-rev24-poster.webp",
+      "bytes": 62580,
+      "sha256": "fffd162a14bce7c736f3fab68714eea20810a6f4e0392c770dcd3a330b7c7895",
       "width": 1280,
       "height": 720
     },
     {
       "format": "tablet",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-rev23.mp4",
-      "bytes": 23002822,
-      "sha256": "61e963eb2c8629ac9fd0dd831ca1246e1625e93873b51df041d03dcbae10f852",
+      "target": "public/media/hero/hero-tablet-rev24.mp4",
+      "bytes": 15340388,
+      "sha256": "3e8097dec4b8c8596e5bd856a9ab35e7d2d29f56fee62e8ad517f4734d15c434",
       "width": 1280,
       "height": 960,
       "codec": "h264"
@@ -71,18 +71,18 @@
     {
       "format": "tablet",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-rev23-poster.jpg",
-      "bytes": 148911,
-      "sha256": "0360e1f4bcfc116426e59a463d0825a762e2610c0ae1b0c83cfa31adb7ed0993",
+      "target": "public/media/hero/hero-tablet-rev24-poster.webp",
+      "bytes": 77806,
+      "sha256": "8633e3024b0ca3e11126cf056315fe9d1a86fa5b0e6bb3169cf06532118641d3",
       "width": 1280,
       "height": 960
     },
     {
       "format": "tablet-portrait",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-portrait-rev23.mp4",
-      "bytes": 22787914,
-      "sha256": "b4c6116cd62646ab4a978b18cdea07497b69e5be93f5a6b3c257bdde172d2165",
+      "target": "public/media/hero/hero-tablet-portrait-rev24.mp4",
+      "bytes": 14925046,
+      "sha256": "9e3b88567f86f06e14528688d4ffbcf11a60782ec63435b9d1e2745be879f9d7",
       "width": 960,
       "height": 1280,
       "codec": "h264"
@@ -90,18 +90,18 @@
     {
       "format": "tablet-portrait",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-portrait-rev23-poster.jpg",
-      "bytes": 135299,
-      "sha256": "653cb17d06b3acfb72d462af3f0f5df5b38ed7bd9ae4a4ba5f74d9df458228a6",
+      "target": "public/media/hero/hero-tablet-portrait-rev24-poster.webp",
+      "bytes": 71550,
+      "sha256": "747b7d6c988c53b1d5608845ea4c87e079e5e5bc411fe7a3240cb81be2fbf740",
       "width": 960,
       "height": 1280
     },
     {
       "format": "mobile",
       "kind": "video",
-      "target": "public/media/hero/hero-mobile-rev23.mp4",
-      "bytes": 14586579,
-      "sha256": "c84b76b794a26a58f9621f769c2071e8c6a437330f48ecf057e7ac4a85e70369",
+      "target": "public/media/hero/hero-mobile-rev24.mp4",
+      "bytes": 8748017,
+      "sha256": "c0fcfb053b08ade1766b23668d191cedba188319474820e439a4af5fa0f0748d",
       "width": 720,
       "height": 1280,
       "codec": "h264"
@@ -109,18 +109,18 @@
     {
       "format": "mobile",
       "kind": "poster",
-      "target": "public/media/hero/hero-mobile-rev23-poster.jpg",
-      "bytes": 94893,
-      "sha256": "a66927d396aeb3e773c7c87b821b6c3574dff6c8476b2c4bc97819568b010ff2",
+      "target": "public/media/hero/hero-mobile-rev24-poster.webp",
+      "bytes": 48432,
+      "sha256": "78899d8cf189385f0eecf952e33c2a2dae831ec730e3318085692a339d2968dd",
       "width": 720,
       "height": 1280
     },
     {
       "format": "mobile",
       "kind": "video-efficient",
-      "target": "public/media/hero/hero-mobile-rev23-hevc.mp4",
-      "bytes": 8979390,
-      "sha256": "825955fd44871dd16b558ebd2ec2a2c87c4d4fcf36203375854a334bca517d36",
+      "target": "public/media/hero/hero-mobile-rev24-hevc.mp4",
+      "bytes": 7252237,
+      "sha256": "01d981699fa974f4452fd18dc8d53639c68bca36620b3238d7ffdce254506fa3",
       "width": 720,
       "height": 1280,
       "codec": "hevc"

@@ -69,7 +69,7 @@ export function AtelierShowcase() {
 
   useLayoutEffect(() => {
     const pinnedStage = chapterList.current
-    if (reducedMotion || !pinnedStage || !steps.current) return
+    if (!pinned || !pinnedStage || !steps.current) return
     const firstStep = steps.current.firstElementChild
     const lastStep = steps.current.lastElementChild
     if (!firstStep || !lastStep) return
@@ -125,7 +125,7 @@ export function AtelierShowcase() {
       }
     })
     return () => media.revert()
-  }, [reducedMotion])
+  }, [pinned])
 
   useLayoutEffect(() => {
     const id = hash.slice(1)
@@ -160,7 +160,7 @@ export function AtelierShowcase() {
             secondo il tuo modo di vivere all’aperto.
           </p>
         </header>
-        <div className={styles.journey} data-reduced-motion={reducedMotion}>
+        <div className={styles.journey} data-pinned={pinned}>
           <ol ref={chapterList} className={styles.chapters} role="list">
             {chapters.map((chapter, index) => (
               <li

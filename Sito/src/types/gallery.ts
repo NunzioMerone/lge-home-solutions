@@ -25,7 +25,7 @@ export type GalleryPhoto = GalleryPhotoMetadata &
 
 export interface GalleryLightboxState {
   photo: GalleryPhoto
-  trigger: HTMLButtonElement
+  trigger: HTMLButtonElement | HTMLAnchorElement
 }
 
 export interface ProjectClosingProps {

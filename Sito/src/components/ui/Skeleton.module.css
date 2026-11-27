@@ -13,6 +13,10 @@
 .text > :last-child {
   width: 72%;
 }
+/* Static pages can already display their images while the interactive bundle loads. */
+:global(:root:not([data-motion])) .block {
+  visibility: hidden;
+}
 @keyframes breathe {
   from {
     opacity: 0.65;

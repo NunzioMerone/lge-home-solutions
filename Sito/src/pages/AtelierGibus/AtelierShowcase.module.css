@@ -204,7 +204,7 @@
 }
 
 @media (min-width: 1100px) and (min-height: 580px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .journey[data-reduced-motion='false'] {
+  .journey[data-pinned='true'] {
     --stage-clearance: calc(var(--navigation-compact-height) + env(safe-area-inset-top) + 18px);
     --stage-height: min(64svh, 630px, calc(100svh - 2 * var(--stage-clearance)));
     --chapter-step: clamp(180px, 35svh, 320px);
@@ -212,31 +212,31 @@
     align-items: start;
   }
 
-  .journey[data-reduced-motion='false'] .chapters,
-  .journey[data-reduced-motion='false'] .steps {
+  .journey[data-pinned='true'] .chapters,
+  .journey[data-pinned='true'] .steps {
     grid-area: 1 / 1;
   }
 
-  .journey[data-reduced-motion='false'] .steps {
+  .journey[data-pinned='true'] .steps {
     display: block;
     padding-block: calc(var(--stage-height) / 2);
     pointer-events: none;
   }
 
-  .journey[data-reduced-motion='false'] .chapter {
+  .journey[data-pinned='true'] .chapter {
     scroll-margin-top: 0;
   }
 
-  .journey[data-reduced-motion='false'] .steps > div {
+  .journey[data-pinned='true'] .steps > div {
     height: var(--chapter-step);
   }
 
-  .journey[data-reduced-motion='false'] .steps > div:last-child {
+  .journey[data-pinned='true'] .steps > div:last-child {
     /* Leave reading room after the reveal without holding an extra transition. */
     height: calc(var(--chapter-step) * 0.45);
   }
 
-  .journey[data-reduced-motion='false'] .chapters {
+  .journey[data-pinned='true'] .chapters {
     position: sticky;
     z-index: 1;
     top: calc((100svh - var(--stage-height)) / 2);
@@ -249,7 +249,7 @@
     box-shadow: 0 12px 36px rgb(37 42 48 / 7%);
   }
 
-  .journey[data-reduced-motion='false'] .chapter {
+  .journey[data-pinned='true'] .chapter {
     position: absolute;
     inset: 0;
     grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
@@ -260,41 +260,41 @@
     pointer-events: none;
   }
 
-  .journey[data-reduced-motion='false'] .chapter[data-previous='true'] .chapterPhoto {
+  .journey[data-pinned='true'] .chapter[data-previous='true'] .chapterPhoto {
     z-index: 1;
     opacity: 1;
   }
 
-  .journey[data-reduced-motion='false'] .chapter[data-active='true'] .chapterPhoto {
+  .journey[data-pinned='true'] .chapter[data-active='true'] .chapterPhoto {
     z-index: 2;
     opacity: 1;
     transition: opacity 490ms var(--ease-out);
   }
 
-  .journey[data-reduced-motion='false'] .chapterPhoto {
+  .journey[data-pinned='true'] .chapterPhoto {
     min-height: 0;
     height: 100%;
     opacity: 0;
   }
 
-  .journey[data-reduced-motion='false'] .chapter:not([data-active='true']) .photoArrows button {
+  .journey[data-pinned='true'] .chapter:not([data-active='true']) .photoArrows button {
     pointer-events: none;
   }
 
-  .journey[data-reduced-motion='false'] .chapterPhoto img {
+  .journey[data-pinned='true'] .chapterPhoto img {
     transform: scale(1.035);
   }
 
-  .journey[data-reduced-motion='false'] .chapter[data-active='true'] img {
+  .journey[data-pinned='true'] .chapter[data-active='true'] img {
     transform: scale(1);
     transition: transform 730ms var(--ease-out);
   }
 
-  .journey[data-reduced-motion='false'] .chapter[data-previous='true'] img {
+  .journey[data-pinned='true'] .chapter[data-previous='true'] img {
     transform: scale(1);
   }
 
-  .journey[data-reduced-motion='false'] .chapterCopy {
+  .journey[data-pinned='true'] .chapterCopy {
     position: relative;
     z-index: 3;
     opacity: var(--copy-opacity, 0);
@@ -302,36 +302,34 @@
     transform: translateY(calc(var(--copy-offset, 0px) * var(--copy-travel, 1)));
   }
 
-  .journey[data-reduced-motion='false'] .chapter[data-active='true'] .chapterCopy {
+  .journey[data-pinned='true'] .chapter[data-active='true'] .chapterCopy {
     opacity: var(--copy-opacity, 1);
   }
 
-  .journey[data-reduced-motion='false'] .chapterCopy > :not(h3) {
+  .journey[data-pinned='true'] .chapterCopy > :not(h3) {
     opacity: var(--copy-details, 1);
   }
 
-  .journey[data-reduced-motion='false']
-    .chapter[data-active='true']
-    :is(.detailLink, .chapterPhoto button) {
+  .journey[data-pinned='true'] .chapter[data-active='true'] :is(.detailLink, .chapterPhoto button) {
     pointer-events: auto;
   }
 
-  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterPhoto {
+  .journey[data-pinned='true'] .chapter:focus-within[data-active='true'] .chapterPhoto {
     transition: none;
   }
 
-  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterCopy {
+  .journey[data-pinned='true'] .chapter:focus-within[data-active='true'] .chapterCopy {
     opacity: 1;
     filter: none;
     transform: none;
   }
 
-  .journey[data-reduced-motion='false'] .chapter:focus-within[data-active='true'] .chapterCopy > * {
+  .journey[data-pinned='true'] .chapter:focus-within[data-active='true'] .chapterCopy > * {
     opacity: 1;
   }
 
   @media (max-height: 700px) {
-    .journey[data-reduced-motion='false'] .chapterCopy {
+    .journey[data-pinned='true'] .chapterCopy {
       padding-block: 12px;
       padding-inline: clamp(24px, 3vw, 48px);
     }

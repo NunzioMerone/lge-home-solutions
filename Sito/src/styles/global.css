@@ -1,5 +1,12 @@
 @import './tokens.css';
 
+/* Keep real image URLs in the HTML while reserving bandwidth for the first screen. */
+@media screen and (scripting: enabled) {
+  [data-defer-images]:not(:target, :focus-within) img[loading='lazy'] {
+    display: none;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

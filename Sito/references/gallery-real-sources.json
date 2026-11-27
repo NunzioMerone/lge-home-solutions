@@ -855,6 +855,13 @@
           "bytes": 96056
         },
         {
+          "width": 1120,
+          "height": 840,
+          "file": "lge-35144cb1-1120.webp",
+          "bytes": 107216,
+          "use": "Works hero. Resized from the source JPG with cwebp at quality 84, method 6, without metadata."
+        },
+        {
           "width": 1600,
           "file": "lge-35144cb1-1600.webp",
           "bytes": 216302

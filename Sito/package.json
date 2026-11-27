@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "typecheck": "tsc -b",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && node --experimental-strip-types scripts/prepare-pages.mjs",
+    "build:release": "npm run build -- --release",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",

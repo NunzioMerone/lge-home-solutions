@@ -4,7 +4,7 @@ import {
   heroVideoPlaybackRate,
   responsiveHeroVideoSources,
 } from '../config/hero'
-import type { HeroVideoProps } from '../types/hero'
+import type { HeroVideoProps, HeroVisibility } from '../types/hero'
 import { useMotion } from './useMotion'
 
 function subscribeToHeroSource(notify: () => void) {
@@ -46,71 +46,66 @@ function observeVideoTime(video: HTMLVideoElement, onTimeChange: HeroVideoProps[
 }
 
 export function useHeroVideo(pageActive: boolean, onTimeChange: HeroVideoProps['onTimeChange']) {
-  const source = useSyncExternalStore(
-    subscribeToHeroSource,
-    getHeroSource,
-    () => desktopHeroVideoSource,
-  )
+  const source = useSyncExternalStore(subscribeToHeroSource, getHeroSource, () => null)
   const { reducedMotion } = useMotion()
+  const backdropRef = useRef<HTMLDivElement>(null)
+  const [visibility, setVisibility] = useState<HeroVisibility>('unseen')
   const videoRef = useRef<HTMLVideoElement>(null)
   const [failedVideos, setFailedVideos] = useState<ReadonlySet<string>>(() => new Set())
-  const videoEnabled = !reducedMotion && !failedVideos.has(source.video)
-
-  useLayoutEffect(() => {
-    onTimeChange(videoRef.current?.currentTime ?? 0)
-  }, [source.video, videoEnabled, onTimeChange])
+  const videoEnabled =
+    source !== null && visibility !== 'unseen' && !reducedMotion && !failedVideos.has(source.video)
+  const playing = pageActive && visibility === 'visible' && videoEnabled
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video || !videoEnabled || !pageActive) return
-    video.defaultPlaybackRate = heroVideoPlaybackRate
-    video.playbackRate = heroVideoPlaybackRate
-    const stopObservingTime = observeVideoTime(video, onTimeChange)
+    const backdrop = backdropRef.current
+    if (!backdrop) return
     let inView = false
-    let active = true
-    let playPending = false
-    const syncPlayback = () => {
-      if (!active) return
-      if (inView && !document.hidden) {
-        video.muted = true
-        if (!video.paused || playPending) return
-        playPending = true
-        // Browsers that deny autoplay keep the poster visible.
-        void video
-          .play()
-          .catch(() => undefined)
-          .finally(() => {
-            playPending = false
-          })
-      } else {
-        video.pause()
-      }
+    // A direct showroom or product anchor can open the home with the hero already offscreen.
+    const syncVisibility = () => {
+      if (inView && !document.hidden) setVisibility('visible')
+      else setVisibility((previous) => (previous === 'unseen' ? previous : 'hidden'))
     }
     const observer = new IntersectionObserver(
       ([entry]) => {
-        inView = entry?.isIntersecting ?? false
-        syncPlayback()
+        inView = (entry?.intersectionRatio ?? 0) >= 0.2
+        syncVisibility()
       },
-      { threshold: 0 },
+      { threshold: 0.2 },
     )
-    observer.observe(video)
-    document.addEventListener('visibilitychange', syncPlayback)
+    observer.observe(backdrop)
+    document.addEventListener('visibilitychange', syncVisibility)
     return () => {
-      active = false
       observer.disconnect()
-      document.removeEventListener('visibilitychange', syncPlayback)
+      document.removeEventListener('visibilitychange', syncVisibility)
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    onTimeChange(videoRef.current?.currentTime ?? 0)
+  }, [source, videoEnabled, onTimeChange])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video || !playing) return
+    video.defaultPlaybackRate = heroVideoPlaybackRate
+    video.playbackRate = heroVideoPlaybackRate
+    const stopObservingTime = observeVideoTime(video, onTimeChange)
+    video.muted = true
+    if (video.paused) void video.play().catch(() => undefined)
+    return () => {
       stopObservingTime()
       video.pause()
     }
-  }, [source.video, videoEnabled, pageActive, onTimeChange])
+  }, [source, playing, onTimeChange])
 
   return {
+    backdropRef,
     videoRef,
-    source,
-    videoEnabled,
-    onError: () =>
+    playing,
+    source: videoEnabled ? source : null,
+    onError: (video: string) =>
       setFailedVideos((previous) =>
-        previous.has(source.video) ? previous : new Set([...previous, source.video]),
+        previous.has(video) ? previous : new Set([...previous, video]),
       ),
   }
 }

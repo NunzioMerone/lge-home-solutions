@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useHydrated } from '../../hooks/useHydrated'
 import { MotionContext } from '../../config/motionContext'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import type { MotionProviderProps } from '../../types/ui'
@@ -13,7 +14,8 @@ function storedPreference(): boolean {
 
 export function MotionProvider({ children }: MotionProviderProps) {
   const systemReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
-  const [userReducedMotion, setUserReducedMotion] = useState(storedPreference)
+  const [preference, setUserReducedMotion] = useState(storedPreference)
+  const userReducedMotion = useHydrated() && preference
   const reducedMotion = systemReducedMotion || userReducedMotion
   const toggleMotion = useCallback(() => {
     setUserReducedMotion((previous) => !previous)
@@ -21,11 +23,11 @@ export function MotionProvider({ children }: MotionProviderProps) {
 
   useEffect(() => {
     try {
-      sessionStorage.setItem('lge-reduced-motion', String(userReducedMotion))
+      sessionStorage.setItem('lge-reduced-motion', String(preference))
     } catch {
       /* Preference remains available for this visit. */
     }
-  }, [userReducedMotion])
+  }, [preference])
 
   useEffect(() => {
     document.documentElement.dataset.motion = reducedMotion ? 'reduced' : 'full'

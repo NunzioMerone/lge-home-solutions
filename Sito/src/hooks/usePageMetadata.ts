@@ -1,24 +1,28 @@
 import { useEffect } from 'react'
-import type { PageMetadata } from '../types/privacy'
+import { getSeoElements } from '../utils/siteSeo'
 
-export function usePageMetadata({ title, description, robots }: PageMetadata) {
-  const effectiveRobots =
-    import.meta.env.VITE_PUBLIC_PREVIEW === 'true' ? 'noindex, nofollow' : robots
+const managedElements = [
+  'title',
+  'meta[name="description"]',
+  'meta[name="robots"]',
+  'meta[name="google-site-verification"]',
+  'meta[property^="og:"]',
+  'link[rel="canonical"]',
+  '#lge-local-business',
+].join(', ')
+
+export function usePageMetadata(pathname: string) {
   useEffect(() => {
-    document.title = title
-    const descriptionElement = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-    if (descriptionElement) descriptionElement.content = description
-
-    let robotsElement = document.querySelector<HTMLMetaElement>('meta[name="robots"]')
-    if (effectiveRobots) {
-      if (!robotsElement) {
-        robotsElement = document.createElement('meta')
-        robotsElement.name = 'robots'
-        document.head.append(robotsElement)
+    const fragment = document.createDocumentFragment()
+    for (const { tag, attributes, text } of getSeoElements(pathname)) {
+      const element = document.createElement(tag)
+      for (const [name, value] of Object.entries(attributes ?? {})) {
+        element.setAttribute(name, value)
       }
-      robotsElement.content = effectiveRobots
-    } else {
-      robotsElement?.remove()
+      if (text !== undefined) element.textContent = text
+      fragment.append(element)
     }
-  }, [title, description, effectiveRobots])
+    document.head.querySelectorAll(managedElements).forEach((element) => element.remove())
+    document.head.append(fragment)
+  }, [pathname])
 }

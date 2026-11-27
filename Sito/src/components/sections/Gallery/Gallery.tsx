@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../ui/PageLink'
 import { worksPage } from '../../../config/works'
 import { homeGallery } from '../../../data/homeGallery'
 import { Icon } from '../../ui/Icon'
@@ -36,9 +36,9 @@ export function Gallery({ active }: PageActivityProps) {
         />
       </div>
       <div className={styles.details}>
-        <Link to={worksPage.path} className={styles.detailsLink}>
+        <PageLink to={worksPage.path} className={styles.detailsLink}>
           Esplora tutti i nostri lavori <Icon name="arrow" />
-        </Link>
+        </PageLink>
       </div>
       {lightbox && (
         <GalleryLightbox {...lightbox} photos={homeGallery} onClose={() => setLightbox(null)} />

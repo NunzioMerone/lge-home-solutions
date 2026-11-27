@@ -24,7 +24,7 @@ export function Hero({ active }: PageActivityProps) {
     const secondAlpha = String(continuation?.opacity ?? 0)
 
     if (lead.textContent !== phrase) lead.textContent = phrase
-    if (lead.style.maskPosition !== mask) lead.style.maskPosition = mask
+    if (headline.style.maskPosition !== mask) headline.style.maskPosition = mask
     if (lead.style.opacity !== leadAlpha) lead.style.opacity = leadAlpha
     if (secondLine.textContent !== secondPhrase) secondLine.textContent = secondPhrase
     if (secondLine.style.opacity !== secondAlpha) secondLine.style.opacity = secondAlpha
@@ -52,19 +52,19 @@ export function Hero({ active }: PageActivityProps) {
                   <span className={styles.reserve} key={startFrame}>
                     {phrase}
                     {continuation && (
-                      <span className={styles.continuation}>{continuation.phrase}</span>
+                      <>
+                        <br />
+                        {continuation.phrase}
+                      </>
                     )}
                   </span>
                 ))}
                 <span ref={headlineRef} className={styles.live}>
-                  <span ref={leadRef} className={styles.lead} data-hero-text>
+                  <span ref={leadRef} data-hero-text>
                     {heroCopy.phrases.light}
                   </span>
-                  <span
-                    ref={continuationRef}
-                    className={styles.continuation}
-                    data-hero-continuation
-                  />
+                  <br />
+                  <span ref={continuationRef} data-hero-continuation />
                 </span>
               </span>
             </span>

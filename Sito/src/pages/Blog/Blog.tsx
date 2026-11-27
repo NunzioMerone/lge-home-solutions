@@ -1,4 +1,6 @@
-import { Link, useSearchParams } from 'react-router-dom'
+import { useHydrated } from '../../hooks/useHydrated'
+import { useSearchParams } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { BlogLayout } from '../../components/blog/BlogLayout'
 import { BlogCard } from '../../components/blog/BlogCard'
 import { BlogContact } from '../../components/blog/BlogContact'
@@ -9,7 +11,8 @@ import styles from '../../components/blog/Blog.module.css'
 
 export function Blog() {
   const [params] = useSearchParams()
-  const selected = parseBlogFilter(params.get('argomento'), blogCategories)
+  const hydrated = useHydrated()
+  const selected = parseBlogFilter(hydrated ? params.get('argomento') : null, blogCategories)
   const posts =
     selected === 'tutti' ? blogPosts : blogPosts.filter((post) => post.category === selected)
   const introRef = useSectionReveal({ duration: 1.1, stagger: 0.12 })
@@ -32,22 +35,22 @@ export function Blog() {
           tabIndex={-1}
         >
           <nav className={styles.filters} aria-label="Argomenti del blog" ref={filtersRef}>
-            <Link
+            <PageLink
               to={getBlogFilterPath('tutti')}
               aria-current={selected === 'tutti' ? 'page' : undefined}
               data-reveal
             >
               Tutti
-            </Link>
+            </PageLink>
             {blogCategories.map((item) => (
-              <Link
+              <PageLink
                 key={item.id}
                 to={getBlogFilterPath(item.id)}
                 aria-current={selected === item.id ? 'page' : undefined}
                 data-reveal
               >
                 {item.label}
-              </Link>
+              </PageLink>
             ))}
           </nav>
           <p className="sr-only" role="status" aria-atomic="true">

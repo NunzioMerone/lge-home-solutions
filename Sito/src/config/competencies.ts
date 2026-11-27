@@ -1,6 +1,6 @@
 export const competenciesPage = {
   path: '/competenze',
-  title: 'Competenze — LGE Home Solutions',
+  title: 'Posa qualificata di serramenti — LGE Home Solutions',
   description:
-    'Le competenze LGE nella progettazione e posa dei serramenti e nella termografia, con attestati e riconoscimenti.',
+    'Dal controllo del vano alla verifica delle ante, scopri come lavorano i posatori LGE. Consulta i certificati DEKRA e gli attestati PosaClima e di termografia.',
 } as const

@@ -23,6 +23,8 @@ export interface BlogPost {
   category: BlogCategoryId
   title: string
   excerpt: string
+  seoTitle: string
+  seoDescription: string
   image: BlogImage
 }
 

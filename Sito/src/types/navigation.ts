@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ComponentType, ReactNode } from 'react'
 
 export interface MobileMenuProps {
   open: boolean
@@ -28,4 +28,8 @@ export interface PageLoadBoundaryProps {
 
 export interface PageLoadBoundaryState {
   failed: boolean
+}
+
+export interface DeferredInformationRouteProps {
+  getPage: () => ComponentType
 }

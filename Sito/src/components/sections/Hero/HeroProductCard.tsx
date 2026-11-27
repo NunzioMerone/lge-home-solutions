@@ -1,17 +1,26 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../ui/PageLink'
 import type { HeroProductCardProps } from '../../../types/hero'
 import { Icon } from '../../ui/Icon'
 import { ResponsiveImage } from '../../ui/ResponsiveImage'
 import { useProductTransition } from '../../../hooks/useProductTransition'
+import { deferredProductPages } from '../../../utils/productPages'
 import styles from './HeroProducts.module.css'
 
 export function HeroProductCard({ product, description }: HeroProductCardProps) {
   const { openFromCard } = useProductTransition()
+  const preparePage = () => {
+    void deferredProductPages
+      .get(product.path)
+      ?.prepare()
+      ?.catch(() => {})
+  }
   return (
-    <Link
+    <PageLink
       className={styles.card}
       data-photo={product.id}
       to={product.path}
+      onPointerEnter={preparePage}
+      onFocus={preparePage}
       onClick={(event) => openFromCard(event, product.path)}
       aria-label={`Scopri ${product.title}`}
       aria-describedby={`hero-description-${product.id}`}
@@ -32,6 +41,6 @@ export function HeroProductCard({ product, description }: HeroProductCardProps) 
         </div>
         <p id={`hero-description-${product.id}`}>{description}</p>
       </div>
-    </Link>
+    </PageLink>
   )
 }

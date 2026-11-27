@@ -1,4 +1,4 @@
-"""Render a partner edit for the homepage. Requires FFmpeg and the local originals."""
+"""Render a partner edit for the homepage. Requires FFmpeg, cwebp for WebP posters, and the local originals."""
 
 from __future__ import annotations
 
@@ -36,20 +36,33 @@ def timeline(edit: dict) -> list[tuple[int, int]]:
     return intervals
 
 
-def load_edit(path: Path) -> dict:
+def source_library(path: Path) -> dict:
     recipe = json.loads(path.read_text())
     if "baseEdit" not in recipe:
         return recipe
 
-    base = json.loads(path.with_name(recipe["baseEdit"]).read_text())
+    base = source_library(path.with_name(recipe["baseEdit"]))
+    encodes = {
+        name: {**profile, **recipe.get("encodes", {}).get(name, {})}
+        for name, profile in base["encodes"].items()
+    }
+    # Keep original shot numbers stable across successive edits.
+    return {**base, **recipe, "encodes": encodes, "shots": base["shots"] + recipe.get("additionalShots", [])}
+
+
+def load_edit(path: Path) -> dict:
+    recipe = source_library(path)
+    if "baseEdit" not in recipe:
+        return recipe
+
     chapters = recipe["chapters"]
-    source_shots = base["shots"] + recipe.get("additionalShots", [])
+    source_shots = recipe["shots"]
     # Shot numbers refer to the combined source list, starting at one.
     order = [number for chapter in chapters.values() for number in chapter["shots"]]
-    if sorted(order) != list(range(1, len(source_shots) + 1)):
-        raise ValueError("The chapter order must use each source shot once.")
+    if sorted(order + recipe.get("omittedShots", [])) != list(range(1, len(source_shots) + 1)):
+        raise ValueError("Every source shot must be included exactly once or explicitly omitted.")
 
-    edit = {**base, "revision": recipe["revision"], "shots": [source_shots[i - 1] for i in order]}
+    edit = {**recipe, "shots": [source_shots[i - 1] for i in order]}
     intervals = timeline(edit)
     index = 0
     for name, chapter in chapters.items():
@@ -120,6 +133,27 @@ def prepare_shot(index: int, cache: Path, edit: dict, intervals: list[tuple[int,
     return path
 
 
+def shot_framing(shot: dict, layout: str, width: int, height: int) -> str:
+    center = shot["centerX"].get(layout, 0.5)
+    crop = f"crop='min(iw,ih*{width}/{height})':ih:'clip(iw*{center}-ow/2,0,iw-ow)':0"
+    return f"{crop},scale={width}:{height}:flags=lanczos,setsar=1"
+
+
+def webp_poster(first_shot: Path, target: Path, edit: dict, layout: str) -> None:
+    # Match the first visible frame and crop, before the final video compression.
+    preroll = frame_at(edit["loopPrerollFrames"], edit)
+    framing = shot_framing(edit["shots"][0], layout, *edit["encodes"][layout]["size"])
+    image = subprocess.check_output([
+        "ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error", "-i", str(first_shot),
+        "-vf", f"trim=start_frame={preroll},{framing},format=rgb24", "-frames:v", "1",
+        "-f", "image2pipe", "-c:v", "png", "pipe:1",
+    ])
+    subprocess.run([
+        "cwebp", "-quiet", "-q", str(edit["posterWebpQuality"]), "-m", "6", "-sharp_yuv",
+        "-o", str(target), "--", "-",
+    ], input=image, check=True)
+
+
 def compose(name: str, paths: list[Path], destination: Path, edit: dict, intervals: list[tuple[int, int]]) -> None:
     efficient = name == "mobile-hevc"
     layout = "mobile" if efficient else name
@@ -129,10 +163,8 @@ def compose(name: str, paths: list[Path], destination: Path, edit: dict, interva
     inputs, graph = [], []
     for i, (shot, path) in enumerate(zip(edit["shots"], paths)):
         inputs.extend(["-threads", "1", "-i", str(path)])
-        center = shot["centerX"].get(layout, 0.5)
-        crop = f"crop='min(iw,ih*{width}/{height})':ih:'clip(iw*{center}-ow/2,0,iw-ow)':0"
         graph.append(
-            f"[{i}:v]fps={fps},{crop},scale={width}:{height}:flags=lanczos,setsar=1,"
+            f"[{i}:v]fps={fps},{shot_framing(shot, layout, width, height)},"
             f"format=yuv444p,settb=1/{fps},setpts=N[s{i}]"
         )
 
@@ -155,15 +187,16 @@ def compose(name: str, paths: list[Path], destination: Path, edit: dict, interva
         "format=yuv420p[out]"
     )
     rate = profile["maxrateKbps"]
+    preset = edit.get("encoderPreset", "medium")
     # Keep 720p/portrait AVC decodable on mobile, including older Safari.
     if efficient:
         codec = [
-            "-c:v", "libx265", "-tag:v", "hvc1", "-preset", "medium",
+            "-c:v", "libx265", "-tag:v", "hvc1", "-preset", preset,
             "-x265-params", "pools=2:frame-threads=2:ref=2:bframes=2:level-idc=4.0:log-level=error",
         ]
     else:
         level = "4.2" if width * height > 1280 * 720 else "4.1"
-        codec = ["-c:v", "libx264", "-profile:v", "high", "-level:v", level, "-preset", "medium", "-threads", "4", "-refs", "3"]
+        codec = ["-c:v", "libx264", "-profile:v", "high", "-level:v", level, "-preset", preset, "-threads", "4", "-refs", "3"]
     stem = f"hero-{layout}-{edit['revision']}"
     target = destination / (stem + ("-hevc.mp4" if efficient else ".mp4"))
     temp = target.with_suffix(".tmp.mp4")
@@ -176,14 +209,16 @@ def compose(name: str, paths: list[Path], destination: Path, edit: dict, interva
         "-movflags", "+faststart", str(temp),
     ])
     temp.replace(target)
-    if not efficient:
+    if not efficient and "posterWebpQuality" in edit:
+        webp_poster(paths[0], destination / (stem + "-poster.webp"), edit, layout)
+    elif not efficient:
         ffmpeg(["-i", str(target), "-frames:v", "1", "-q:v", "2", str(destination / (stem + "-poster.jpg"))])
     print(f"Encoded {target.name}", flush=True)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev23.json", help="Editing recipe to render.")
+    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev24.json", help="Editing recipe to render.")
     parser.add_argument("--destination", type=Path, default=SITE / "public/media/hero")
     parser.add_argument("--work-dir", type=Path, help="Keep prepared shots here for inspection.")
     args = parser.parse_args()

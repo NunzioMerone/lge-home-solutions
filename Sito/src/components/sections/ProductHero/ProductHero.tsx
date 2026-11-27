@@ -1,3 +1,4 @@
+import { useHydrated } from '../../../hooks/useHydrated'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { heroPhotos } from '../../../data/heroPhotos'
@@ -21,7 +22,8 @@ export function ProductHero({
   const { arrive } = useProductTransition()
   const [settledPhoto, setSettledPhoto] = useState<{ id: PhotoId; ready: boolean } | null>(null)
   const loaded = settledPhoto?.id === product.id && settledPhoto.ready
-  const state: unknown = useLocation().state
+  const location = useLocation()
+  const state: unknown = useHydrated() ? location.state : null
   // Keep the card's painted bitmap while the larger responsive candidate decodes.
   const preview =
     !loaded &&

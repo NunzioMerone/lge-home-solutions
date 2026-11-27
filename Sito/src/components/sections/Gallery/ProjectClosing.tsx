@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../ui/PageLink'
 import { contacts } from '../../../config/contacts'
 import type { ProjectClosingProps } from '../../../types/gallery'
 import { Icon } from '../../ui/Icon'
@@ -76,9 +76,9 @@ export function ProjectClosing({
               <figcaption className={styles.caption}>
                 <span>Una realizzazione LGE</span>
                 {showroom && (
-                  <Link className={styles.link} to={showroom.worksPath}>
+                  <PageLink className={styles.link} to={showroom.worksPath}>
                     {showroom.worksLabel} <Icon name="arrow" />
-                  </Link>
+                  </PageLink>
                 )}
               </figcaption>
             </figure>

@@ -11,6 +11,7 @@ import type {
 import { createProductImageTransition } from '../../utils/productImageTransition'
 import { deferredProductPages } from '../../utils/productPages'
 import { waitForImage } from '../../utils/imageReady'
+import { pagePathname } from '../../utils/pagePath'
 
 export function ProductTransitionProvider({ children }: ProductTransitionProviderProps) {
   const active = useRef<ProductImageTransition | null>(null)
@@ -36,13 +37,16 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
       if (!image) return
       event.preventDefault()
       if (active.current || pending.current) return
+      const destination = pagePathname(path)
       const open = () => {
         active.current = createProductImageTransition(card, image, path, () => {
           active.current = null
         })
         try {
           flushSync(() =>
-            navigate(path, { state: { productPhotoPreview: image.currentSrc || image.src } }),
+            navigate(destination, {
+              state: { productPhotoPreview: image.currentSrc || image.src },
+            }),
           )
         } catch (error) {
           active.current?.cancel()
@@ -65,7 +69,7 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
         controller.abort()
         if (!card.isConnected) return
         if (ready) open()
-        else navigate(path)
+        else navigate(destination)
       }
       const timeout = window.setTimeout(() => settle(false), 2200)
       controller.signal.addEventListener(
@@ -94,7 +98,7 @@ export function ProductTransitionProvider({ children }: ProductTransitionProvide
   useEffect(() => {
     pending.current?.abort()
     pending.current = null
-    if (active.current && (active.current.path !== pathname || reducedMotion)) {
+    if (active.current && (pagePathname(active.current.path) !== pathname || reducedMotion)) {
       active.current.cancel()
     }
   }, [pathname, reducedMotion])

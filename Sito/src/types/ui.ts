@@ -5,6 +5,11 @@ export interface IconProps {
   name: IconName
   className?: string | undefined
 }
+export interface ProductOptionDetailsProps {
+  active: boolean
+  label: string
+  children: ReactNode
+}
 export interface ResponsiveImageProps {
   photo: PhotoId
   collection?: 'photos' | 'hero'

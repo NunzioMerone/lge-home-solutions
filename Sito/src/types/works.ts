@@ -32,7 +32,7 @@ export interface WorkCategoryLabelProps {
 export interface WorkGalleryProps {
   photos: readonly GalleryPhoto[]
   title: string
-  onOpen: (photo: GalleryPhoto, trigger: HTMLButtonElement) => void
+  onOpen: (photo: GalleryPhoto, trigger: HTMLAnchorElement) => void
 }
 
 export interface WorkPhotoColumn {
@@ -42,7 +42,8 @@ export interface WorkPhotoColumn {
 
 export interface WorkPhotoProps {
   photo: GalleryPhoto
-  onOpen: (photo: GalleryPhoto, trigger: HTMLButtonElement) => void
+  interactive: boolean
+  onOpen: WorkGalleryProps['onOpen']
 }
 
 export interface WorkFilterPhotoProps {

@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { PageLink } from '../ui/PageLink'
 import type { PageLoadBoundaryProps, PageLoadBoundaryState } from '../../types/navigation'
 import styles from './RouteStatus.module.css'
 
@@ -19,7 +19,7 @@ export class PageLoadBoundary extends Component<PageLoadBoundaryProps, PageLoadB
         <button type="button" onClick={() => window.location.reload()}>
           Riprova
         </button>
-        <Link to="/#inizio">Torna alla homepage</Link>
+        <PageLink to="/#inizio">Torna alla homepage</PageLink>
       </main>
     )
   }

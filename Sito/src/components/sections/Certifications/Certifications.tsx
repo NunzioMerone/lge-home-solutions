@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../ui/PageLink'
 import { competenciesPage } from '../../../config/competencies'
 import { competencyHighlights } from '../../../data/competencies'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
@@ -41,10 +41,10 @@ export function Certifications() {
           ))}
         </div>
         <div className={styles.details} data-reveal>
-          <Link className={styles.detailsLink} to={competenciesPage.path}>
+          <PageLink className={styles.detailsLink} to={competenciesPage.path}>
             Le nostre certificazioni
             <Icon name="arrow" />
-          </Link>
+          </PageLink>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import type { ShutterGroup, ShutterSolution } from '../types/shutters'
 
 const sikurHome = 'https://www.sikurhome.it'
-const cosmetShutterBrochure = {
+export const cosmetShutterBrochure = {
   label: 'Sfoglia la brochure COSMET',
   url: 'https://cosmetgroup.it/wp-content/uploads/2026/07/Alwo-Flyer-A4-5-ante_Persiane-Aurora-Astra-Luna-980X301.pdf',
 }

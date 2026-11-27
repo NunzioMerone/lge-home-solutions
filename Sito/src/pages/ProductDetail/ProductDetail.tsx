@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
@@ -22,9 +22,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   return (
     <div className={styles.page}>
-      <Link className="skip-link" to={`#${windowCollection.id}`}>
+      <PageLink className="skip-link" to={`#${windowCollection.id}`}>
         Vai ai modelli e ai cataloghi COSMET
-      </Link>
+      </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
@@ -40,9 +40,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
           description="Infissi in legno alluminio, alluminio e PVC. Battente o scorrevole? Scegli con noi l’apertura giusta per i tuoi spazi."
         >
           <div className={styles.actions}>
-            <Link className={styles.button} to={`#${windowCollection.configuratorId}`}>
+            <PageLink className={styles.button} to={`#${windowCollection.configuratorId}`}>
               Configura il tuo infisso <Icon name="down" />
-            </Link>
+            </PageLink>
           </div>
         </ProductHero>
 

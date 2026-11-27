@@ -3,19 +3,30 @@ import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
 import { Icon } from '../../components/ui/Icon'
 import { Skeleton } from '../../components/ui/Skeleton'
 import type { WorkPhotoProps } from '../../types/works'
+import { galleryImageUrl } from '../../utils/galleryImages'
 import styles from './Works.module.css'
 
-export function WorkPhoto({ photo, onOpen }: WorkPhotoProps) {
+export function WorkPhoto({ photo, interactive, onOpen }: WorkPhotoProps) {
   const [settled, setSettled] = useState(false)
   return (
-    <button
+    <a
       className={styles.photo}
       data-photo-id={photo.id}
       data-loaded={settled}
-      type="button"
+      href={galleryImageUrl(photo, photo.fullWidth)}
       aria-label={`Ingrandisci foto: ${photo.alt}`}
-      aria-haspopup="dialog"
-      onClick={(event) => onOpen(photo, event.currentTarget)}
+      aria-haspopup={interactive ? 'dialog' : undefined}
+      onClick={(event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey)
+          return
+        event.preventDefault()
+        onOpen(photo, event.currentTarget)
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== ' ' || event.repeat) return
+        event.preventDefault()
+        onOpen(photo, event.currentTarget)
+      }}
     >
       <GalleryImage
         photo={photo}
@@ -26,6 +37,6 @@ export function WorkPhoto({ photo, onOpen }: WorkPhotoProps) {
       <span className={styles.photoHint} aria-hidden="true">
         <Icon name="external" />
       </span>
-    </button>
+    </a>
   )
 }

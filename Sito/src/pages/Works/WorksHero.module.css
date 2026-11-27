@@ -39,11 +39,10 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 47%;
-  opacity: 0;
   transition: opacity 450ms var(--ease-out);
 }
-.media[data-settled='true'] img {
-  opacity: 1;
+:global(:root[data-motion]) .media[data-settled='false'] img {
+  opacity: 0;
 }
 .media .placeholder {
   position: absolute;

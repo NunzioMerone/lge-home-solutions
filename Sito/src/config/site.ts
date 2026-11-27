@@ -2,10 +2,10 @@ import { assetUrl } from '../utils/assetUrl'
 
 export const site = {
   name: 'LGE Home Solutions',
-  title: 'LGE Home Solutions — Il design per il tuo benessere',
+  title: 'Serramenti, porte e outdoor a Monte di Procida — LGE',
   description:
-    'LGE Home Solutions, Monte di Procida. Infissi, porte, oscuranti e soluzioni outdoor: il design per il tuo benessere.',
-  logo: assetUrl('img/brand/lge-navbar-horizontal-flat.webp'),
+    'Scopri infissi, oscuranti, porte e pergole di LGE. Visita su appuntamento lo showroom in via Roma 29 a Monte di Procida, nei Campi Flegrei.',
+  logo: assetUrl('img/brand/lge-navbar-864.webp'),
   colorLogo: assetUrl('img/brand/lge-horizontal-color.webp'),
   whiteLogo: assetUrl('img/brand/lge-footer-white-official.png'),
   sections: [

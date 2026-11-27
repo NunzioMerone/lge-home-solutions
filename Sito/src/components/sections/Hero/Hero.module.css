@@ -118,20 +118,14 @@
 .reserve {
   visibility: hidden;
 }
-.lead {
-  display: block;
+/* Both timed lines belong to the same text block from the first paint. */
+.live {
   padding-block: 0.16em;
   margin-block: -0.16em;
   mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
   mask-size: 250% 100%;
   mask-position: 0% 0%;
   mask-repeat: no-repeat;
-}
-.continuation {
-  display: block;
-}
-.continuation:empty {
-  display: none;
 }
 .subtitle {
   max-width: 340px;

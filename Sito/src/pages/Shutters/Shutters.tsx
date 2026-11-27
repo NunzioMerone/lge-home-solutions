@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
@@ -24,9 +24,9 @@ export function Shutters({ product }: ProductDetailProps) {
 
   return (
     <div className={styles.page}>
-      <Link className="skip-link" to={`#${solutionsId}`}>
+      <PageLink className="skip-link" to={`#${solutionsId}`}>
         Vai alle soluzioni oscuranti
-      </Link>
+      </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
@@ -42,9 +42,9 @@ export function Shutters({ product }: ProductDetailProps) {
           description="La luce giusta cambia il modo di vivere ogni ambiente. Con gli oscuranti puoi regolare la luminosità, e ottenere contemporaneamente privacy e sicurezza, creando il comfort ideale per la tua casa."
         >
           <div className={styles.actions}>
-            <Link className={styles.button} to={`#${solutionsId}`}>
+            <PageLink className={styles.button} to={`#${solutionsId}`}>
               Scopri di più <Icon name="down" />
-            </Link>
+            </PageLink>
           </div>
         </ProductHero>
 
@@ -91,7 +91,12 @@ export function Shutters({ product }: ProductDetailProps) {
             <ul className={styles.catalogList} role="list">
               {shutterCatalogs.map((catalog) => (
                 <li key={catalog.id} data-reveal>
-                  <a href={catalog.url} target="_blank" rel="noopener noreferrer">
+                  <a
+                    data-analytics-catalog
+                    href={catalog.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span className={styles.catalogArt} data-cover={catalog.id} aria-hidden="true">
                       <Icon name={catalog.id === 'security' ? 'shield' : 'screen'} />
                     </span>

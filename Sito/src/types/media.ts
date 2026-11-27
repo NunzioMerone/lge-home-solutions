@@ -1,3 +1,13 @@
+import type { ComponentPropsWithoutRef } from 'react'
+
+export interface SettledImageProps extends Omit<
+  ComponentPropsWithoutRef<'img'>,
+  'onLoad' | 'onError'
+> {
+  onSettled: (ready: boolean) => void
+  decodeBeforeSettling?: boolean
+}
+
 export type DecodableImage = Pick<HTMLImageElement, 'complete' | 'naturalWidth' | 'decode'>
 
 export interface ImageReadinessOptions {

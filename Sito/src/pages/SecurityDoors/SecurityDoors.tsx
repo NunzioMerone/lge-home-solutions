@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
@@ -25,9 +25,9 @@ export function SecurityDoors({ product }: ProductDetailProps) {
 
   return (
     <div className={styles.page}>
-      <Link className="skip-link" to={`#${studioId}`}>
+      <PageLink className="skip-link" to={`#${studioId}`}>
         Vai alla scelta delle porte d’ingresso
-      </Link>
+      </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
         <ProductHero
@@ -46,9 +46,9 @@ export function SecurityDoors({ product }: ProductDetailProps) {
           ]}
         >
           <div className={styles.actions}>
-            <Link className={styles.button} to={`#${studioId}`}>
+            <PageLink className={styles.button} to={`#${studioId}`}>
               Scopri di più <Icon name="down" />
-            </Link>
+            </PageLink>
           </div>
         </ProductHero>
 

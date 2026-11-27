@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
+import { ProductOptionDetails } from '../../components/ui/ProductOptionDetails'
+import options from '../../components/ui/ProductOptionDetails.module.css'
 import { Icon } from '../../components/ui/Icon'
 import { interiorDoorOpenings } from '../../data/interiorDoors'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
@@ -26,7 +28,11 @@ export function InteriorDoorOpenings() {
         </header>
 
         <div className={styles.openingInteractive} data-reveal>
-          <div className={styles.openingControls} role="group" aria-label="Tipi di apertura">
+          <div
+            className={`${styles.openingControls} ${options.controls}`}
+            role="group"
+            aria-label="Tipi di apertura"
+          >
             {interiorDoorOpenings.map((option) => (
               <button
                 key={option.id}
@@ -51,20 +57,29 @@ export function InteriorDoorOpenings() {
               <figcaption>Foto di catalogo I-PEA</figcaption>
             </figure>
             <div className={styles.openingDetail}>
-              <div aria-live="polite">
-                <h3>{opening.headline}</h3>
-                <p className={styles.body}>{opening.detail}</p>
-              </div>
-              <p className={styles.openingModel}>I-PEA · {opening.model}</p>
-              <a
-                className={styles.inlineLink}
-                href={opening.referenceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Vedi la foto nel catalogo <Icon name="external" />
-                <span className="sr-only"> ({opening.model}, nuova scheda)</span>
-              </a>
+              {interiorDoorOpenings.map((option) => (
+                <ProductOptionDetails
+                  key={option.id}
+                  active={option === opening}
+                  label={option.title}
+                >
+                  <div aria-live="polite">
+                    <h3>{option.headline}</h3>
+                    <p className={styles.body}>{option.detail}</p>
+                  </div>
+                  <p className={styles.openingModel}>I-PEA · {option.model}</p>
+                  <a
+                    className={styles.inlineLink}
+                    data-analytics-catalog
+                    href={option.referenceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Vedi la foto nel catalogo <Icon name="external" />
+                    <span className="sr-only"> ({option.model}, nuova scheda)</span>
+                  </a>
+                </ProductOptionDetails>
+              ))}
             </div>
           </div>
         </div>

@@ -39,6 +39,7 @@ export function GibusCatalogs() {
           </p>
           <a
             className={styles.inlineLink}
+            data-analytics-catalog
             href={gibusCatalogUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -72,7 +73,12 @@ export function GibusCatalogs() {
                 <ul id={panelId} className={styles.catalogList} role="list" hidden={!expanded}>
                   {group.solutions.map((solution) => (
                     <li key={solution.id}>
-                      <a href={solution.catalogUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        data-analytics-catalog
+                        href={solution.catalogUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span>{solution.title}</span>
                         <small>PDF</small>
                         <Icon name="external" />

@@ -3,6 +3,7 @@ import { photos } from '../../data/photos'
 import { heroPhotos } from '../../data/heroPhotos'
 import type { ResponsiveImageProps } from '../../types/ui'
 import { assetUrl } from '../../utils/assetUrl'
+import { SettledImage } from './SettledImage'
 import styles from './ResponsiveImage.module.css'
 
 export function ResponsiveImage({
@@ -14,10 +15,11 @@ export function ResponsiveImage({
   decorative = false,
   onSettled,
 }: ResponsiveImageProps) {
-  const [failed, setFailed] = useState(false)
+  const [failedSource, setFailedSource] = useState<string | null>(null)
   const asset = collection === 'hero' ? heroPhotos[photo] : photos[photo]
   const [smallWidth, largeWidth] = collection === 'hero' ? [480, 960] : [640, 1024]
-  if (failed)
+  const src = assetUrl(`img/${collection}/${photo}-${smallWidth}.webp`)
+  if (failedSource === src)
     return (
       <div
         className={`${styles.fallback} ${className ?? ''}`}
@@ -28,9 +30,9 @@ export function ResponsiveImage({
       </div>
     )
   return (
-    <img
+    <SettledImage
       className={className}
-      src={assetUrl(`img/${collection}/${photo}-${smallWidth}.webp`)}
+      src={src}
       srcSet={`${assetUrl(`img/${collection}/${photo}-${smallWidth}.webp`)} ${smallWidth}w, ${assetUrl(`img/${collection}/${photo}-${largeWidth}.webp`)} ${largeWidth}w`}
       sizes={sizes}
       width={asset.width}
@@ -40,22 +42,10 @@ export function ResponsiveImage({
       fetchPriority={critical ? 'high' : 'auto'}
       decoding="async"
       data-critical={critical || undefined}
-      onLoad={
-        onSettled &&
-        ((event) => {
-          if (!critical) {
-            onSettled(true)
-            return
-          }
-          void event.currentTarget.decode().then(
-            () => onSettled(true),
-            () => onSettled(false),
-          )
-        })
-      }
-      onError={() => {
-        setFailed(true)
-        onSettled?.(false)
+      decodeBeforeSettling={critical && Boolean(onSettled)}
+      onSettled={(ready) => {
+        setFailedSource(ready ? null : src)
+        onSettled?.(ready)
       }}
     />
   )

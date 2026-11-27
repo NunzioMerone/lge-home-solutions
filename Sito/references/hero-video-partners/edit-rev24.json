@@ -1,0 +1,31 @@
+{
+  "baseEdit": "edit-rev23.json",
+  "revision": "rev24",
+  "outputFrameRate": 60,
+  "durationFrames": 2974,
+  "loopStartFrame": 2938,
+  "omittedShots": [8, 11],
+  "posterWebpQuality": 82,
+  "encoderPreset": "slow",
+  "encodes": {
+    "desktop": { "crf": 21, "maxrateKbps": 4850 },
+    "wide-compact": { "crf": 22, "maxrateKbps": 2200 },
+    "tablet": { "crf": 22, "maxrateKbps": 2650 },
+    "tablet-portrait": { "crf": 22, "maxrateKbps": 2650 },
+    "mobile": { "crf": 23, "maxrateKbps": 1450 },
+    "mobile-hevc": { "crf": 24, "maxrateKbps": 1250 }
+  },
+  "chapters": {
+    "light": { "startFrame": 0, "shots": [1, 6, 4, 13, 2] },
+    "comfort": {
+      "startFrame": 1082,
+      "shots": [17, 18, 10],
+      "headlineOffsetFrames": 31,
+      "revealFrames": 36,
+      "continuation": { "delayFrames": 107, "revealFrames": 29 }
+    },
+    "protection": { "startFrame": 1530, "shots": [5, 14] },
+    "privacy": { "startFrame": 1848, "shots": [9, 12] },
+    "outdoor": { "startFrame": 2168, "shots": [3, 7, 15, 16] }
+  }
+}

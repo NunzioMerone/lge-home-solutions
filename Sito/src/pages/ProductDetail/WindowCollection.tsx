@@ -1,10 +1,20 @@
 import { useId, useRef, useState } from 'react'
+import { ProductOptionDetails } from '../../components/ui/ProductOptionDetails'
+import options from '../../components/ui/ProductOptionDetails.module.css'
 import { Icon } from '../../components/ui/Icon'
 import { windowCollection, windowMaterials, windowOpenings } from '../../data/infissi'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { WindowOpening } from '../../types/infissi'
 import { assetUrl } from '../../utils/assetUrl'
 import styles from './ProductDetail.module.css'
+
+const models = windowMaterials.flatMap((material) =>
+  windowOpenings.map((opening) => ({
+    model: material.models[opening.id],
+    opening: opening.id,
+    label: `${material.name} · ${opening.name} · ${material.models[opening.id].name}`,
+  })),
+)
 
 export function WindowCollection() {
   const section = useSectionReveal()
@@ -35,10 +45,14 @@ export function WindowCollection() {
         </header>
 
         <div data-reveal>
-          <p className={styles.choiceLabel} id={`${id}-materials`}>
+          <p className={`${styles.choiceLabel} ${options.controls}`} id={`${id}-materials`}>
             Materiale
           </p>
-          <div className={styles.materialTabs} role="tablist" aria-labelledby={`${id}-materials`}>
+          <div
+            className={`${styles.materialTabs} ${options.controls}`}
+            role="tablist"
+            aria-labelledby={`${id}-materials`}
+          >
             {windowMaterials.map((option, index) => (
               <button
                 key={option.id}
@@ -84,7 +98,11 @@ export function WindowCollection() {
           >
             <div className={styles.materialBar}>
               <h3>{material.headline}</h3>
-              <div className={styles.openingChoice} role="group" aria-labelledby={`${id}-opening`}>
+              <div
+                className={`${styles.openingChoice} ${options.controls}`}
+                role="group"
+                aria-labelledby={`${id}-opening`}
+              >
                 <span className={styles.choiceLabel} id={`${id}-opening`}>
                   Tipo di apertura
                 </span>
@@ -134,40 +152,46 @@ export function WindowCollection() {
                 <figcaption>Ambientazione COSMET</figcaption>
               </figure>
               <div className={styles.modelCopy} key={active.id}>
-                <div aria-live="polite" aria-atomic="true">
-                  <p className="eyebrow">{opening}</p>
-                  <h4>{active.name}</h4>
-                  <p className={styles.body}>{active.description}</p>
-                </div>
-                <div className={styles.modelLinks}>
-                  {active.brochureUrl && (
-                    <a
-                      className={styles.inlineLink}
-                      href={active.brochureUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Sfoglia la brochure PDF <Icon name="external" />
-                      <span className="sr-only"> {active.name} (nuova scheda)</span>
-                    </a>
-                  )}
-                  <a
-                    className={styles.inlineLink}
-                    href={active.configurationUrl ?? active.productUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {active.configurationUrl ? 'Configura questo modello' : 'Scopri il modello'}{' '}
-                    <Icon name="external" />
-                    <span className="sr-only"> {active.name} (nuova scheda)</span>
-                  </a>
-                </div>
+                {models.map(({ model, opening: modelOpening, label }) => (
+                  <ProductOptionDetails key={model.id} active={model === active} label={label}>
+                    <div aria-live="polite" aria-atomic="true">
+                      <p className="eyebrow">{modelOpening}</p>
+                      <h4>{model.name}</h4>
+                      <p className={styles.body}>{model.description}</p>
+                    </div>
+                    <div className={styles.modelLinks}>
+                      {model.brochureUrl && (
+                        <a
+                          className={styles.inlineLink}
+                          data-analytics-catalog
+                          href={model.brochureUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Sfoglia la brochure PDF <Icon name="external" />
+                          <span className="sr-only"> {model.name} (nuova scheda)</span>
+                        </a>
+                      )}
+                      <a
+                        className={styles.inlineLink}
+                        href={model.configurationUrl ?? model.productUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {model.configurationUrl ? 'Configura questo modello' : 'Scopri il modello'}{' '}
+                        <Icon name="external" />
+                        <span className="sr-only"> {model.name} (nuova scheda)</span>
+                      </a>
+                    </div>
+                  </ProductOptionDetails>
+                ))}
               </div>
             </div>
           </div>
         </div>
         <a
           className={styles.collectionLink}
+          data-analytics-catalog
           href={windowCollection.catalogUrl}
           target="_blank"
           rel="noopener noreferrer"

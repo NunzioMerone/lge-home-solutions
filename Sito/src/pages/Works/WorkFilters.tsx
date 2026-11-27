@@ -1,5 +1,7 @@
+import { useHydrated } from '../../hooks/useHydrated'
 import { useLayoutEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { PageLink } from '../../components/ui/PageLink'
 import { workCategories } from '../../data/works'
 import { ResponsiveImage } from '../../components/ui/ResponsiveImage'
 import { Skeleton } from '../../components/ui/Skeleton'
@@ -25,7 +27,8 @@ function FilterPhoto({ photo }: WorkFilterPhotoProps) {
 }
 
 export function WorkFilters({ selected }: WorkFiltersProps) {
-  const { hash } = useLocation()
+  const location = useLocation()
+  const hash = useHydrated() ? location.hash : ''
   const ref = useSectionReveal({ duration: 1.15, stagger: 0.08 })
   const stripRef = useRef<HTMLDivElement>(null)
 
@@ -52,7 +55,7 @@ export function WorkFilters({ selected }: WorkFiltersProps) {
     >
       <div className="container">
         <div className={styles.filterInner} ref={stripRef}>
-          <Link
+          <PageLink
             to={`${getWorkCategoryPath('tutti')}${hash}`}
             preventScrollReset
             aria-current={selected === 'tutti' ? 'page' : undefined}
@@ -66,9 +69,9 @@ export function WorkFilters({ selected }: WorkFiltersProps) {
               ))}
             </span>
             <span className={styles.filterLabel}>Tutti i lavori</span>
-          </Link>
+          </PageLink>
           {workCategories.map((category) => (
-            <Link
+            <PageLink
               key={category.id}
               to={`${getWorkCategoryPath(category.id)}${hash}`}
               preventScrollReset
@@ -79,7 +82,7 @@ export function WorkFilters({ selected }: WorkFiltersProps) {
             >
               <FilterPhoto photo={category.cover} />
               <span className={styles.filterLabel}>{category.title}</span>
-            </Link>
+            </PageLink>
           ))}
         </div>
       </div>

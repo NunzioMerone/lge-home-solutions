@@ -2,38 +2,38 @@ import type { Product } from '../types/content'
 
 export const windowsPage = {
   path: '/prodotti/infissi',
-  title: 'Infissi COSMET a Monte di Procida — LGE Home Solutions',
+  title: 'Infissi in PVC, alluminio e legno-alluminio — LGE',
   description:
-    'Confronta gli infissi COSMET in legno alluminio, alluminio e PVC, a battente e scorrevoli. Consulta i cataloghi e prova il configuratore ufficiale.',
+    'Confronta finestre a battente e scorrevoli COSMET, sfoglia i cataloghi e prova il configuratore. In showroom a Monte di Procida ti aiutiamo a scegliere.',
 } as const
 
 export const shuttersPage = {
   path: '/prodotti/oscuranti',
-  title: 'Oscuranti a Monte di Procida — LGE Home Solutions',
+  title: 'Persiane e avvolgibili a Monte di Procida — LGE',
   description:
-    'Confronta avvolgibili, cassonetti e motori con le persiane a battente in alluminio e acciaio. Sfoglia i cataloghi e scegli i tuoi oscuranti con LGE.',
+    'Scegli tra persiane a battente in alluminio o acciaio e tapparelle avvolgibili. Esplora cassonetti, motori e cataloghi per regolare luce e privacy in casa.',
 } as const
 
 export const securityDoorsPage = {
   path: '/prodotti/porte-e-sicurezza',
-  title: 'Porte d’ingresso TEHNi ed Effepi a Monte di Procida — LGE Home Solutions',
+  title: 'Porte d’ingresso e blindate a Monte di Procida — LGE',
   description:
-    'Confronta le porte TEHNi in alluminio a taglio termico e le blindate Effepi in acciaio. Sfoglia i cataloghi e scegli il tuo ingresso con LGE.',
+    'Confronta i portoncini TEHNi in alluminio a taglio termico e le porte blindate Effepi in acciaio. Sfoglia i cataloghi e valuta serratura, cerniere e apertura.',
 } as const
 
 export const atelierGibusPage = {
   path: '/atelier-gibus',
-  title: 'Outdoor Gibus a Monte di Procida — LGE Home Solutions',
+  title: 'Atelier Gibus Campi Flegrei — Pergole e tende da sole',
   description:
-    'Pergole bioclimatiche, tende da sole e chiusure vetrate con Atelier Gibus Campi Flegrei. Scopri le soluzioni outdoor e le realizzazioni di LGE Home Solutions.',
+    'Pergole bioclimatiche, tende da sole e vetrate scorrevoli per vivere il terrazzo. Consulta i cataloghi Gibus e visita lo showroom LGE a Monte di Procida.',
   officialUrl: 'https://www.gibus.com/it/',
 } as const
 
 export const interiorDoorsPage = {
   path: '/prodotti/porte-interne',
-  title: 'Porte interne I-PEA a Monte di Procida — LGE Home Solutions',
+  title: 'Porte interne a Monte di Procida — LGE',
   description:
-    'Sfoglia i cataloghi I-PEA di porte interne laccate, in laminato e in vetro. Con LGE scegli finitura, apertura e dettagli per la tua casa.',
+    'Confronta porte a battente, scorrevoli a scomparsa e raso parete. Sfoglia le collezioni I-PEA in laccato, laminato e vetro per scegliere la finitura.',
 } as const
 
 export const detailedProductPages = [

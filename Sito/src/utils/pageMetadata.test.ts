@@ -16,8 +16,8 @@ describe('page metadata across routes', () => {
     })
     for (const post of blogPosts) {
       const path = getBlogPostPath(post.slug)
-      expect(getPageMetadata(path).title).toContain(post.title)
-      expect(getPageMetadata(path).description).toBe(post.excerpt)
+      expect(getPageMetadata(path).title).toBe(post.seoTitle)
+      expect(getPageMetadata(path).description).toBe(post.seoDescription)
       expect(getPageMetadata(`${path}/`)).toEqual(getPageMetadata(path))
     }
   })

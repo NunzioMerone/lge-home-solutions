@@ -26,9 +26,8 @@ export function Contacts({ active }: PageActivityProps) {
               Vieni a <em>trovarci</em>
             </h2>
             <p className={styles.description}>
-              Visita il nostro showroom a Monte di Procida, dove troverai una persona pronta ad
-              ascoltarti, consigliarti e accompagnarti nella scelta delle migliori soluzioni su
-              misura per la tua casa.
+              Visita il nostro showroom a Monte di Procida, vicino a Bacoli. Qui puoi confrontare
+              materiali e finiture e scegliere con noi le soluzioni più adatte alla tua casa.
             </p>
           </header>
           <ShowroomGallery active={active} />

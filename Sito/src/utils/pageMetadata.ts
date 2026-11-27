@@ -16,7 +16,7 @@ export function getPageMetadata(pathname: string): PageMetadata {
   if (path.startsWith(`${blogPage.path}/`)) {
     const post = getBlogPostFromPath(path, blogPosts)
     return post
-      ? { title: `${post.title} — Blog LGE Home Solutions`, description: post.excerpt }
+      ? { title: post.seoTitle, description: post.seoDescription }
       : {
           title: 'Articolo non trovato — Blog LGE Home Solutions',
           description: blogPage.description,
