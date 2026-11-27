@@ -1,6 +1,13 @@
-export interface PrivacyReviewItem {
-  label: string
-  value: string | null
+export interface PrivacyDetails {
+  controller: string
+  address: string
+  contact: string
+  providers: string | null
+  transfers: string | null
+  technicalRetention: string | null
+  contactRetention: string | null
+  publishedContent: string | null
+  legitimateInterests: string | null
 }
 
 export interface PageMetadata {

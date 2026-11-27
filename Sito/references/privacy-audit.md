@@ -1,5 +1,7 @@
 # Verifica tecnica privacy — LGE Home Solutions
 
+**Aggiornamento locale, 27 novembre 2026.** L’informativa visibile riguarda il dominio aziendale su SiteGround e descrive il contatto WhatsApp con Emanuele per i preventivi. Il sito non acquisisce i messaggi. La guida di consegna documenta separatamente l’hosting di anteprima, il criterio di conservazione proposto per le richieste ricevute dall’azienda, le sei fonti ufficiali di SiteGround, i riscontri contrattuali aperti e il ritiro delle copie storiche dei certificati. Gli attestati distribuiti sono minimizzati. GA4 e le integrazioni facoltative sono disattivati nella configurazione verificata. Le sezioni seguenti conservano le osservazioni datate sull’implementazione precedente. [Guida per il titolare e il gestore](../../CONSEGNA_SITO.md)
+
 Data: 29 ottobre 2026. Ambito: codice locale di `Sito/`, asset pubblici, dipendenze dichiarate, configurazione Vite e workflow di pubblicazione. Il controllo documenta il comportamento presente prima dell'integrazione dell'informativa. Non è una certificazione GDPR né una verifica dell'account hosting o delle attività aziendali esterne al sito.
 
 ## Risultato sintetico

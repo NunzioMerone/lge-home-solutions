@@ -1,6 +1,6 @@
 import { PageLink } from '../ui/PageLink'
 import { useHydrated } from '../../hooks/useHydrated'
-import { contacts } from '../../config/contacts'
+import { contacts, instagramLabel, showroomPostalLocality } from '../../config/contacts'
 import { site } from '../../config/site'
 import { privacyPage } from '../../config/privacy'
 import { competenciesPage } from '../../config/competencies'
@@ -23,7 +23,7 @@ export function Footer() {
     },
     {
       icon: 'instagram',
-      label: 'Instagram di LGE Home Solutions',
+      label: instagramLabel,
       href: links.instagram,
     },
     {
@@ -69,7 +69,7 @@ export function Footer() {
                   <span>
                     {contacts.address}
                     <br />
-                    {contacts.locality} ({contacts.province})
+                    {showroomPostalLocality}
                   </span>
                 </a>
                 {links.email && (

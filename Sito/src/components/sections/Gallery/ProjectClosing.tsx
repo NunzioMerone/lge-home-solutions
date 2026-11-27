@@ -1,16 +1,12 @@
 import { useState } from 'react'
 import { PageLink } from '../../ui/PageLink'
-import { contacts } from '../../../config/contacts'
+import { contacts, showroomAddress } from '../../../config/contacts'
 import type { ProjectClosingProps } from '../../../types/gallery'
 import { Icon } from '../../ui/Icon'
 import { Skeleton } from '../../ui/Skeleton'
 import { WhatsAppContactLink } from '../../ui/WhatsAppContactLink'
 import { GalleryImage } from './GalleryImage'
 import styles from './ProjectClosing.module.css'
-
-const showroomAddress = [contacts.address, `${contacts.locality} (${contacts.province})`]
-  .filter(Boolean)
-  .join(', ')
 
 export function ProjectClosing({
   titleId,

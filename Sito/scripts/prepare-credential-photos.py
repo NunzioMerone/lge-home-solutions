@@ -1,4 +1,4 @@
-"""Prepare faithful website derivatives of the supplied credential photographs.
+"""Prepare private archival derivatives of the supplied credential photographs.
 
 No generative reconstruction, inpainting, text replacement, or signature changes.
 Rectification resamples original image pixels; tonal adjustments are global.
@@ -18,8 +18,8 @@ import numpy as np
 from PIL import Image, ImageCms, ImageEnhance, ImageOps
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'Sito/public/documents/competencies'
-MANIFEST = ROOT / 'Sito/references/credential-photo-derivatives.json'
+OUTPUT = ROOT / 'Attestati/derivati-riservati'
+MANIFEST = OUTPUT / 'credential-photo-derivatives.json'
 
 # Corners are visually checked in the oriented image, expressed on a 1824 px
 # long-edge reference. Order: top-left, top-right, bottom-right, bottom-left.
@@ -73,7 +73,7 @@ def perspective_coefficients(source: np.ndarray, width: int, height: int) -> lis
 
 
 def prepare(input_dir: Path, selected: set[str]) -> None:
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    OUTPUT.mkdir(mode=0o700, parents=True, exist_ok=True)
     entries = []
     srgb = ImageCms.createProfile('sRGB')
     for item in PHOTOS:

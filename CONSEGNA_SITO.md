@@ -6,13 +6,48 @@ Questa guida è per il titolare, il manutentore del sito e il professionista che
 
 | Chi | Cosa deve fornire |
 | --- | --- |
-| Responsabile hosting | Origine HTTPS definitiva, scelta tra host con e senza `www`, cartella di pubblicazione, eventuale sottocartella URL, modalità di trasferimento e ripristino, supporto ai redirect e agli errori HTTP. Chiedere anche fornitore, soggetti con accesso, gestione e conservazione dei log, eventuali script statistici già inseriti, paesi e garanzie applicabili. |
+| Responsabile hosting | Per il dominio confermato `https://lgesolutions.it/`, documentare i servizi attivi in Site Tools, i relativi accessi, le informazioni sulla conservazione e il contratto applicabile. Per il passaggio occorrono la cartella web corretta e gli eventuali vecchi URL da reindirizzare. La posta aziendale è già configurata. |
 | Gestore precedente o proprietario Search Console | Accesso alla proprietà esistente, metodi di verifica da conservare, URL del vecchio CMS, vecchie sitemap, PDF importanti, pagine di ingresso e link in entrata. Esportare prima del cambio anche pagine, query, clic e impressioni per il successivo confronto. |
-| Titolare LGE | Conferma del telefono commerciale da mostrare sul Profilo dell’attività su Google, partita IVA e ulteriori dati societari da esporre. Il recapito privacy è distinto. Verificare testi dell’informativa, tempi di conservazione delle richieste, diritti d’uso di foto, video partner e recensioni per il dominio definitivo. |
-| Titolare LGE, per eventuali approfondimenti locali | Comuni effettivamente serviti e, per ciascun lavoro che si vuole descrivere, comune, intervento e permesso di usare foto e descrizione. Il sito colloca lo showroom a Monte di Procida. Il riferimento a Bacoli descrive la vicinanza geografica. |
+| Titolare LGE | La P. IVA comunicata è 09422971219. Riscontrare sulla visura gli estremi d’iscrizione al Registro delle imprese o al REA da pubblicare. Approvare i criteri di conservazione, le basi giuridiche e il testo definitivo dell’informativa. Documentare la pubblicazione delle recensioni, degli attestati nominativi e l’uso commerciale dei materiali di terzi per i quali è registrata soltanto la fonte. [Dati identificativi del prestatore, art. 7](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.articolo.numero=7&atto.codiceRedazionale=003G0090&atto.dataPubblicazioneGazzetta=2003-04-14) |
 | Titolare LGE, solo per GA4 | Autorizzazione all’uso di GA4, proprietà e stream web controllati dall’azienda, identificativo dello stream, responsabile della gestione consensi, impostazioni concordate di conservazione e accesso. |
 
-La denominazione societaria presente nel footer e nei dati strutturati proviene dalla conferma aziendale registrata in `Sito/src/config/privacy.ts`. Per indirizzo, contatti commerciali e scheda Google fare riferimento a `Sito/src/config/contacts.ts` e `Sito/src/config/googlePlaces.ts`. Lo statuto comunale documenta il confine con Bacoli. [Statuto del Comune di Monte di Procida](https://oldsite.comune.montediprocida.na.it/files/documenti/Statuto_monte_di_procida.pdf)
+Il titolare conferma che LGE opera in tutti i Campi Flegrei, compresi Bacoli e Monte di Procida. Lo showroom riceve su appuntamento in via Roma 29, 80070 Monte di Procida (NA). Per scelta dell’azienda gli orari non sono pubblicati e le fotografie dei lavori restano prive di attribuzioni geografiche. Il rinnovo PosaClima è comunicato da LGE. Le fotografie disponibili documentano la scadenza precedente del 12 novembre 2026.
+
+### WhatsApp e approvazione dell’informativa
+
+Il pulsante apre un collegamento esterno a WhatsApp. Emanuele Schiano Lomoriello riceve nell’applicazione le richieste di preventivo inviate dai visitatori. Il sito non acquisisce il contenuto dei messaggi.
+
+**Criterio proposto a Lemuel.** Per un preventivo, fare riferimento alla conclusione della richiesta o dell’eventuale trattativa, ad esempio alla rinuncia del cliente o alla scadenza indicata nell’offerta. Questo criterio può essere riportato nell’informativa se corrisponde a come LGE conserva effettivamente i dati ricevuti. Quando la richiesta si trasforma in ordine, il titolare valuta separatamente quali informazioni continuano a servirgli. Il clic sul pulsante non crea un archivio di chat sul sito. [Garante per la protezione dei dati personali, trasparenza dell’informativa](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/8981258)
+
+Per l’informativa definitiva, concordare anche le basi giuridiche per ogni finalità, gli interessi e il bilanciamento ove pertinenti, l’uso delle recensioni riprese da Google e delle immagini riconoscibili, la pubblicazione degli attestati e i rispettivi criteri di conservazione. L’azienda ha già confermato che chiede il permesso per fotografare e pubblicare i lavori. Per i materiali di terzi contrassegnati come riferimenti ufficiali, verificare la licenza per il dominio commerciale, inclusi gli estratti usati nella hero.
+
+### Hosting e destinatari
+
+La Privacy Policy visibile riguarda `lgesolutions.it` su SiteGround in tutte le build. Il punto 6 indica la durata della preferenza nel browser e la finestra standard di consultazione dei registri degli accessi. Dopo la verifica sull’account, il testo sulla conservazione tecnica si completa con le condizioni effettive. La distinzione fra gli ambienti resta documentata per chi cura la pubblicazione.
+
+GitHub Pages ospita l’anteprima pubblica e registra l’IP per la sicurezza. Per il sito aziendale il contratto SiteGround è intestato a un professionista esterno. Due persone hanno accesso tecnico. Il pannello indica Europa. Il gestore e LGE devono documentare chi opera su istruzioni di chi, quali dati può consultare ciascuno e quali accordi si applicano alla catena contrattuale, incluso l’eventuale rapporto di subresponsabilità. Il testo pubblico usa le categorie professionali dei destinatari. Il titolare conserva le loro identità e determina le informazioni dovute agli interessati. [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection) · [GDPR, artt. 13 e 28](https://eur-lex.europa.eu/eli/reg/2016/679/oj/ita)
+
+| Tema | Cosa documenta SiteGround | Riscontro richiesto per questo sito |
+| --- | --- | --- |
+| Contratto | Il DPA disciplina il trattamento e i trasferimenti. L’elenco dei subresponsabili è disponibile su richiesta. | Identificare la controparte del contratto e il DPA applicabile all’account. Verificare i destinatari effettivi, i trasferimenti fuori SEE e le garanzie applicabili, inclusa la modalità per ottenerne copia. [DPA SiteGround](https://it.siteground.com/viewtos/data_processing_agreement) |
+| Localizzazione | SiteGround elenca più data center, anche in Europa. | Verificare il Paese della sede selezionata per distinguere UE/SEE e Paesi terzi. Per CDN, assistenza e copie verificare separatamente i luoghi effettivi di trattamento. [Data center](https://www.siteground.com/kb/where_are_sitegrounds_servers) |
+| Log | Il registro degli accessi può contenere IP, ora, richiesta, URI, esito, referrer e browser. Il cliente può consultare file di accesso fino a 30 giorni indietro. | Verificare chi accede ai log del dominio e per quanto restano disponibili log di accesso, errore, sicurezza ed eventuali esportazioni. La finestra di consultazione documentata riguarda i log di accesso. [Log di accesso](https://it.siteground.com/kb/trova-i-log-di-accesso) |
+| Backup | Il servizio standard prevede fino a 30 copie giornaliere su hosting condiviso e fino a 7 su Cloud. | Verificare piano, copie effettive, contenuti, luogo, durata e eventuali copie manuali rilevanti per i dati del sito. [Backup](https://it.siteground.com/kb/servizio-di-backup) |
+| Statistiche | Il pannello Traffico offre aggregati e conta gli IP distinti per stimare i visitatori unici. | Verificare quali dati vengono prodotti o consultati, chi li usa, per quale finalità e per quanto tempo. GA4 è un servizio separato e resta disattivato. [Statistiche dei visitatori](https://it.siteground.com/kb/trova-le-statistiche-dei-visitatori) |
+| CDN | La CDN si abilita da Site Tools e può distribuire le risorse da nodi di cache vicini ai visitatori. | Verificare lo stato del dominio e, se attiva, nodi, destinatari, dati tecnici e conservazione pertinenti. [CDN SiteGround](https://it.siteground.com/kb/gestire-cdn) |
+
+La mappa del sito contatta automaticamente i server di tile di OpenStreetMap quando la sezione si avvicina allo schermo. La rete di cache è globale. Nell’informativa OSMF i 180 giorni riguardano i dati dettagliati di Piwik. Non attribuire tale durata a tutte le richieste di tile. Includere questo flusso nella revisione dei destinatari e delle basi giuridiche. [Informativa OpenStreetMap Foundation](https://osmfoundation.org/wiki/Privacy_Policy)
+
+### Ritiro delle copie dei certificati già diffuse
+
+I 18 file da verificare sono i quattro PNG DEKRA e PosaClima in `Sito/references/credentials-supplied/`, i loro otto WebP e, per gli attestati ITC, i due PDF e i quattro WebP in `Sito/public/documents/competencies/`. Su Pages la cartella distribuita è `documents/competencies/`. Prima di pubblicare una nuova versione di un attestato, oscurare fisicamente i dati superflui, controllare anche miniature, metadati e contenuto dei PDF, poi aggiornare le impronte dei soli file verificati in `Sito/references/credential-supplied-derivatives.json`. La build confronta con il manifest anche il contenuto del pacchetto. Gli originali integrali devono restare nel deposito locale escluso da Git e dal pacchetto.
+
+L’aggiornamento di GitHub Pages e del ramo `main` del 27 novembre 2026 è autorizzato per le copie correnti. Gli interventi sullo storico e le richieste a terzi richiedono un’autorizzazione distinta.
+
+1. Informare il titolare dei dati già esposti e degli URL coinvolti, senza inoltrare i documenti integrali. Il titolare valuta l’esposizione e gli eventuali adempimenti.
+2. Aggiornare in GitHub Pages tutte le copie consultabili, anche quelle a URL diretti, e nel repository i PNG di riferimento. Verificare dal browser e per impronta i file ora serviti. Controllare eventuali repliche su altri host.
+3. Individuare versioni precedenti raggiungibili in commit, branch, tag, URL raw, pull request, archivi o artefatti scaricabili. Se occorre intervenire sullo storico, concordare prima portata, ripristino e coordinamento con i collaboratori. Coinvolgere GitHub Support per i riferimenti o le cache non gestibili dal proprietario e contattare gli eventuali gestori di fork. [Rimozione dei dati sensibili da GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+4. Dopo la sostituzione all’origine, verificare le cache di distribuzione e gli eventuali risultati o anteprime dei motori di ricerca. Richiedere l’aggiornamento delle copie obsolete ancora visibili. Il `noindex` della pagina non impedisce l’apertura di un documento tramite il suo URL.
 
 ## 2. Preparare le build
 
@@ -39,7 +74,7 @@ Per la **consegna aziendale**, configurare le variabili nell’ambiente della bu
 | Variabile | Valore e uso |
 | --- | --- |
 | `VITE_PUBLIC_PREVIEW` | `true` per anteprima, `false` esplicito per la consegna. |
-| `VITE_SITE_ORIGIN` | Origine HTTPS confermata dal gestore, comprensiva del nome host scelto. L’eventuale sottocartella si indica tramite `--base`. |
+| `VITE_SITE_ORIGIN` | Per il sito aziendale impostare `https://lgesolutions.it`. L’anteprima lascia vuoto il valore. |
 | `VITE_GOOGLE_SITE_VERIFICATION` | Facoltativa. Solo il valore originale dell’attributo `content` fornito da Google. Lasciare vuota quando si usa il file di verifica o una proprietà DNS già verificata. |
 | `VITE_GA4_AUTHORIZED` | Predefinito `false`. Impostare `true` solo dopo l’approvazione aziendale, la configurazione della proprietà e il collaudo del consenso. |
 | `VITE_GA4_MEASUREMENT_ID` | Vuota per impostazione predefinita. Per GA4 usare l’identificativo reale dello stream web che inizia con `G-`. |

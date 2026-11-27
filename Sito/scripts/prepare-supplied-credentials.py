@@ -1,9 +1,4 @@
-"""Encode the replacement credential PNGs supplied by the user for the website.
-
-Run with Python and Pillow after placing the original PNGs in
-references/credentials-supplied/. This only encodes WebP derivatives and
-resizes thumbnails. It does not crop, retouch, reconstruct, or upscale images.
-"""
+"""Encode only the reviewed, publication-safe PNGs listed in the manifest."""
 from __future__ import annotations
 
 import hashlib
@@ -46,8 +41,7 @@ def prepare_credential(source: CredentialSource) -> dict[str, object]:
     with Image.open(source_path) as image:
         if image.mode != 'RGB':
             raise ValueError(f'Expected the supplied RGB PNG: {source_path.name}')
-        # Keep full-view dimensions and pixels as supplied; only WebP encoding
-        # is applied. Preserve any embedded color profile without converting it.
+        # The source already contains the permanent redactions.
         profile = image.info.get('icc_profile')
         image.save(full_path, 'WEBP', quality=95, method=6, icc_profile=profile)
         thumbnail = image.copy()
@@ -73,15 +67,14 @@ def prepare_credential(source: CredentialSource) -> dict[str, object]:
 
 
 def main() -> None:
+    manifest = json.loads(MANIFEST.read_text())
+    reviewed = {entry['id']: entry for entry in manifest['images']}
+    for source in CREDENTIALS:
+        if sha256(SOURCES / f'{source.slug}.png') != reviewed[source.slug]['sourceSha256']:
+            raise ValueError(f'Unreviewed certificate source: {source.slug}')
     OUTPUT.mkdir(parents=True, exist_ok=True)
     entries = [prepare_credential(source) for source in CREDENTIALS]
-    manifest = {
-        'suppliedOn': '2026-10-29',
-        'source': 'Replacement PNG images supplied directly by the user.',
-        'method': 'WebP encoding at quality 95; thumbnails at quality 85, longest edge 640 px. No cropping, retouching, tonal correction, AI reconstruction, or upscaling.',
-        'supersedes': 'credential-photo-derivatives.json (historical HEIC corrections)',
-        'images': entries,
-    }
+    manifest['images'] = entries
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     for entry in entries:
         print(entry['id'], entry['dimensions'], entry['fullBytes'], entry['thumbnailBytes'])

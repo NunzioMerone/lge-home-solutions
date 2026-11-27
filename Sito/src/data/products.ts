@@ -2,9 +2,9 @@ import type { Product } from '../types/content'
 
 export const windowsPage = {
   path: '/prodotti/infissi',
-  title: 'Infissi in PVC, alluminio e legno-alluminio — LGE',
+  title: 'Infissi a Monte di Procida — LGE Home Solutions',
   description:
-    'Confronta finestre a battente e scorrevoli COSMET, sfoglia i cataloghi e prova il configuratore. In showroom a Monte di Procida ti aiutiamo a scegliere.',
+    'Confronta infissi in PVC, alluminio e legno-alluminio. Sfoglia i cataloghi COSMET e visita su appuntamento lo showroom LGE in via Roma 29.',
 } as const
 
 export const shuttersPage = {

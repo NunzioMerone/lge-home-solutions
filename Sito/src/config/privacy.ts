@@ -1,62 +1,45 @@
-import type { PrivacyReviewItem } from '../types/privacy'
+import type { PrivacyDetails } from '../types/privacy'
 
-// Review record: completed entries record their source, not a legal certification.
-// Remaining checks stay here instead of repeating a checklist in the public-facing text.
-// See references/privacy-audit.md. The privacy phone below is separate from general contacts.
+// The privacy phone is separate from the commercial number.
 export const privacyContact = {
   administrator: 'Lemuel Schiano Lomoriello',
   phone: '+39 329 826 5371',
 } as const
 
-export const privacyReview = {
-  // Company name and address confirmed directly by the user on 29 October 2026.
-  controller: {
-    label: 'denominazione completa del titolare del trattamento',
-    value: 'LGE Home Solutions S.a.s. di Schiano Lomoriello Lemuel',
-  },
-  address: {
-    label: 'sede e indirizzo per le comunicazioni al titolare',
-    value: 'Via Roma, 29 — 80070 Monte di Procida (NA)',
-  },
-  contact: {
-    label: 'email o altro recapito dedicato alle richieste privacy',
-    value: 'info@lgesolutions.it',
-  },
-  providers: {
-    label: 'hosting definitivo, soggetti con accesso ai dati e rispettivi ruoli',
-    value: null,
-  },
-  transfers: {
-    label: 'paesi, garanzie e modalità per ottenerne copia per i trasferimenti applicabili',
-    value: null,
-  },
-  technicalRetention: {
-    label: 'durata o criteri dei log di hosting e mappa, con le relative fonti',
-    value: null,
-  },
-  contactRetention: {
-    label: 'tempi o criteri effettivi di conservazione delle richieste e delle chat aziendali',
-    value: null,
-  },
-  publishedContent: {
-    label: 'base giuridica, informative e conservazione per recensioni e foto riconoscibili',
-    // The user confirms permission to photograph and publish client projects.
-    // Review reuse and the future Google API still require their own assessment.
-    value: null,
-  },
-  legitimateInterests: {
-    label:
-      'valutazione degli interessi legittimi per navigazione, sicurezza, mappa e richieste generiche',
-    value: null,
-  },
-} satisfies Record<string, PrivacyReviewItem>
+export const privacyDetails = {
+  controller: 'LGE Home Solutions S.a.s. di Schiano Lomoriello Lemuel',
+  address: 'Via Roma, 29 — 80070 Monte di Procida (NA)',
+  contact: 'info@lgesolutions.it',
+  providers: null,
+  transfers: null,
+  technicalRetention: null,
+  contactRetention: null,
+  publishedContent: null,
+  legitimateInterests: null,
+} satisfies PrivacyDetails
 
-// Visitor-facing preview copy; internal review status is kept separate above.
+// Only the release check imports the internal review prompts.
+export const privacyReviewLabels = {
+  controller: 'denominazione completa del titolare del trattamento',
+  address: 'sede e indirizzo per le comunicazioni al titolare',
+  contact: 'email o altro recapito dedicato alle richieste privacy',
+  providers:
+    'ruoli e accordi per i due tecnici, catena contrattuale e fornitori dei servizi attivi',
+  transfers: 'paesi, garanzie e modalità per ottenerne copia per i trasferimenti applicabili',
+  technicalRetention:
+    'durate o criteri verificati per log, mappa, statistiche di hosting e copie di sicurezza applicabili',
+  contactRetention:
+    'periodo o criterio effettivo di conservazione delle richieste di contatto e preventivo ricevute da LGE',
+  publishedContent:
+    'presupposti, informative e conservazione per recensioni, foto riconoscibili e attestati nominativi',
+  legitimateInterests:
+    'basi giuridiche per navigazione, sicurezza, mappa e contatti, con valutazione degli interessi legittimi eventualmente invocati',
+} satisfies Record<keyof PrivacyDetails, string>
+
+// This notice describes the company domain in every build.
 export const privacyContent = {
   hostingNotice:
-    'Hosting — da completare. Questa parte sarà perfezionata alla scelta dell’hosting definitivo, indicando il fornitore, la gestione e la conservazione dei dati tecnici ed eventuali trasferimenti di dati fuori dallo Spazio Economico Europeo.',
-  contactRetention:
-    'I dati comunicati per una richiesta sono trattati per il tempo necessario a rispondere e gestire l’eventuale seguito. Una conservazione ulteriore è limitata ai dati necessari per obblighi applicabili o per tutelare un diritto.',
+    'SiteGround fornisce l’hosting di lgesolutions.it. Il data center indicato per il sito è in Europa. I registri degli accessi possono contenere indirizzo IP, data e ora, pagina richiesta, esito della richiesta e informazioni sul browser. Per conto di LGE hanno accesso tecnico il professionista che gestisce l’account di hosting e il collaboratore che cura il sito.',
 } as const
 
 export const privacyPage = {
@@ -75,10 +58,8 @@ export const privacySources = {
   garante:
     'https://www.garanteprivacy.it/home/diritti/come-agire-per-tutelare-i-tuoi-dati-personali',
   cookies: 'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876',
-  githubPages:
-    'https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection',
-  githubPrivacy:
-    'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement',
+  siteGroundDpa: 'https://it.siteground.com/viewtos/data_processing_agreement',
+  siteGroundAccessLogs: 'https://it.siteground.com/kb/trova-i-log-di-accesso',
   osmPrivacy: 'https://osmfoundation.org/wiki/Privacy_Policy',
   whatsappPrivacy: 'https://www.whatsapp.com/legal/privacy-policy-eea',
   googlePrivacy: 'https://policies.google.com/privacy?hl=it',

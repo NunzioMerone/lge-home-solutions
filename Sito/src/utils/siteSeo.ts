@@ -1,4 +1,4 @@
-import { contacts } from '../config/contacts'
+import { contacts, serviceArea } from '../config/contacts'
 import { lgeGooglePlace } from '../config/googlePlaces'
 import { locationMap } from '../config/locationMap'
 import { site } from '../config/site'
@@ -45,6 +45,7 @@ function localBusiness(base: URL | null) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: site.name,
+    areaServed: serviceArea,
     ...(contacts.legalName && { legalName: contacts.legalName }),
     ...(base && {
       '@id': new URL('#showroom', base).href,

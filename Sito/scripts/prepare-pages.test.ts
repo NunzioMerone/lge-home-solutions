@@ -14,16 +14,41 @@ import { galleryImagePath } from '../src/utils/galleryImages'
 import { getPageMetadata } from '../src/utils/pageMetadata'
 import { seoPaths } from '../src/utils/seoFiles'
 import { escapeMarkup } from '../src/utils/siteSeo'
+import { verifyCredentialCopies } from './verify-credential-copies.mjs'
 
 const run = promisify(execFile)
 const project = fileURLToPath(new URL('../', import.meta.url))
 let fixture: string | undefined
+
+function expectCompanyPrivacy(html: string) {
+  const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1]
+  expect(article).toContain('SiteGround fornisce l’hosting di lgesolutions.it')
+  expect(article).toContain('apre una chat con Emanuele per chiedere un preventivo')
+  expect(article).toContain('Il sito non riceve né conserva i messaggi')
+  expect(article).not.toMatch(/github|anteprima|\bbozza\b|da completare|deve ancora/i)
+}
 
 afterEach(async () => {
   if (fixture) await rm(fixture, { recursive: true, force: true })
 })
 
 describe('static website build', () => {
+  it('rejects extra and unreviewed certificate copies, including thumbnails', async () => {
+    fixture = await mkdtemp(join(tmpdir(), 'lge-certificates-test-'))
+    const directory = join(fixture, 'documents/competencies')
+    await cp(join(project, 'public/documents/competencies'), directory, { recursive: true })
+    await verifyCredentialCopies(fixture)
+
+    const extra = join(directory, 'unreviewed.pdf')
+    await writeFile(extra, 'fixture')
+    await expect(verifyCredentialCopies(fixture)).rejects.toThrow(
+      'Unexpected certificate inventory',
+    )
+    await rm(extra)
+    await writeFile(join(directory, 'installation-emanuele-thumb.webp'), 'fixture')
+    await expect(verifyCredentialCopies(fixture)).rejects.toThrow('Unreviewed certificate copy')
+  })
+
   it('renders real page content, route styles and crawl controls below the preview base', async () => {
     fixture = await mkdtemp(join(tmpdir(), 'lge-pages-test-'))
     await writeFile(join(fixture, 'sitemap.xml'), '<urlset />')
@@ -53,12 +78,17 @@ describe('static website build', () => {
       expect(html).toContain(`<title>${escapeMarkup(metadata.title)}</title>`)
       expect(html).toMatch(/<meta name="robots" content="noindex, nofollow"/)
       expect(html.match(/<h1\b/g)).toHaveLength(1)
+      expect(html).toContain('P. IVA 09422971219')
+      expect(html).toContain('80070 Monte di Procida (NA)')
+      expect(html).toContain('Instagram di Atelier Gibus Campi Flegrei (nuova scheda)')
       expect(html).toContain(`href="${base}competenze/"`)
       expect(html).not.toContain('data-route-skeleton')
       if (path !== '/')
         expect(html).toMatch(/rel="modulepreload" crossorigin href="\/lge-home-solutions\/assets\//)
     }
     const works = await readFile(join(fixture, 'lavori/index.html'), 'utf8')
+    const privacy = await readFile(join(fixture, 'privacy-policy/index.html'), 'utf8')
+    expectCompanyPrivacy(privacy)
     const workLinks = new Set(
       Array.from(works.matchAll(/<a\b[^>]*?\bhref="([^"]+)"/g), (m) => m[1]),
     )
@@ -128,9 +158,8 @@ describe('static website build', () => {
     const privacyFile = join(target, 'src/config/privacy.ts')
     const privacySource = await readFile(privacyFile, 'utf8')
     const approvedFixture = privacySource
-      .replaceAll('value: null', "value: 'Test fixture'")
+      .replaceAll(': null,', ": 'Test fixture',")
       .replace('approved: false', 'approved: true')
-      .replace(/hostingNotice:\s*'[^']*',/, "hostingNotice: 'Test fixture',")
     const origin = 'https://www.iana.org' // Existing public syntax only, never contacted.
     const env = {
       ...process.env,
@@ -145,11 +174,20 @@ describe('static website build', () => {
     await expect(run(process.execPath, args, opts)).rejects.toMatchObject({
       stderr: expect.stringContaining('Privacy Policy in bozza'),
     })
+    await writeFile(
+      privacyFile,
+      approvedFixture + '\nObject.assign(privacyDetails, { contactRetention: null })\n',
+    )
+    await expect(run(process.execPath, args, opts)).rejects.toMatchObject({
+      stderr: expect.stringContaining('conservazione delle richieste di contatto e preventivo'),
+    })
     await writeFile(privacyFile, approvedFixture)
     await run(process.execPath, args, opts)
     const output = join(target, 'dist-release')
     const homeFile = join(output, 'index.html')
     const home = await readFile(homeFile, 'utf8')
+    const privacy = await readFile(join(output, 'privacy-policy/index.html'), 'utf8')
+    expectCompanyPrivacy(privacy)
     expect(
       (await readdir(output, { recursive: true })).some(
         (name) => name.endsWith('/.DS_Store') || name === '.DS_Store',

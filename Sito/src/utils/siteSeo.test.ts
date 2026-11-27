@@ -126,7 +126,12 @@ describe('indexing and canonical URLs', () => {
       '@type': 'LocalBusiness',
       url: base.href,
       telephone: '+393346008313',
-      address: { streetAddress: 'Via Roma, 29', addressLocality: 'Monte di Procida' },
+      address: {
+        streetAddress: 'Via Roma, 29',
+        postalCode: '80070',
+        addressLocality: 'Monte di Procida',
+      },
+      areaServed: ['Campi Flegrei', 'Monte di Procida', 'Bacoli'],
       geo: { latitude: 40.7940311, longitude: 14.0532046 },
     })
     expect(getSeoElements('/prodotti/oscuranti', base).some((el) => el.tag === 'script')).toBe(

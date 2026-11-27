@@ -1,4 +1,4 @@
-import { contacts } from '../../../config/contacts'
+import { contacts, instagramLabel, showroomPostalLocality } from '../../../config/contacts'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import type { PageActivityProps } from '../../../types/navigation'
 import { getContactLinks } from '../../../utils/contactLinks'
@@ -26,8 +26,8 @@ export function Contacts({ active }: PageActivityProps) {
               Vieni a <em>trovarci</em>
             </h2>
             <p className={styles.description}>
-              Visita il nostro showroom a Monte di Procida, vicino a Bacoli. Qui puoi confrontare
-              materiali e finiture e scegliere con noi le soluzioni più adatte alla tua casa.
+              Nel nostro showroom a Monte di Procida puoi confrontare materiali e finiture per la
+              tua casa. Seguiamo i tuoi progetti a Bacoli e in tutti i Campi Flegrei.
             </p>
           </header>
           <ShowroomGallery active={active} />
@@ -49,7 +49,7 @@ export function Contacts({ active }: PageActivityProps) {
                     href={links.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Instagram di LGE Home Solutions (nuova scheda)"
+                    aria-label={instagramLabel}
                   >
                     <img
                       src={assetUrl('icons/instagram-gradient.webp')}
@@ -81,9 +81,7 @@ export function Contacts({ active }: PageActivityProps) {
               </h3>
               <address>
                 <span>{contacts.address ?? contacts.locality}</span>
-                <span>
-                  {contacts.locality} ({contacts.province})
-                </span>
+                <span>{showroomPostalLocality}</span>
               </address>
               <a
                 className={styles.directionsLink}

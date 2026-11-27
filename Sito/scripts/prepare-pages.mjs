@@ -7,6 +7,7 @@ import { parseArgs } from 'node:util'
 import { build, loadEnv } from 'vite'
 import { getPublicSiteBase } from '../src/utils/publicSiteUrl.ts'
 import { assertPrivacyReady } from './privacy-review.mjs'
+import { verifyCredentialCopies } from './verify-credential-copies.mjs'
 import { verifyStaticPages } from './verify-pages.mjs'
 
 const { values } = parseArgs({
@@ -107,6 +108,7 @@ async function generate(outDir, rendererDir) {
   if (sitemapXml) await writeFile(sitemapPath, sitemapXml)
   else await rm(sitemapPath, { force: true })
   await writeFile(join(outDir, '.nojekyll'), '')
+  await verifyCredentialCopies(outDir)
   await verifyStaticPages(outDir, seoPaths, base, publicBase, verification, gallerySize)
   return seoPaths.length
 }

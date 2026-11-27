@@ -11,7 +11,7 @@ export const competencyDetails: CompetencyDetails = {
   ],
   posaclima: [
     'Emanuele e Gionatan Schiano Lomoriello hanno completato con esito positivo il corso professionale PosaClima di 12 ore, conforme ai requisiti della norma UNI 11673-3.',
-    'Gli attestati riconoscono la formazione come esperto posatore PosaClima e tecnico per la riqualificazione del foro finestra: un percorso dedicato alla posa del serramento e al miglioramento del vano che lo accoglie.',
+    'Le fotografie mostrano gli attestati di esperto posatore PosaClima e tecnico per la riqualificazione del foro finestra con scadenza il 12 novembre 2026. LGE ha comunicato il rinnovo. Gli attestati aggiornati non sono ancora disponibili per la consultazione.',
   ],
   thermography: [
     'La preparazione in termografia di I e II livello permette al team di analizzare le temperature superficiali e individuare dispersioni e punti critici degli ambienti, affiancando l’osservazione a una valutazione tecnica.',

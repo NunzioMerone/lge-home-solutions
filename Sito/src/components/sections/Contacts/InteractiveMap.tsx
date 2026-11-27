@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Browser, control, divIcon, map, marker, tileLayer } from 'leaflet'
+import { showroomAddress } from '../../../config/contacts'
 import { locationMap } from '../../../config/locationMap'
 import { useMotion } from '../../../hooks/useMotion'
 import type { MapView } from '../../../types/maps'
@@ -70,7 +71,7 @@ export default function InteractiveMap() {
       ref={ref}
       className={styles.surface}
       role="region"
-      aria-label="Mappa LGE Home Solutions, Via Roma 29, Monte di Procida"
+      aria-label={`Mappa LGE Home Solutions, ${showroomAddress}`}
     />
   )
 }

@@ -9,14 +9,15 @@ import {
   privacyContact,
   privacyContent,
   privacyPage,
-  privacyReview,
+  privacyDetails,
   privacySources,
 } from '../../config/privacy'
 import { getContactLinks } from '../../utils/contactLinks'
 import styles from './PrivacyPolicy.module.css'
 
 export function PrivacyPolicy() {
-  const links = getContactLinks({ ...contacts, phone: privacyContact.phone })
+  const privacyEmail = privacyDetails.contact
+  const links = getContactLinks({ ...contacts, email: privacyEmail, phone: privacyContact.phone })
   const usesGooglePlaces = !elfsightReviewsWidgetId && Boolean(googleMapsBrowserKey)
 
   useEffect(() => {
@@ -33,7 +34,8 @@ export function PrivacyPolicy() {
         <header className={styles.heading}>
           <h1>Privacy Policy</h1>
           <p className={styles.intro}>
-            Le informazioni essenziali sui tuoi dati quando visiti il sito o contatti LGE.
+            Come LGE tratta i tuoi dati quando visiti lgesolutions.it o ci contatti per un
+            preventivo.
           </p>
           <p className={styles.updated}>
             Ultimo aggiornamento:{' '}
@@ -48,15 +50,14 @@ export function PrivacyPolicy() {
           <section aria-labelledby="privacy-controller">
             <h2 id="privacy-controller">1. Chi tratta i dati</h2>
             <p>
-              Il titolare del trattamento è la società{' '}
-              <strong>{privacyReview.controller.value}</strong>, con sede in{' '}
-              {privacyReview.address.value}. L’amministratore della società è{' '}
+              Il titolare del trattamento è la società <strong>{privacyDetails.controller}</strong>,
+              con sede in {privacyDetails.address}. L’amministratore della società è{' '}
               {privacyContact.administrator}.
             </p>
             <p>
               Per informazioni sulla privacy o per esercitare i tuoi diritti puoi scrivere a{' '}
               {links.email ? (
-                <a href={links.email}>{contacts.email}</a>
+                <a href={links.email}>{privacyEmail}</a>
               ) : (
                 'LGE tramite i recapiti aziendali'
               )}
@@ -72,46 +73,48 @@ export function PrivacyPolicy() {
 
           <section aria-labelledby="privacy-data">
             <h2 id="privacy-data">2. Quali dati e per quali scopi</h2>
-            <p>
-              Questo è un sito vetrina: non contiene moduli, registrazioni, newsletter o acquisti
-              online. I trattamenti legati alla visita e ai contatti sono i seguenti:
-            </p>
+            <p>Puoi visitare il sito senza registrarti.</p>
             <ul>
               <li>
-                <strong>Navigazione e mappa:</strong> indirizzo IP, risorse richieste e dati tecnici
-                del browser servono a mostrare il sito, proteggerlo e individuare il punto vendita.
-                Il trattamento si basa sull’interesse legittimo al funzionamento e alla sicurezza
-                del sito e a fornire la mappa del punto vendita (art. 6.1.f GDPR).
+                <strong>Per la navigazione e la mappa</strong> vengono trattati l’indirizzo IP, le
+                risorse richieste e i dati tecnici del browser. Servono a mostrare il sito,
+                proteggerlo e indicare dove si trova lo showroom.
               </li>
               <li>
-                <strong>Contatti:</strong> se ci scrivi o ci chiami, utilizziamo i recapiti e le
-                informazioni che ci comunichi per rispondere alla tua domanda o concordare un
-                appuntamento. La base giuridica è l’esecuzione di misure precontrattuali richieste
-                da te (art. 6.1.b GDPR) oppure, per le comunicazioni generiche, l’interesse
-                legittimo a risponderti (art. 6.1.f).
+                <strong>Quando ci scrivi o ci telefoni</strong>, usiamo il tuo recapito per
+                risponderti. Se ci chiedi un preventivo, utilizziamo i dettagli del lavoro per
+                preparare l’offerta su tua richiesta (art. 6, par. 1, lett. b del GDPR).
               </li>
             </ul>
             <p>
-              Il pulsante WhatsApp è un semplice collegamento alla chat aziendale: il clic non invia
-              messaggi e il sito non acquisisce la conversazione. Sei tu a scegliere se scriverci e
-              quali informazioni condividere. LGE riceve ciò che decidi di inviare.
+              Il pulsante WhatsApp apre una chat con Emanuele per chiedere un preventivo. Il sito
+              non riceve né conserva i messaggi.{' '}
+              <a href={privacySources.whatsappPrivacy}>Informativa privacy di WhatsApp</a>.
             </p>
+            {privacyDetails.legitimateInterests && <p>{privacyDetails.legitimateInterests}</p>}
           </section>
 
           <section aria-labelledby="privacy-services">
             <h2 id="privacy-services">3. Servizi utilizzati dal sito</h2>
-            <p className={styles.hostingNotice}>{privacyContent.hostingNotice}</p>
+            <p className={styles.hostingNotice}>
+              {privacyContent.hostingNotice}{' '}
+              <a href={privacySources.siteGroundDpa}>
+                Accordo sul trattamento dei dati di SiteGround
+              </a>
+              .
+            </p>
+            {privacyDetails.providers && <p>{privacyDetails.providers}</p>}
             <p>
-              La mappa carica immagini da <strong>OpenStreetMap</strong> quando ci si avvicina alla
-              sezione contatti. Il servizio riceve l’indirizzo IP e i dati tecnici della richiesta,
-              senza richiedere l’accesso alla posizione del dispositivo, e utilizza server
-              distribuiti in diversi Paesi. Dettagli nell’
+              Quando ti avvicini alla sezione contatti, la mappa dello showroom carica immagini da{' '}
+              <strong>OpenStreetMap</strong>. Il servizio riceve l’indirizzo IP e i dati tecnici
+              della richiesta. Le immagini provengono da una rete mondiale di server, anche fuori
+              dallo Spazio economico europeo. La mappa non richiede la posizione del dispositivo.
+              Dettagli nell’
               <a href={privacySources.osmPrivacy}>informativa OpenStreetMap</a>.
             </p>
             <p>
-              Le pagine esterne di WhatsApp, Instagram, Facebook e Google Maps si aprono quando
-              selezioni i rispettivi collegamenti. L’utilizzo di questi servizi esterni è descritto
-              nelle informative di <a href={privacySources.whatsappPrivacy}>WhatsApp</a>,{' '}
+              I profili social, le indicazioni stradali, i cataloghi e i configuratori esterni si
+              aprono quando scegli il relativo collegamento. Puoi consultare le informative di{' '}
               <a href={privacySources.instagramPrivacy}>Instagram</a>,{' '}
               <a href={privacySources.facebookPrivacy}>Facebook</a> e{' '}
               <a href={privacySources.googlePrivacy}>Google</a>.
@@ -133,6 +136,7 @@ export function PrivacyPolicy() {
                 all’<a href={privacySources.googlePrivacy}>Informativa sulla privacy di Google</a>.
               </p>
             )}
+            {privacyDetails.transfers && <p>{privacyDetails.transfers}</p>}
           </section>
 
           <section aria-labelledby="privacy-storage">
@@ -140,21 +144,25 @@ export function PrivacyPolicy() {
             <p>
               {analyticsConfig
                 ? 'Con il tuo consenso alle statistiche, Google Analytics 4 misura le visite alle pagine e i clic su WhatsApp, telefono, cataloghi e indicazioni stradali. Puoi modificare la scelta nelle preferenze di consenso.'
-                : 'L’applicazione non utilizza analytics, pixel pubblicitari o cookie propri.'}{' '}
-              Salva nella memoria di sessione della scheda una preferenza tecnica per le animazioni,
-              senza inviarla a un server. I font e le fotografie di LGE sono ospitati insieme al
-              sito.
+                : 'Il sito non imposta cookie propri e non utilizza strumenti pubblicitari o di analisi delle visite.'}
             </p>
-            <p>Per questa preferenza tecnica non è necessario un banner di consenso.</p>
+            <p>
+              La scelta di ridurre le animazioni viene salvata solo nel tuo browser. I font e le
+              fotografie sono ospitati insieme al sito.
+            </p>
           </section>
 
           <section aria-labelledby="privacy-content">
-            <h2 id="privacy-content">5. Fotografie e recensioni</h2>
+            <h2 id="privacy-content">5. Fotografie, attestati e recensioni</h2>
             <p>
-              Le fotografie mostrano gli spazi e i lavori di LGE. Per le foto scattate presso i
-              clienti viene richiesto il consenso a fotografare e pubblicare. Quando il consenso
-              riguarda dati personali, può essere revocato contattandoci, senza pregiudicare il
-              trattamento effettuato prima della revoca.
+              La galleria mostra fotografie dei lavori di LGE. Per le foto scattate presso i clienti
+              viene richiesto il consenso a fotografare e pubblicare. Quando il consenso riguarda
+              dati personali, può essere revocato contattandoci, senza pregiudicare il trattamento
+              effettuato prima della revoca.
+            </p>
+            <p>
+              Nella pagina Competenze puoi consultare copie degli attestati con il nome del
+              professionista, la qualifica e le date riportate nel documento.
             </p>
             <p>
               Le recensioni provengono dalla scheda Google di LGE e riportano il nome dell’autore,
@@ -167,15 +175,25 @@ export function PrivacyPolicy() {
               Per segnalare un contenuto o richiedere una rettifica o rimozione puoi scriverci
               all’email indicata in questa pagina.
             </p>
+            {privacyDetails.publishedContent && <p>{privacyDetails.publishedContent}</p>}
           </section>
 
           <section aria-labelledby="privacy-retention">
-            <h2 id="privacy-retention">6. Per quanto tempo</h2>
-            <p>{privacyReview.contactRetention.value ?? privacyContent.contactRetention}</p>
+            <h2 id="privacy-retention">6. Tempi di conservazione</h2>
             <p>
-              La preferenza delle animazioni rimane nella memoria di sessione della scheda del
-              browser. Per i dati trattati dai servizi esterni valgono le rispettive informative.
+              La preferenza per le animazioni resta nel browser per la durata della sessione della
+              scheda.
             </p>
+            {privacyDetails.technicalRetention ? (
+              <p>{privacyDetails.technicalRetention}</p>
+            ) : (
+              <p>
+                Nel servizio standard di SiteGround, il gestore può consultare i registri degli
+                accessi fino a 30 giorni a ritroso.{' '}
+                <a href={privacySources.siteGroundAccessLogs}>Dettagli sui registri di accesso</a>.
+              </p>
+            )}
+            {privacyDetails.contactRetention && <p>{privacyDetails.contactRetention}</p>}
           </section>
 
           <section aria-labelledby="privacy-rights">
@@ -185,18 +203,15 @@ export function PrivacyPolicy() {
               rettifica, cancellazione, limitazione e portabilità dei dati, oppure opporti ai
               trattamenti basati sul legittimo interesse. Scrivi a{' '}
               {links.email ? (
-                <a href={links.email}>{contacts.email}</a>
+                <a href={links.email}>{privacyEmail}</a>
               ) : (
                 'LGE tramite i recapiti aziendali'
               )}
-              : riceverai riscontro di norma entro un mese, salvo le proroghe motivate previste
-              dalla normativa.
+              . Di norma rispondiamo entro un mese, salvo le proroghe motivate previste dal GDPR.
             </p>
             <p>
               Puoi inoltre presentare reclamo al{' '}
               <a href={privacySources.garante}>Garante per la protezione dei dati personali</a>.
-              Questa informativa sarà aggiornata quando cambieranno i servizi o il trattamento dei
-              dati.
             </p>
           </section>
         </article>
