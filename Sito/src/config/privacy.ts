@@ -64,8 +64,8 @@ export const privacyPage = {
   title: 'Privacy Policy — LGE Home Solutions',
   description:
     'Informativa sul trattamento dei dati durante la navigazione nel sito LGE Home Solutions, sui servizi esterni e sui diritti degli interessati.',
-  updatedAt: '2026-10-29',
-  updatedLabel: '29 ottobre 2026',
+  updatedAt: '2026-11-27',
+  updatedLabel: '27 novembre 2026',
   // Set only after the missing details and the text have been reviewed by the controller.
   approved: false,
 } as const
@@ -85,4 +85,5 @@ export const privacySources = {
   googleMapsTerms: 'https://www.google.com/intl/it/help/terms_maps/',
   elfsightPrivacy: 'https://elfsight.com/privacy-policy/',
   instagramPrivacy: 'https://privacycenter.instagram.com/policy/',
+  facebookPrivacy: 'https://www.facebook.com/privacy/policy/',
 } as const

@@ -12,6 +12,7 @@ export const contacts: ContactConfig = {
   email: 'info@lgesolutions.it',
   whatsapp: phoneNumber,
   instagram: 'https://www.instagram.com/atelier_gibus_campiflegrei/',
+  facebook: 'https://www.facebook.com/people/Atelier-Gibus-Campi-Flegrei/61557779500015/',
   legalName: null,
   vatNumber: null,
   openingHours: [],

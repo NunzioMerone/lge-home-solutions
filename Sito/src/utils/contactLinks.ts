@@ -6,12 +6,12 @@ function normalizePhone(value: string | null): string | null {
   return /^\+[1-9]\d{6,14}$/.test(normalized) ? normalized : null
 }
 
-function instagramUrl(value: string | null): string | null {
+function socialUrl(value: string | null, domain: string): string | null {
   if (!value) return null
   try {
     const url = new URL(value)
     return url.protocol === 'https:' &&
-      ['instagram.com', 'www.instagram.com'].includes(url.hostname) &&
+      (url.hostname === domain || url.hostname === `www.${domain}`) &&
       url.pathname.length > 1 &&
       !url.username &&
       !url.password
@@ -33,6 +33,7 @@ export function getContactLinks(config: ContactConfig): ContactLinks {
       email && /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email)
         ? `mailto:${encodeURIComponent(email)}`
         : null,
-    instagram: instagramUrl(config.instagram),
+    instagram: socialUrl(config.instagram, 'instagram.com'),
+    facebook: socialUrl(config.facebook, 'facebook.com'),
   }
 }

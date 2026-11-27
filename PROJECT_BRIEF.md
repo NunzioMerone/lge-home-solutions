@@ -1,5 +1,7 @@
 # LGE Home Solutions — Project brief
 
+**Facebook, pubblicazione autorizzata il 27 novembre 2026.** Le icone in «Vieni a trovarci» e nel footer aprono la pagina Atelier Gibus Campi Flegrei con l’indirizzo diretto fornito dall’utente. L’informativa include Facebook tra i collegamenti esterni. Il rilascio usa il workflow GitHub Pages di `main`.
+
 **Pubblicazione autorizzata il 26 novembre 2026.** Il checkpoint comprende la chiusura VEKA sincronizzata nella hero Rev23, i pulsanti WhatsApp antracite, le foto di chiusura ridisegnate e le rifiniture a Home, Oscuranti, Outdoor e Porte interne. Il rilascio avviene su `main` tramite il workflow GitHub Pages per l’anteprima non indicizzata.
 
 **Chiusura VEKA nella hero, 26 novembre 2026.** La Rev23 riprende i due passaggi approvati nell’anteprima. Dopo l’apertura e il dettaglio della soglia nel blocco sulla luce, la scorrevole si chiude e il montaggio passa alla vetrata vista dall’interno. «Lascia fuori il rumore» comincia a 21,23 s. «E dentro il benessere» entra a 23,02 s, al contatto delle ante. Il testo HTML segue il tempo del video in tutti i formati. Il montaggio dura 55,2 s a 60 fps, con ricetta in `Sito/references/hero-video-partners/edit-rev23.json`.

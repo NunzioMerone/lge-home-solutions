@@ -5,12 +5,20 @@ import { getContactLinks } from './contactLinks'
 describe('getContactLinks', () => {
   it('keeps missing contacts unavailable rather than creating fake links', () => {
     expect(
-      getContactLinks({ ...contacts, phone: null, whatsapp: null, email: null, instagram: null }),
+      getContactLinks({
+        ...contacts,
+        phone: null,
+        whatsapp: null,
+        email: null,
+        instagram: null,
+        facebook: null,
+      }),
     ).toEqual({
       phone: null,
       email: null,
       whatsapp: null,
       instagram: null,
+      facebook: null,
     })
   })
   it('normalizes an international telephone before creating direct links', () => {
@@ -38,6 +46,19 @@ describe('getContactLinks', () => {
       'https://instagram.com/',
     ]) {
       expect(getContactLinks({ ...contacts, instagram }).instagram).toBeNull()
+    }
+  })
+  it('allows only secure Facebook page URLs', () => {
+    const page = 'https://www.facebook.com/people/Example/123456789/'
+    expect(getContactLinks({ ...contacts, facebook: page }).facebook).toBe(page)
+    for (const facebook of [
+      'http://facebook.com/example',
+      'https://facebook.com.evil.test/example',
+      'https://user@www.facebook.com/example',
+      'https://www.instagram.com/example/',
+      'https://www.facebook.com/',
+    ]) {
+      expect(getContactLinks({ ...contacts, facebook }).facebook).toBeNull()
     }
   })
   it('does not turn invalid email addresses into working-looking links', () => {

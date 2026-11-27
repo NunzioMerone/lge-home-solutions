@@ -73,6 +73,7 @@ export interface ContactConfig {
   email: string | null
   whatsapp: string | null
   instagram: string | null
+  facebook: string | null
   legalName: string | null
   vatNumber: string | null
   openingHours: OpeningHoursGroup[]
@@ -83,6 +84,7 @@ export interface ContactLinks {
   email: string | null
   whatsapp: string | null
   instagram: string | null
+  facebook: string | null
 }
 export interface OpeningHoursGroup {
   days: string

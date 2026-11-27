@@ -24,6 +24,11 @@ export function Footer() {
       label: 'Instagram di LGE Home Solutions',
       href: links.instagram,
     },
+    {
+      icon: 'facebook',
+      label: 'Facebook di Atelier Gibus Campi Flegrei (nuova scheda)',
+      href: links.facebook,
+    },
   ] as const
   return (
     <footer className={styles.footer} id="footer">
@@ -135,9 +140,6 @@ export function Footer() {
                 </a>
               ) : null,
             )}
-            <span className={styles.socialIcon} role="img" aria-label="Facebook">
-              <Icon name="facebook" />
-            </span>
           </div>
         </div>
         {(contacts.legalName || contacts.vatNumber) && (

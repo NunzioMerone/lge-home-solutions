@@ -108,10 +108,11 @@ export function PrivacyPolicy() {
               <a href={privacySources.osmPrivacy}>informativa OpenStreetMap</a>.
             </p>
             <p>
-              Le pagine esterne di WhatsApp, Instagram e Google Maps si aprono quando selezioni i
-              rispettivi collegamenti. L’utilizzo di questi servizi esterni è descritto nelle loro
-              informative: <a href={privacySources.whatsappPrivacy}>WhatsApp</a>,{' '}
+              Le pagine esterne di WhatsApp, Instagram, Facebook e Google Maps si aprono quando
+              selezioni i rispettivi collegamenti. L’utilizzo di questi servizi esterni è descritto
+              nelle informative di <a href={privacySources.whatsappPrivacy}>WhatsApp</a>,{' '}
               <a href={privacySources.instagramPrivacy}>Instagram</a>,{' '}
+              <a href={privacySources.facebookPrivacy}>Facebook</a> e{' '}
               <a href={privacySources.googlePrivacy}>Google</a>.
             </p>
             {elfsightReviewsWidgetId && (

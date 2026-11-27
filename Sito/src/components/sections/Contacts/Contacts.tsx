@@ -41,28 +41,38 @@ export function Contacts({ active }: PageActivityProps) {
                 informazioni.
               </p>
             </div>
-            <div className={styles.socials}>
-              <p>Seguici su</p>
-              {links.instagram && (
-                <a
-                  className={styles.socialIcon}
-                  href={links.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram di LGE Home Solutions (nuova scheda)"
-                >
-                  <img
-                    src={assetUrl('icons/instagram-gradient.webp')}
-                    alt=""
-                    width="21"
-                    height="21"
-                  />
-                </a>
-              )}
-              <span className={styles.socialIcon} role="img" aria-label="Facebook">
-                <img src={assetUrl('icons/facebook-blue.webp')} alt="" width="21" height="21" />
-              </span>
-            </div>
+            {(links.instagram || links.facebook) && (
+              <div className={styles.socials}>
+                <p>Seguici su</p>
+                {links.instagram && (
+                  <a
+                    className={styles.socialIcon}
+                    href={links.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram di LGE Home Solutions (nuova scheda)"
+                  >
+                    <img
+                      src={assetUrl('icons/instagram-gradient.webp')}
+                      alt=""
+                      width="21"
+                      height="21"
+                    />
+                  </a>
+                )}
+                {links.facebook && (
+                  <a
+                    className={styles.socialIcon}
+                    href={links.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook di Atelier Gibus Campi Flegrei (nuova scheda)"
+                  >
+                    <img src={assetUrl('icons/facebook-blue.webp')} alt="" width="21" height="21" />
+                  </a>
+                )}
+              </div>
+            )}
           </div>
           <div className={styles.directions} data-reveal>
             <div className={styles.address}>
