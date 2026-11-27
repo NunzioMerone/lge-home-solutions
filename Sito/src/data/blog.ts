@@ -1,4 +1,8 @@
 import type { BlogCategory, BlogPost } from '../types/blog'
+import { galleryImageBasePath } from '../utils/galleryImages'
+import { featuredWorkPhotos } from './homeGallery'
+
+const { kitchenWindow } = featuredWorkPhotos
 
 export const blogCategories: readonly BlogCategory[] = [
   { id: 'infissi', label: 'Infissi' },
@@ -94,11 +98,11 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       'Una finestra e una portafinestra si usano in modo diverso. Passaggi, ingombri e apertura contano nella scelta.',
     image: {
-      path: 'img/gallery-home/home-infissi-cucina',
-      widths: [480, 960, 1448],
-      width: 1448,
-      height: 1086,
-      alt: 'Portafinestra chiara affacciata sull’esterno in una cucina luminosa',
+      path: galleryImageBasePath(kitchenWindow),
+      widths: [...kitchenWindow.previewWidths, kitchenWindow.fullWidth],
+      width: kitchenWindow.width,
+      height: kitchenWindow.height,
+      alt: kitchenWindow.alt,
       caption:
         'Realizzazione LGE · Un ambiente con portafinestra, a illustrazione del passaggio verso l’esterno.',
     },

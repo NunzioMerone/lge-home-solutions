@@ -2,12 +2,12 @@ export interface PrivacyDetails {
   controller: string
   address: string
   contact: string
-  providers: string | null
-  transfers: string | null
-  technicalRetention: string | null
-  contactRetention: string | null
-  publishedContent: string | null
-  legitimateInterests: string | null
+  providers: string
+  transfers: string
+  technicalRetention: string
+  contactRetention: string
+  publishedContent: string
+  legitimateInterests: string
 }
 
 export interface PageMetadata {

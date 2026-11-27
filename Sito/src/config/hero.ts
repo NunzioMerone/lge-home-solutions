@@ -1,7 +1,9 @@
-import heroVideoEdit from '../../references/hero-video-partners/edit-rev24.json'
+import timeline from '../../references/hero-video-partners/edit-rev24.json'
+import encoding from '../../references/hero-video-partners/edit-rev25.json'
 import type { HeroVideoSource, ResponsiveHeroVideoSource } from '../types/hero'
 
-export { heroVideoEdit }
+// The lighter encodes use the same shot boundaries and headline cues.
+export const heroVideoEdit = { ...timeline, ...encoding }
 
 export const heroVideoPlaybackRate = 1
 export const heroVideoFrameRate = heroVideoEdit.outputFrameRate

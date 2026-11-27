@@ -25,8 +25,8 @@ describe('lightbox image preparation', () => {
   it('uses the same public URLs for previews and detailed images on GitHub Pages', () => {
     vi.stubEnv('BASE_URL', '/lge-home-solutions/')
     expect(galleryImageUrl(photo, 960)).toBe('/lge-home-solutions/img/gallery-real/window-960.webp')
-    expect(galleryImageUrl({ ...photo, collection: 'gallery-home' }, 480)).toBe(
-      '/lge-home-solutions/img/gallery-home/window-480.webp',
+    expect(galleryImageUrl({ ...photo, collection: 'showroom/retouched' }, 480)).toBe(
+      '/lge-home-solutions/img/showroom/retouched/window-480.webp',
     )
   })
 

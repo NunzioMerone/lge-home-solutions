@@ -17,6 +17,7 @@ export function Contacts({ active }: PageActivityProps) {
       className={`section ${styles.section}`}
       id="contatti"
       aria-labelledby="contacts-title"
+      tabIndex={-1}
       ref={ref}
     >
       <div className="container">

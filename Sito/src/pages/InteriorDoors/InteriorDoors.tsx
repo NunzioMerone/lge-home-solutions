@@ -2,11 +2,13 @@ import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
+import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
-import { homeGallery } from '../../data/homeGallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { ipeaCatalogs } from '../../data/interiorDoors'
+import { interiorDoorFaq, productFaqId } from '../../data/productFaqs'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
@@ -14,11 +16,9 @@ import { InteriorDoorOpenings } from './InteriorDoorOpenings'
 import styles from './InteriorDoors.module.css'
 
 const catalogsId = 'cataloghi-porte-interne'
-const featuredWork = homeGallery.find((photo) => photo.id === 'home-porta-filo')
-
 export function InteriorDoors({ product }: ProductDetailProps) {
   const catalogs = useSectionReveal()
-  useAnchorNavigation(catalogsId)
+  useAnchorNavigation(catalogsId, productFaqId)
 
   return (
     <div className={styles.page}>
@@ -86,9 +86,11 @@ export function InteriorDoors({ product }: ProductDetailProps) {
 
         <InteriorDoorOpenings />
 
+        <ProductFaq {...interiorDoorFaq} />
+
         <ProjectClosing
           titleId="interior-showroom-title"
-          photo={featuredWork}
+          photo={featuredWorkPhotos.flushDoor}
           showroom={{
             worksPath: `${worksPage.path}?categoria=porte-interne#works-content`,
             worksLabel: 'Vedi altri lavori',

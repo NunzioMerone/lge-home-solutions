@@ -1,7 +1,10 @@
 import { useCallback, useRef } from 'react'
 import { heroCopy, heroHeadlineChapters } from '../../../data/hero'
+import { navigation } from '../../../data/navigation'
 import { useHeroEntrance } from '../../../hooks/useHeroEntrance'
 import { getHeroHeadlineAtTime } from '../../../utils/heroHeadline'
+import { Icon } from '../../ui/Icon'
+import { PageLink } from '../../ui/PageLink'
 import { HeroVideo } from './HeroVideo'
 import type { PageActivityProps } from '../../../types/navigation'
 import styles from './Hero.module.css'
@@ -69,9 +72,13 @@ export function Hero({ active }: PageActivityProps) {
               </span>
             </span>
           </h1>
-          <p className={styles.subtitle} data-hero-subtitle>
-            {heroCopy.subtitle}
-          </p>
+          <div data-hero-subtitle>
+            <p className={styles.subtitle}>{heroCopy.subtitle}</p>
+            <PageLink className={styles.showroomLink} to={navigation.contact.path}>
+              <span>Visita il nostro showroom</span>
+              <Icon name="down" />
+            </PageLink>
+          </div>
         </div>
       </div>
     </section>

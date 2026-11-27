@@ -218,7 +218,7 @@ def compose(name: str, paths: list[Path], destination: Path, edit: dict, interva
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev24.json", help="Editing recipe to render.")
+    parser.add_argument("--edit", type=Path, default=HERE / "edit-rev25.json", help="Editing recipe to render.")
     parser.add_argument("--destination", type=Path, default=SITE / "public/media/hero")
     parser.add_argument("--work-dir", type=Path, help="Keep prepared shots here for inspection.")
     args = parser.parse_args()

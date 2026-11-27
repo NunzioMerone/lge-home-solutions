@@ -1,0 +1,12 @@
+{
+  "baseEdit": "edit-rev24.json",
+  "revision": "rev25",
+  "encodes": {
+    "desktop": { "crf": 22, "maxrateKbps": 4000 },
+    "wide-compact": { "crf": 23, "maxrateKbps": 1850 },
+    "tablet": { "crf": 23, "maxrateKbps": 2200 },
+    "tablet-portrait": { "crf": 23, "maxrateKbps": 2200 },
+    "mobile": { "crf": 23, "maxrateKbps": 1300 },
+    "mobile-hevc": { "crf": 25, "maxrateKbps": 1040 }
+  }
+}

@@ -4,7 +4,7 @@ import { locationMap } from '../config/locationMap'
 import { site } from '../config/site'
 import { worksPage } from '../config/works'
 import { blogPosts } from '../data/blog'
-import { homeGallery } from '../data/homeGallery'
+import { featuredWorkPhotos } from '../data/homeGallery'
 import { heroPhotos } from '../data/heroPhotos'
 import { products } from '../data/products'
 import { showroomPhotos } from '../data/showroomPhotos'
@@ -35,7 +35,7 @@ function shareImage(path: string, post: BlogPost | undefined) {
   if (product) {
     return { path: `img/hero/${product.id}-960.webp`, alt: heroPhotos[product.id].alt }
   }
-  const photo = path === worksPage.path && homeGallery[0] ? homeGallery[0] : showroomPhotos[0]
+  const photo = path === worksPage.path ? featuredWorkPhotos.kitchenWindow : showroomPhotos[0]
   return { path: galleryImagePath(photo, photo.fullWidth), alt: photo.alt }
 }
 

@@ -2,12 +2,14 @@ import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
+import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
 import { gibusCatalogsId, outdoorShowcaseId } from '../../data/atelierGibus'
-import { homeGallery } from '../../data/homeGallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { atelierGibusPage } from '../../data/products'
+import { outdoorFaq, productFaqId } from '../../data/productFaqs'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import type { ProductDetailProps } from '../../types/productTransition'
 import { assetUrl } from '../../utils/assetUrl'
@@ -15,10 +17,8 @@ import { AtelierShowcase } from './AtelierShowcase'
 import { GibusCatalogs } from './GibusCatalogs'
 import styles from './AtelierGibus.module.css'
 
-const featuredWork = homeGallery.find((photo) => photo.id === 'home-pergola-antracite')
-
 export function AtelierGibus({ product }: ProductDetailProps) {
-  useAnchorNavigation(outdoorShowcaseId, gibusCatalogsId)
+  useAnchorNavigation(outdoorShowcaseId, gibusCatalogsId, productFaqId)
 
   return (
     <div className={styles.page}>
@@ -69,9 +69,11 @@ export function AtelierGibus({ product }: ProductDetailProps) {
 
         <GibusCatalogs />
 
+        <ProductFaq {...outdoorFaq} />
+
         <ProjectClosing
           titleId="gibus-showroom-title"
-          photo={featuredWork}
+          photo={featuredWorkPhotos.terracePergola}
           showroom={{
             worksPath: `${worksPage.path}?categoria=atelier-gibus#works-content`,
             worksLabel: 'Vedi i lavori outdoor',

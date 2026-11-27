@@ -1,6 +1,6 @@
 import { PageLink } from '../../ui/PageLink'
 import { competenciesPage } from '../../../config/competencies'
-import { competencyHighlights } from '../../../data/competencies'
+import { competencies } from '../../../data/competencies'
 import { useSectionReveal } from '../../../hooks/useSectionReveal'
 import { Icon } from '../../ui/Icon'
 import styles from './Certifications.module.css'
@@ -27,7 +27,7 @@ export function Certifications() {
       </div>
       <div className={`${styles.content} container`}>
         <div className={styles.grid}>
-          {competencyHighlights.map((item) => (
+          {competencies.map((item) => (
             <article key={item.id} className={styles.card} data-reveal>
               <div className={styles.icon}>
                 <Icon name={item.icon} />

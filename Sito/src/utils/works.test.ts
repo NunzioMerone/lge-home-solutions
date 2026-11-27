@@ -26,14 +26,16 @@ describe('work collections', () => {
     }
   })
 
-  it('uses every photograph in the exact user selection only on the homepage', () => {
+  it('reuses the eleven matching portfolio originals in the selected homepage order', () => {
     expect(homeGallery).toHaveLength(11)
     expect(homeGallery.map((photo) => photo.id)).toEqual(
       homeSelection.photos.map((photo) => photo.id),
     )
     expect(new Set(homeGallery.map((photo) => photo.id)).size).toBe(homeGallery.length)
-    expect(homeGallery.every((photo) => photo.collection === 'gallery-home')).toBe(true)
-    expect(allWorkPhotos.every((photo) => photo.collection !== 'gallery-home')).toBe(true)
+    for (const photo of homeGallery) {
+      expect(allWorkPhotos).toContain(photo)
+      expect(photo.collection ?? 'gallery-real').toBe('gallery-real')
+    }
   })
 
   it('round-trips category links and falls back safely for unknown URL values', () => {

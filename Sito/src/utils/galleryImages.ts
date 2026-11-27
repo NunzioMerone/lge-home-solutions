@@ -2,8 +2,12 @@ import type { DecodableImage } from '../types/media'
 import type { GalleryPhoto } from '../types/gallery'
 import { assetUrl } from './assetUrl'
 
+export function galleryImageBasePath(photo: GalleryPhoto): string {
+  return `img/${photo.collection ?? 'gallery-real'}/${photo.id}`
+}
+
 export function galleryImagePath(photo: GalleryPhoto, width: number): string {
-  return `img/${photo.collection ?? 'gallery-real'}/${photo.id}-${width}.webp`
+  return `${galleryImageBasePath(photo)}-${width}.webp`
 }
 
 export function galleryImageUrl(photo: GalleryPhoto, width: number): string {

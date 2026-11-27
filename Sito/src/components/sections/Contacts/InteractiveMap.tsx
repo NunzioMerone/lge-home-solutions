@@ -35,6 +35,8 @@ export default function InteractiveMap() {
     instance.attributionControl.setPrefix(false)
     tileLayer(locationMap.tileUrl, {
       attribution: locationMap.attribution,
+      crossOrigin: 'anonymous',
+      referrerPolicy: 'strict-origin',
       maxZoom: 19,
       updateWhenIdle: true,
     }).addTo(instance)

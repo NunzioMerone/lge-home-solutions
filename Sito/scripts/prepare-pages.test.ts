@@ -7,8 +7,10 @@ import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
 import { afterEach, describe, expect, it } from 'vitest'
 import { desktopHeroVideoSource, responsiveHeroVideoSources } from '../src/config/hero'
+import { privacyDetails, privacySources } from '../src/config/privacy'
 import { blogPosts } from '../src/data/blog'
 import { gallery } from '../src/data/gallery'
+import { detailedProductPages } from '../src/data/products'
 import { getBlogPostPath } from '../src/utils/blog'
 import { galleryImagePath } from '../src/utils/galleryImages'
 import { getPageMetadata } from '../src/utils/pageMetadata'
@@ -23,9 +25,29 @@ let fixture: string | undefined
 function expectCompanyPrivacy(html: string) {
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1]
   expect(article).toContain('SiteGround fornisce l’hosting di lgesolutions.it')
-  expect(article).toContain('apre una chat con Emanuele per chiedere un preventivo')
+  expect(article).toContain('account WhatsApp personale')
   expect(article).toContain('Il sito non riceve né conserva i messaggi')
-  expect(article).not.toMatch(/github|anteprima|\bbozza\b|da completare|deve ancora/i)
+  for (const field of Object.values(privacyDetails)) {
+    expect(article).toContain(escapeMarkup(field))
+  }
+  for (const url of [
+    privacySources.gdpr,
+    privacySources.garante,
+    privacySources.whatsappPrivacy,
+    privacySources.siteGroundDpa,
+    privacySources.siteGroundAccessLogs,
+    privacySources.osmPrivacy,
+    privacySources.osmTileFaq,
+    privacySources.fastlyTransfers,
+    privacySources.ukAdequacy,
+  ]) {
+    expect(article).toContain(`href="${escapeMarkup(url)}"`)
+  }
+  expect(article).toContain('fino a 30 giorni a ritroso')
+  expect(article).toContain('Diritto di opposizione')
+  expect(article).not.toMatch(
+    /github|anteprima|\bbozza\b|da completare|deve ancora|Elfsight|Google Analytics|Google Maps Platform/i,
+  )
 }
 
 afterEach(async () => {
@@ -83,6 +105,17 @@ describe('static website build', () => {
       expect(html).toContain('Instagram di Atelier Gibus Campi Flegrei (nuova scheda)')
       expect(html).toContain(`href="${base}competenze/"`)
       expect(html).not.toContain('data-route-skeleton')
+      if (detailedProductPages.some((product) => product.path === path)) {
+        const faq = html.match(
+          /<section\b[^>]*\bid="domande-frequenti"[^>]*>([\s\S]*?)<\/section>/,
+        )?.[1]
+        const entries = [...(faq?.matchAll(/<details\b[^>]*>([\s\S]*?)<\/details>/g) ?? [])]
+        expect(entries, path).toHaveLength(3)
+        for (const [, entry] of entries) {
+          expect(entry).toMatch(/<summary\b[^>]*>[\s\S]*?\?[\s\S]*?<\/summary>/)
+          expect(entry).toMatch(/<p>[^<]+<\/p>/)
+        }
+      }
       if (path !== '/')
         expect(html).toMatch(/rel="modulepreload" crossorigin href="\/lge-home-solutions\/assets\//)
     }
@@ -157,9 +190,7 @@ describe('static website build', () => {
     }
     const privacyFile = join(target, 'src/config/privacy.ts')
     const privacySource = await readFile(privacyFile, 'utf8')
-    const approvedFixture = privacySource
-      .replaceAll(': null,', ": 'Test fixture',")
-      .replace('approved: false', 'approved: true')
+    const approvedFixture = privacySource.replace('approved: false', 'approved: true')
     const origin = 'https://www.iana.org' // Existing public syntax only, never contacted.
     const env = {
       ...process.env,
@@ -172,7 +203,7 @@ describe('static website build', () => {
     // Force the negative case even after the actual company policy is approved.
     await writeFile(privacyFile, approvedFixture.replace('approved: true', 'approved: false'))
     await expect(run(process.execPath, args, opts)).rejects.toMatchObject({
-      stderr: expect.stringContaining('Privacy Policy in bozza'),
+      stderr: expect.stringContaining('confermare la revisione del titolare'),
     })
     await writeFile(
       privacyFile,

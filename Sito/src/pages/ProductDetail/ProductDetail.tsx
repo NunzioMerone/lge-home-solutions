@@ -2,11 +2,13 @@ import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
+import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
-import { homeGallery } from '../../data/homeGallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { windowCollection } from '../../data/infissi'
+import { productFaqId, windowFaq } from '../../data/productFaqs'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
@@ -14,11 +16,9 @@ import { assetUrl } from '../../utils/assetUrl'
 import { WindowCollection } from './WindowCollection'
 import styles from './ProductDetail.module.css'
 
-const featuredWork = homeGallery.find((photo) => photo.id === 'home-vetrate-angolo')
-
 export function ProductDetail({ product }: ProductDetailProps) {
   const configurator = useSectionReveal()
-  useAnchorNavigation(windowCollection.id, windowCollection.configuratorId)
+  useAnchorNavigation(windowCollection.id, windowCollection.configuratorId, productFaqId)
 
   return (
     <div className={styles.page}>
@@ -99,9 +99,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </div>
         </section>
 
+        <ProductFaq {...windowFaq} />
+
         <ProjectClosing
           titleId="window-showroom-title"
-          photo={featuredWork}
+          photo={featuredWorkPhotos.cornerWindows}
           showroom={{
             worksPath: `${worksPage.path}?categoria=infissi#works-content`,
             worksLabel: 'Vedi altri lavori',

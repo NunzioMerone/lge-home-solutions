@@ -6,7 +6,7 @@ const documentUrl = (file: string) => assetUrl(`documents/competencies/${file}`)
 export const competencyDocumentGroups: CompetencyDocumentGroup[] = [
   {
     credentialId: 'qualified-installation',
-    caption: 'Certificati DEKRA · Installatore / posatore di serramenti senior',
+    caption: 'Certificati DEKRA · Installatore e posatore di serramenti senior (EQF 3)',
     documents: [
       {
         id: 'installation-emanuele',
@@ -36,7 +36,7 @@ export const competencyDocumentGroups: CompetencyDocumentGroup[] = [
   },
   {
     credentialId: 'posaclima',
-    caption: 'Attestati di formazione professionale PosaClima',
+    caption: 'Attestati del corso PosaClima · Novembre 2023',
     documents: [
       {
         id: 'posaclima-emanuele',

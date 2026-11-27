@@ -1,13 +1,14 @@
-import type { CompetencyHighlight, Credential } from '../types/competencies'
+import type { Credential } from '../types/competencies'
 
-export const competencyHighlights: CompetencyHighlight[] = [
+export const competencies: readonly Credential[] = [
   {
     id: 'qualified-installation',
-    title: 'Progettazione qualificata',
-    label: 'UNI 11673-2 · EQF 3 - 4',
+    title: 'Progettisti e posatori qualificati',
+    label: 'UNI 11673-2 · EQF 3 e EQF 4',
     icon: 'shield',
     description:
-      'Competenze tecniche e precisione in ogni fase, dalla progettazione all’installazione, per valorizzare le prestazioni di ogni serramento.',
+      'Studiamo la posizione del telaio in base alla parete e alle finiture della casa, poi curiamo la posa in cantiere.',
+    source: 'company',
   },
   {
     id: 'posaclima',
@@ -15,53 +16,17 @@ export const competencyHighlights: CompetencyHighlight[] = [
     label: 'Formazione specialistica',
     icon: 'craft',
     description:
-      'Curiamo ogni dettaglio della posa, prestando particolare attenzione al punto d’incontro tra infisso e parete, per garantire un isolamento ottimale, ridurre le dispersioni termiche ed eliminare i fastidiosi spifferi.',
+      'Isoliamo e sigilliamo il raccordo tra telaio e parete, la parte della posa che resta nascosta sotto le finiture.',
+    source: 'document',
   },
   {
     id: 'thermography',
     title: 'Termografia',
-    label: 'I e II livello',
+    label: 'Analisi degli edifici',
     icon: 'thermal',
     description:
-      'Analisi mirate per individuare dispersioni termiche e criticità spesso invisibili a occhio nudo.',
-  },
-]
-
-export const competencies: Credential[] = [
-  {
-    id: 'qualified-installation',
-    title: 'Posatori qualificati',
-    label: 'UNI 11673-2 · EQF 3',
-    icon: 'shield',
-    description: 'Posa in opera dei serramenti e verifiche di funzionamento.',
+      'Con la termocamera osserviamo come cambia la temperatura attorno agli infissi e individuiamo le zone da controllare più da vicino.',
     source: 'document',
-  },
-  {
-    id: 'qualified-installation-design',
-    title: 'Progettisti qualificati',
-    label: 'UNI 11673-2 · EQF 4',
-    icon: 'roof-window',
-    description:
-      'Progettazione del raccordo tra serramento e parete, coordinamento della posa e verifiche finali.',
-    source: 'company',
-  },
-  {
-    id: 'posaclima',
-    title: 'PosaClima',
-    label: 'Formazione professionale',
-    icon: 'craft',
-    description:
-      'Formazione per la posa e la riqualificazione del foro finestra, secondo i requisiti della norma UNI 11673-3.',
-    source: 'document',
-  },
-  {
-    id: 'thermography',
-    title: 'Termografia di I e II livello',
-    label: 'Analisi termografica',
-    icon: 'thermal',
-    description:
-      'Competenze termografiche di I e II livello per analizzare le temperature superficiali e individuare dispersioni e punti critici degli ambienti.',
-    source: 'company',
   },
 ]
 

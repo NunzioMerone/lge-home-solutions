@@ -10,8 +10,3 @@ export interface Credential {
   description: string
   source: 'document' | 'company'
 }
-
-export type CompetencyHighlight = Pick<
-  Credential,
-  'id' | 'title' | 'label' | 'icon' | 'description'
->

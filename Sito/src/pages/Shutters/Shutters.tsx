@@ -2,11 +2,13 @@ import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
+import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
-import { homeGallery } from '../../data/homeGallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { shutterCatalogs } from '../../data/shutters'
+import { productFaqId, shutterFaq } from '../../data/productFaqs'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
@@ -15,12 +17,10 @@ import styles from './Shutters.module.css'
 
 const solutionsId = 'soluzioni-oscuranti'
 const catalogsId = 'cataloghi-oscuranti'
-const featuredWork = homeGallery.find((photo) => photo.id === 'home-oscuranti-mare')
-
 export function Shutters({ product }: ProductDetailProps) {
   const solutions = useSectionReveal()
   const catalogs = useSectionReveal()
-  useAnchorNavigation(solutionsId, catalogsId)
+  useAnchorNavigation(solutionsId, catalogsId, productFaqId)
 
   return (
     <div className={styles.page}>
@@ -115,9 +115,11 @@ export function Shutters({ product }: ProductDetailProps) {
           </div>
         </section>
 
+        <ProductFaq {...shutterFaq} />
+
         <ProjectClosing
           titleId="shutters-showroom-title"
-          photo={featuredWork}
+          photo={featuredWorkPhotos.seaShading}
           showroom={{
             worksPath: `${worksPage.path}?categoria=oscuranti#works-content`,
             worksLabel: 'Vedi i nostri lavori',

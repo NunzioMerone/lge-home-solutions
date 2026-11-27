@@ -55,4 +55,5 @@ export interface WhatsAppContactLinkProps {
   className?: string | undefined
   label?: string
   reveal?: boolean
+  floating?: boolean
 }

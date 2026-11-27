@@ -1,8 +1,8 @@
 {
   "date": "2026-11-27",
-  "revision": "Rev24",
-  "scope": "Montaggio locale alleggerito con due inquadrature in meno, sincronizzazione della chiusura VEKA e poster WebP.",
-  "provenance": "references/hero-video-partners/edit-rev24.json",
+  "revision": "Rev25",
+  "scope": "Nuove codifiche dalle sequenze sorgenti di Rev24, con gli stessi 2.974 fotogrammi e gli stessi poster WebP.",
+  "provenance": "references/hero-video-partners/edit-rev25.json",
   "partners": [
     "VEKA",
     "VELUX",
@@ -23,9 +23,9 @@
     {
       "format": "desktop",
       "kind": "video",
-      "target": "public/media/hero/hero-desktop-rev24.mp4",
-      "bytes": 27814586,
-      "sha256": "1c8da9ae1d3af3c8efe86daa334a0402aea1323d7e6336cdcc470e6a58cd071f",
+      "target": "public/media/hero/hero-desktop-rev25.mp4",
+      "bytes": 23258705,
+      "sha256": "0405abc2ae06f87e4575c2a1ad48876e651cbe84483c68c52e5829ea1df06c8a",
       "width": 1920,
       "height": 1080,
       "codec": "h264"
@@ -33,7 +33,7 @@
     {
       "format": "desktop",
       "kind": "poster",
-      "target": "public/media/hero/hero-desktop-rev24-poster.webp",
+      "target": "public/media/hero/hero-desktop-rev25-poster.webp",
       "bytes": 108190,
       "sha256": "57db102aa325e744975c193dd6707f4ecfd717ddb6a09dce0f13402f2b01aa1d",
       "width": 1920,
@@ -42,9 +42,9 @@
     {
       "format": "wide-compact",
       "kind": "video",
-      "target": "public/media/hero/hero-wide-compact-rev24.mp4",
-      "bytes": 12475778,
-      "sha256": "5536cc6aea7354b6a6d805fd458fe7903211183288e3d5bdfd2d4253984f290a",
+      "target": "public/media/hero/hero-wide-compact-rev25.mp4",
+      "bytes": 10623890,
+      "sha256": "668a0cfe557f2b718d56bd006c6e58caf6e90fd12897d974bd73cbc09aa52f40",
       "width": 1280,
       "height": 720,
       "codec": "h264"
@@ -52,7 +52,7 @@
     {
       "format": "wide-compact",
       "kind": "poster",
-      "target": "public/media/hero/hero-wide-compact-rev24-poster.webp",
+      "target": "public/media/hero/hero-wide-compact-rev25-poster.webp",
       "bytes": 62580,
       "sha256": "fffd162a14bce7c736f3fab68714eea20810a6f4e0392c770dcd3a330b7c7895",
       "width": 1280,
@@ -61,9 +61,9 @@
     {
       "format": "tablet",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-rev24.mp4",
-      "bytes": 15340388,
-      "sha256": "3e8097dec4b8c8596e5bd856a9ab35e7d2d29f56fee62e8ad517f4734d15c434",
+      "target": "public/media/hero/hero-tablet-rev25.mp4",
+      "bytes": 12937359,
+      "sha256": "1b12a03161e1b7ceff5796cc7e0eb5d1b4a092e852708ab2776c4fb365e5e4b9",
       "width": 1280,
       "height": 960,
       "codec": "h264"
@@ -71,7 +71,7 @@
     {
       "format": "tablet",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-rev24-poster.webp",
+      "target": "public/media/hero/hero-tablet-rev25-poster.webp",
       "bytes": 77806,
       "sha256": "8633e3024b0ca3e11126cf056315fe9d1a86fa5b0e6bb3169cf06532118641d3",
       "width": 1280,
@@ -80,9 +80,9 @@
     {
       "format": "tablet-portrait",
       "kind": "video",
-      "target": "public/media/hero/hero-tablet-portrait-rev24.mp4",
-      "bytes": 14925046,
-      "sha256": "9e3b88567f86f06e14528688d4ffbcf11a60782ec63435b9d1e2745be879f9d7",
+      "target": "public/media/hero/hero-tablet-portrait-rev25.mp4",
+      "bytes": 12740232,
+      "sha256": "2a7d294217b16683b4e3033f217eb3487d9c6415aa9da9d186053231712ae736",
       "width": 960,
       "height": 1280,
       "codec": "h264"
@@ -90,7 +90,7 @@
     {
       "format": "tablet-portrait",
       "kind": "poster",
-      "target": "public/media/hero/hero-tablet-portrait-rev24-poster.webp",
+      "target": "public/media/hero/hero-tablet-portrait-rev25-poster.webp",
       "bytes": 71550,
       "sha256": "747b7d6c988c53b1d5608845ea4c87e079e5e5bc411fe7a3240cb81be2fbf740",
       "width": 960,
@@ -99,9 +99,9 @@
     {
       "format": "mobile",
       "kind": "video",
-      "target": "public/media/hero/hero-mobile-rev24.mp4",
-      "bytes": 8748017,
-      "sha256": "c0fcfb053b08ade1766b23668d191cedba188319474820e439a4af5fa0f0748d",
+      "target": "public/media/hero/hero-mobile-rev25.mp4",
+      "bytes": 7979616,
+      "sha256": "19d877a60bb5b9ddd433926534256db0c96508eb40a132f57e2d9b45dd85f234",
       "width": 720,
       "height": 1280,
       "codec": "h264"
@@ -109,7 +109,7 @@
     {
       "format": "mobile",
       "kind": "poster",
-      "target": "public/media/hero/hero-mobile-rev24-poster.webp",
+      "target": "public/media/hero/hero-mobile-rev25-poster.webp",
       "bytes": 48432,
       "sha256": "78899d8cf189385f0eecf952e33c2a2dae831ec730e3318085692a339d2968dd",
       "width": 720,
@@ -118,9 +118,9 @@
     {
       "format": "mobile",
       "kind": "video-efficient",
-      "target": "public/media/hero/hero-mobile-rev24-hevc.mp4",
-      "bytes": 7252237,
-      "sha256": "01d981699fa974f4452fd18dc8d53639c68bca36620b3238d7ffdce254506fa3",
+      "target": "public/media/hero/hero-mobile-rev25-hevc.mp4",
+      "bytes": 6092438,
+      "sha256": "6fae3012dcd7b4a2f77ee5bf6cb90c5062b0a61294de3f22a36944afdcd3c40e",
       "width": 720,
       "height": 1280,
       "codec": "hevc"

@@ -12,14 +12,14 @@
       "profileReference": "https://dekraprod-media.e-spirit.cloud/fb2198ff-7a46-490d-8c58-de62fd7caa44/media/firstspirit-17906002413500035-13-prs-schema-uni-11673.pdf",
       "issuedOn": "2023-12-12",
       "expiresOn": "2029-12-11",
-      "editorialNote": "I due certificati DEKRA sono associati alla sezione Posatori qualificati."
+      "editorialNote": "I due certificati DEKRA nella sezione Progettisti e posatori qualificati documentano il profilo senior EQF 3."
     },
     {
       "id": "qualified-installation-design",
       "standard": "UNI 11673-2:2019",
       "eqfLevel": 4,
       "profileReference": "https://www.giordano.it/Upload/contenuti/1674463033_reg_prs-11673_rev04-reg-specifico-persone-operanti-installazione_-serramenti.pdf",
-      "editorialNote": "Progettisti qualificati è il titolo sul sito per l’approfondimento sulla progettazione della posa. Il testo identifica il profilo di posatore caposquadra. La fonte aziendale è la conferma del titolare.",
+      "editorialNote": "La sezione Progettisti e posatori qualificati descrive anche il profilo del caposquadra EQF 4, confermato dal titolare. La didascalia dei due certificati DEKRA identifica il solo livello EQF 3.",
       "companyConfirmation": {
         "confirmedOn": "2026-10-28",
         "source": "Conferma esplicita del titolare in conversazione",
@@ -45,7 +45,7 @@
       "documentedQualification": "Category 1 Thermographer",
       "issuedOn": "2023-03-22",
       "validityYears": 5,
-      "editorialNote": "Entrambi i certificati ITC ricevuti attestano la categoria 1. Il II livello è stato confermato esplicitamente dal titolare il 28 ottobre 2026; non viene attribuito a ITC né presentato come contenuto dei PDF precedenti.",
+      "editorialNote": "Entrambi i certificati ITC ricevuti attestano la categoria 1. La sezione pubblica descrive l’uso della termocamera e la didascalia identifica la categoria dei documenti. Il titolare ha inoltre confermato il II livello il 28 ottobre 2026.",
       "companyConfirmation": {
         "confirmedOn": "2026-10-28",
         "source": "Conferma esplicita del titolare in conversazione",

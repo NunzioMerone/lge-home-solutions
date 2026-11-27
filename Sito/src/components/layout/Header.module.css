@@ -3,7 +3,7 @@
   inset: 0 0 auto;
   z-index: 80;
   color: var(--color-ink);
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-sans);
 }
 .overVideo {
   color: var(--color-paper);
@@ -331,10 +331,11 @@
   align-items: center;
   min-height: 62px;
   padding: 6px 0;
-  font-size: clamp(2rem, 7.2vw, 3rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2.125rem, 7.2vw, 3rem);
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -0.045em;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   color: var(--color-ink);
 }
 .mobileLinks > li > a::after,

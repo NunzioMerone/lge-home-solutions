@@ -10,6 +10,7 @@ import { deferredProductPages } from './utils/productPages'
 import { useInputModality } from './hooks/useInputModality'
 import { PageLoadBoundary } from './components/layout/PageLoadBoundary'
 import { RoutePending } from './components/layout/RoutePending'
+import { WhatsAppContactLink } from './components/ui/WhatsAppContactLink'
 import type { DeferredInformationRouteProps } from './types/navigation'
 import type { ProductDetailProps } from './types/productTransition'
 
@@ -54,6 +55,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </PageLoadBoundary>
+      <WhatsAppContactLink floating />
     </>
   )
 }

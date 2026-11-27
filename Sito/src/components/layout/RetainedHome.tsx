@@ -43,7 +43,9 @@ export function RetainedHome() {
     if (target.kind === 'position') {
       window.scrollTo({ left: target.position.x, top: target.position.y, behavior: 'instant' })
     } else {
-      document.getElementById(target.id)?.scrollIntoView({
+      const section = document.getElementById(target.id)
+      section?.focus({ preventScroll: true })
+      section?.scrollIntoView({
         block: 'start',
         behavior: target.behavior,
       })

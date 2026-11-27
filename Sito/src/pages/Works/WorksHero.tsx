@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { gulfAwningPhoto } from '../../data/gallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { galleryImageUrl } from '../../utils/galleryImages'
 import { Skeleton } from '../../components/ui/Skeleton'
 import { SettledImage } from '../../components/ui/SettledImage'
 import styles from './WorksHero.module.css'
 
+const gulfAwningPhoto = featuredWorkPhotos.gulfAwning
 const photoSources = [...gulfAwningPhoto.previewWidths, 1120, gulfAwningPhoto.fullWidth]
   .map((width) => `${galleryImageUrl(gulfAwningPhoto, width)} ${width}w`)
   .join(', ')

@@ -4,9 +4,11 @@ import { MotionContext } from '../../config/motionContext'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import type { MotionProviderProps } from '../../types/ui'
 
+const motionPreferenceKey = 'lge-reduced-motion'
+
 function storedPreference(): boolean {
   try {
-    return sessionStorage.getItem('lge-reduced-motion') === 'true'
+    return sessionStorage.getItem(motionPreferenceKey) === 'true'
   } catch {
     return false
   }
@@ -23,7 +25,11 @@ export function MotionProvider({ children }: MotionProviderProps) {
 
   useEffect(() => {
     try {
-      sessionStorage.setItem('lge-reduced-motion', String(preference))
+      if (preference) {
+        sessionStorage.setItem(motionPreferenceKey, 'true')
+      } else {
+        sessionStorage.removeItem(motionPreferenceKey)
+      }
     } catch {
       /* Preference remains available for this visit. */
     }

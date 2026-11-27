@@ -2,11 +2,13 @@ import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
 import { ProjectClosing } from '../../components/sections/Gallery/ProjectClosing'
+import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
-import { homeGallery } from '../../data/homeGallery'
+import { featuredWorkPhotos } from '../../data/homeGallery'
 import { securityDoorChecks } from '../../data/securityDoors'
+import { entranceDoorFaq, productFaqId } from '../../data/productFaqs'
 import { useAnchorNavigation } from '../../hooks/useAnchorNavigation'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { ProductDetailProps } from '../../types/productTransition'
@@ -16,12 +18,10 @@ import styles from './SecurityDoors.module.css'
 
 const studioId = 'configuratore-tehni'
 const catalogsId = 'cataloghi-tehni'
-const featuredWork = homeGallery.find((photo) => photo.id === 'home-ingresso-grigio')
-
 export function SecurityDoors({ product }: ProductDetailProps) {
   const studio = useSectionReveal()
   const catalogs = useSectionReveal()
-  useAnchorNavigation(studioId, catalogsId)
+  useAnchorNavigation(studioId, catalogsId, productFaqId)
 
   return (
     <div className={styles.page}>
@@ -113,9 +113,11 @@ export function SecurityDoors({ product }: ProductDetailProps) {
           </div>
         </section>
 
+        <ProductFaq {...entranceDoorFaq} />
+
         <ProjectClosing
           titleId="security-showroom-title"
-          photo={featuredWork}
+          photo={featuredWorkPhotos.greyEntrance}
           showroom={{
             worksPath: `${worksPage.path}?categoria=porte-e-sicurezza#works-content`,
             worksLabel: 'Vedi le realizzazioni LGE',
