@@ -40,7 +40,8 @@ export function SettledImage({
     // The prerendered image may have finished before React attached either listener.
     if (image.complete) {
       if (image.naturalWidth > 0) loaded()
-      else failed()
+      // A lazy image can report complete before the browser selects a source.
+      else if (image.currentSrc) failed()
     }
     return () => {
       active = false
