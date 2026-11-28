@@ -6,7 +6,7 @@ import type { WorkPhotoProps } from '../../types/works'
 import { galleryImageUrl } from '../../utils/galleryImages'
 import styles from './Works.module.css'
 
-export function WorkPhoto({ photo, interactive, onOpen }: WorkPhotoProps) {
+export function WorkPhoto({ photo, interactive, onOpen, sizes }: WorkPhotoProps) {
   const [settled, setSettled] = useState(false)
   return (
     <a
@@ -30,12 +30,15 @@ export function WorkPhoto({ photo, interactive, onOpen }: WorkPhotoProps) {
     >
       <GalleryImage
         photo={photo}
-        sizes="(min-width: 1440px) 440px, (min-width: 1000px) 30vw, (min-width: 600px) 44vw, 100vw"
+        sizes={
+          sizes ??
+          '(min-width: 1440px) 440px, (min-width: 1000px) 30vw, (min-width: 600px) 44vw, 100vw'
+        }
         onSettled={() => setSettled(true)}
       />
       {!settled && <Skeleton className={styles.imageSkeleton} />}
       <span className={styles.photoHint} aria-hidden="true">
-        <Icon name="external" />
+        <Icon name="expand" />
       </span>
     </a>
   )

@@ -16,6 +16,24 @@
   transform: translateY(-100%);
 }
 
+@media (scripting: enabled) {
+  .dock[data-scrolled='false'] {
+    visibility: hidden;
+  }
+}
+
+@media (scripting: none) {
+  :is(main, article):has(> .dock) {
+    display: flow-root;
+  }
+
+  /* Start just below the fold, then stick as usual without displacing the hero. */
+  .dock {
+    --start: calc(100dvh + var(--control-height) - var(--index-container-offset, 0px));
+    margin-block: var(--start) calc(0px - var(--start));
+  }
+}
+
 .trigger,
 .links {
   border: 1px solid var(--color-line);

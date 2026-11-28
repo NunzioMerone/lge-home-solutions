@@ -100,7 +100,12 @@ export function BlogArticle() {
         </figure>
         <div className={styles.articleLayout}>
           <aside className={styles.articleAside} ref={asideRef}>
-            <nav className={styles.tableOfContents} aria-label="Indice dell’articolo" data-reveal>
+            <nav
+              className={styles.tableOfContents}
+              aria-label="Indice dell’articolo"
+              data-reveal
+              data-reveal-direction="fade"
+            >
               <span className="eyebrow">In questa guida</span>
               <ol>
                 {content.sections.map((section) => (

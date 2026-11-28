@@ -1,5 +1,7 @@
 # LGE Home Solutions — Project brief
 
+**Revisione mobile del 28 novembre 2026, autorizzata per GitHub Pages.** Gli indici di Outdoor e delle guide Blog compaiono al primo scorrimento. La hero riunisce il collegamento allo showroom e il comando video in una riga, con un interruttore che mantiene il fotogramma in pausa. Le icone delle schede del browser e dei dispositivi Apple usano il simbolo della casa tratto dal logo originale LGE. Nella pagina Lavori il filtro «In evidenza» raccoglie i cinque esempi di progetto e permette di ingrandire le fotografie al tocco.
+
 **Pubblicazione del checkpoint del 28 novembre 2026.** L’utente autorizza il push su `main` e l’aggiornamento dell’anteprima non indicizzata su GitHub Pages. L’anteprima comprende le ottimizzazioni, il comando video nella hero, le FAQ, le nove guide e i cinque racconti dimostrativi con fotografie nella pagina Lavori. La sezione «Esempi di progetto» distingue i racconti ipotetici dalle fotografie reali.
 
 **Blog, revisione editoriale locale del 28 novembre 2026.** La raccolta comprende nove guide. Spifferi e condensa hanno percorsi distinti. Il filtro Sicurezza raccoglie porte blindate e avvolgibili, mentre una guida dedicata alla porta d’ingresso tratta l’isolamento termico. La guida outdoor mantiene il confronto fra pergola e tenda da sole.

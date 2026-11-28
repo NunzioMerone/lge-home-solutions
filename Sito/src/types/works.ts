@@ -4,7 +4,7 @@ import type { PhotoId } from './content'
 export type WorkCategoryId =
   'infissi' | 'oscuranti' | 'porte-e-sicurezza' | 'porte-interne' | 'atelier-gibus'
 
-export type WorkFilter = 'tutti' | WorkCategoryId
+export type WorkFilter = 'tutti' | 'in-evidenza' | WorkCategoryId
 export type WorkColumnCount = 1 | 2 | 3
 
 export interface WorkCategory {
@@ -23,6 +23,7 @@ export interface WorkCollection extends WorkCategory {
 
 export interface WorkFiltersProps {
   selected: WorkFilter
+  showFeatured: boolean
 }
 
 export interface WorkCategoryLabelProps {
@@ -43,6 +44,7 @@ export interface WorkPhotoColumn {
 export interface WorkPhotoProps {
   photo: GalleryPhoto
   interactive: boolean
+  sizes?: string
   onOpen: WorkGalleryProps['onOpen']
 }
 
@@ -63,6 +65,5 @@ export interface WorkCaseStudy {
 }
 
 export interface WorkCaseStudiesProps {
-  selected: WorkFilter
   onOpen: (selection: Omit<GalleryLightboxProps, 'onClose'>) => void
 }

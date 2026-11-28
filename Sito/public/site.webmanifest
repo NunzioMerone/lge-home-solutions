@@ -1,0 +1,11 @@
+{
+  "id": "./",
+  "name": "LGE Home Solutions",
+  "short_name": "LGE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "icons": [
+    { "src": "img/brand/lge-symbol-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

@@ -3,6 +3,8 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { PageLink } from '../../components/ui/PageLink'
 import { workCategories } from '../../data/works'
+import { featuredWorkPhotos } from '../../data/homeGallery'
+import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
 import { ResponsiveImage } from '../../components/ui/ResponsiveImage'
 import { Skeleton } from '../../components/ui/Skeleton'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
@@ -26,9 +28,10 @@ function FilterPhoto({ photo }: WorkFilterPhotoProps) {
   )
 }
 
-export function WorkFilters({ selected }: WorkFiltersProps) {
+export function WorkFilters({ selected, showFeatured }: WorkFiltersProps) {
   const location = useLocation()
-  const hash = useHydrated() ? location.hash : ''
+  const hydrated = useHydrated()
+  const hash = hydrated && location.hash !== '#in-evidenza' ? location.hash : ''
   const ref = useSectionReveal({ duration: 1.15, stagger: 0.08 })
   const stripRef = useRef<HTMLDivElement>(null)
 
@@ -70,6 +73,25 @@ export function WorkFilters({ selected }: WorkFiltersProps) {
             </span>
             <span className={styles.filterLabel}>Tutti i lavori</span>
           </PageLink>
+          {showFeatured && (
+            <PageLink
+              to={getWorkCategoryPath('in-evidenza') + (hydrated ? hash : '#in-evidenza')}
+              preventScrollReset
+              aria-current={selected === 'in-evidenza' ? 'page' : undefined}
+              aria-controls="works-content"
+              className={styles.filterLink}
+              data-reveal
+            >
+              <span className={styles.filterPhoto} aria-hidden="true">
+                <GalleryImage
+                  photo={featuredWorkPhotos.kitchenWindow}
+                  alt=""
+                  sizes="(min-width: 900px) 165px, 124px"
+                />
+              </span>
+              <span className={styles.filterLabel}>In evidenza</span>
+            </PageLink>
+          )}
           {workCategories.map((category) => (
             <PageLink
               key={category.id}

@@ -139,10 +139,17 @@ describe('static website build', () => {
         expect(html).toMatch(/rel="modulepreload" crossorigin href="\/lge-home-solutions\/assets\//)
     }
     const works = await readFile(join(fixture, 'lavori/index.html'), 'utf8')
-    expect(works).toContain('Esempi di progetto')
+    expect(works).toContain(`href="${base}lavori/?categoria=in-evidenza#in-evidenza"`)
+    const featured = works.match(/<div id="in-evidenza"[^>]*>([\s\S]*?)<\/section><\/div>/)?.[1]
+    expect(featured).toContain('Esempi di progetto')
     for (const story of workCaseStudyDrafts) {
-      expect(works).toContain(escapeMarkup(story.title))
-      expect(works).toContain(escapeMarkup(story.result))
+      expect(featured).toContain(escapeMarkup(story.title))
+      expect(featured).toContain(escapeMarkup(story.result))
+      const article = featured?.split(`aria-labelledby="${story.id}"`)[1]?.split('</article>')[0]
+      const beforeDetails = article?.split('<details')[0]
+      for (const photo of story.photos) {
+        expect(beforeDetails).toContain(`href="${base}${galleryImagePath(photo, photo.fullWidth)}"`)
+      }
     }
     const privacy = await readFile(join(fixture, 'privacy-policy/index.html'), 'utf8')
     expectCompanyPrivacy(privacy)

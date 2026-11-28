@@ -55,11 +55,20 @@ describe('work collections', () => {
     expect(getWorkCategoryPath('tutti')).toBe(worksPage.path)
     for (const category of workCategories) {
       const url = new URL(getWorkCategoryPath(category.id), 'https://example.test')
-      expect(parseWorkFilter(url.searchParams.get('categoria'), workCategories)).toBe(category.id)
+      expect(parseWorkFilter(url.searchParams.get('categoria'), workCategories, true)).toBe(
+        category.id,
+      )
       expect(url.hash).toBe('')
     }
+    const featured = new URL(getWorkCategoryPath('in-evidenza'), 'https://example.test')
+    expect(parseWorkFilter(featured.searchParams.get('categoria'), workCategories, true)).toBe(
+      'in-evidenza',
+    )
+    expect(parseWorkFilter(featured.searchParams.get('categoria'), workCategories, false)).toBe(
+      'tutti',
+    )
     for (const value of [null, '', 'tutti', 'unknown', '../../privacy-policy']) {
-      expect(parseWorkFilter(value, workCategories)).toBe('tutti')
+      expect(parseWorkFilter(value, workCategories, true)).toBe('tutti')
     }
   })
 

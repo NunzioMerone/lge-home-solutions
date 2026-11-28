@@ -15,7 +15,6 @@ const phrases = {
 export const heroCopy = {
   prefix: 'Il design che',
   phrases,
-  subtitle: 'Ogni ambiente merita di essere vissuto al meglio.',
   services: 'Infissi, porte e soluzioni outdoor. Consulenza e posa qualificata nei Campi Flegrei.',
 }
 

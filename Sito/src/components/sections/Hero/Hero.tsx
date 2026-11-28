@@ -75,27 +75,35 @@ export function Hero({ active }: PageActivityProps) {
               </span>
             </span>
           </h1>
-          <div data-hero-subtitle>
-            <p className={styles.subtitle}>{heroCopy.subtitle}</p>
+          <div data-hero-details>
             <p className={styles.services}>{heroCopy.services}</p>
-            <PageLink className={styles.showroomLink} to={navigation.contact.path}>
-              <span>Visita il nostro showroom</span>
-              <Icon name="down" />
-            </PageLink>
+            <div className={styles.actions}>
+              <PageLink className={styles.showroomLink} to={navigation.contact.path}>
+                <span>Visita il nostro showroom</span>
+                <Icon name="down" />
+              </PageLink>
+              {video.visible && (
+                <button
+                  type="button"
+                  role="switch"
+                  className={styles.videoControl}
+                  aria-label="Riproduzione del video"
+                  aria-checked={!paused}
+                  aria-controls="hero-video"
+                  title={paused ? 'Riprendi video' : 'Pausa video'}
+                  onClick={togglePlayback}
+                >
+                  <span className={styles.track} aria-hidden="true">
+                    <span className={styles.thumb}>
+                      <Icon name={paused ? 'play' : 'pause'} />
+                    </span>
+                  </span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
-      {video.visible && (
-        <button
-          type="button"
-          className={styles.videoControl}
-          aria-controls="hero-video"
-          onClick={togglePlayback}
-        >
-          <Icon name={paused ? 'play' : 'pause'} />
-          <span>{paused ? 'Riprendi video' : 'Pausa video'}</span>
-        </button>
-      )}
     </section>
   )
 }

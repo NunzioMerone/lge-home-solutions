@@ -28,7 +28,7 @@ export function useHeroEntrance() {
           0.05,
         )
         .fromTo(
-          root.querySelector('[data-hero-subtitle]'),
+          root.querySelector('[data-hero-details]'),
           { opacity: 0, y: 12 },
           { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' },
           0.2,

@@ -127,29 +127,26 @@
   mask-position: 0% 0%;
   mask-repeat: no-repeat;
 }
-.subtitle {
-  max-width: 340px;
-  margin: 18px 0 0;
+.services {
+  max-width: 42ch;
+  margin: clamp(12px, 1.6vw, 24px) 0 0;
   color: var(--color-paper);
-  font-size: 1rem;
+  font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
   line-height: 1.55;
-  letter-spacing: -0.015em;
   text-wrap: pretty;
 }
-.services {
-  max-width: 44ch;
-  margin: var(--space-1) 0 0;
-  color: var(--color-paper);
-  font-size: clamp(0.875rem, 1.1vw, 1rem);
-  line-height: 1.5;
-  text-wrap: pretty;
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 clamp(14px, 2vw, 24px);
+  margin-top: var(--space-2);
 }
 .showroomLink {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   min-height: 44px;
-  margin-top: var(--space-2);
   color: var(--color-paper);
   font-size: 0.9375rem;
   font-weight: 500;
@@ -178,48 +175,48 @@
   outline-color: currentColor;
 }
 .videoControl {
-  position: absolute;
-  z-index: 3;
-  right: var(--gutter);
-  bottom: calc(clamp(20px, 4svh, 44px) + env(safe-area-inset-bottom));
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid rgb(255 255 255 / 45%);
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 44px;
+  border: 0;
+  padding: 0;
+  background: transparent;
   border-radius: var(--radius);
-  color: var(--color-white);
-  background: rgb(13 21 29 / 76%);
-  font-size: 0.8125rem;
-  font-weight: 500;
+}
+.track {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 28px;
+  padding-inline: 3px;
+  border: 1px solid rgb(255 255 255 / 65%);
+  border-radius: 999px;
+  background: rgb(13 21 29 / 74%);
+}
+.thumb {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+.videoControl[aria-checked='true'] .thumb {
+  transform: translateX(20px);
 }
 .videoControl svg {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.6;
 }
 .videoControl:focus-visible {
   outline-color: var(--color-white);
-  outline-offset: 3px;
 }
-@media (hover: hover) and (pointer: fine) {
-  .videoControl:hover {
-    background: var(--color-ink);
-  }
-}
-@media (max-width: 1099px), (hover: none), (pointer: coarse) {
-  .videoControl {
-    right: calc(72px + env(safe-area-inset-right));
-    bottom: calc(var(--space-2) + env(safe-area-inset-bottom));
-  }
-}
-@media (max-width: 699px) and (orientation: portrait),
-  (orientation: landscape) and (max-height: 600px) {
-  .videoControl {
-    top: calc(var(--navigation-height) + var(--space-2) + env(safe-area-inset-top));
-    right: max(var(--gutter), env(safe-area-inset-right));
-    bottom: auto;
+@media (prefers-reduced-motion: no-preference) {
+  .thumb {
+    transition: transform 160ms ease-out;
   }
 }
 @media (min-width: 700px) and (max-width: 999px) {
@@ -236,10 +233,6 @@
   }
   .introduction h1 {
     font-size: 4rem;
-  }
-  .subtitle {
-    max-width: 440px;
-    font-size: 1.125rem;
   }
   .eyebrow {
     font-size: 0.75rem;
@@ -260,12 +253,6 @@
   }
   .introduction h1 {
     font-size: clamp(3.75rem, 4.8vw, 5.3rem);
-  }
-  .subtitle {
-    max-width: 430px;
-    margin-top: 28px;
-    font-size: clamp(1.125rem, 1.5vw, 1.45rem);
-    line-height: 1.45;
   }
 }
 @media (max-width: 699px) {
@@ -298,18 +285,14 @@
     font-size: 0.5625rem;
     letter-spacing: 0.13em;
   }
-  .subtitle {
-    margin-top: 12px;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
   .services {
     max-width: 35ch;
-    font-size: 0.875rem;
+  }
+  .actions {
+    margin-right: 50px;
+    margin-top: 6px;
   }
   .showroomLink {
-    max-width: calc(100% - 60px);
-    margin-top: 6px;
     font-size: 0.875rem;
   }
 }
@@ -331,8 +314,15 @@
   .eyebrow {
     margin-bottom: 12px;
   }
-  .subtitle {
-    margin-top: 14px;
+}
+@media (max-width: 360px) {
+  .actions {
+    column-gap: 6px;
+    margin-right: 44px;
+  }
+  .showroomLink {
+    gap: 6px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -343,7 +333,7 @@
       calc(var(--space-1) + env(safe-area-inset-bottom));
   }
   .introduction {
-    max-width: min(80%, 48rem, calc(100% - 10rem));
+    max-width: min(84%, 48rem);
   }
   .introduction h1 {
     font-size: clamp(1.75rem, 4vw, 2.75rem);
@@ -351,17 +341,12 @@
   .eyebrow {
     margin-bottom: 4px;
   }
-  .subtitle {
-    margin-top: var(--space-1);
-    font-size: 1rem;
-    line-height: 1.35;
-  }
   .services {
     max-width: 64ch;
     margin-top: 4px;
     font-size: 0.8125rem;
   }
-  .showroomLink {
+  .actions {
     margin-top: 0;
   }
 }

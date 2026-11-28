@@ -1,5 +1,5 @@
 import { useHydrated } from '../../hooks/useHydrated'
-import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
@@ -7,6 +7,7 @@ import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightb
 import { allWorkPhotos, workCategories, workCollections } from '../../data/works'
 import { parseWorkFilter } from '../../utils/works'
 import type { GalleryLightboxProps } from '../../types/gallery'
+import WorkCaseStudies from './WorkCaseStudies'
 import { WorkFilters } from './WorkFilters'
 import { WorkGallery } from './WorkGallery'
 import { WorksHero } from './WorksHero'
@@ -15,8 +16,7 @@ import { WorkCategoryLabel } from './WorkCategoryLabel'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import styles from './Works.module.css'
 
-const PreviewCaseStudies =
-  import.meta.env.VITE_PUBLIC_PREVIEW !== 'false' ? lazy(() => import('./WorkCaseStudies')) : null
+const showFeatured = import.meta.env.VITE_PUBLIC_PREVIEW !== 'false'
 
 export function Works() {
   const [params] = useSearchParams()
@@ -24,11 +24,16 @@ export function Works() {
   const contentRef = useRef<HTMLDivElement>(null)
   const headingRef = useSectionReveal()
   const hydrated = useHydrated()
-  const selected = parseWorkFilter(hydrated ? params.get('categoria') : null, workCategories)
+  const selected = parseWorkFilter(
+    hydrated ? params.get('categoria') : null,
+    workCategories,
+    showFeatured,
+  )
+  const featured = selected === 'in-evidenza'
   const [lightbox, setLightbox] = useState<Omit<GalleryLightboxProps, 'onClose'> | null>(null)
   const collection = workCollections.find((item) => item.id === selected)
   const photos = collection?.photos ?? allWorkPhotos
-  const title = collection?.title ?? 'Tutti i lavori'
+  const title = featured ? 'In evidenza' : (collection?.title ?? 'Tutti i lavori')
 
   useLayoutEffect(() => {
     if (!hash) {
@@ -62,7 +67,7 @@ export function Works() {
       <Header />
       <main className={styles.main}>
         <WorksHero />
-        <WorkFilters selected={selected} />
+        <WorkFilters selected={selected} showFeatured={showFeatured} />
         <div
           className={`container ${styles.collections}`}
           id="works-content"
@@ -79,17 +84,19 @@ export function Works() {
               </span>
             </h2>
           </header>
-          {PreviewCaseStudies && (
-            <Suspense fallback={null}>
-              <PreviewCaseStudies key={selected} selected={selected} onOpen={setLightbox} />
-            </Suspense>
+          {showFeatured && (featured || !hydrated) && (
+            <div id="in-evidenza" className={styles.featuredView} data-selected={featured}>
+              <WorkCaseStudies onOpen={setLightbox} />
+            </div>
           )}
-          <WorkGallery
-            key={selected}
-            photos={photos}
-            title={title}
-            onOpen={(photo, trigger) => setLightbox({ photos, photo, trigger })}
-          />
+          {!featured && (
+            <WorkGallery
+              key={selected}
+              photos={photos}
+              title={title}
+              onOpen={(photo, trigger) => setLightbox({ photos, photo, trigger })}
+            />
+          )}
         </div>
         <WorksContact />
       </main>

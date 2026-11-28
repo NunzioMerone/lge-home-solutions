@@ -21,7 +21,9 @@ export function orderWorkPhotos(photos: readonly GalleryPhoto[], category: WorkC
 export function parseWorkFilter(
   value: string | null,
   categories: readonly WorkCategory[],
+  showFeatured: boolean,
 ): WorkFilter {
+  if (showFeatured && value === 'in-evidenza') return value
   return categories.find((category) => category.id === value)?.id ?? 'tutti'
 }
 

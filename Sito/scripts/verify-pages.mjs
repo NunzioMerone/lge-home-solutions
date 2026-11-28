@@ -58,12 +58,12 @@ export async function verifyStaticPages(
   )
   function publicAsset(value) {
     assert.ok(value, 'Missing public asset URL')
-    const url = new URL(value, base)
+    const url = new URL(value, documentBase)
     assert.ok(
-      url.origin === base.origin && url.pathname.startsWith(base.pathname),
+      url.origin === documentBase.origin && url.pathname.startsWith(documentBase.pathname),
       'Asset outside the site base',
     )
-    assetPaths.add(decodeURIComponent(url.pathname.slice(base.pathname.length)))
+    assetPaths.add(decodeURIComponent(url.pathname.slice(documentBase.pathname.length)))
   }
   for (const path of [...paths, '/404.html']) {
     const missing = path === '/404.html'
@@ -80,6 +80,11 @@ export async function verifyStaticPages(
     const description = content('name', 'description')
     const pathname = path === '/' || missing ? path : path.replace(/\/?$/, '/')
     const documentUrl = new URL(pathname.slice(1), documentBase)
+    for (const rel of ['icon', 'apple-touch-icon', 'manifest']) {
+      const declarations = links.filter((link) => link.rel === rel)
+      assert.ok(declarations.length, `Missing ${rel} on ${path}`)
+      for (const link of declarations) publicAsset(new URL(link.href, documentUrl).href)
+    }
     for (const { href } of tags(page, 'a')) {
       if (!href) continue
       const target = new URL(href, documentUrl)
@@ -140,9 +145,7 @@ export async function verifyStaticPages(
       `Incorrect og:description on ${path}`,
     )
     publicAsset(content('property', 'og:image')[0])
-    for (const link of links.filter((link) =>
-      ['stylesheet', 'modulepreload', 'icon'].includes(link.rel),
-    ))
+    for (const link of links.filter((link) => ['stylesheet', 'modulepreload'].includes(link.rel)))
       publicAsset(link.href)
     for (const script of tags(head, 'script')) if (script.type === 'module') publicAsset(script.src)
     expectedUrls.add(expected)
@@ -164,24 +167,27 @@ export async function verifyStaticPages(
   if (!base) {
     assert.equal(robots.trim(), 'User-agent: *\nAllow: /')
     await assert.rejects(stat(sitemapFile), { code: 'ENOENT' })
-    return
+  } else {
+    assert.equal(
+      robots.trim(),
+      `User-agent: *\nAllow: /\nSitemap: ${new URL('sitemap.xml', base).href}`,
+    )
+    const sitemap = await readFile(sitemapFile, 'utf8')
+    assert.ok(
+      sitemap.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"') &&
+        sitemap.trimEnd().endsWith('</urlset>'),
+      'Invalid sitemap root',
+    )
+    const urls = Array.from(sitemap.matchAll(/<loc>([^<]+)<\/loc>/g), ([, url]) => url)
+    assert.deepEqual(urls.sort(), [...expectedUrls].sort(), 'Sitemap and indexable pages differ')
+    const images = Array.from(
+      sitemap.matchAll(/<image:loc>([^<]+)<\/image:loc>/g),
+      ([, url]) => url,
+    )
+    assert.equal(images.length, gallerySize, 'Missing installation images from sitemap')
+    assert.equal(new Set(images).size, images.length, 'Duplicate images in sitemap')
+    images.forEach(publicAsset)
   }
-  assert.equal(
-    robots.trim(),
-    `User-agent: *\nAllow: /\nSitemap: ${new URL('sitemap.xml', base).href}`,
-  )
-  const sitemap = await readFile(sitemapFile, 'utf8')
-  assert.ok(
-    sitemap.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"') &&
-      sitemap.trimEnd().endsWith('</urlset>'),
-    'Invalid sitemap root',
-  )
-  const urls = Array.from(sitemap.matchAll(/<loc>([^<]+)<\/loc>/g), ([, url]) => url)
-  assert.deepEqual(urls.sort(), [...expectedUrls].sort(), 'Sitemap and indexable pages differ')
-  const images = Array.from(sitemap.matchAll(/<image:loc>([^<]+)<\/image:loc>/g), ([, url]) => url)
-  assert.equal(images.length, gallerySize, 'Missing installation images from sitemap')
-  assert.equal(new Set(images).size, images.length, 'Duplicate images in sitemap')
-  images.forEach(publicAsset)
   for (const path of assetPaths) {
     const asset = await stat(join(output, path))
     assert.ok(asset.isFile() && asset.size > 0, `Missing asset ${path}`)

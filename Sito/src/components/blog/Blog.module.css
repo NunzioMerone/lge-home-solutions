@@ -3,7 +3,8 @@
   background: var(--color-paper);
 }
 .main {
-  padding-top: calc(var(--navigation-height) + env(safe-area-inset-top));
+  --index-container-offset: calc(var(--navigation-height) + env(safe-area-inset-top));
+  padding-top: var(--index-container-offset);
 }
 .main:focus,
 .articles:focus,
