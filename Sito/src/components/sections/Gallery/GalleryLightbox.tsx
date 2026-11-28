@@ -78,7 +78,20 @@ export function GalleryLightbox({ photo, trigger, onClose, photos }: GalleryLigh
       dialog.close()
       document.documentElement.style.overflow = htmlOverflow
       document.body.style.overflow = bodyOverflow
-      if (trigger.isConnected) trigger.focus({ preventScroll: true })
+      if (!trigger.isConnected) return
+      trigger.focus({ preventScroll: true })
+      // WebKit can keep the page inert until the frame after an early touch dismissal.
+      if (document.activeElement === document.body) {
+        requestAnimationFrame(() => {
+          if (
+            trigger.isConnected &&
+            document.activeElement === document.body &&
+            !document.querySelector('dialog[open]')
+          ) {
+            trigger.focus({ preventScroll: true })
+          }
+        })
+      }
     }
   }, [trigger])
 
