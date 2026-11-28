@@ -25,17 +25,19 @@ export function SectionIndex({ label, items, className = '', activeId }: Section
   }, [visible])
 
   useEffect(() => {
-    if (!open || !disclosure.current) return
+    if (!disclosure.current) return
     const details = disclosure.current
     function dismiss(event: Event) {
-      if (event.target instanceof Node && !details.contains(event.target)) {
+      if (details.open && event.target instanceof Node && !details.contains(event.target)) {
         details.open = false
       }
     }
     // On touch WebKit may focus an ancestor between pointerup and click.
     // Keep the links in place during that native tap sequence.
     function dismissAfterTab(event: KeyboardEvent) {
-      if (event.key === 'Tab' && !details.contains(document.activeElement)) details.open = false
+      if (details.open && event.key === 'Tab' && !details.contains(document.activeElement)) {
+        details.open = false
+      }
     }
     document.addEventListener('pointerdown', dismiss)
     document.addEventListener('keyup', dismissAfterTab)
@@ -43,7 +45,7 @@ export function SectionIndex({ label, items, className = '', activeId }: Section
       document.removeEventListener('pointerdown', dismiss)
       document.removeEventListener('keyup', dismissAfterTab)
     }
-  }, [open])
+  }, [])
 
   useEffect(() => {
     if (!open || !trackSections) return
