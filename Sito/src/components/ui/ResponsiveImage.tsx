@@ -18,6 +18,8 @@ export function ResponsiveImage({
   const [failedSource, setFailedSource] = useState<string | null>(null)
   const asset = collection === 'hero' ? heroPhotos[photo] : photos[photo]
   const [smallWidth, largeWidth] = collection === 'hero' ? [480, 960] : [640, 1024]
+  const widths =
+    collection === 'hero' && photo === 'outdoor' ? [480, 720, 960] : [smallWidth, largeWidth]
   const src = assetUrl(`img/${collection}/${photo}-${smallWidth}.webp`)
   if (failedSource === src)
     return (
@@ -33,7 +35,9 @@ export function ResponsiveImage({
     <SettledImage
       className={className}
       src={src}
-      srcSet={`${assetUrl(`img/${collection}/${photo}-${smallWidth}.webp`)} ${smallWidth}w, ${assetUrl(`img/${collection}/${photo}-${largeWidth}.webp`)} ${largeWidth}w`}
+      srcSet={widths
+        .map((width) => `${assetUrl(`img/${collection}/${photo}-${width}.webp`)} ${width}w`)
+        .join(', ')}
       sizes={sizes}
       width={asset.width}
       height={asset.height}

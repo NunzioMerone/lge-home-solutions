@@ -1,7 +1,7 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import type { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { Icon } from '../../components/ui/Icon'
 import { outdoorShowcaseId, outdoorSolutions as chapters } from '../../data/atelierGibus'
@@ -11,8 +11,6 @@ import { useSectionReveal } from '../../hooks/useSectionReveal'
 import type { GibusLightboxState } from '../../types/atelierGibus'
 import { AtelierGallery } from './AtelierGallery'
 import styles from './AtelierShowcase.module.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const approach = 0.34
 const settle = 0.2
@@ -64,12 +62,31 @@ export function AtelierShowcase() {
   const [slides, setSlides] = useState({ active: 0, previous: -1 })
   const [lightbox, setLightbox] = useState<GibusLightboxState | null>(null)
   const { reducedMotion } = useMotion()
-  const pinned = useMediaQuery(desktopShowcase) && !reducedMotion
+  const desktop = useMediaQuery(desktopShowcase) && !reducedMotion
+  const [trigger, setTrigger] = useState<typeof ScrollTrigger>()
+  const pinned = desktop && Boolean(trigger)
   const { hash, key } = useLocation()
+
+  useEffect(() => {
+    if (!desktop || trigger) return
+    let active = true
+    void import('gsap/ScrollTrigger').then(
+      ({ ScrollTrigger }) => {
+        if (!active) return
+        gsap.registerPlugin(ScrollTrigger)
+        setTrigger(() => ScrollTrigger)
+      },
+      // Keep the static list usable when the optional animation chunk is unavailable.
+      () => {},
+    )
+    return () => {
+      active = false
+    }
+  }, [desktop, trigger])
 
   useLayoutEffect(() => {
     const pinnedStage = chapterList.current
-    if (!pinned || !pinnedStage || !steps.current) return
+    if (!pinned || !trigger || !pinnedStage || !steps.current) return
     const firstStep = steps.current.firstElementChild
     const lastStep = steps.current.lastElementChild
     if (!firstStep || !lastStep) return
@@ -103,7 +120,7 @@ export function AtelierShowcase() {
         })
       }
 
-      ScrollTrigger.create({
+      trigger.create({
         trigger: firstStep,
         endTrigger: lastStep,
         start: () => `top ${stageCenter(pinnedStage)}px`,
@@ -125,7 +142,7 @@ export function AtelierShowcase() {
       }
     })
     return () => media.revert()
-  }, [pinned])
+  }, [pinned, trigger])
 
   useLayoutEffect(() => {
     const id = hash.slice(1)
@@ -140,7 +157,7 @@ export function AtelierShowcase() {
       }
     })
     return () => cancelAnimationFrame(frame)
-  }, [hash, key, reducedMotion])
+  }, [hash, key, pinned])
 
   return (
     <section
@@ -210,7 +227,7 @@ export function AtelierShowcase() {
           </ol>
           <div ref={steps} className={styles.steps} aria-hidden="true">
             {chapters.map((chapter) => (
-              <div key={chapter.id} />
+              <div key={chapter.id} id={`scena-${chapter.id}`} />
             ))}
           </div>
         </div>

@@ -37,9 +37,6 @@ export interface CarouselProps {
 }
 export interface MotionSettings {
   reducedMotion: boolean
-  systemReducedMotion: boolean
-  userReducedMotion: boolean
-  toggleMotion: () => void
 }
 export interface MotionProviderProps {
   children: ReactNode

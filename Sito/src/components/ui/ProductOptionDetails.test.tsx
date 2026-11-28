@@ -3,9 +3,11 @@ import { describe, expect, it } from 'vitest'
 import { windowMaterials } from '../../data/infissi'
 import { interiorDoorOpenings } from '../../data/interiorDoors'
 import { shutterGroups } from '../../data/shutters'
+import { securityDoorMaterials } from '../../data/securityDoors'
 import { InteriorDoorOpenings } from '../../pages/InteriorDoors/InteriorDoorOpenings'
 import { WindowCollection } from '../../pages/ProductDetail/WindowCollection'
 import { ShutterShowcase } from '../../pages/Shutters/ShutterShowcase'
+import { DoorDesignStudio } from '../../pages/SecurityDoors/DoorDesignStudio'
 import { MotionProvider } from './MotionProvider'
 
 describe('product choices in the static page', () => {
@@ -24,6 +26,13 @@ describe('product choices in the static page', () => {
         ...(overview ? [overview.detail] : []),
         ...options.map((option) => option.detail),
       ]),
+    },
+    {
+      name: 'entrance doors',
+      element: <DoorDesignStudio />,
+      descriptions: securityDoorMaterials.flatMap(({ systems }) =>
+        systems.map(({ description }) => description),
+      ),
     },
     {
       name: 'interior doors',

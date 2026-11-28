@@ -54,9 +54,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgb(13 21 29 / 42%),
-    rgb(13 21 29 / 30%) 26%,
-    rgb(13 21 29 / 12%) 46%,
+    rgb(13 21 29 / 64%),
+    rgb(13 21 29 / 55%) 28%,
+    rgb(13 21 29 / 22%) 48%,
     transparent 65%
   );
   pointer-events: none;
@@ -136,43 +136,98 @@
   letter-spacing: -0.015em;
   text-wrap: pretty;
 }
-.showroomLink {
-  display: none;
+.services {
+  max-width: 44ch;
+  margin: var(--space-1) 0 0;
+  color: var(--color-paper);
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  line-height: 1.5;
+  text-wrap: pretty;
 }
-@media (min-width: 1100px) and (hover: hover) and (pointer: fine) {
-  .showroomLink {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 44px;
-    margin-top: var(--space-2);
-    color: var(--color-paper);
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  .showroomLink span {
-    text-decoration: underline;
-    text-decoration-color: rgb(255 255 255 / 65%);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.35em;
-  }
-  .showroomLink svg {
-    width: 16px;
-    height: 16px;
-    transition: transform var(--transition);
-  }
+.showroomLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: var(--space-2);
+  color: var(--color-paper);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.showroomLink span {
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 65%);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+}
+.showroomLink svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition);
+}
+@media (hover: hover) and (pointer: fine) {
   .showroomLink:hover span {
     text-decoration-color: currentColor;
   }
   .showroomLink:hover svg {
     transform: translateY(2px);
   }
-  .showroomLink:focus-visible {
-    outline-color: currentColor;
+}
+.showroomLink:focus-visible {
+  outline-color: currentColor;
+}
+.videoControl {
+  position: absolute;
+  z-index: 3;
+  right: var(--gutter);
+  bottom: calc(clamp(20px, 4svh, 44px) + env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  background: rgb(13 21 29 / 76%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.videoControl svg {
+  width: 16px;
+  height: 16px;
+}
+.videoControl:focus-visible {
+  outline-color: var(--color-white);
+  outline-offset: 3px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .videoControl:hover {
+    background: var(--color-ink);
+  }
+}
+@media (max-width: 1099px), (hover: none), (pointer: coarse) {
+  .videoControl {
+    right: calc(72px + env(safe-area-inset-right));
+    bottom: calc(var(--space-2) + env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 699px) and (orientation: portrait),
+  (orientation: landscape) and (max-height: 600px) {
+  .videoControl {
+    top: calc(var(--navigation-height) + var(--space-2) + env(safe-area-inset-top));
+    right: max(var(--gutter), env(safe-area-inset-right));
+    bottom: auto;
   }
 }
 @media (min-width: 700px) and (max-width: 999px) {
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgb(13 21 29 / 46%), transparent 18%),
+      linear-gradient(90deg, rgb(13 21 29 / 69%), rgb(13 21 29 / 57%) 46%, transparent 90%);
+  }
   .content {
     padding-top: calc(var(--navigation-height) + 70px);
   }
@@ -214,28 +269,21 @@
   }
 }
 @media (max-width: 699px) {
-  .hero {
-    height: 100svh;
-    min-height: 0;
-    overflow: hidden;
-  }
   .hero::after {
     background:
-      linear-gradient(180deg, rgb(13 21 29 / 30%), transparent 24%),
+      linear-gradient(180deg, rgb(13 21 29 / 48%), transparent 24%),
       linear-gradient(
         0deg,
-        rgb(13 21 29 / 58%),
-        rgb(13 21 29 / 40%) 28%,
-        rgb(13 21 29 / 15%) 48%,
-        transparent 68%
+        rgb(13 21 29 / 78%),
+        rgb(13 21 29 / 65%) 28%,
+        rgb(13 21 29 / 32%) 48%,
+        transparent 72%
       );
   }
   .content {
     align-items: flex-end;
-    height: 100%;
-    min-height: 0;
     padding-top: calc(var(--navigation-height) + env(safe-area-inset-top));
-    padding-bottom: calc(clamp(32px, 6svh, 56px) + env(safe-area-inset-bottom));
+    padding-bottom: calc(clamp(20px, 4svh, 38px) + env(safe-area-inset-bottom));
   }
   .introduction {
     width: 100%;
@@ -251,13 +299,32 @@
     letter-spacing: 0.13em;
   }
   .subtitle {
-    margin-top: 18px;
-    max-width: min(340px, calc(100% - 52px));
-    font-size: clamp(0.8125rem, 3.4vw, 0.9375rem);
+    margin-top: 12px;
+    font-size: 1rem;
     line-height: 1.5;
+  }
+  .services {
+    max-width: 35ch;
+    font-size: 0.875rem;
+  }
+  .showroomLink {
+    max-width: calc(100% - 60px);
+    margin-top: 6px;
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 699px) and (max-height: 650px) {
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgb(13 21 29 / 48%), transparent 25%),
+      linear-gradient(
+        0deg,
+        rgb(13 21 29 / 80%),
+        rgb(13 21 29 / 65%) 42%,
+        rgb(13 21 29 / 54%) 62%,
+        transparent 84%
+      );
+  }
   .content {
     padding-bottom: calc(24px + env(safe-area-inset-bottom));
   }
@@ -269,22 +336,32 @@
   }
 }
 
-@media (min-width: 700px) and (orientation: landscape) and (max-height: 600px) {
+@media (orientation: landscape) and (max-height: 600px) {
   .content {
     align-items: center;
     padding-block: calc(var(--navigation-height) + env(safe-area-inset-top))
-      calc(var(--space-3) + env(safe-area-inset-bottom));
+      calc(var(--space-1) + env(safe-area-inset-bottom));
   }
   .introduction {
-    max-width: min(80%, 48rem);
+    max-width: min(80%, 48rem, calc(100% - 10rem));
   }
   .introduction h1 {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
   }
   .eyebrow {
-    margin-bottom: var(--space-2);
+    margin-bottom: 4px;
   }
   .subtitle {
-    margin-top: var(--space-2);
+    margin-top: var(--space-1);
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .services {
+    max-width: 64ch;
+    margin-top: 4px;
+    font-size: 0.8125rem;
+  }
+  .showroomLink {
+    margin-top: 0;
   }
 }

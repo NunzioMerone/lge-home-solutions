@@ -1,10 +1,10 @@
-import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {
   desktopHeroVideoSource,
   heroVideoPlaybackRate,
   responsiveHeroVideoSources,
 } from '../config/hero'
-import type { HeroVideoProps, HeroVisibility } from '../types/hero'
+import type { HeroVideoSource } from '../types/hero'
 import { useMotion } from './useMotion'
 
 function subscribeToHeroSource(notify: () => void) {
@@ -22,7 +22,7 @@ function getHeroSource() {
   )
 }
 
-function observeVideoTime(video: HTMLVideoElement, onTimeChange: HeroVideoProps['onTimeChange']) {
+function observeVideoTime(video: HTMLVideoElement, onTimeChange: (time: number) => void) {
   const syncTime = () => onTimeChange(video.currentTime)
   let frameRequest: number | undefined
 
@@ -45,25 +45,30 @@ function observeVideoTime(video: HTMLVideoElement, onTimeChange: HeroVideoProps[
   }
 }
 
-export function useHeroVideo(pageActive: boolean, onTimeChange: HeroVideoProps['onTimeChange']) {
-  const source = useSyncExternalStore(subscribeToHeroSource, getHeroSource, () => null)
+export function useHeroVideo(pageActive: boolean, onTimeChange: (time: number) => void) {
+  const [source, setSource] = useState<HeroVideoSource | null>(null)
   const { reducedMotion } = useMotion()
   const backdropRef = useRef<HTMLDivElement>(null)
-  const [visibility, setVisibility] = useState<HeroVisibility>('unseen')
+  const [visible, setVisible] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const pausedAt = useRef<number | null>(null)
+  const [paused, setPaused] = useState(false)
   const [failedVideos, setFailedVideos] = useState<ReadonlySet<string>>(() => new Set())
-  const videoEnabled =
-    source !== null && visibility !== 'unseen' && !reducedMotion && !failedVideos.has(source.video)
-  const playing = pageActive && visibility === 'visible' && videoEnabled
+  const videoEnabled = source !== null && !reducedMotion && !failedVideos.has(source.video)
+  const active = pageActive && visible && videoEnabled
 
   useEffect(() => {
     const backdrop = backdropRef.current
     if (!backdrop) return
     let inView = false
+    const chooseSource = () => {
+      // Keep the displayed rendition and frame through a resize or rotation while paused.
+      if (inView && !document.hidden && pausedAt.current === null) setSource(getHeroSource())
+    }
     // A direct showroom or product anchor can open the home with the hero already offscreen.
     const syncVisibility = () => {
-      if (inView && !document.hidden) setVisibility('visible')
-      else setVisibility((previous) => (previous === 'unseen' ? previous : 'hidden'))
+      chooseSource()
+      setVisible(inView && !document.hidden)
     }
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -73,35 +78,65 @@ export function useHeroVideo(pageActive: boolean, onTimeChange: HeroVideoProps['
       { threshold: 0.2 },
     )
     observer.observe(backdrop)
+    const unsubscribeSource = subscribeToHeroSource(chooseSource)
     document.addEventListener('visibilitychange', syncVisibility)
     return () => {
       observer.disconnect()
+      unsubscribeSource()
       document.removeEventListener('visibilitychange', syncVisibility)
     }
   }, [])
 
   useLayoutEffect(() => {
-    onTimeChange(videoRef.current?.currentTime ?? 0)
+    const video = videoRef.current
+    if (video && pausedAt.current !== null) video.currentTime = pausedAt.current
+    onTimeChange(video?.currentTime ?? 0)
   }, [source, videoEnabled, onTimeChange])
 
   useEffect(() => {
     const video = videoRef.current
-    if (!video || !playing) return
+    if (!video || !active) return
     video.defaultPlaybackRate = heroVideoPlaybackRate
     video.playbackRate = heroVideoPlaybackRate
     const stopObservingTime = observeVideoTime(video, onTimeChange)
     video.muted = true
-    if (video.paused) void video.play().catch(() => undefined)
+    const syncPlayback = () => {
+      if (video === videoRef.current) setPaused(video.paused)
+    }
+    video.addEventListener('play', syncPlayback)
+    video.addEventListener('pause', syncPlayback)
+    if (pausedAt.current === null && video.paused) void video.play().catch(syncPlayback)
+    syncPlayback()
     return () => {
+      video.removeEventListener('play', syncPlayback)
+      video.removeEventListener('pause', syncPlayback)
       stopObservingTime()
       video.pause()
     }
-  }, [source, playing, onTimeChange])
+  }, [source, active, onTimeChange])
+
+  const togglePlayback = () => {
+    const video = videoRef.current
+    if (!video || !active) return
+    if (video.paused) {
+      pausedAt.current = null
+      // A direct user gesture also permits playback when automatic playback was blocked.
+      void video.play().catch(() => {
+        if (video === videoRef.current) setPaused(video.paused)
+      })
+    } else {
+      video.pause()
+      pausedAt.current = video.currentTime
+    }
+    setPaused(video.paused)
+  }
 
   return {
     backdropRef,
     videoRef,
-    playing,
+    visible: active,
+    paused,
+    togglePlayback,
     source: videoEnabled ? source : null,
     onError: (video: string) =>
       setFailedVideos((previous) =>

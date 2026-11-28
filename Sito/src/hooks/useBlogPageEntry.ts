@@ -2,7 +2,9 @@ import { useLayoutEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export function useBlogPageEntry() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
+  // A second visit to the same anchor must scroll again; filtering the blog must retain position.
+  const anchorKey = hash ? key : null
   const mainRef = useRef<HTMLElement>(null)
 
   useLayoutEffect(() => {
@@ -23,7 +25,7 @@ export function useBlogPageEntry() {
 
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     mainRef.current?.focus({ preventScroll: true })
-  }, [pathname, hash])
+  }, [pathname, hash, anchorKey])
 
   return mainRef
 }

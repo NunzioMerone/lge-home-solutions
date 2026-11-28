@@ -6,6 +6,7 @@ import { useMotion } from './useMotion'
 import type { LoopCarouselOptions } from '../types/carousel'
 
 export function useLoopCarousel({
+  active = true,
   paused = false,
   delay = 4200,
   continuousSpeed,
@@ -33,6 +34,7 @@ export function useLoopCarousel({
   )
   const [viewportRef, api] = useEmblaCarousel(
     {
+      active,
       loop: true,
       align: 'center',
       duration: 45,
@@ -47,7 +49,7 @@ export function useLoopCarousel({
   )
 
   useEffect(() => {
-    if (!api) return
+    if (!active || !api) return
     const sync = () => setSelected(api.selectedScrollSnap())
     const select = () => {
       sync()
@@ -62,7 +64,7 @@ export function useLoopCarousel({
     return () => {
       api.off('select', select).off('reInit', reinitialize)
     }
-  }, [api, onSelect])
+  }, [active, api, onSelect])
 
   useLayoutEffect(() => {
     if (!focusRequested.current) return
@@ -73,7 +75,7 @@ export function useLoopCarousel({
   }, [api, selected])
 
   useEffect(() => {
-    if (!api) return
+    if (!active || !api) return
     if (reducedMotion) {
       api.scrollTo(api.selectedScrollSnap(), true)
       return
@@ -173,7 +175,7 @@ export function useLoopCarousel({
       viewport.removeEventListener('focusout', focusOut)
       document.removeEventListener('visibilitychange', schedule)
     }
-  }, [api, continuous, delay, paused, reducedMotion])
+  }, [active, api, continuous, delay, paused, reducedMotion])
 
   const onKeyDown = useCallback(
     (event: KeyboardEvent<HTMLDivElement>) => {

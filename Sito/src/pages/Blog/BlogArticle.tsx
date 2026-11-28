@@ -3,15 +3,17 @@ import { PageLink } from '../../components/ui/PageLink'
 import { blogPage } from '../../config/blog'
 import { blogCategories, blogPosts } from '../../data/blog'
 import { blogArticles } from '../../data/blogArticles'
-import { getBlogFilterPath, getRelatedBlogPosts } from '../../utils/blog'
+import { getArticleBreadcrumbs, getBlogFilterPath, getRelatedBlogPosts } from '../../utils/blog'
 import { BlogLayout } from '../../components/blog/BlogLayout'
 import { BlogPhoto } from '../../components/blog/BlogPhoto'
 import { BlogCard } from '../../components/blog/BlogCard'
 import { BlogContact } from '../../components/blog/BlogContact'
 import { BlogArticleSection } from '../../components/blog/BlogArticleSection'
+import { BlogByline } from '../../components/blog/BlogByline'
 import { useActiveArticleSection } from '../../hooks/useActiveArticleSection'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import { Icon } from '../../components/ui/Icon'
+import { SectionIndex } from '../../components/ui/SectionIndex'
 import styles from '../../components/blog/Blog.module.css'
 
 export function BlogArticle() {
@@ -49,18 +51,41 @@ export function BlogArticle() {
 
   const category = blogCategories.find((item) => item.id === post.category)
   const related = getRelatedBlogPosts(post, blogPosts)
+  const breadcrumbs = getArticleBreadcrumbs(post)
 
   return (
     <BlogLayout>
       <article className="container">
+        <SectionIndex
+          className={styles.mobileIndex}
+          label="Indice della guida"
+          items={content.sections.map(({ id, title }) => ({ id, label: title }))}
+          activeId={activeSectionId}
+        />
         <nav className={styles.breadcrumb} aria-label="Percorso di navigazione">
-          <PageLink to={blogPage.path}>Blog</PageLink>
-          <Icon name="chevron-right" />
-          <PageLink to={getBlogFilterPath(post.category)}>{category?.label}</PageLink>
+          <ol>
+            {breadcrumbs.map(({ name, path }, index) => (
+              <li key={path}>
+                {index > 0 && <Icon name="chevron-right" />}
+                {index === breadcrumbs.length - 1 ? (
+                  <span aria-current="page">{name}</span>
+                ) : (
+                  <PageLink to={path}>{name}</PageLink>
+                )}
+              </li>
+            ))}
+          </ol>
         </nav>
         <header className={styles.articleHeader} ref={headerRef}>
           <h1 data-reveal>{post.title}</h1>
           <p data-reveal>{post.excerpt}</p>
+          <BlogByline publication={post.publication} />
+          <PageLink
+            className={`${styles.backLink} ${styles.mobileTopic}`}
+            to={getBlogFilterPath(post.category)}
+          >
+            Tutte le guide: {category?.label} <Icon name="arrow" />
+          </PageLink>
         </header>
         <figure className={styles.articleFigure} ref={photoRef}>
           <div data-reveal>
@@ -114,7 +139,6 @@ export function BlogArticle() {
               </div>
               <div className={styles.sources} data-reveal>
                 <h2>Per approfondire</h2>
-                <p>Le informazioni dei produttori, per continuare la lettura.</p>
                 <ul>
                   {content.sources.map((source) => (
                     <li key={source.url}>

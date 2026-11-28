@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { gallery } from '../data/gallery'
 import { allWorkPhotos, workCategories, workCollections } from '../data/works'
 import { homeGallery } from '../data/homeGallery'
+import { workCaseStudyDrafts } from '../data/workCaseStudyDrafts'
 import homeSelection from '../../references/home-gallery-selection.json'
 import { worksPage } from '../config/works'
 import {
@@ -12,6 +13,18 @@ import {
 } from './works'
 
 describe('work collections', () => {
+  it('keeps one or two examples per filter with photographs from that collection', () => {
+    expect(new Set(workCaseStudyDrafts.map(({ id }) => id)).size).toBe(workCaseStudyDrafts.length)
+    for (const collection of workCollections) {
+      const studies = workCaseStudyDrafts.filter(({ category }) => category === collection.id)
+      expect(studies.length).toBeGreaterThanOrEqual(1)
+      expect(studies.length).toBeLessThanOrEqual(2)
+      for (const { photos } of studies) {
+        for (const photo of photos) expect(collection.photos).toContain(photo)
+      }
+    }
+  })
+
   it('includes every original photograph exactly once across the five categories', () => {
     const ids = workCollections.flatMap((collection) => collection.photos.map((photo) => photo.id))
     expect(workCollections).toHaveLength(5)

@@ -1,3 +1,4 @@
+import { SectionIndex } from '../../components/ui/SectionIndex'
 import { PageLink } from '../../components/ui/PageLink'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
@@ -6,7 +7,7 @@ import { ProductFaq } from '../../components/sections/ProductFaq/ProductFaq'
 import { ProductHero } from '../../components/sections/ProductHero/ProductHero'
 import { Icon } from '../../components/ui/Icon'
 import { worksPage } from '../../config/works'
-import { gibusCatalogsId, outdoorShowcaseId } from '../../data/atelierGibus'
+import { gibusCatalogsId, outdoorShowcaseId, outdoorSolutions } from '../../data/atelierGibus'
 import { featuredWorkPhotos } from '../../data/homeGallery'
 import { atelierGibusPage } from '../../data/products'
 import { outdoorFaq, productFaqId } from '../../data/productFaqs'
@@ -17,8 +18,17 @@ import { AtelierShowcase } from './AtelierShowcase'
 import { GibusCatalogs } from './GibusCatalogs'
 import styles from './AtelierGibus.module.css'
 
+const showroomId = 'showroom-gibus'
+const sectionIndex = [
+  { id: outdoorShowcaseId, label: 'Le soluzioni outdoor' },
+  ...outdoorSolutions.map(({ id, title }) => ({ id, label: title, scrollStepId: `scena-${id}` })),
+  { id: gibusCatalogsId, label: 'Cataloghi' },
+  { id: productFaqId, label: 'Domande frequenti' },
+  { id: showroomId, label: 'Showroom' },
+]
+
 export function AtelierGibus({ product }: ProductDetailProps) {
-  useAnchorNavigation(outdoorShowcaseId, gibusCatalogsId, productFaqId)
+  useAnchorNavigation(outdoorShowcaseId, gibusCatalogsId, productFaqId, showroomId)
 
   return (
     <div className={styles.page}>
@@ -27,6 +37,7 @@ export function AtelierGibus({ product }: ProductDetailProps) {
       </PageLink>
       <Header />
       <main aria-labelledby="product-title" data-product-page>
+        <SectionIndex label="Indice Outdoor" items={sectionIndex} />
         <ProductHero
           product={product}
           eyebrow="OUTDOOR"
@@ -72,6 +83,7 @@ export function AtelierGibus({ product }: ProductDetailProps) {
         <ProductFaq {...outdoorFaq} />
 
         <ProjectClosing
+          id={showroomId}
           titleId="gibus-showroom-title"
           photo={featuredWorkPhotos.terracePergola}
           showroom={{

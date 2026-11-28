@@ -9,6 +9,7 @@ import { GalleryImage } from './GalleryImage'
 import styles from './ProjectClosing.module.css'
 
 export function ProjectClosing({
+  id,
   titleId,
   title,
   description,
@@ -19,7 +20,12 @@ export function ProjectClosing({
   const portrait = photo ? photo.height > photo.width : false
 
   return (
-    <section className={styles.closing} aria-labelledby={titleId}>
+    <section
+      id={id}
+      className={styles.closing}
+      aria-labelledby={titleId}
+      tabIndex={id ? -1 : undefined}
+    >
       <div className="container">
         <div
           className={styles.layout}

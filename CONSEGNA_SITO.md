@@ -23,7 +23,7 @@ Fornire l’informativa quando si raccolgono i dati direttamente. Per quelli ott
 
 ### Hosting e destinatari
 
-La Privacy Policy visibile riguarda `lgesolutions.it` su SiteGround in tutte le build. Il punto 4 descrive la preferenza della singola scheda. Il punto 6 distingue il criterio di conservazione dalla finestra di 30 giorni in cui il gestore può consultare i log. Al passaggio su SiteGround, ripetere la verifica di rete sul dominio e confrontare eventuali servizi introdotti dall’hosting con l’informativa.
+La Privacy Policy visibile riguarda `lgesolutions.it` su SiteGround in tutte le build. Il punto 4 descrive la preferenza di movimento del dispositivo. La pausa del video della homepage è gestita in memoria. Il punto 6 distingue il criterio di conservazione dalla finestra di 30 giorni in cui il gestore può consultare i log. Al passaggio su SiteGround, ripetere la verifica di rete sul dominio e confrontare eventuali servizi introdotti dall’hosting con l’informativa.
 
 GitHub Pages ospita l’anteprima pubblica e registra l’IP per la sicurezza. Per il sito aziendale il contratto SiteGround è intestato a un professionista esterno. Due persone hanno accesso tecnico. Il pannello indica Europa. Il gestore e LGE devono documentare chi opera su istruzioni di chi, quali dati può consultare ciascuno e quali accordi si applicano alla catena contrattuale, incluso l’eventuale rapporto di subresponsabilità. Il testo pubblico usa le categorie professionali dei destinatari. Il titolare conserva le loro identità e determina le informazioni dovute agli interessati. [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection) · [GDPR, artt. 13 e 28](https://eur-lex.europa.eu/eli/reg/2016/679/oj/ita)
 

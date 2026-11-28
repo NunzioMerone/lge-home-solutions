@@ -81,9 +81,8 @@ async function generate(outDir, rendererDir) {
       },
     },
   })
-  const { base, seoPaths, renderPage, renderSeoHead, getSeoFiles, gallerySize } = await import(
-    pathToFileURL(join(rendererDir, 'render.mjs')).href
-  )
+  const { base, seoPaths, renderPage, renderSeoHead, getSeoElements, getSeoFiles, gallerySize } =
+    await import(pathToFileURL(join(rendererDir, 'render.mjs')).href)
   const manifest = JSON.parse(await readFile(join(outDir, '.vite/manifest.json'), 'utf8'))
   const template = await readFile(join(outDir, 'index.html'), 'utf8')
   const seoSlot = /<!--seo:start-->[\s\S]*?<!--seo:end-->/
@@ -109,7 +108,15 @@ async function generate(outDir, rendererDir) {
   else await rm(sitemapPath, { force: true })
   await writeFile(join(outDir, '.nojekyll'), '')
   await verifyCredentialCopies(outDir)
-  await verifyStaticPages(outDir, seoPaths, base, publicBase, verification, gallerySize)
+  await verifyStaticPages(
+    outDir,
+    seoPaths,
+    base,
+    publicBase,
+    verification,
+    gallerySize,
+    getSeoElements,
+  )
   return seoPaths.length
 }
 

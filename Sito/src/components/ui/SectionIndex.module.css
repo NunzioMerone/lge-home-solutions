@@ -1,0 +1,95 @@
+.dock {
+  --control-height: 44px;
+  --edge: max(16px, env(safe-area-inset-bottom));
+  position: sticky;
+  z-index: 8;
+  top: calc(100dvh - var(--edge));
+  width: max-content;
+  height: 0;
+  margin-inline-start: var(--gutter);
+  color: var(--color-blue);
+  font-size: 0.8125rem;
+}
+
+.dock > details {
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.trigger,
+.links {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-paper);
+  box-shadow: 0 4px 20px rgb(37 42 48 / 12%);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--control-height);
+  padding: 0 14px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.trigger::-webkit-details-marker {
+  display: none;
+}
+
+.trigger svg {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+}
+
+details[open] > .trigger svg {
+  transform: rotate(90deg);
+}
+
+.links {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  width: min(270px, calc(100vw - 2 * var(--gutter)));
+  max-height: calc(
+    100dvh - var(--edge) - var(--control-height) - var(--navigation-height) -
+      env(safe-area-inset-top) - 16px
+  );
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 5px 12px;
+  color: var(--color-ink);
+  line-height: 1.35;
+}
+
+.links a[aria-current='location'],
+.links a:hover {
+  background: var(--color-sky);
+  color: var(--color-blue);
+}
+
+.links a[aria-current='location'] {
+  font-weight: 650;
+}
+
+.links a:focus-visible,
+.trigger:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: -3px;
+}
+
+body:has(header[aria-modal='true'], dialog[open]) .dock {
+  visibility: hidden;
+}

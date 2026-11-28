@@ -8,7 +8,7 @@ const managedElements = [
   'meta[name="google-site-verification"]',
   'meta[property^="og:"]',
   'link[rel="canonical"]',
-  '#lge-local-business',
+  'script[data-lge-schema]',
 ].join(', ')
 
 export function usePageMetadata(pathname: string) {

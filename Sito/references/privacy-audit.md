@@ -1,5 +1,9 @@
 # Verifica tecnica privacy — LGE Home Solutions
 
+## Revisione del comando video del 28 novembre 2026
+
+Il controllo della hero usa lo stato locale del lettore. La preferenza di sistema viene letta con `matchMedia`. La prova di persistenza in sessione descritta qui sotto riguarda la versione precedente.
+
 ## Verifica del 28 novembre 2026
 
 La pagina pubblica riguarda il dominio aziendale su SiteGround. I recapiti distinguono la privacy dal numero commerciale. Per la gestione dei messaggi e per la pubblicazione di foto, attestati e recensioni sono state utilizzate le conferme di LGE. Il controllo commerciale richiede ancora la conferma della revisione del titolare. La guida di consegna spiega anche quando comunicare l’informativa direttamente alla persona se i dati provengono da una fonte pubblica. [Guida di consegna](../../CONSEGNA_SITO.md) · [GDPR, articoli 6, 7, 12–14 e 21](https://eur-lex.europa.eu/eli/reg/2016/679/oj/ita)

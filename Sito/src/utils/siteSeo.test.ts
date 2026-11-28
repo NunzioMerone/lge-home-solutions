@@ -65,6 +65,8 @@ describe('indexing and canonical URLs', () => {
       expect(head).toContain('name="robots" content="noindex, nofollow"')
       expect(head).not.toContain('rel="canonical"')
       expect(head).not.toContain('property="og:url"')
+      expect(head).not.toContain('lge-breadcrumbs')
+      expect(head).not.toContain('lge-blog-posting')
     }
   })
 
@@ -100,6 +102,38 @@ describe('indexing and canonical URLs', () => {
       const head = renderSeoHead(getBlogPostPath(post.slug), base)
       expect(head).toContain('property="og:type" content="article"')
       expect(head).toContain(`${base.href}${post.image.path}-`)
+    }
+  })
+
+  it('uses canonical article breadcrumbs and omits BlogPosting for drafts', () => {
+    for (const siteBase of [new URL('https://lgesolutions.it/'), base]) {
+      for (const post of blogPosts) {
+        const path = getBlogPostPath(post.slug)
+        const scripts = getSeoElements(path, siteBase).filter(({ tag }) => tag === 'script')
+        const breadcrumb = scripts.find(({ attributes }) => attributes?.id === 'lge-breadcrumbs')
+        expect(JSON.parse(breadcrumb?.text ?? 'null')).toEqual({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteBase.href },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Blog',
+              item: new URL('blog/', siteBase).href,
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: post.title,
+              item: new URL(path.slice(1) + '/', siteBase).href,
+            },
+          ],
+        })
+        expect(scripts.some(({ attributes }) => attributes?.id === 'lge-blog-posting')).toBe(
+          post.publication.status === 'published',
+        )
+      }
     }
   })
 

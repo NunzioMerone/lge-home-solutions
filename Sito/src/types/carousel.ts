@@ -1,4 +1,5 @@
 export interface LoopCarouselOptions {
+  active?: boolean
   paused?: boolean
   delay?: number
   continuousSpeed?: number

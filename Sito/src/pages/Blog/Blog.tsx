@@ -5,7 +5,7 @@ import { BlogLayout } from '../../components/blog/BlogLayout'
 import { BlogCard } from '../../components/blog/BlogCard'
 import { BlogContact } from '../../components/blog/BlogContact'
 import { blogCategories, blogPosts } from '../../data/blog'
-import { getBlogFilterPath, parseBlogFilter } from '../../utils/blog'
+import { getBlogFilterPath, hasBlogCategory, parseBlogFilter } from '../../utils/blog'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import styles from '../../components/blog/Blog.module.css'
 
@@ -14,7 +14,7 @@ export function Blog() {
   const hydrated = useHydrated()
   const selected = parseBlogFilter(hydrated ? params.get('argomento') : null, blogCategories)
   const posts =
-    selected === 'tutti' ? blogPosts : blogPosts.filter((post) => post.category === selected)
+    selected === 'tutti' ? blogPosts : blogPosts.filter((post) => hasBlogCategory(post, selected))
   const introRef = useSectionReveal({ duration: 1.1, stagger: 0.12 })
   const filtersRef = useSectionReveal({ duration: 1.15, stagger: 0.08 })
   const category = blogCategories.find((item) => item.id === selected)
@@ -26,7 +26,10 @@ export function Blog() {
           <h1 data-reveal>
             Idee per abitare <em>meglio.</em>
           </h1>
-          <p data-reveal>Consigli e ispirazioni per la tua casa, dentro e fuori.</p>
+          <p data-reveal>
+            Spifferi alle finestre, un ingresso da proteggere, un terrazzo da ombreggiare. Le guide
+            per scegliere da dove cominciare.
+          </p>
         </header>
         <section
           className={styles.articles}

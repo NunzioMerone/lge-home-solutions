@@ -26,7 +26,7 @@ export function Home({ active }: PageActivityProps) {
         <Reviews />
         <Contacts active={active} />
       </main>
-      <Footer />
+      {active && <Footer />}
     </div>
   )
 }

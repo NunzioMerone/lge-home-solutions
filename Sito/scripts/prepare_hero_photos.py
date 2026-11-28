@@ -13,10 +13,11 @@ for item in json.loads((ROOT / 'references/hero-photo-sources.json').read_text()
     original.parent.mkdir(parents=True, exist_ok=True)
     if not original.exists():
         shutil.copyfile(item['source'], original)
-    for width in (480, 960):
+    widths = (480, 720, 960) if item['id'] == 'outdoor' else (480, 960)
+    for width in widths:
         subprocess.run([
             'cwebp', '-quiet', '-q', '85', '-resize', str(width), '0',
             str(original), '-o', str(output / f"{item['id']}-{width}.webp"),
         ], check=True)
 
-print('5 originali conservati; 10 WebP responsive per la sola hero.')
+print('Copie WebP responsive generate dagli originali delle hero prodotto.')

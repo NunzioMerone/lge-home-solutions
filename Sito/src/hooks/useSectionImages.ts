@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import type { RefObject } from 'react'
 
-/** Start native lazy loading when the visitor reaches this section of the home. */
-export function useSectionImages(ref: RefObject<HTMLElement | null>) {
+/** Start native lazy loading when this section approaches the viewport or receives focus. */
+export function useSectionImages(ref: RefObject<HTMLElement | null>, enabled = true) {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
     const section = ref.current
-    if (!section || ready) return
+    if (!section || !enabled || ready) return
 
     const enableImages = () => setReady(true)
     const observer = new IntersectionObserver(
@@ -23,7 +23,7 @@ export function useSectionImages(ref: RefObject<HTMLElement | null>) {
       observer.disconnect()
       section.removeEventListener('focusin', enableImages)
     }
-  }, [ref, ready])
+  }, [ref, ready, enabled])
 
   return ready
 }

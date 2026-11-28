@@ -30,9 +30,9 @@ Stack: React, TypeScript strict, Vite, React Router, CSS Modules, GSAP, Embla e 
 
 La scansione iniziale delle dipendenze Vite parte da `index.html`. La build genera l’HTML completo delle pagine in `dist/` a partire dai componenti React. Per controllare i testi e i link inviati a un motore di ricerca prima dell’esecuzione di JavaScript, usare `npm run preview` dopo la build. I file HTML archiviati in `references/` restano materiali di lavoro.
 
-## Blog — revisione locale del 14 novembre 2026
+## Blog — revisione locale del 28 novembre 2026
 
-La voce Blog nella navbar desktop, nel menu mobile e nel footer apre `/blog`. Dopo la prima proposta del 13 novembre, l’utente richiede un indice più semplice: un’unica raccolta delle sei guide su infissi, outdoor, porte interne, condensa, zanzariere e manutenzione del PVC, senza articolo in evidenza. I filtri testuali precedono gli articoli e usano `?argomento=…`, conservando scroll e focus al cambio argomento. Fotografie uniformi 16:10, tre colonne desktop, due tablet e una smartphone. Ogni pagina `/blog/:slug` include indice interno, didascalia dell’immagine, fonti, soluzione collegata e letture correlate. I link sconosciuti mostrano una pagina di recupero dedicata con `noindex`. Concept di riferimento, prompt e note in `references/blog-redesign/`; logo, foto, navbar, footer e sintesi editoriali restano quelli del sito.
+La voce Blog nella navbar desktop, nel menu mobile e nel footer apre `/blog`. La raccolta comprende nove guide, tra cui spifferi, condensa, isolamento della porta d’ingresso, porte blindate e avvolgibili di sicurezza. I filtri testuali usano `?argomento=…` e una guida può appartenere a più argomenti. Ogni pagina `/blog/:slug` include indice interno, didascalia dell’immagine, fonti, soluzione collegata e letture correlate. I link sconosciuti mostrano una pagina di recupero dedicata con `noindex`. I riferimenti visivi sono in `references/blog-redesign/`.
 
 Tipi in `src/types/blog.ts`, schede e categorie in `src/data/blog.ts`, testi proposti in `src/data/blogArticles.ts`; le pagine e il contenuto degli articoli sono caricati su richiesta. Le immagini sono asset già presenti, senza nuove copie. I testi restano una prima proposta editoriale da rivedere prima di un’eventuale pubblicazione. Non sono richiesti backend, CMS o altre integrazioni.
 
@@ -42,7 +42,7 @@ Verifiche della prima semplificazione del 14 novembre: typecheck, lint, build, f
 
 Verifiche della rifinitura: lint, typecheck, build e 51 test superati. Nel browser in-app controllati cambio automatico del capitolo in entrambe le direzioni, focus e ancore dirette, comparse delle schede mentre entrano nella viewport e movimento ridotto, con preferenza finale ripristinata. Corretto e verificato anche l’arrotondamento delle coordinate frazionarie delle ancore a 768 px. Nessun errore/avviso catturato; note ed evidenze in `references/blog-redesign/motion-verification.json`.
 
-Questa revisione è solo locale: nessun commit, push o deploy. La preparazione degli ingressi statici del blog per l’hosting resta da affrontare quando sarà richiesta la pubblicazione.
+La revisione editoriale è locale. La build ricava l’indice e gli ingressi HTML degli articoli dalla raccolta corrente.
 
 ## Visualizzatore fotografico
 

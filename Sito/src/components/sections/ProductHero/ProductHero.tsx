@@ -54,7 +54,7 @@ export function ProductHero({
             decoding="sync"
           />
         )}
-        {!preview && settledPhoto?.id !== product.id && (
+        {!preview && product.id !== 'outdoor' && settledPhoto?.id !== product.id && (
           <Skeleton className={styles.imageSkeleton} />
         )}
         <ResponsiveImage
@@ -63,7 +63,7 @@ export function ProductHero({
           collection="hero"
           sizes={
             product.id === 'outdoor'
-              ? '(min-width: 1200px) 50vw, (min-width: 900px) and (orientation: landscape) 50vw, 100vw'
+              ? '(min-width: 1660px) 810px, (min-width: 1200px) 48vw, (min-width: 900px) and (orientation: landscape) 48vw, (min-width: 560px) and (orientation: landscape) and (max-height: 520px) 44vw, 91vw'
               : '(min-width: 900px) 55vw, 100vw'
           }
           className={preview ? `${styles.photo} ${styles.upgrade}` : styles.photo}
@@ -71,7 +71,7 @@ export function ProductHero({
           decorative={Boolean(preview)}
           onSettled={(ready) => setSettledPhoto({ id: product.id, ready })}
         />
-        {(loaded || preview) && imageOverlay}
+        {(loaded || preview || product.id === 'outdoor') && imageOverlay}
       </div>
       <div className={styles.copy}>
         <p className={styles.eyebrow}>{eyebrow}</p>

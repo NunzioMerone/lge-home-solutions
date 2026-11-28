@@ -29,6 +29,7 @@ export interface GalleryLightboxState {
 }
 
 export interface ProjectClosingProps {
+  id?: string
   titleId: string
   title: ReactNode
   description: string

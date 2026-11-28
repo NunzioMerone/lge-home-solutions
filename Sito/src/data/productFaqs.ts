@@ -6,23 +6,20 @@ export const windowFaq: ProductFaqContent = {
   title: 'Domande sugli infissi',
   questions: [
     {
-      question: 'La camera dà sulla strada. Oltre al vetro, cosa conta per ridurre il rumore?',
+      question: 'Meglio il PVC, l’alluminio o il legno-alluminio per le mie finestre?',
       answer:
-        'Controlla la tenuta delle guarnizioni e il raccordo tra il telaio e il muro. Anche il cassonetto della tapparella può lasciar passare rumore a finestra chiusa.',
+        'Il PVC richiede poca manutenzione. L’alluminio permette di realizzare vetrate ampie con telai sottili. Se ami il legno a vista, con il legno-alluminio hai il legno dentro casa e l’alluminio sul lato esposto alle intemperie.',
+      guide: { slug: 'come-scegliere-infissi', label: 'Leggi la guida alla scelta degli infissi' },
     },
     {
-      question: 'Ho il tavolo vicino alla portafinestra. Quale apertura mi lascia più spazio?',
+      question: 'Per cambiare le finestre bisogna rompere i muri?',
       answer:
-        'L’anta scorrevole si muove di lato e lascia libero lo spazio davanti al vetro. Se preferisci un’anta a battente, misura la distanza dal tavolo con le sedie scostate, come quando ti alzi.',
+        'Non sempre. Se il vecchio telaio è saldo e in buono stato, il posatore può valutare se montare la nuova finestra su quello esistente e quanto spazio resterebbe per il vetro.',
     },
     {
-      question: 'Come pulisco i profili in PVC se abito vicino al mare?',
+      question: 'Da cosa dipende il prezzo dei nuovi infissi?',
       answer:
-        'Risciacqua i depositi di sale con acqua dolce e passa un panno morbido. Per scegliere il detergente e la frequenza di pulizia, segui le indicazioni del produttore per la tua finitura.',
-      guide: {
-        slug: 'manutenzione-infissi-pvc',
-        label: 'Leggi la guida alla cura degli infissi in PVC',
-      },
+        'Contano le dimensioni, il materiale, il vetro, il tipo di apertura e il lavoro di posa. Per una prima stima, prepara il numero di finestre da cambiare, le misure indicative e qualche foto.',
     },
   ],
 }
@@ -31,19 +28,19 @@ export const shutterFaq: ProductFaqContent = {
   title: 'Domande sugli oscuranti',
   questions: [
     {
-      question: 'Posso motorizzare le tapparelle che ho già?',
+      question: 'Che differenza c’è tra tapparelle e persiane?',
       answer:
-        'Spesso sì. Il peso del telo, il diametro del rullo e l’alimentazione disponibile determinano quale motore si può montare e quali componenti si possono mantenere.',
+        'La tapparella sale nel cassonetto e lascia liberi i lati della finestra. Le persiane a battente hanno ante che si aprono verso l’esterno. Con le lamelle orientabili puoi regolare luce e aria anche ad ante chiuse.',
     },
     {
-      question: 'Come posso far entrare luce e aria con le persiane chiuse?',
+      question: 'Posso rendere elettriche le tapparelle che ho già?',
       answer:
-        'Scegli una persiana con lamelle orientabili. Anche ad ante chiuse puoi regolarne l’inclinazione per far circolare l’aria e schermare il sole nelle diverse ore del giorno.',
+        'Spesso sì. Il motore si inserisce nel rullo che avvolge la tapparella. Per capire se puoi tenere il telo attuale, si controllano il suo peso, le dimensioni del rullo e come alimentare il motore.',
     },
     {
-      question: 'Se cambio la tapparella devo sostituire anche il cassonetto?',
+      question: 'Se cambio la tapparella devo cambiare anche il cassonetto?',
       answer:
-        'Puoi conservare il cassonetto se è in buone condizioni e contiene il rullo con il nuovo telo completamente avvolto. Lo sportello deve restare accessibile per la manutenzione.',
+        'Puoi tenere il cassonetto se è in buono stato e c’è spazio per la nuova tapparella tutta avvolta. Lo sportello deve potersi aprire per accedere al rullo.',
     },
   ],
 }
@@ -52,19 +49,19 @@ export const entranceDoorFaq: ProductFaqContent = {
   title: 'Domande sulle porte d’ingresso',
   questions: [
     {
-      question: 'La porta d’ingresso è esposta alla pioggia. Cosa devo controllare?',
+      question: 'Come capisco quanto è sicura una porta blindata?',
       answer:
-        'Verifica che il rivestimento sia adatto all’esposizione diretta. Guarda anche la tenuta all’acqua dichiarata per il modello e come verrà realizzata la soglia, soprattutto se l’ingresso è senza portico.',
+        'Cerca la classe antieffrazione nella scheda della porta. Una porta RC4, per esempio, supera prove di resistenza più severe di una RC3. La classe si riferisce alla porta completa nella versione che scegli.',
     },
     {
-      question: 'Dove trovo la classe antieffrazione di una porta blindata?',
+      question: 'Quale porta d’ingresso scegliere se è esposta al sole e alla pioggia?',
       answer:
-        'Nella documentazione della porta, accanto alla sigla RC. Controlla che la classe si riferisca alla porta completa nella configurazione che hai scelto, compresi eventuali inserti in vetro.',
+        'Scegli un modello con un rivestimento adatto all’esterno. Se l’ingresso è senza tettoia, controlla anche la tenuta all’acqua dichiarata per la porta e come verrà protetta la soglia dalla pioggia.',
     },
     {
-      question: 'Quanto spazio resta per passare con una porta a bilico?',
+      question: 'La porta può avere un colore diverso dentro e fuori?',
       answer:
-        'L’anta ruota su un perno arretrato rispetto al bordo e, aprendosi, occupa una parte del vano. Per confrontarla con una porta a battente, chiedi la larghezza libera di passaggio a porta aperta.',
+        'Sì, nei modelli con rivestimenti personalizzabili sui due lati. Puoi riprendere il colore delle altre porte sul pianerottolo e scegliere per l’interno una finitura che si abbini alla tua casa.',
     },
   ],
 }
@@ -73,19 +70,20 @@ export const interiorDoorFaq: ProductFaqContent = {
   title: 'Domande sulle porte interne',
   questions: [
     {
-      question: 'Posso inserire una porta scorrevole a scomparsa nella parete che ho già?',
+      question: 'Posso mettere una porta scorrevole senza aprire il muro?',
       answer:
-        'Serve un tratto di parete abbastanza lungo e spesso per il controtelaio che accoglie l’anta. Prima di scegliere, verifica se in quel tratto passano tubi o cavi.',
+        'Sì, con una scorrevole esterno muro. L’anta scorre su un binario davanti alla parete. Accanto al vano serve un tratto libero almeno quanto l’anta, senza mobili o termosifoni che ne blocchino il passaggio.',
+      guide: { slug: 'porte-interne-spazi-e-finiture', label: 'Leggi la guida alle porte interne' },
     },
     {
-      question: 'Come scelgo il verso di apertura di una porta a battente?',
+      question: 'Che differenza c’è tra una porta laccata e una in laminato?',
       answer:
-        'Segna sulla pianta l’arco che descrive l’anta quando si apre. Controlla se riesci a raggiungere l’interruttore entrando e se la porta interferisce con un armadio o con un’altra porta vicina.',
+        'La porta laccata ha una superficie verniciata, opaca o lucida. Il laminato è un rivestimento che può riprodurre anche le venature del legno. Accostare i campioni al pavimento aiuta a scegliere la finitura.',
     },
     {
-      question: 'Quale vetro porta luce in corridoio e lascia un po’ di privacy?',
+      question: 'Se rifaccio il pavimento, quando devo scegliere le porte?',
       answer:
-        'Il vetro satinato diffonde la luce e rende meno nitidi i dettagli della stanza. In controluce le sagome possono vedersi, soprattutto da vicino. Guarda un campione con una luce simile a quella di casa.',
+        'Scegli prima dei lavori come si apriranno, soprattutto se vuoi una scorrevole a scomparsa e devi preparare la parete. Per ordinare le porte, le misure definitive devono tenere conto dell’altezza del pavimento finito.',
     },
   ],
 }
@@ -94,20 +92,20 @@ export const outdoorFaq: ProductFaqContent = {
   title: 'Domande su pergole e tende',
   questions: [
     {
-      question: 'Sul terrazzo il sole arriva di lato nel pomeriggio. Quale tenda fa ombra?',
+      question: 'Per fare ombra sul terrazzo è meglio una tenda da sole o una pergola?',
       answer:
-        'Per il sole basso è utile una tenda a caduta, che scende in verticale sul lato esposto. Una foto all’ora in cui usi il terrazzo aiuta a scegliere dove posizionare il telo.',
-    },
-    {
-      question: 'Per pranzare all’aperto mi conviene una tenda a bracci o una pergola?',
-      answer:
-        'Una tenda a bracci si apre sopra il tavolo e si raccoglie a parete, lasciando libero il pavimento. Una pergola crea una zona coperta stabile e, nei modelli bioclimatici, puoi orientare le lamelle per dosare luce e ventilazione.',
+        'Una tenda a bracci fa ombra quando la apri e lascia libero il pavimento. Una pergola ha una struttura che resta in posizione, con un telo retrattile o con lamelle che puoi inclinare per regolare luce e aria.',
       guide: { slug: 'pergola-o-tenda-da-sole', label: 'Confronta pergola e tenda nella guida' },
     },
     {
-      question: 'Quali misure servono per valutare una pergola sul mio terrazzo?',
+      question: 'Una pergola bioclimatica ripara anche dalla pioggia?',
       answer:
-        'Per un primo confronto annota larghezza e profondità della zona da coprire. Se vuoi addossare la pergola alla casa, aggiungi l’altezza disponibile sulla parete e una foto che mostri porte, persiane e pluviali.',
+        'Sì. Nelle pergole bioclimatiche Gibus, le lamelle chiuse convogliano l’acqua negli scarichi della struttura. Se i lati sono aperti, il vento può comunque spingere la pioggia sotto la copertura.',
+    },
+    {
+      question: 'Servono permessi per mettere una pergola sul terrazzo?',
+      answer:
+        'Una tenda a pergola con copertura mobile può rientrare nell’edilizia libera. Prima di ordinarla, verifica con l’ufficio tecnico del Comune se il progetto rispetta le regole locali e gli eventuali vincoli paesaggistici. In condominio controlla anche il regolamento.',
     },
   ],
 }

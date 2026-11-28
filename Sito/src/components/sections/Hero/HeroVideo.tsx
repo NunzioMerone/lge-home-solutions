@@ -1,12 +1,9 @@
 import { desktopHeroVideoSource, responsiveHeroVideoSources } from '../../../config/hero'
-import { useHeroVideo } from '../../../hooks/useHeroVideo'
 import { assetUrl } from '../../../utils/assetUrl'
 import type { HeroVideoProps } from '../../../types/hero'
 import styles from './Hero.module.css'
 
-export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
-  const { backdropRef, videoRef, source, playing, onError } = useHeroVideo(active, onTimeChange)
-
+export function HeroVideo({ backdropRef, videoRef, source, visible, onError }: HeroVideoProps) {
   return (
     <div ref={backdropRef} className={styles.backdrop} aria-hidden="true">
       <picture>
@@ -39,10 +36,9 @@ export function HeroVideo({ active, onTimeChange }: HeroVideoProps) {
           width={source.width}
           height={source.height}
           muted
-          autoPlay={playing}
           playsInline
           loop
-          preload={playing ? 'auto' : 'none'}
+          preload={visible ? 'auto' : 'none'}
           tabIndex={-1}
           onError={(event) => {
             if (event.target === event.currentTarget) onError(source.video)

@@ -2,6 +2,7 @@ import { useCallback, useRef } from 'react'
 import { heroCopy, heroHeadlineChapters } from '../../../data/hero'
 import { navigation } from '../../../data/navigation'
 import { useHeroEntrance } from '../../../hooks/useHeroEntrance'
+import { useHeroVideo } from '../../../hooks/useHeroVideo'
 import { getHeroHeadlineAtTime } from '../../../utils/heroHeadline'
 import { Icon } from '../../ui/Icon'
 import { PageLink } from '../../ui/PageLink'
@@ -34,9 +35,11 @@ export function Hero({ active }: PageActivityProps) {
     if (headline.style.opacity !== alpha) headline.style.opacity = alpha
   }, [])
 
+  const { paused, togglePlayback, ...video } = useHeroVideo(active, syncHeadline)
+
   return (
     <section ref={rootRef} className={styles.hero} id="inizio" aria-labelledby="hero-title">
-      <HeroVideo active={active} onTimeChange={syncHeadline} />
+      <HeroVideo {...video} />
       <div className={`container ${styles.content}`}>
         <div className={styles.introduction} data-introduction>
           <p className={styles.eyebrow} data-hero-eyebrow>
@@ -74,6 +77,7 @@ export function Hero({ active }: PageActivityProps) {
           </h1>
           <div data-hero-subtitle>
             <p className={styles.subtitle}>{heroCopy.subtitle}</p>
+            <p className={styles.services}>{heroCopy.services}</p>
             <PageLink className={styles.showroomLink} to={navigation.contact.path}>
               <span>Visita il nostro showroom</span>
               <Icon name="down" />
@@ -81,6 +85,17 @@ export function Hero({ active }: PageActivityProps) {
           </div>
         </div>
       </div>
+      {video.visible && (
+        <button
+          type="button"
+          className={styles.videoControl}
+          aria-controls="hero-video"
+          onClick={togglePlayback}
+        >
+          <Icon name={paused ? 'play' : 'pause'} />
+          <span>{paused ? 'Riprendi video' : 'Pausa video'}</span>
+        </button>
+      )}
     </section>
   )
 }

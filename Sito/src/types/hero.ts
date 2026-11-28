@@ -1,3 +1,4 @@
+import type { RefObject } from 'react'
 import type { PhotoId, Product } from './content'
 
 export interface HeroProductCardProps {
@@ -8,11 +9,12 @@ export interface HeroProductCardProps {
 export type HeroDescriptions = Record<PhotoId, string>
 
 export interface HeroVideoProps {
-  active: boolean
-  onTimeChange: (time: number) => void
+  backdropRef: RefObject<HTMLDivElement | null>
+  videoRef: RefObject<HTMLVideoElement | null>
+  source: HeroVideoSource | null
+  visible: boolean
+  onError: (src: string) => void
 }
-
-export type HeroVisibility = 'unseen' | 'visible' | 'hidden'
 
 export interface HeroHeadlineCue {
   startFrame: number

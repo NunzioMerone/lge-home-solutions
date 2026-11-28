@@ -19,7 +19,35 @@ function tags(html, name) {
   )
 }
 
-export async function verifyStaticPages(output, paths, siteBase, base, verification, gallerySize) {
+function verifyStructuredData(head, elements, path) {
+  // Validate the actual script bodies, including any supplied by the HTML template.
+  const actual = []
+  for (const [script, body] of head.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)) {
+    const [attributes] = tags(script, 'script')
+    if (attributes.type?.toLowerCase() === 'application/ld+json') {
+      actual.push({ id: attributes.id, data: JSON.parse(body) })
+    }
+  }
+  const expected = elements
+    .filter(({ tag, attributes }) => tag === 'script' && attributes?.type === 'application/ld+json')
+    .map(({ attributes, text }) => ({ id: attributes.id, data: JSON.parse(text) }))
+  assert.equal(
+    new Set(actual.map(({ id }) => id)).size,
+    actual.length,
+    `Duplicate schema on ${path}`,
+  )
+  assert.deepEqual(actual, expected, `Incorrect structured data on ${path}`)
+}
+
+export async function verifyStaticPages(
+  output,
+  paths,
+  siteBase,
+  base,
+  verification,
+  gallerySize,
+  getSeoElements,
+) {
   const titleSet = new Set()
   const descriptions = new Set()
   const expectedUrls = new Set()
@@ -43,6 +71,7 @@ export async function verifyStaticPages(output, paths, siteBase, base, verificat
     const page = await readFile(join(output, file), 'utf8')
     const head = page.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1]
     assert.ok(head, `Missing head on ${path}`)
+    verifyStructuredData(head, getSeoElements(path), path)
     const metas = tags(head, 'meta')
     const links = tags(head, 'link')
     const content = (key, value) =>

@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { blogCategories, blogPosts } from '../data/blog'
 import { blogArticles } from '../data/blogArticles'
-import { getBlogPostFromPath, getBlogPostPath, getRelatedBlogPosts, parseBlogFilter } from './blog'
+import {
+  getBlogPostFromPath,
+  getBlogPostPath,
+  getRelatedBlogPosts,
+  hasBlogCategory,
+  parseBlogFilter,
+} from './blog'
 
 describe('blog navigation and editorial integrity', () => {
   it('falls back to the complete collection for missing or unknown query values', () => {
@@ -9,6 +15,17 @@ describe('blog navigation and editorial integrity', () => {
       expect(parseBlogFilter(value, blogCategories)).toBe('tutti')
     }
     expect(parseBlogFilter('comfort', blogCategories)).toBe('comfort')
+    expect(parseBlogFilter('sicurezza', blogCategories)).toBe('sicurezza')
+  })
+
+  it('includes the security guides together and the entrance door under porte as well', () => {
+    const security = blogPosts.filter((post) => hasBlogCategory(post, 'sicurezza'))
+    expect(security.map((post) => post.slug).sort()).toEqual(
+      ['come-scegliere-avvolgibili-di-sicurezza', 'come-scegliere-porta-blindata'].sort(),
+    )
+    expect(
+      security.filter((post) => hasBlogCategory(post, 'porte')).map((post) => post.slug),
+    ).toEqual(['come-scegliere-porta-blindata'])
   })
 
   it('resolves every article link, including trailing slashes, to complete content', () => {
@@ -31,7 +48,7 @@ describe('blog navigation and editorial integrity', () => {
     const current = blogPosts.find((post) => post.slug === 'condensa-sui-vetri')
     if (!current) throw new Error('Missing comfort article fixture')
     const related = getRelatedBlogPosts(current, blogPosts)
-    expect(related[0]?.slug).toBe('scegliere-zanzariere')
+    expect(related[0]?.slug).toBe('spifferi-dalle-finestre')
     expect(related).toHaveLength(3)
     expect(related.every((post) => post.slug !== current.slug)).toBe(true)
     expect(new Set(related.map((post) => post.slug)).size).toBe(related.length)

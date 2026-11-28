@@ -9,17 +9,11 @@ import styles from './Blog.module.css'
 
 export function BlogCard({ post, headingLevel = 3, critical = false }: BlogCardProps) {
   const category = blogCategories.find((item) => item.id === post.category)
-  const titleId = `blog-post-${post.slug}`
   const Heading = headingLevel === 2 ? 'h2' : 'h3'
   const ref = useSectionReveal()
   return (
     <article className={styles.card} ref={ref}>
-      <PageLink
-        className={styles.cardLink}
-        to={getBlogPostPath(post.slug)}
-        aria-labelledby={titleId}
-        data-reveal
-      >
+      <div className={styles.cardBody} data-reveal>
         <BlogPhoto
           image={post.image}
           critical={critical}
@@ -28,13 +22,14 @@ export function BlogCard({ post, headingLevel = 3, critical = false }: BlogCardP
         />
         <div className={styles.cardCopy}>
           <span className={styles.cardMeta}>{category?.label}</span>
-          <Heading id={titleId}>{post.title}</Heading>
+          <Heading>{post.title}</Heading>
           <p>{post.excerpt}</p>
-          <span className={styles.readLink}>
-            Leggi la guida <Icon name="arrow" />
-          </span>
+          <PageLink className={styles.readLink} to={getBlogPostPath(post.slug)}>
+            Leggi la guida<span className="sr-only">: {post.title}</span>
+            <Icon name="arrow" />
+          </PageLink>
         </div>
-      </PageLink>
+      </div>
     </article>
   )
 }

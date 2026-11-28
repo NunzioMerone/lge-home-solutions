@@ -164,12 +164,7 @@ export function PrivacyPolicy() {
                 ? 'Con il tuo consenso alle statistiche, Google Analytics 4 misura le visite alle pagine e i clic su WhatsApp, telefono, cataloghi e indicazioni stradali. Puoi modificare la scelta nelle preferenze di consenso.'
                 : 'Il sito non installa cookie pubblicitari o di profilazione e non utilizza strumenti di analisi delle visite nel browser.'}
             </p>
-            <p>
-              Il sito rispetta l’impostazione del dispositivo per ridurre le animazioni.
-              Un’eventuale preferenza salvata nella memoria di sessione del browser vale solo per
-              quella scheda, anche se ricarichi la pagina. Si esaurisce con la sessione e non viene
-              trasmessa a LGE.
-            </p>
+            <p>Il sito rispetta l’impostazione del dispositivo per ridurre le animazioni.</p>
             <p>LGE non effettua profilazione e non prende decisioni automatizzate sulle persone.</p>
           </section>
 

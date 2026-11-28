@@ -1,4 +1,4 @@
-import type { GalleryPhoto } from './gallery'
+import type { GalleryLightboxProps, GalleryPhoto } from './gallery'
 import type { PhotoId } from './content'
 
 export type WorkCategoryId =
@@ -48,4 +48,21 @@ export interface WorkPhotoProps {
 
 export interface WorkFilterPhotoProps {
   photo: PhotoId
+}
+
+export interface WorkCaseStudy {
+  id: string
+  category: WorkCategoryId
+  title: string
+  need: string
+  solution: string
+  installation: string
+  contribution: string
+  result: string
+  photos: readonly [GalleryPhoto, ...GalleryPhoto[]]
+}
+
+export interface WorkCaseStudiesProps {
+  selected: WorkFilter
+  onOpen: (selection: Omit<GalleryLightboxProps, 'onClose'>) => void
 }

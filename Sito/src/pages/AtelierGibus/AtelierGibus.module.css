@@ -246,3 +246,37 @@
     min-height: 54px;
   }
 }
+
+/* Match the heading's measured widths before the two Cormorant faces arrive. */
+@font-face {
+  font-family: 'Outdoor Title Fallback';
+  src:
+    local('Times New Roman'), local('Liberation Serif'), local('Times'), local('Noto Serif'),
+    local('Droid Serif');
+  size-adjust: 97%;
+}
+
+@font-face {
+  font-family: 'Outdoor Title Fallback';
+  src:
+    local('Times New Roman Italic'), local('Liberation Serif Italic'), local('Times Italic'),
+    local('Noto Serif Italic'), local('Droid Serif Italic');
+  font-style: italic;
+  size-adjust: 80%;
+}
+
+.page h1 {
+  font-family: 'Cormorant Garamond', 'Outdoor Title Fallback', serif;
+}
+
+@media (max-width: 425px) {
+  .actions {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-items: start;
+  }
+
+  .actions > :last-child {
+    grid-column: 1 / -1;
+  }
+}

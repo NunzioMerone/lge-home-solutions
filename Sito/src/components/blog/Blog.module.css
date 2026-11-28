@@ -64,7 +64,8 @@
   color: var(--color-muted);
   font-size: 0.8125rem;
 }
-.cardLink {
+.cardBody {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -78,7 +79,7 @@
 .cardPhoto img {
   transition: transform 800ms var(--ease-out);
 }
-.cardLink:is(:hover, :focus-visible) .cardPhoto img {
+.cardBody:is(:hover, :focus-within) .cardPhoto img {
   transform: scale(1.035);
 }
 .cardCopy {
@@ -113,6 +114,12 @@
   margin-top: auto;
   padding-top: 12px;
 }
+.cardBody .readLink::after {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  content: '';
+}
 .readLink {
   display: inline-flex;
   align-items: center;
@@ -128,7 +135,7 @@
   height: 20px;
   transition: transform var(--transition);
 }
-.cardLink:is(:hover, :focus-visible) .readLink svg,
+.cardBody:is(:hover, :focus-within) .readLink svg,
 a.readLink:is(:hover, :focus-visible) svg {
   transform: translateX(4px);
 }
@@ -233,14 +240,21 @@ a.readLink:is(:hover, :focus-visible) svg {
   border-radius: var(--radius);
   font-size: 0.8125rem;
 }
-.breadcrumb {
+.breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  padding-top: 22px;
+  margin: 0;
+  padding: 22px 0 0;
+  list-style: none;
   color: var(--color-muted);
   font-size: 0.75rem;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .breadcrumb a {
   display: inline-flex;
@@ -251,6 +265,7 @@ a.readLink:is(:hover, :focus-visible) svg {
   color: var(--color-blue);
 }
 .breadcrumb svg {
+  flex-shrink: 0;
   width: 12px;
   height: 12px;
 }
@@ -274,6 +289,15 @@ a.readLink:is(:hover, :focus-visible) svg {
   font-size: 1rem;
   line-height: 1.75;
 }
+.byline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+}
 .articleFigure {
   margin: 0;
 }
@@ -294,6 +318,10 @@ a.readLink:is(:hover, :focus-visible) svg {
   align-items: start;
   gap: clamp(40px, 7vw, 120px);
   padding-block: 56px var(--section-space);
+}
+.mobileIndex,
+.articleHeader .mobileTopic {
+  display: none;
 }
 .articleAside {
   position: sticky;
@@ -404,12 +432,6 @@ a.readLink:is(:hover, :focus-visible) svg {
   font-size: 0.8125rem;
   font-weight: 500;
 }
-.sources > p {
-  margin: 0 0 8px;
-  color: var(--color-muted);
-  font-size: 0.75rem;
-  line-height: 1.7;
-}
 .sources ul {
   margin: 0;
   padding: 0;
@@ -504,16 +526,15 @@ a.readLink:is(:hover, :focus-visible) svg {
     padding-top: 32px;
   }
   .articleAside {
-    position: static;
-  }
-  .tableOfContents {
-    padding-left: 18px;
-  }
-  .tableOfContents ol {
-    margin-block: 12px 0;
-  }
-  .tableOfContents .backLink {
     display: none;
+  }
+  .mobileIndex {
+    display: block;
+    margin-inline-start: 0;
+  }
+  .articleHeader .mobileTopic {
+    display: inline-flex;
+    margin-top: 4px;
   }
   .articleLead {
     margin-bottom: 32px;

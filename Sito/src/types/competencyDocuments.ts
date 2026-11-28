@@ -5,8 +5,6 @@ export interface CompetencyDocument {
   caption: string
   preview: string
   thumbnail?: string
-  original: string
-  format: 'image' | 'pdf'
   width: number
   height: number
 }

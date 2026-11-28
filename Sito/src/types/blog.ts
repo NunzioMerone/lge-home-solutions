@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 
-export type BlogCategoryId = 'infissi' | 'comfort' | 'outdoor' | 'porte' | 'manutenzione'
+export type BlogCategoryId =
+  'infissi' | 'comfort' | 'sicurezza' | 'outdoor' | 'porte' | 'manutenzione'
 export type BlogFilter = BlogCategoryId | 'tutti'
 export type BlogPhotoStatus = 'loading' | 'ready' | 'error'
 
@@ -18,9 +19,21 @@ export interface BlogImage {
   caption: string
 }
 
+export type BlogPublication =
+  | { status: 'draft' }
+  | {
+      status: 'published'
+      author?: { type: 'Person' | 'Organization'; name: string }
+      /** Verified ISO 8601 editorial dates, independent of the build date. */
+      datePublished?: string
+      dateModified?: string
+    }
+
 export interface BlogPost {
   slug: string
+  publication: BlogPublication
   category: BlogCategoryId
+  otherCategories?: readonly BlogCategoryId[]
   title: string
   excerpt: string
   seoTitle: string
@@ -63,6 +76,10 @@ export interface BlogCardProps {
   post: BlogPost
   headingLevel?: 2 | 3
   critical?: boolean
+}
+
+export interface BlogBylineProps {
+  publication: BlogPublication
 }
 
 export interface BlogLayoutProps {

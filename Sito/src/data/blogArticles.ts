@@ -2,6 +2,289 @@ import type { BlogArticleContent } from '../types/blog'
 
 // Original draft copy for local review; no publication dates or invented authors.
 export const blogArticles: Readonly<Record<string, BlogArticleContent>> = {
+  'spifferi-dalle-finestre': {
+    introduction:
+      'Sul divano vicino alla finestra senti aria fredda alle caviglie. In un’altra stanza avverti un soffio proprio accanto alla maniglia, soprattutto quando tira vento. La sensazione è simile, ma per capire come intervenire conta il punto da cui parte.',
+    sections: [
+      {
+        id: 'individuare-il-punto',
+        title: 'Dove senti muovere l’aria?',
+        paragraphs: [
+          'Con la finestra ben chiusa, avvicina il dorso della mano al bordo dell’anta. Segui il perimetro, poi passa lungo il punto in cui il telaio incontra la parete. Se hai una tapparella, controlla anche vicino allo sportello del cassonetto. Annota dove senti il soffio e se aumenta nelle giornate ventose.',
+          'Se il freddo si sente soprattutto in basso davanti a una grande vetrata, può trattarsi dell’aria della stanza che si raffredda a contatto con il vetro e scende verso il pavimento. La posizione della corrente è un indizio utile da riferire al serramentista.',
+        ],
+      },
+      {
+        id: 'anta-e-guarnizioni',
+        title: 'Se il soffio viene dal bordo dell’anta',
+        paragraphs: [
+          'Apri la finestra e guarda la striscia di gomma lungo il bordo. Una guarnizione ripiegata, un tratto lacerato o sporco rimasto nella battuta possono lasciare un varco. Richiudi normalmente e nota se l’anta sfrega o la maniglia oppone resistenza.',
+          'Per un po’ di sporco basta seguire le istruzioni di pulizia del produttore. Se la guarnizione è danneggiata o l’anta chiude male, il serramentista può verificare il ricambio adatto o regolare la chiusura.',
+        ],
+      },
+      {
+        id: 'telaio-e-cassonetto',
+        title: 'Se l’aria arriva dal muro o dal cassonetto',
+        paragraphs: [
+          'A volte il soffio si sente sul davanzale, accanto alla cornice fissa, oppure sopra la finestra. Sono punti distinti dal bordo dell’anta. Il tecnico può verificare il collegamento tra telaio e muro oppure la tenuta dello sportello della tapparella.',
+          'Per chiedere una verifica, fotografa la finestra per intero e indica il punto preciso in cui senti l’aria. Specifica se succede con un particolare vento e se, chiudendo la finestra, noti attrito o rumori insoliti.',
+        ],
+      },
+    ],
+    takeaway:
+      'Un soffio vicino all’anta indirizza il controllo verso guarnizioni e chiusura. Se arriva sopra la finestra o lungo il muro, il controllo va esteso al cassonetto e alla posa.',
+    solution: { label: 'Esplora le soluzioni per gli infissi', path: '/prodotti/infissi' },
+    sources: [
+      {
+        label: 'Finstral · Uso, manutenzione e problemi di chiusura delle finestre',
+        url: 'https://www.finstral.com/files/content/1167113_53067_2_0/istruzioni-d-uso-e-avvertenze-per-la-sicurezza.finestre.pdf',
+      },
+      {
+        label: 'PosaClima · Tenuta dei giunti tra telaio, cassonetto e parete',
+        url: 'https://posaclima.it/products/barriera-vapore-renova/',
+      },
+      {
+        label: 'U.S. Department of Energy · Comfort vicino alle vetrate (guida in inglese)',
+        url: 'https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/measure_guide_windows.pdf',
+      },
+    ],
+  },
+  'come-scegliere-porta-blindata': {
+    introduction:
+      'Su un preventivo leggi «classe 3», su un altro «classe 4». Entrambe le porte possono avere lo stesso aspetto. La differenza emerge nelle prove di resistenza e conta in modo diverso per un ingresso sul pianerottolo o per uno che dà direttamente sulla strada.',
+    sections: [
+      {
+        id: 'leggere-la-classe',
+        title: 'Che cosa indica la sigla RC?',
+        paragraphs: [
+          'RC sta per Resistance Class, cioè classe di resistenza all’effrazione. La norma UNI EN 1627 classifica la porta completa. Anta, telaio, serratura ed eventuali inserti in vetro fanno parte della configurazione a cui si riferisce il risultato.',
+          'I livelli sono numerati da 1 a 6. Salendo di classe aumentano le sollecitazioni previste dalle prove. Puoi così confrontare una RC2 con una RC3, o valutare una RC5 se il tuo progetto richiede una resistenza superiore alla RC4. Chiedi sempre il documento della porta nella versione proposta.',
+        ],
+      },
+      {
+        id: 'differenza-rc3-rc4',
+        title: 'Che cosa cambia tra classe 3 e classe 4?',
+        paragraphs: [
+          'Nella prova manuale il tempo di lavoro effettivo è di cinque minuti per la RC3 e di dieci per la RC4. Per la RC4 cambiano anche gli strumenti previsti dalla prova. Questi valori servono a confrontare le porte secondo criteri di laboratorio ripetibili. In un’abitazione le condizioni possono essere molto diverse.',
+          'Per scegliere, considera come si raggiunge il tuo ingresso. In un condominio con portone comune puoi partire dal confronto con una RC3. Se la porta è direttamente accessibile dalla strada e cerchi più resistenza, chiedi anche una proposta in RC4. Contano l’accesso concreto e il livello di protezione che desideri.',
+        ],
+      },
+      {
+        id: 'verificare-il-preventivo',
+        title: 'Cosa chiedere prima dell’ordine',
+        paragraphs: [
+          'Metti a confronto due porte con le misure e gli accessori che userai davvero. Se ti piace un inserto in vetro o vuoi una seconda anta, fai indicare per iscritto la classe prevista per quella versione.',
+        ],
+        checklist: [
+          'Quale documento riporta la classe RC del modello proposto?',
+          'La configurazione comprende il vetro, la serratura e il numero di ante che ho scelto?',
+          'Il mio vano è adatto e come verrà fissato il telaio al muro secondo le istruzioni del produttore?',
+        ],
+      },
+    ],
+    takeaway:
+      'Confronta le classi sul modello che monterai a casa, poi verifica insieme al posatore che il vano sia adatto a quella porta.',
+    solution: {
+      label: 'Confronta le porte d’ingresso e le blindate',
+      path: '/prodotti/porte-e-sicurezza',
+    },
+    sources: [
+      {
+        label: 'UNI · Norma EN 1627 sulla resistenza all’effrazione',
+        url: 'https://unistore.uni.com/uni-en-1627-2021',
+      },
+      {
+        label: 'Metalport · Come cambiano le prove tra classe 3 e classe 4',
+        url: 'https://www.metalportblindate.it/post/classe-3-e-classe-4-differenze-nelle-porte-blindate',
+      },
+      {
+        label: 'Effepi · Classi di sicurezza delle porte blindate',
+        url: 'https://www.effepisecuritydoors.com/sicurezza',
+      },
+    ],
+  },
+  'pergola-o-tenda-da-sole': {
+    introduction:
+      'A volte basta un po’ d’ombra per riscoprire un terrazzo. Altre volte desideri un vero spazio da arredare e abitare. Prima di scegliere una struttura, immagina un momento che vorresti vivere fuori: una colazione lenta, una cena con gli amici o una pausa nel pomeriggio.',
+    sections: [
+      {
+        id: 'uso-dello-spazio',
+        title: 'Parti da quello che vorresti fare.',
+        paragraphs: [
+          'Dove metteresti il tavolo? Quale zona vuoi lasciare libera? In quali ore senti più bisogno di ombra? Sono domande semplici che aiutano a dare una funzione precisa allo spazio.',
+          'Osserva anche il percorso del sole. Una copertura sopra la testa e una schermatura laterale rispondono a esigenze diverse: il progetto deve considerare l’esposizione reale.',
+        ],
+      },
+      {
+        id: 'tenda-da-sole',
+        title: 'La tenda: ombra quando serve.',
+        paragraphs: [
+          'Una tenda a bracci estende il telo senza sostegni a terra e si raccoglie quando vuoi riaprire la vista verso il cielo. È una possibilità da valutare quando desideri ombreggiare una zona mantenendo libero il pavimento.',
+          'Il punto di fissaggio, l’esposizione e le condizioni d’uso vanno verificati per il modello scelto. Una tenda da sole non va considerata automaticamente una copertura adatta a ogni condizione atmosferica.',
+        ],
+      },
+      {
+        id: 'pergola',
+        title: 'La pergola: uno spazio da progettare.',
+        paragraphs: [
+          'Una pergola definisce una zona dell’outdoor con una struttura dedicata. Nei modelli bioclimatici, le lame orientabili permettono di modulare luce e passaggio dell’aria; in altre soluzioni, la copertura è in tessuto retrattile.',
+          'Oltre all’aspetto, considera gli ingombri, il rapporto con la facciata e gli arredi. Fattibilità e modalità di installazione si valutano sul posto, in base alla soluzione e al contesto.',
+        ],
+      },
+    ],
+    takeaway: 'Non esiste un outdoor uguale per tutti. Esiste il tuo modo di viverlo.',
+    solution: { label: 'Scopri le soluzioni outdoor', path: '/atelier-gibus' },
+    sources: [
+      {
+        label: 'Gibus · Pergole e tende da sole',
+        url: 'https://www.gibus.com/it/pergole-e-tende-da-sole/',
+      },
+      {
+        label: 'Gibus · Tende a bracci',
+        url: 'https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/',
+      },
+    ],
+  },
+  'condensa-sui-vetri': {
+    introduction:
+      'La mattina trovi la finestra appannata. Passi un panno sul lato della stanza e il vetro torna limpido. Altre volte l’alone resta dov’è. Capire su quale superficie si raccoglie l’acqua aiuta a decidere se arieggiare, aspettare che il vetro si scaldi o chiamare un tecnico.',
+    sections: [
+      {
+        id: 'come-si-forma',
+        title: 'Le gocce sono sul lato della stanza',
+        paragraphs: [
+          'Se il panno asciuga le gocce dall’interno, il vapore presente in casa si è condensato sul vetro freddo. Può capitare in cucina dopo aver scolato la pasta, in bagno dopo una doccia o in camera da letto al risveglio.',
+          'Asciuga l’acqua anche sul davanzale e apri bene la finestra per qualche minuto per far uscire l’aria umida. Se le gocce tornano spesso o si bagnano anche le pareti attorno alla finestra, annota quando succede. Una verifica può riguardare sia il ricambio d’aria sia la temperatura di quelle superfici.',
+        ],
+      },
+      {
+        id: 'osservare',
+        title: 'Il vetro si appanna all’esterno al mattino',
+        paragraphs: [
+          'Dopo una notte serena e umida, la lastra esterna può essere abbastanza fredda da raccogliere la rugiada, come il parabrezza di un’auto. Può accadere anche con una finestra ben isolata, perché dall’interno arriva poco calore a scaldare la lastra esterna.',
+          'Osserva il vetro più tardi. Se le gocce scompaiono quando la superficie si scalda, il comportamento è tipico della condensa esterna occasionale.',
+        ],
+      },
+      {
+        id: 'valutare-il-caso',
+        title: 'L’alone resta tra le due lastre',
+        paragraphs: [
+          'Se entrambe le superfici accessibili sono asciutte e vedi ancora goccioline dentro un doppio vetro sigillato, l’umidità potrebbe essere entrata nello spazio tra le lastre. Arieggiare la stanza agisce solo sull’aria di casa.',
+          'Fotografa l’alone quando si vede bene e chiedi di controllare la tenuta del vetrocamera, cioè l’insieme delle lastre sigillate. Se occorre sostituirlo, il serramentista può verificare se il telaio esistente si può conservare.',
+        ],
+      },
+    ],
+    takeaway:
+      'Gocce sul lato interno dopo una doccia? Arieggia. Rugiada all’esterno al mattino? Osserva se si asciuga. Umidità intrappolata nel doppio vetro? Fai controllare il vetrocamera.',
+    solution: { label: 'Scopri gli infissi e le opzioni di vetro', path: '/prodotti/infissi' },
+    sources: [
+      {
+        label: 'VELUX · Condensa in casa e ricambio d’aria',
+        url: 'https://www.velux.it/assistenza/wiki/condensa-finestra-velux-cause-soluzioni',
+      },
+      {
+        label: 'Nuova Termovetro · Condensa sulle superfici e tra le lastre',
+        url: 'https://www.termovetro.it/pdf/Manuale_Termovetro.pdf#page=16',
+      },
+      {
+        label: 'Pilkington · Domande sulla condensa nelle vetrate isolanti (in inglese)',
+        url: 'https://www.pilkington.com/en/gbl/architectural-and-technical-glass/glass-applications/window/window-faqs',
+      },
+    ],
+  },
+  'come-scegliere-avvolgibili-di-sicurezza': {
+    introduction:
+      'Davanti a una portafinestra sul giardino, la stessa tapparella svolge due compiti. Al mattino vuoi far passare luce e aria. Quando esci vuoi sapere quanta protezione offre da chiusa. Per scegliere, verifica in quale posizione il modello ha ottenuto la sua classe di resistenza.',
+    sections: [
+      {
+        id: 'motore-e-sicurezza',
+        title: 'Una tapparella elettrica è anche di sicurezza?',
+        paragraphs: [
+          'Il motore serve ad alzare e abbassare il telo con un comando. Anche una normale tapparella può essere elettrica. Per sapere quanto resiste a un tentativo di effrazione, cerca nella documentazione una classe indicata dalla sigla RC seguita da un numero.',
+          'La norma UNI EN 1627 stabilisce come classificare la resistenza all’effrazione anche per gli oscuranti. Il risultato riguarda il prodotto nelle condizioni di prova indicate. Chiedi che sul preventivo compaiano il nome esatto della versione e la classe documentata per la configurazione proposta.',
+        ],
+      },
+      {
+        id: 'luce-e-protezione',
+        title: 'Quanta luce entra a tapparella abbassata?',
+        paragraphs: [
+          'In un avvolgibile frangisole, la distanza fra le stecche cambia quanta luce e aria passano. In camera da letto può interessarti soprattutto il buio della sera. In cucina potresti preferire una schermatura che al mattino lasci filtrare la luce.',
+          'Un esempio è Ibrida 2.0 EvoLine di Sikur Home. La gamma prevede diverse distanze fra le stecche e il produttore pubblica documenti distinti per le versioni RC3 e RC4. Quando guardi un campione, chiedi di vedere sia la posizione che useresti per arieggiare sia quella prevista per ottenere la protezione dichiarata.',
+        ],
+      },
+      {
+        id: 'cassonetto-esistente',
+        title: 'Posso tenere il cassonetto che ho già?',
+        paragraphs: [
+          'In alcuni casi sì. Sopra la finestra deve esserci spazio per il nuovo telo completamente avvolto. Il posatore controlla anche le guide laterali, il rullo e il peso che può sostenere il motore. Due tapparelle della stessa larghezza possono avere ingombri e pesi diversi.',
+          'Per un primo confronto, scatta una foto che mostri la finestra, il cassonetto e le guide. Chiedi quali pezzi si possono conservare e quali andranno sostituiti per rispettare la configurazione certificata.',
+        ],
+      },
+    ],
+    takeaway:
+      'Prima dell’ordine, fatti mostrare il documento della versione scelta e la posizione in cui vale la classe RC. Prova anche la posizione che useresti ogni giorno per fare ombra o far passare aria.',
+    solution: { label: 'Scopri gli avvolgibili e le persiane', path: '/prodotti/oscuranti' },
+    sources: [
+      {
+        label: 'UNI · Classificazione della resistenza all’effrazione, UNI EN 1627',
+        url: 'https://store.uni.com/uni-en-1627-2021',
+      },
+      {
+        label: 'Sikur Home · Avvolgibile frangisole Ibrida 2.0 EvoLine',
+        url: 'https://www.sikurhome.it/prodotti/tapparella-frangisole-avvolgibile-di-sicurezza/',
+      },
+      {
+        label: 'Sikur Home · Certificazioni delle versioni EvoLine',
+        url: 'https://www.sikurhome.it/certificazioni/',
+      },
+    ],
+  },
+  'porta-ingresso-isolamento-termico': {
+    introduction:
+      'D’inverno senti freddo davanti alla porta di casa? Se l’anta è fredda al tatto, può interessarti quanto isola la porta nel suo insieme. Se senti aria alle caviglie nelle giornate di vento, vale la pena far controllare anche la soglia. Sono due domande diverse da fare davanti a un preventivo.',
+    sections: [
+      {
+        id: 'trasmittanza-della-porta',
+        title: 'Il valore Ud della porta completa',
+        paragraphs: [
+          'Ud indica la trasmittanza termica della porta. In inverno descrive quanto facilmente il calore passa dall’interno riscaldato verso l’esterno attraverso la porta chiusa. Si esprime in W/(m²·K). A parità di dimensioni e temperature, una porta con Ud più basso disperde meno calore.',
+          'Se trovi due valori, controlla a cosa si riferiscono. Il pannello isolante è una parte dell’anta. Per confrontare i preventivi, chiedi l’Ud della porta completa, con il suo telaio, le dimensioni che ti servono e gli eventuali inserti in vetro.',
+        ],
+      },
+      {
+        id: 'taglio-termico-e-spifferi',
+        title: 'Profili a taglio termico e spifferi',
+        paragraphs: [
+          'In un portoncino in alluminio a taglio termico, un elemento isolante separa la parte interna del profilo metallico da quella esterna e riduce il passaggio del calore. Il dato che ti aiuta a confrontare il risultato resta l’Ud.',
+          'Se invece senti un filo d’aria quando tira vento, segnala il punto preciso. La corrente può passare sotto la soglia, tra anta e telaio o nel raccordo con il muro. Chiedi la prestazione di permeabilità all’aria della porta e come verranno sigillati i giunti durante la posa.',
+        ],
+      },
+      {
+        id: 'esposizione-ingresso',
+        title: 'Se l’ingresso è esposto alla pioggia',
+        paragraphs: [
+          'Un portoncino sotto un portico e uno affacciato sul giardino senza riparo ricevono pioggia e vento in modo diverso. Per il secondo, controlla la tenuta all’acqua dichiarata e chiedi come verrà raccordata la soglia al pavimento esterno.',
+          'Se vuoi anche una porta blindata, chiedi sullo stesso preventivo il valore Ud e la classe antieffrazione RC della versione scelta. Puoi così confrontare, una per una, le prestazioni che ti servono.',
+        ],
+      },
+    ],
+    takeaway:
+      'Porta al primo incontro una foto dell’ingresso da fuori e indica dove senti freddo. Chi ti segue potrà valutare insieme isolamento della porta, tenuta e posa della soglia.',
+    solution: {
+      label: 'Esplora i portoncini e le porte d’ingresso',
+      path: '/prodotti/porte-e-sicurezza',
+    },
+    sources: [
+      {
+        label: 'Effepi · Trasmittanza e prestazioni di aria, acqua e vento',
+        url: 'https://www.effepisecuritydoors.com/qualita_prodotto',
+      },
+      {
+        label: 'TEHNi · Dati tecnici del sistema per portoncini TLS 90',
+        url: 'https://tehni.eu/it/product-showcase/tls-90/',
+      },
+    ],
+  },
   'come-scegliere-infissi': {
     introduction:
       'Scegliere una finestra significa pensare a come vuoi stare in casa. Il panorama che vuoi lasciare entrare, il tavolo vicino al vetro, la luce del pomeriggio: sono questi dettagli a dare una direzione al progetto, prima ancora di sfogliare un catalogo.',
@@ -49,48 +332,6 @@ export const blogArticles: Readonly<Record<string, BlogArticleContent>> = {
       { label: 'COSMET · Alwo Luce Metal Slim', url: 'https://cosmetgroup.it/luce-metal-slim/' },
     ],
   },
-  'pergola-o-tenda-da-sole': {
-    introduction:
-      'A volte basta un po’ d’ombra per riscoprire un terrazzo. Altre volte desideri un vero spazio da arredare e abitare. Prima di scegliere una struttura, immagina un momento che vorresti vivere fuori: una colazione lenta, una cena con gli amici o una pausa nel pomeriggio.',
-    sections: [
-      {
-        id: 'uso-dello-spazio',
-        title: 'Parti da quello che vorresti fare.',
-        paragraphs: [
-          'Dove metteresti il tavolo? Quale zona vuoi lasciare libera? In quali ore senti più bisogno di ombra? Sono domande semplici che aiutano a dare una funzione precisa allo spazio.',
-          'Osserva anche il percorso del sole. Una copertura sopra la testa e una schermatura laterale rispondono a esigenze diverse: il progetto deve considerare l’esposizione reale.',
-        ],
-      },
-      {
-        id: 'tenda-da-sole',
-        title: 'La tenda: ombra quando serve.',
-        paragraphs: [
-          'Una tenda a bracci estende il telo senza sostegni a terra e si raccoglie quando vuoi riaprire la vista verso il cielo. È una possibilità da valutare quando desideri ombreggiare una zona mantenendo libero il pavimento.',
-          'Il punto di fissaggio, l’esposizione e le condizioni d’uso vanno verificati per il modello scelto. Una tenda da sole non va considerata automaticamente una copertura adatta a ogni condizione atmosferica.',
-        ],
-      },
-      {
-        id: 'pergola',
-        title: 'La pergola: uno spazio da progettare.',
-        paragraphs: [
-          'Una pergola definisce una zona dell’outdoor con una struttura dedicata. Nei modelli bioclimatici, le lame orientabili permettono di modulare luce e passaggio dell’aria; in altre soluzioni, la copertura è in tessuto retrattile.',
-          'Oltre all’aspetto, considera gli ingombri, il rapporto con la facciata e gli arredi. Fattibilità e modalità di installazione si valutano sul posto, in base alla soluzione e al contesto.',
-        ],
-      },
-    ],
-    takeaway: 'Non esiste un outdoor uguale per tutti. Esiste il tuo modo di viverlo.',
-    solution: { label: 'Scopri le soluzioni outdoor', path: '/atelier-gibus' },
-    sources: [
-      {
-        label: 'Gibus · Pergole e tende da sole',
-        url: 'https://www.gibus.com/it/pergole-e-tende-da-sole/',
-      },
-      {
-        label: 'Gibus · Tende a bracci',
-        url: 'https://www.gibus.com/it/prodotti/tende-da-sole/tende-a-bracci/',
-      },
-    ],
-  },
   'porte-interne-spazi-e-finiture': {
     introduction:
       'Le porte accompagnano il passaggio da una stanza all’altra. Possono diventare una presenza discreta o un elemento che dà carattere agli interni. Per sceglierle, vale la pena guardare oltre il singolo modello e immaginare la casa nel suo insieme.',
@@ -127,91 +368,6 @@ export const blogArticles: Readonly<Record<string, BlogArticleContent>> = {
       {
         label: 'I-PEA Porte Design · Cataloghi',
         url: 'https://www.ipeaportedesign.com/scaricailcatalogo',
-      },
-    ],
-  },
-  'condensa-sui-vetri': {
-    introduction:
-      'Le goccioline sulla finestra attirano subito l’attenzione, ma da sole non raccontano tutta la situazione. Il primo passo è osservare: su quale lato del vetro compaiono, in quale stanza e in quale momento della giornata?',
-    sections: [
-      {
-        id: 'come-si-forma',
-        title: 'Umidità e superfici fredde si incontrano.',
-        paragraphs: [
-          'La condensa può formarsi quando l’aria umida incontra una superficie abbastanza fredda. Cucinare, fare la doccia e stendere il bucato negli ambienti interni contribuiscono alla presenza di vapore nell’aria.',
-          'Le gocce sul lato interno non dimostrano, da sole, un difetto della finestra. Temperatura, umidità e ventilazione dell’ambiente vanno considerate insieme.',
-        ],
-      },
-      {
-        id: 'osservare',
-        title: 'Riconosci quando e dove compare.',
-        paragraphs: [
-          'Nota se il fenomeno segue una doccia, la preparazione dei pasti o una notte con la stanza chiusa. Un ricambio d’aria regolare aiuta a smaltire l’umidità prodotta in casa.',
-          'Se compare spesso, raccogli qualche informazione prima di chiedere una valutazione: è più utile descrivere il comportamento nel tempo che affidarsi a una sola fotografia.',
-        ],
-        checklist: [
-          'La stanza e il momento in cui noti le gocce.',
-          'Il lato interno, esterno o lo spazio tra i vetri.',
-          'L’eventuale presenza di macchie o acqua anche intorno al telaio.',
-        ],
-      },
-      {
-        id: 'valutare-il-caso',
-        title: 'Ogni situazione merita uno sguardo completo.',
-        paragraphs: [
-          'Acqua persistente, tracce intorno al serramento o appannamento tra le lastre richiedono una verifica specifica. Non tutte le situazioni si risolvono con lo stesso intervento.',
-          'Prima di pensare alla sostituzione degli infissi, fai valutare il serramento insieme all’ambiente e alle modalità con cui si manifesta il problema.',
-        ],
-      },
-    ],
-    takeaway: 'Osservare bene è il primo passo per scegliere un intervento sensato.',
-    solution: { label: 'Approfondisci il comfort degli infissi', path: '/prodotti/infissi' },
-    sources: [
-      {
-        label: 'VELUX · Condensa: cause e soluzioni',
-        url: 'https://www.velux.it/assistenza/wiki/condensa-finestra-velux-cause-soluzioni',
-      },
-    ],
-  },
-  'scegliere-zanzariere': {
-    introduction:
-      'La zanzariera è un piccolo elemento che usi ogni giorno. Sceglierla significa pensare a come apri una finestra, esci sul balcone o attraversi una portafinestra con le mani occupate. La praticità nasce proprio da questi gesti.',
-    sections: [
-      {
-        id: 'tipo-di-apertura',
-        title: 'Finestra o passaggio verso l’esterno?',
-        paragraphs: [
-          'I sistemi verticali e quelli laterali hanno movimenti differenti. Nei primi la rete si svolge dall’alto; nei secondi la barra si sposta orizzontalmente. Esistono anche soluzioni a telaio.',
-          'La frequenza di passaggio e la comodità di utilizzo aiutano a orientare la scelta. Per una portafinestra molto usata, prova a immaginare il gesto di apertura e chiusura più volte durante la giornata.',
-        ],
-      },
-      {
-        id: 'ingombri',
-        title: 'Lo spazio disponibile conta.',
-        paragraphs: [
-          'Tra infisso, tapparella o persiana può esserci poco margine. Le dimensioni del vano e lo spazio per guide e cassonetto vanno rilevati prima di scegliere il modello.',
-          'La presenza di una guida sul pavimento è un altro aspetto da valutare insieme alle esigenze di chi attraversa il passaggio. Soluzioni e ingombri cambiano da prodotto a prodotto.',
-        ],
-      },
-      {
-        id: 'uso-quotidiano',
-        title: 'Scegli anche pensando alla cura.',
-        paragraphs: [
-          'La rete raccoglie polvere e va trattata con delicatezza. Segui le istruzioni del modello per la pulizia e per l’eventuale manutenzione delle guide, senza applicare prodotti generici ai meccanismi.',
-          'Al primo confronto racconta come vivi la stanza e chi utilizzerà il passaggio. Misure, apertura e abitudini sono un buon punto di partenza per valutare le alternative.',
-        ],
-      },
-    ],
-    takeaway: 'La soluzione più comoda è quella che si integra nei movimenti di ogni giorno.',
-    solution: { label: 'Parliamone in showroom', path: '/#contatti' },
-    sources: [
-      {
-        label: 'Bettio · Tipologie, uso e manutenzione',
-        url: 'https://www.bettio.it/consigli/faq-consumer/',
-      },
-      {
-        label: 'Bettio · Guida alla scelta',
-        url: 'https://www.bettio.it/prodotti/strumenti-di-marketing/brochure-bettio/',
       },
     ],
   },

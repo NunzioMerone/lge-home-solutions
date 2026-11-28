@@ -1,12 +1,12 @@
 import { useHydrated } from '../../hooks/useHydrated'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { Header } from '../../components/layout/Header'
 import { Footer } from '../../components/layout/Footer'
 import { GalleryLightbox } from '../../components/sections/Gallery/GalleryLightbox'
 import { allWorkPhotos, workCategories, workCollections } from '../../data/works'
 import { parseWorkFilter } from '../../utils/works'
-import type { GalleryLightboxState } from '../../types/gallery'
+import type { GalleryLightboxProps } from '../../types/gallery'
 import { WorkFilters } from './WorkFilters'
 import { WorkGallery } from './WorkGallery'
 import { WorksHero } from './WorksHero'
@@ -15,6 +15,9 @@ import { WorkCategoryLabel } from './WorkCategoryLabel'
 import { useSectionReveal } from '../../hooks/useSectionReveal'
 import styles from './Works.module.css'
 
+const PreviewCaseStudies =
+  import.meta.env.VITE_PUBLIC_PREVIEW !== 'false' ? lazy(() => import('./WorkCaseStudies')) : null
+
 export function Works() {
   const [params] = useSearchParams()
   const { hash } = useLocation()
@@ -22,7 +25,7 @@ export function Works() {
   const headingRef = useSectionReveal()
   const hydrated = useHydrated()
   const selected = parseWorkFilter(hydrated ? params.get('categoria') : null, workCategories)
-  const [lightbox, setLightbox] = useState<GalleryLightboxState | null>(null)
+  const [lightbox, setLightbox] = useState<Omit<GalleryLightboxProps, 'onClose'> | null>(null)
   const collection = workCollections.find((item) => item.id === selected)
   const photos = collection?.photos ?? allWorkPhotos
   const title = collection?.title ?? 'Tutti i lavori'
@@ -76,19 +79,22 @@ export function Works() {
               </span>
             </h2>
           </header>
+          {PreviewCaseStudies && (
+            <Suspense fallback={null}>
+              <PreviewCaseStudies key={selected} selected={selected} onOpen={setLightbox} />
+            </Suspense>
+          )}
           <WorkGallery
             key={selected}
             photos={photos}
             title={title}
-            onOpen={(photo, trigger) => setLightbox({ photo, trigger })}
+            onOpen={(photo, trigger) => setLightbox({ photos, photo, trigger })}
           />
         </div>
         <WorksContact />
       </main>
       <Footer />
-      {lightbox && (
-        <GalleryLightbox {...lightbox} photos={photos} onClose={() => setLightbox(null)} />
-      )}
+      {lightbox && <GalleryLightbox {...lightbox} onClose={() => setLightbox(null)} />}
     </div>
   )
 }

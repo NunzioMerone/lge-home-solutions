@@ -10,7 +10,7 @@ import { products } from '../data/products'
 import { showroomPhotos } from '../data/showroomPhotos'
 import type { BlogPost } from '../types/blog'
 import type { SeoElement } from '../types/seo'
-import { getBlogPostFromPath } from './blog'
+import { getArticleBreadcrumbs, getBlogPostFromPath, getBlogPostPath } from './blog'
 import { galleryImagePath } from './galleryImages'
 import { getPageMetadata } from './pageMetadata'
 import { getPublicSiteBase } from './publicSiteUrl'
@@ -26,11 +26,13 @@ export function pageUrl(path: string, base: URL) {
   return new URL(pagePathname(path).slice(1), base).href
 }
 
+function blogShareImage(post: BlogPost) {
+  const { path, widths, alt } = post.image
+  return { path: `${path}-${widths[widths.length - 1]}.webp`, alt }
+}
+
 function shareImage(path: string, post: BlogPost | undefined) {
-  if (post) {
-    const { path: source, widths, alt } = post.image
-    return { path: `${source}-${widths[widths.length - 1]}.webp`, alt }
-  }
+  if (post) return blogShareImage(post)
   const product = products.find((item) => item.path === path)
   if (product) {
     return { path: `img/hero/${product.id}-960.webp`, alt: heroPhotos[product.id].alt }
@@ -75,6 +77,48 @@ function openGraph(property: string, content: string): SeoElement {
   return { tag: 'meta', attributes: { property: `og:${property}`, content } }
 }
 
+function jsonLd(id: string, data: object): SeoElement {
+  return {
+    tag: 'script',
+    attributes: { type: 'application/ld+json', id, 'data-lge-schema': '' },
+    text: JSON.stringify(data).replace(/</g, '\\u003c'),
+  }
+}
+
+function articleStructuredData(post: BlogPost, base: URL): SeoElement[] {
+  const breadcrumbs = jsonLd('lge-breadcrumbs', {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: getArticleBreadcrumbs(post).map(({ name, path }, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name,
+      item: pageUrl(path, base),
+    })),
+  })
+  if (post.publication.status === 'draft') return [breadcrumbs]
+
+  const canonical = pageUrl(getBlogPostPath(post.slug), base)
+  const { author, datePublished, dateModified } = post.publication
+  return [
+    breadcrumbs,
+    jsonLd('lge-blog-posting', {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      image: new URL(blogShareImage(post).path, base).href,
+      inLanguage: 'it',
+      url: canonical,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      publisher: { '@type': 'Organization', name: site.name, url: base.href },
+      ...(author && { author: { '@type': author.type, name: author.name } }),
+      ...(datePublished && { datePublished }),
+      ...(dateModified && { dateModified }),
+    }),
+  ]
+}
+
 export function getSeoElements(pathname: string, base = publicBase): SeoElement[] {
   const path = pathname.split(/[?#]/, 1)[0]?.replace(/\/+$/, '') || '/'
   const { title, description, robots } = getPageMetadata(path)
@@ -107,6 +151,7 @@ export function getSeoElements(pathname: string, base = publicBase): SeoElement[
       openGraph('image', new URL(image.path, base).href),
       openGraph('image:alt', image.alt),
     )
+    if (post) elements.push(...articleStructuredData(post, base))
   }
   if (path === '/') {
     const verification = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION?.trim()
@@ -116,11 +161,7 @@ export function getSeoElements(pathname: string, base = publicBase): SeoElement[
         attributes: { name: 'google-site-verification', content: verification },
       })
     }
-    elements.push({
-      tag: 'script',
-      attributes: { type: 'application/ld+json', id: 'lge-local-business' },
-      text: JSON.stringify(localBusiness(base)).replace(/</g, '\\u003c'),
-    })
+    elements.push(jsonLd('lge-local-business', localBusiness(base)))
   }
   return elements
 }

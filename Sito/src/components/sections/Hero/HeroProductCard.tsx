@@ -22,8 +22,6 @@ export function HeroProductCard({ product, description }: HeroProductCardProps) 
       onPointerEnter={preparePage}
       onFocus={preparePage}
       onClick={(event) => openFromCard(event, product.path)}
-      aria-label={`Scopri ${product.title}`}
-      aria-describedby={`hero-description-${product.id}`}
     >
       <div className={styles.photoFrame} data-product-photo>
         <ResponsiveImage
@@ -39,7 +37,7 @@ export function HeroProductCard({ product, description }: HeroProductCardProps) 
           <h3>{product.title}</h3>
           <Icon name="arrow" className={styles.categoryArrow} />
         </div>
-        <p id={`hero-description-${product.id}`}>{description}</p>
+        <p>{description}</p>
       </div>
     </PageLink>
   )

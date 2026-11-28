@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import { useSectionImages } from '../../hooks/useSectionImages'
 import { GalleryImage } from '../../components/sections/Gallery/GalleryImage'
 import { GalleryPagination } from '../../components/sections/Gallery/GalleryPagination'
 import { CarouselArrow } from '../../components/ui/CarouselArrow'
@@ -16,8 +18,10 @@ export function AtelierGallery({
   showGalleryImages,
   onOpen,
 }: GibusGalleryProps) {
+  const stage = useRef<HTMLDivElement>(null)
+  const ready = useSectionImages(stage, showGalleryImages)
   const { regionRef, viewportRef, selected, onKeyDown, scrollTo, scrollPrev, scrollNext } =
-    useLoopCarousel({ paused: true })
+    useLoopCarousel({ paused: true, active: ready })
   const viewportId = `${id}-photos`
 
   return (
@@ -28,12 +32,15 @@ export function AtelierGallery({
       aria-label={`Foto Gibus · ${title}`}
       aria-roledescription="carosello"
       onKeyDown={onKeyDown}
+      data-defer-images={!ready || undefined}
     >
-      <div className={styles.photoStage}>
+      <div className={styles.photoStage} ref={stage}>
         <div className={styles.photoViewport} id={viewportId} ref={viewportRef}>
           <div className={styles.photoTrack}>
             {photos.map((photo, index) => {
               const active = index === selected
+              const distance = Math.abs(index - selected)
+              const neighbor = distance === 1 || distance === photos.length - 1
               return (
                 <div
                   className={styles.photoSlide}
@@ -49,7 +56,7 @@ export function AtelierGallery({
                     aria-haspopup="dialog"
                     onClick={(event) => onOpen(photo, event.currentTarget)}
                   >
-                    {(active || showGalleryImages) && (
+                    {(active || (ready && neighbor)) && (
                       <GalleryImage
                         photo={photo}
                         sizes={photoSizes}

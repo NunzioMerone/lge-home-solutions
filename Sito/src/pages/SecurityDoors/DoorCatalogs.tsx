@@ -22,7 +22,6 @@ export function DoorCatalogs() {
                     href={system.catalog}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Apri il catalogo ${system.name} (${material.catalogFormat}, nuova scheda)`}
                   >
                     <img
                       className={styles.catalogPhoto}
@@ -40,6 +39,7 @@ export function DoorCatalogs() {
                     </div>
                     <span className={styles.catalogFormat}>
                       {material.catalogFormat} <Icon name="external" />
+                      <span className="sr-only"> (nuova scheda)</span>
                     </span>
                   </a>
                 </li>

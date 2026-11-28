@@ -1,5 +1,11 @@
 # LGE Home Solutions — Project brief
 
+**Pubblicazione del checkpoint del 28 novembre 2026.** L’utente autorizza il push su `main` e l’aggiornamento dell’anteprima non indicizzata su GitHub Pages. L’anteprima comprende le ottimizzazioni, il comando video nella hero, le FAQ, le nove guide e i cinque racconti dimostrativi con fotografie nella pagina Lavori. La sezione «Esempi di progetto» distingue i racconti ipotetici dalle fotografie reali.
+
+**Blog, revisione editoriale locale del 28 novembre 2026.** La raccolta comprende nove guide. Spifferi e condensa hanno percorsi distinti. Il filtro Sicurezza raccoglie porte blindate e avvolgibili, mentre una guida dedicata alla porta d’ingresso tratta l’isolamento termico. La guida outdoor mantiene il confronto fra pergola e tenda da sole.
+
+**Ottimizzazione locale del 28 novembre 2026.** La hero presenta servizi e territorio e permette di raggiungere lo showroom su tutti i formati. Nella hero, «Pausa video» e «Riprendi video» controllano il filmato e la frase sincronizzata sul fotogramma corrente. Il sito rispetta la preferenza di movimento del dispositivo. Un indice delle sezioni accompagna il percorso Outdoor e la lettura delle guide su telefono. I cinque racconti dimostrativi dei lavori si valutano sul server di sviluppo locale. La consegna tecnica, le verifiche e il confronto delle prestazioni sono nel [report di ottimizzazione](./Sito/references/ottimizzazione-2026-11-28.md).
+
 **FAQ delle soluzioni, revisione locale del 28 novembre 2026.** Ogni pagina soluzione presenta tre domande apribili prima della foto finale dei lavori. La fascia su fondo caldo e i comandi circolari blu sono comuni a tutti i formati. Su desktop il titolo occupa la colonna sinistra, su tablet e telefono precede le domande. Le risposte sono incluse nell’HTML statico e si consultano anche senza JavaScript. I testi delle cinque sezioni sono raccolti in `Sito/src/data/productFaqs.ts`.
 
 **Informativa del 28 novembre 2026.** Il testo per lgesolutions.it copre contatti, hosting, mappa e dati personali pubblicati. LGE ha confermato le autorizzazioni per fotografie, attestati e recensioni. La revisione del titolare resta il controllo privacy per il rilascio commerciale. Le fonti e il riscontro sul comportamento del browser sono nella [verifica tecnica](./Sito/references/privacy-audit.md).

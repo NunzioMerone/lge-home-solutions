@@ -166,19 +166,6 @@
   transition: transform 700ms var(--ease-out);
   will-change: auto;
 }
-.documentFormat {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  padding: 3px 5px;
-  border-radius: var(--radius);
-  color: var(--color-blue);
-  background: var(--color-white);
-  font-size: 0.56rem;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-}
 .documentHolder {
   margin-top: 11px;
   font-size: 0.75rem;

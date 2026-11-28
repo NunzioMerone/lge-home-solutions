@@ -8,7 +8,6 @@ export function DocumentPreview({ document, onOpen }: DocumentPreviewProps) {
       type="button"
       className={styles.document}
       onClick={(event) => onOpen({ document, trigger: event.currentTarget })}
-      aria-label={`Visualizza ${document.title}: ${document.holder}`}
       aria-haspopup="dialog"
     >
       <span className={styles.documentImage}>
@@ -20,11 +19,11 @@ export function DocumentPreview({ document, onOpen }: DocumentPreviewProps) {
           loading="lazy"
           decoding="async"
         />
-        {document.format === 'pdf' && <span className={styles.documentFormat}>PDF</span>}
       </span>
       <span className={styles.documentHolder}>{document.holder}</span>
       <span className={styles.documentLink}>
-        Visualizza <Icon name="external" />
+        Visualizza attestato<span className="sr-only"> · {document.title}</span>
+        <Icon name="expand" />
       </span>
     </button>
   )

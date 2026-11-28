@@ -4,7 +4,7 @@ import { Site } from './Site'
 import { getRoutePage } from './utils/informationRoutes'
 import { gallery } from './data/gallery'
 
-export { renderSeoHead } from './utils/siteSeo'
+export { getSeoElements, renderSeoHead } from './utils/siteSeo'
 export { getSeoFiles, seoPaths } from './utils/seoFiles'
 
 export const base = import.meta.env.BASE_URL

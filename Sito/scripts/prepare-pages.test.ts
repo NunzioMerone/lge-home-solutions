@@ -10,6 +10,7 @@ import { desktopHeroVideoSource, responsiveHeroVideoSources } from '../src/confi
 import { privacyDetails, privacySources } from '../src/config/privacy'
 import { blogPosts } from '../src/data/blog'
 import { gallery } from '../src/data/gallery'
+import { workCaseStudyDrafts } from '../src/data/workCaseStudyDrafts'
 import { detailedProductPages } from '../src/data/products'
 import { getBlogPostPath } from '../src/utils/blog'
 import { galleryImagePath } from '../src/utils/galleryImages'
@@ -21,6 +22,24 @@ import { verifyCredentialCopies } from './verify-credential-copies.mjs'
 const run = promisify(execFile)
 const project = fileURLToPath(new URL('../', import.meta.url))
 let fixture: string | undefined
+
+async function expectDemoStoriesExcluded(output: string) {
+  const files = (await readdir(output, { recursive: true })).filter(
+    (name) => name.endsWith('.html') || name.endsWith('.js') || name === '.vite/manifest.json',
+  )
+  const markers = [
+    'workCaseStudyDrafts',
+    'Esempi di progetto',
+    ...workCaseStudyDrafts.map(({ id }) => id),
+  ]
+  for (const name of files) {
+    const contents = await readFile(join(output, name), 'utf8')
+    expect(
+      markers.filter((marker) => contents.includes(marker)),
+      name,
+    ).toEqual([])
+  }
+}
 
 function expectCompanyPrivacy(html: string) {
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1]
@@ -120,6 +139,11 @@ describe('static website build', () => {
         expect(html).toMatch(/rel="modulepreload" crossorigin href="\/lge-home-solutions\/assets\//)
     }
     const works = await readFile(join(fixture, 'lavori/index.html'), 'utf8')
+    expect(works).toContain('Esempi di progetto')
+    for (const story of workCaseStudyDrafts) {
+      expect(works).toContain(escapeMarkup(story.title))
+      expect(works).toContain(escapeMarkup(story.result))
+    }
     const privacy = await readFile(join(fixture, 'privacy-policy/index.html'), 'utf8')
     expectCompanyPrivacy(privacy)
     const workLinks = new Set(
@@ -145,6 +169,8 @@ describe('static website build', () => {
     )
     expect(article).toContain('data-blog-section')
     expect(article).toContain('Indice dell’articolo')
+    expect(article).toContain(`<span aria-current="page">${escapeMarkup(firstPost.title)}</span>`)
+    expect(article).not.toMatch(/"@type":"(?:BlogPosting|BreadcrumbList)"/)
     const fallback = await readFile(join(fixture, '404.html'), 'utf8')
     expect(fallback).toContain('noindex, nofollow')
     expect(fallback).toContain('Questa pagina')
@@ -191,7 +217,7 @@ describe('static website build', () => {
     const privacyFile = join(target, 'src/config/privacy.ts')
     const privacySource = await readFile(privacyFile, 'utf8')
     const approvedFixture = privacySource.replace('approved: false', 'approved: true')
-    const origin = 'https://www.iana.org' // Existing public syntax only, never contacted.
+    const origin = 'https://lgesolutions.it' // URL construction only, never contacted.
     const env = {
       ...process.env,
       VITE_PUBLIC_PREVIEW: 'false',
@@ -213,11 +239,53 @@ describe('static website build', () => {
       stderr: expect.stringContaining('conservazione delle richieste di contatto e preventivo'),
     })
     await writeFile(privacyFile, approvedFixture)
+    // Only this disposable article has a confirmed byline and publication date.
+    const blogFile = join(target, 'src/data/blog.ts')
+    const blogSource = await readFile(blogFile, 'utf8')
+    await writeFile(
+      blogFile,
+      blogSource +
+        "\nObject.assign(blogPosts[0], { publication: { status: 'published', author: { type: 'Organization', name: 'Redazione test' }, datePublished: '2026-01-12' } })\n",
+    )
     await run(process.execPath, args, opts)
     const output = join(target, 'dist-release')
+    await expectDemoStoriesExcluded(output)
     const homeFile = join(output, 'index.html')
     const home = await readFile(homeFile, 'utf8')
     const privacy = await readFile(join(output, 'privacy-policy/index.html'), 'utf8')
+    const [firstPost] = blogPosts
+    if (!firstPost) throw new Error('Expected an article fixture')
+    const articlePath = getBlogPostPath(firstPost.slug)
+    const article = await readFile(join(output, articlePath, 'index.html'), 'utf8')
+    const json = article.match(/<script\b[^>]*id="lge-blog-posting"[^>]*>([^<]*)<\/script>/)?.[1]
+    const canonical = origin + articlePath + '/'
+    expect(JSON.parse(json ?? 'null')).toEqual({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: firstPost.title,
+      description: firstPost.excerpt,
+      image: `${origin}/${firstPost.image.path}-${firstPost.image.widths.at(-1)}.webp`,
+      inLanguage: 'it',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      url: canonical,
+      publisher: { '@type': 'Organization', name: 'LGE Home Solutions', url: origin + '/' },
+      author: { '@type': 'Organization', name: 'Redazione test' },
+      datePublished: '2026-01-12',
+    })
+    expect(article).toContain('<time dateTime="2026-01-12">12 gennaio 2026</time>')
+    expect(article).toContain('Redazione test</span>')
+    const breadcrumbs = article.match(
+      /<script\b[^>]*id="lge-breadcrumbs"[^>]*>([^<]*)<\/script>/,
+    )?.[1]
+    expect(JSON.parse(breadcrumbs ?? 'null')).toEqual({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: origin + '/blog/' },
+        { '@type': 'ListItem', position: 3, name: firstPost.title, item: canonical },
+      ],
+    })
     expectCompanyPrivacy(privacy)
     expect(
       (await readdir(output, { recursive: true })).some(
